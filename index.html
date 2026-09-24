@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tullamarine Flight Path Map</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f6f6f3; --panel:#ffffff; --panel2:#f1f2ef; --line:#dde0e3; --text:#1b1f24; --muted:#5c6570; --dim:#8a929c;
+  --red:#e11d2e; --today:#1c64f2; --future:#a21caf;
+  --under:#e8590c; --near:#f2b300; --clear:#2f9e44;
+  --display:'Barlow Condensed','Arial Narrow',sans-serif;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--text);font:14px/1.5 var(--sans);overflow:hidden}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 390px;height:100%}
+.stage{position:relative;min-height:0}
+#map{position:absolute;inset:0}
+.hud{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;display:grid;gap:5px;box-shadow:0 2px 10px rgba(0,0,0,.08);max-width:min(310px,calc(100% - 24px));z-index:2}
+.hud .mode{font:600 16px/1.2 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.hud .row{display:flex;align-items:center;gap:8px;color:var(--muted)}
+.sw{width:20px;height:4px;border-radius:2px;flex:none}
+.dot{width:10px;height:10px;border-radius:50%;flex:none;border:1.5px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.2)}
+.views{position:absolute;right:12px;top:12px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;z-index:2;max-width:60%}
+.btn{font:500 12px/1 var(--sans);color:var(--text);background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px 11px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.btn:hover{border-color:var(--muted)}
+.btn:focus-visible,select:focus-visible,input:focus-visible,.lrow:focus-visible,.seg input:focus-visible+span{outline:2px solid var(--today);outline-offset:2px}
+.toast{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);background:#1b1f24;color:#fff;font-size:12px;padding:8px 14px;border-radius:20px;z-index:3;max-width:calc(100% - 32px);text-align:center}
+.hint{position:absolute;left:12px;bottom:34px;font-size:11px;color:var(--muted);background:rgba(255,255,255,.9);padding:4px 8px;border-radius:4px;z-index:2}
+.panel{background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;padding-block:20px 32px;padding-inline:20px;display:flex;flex-direction:column;gap:22px}
+h1{font:600 30px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;margin:0;text-wrap:balance}
+.lede{color:var(--muted);margin:8px 0 0;font-size:13px}
+h2{font:600 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.seg{display:flex;flex-wrap:wrap;gap:4px;background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:3px}
+.seg label{flex:1 1 auto;cursor:pointer;position:relative}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:7px 8px;border-radius:5px;font-size:12px;color:var(--muted);white-space:nowrap}
+.seg input:checked+span{background:var(--text);color:#fff;font-weight:600}
+.stack{display:grid;gap:12px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;font-size:13px}
+.checks label{display:flex;gap:8px;align-items:center;cursor:pointer}
+input[type=checkbox],input[type=range]{accent-color:var(--today)}
+.range{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.range input{flex:1}
+.range output{font:500 12px var(--mono);color:var(--text);min-width:30px;text-align:right}
+.search{display:flex;gap:6px}
+.search input,.keyrow input{flex:1;min-width:0;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:9px 10px;font:14px var(--sans);color:var(--text)}
+.keyrow{display:flex;gap:6px;margin-top:8px}
+.card{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:12px;margin-top:10px}
+.card .nm{font:600 21px/1.05 var(--display);letter-spacing:.03em;text-transform:uppercase}
+.card .sub{color:var(--muted);font-size:12px;margin-top:4px;font-family:var(--mono)}
+.era{display:grid;grid-template-columns:62px 1fr;gap:8px 10px;align-items:start}
+.era .k{font:600 12px/1.8 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.era p{margin:4px 0 0;font-size:12.5px;color:var(--muted)}
+.era p b{color:var(--text);font-weight:500;font-family:var(--mono);font-size:12px}
+.bar{display:flex;height:8px;border-radius:4px;overflow:hidden;margin-top:6px;background:var(--line)}
+.bar i{display:block;height:100%}
+.chip{display:inline-block;font:600 11px/1 var(--sans);padding:4px 7px;border-radius:3px;color:#fff}
+.s2{background:var(--under)}.s1{background:var(--near);color:#231a00}.s0{background:var(--clear)}
+.summary{font-size:13px;color:var(--muted);margin:0 0 10px}
+.summary b{font-family:var(--mono);font-weight:500}
+.list{display:grid;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.lhead,.lrow{display:grid;grid-template-columns:1fr 56px 56px 58px;gap:6px;align-items:center;padding:7px 10px}
+.lhead{font:600 11px/1.1 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);background:var(--panel2)}
+.lrow{border:0;border-top:1px solid var(--line);background:none;color:var(--text);font:13px var(--sans);text-align:left;cursor:pointer;width:100%}
+.lrow:hover{background:var(--panel2)}
+.lrow.on{background:#e8eefc}
+.lrow .n{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.facts{display:grid;gap:8px;margin:0;font-size:13px}
+.facts div{display:grid;grid-template-columns:118px 1fr;gap:10px}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0;font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
+.note{font-size:12.5px;color:var(--muted);margin:0}
+.note+.note{margin-top:8px}
+a{color:var(--today)}
+ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
+.maplibregl-ctrl-attrib{font-size:10px}
+@media (max-width:880px){
+  body{overflow:auto}
+  .app{grid-template-columns:1fr;grid-template-rows:68svh auto;height:auto}
+  .panel{border-left:0;border-top:1px solid var(--line);padding-inline:16px}
+  .hud{font-size:11px;padding:8px 10px;max-width:200px}
+  .hud .extra{display:none}
+  .hint{display:none}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="stage">
+    <div id="map"></div>
+    <div class="hud">
+      <div class="mode" id="modeText">Today · All corridors</div>
+      <div class="row"><span class="sw" style="background:var(--red)"></span>Airport land boundary</div>
+      <div class="row"><span class="sw" style="background:var(--today)"></span>Corridors, existing runways</div>
+      <div class="row"><span class="sw" style="background:var(--future)"></span>Corridors, third runway (2031)</div>
+      <div class="row extra"><span class="dot" style="background:var(--under)"></span>Under
+        <span class="dot" style="background:var(--near);margin-left:6px"></span>Near
+        <span class="dot" style="background:var(--clear);margin-left:6px"></span>Clear</div>
+    </div>
+    <div class="views">
+      <button class="btn" id="vTilt">3D view</button>
+      <button class="btn" id="vWest">West side</button>
+      <button class="btn" id="vTop">Top-down</button>
+      <button class="btn" id="vPause">Pause aircraft</button>
+    </div>
+    <div class="hint">Ctrl-drag or right-drag to tilt and rotate · Click anywhere to check that spot</div>
+    <div class="toast" id="toast">Loading map…</div>
+  </div>
+
+  <aside class="panel">
+    <header>
+      <h1>Tullamarine Flight Path Map</h1>
+      <p class="lede">Real map with suburb boundaries, Melbourne Airport's land outlined in red, and aircraft flying the approach and departure corridors, today and after the third runway opens in 2031.</p>
+    </header>
+
+    <section class="stack">
+      <div>
+        <h2>Base map</h2>
+        <div class="seg" role="radiogroup" aria-label="Base map">
+          <label><input type="radio" name="base" value="map" id="bMap" checked><span>Map</span></label>
+          <label><input type="radio" name="base" value="sat" id="bSat"><span>Satellite</span></label>
+          <label><input type="radio" name="base" value="google" id="bGoogle"><span>Google 3D</span></label>
+        </div>
+        <div id="keyBox" hidden>
+          <p class="note" style="margin-top:8px">Google's photorealistic 3D needs your own Google Maps Platform API key with the Map Tiles API enabled. The key stays in this browser.</p>
+          <div class="keyrow"><input id="gKey" type="password" placeholder="Paste API key" autocomplete="off"><button class="btn" id="gKeyGo">Load</button></div>
+        </div>
+      </div>
+      <div>
+        <h2>Runway system</h2>
+        <div class="seg" role="radiogroup" aria-label="Runway system">
+          <label><input type="radio" name="era" value="today" id="eToday" checked><span>Today · 2 runways</span></label>
+          <label><input type="radio" name="era" value="future" id="eFuture"><span>2031+ · 3 runways</span></label>
+        </div>
+      </div>
+      <div>
+        <h2>Wind direction in use</h2>
+        <div class="seg" role="radiogroup" aria-label="Wind direction">
+          <label><input type="radio" name="flow" value="all" id="fAll" checked><span>All</span></label>
+          <label><input type="radio" name="flow" value="34" id="f34"><span>North · 34</span></label>
+          <label><input type="radio" name="flow" value="16" id="f16"><span>South · 16</span></label>
+          <label><input type="radio" name="flow" value="27" id="f27"><span>West · 27</span></label>
+          <label><input type="radio" name="flow" value="09" id="f09"><span>East · 09</span></label>
+        </div>
+      </div>
+      <div class="checks">
+        <label><input type="checkbox" id="lApt" checked> Airport boundary</label>
+        <label><input type="checkbox" id="lSub" checked> Suburb colours</label>
+        <label><input type="checkbox" id="lPaths" checked> Corridors</label>
+        <label><input type="checkbox" id="lPlanes" checked> Aircraft</label>
+        <label><input type="checkbox" id="lBld" checked> 3D buildings</label>
+        <label><input type="checkbox" id="lTerrain"> Terrain</label>
+      </div>
+      <div class="range"><label for="exag">Aircraft height ×</label><input type="range" id="exag" min="1" max="4" step="0.5" value="1.5"><output id="exagOut">×1.5</output></div>
+    </section>
+
+    <section>
+      <h2>Check an address</h2>
+      <form class="search" id="searchForm"><input id="q" placeholder="e.g. 12 Smith St, Taylors Lakes" autocomplete="off"><button class="btn" type="submit">Check</button></form>
+      <div class="card" id="card"><p class="note">Search an address, click anywhere on the map, or pick a suburb below.</p></div>
+    </section>
+
+    <section>
+      <h2>Suburb shortlist</h2>
+      <p class="summary" id="summary">Loading suburb boundaries…</p>
+      <div class="checks" style="grid-template-columns:1fr;margin-bottom:10px"><label><input type="checkbox" id="westOnly" checked> Western and north-western suburbs only</label></div>
+      <div class="list" id="list"></div>
+    </section>
+
+    <section>
+      <h2>Key facts</h2>
+      <dl class="facts">
+        <div><dt>Airport site</dt><dd>2,741 ha (≈2,650 ha Commonwealth-leased + ≈90 ha freehold)</dd></div>
+        <div><dt>Main runway</dt><dd>16/34 · 3,657 m · becomes 16L/34R</dd></div>
+        <div><dt>Cross runway</dt><dd>09/27 · 2,286 m · cut to 1,940 m for construction, later restored</dd></div>
+        <div><dt>Third runway</dt><dd>16R/34L · 3,000 m · 1,311 m west of main runway</dd></div>
+        <div><dt>Approved</dt><dd>10 Sep 2024, with noise conditions</dd></div>
+        <div><dt>Opening</dt><dd>2031 (planned)</dd></div>
+      </dl>
+    </section>
+
+    <section>
+      <h2>How to read this map</h2>
+      <p class="note">Suburb boundaries, the airport boundary and today's runways come live from OpenStreetMap. The third runway is placed from the published figures (3,000 m, 1,311 m west of the main runway), so its exact position is approximate.</p>
+      <p class="note">Corridors are simplified: straight approaches on a 3° glide slope and generic departure fans. Real radar tracks spread several kilometres and departures follow set routes. "Under" means within 1.5 km of a corridor with aircraft below about 4,300 ft. "Near" means within 3.5 km with aircraft below about 6,500 ft. The generic turning fans can only mark a spot as Near. Aircraft are shown sped up 4×.</p>
+      <p class="note">These are screening rules, not official noise contours. Check the exact address before buying:</p>
+      <ul class="links">
+        <li><a href="https://www.melbourneairport.com.au/community/aircraft-noise" target="_blank" rel="noopener">Melbourne Airport Flight Path and Noise Tool</a></li>
+        <li><a href="https://au.webtrak.aero/mel3" target="_blank" rel="noopener">WebTrak Melbourne (real radar tracks)</a></li>
+      </ul>
+    </section>
+  </aside>
+</div>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/deck.gl@9.0.38/dist.min.js"></script>
+<script>
+(function(){
+'use strict';
+const toastEl=document.getElementById('toast');
+function toast(msg,ms){toastEl.textContent=msg;toastEl.hidden=false;clearTimeout(toast.t);if(ms)toast.t=setTimeout(()=>toastEl.hidden=true,ms);}
+if(!window.maplibregl||!window.deck){toast('The map libraries did not load. Check your internet connection and reload.');return;}
+
+// ---------- geometry helpers (local km: x east, n north) ----------
+const D2R=Math.PI/180;
+const LAT0=-37.6733, LON0=144.8433;
+const KX=111.320*Math.cos(LAT0*D2R), KY=110.574;
+const toL=(lon,lat)=>({x:(lon-LON0)*KX, n:(lat-LAT0)*KY});
+const toLL=(x,n)=>[LON0+x/KX, LAT0+n/KY];
+const add=(p,b,d)=>({x:p.x+Math.sin(b*D2R)*d, n:p.n+Math.cos(b*D2R)*d});
+const brgOf=(a,b)=>((Math.atan2(b.x-a.x,b.n-a.n)/D2R)+360)%360;
+const dist=(a,b)=>Math.hypot(a.x-b.x,a.n-b.n);
+function ringArea(r){let s=0;for(let i=0;i<r.length-1;i++)s+=r[i].x*r[i+1].n-r[i+1].x*r[i].n;return s/2;}
+function ringCentroid(r){let a=0,cx=0,cn=0;for(let i=0;i<r.length-1;i++){const f=r[i].x*r[i+1].n-r[i+1].x*r[i].n;a+=f;cx+=(r[i].x+r[i+1].x)*f;cn+=(r[i].n+r[i+1].n)*f;}a/=2;return a?{x:cx/(6*a),n:cn/(6*a)}:r[0];}
+function inRing(p,r){let c=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if(((a.n>p.n)!==(b.n>p.n))&&(p.x<(b.x-a.x)*(p.n-a.n)/(b.n-a.n)+a.x))c=!c;}return c;}
+function simplify(pts,tol){
+  if(pts.length<=4)return pts;
+  const f=pts[0],l=pts[pts.length-1];
+  if(Math.abs(f.x-l.x)<1e-9&&Math.abs(f.n-l.n)<1e-9){ // closed ring: split at the farthest vertex
+    let m=1;for(let i=1;i<pts.length-1;i++)if(dist(pts[i],f)>dist(pts[m],f))m=i;
+    return simplifyOpen(pts.slice(0,m+1),tol).concat(simplifyOpen(pts.slice(m),tol).slice(1));
+  }
+  return simplifyOpen(pts,tol);
+}
+function simplifyOpen(pts,tol){
+  if(pts.length<=2)return pts;
+  const keep=new Uint8Array(pts.length);keep[0]=keep[pts.length-1]=1;
+  const st=[[0,pts.length-1]];
+  while(st.length){const [s,e]=st.pop();const a=pts[s],b=pts[e];const dx=b.x-a.x,dn=b.n-a.n,L=Math.hypot(dx,dn)||1e-9;let md=0,mi=-1;
+    for(let i=s+1;i<e;i++){const d=Math.abs(dx*(a.n-pts[i].n)-dn*(a.x-pts[i].x))/L;if(d>md){md=d;mi=i;}}
+    if(md>tol&&mi>0){keep[mi]=1;st.push([s,mi],[mi,e]);}}
+  return pts.filter((_,i)=>keep[i]);
+}
+function stitch(ways){
+  const eq=(a,b)=>Math.abs(a[0]-b[0])<1e-7&&Math.abs(a[1]-b[1])<1e-7;
+  const pool=ways.filter(w=>w.length>1).map(w=>w.slice());const out=[];
+  while(pool.length){
+    let ring=pool.shift();let changed=true;
+    while(!eq(ring[0],ring[ring.length-1])&&changed){
+      changed=false;
+      for(let i=0;i<pool.length;i++){
+        const w=pool[i],end=ring[ring.length-1],st=ring[0];
+        if(eq(w[0],end))ring=ring.concat(w.slice(1));
+        else if(eq(w[w.length-1],end))ring=ring.concat(w.slice(0,-1).reverse());
+        else if(eq(w[w.length-1],st))ring=w.slice(0,-1).concat(ring);
+        else if(eq(w[0],st))ring=w.slice(1).reverse().concat(ring);
+        else continue;
+        pool.splice(i,1);changed=true;break;
+      }
+    }
+    if(ring.length>=4){if(!eq(ring[0],ring[ring.length-1]))ring.push(ring[0]);out.push(ring);}
+  }
+  return out;
+}
+// OSM element -> list of local rings (outer only), simplified
+function elementRings(el,tol){
+  let raw=[];
+  if(el.type==='way'&&el.geometry)raw=[el.geometry.map(g=>[g.lon,g.lat])];
+  else if(el.type==='relation'&&el.members)raw=stitch(el.members.filter(m=>m.type==='way'&&m.geometry&&m.role!=='inner').map(m=>m.geometry.map(g=>[g.lon,g.lat])));
+  return raw.map(r=>{const l=simplify(r.map(([lon,lat])=>toL(lon,lat)),tol);if(l.length&&(l[0].x!==l[l.length-1].x||l[0].n!==l[l.length-1].n))l.push(l[0]);return l;}).filter(r=>r.length>=4);
+}
+
+// ---------- runways ----------
+function mkRunway(key,A,B,era,names,base){return {key,A,B,era,names,base,len:dist(A,B),brg:brgOf(A,B)};}
+function deriveNew(main){
+  const c={x:(main.A.x+main.B.x)/2,n:(main.A.n+main.B.n)/2};
+  const cn=add(add(c,main.brg+90,1.311),main.brg+180,0.25);
+  return mkRunway('new',add(cn,main.brg+180,1.5),add(cn,main.brg,1.5),'future',{today:['',''],future:['16R','34L']},['16','34']);
+}
+function defaultRunways(){
+  const c16=toL(144.8330,-37.6690);
+  const inter=add(c16,350,1.0), c09=add(inter,100,0.95);
+  const main=mkRunway('main',add(c16,350,3.657/2),add(c16,170,3.657/2),'both',{today:['16','34'],future:['16L','34R']},['16','34']);
+  const cross=mkRunway('cross',add(c09,280,2.286/2),add(c09,100,2.286/2),'both',{today:['09','27'],future:['09','27']},['09','27']);
+  return [main,cross,deriveNew(main)];
+}
+let RW=defaultRunways();
+let runwaySource='estimated';
+
+// ---------- flight paths ----------
+const TAN3=Math.tan(3*D2R);
+function arrivalPts(th,brg){const p=[];for(let d=24;d>0;d-=1){const q=add(th,brg+180,d);p.push({x:q.x,n:q.n,a:d*TAN3});}
+  p.push({x:th.x,n:th.n,a:0.01});const r=add(th,brg,1.6);p.push({x:r.x,n:r.n,a:0.01});return p;}
+function departurePts(th,brg,len,turn){const G=0.1,p=[{x:th.x,n:th.n,a:0.01}];let q=add(th,brg,len*0.6),d=0,h=brg;p.push({x:q.x,n:q.n,a:0.01});
+  for(let i=0;i<6;i++){q=add(q,h,1);d+=1;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}
+  for(let i=1;i<=4;i++){h=brg+turn*i/4;q=add(q,h,0.5);d+=0.5;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}
+  for(let i=0;i<7;i++){q=add(q,h,2);d+=2;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}
+  return p;}
+let PATHS=[];
+function buildPaths(){
+  PATHS=[];
+  RW.forEach(r=>{
+    [[r.A,r.brg,0],[r.B,(r.brg+180)%360,1]].forEach(([th,brg,i])=>{
+      const mk=(kind,turn,pts)=>{
+        const P={rw:r,i,kind,turn,pts,base:r.base[i],future:r.era==='future'};
+        P.label=era=>`RWY ${r.names[era][i]} ${kind==='arr'?'arrivals':'departures'}`;
+        P.inEra=era=>r.era==='both'||era==='future';
+        P.cum=[0];let L=0;for(let k=1;k<pts.length;k++){L+=Math.hypot(pts[k].x-pts[k-1].x,pts[k].n-pts[k-1].n,pts[k].a-pts[k-1].a);P.cum.push(L);}P.len=L;
+        P.segB=pts.slice(1).map((p,k)=>brgOf(pts[k],p));
+        PATHS.push(P);
+      };
+      mk('arr',0,arrivalPts(th,brg));
+      [-40,0,40].forEach(t=>mk('dep',t,departurePts(th,brg,r.len,t)));
+    });
+  });
+}
+buildPaths();
+
+// ---------- exposure ----------
+function exposure(s,era){
+  let best={sev:0,lat:Infinity,alt:0,q:null,path:null};
+  for(const p of PATHS){
+    if(!p.inEra(era))continue;
+    const pts=p.pts;
+    for(let k=0;k<pts.length-1;k++){
+      const a=pts[k],b=pts[k+1],dx=b.x-a.x,dn=b.n-a.n,l2=dx*dx+dn*dn;
+      let t=l2?((s.x-a.x)*dx+(s.n-a.n)*dn)/l2:0;t=t<0?0:t>1?1:t;
+      const qx=a.x+dx*t,qn=a.n+dn*t,alt=a.a+(b.a-a.a)*t,lat=Math.hypot(s.x-qx,s.n-qn);
+      let sev=0;if(lat<1.5&&alt<1.3)sev=2;else if(lat<3.5&&alt<2.0)sev=1;
+      if(sev===2&&p.kind==='dep'&&p.turn!==0)sev=1;
+      if(sev>best.sev||(sev===best.sev&&lat<best.lat))best={sev,lat,alt,q:{x:qx,n:qn,a:alt},path:p};
+    }
+  }
+  return best;
+}
+const STATUS=[{t:'Clear',c:'s0',hex:'#2f9e44'},{t:'Near',c:'s1',hex:'#f2b300'},{t:'Under',c:'s2',hex:'#e8590c'}];
+
+// ---------- fallback data ----------
+const FALLBACK_APT=[[-2.9,3.4],[0.0,3.6],[1.4,3.0],[2.1,1.8],[2.1,-0.4],[1.9,-2.2],[1.2,-2.9],[-0.6,-2.7],[-2.2,-2.3],[-3.3,-1.0],[-3.4,1.4],[-3.2,2.8]].map(([x,n])=>({x,n}));
+FALLBACK_APT.push(FALLBACK_APT[0]);
+const FALLBACK_SUBS=[['Sunbury',-37.577,144.726],['Diggers Rest',-37.627,144.719],['Bulla',-37.635,144.803],['Greenvale',-37.638,144.886],['Attwood',-37.668,144.888],['Westmeadows',-37.676,144.884],['Gladstone Park',-37.689,144.886],['Tullamarine',-37.701,144.880],['Airport West',-37.724,144.880],['Keilor Park',-37.721,144.853],['Keilor',-37.718,144.835],['Keilor East',-37.736,144.861],['Keilor North',-37.690,144.795],['Keilor Lodge',-37.697,144.812],['Keilor Downs',-37.723,144.808],['Kealba',-37.737,144.828],['Taylors Lakes',-37.698,144.786],['Sydenham',-37.700,144.766],['Hillside',-37.690,144.740],['Taylors Hill',-37.715,144.753],['Delahey',-37.720,144.775],['Kings Park',-37.733,144.772],['Caroline Springs',-37.741,144.736],['St Albans',-37.745,144.800],['Albanvale',-37.746,144.769],['Cairnlea',-37.757,144.790],['Deer Park',-37.767,144.772],['Sunshine',-37.788,144.832],['Sunshine North',-37.770,144.830],['Avondale Heights',-37.761,144.862],['Tarneit',-37.833,144.695],['Truganina',-37.816,144.738],['Point Cook',-37.915,144.750],['Werribee',-37.900,144.660]];
+
+// ---------- Overpass ----------
+const EPS=['https://overpass-api.de/api/interpreter','https://overpass.kumi.systems/api/interpreter','https://maps.mail.ru/osm/tools/overpass/api/interpreter'];
+async function overpass(q){
+  for(const ep of EPS){
+    try{const r=await fetch(ep,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'data='+encodeURIComponent(q)});
+      if(r.ok){const j=await r.json();if(j&&j.elements)return j;}}catch(e){}
+  }
+  throw new Error('overpass');
+}
+const cacheGet=k=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):null;}catch(e){return null;}};
+const cacheSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
+
+// ---------- state ----------
+const state={base:'map',era:'today',flow:'all',exag:1.5,paused:false,westOnly:true,terrain:false,googleKey:'',
+  layers:{apt:true,sub:true,paths:true,planes:true,bld:true},sel:null,spot:null};
+let AIRPORT=null; // {ring:[{x,n}], ha, source}
+let SUBS=[];      // suburbs
+const altOffset=()=>state.base==='google'?135:(state.terrain?132:0); // metres
+
+// ---------- map ----------
+const map=new maplibregl.Map({
+  container:'map',style:'https://tiles.openfreemap.org/styles/liberty',
+  center:[144.815,-37.705],zoom:11.4,pitch:60,bearing:-25,maxPitch:85,antialias:true,attributionControl:{compact:true}
+});
+map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'bottom-right');
+const overlay=new deck.MapboxOverlay({interleaved:true,layers:[]});
+map.addControl(overlay);
+let firstLabelLayer=null, satBefore=null, placeLabelIds=[];
+
+map.on('load',()=>{
+  const layers=map.getStyle().layers;
+  firstLabelLayer=(layers.find(l=>l.type==='symbol')||{}).id;
+  satBefore=(layers.find(l=>/^(tunnel|road|highway|bridge|building|aeroway)/.test(l.id)||l.type==='fill-extrusion'||l.type==='symbol')||{}).id;
+  placeLabelIds=layers.filter(l=>l.type==='symbol'&&/^label_(other|village|town|city)/.test(l.id)).map(l=>l.id);
+  map.addSource('sat',{type:'raster',tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],tileSize:256,maxzoom:19,attribution:'Imagery © Esri, Maxar, Earthstar Geographics'});
+  map.addLayer({id:'sat',type:'raster',source:'sat',layout:{visibility:'none'}},satBefore);
+  map.addSource('dem',{type:'raster-dem',tiles:['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],encoding:'terrarium',tileSize:256,maxzoom:14,attribution:'Terrain: Mapzen/AWS'});
+  map.addSource('subs',{type:'geojson',data:fc([])});
+  map.addSource('subpts',{type:'geojson',data:fc([])});
+  map.addSource('apt',{type:'geojson',data:fc([])});
+  map.addSource('rw3',{type:'geojson',data:fc([])});
+  map.addLayer({id:'sub-fill',type:'fill',source:'subs',paint:{'fill-color':['get','col'],'fill-opacity':0.26}},firstLabelLayer);
+  map.addLayer({id:'sub-line',type:'line',source:'subs',paint:{'line-color':['get','col'],'line-width':1.6,'line-opacity':0.9}},firstLabelLayer);
+  map.addLayer({id:'sub-sel',type:'line',source:'subs',filter:['==',['get','name'],''],paint:{'line-color':'#1b1f24','line-width':3.5}},firstLabelLayer);
+  map.addLayer({id:'apt-fill',type:'fill',source:'apt',paint:{'fill-color':'#e11d2e','fill-opacity':0.1}},firstLabelLayer);
+  map.addLayer({id:'apt-case',type:'line',source:'apt',paint:{'line-color':'#ffffff','line-width':7,'line-opacity':0.9}},firstLabelLayer);
+  map.addLayer({id:'apt-line',type:'line',source:'apt',paint:{'line-color':'#e11d2e','line-width':3.5}},firstLabelLayer);
+  map.addLayer({id:'rw3-fill',type:'fill',source:'rw3',paint:{'fill-color':'#a21caf','fill-opacity':0.75}},firstLabelLayer);
+  map.addLayer({id:'sub-dot',type:'circle',source:'subpts',paint:{'circle-radius':5,'circle-color':['get','col'],'circle-stroke-color':'#fff','circle-stroke-width':1.5}});
+  map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['get','name'],'text-font':['Noto Sans Bold'],'text-size':12.5,'text-offset':[0,0.9],'text-anchor':'top','text-max-width':8},paint:{'text-color':'#1b1f24','text-halo-color':'#ffffff','text-halo-width':1.6}});
+  renderRunway3();renderAirport();applyAll();
+  toast('Loading airport boundary and suburbs from OpenStreetMap…');
+  loadData();
+  requestAnimationFrame(frame);
+});
+map.on('error',e=>{if(e&&e.error&&/openfreemap/.test(String(e.error.message||'')))toast('The street map could not load. Try Satellite.',6000);});
+
+function fc(f){return {type:'FeatureCollection',features:f};}
+const ringLL=r=>r.map(p=>toLL(p.x,p.n));
+
+function renderAirport(){
+  if(!map.getSource('apt'))return;
+  const ring=AIRPORT?AIRPORT.ring:FALLBACK_APT;
+  map.getSource('apt').setData(fc([{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[ringLL(ring)]}}]));
+}
+function renderRunway3(){
+  if(!map.getSource('rw3'))return;
+  const r=RW.find(x=>x.key==='new');
+  const w=0.03,c=[add(r.A,r.brg-90,w),add(r.B,r.brg-90,w),add(r.B,r.brg+90,w),add(r.A,r.brg+90,w)];c.push(c[0]);
+  map.getSource('rw3').setData(fc([{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[ringLL(c)]}}]));
+}
+function renderSubs(){
+  if(!map.getSource('subs'))return;
+  const f=[],pts=[];
+  SUBS.forEach(s=>{
+    const col=STATUS[s.stats[state.era].sev].hex;
+    f.push({type:'Feature',properties:{name:s.name,col},geometry:{type:'MultiPolygon',coordinates:s.rings.map(r=>[ringLL(r)])}});
+    pts.push({type:'Feature',properties:{name:s.name,col},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
+  });
+  map.getSource('subs').setData(fc(f));map.getSource('subpts').setData(fc(pts));
+}
+
+// ---------- data loading ----------
+async function loadData(){
+  // airport + runways
+  let apt=cacheGet('tfpm:v2:apt');
+  if(!apt){
+    try{
+      const j=await overpass('[out:json][timeout:60];(nwr["aeroway"="aerodrome"]["icao"="YMML"];way["aeroway"="runway"](-37.72,144.78,-37.62,144.90););out geom;');
+      apt={elements:j.elements.filter(e=>e.type!=='node'||(e.tags&&e.tags.aeroway==='aerodrome'))};
+      cacheSet('tfpm:v2:apt',apt);
+    }catch(e){apt=null;}
+  }
+  if(apt)applyAirportData(apt.elements);
+  else toast('OpenStreetMap is busy, so the airport outline is indicative. Reload to retry.',7000);
+
+  // suburbs
+  let subs=cacheGet('tfpm:v2:subs');
+  if(!subs){
+    try{
+      toast('Loading suburb boundaries (can take up to a minute)…');
+      const j=await overpass('[out:json][timeout:150];relation["boundary"="administrative"]["admin_level"="10"](-37.96,144.55,-37.52,145.0);out geom;');
+      subs=j.elements.filter(e=>e.tags&&e.tags.name).map(e=>({name:e.tags.name,rings:elementRings(e,0.02).map(r=>r.map(p=>[+p.x.toFixed(4),+p.n.toFixed(4)]))})).filter(s=>s.rings.length);
+      cacheSet('tfpm:v2:subs',subs);
+    }catch(e){subs=null;}
+  }
+  if(subs&&subs.length){
+    SUBS=subs.map(s=>({name:s.name,rings:s.rings.map(r=>r.map(([x,n])=>({x,n})))}));
+  }else{
+    toast('Suburb boundaries could not load, so suburbs are shown as approximate circles. Reload to retry.',8000);
+    SUBS=FALLBACK_SUBS.map(([name,lat,lon])=>{const c=toL(lon,lat);const r=[];for(let i=0;i<=24;i++){const a=i/24*Math.PI*2;r.push({x:c.x+Math.cos(a)*1.1,n:c.n+Math.sin(a)*1.1});}return {name,rings:[r]};});
+  }
+  SUBS.forEach(prepSuburb);
+  await scoreAll();
+}
+function applyAirportData(els){
+  const aero=els.find(e=>e.tags&&e.tags.aeroway==='aerodrome'&&e.type!=='node');
+  if(aero){
+    const rings=elementRings(aero,0.005).sort((a,b)=>Math.abs(ringArea(b))-Math.abs(ringArea(a)));
+    if(rings.length){const ha=rings.reduce((s,r)=>s+Math.abs(ringArea(r)),0)*100;AIRPORT={ring:rings[0],ha,source:'osm'};}
+  }
+  const rws=els.filter(e=>e.type==='way'&&e.tags&&e.tags.aeroway==='runway'&&e.geometry&&e.geometry.length>1);
+  let main=null,cross=null,nw=null;
+  rws.forEach(w=>{
+    const ref=(w.tags.ref||'').toUpperCase().replace(/\s/g,'');
+    const g=w.geometry.map(p=>toL(p.lon,p.lat));
+    // farthest pair along the way
+    let a=g[0],b=g[g.length-1];
+    if(dist(a,b)<1.5)return;
+    if(/16R|34L/.test(ref)){const A=a.n>b.n?a:b,B=A===a?b:a;nw=mkRunway('new',A,B,'future',{today:['',''],future:['16R','34L']},['16','34']);}
+    else if(/16|34/.test(ref)){const A=a.n>b.n?a:b,B=A===a?b:a;main=mkRunway('main',A,B,'both',{today:['16','34'],future:['16L','34R']},['16','34']);}
+    else if(/09|27/.test(ref)){const A=a.x<b.x?a:b,B=A===a?b:a;cross=mkRunway('cross',A,B,'both',{today:['09','27'],future:['09','27']},['09','27']);}
+  });
+  if(main||cross){
+    const d=defaultRunways();
+    const m=main||d[0];
+    RW=[m,cross||d[1],nw||deriveNew(m)];
+    runwaySource=nw?'osm':'derived';buildPaths();renderRunway3();
+  }
+  renderAirport();
+  if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);
+}
+function prepSuburb(s){
+  let big=s.rings[0];s.rings.forEach(r=>{if(Math.abs(ringArea(r))>Math.abs(ringArea(big)))big=r;});
+  s.area=s.rings.reduce((t,r)=>t+Math.abs(ringArea(r)),0);
+  let minx=Infinity,maxx=-Infinity,minn=Infinity,maxn=-Infinity;
+  s.rings.forEach(r=>r.forEach(p=>{minx=Math.min(minx,p.x);maxx=Math.max(maxx,p.x);minn=Math.min(minn,p.n);maxn=Math.max(maxn,p.n);}));
+  s.bbox={minx,maxx,minn,maxn};
+  const c=ringCentroid(big);
+  s.inside=p=>s.rings.some(r=>inRing(p,r));
+  const step=Math.max(0.15,Math.min(0.5,Math.sqrt(s.area)/12));
+  s.samples=[];
+  for(let x=minx+step/2;x<maxx;x+=step)for(let n=minn+step/2;n<maxn;n+=step){const p={x,n};if(s.inside(p))s.samples.push(p);}
+  if(s.inside(c))s.label=c;else if(s.samples.length){s.label=s.samples.reduce((b,p)=>dist(p,c)<dist(b,c)?p:b,s.samples[0]);}else s.label=c;
+  if(!s.samples.length)s.samples=[s.label];
+  s.west=toLL(s.label.x,s.label.n)[0]<144.905;
+  s.dAir=Math.hypot(s.label.x,s.label.n);
+}
+async function scoreAll(){
+  const total=SUBS.length;
+  for(let i=0;i<total;i++){
+    const s=SUBS[i];s.stats={};
+    ['today','future'].forEach(era=>{
+      const cnt=[0,0,0];s.samples.forEach(p=>cnt[exposure(p,era).sev]++);
+      const N=s.samples.length,u=cnt[2]/N,nr=cnt[1]/N;
+      s.stats[era]={u,n:nr,c:cnt[0]/N,sev:u>=0.15?2:(u>0||u+nr>=0.15)?1:0};
+    });
+    if(i%8===7){toast(`Scoring suburbs ${i+1} of ${total}…`);await new Promise(r=>setTimeout(r,0));}
+  }
+  renderSubs();renderList();
+  toast(`${total} suburbs loaded. Click any suburb or spot on the map.`,5000);
+}
+
+// ---------- deck layers ----------
+const PLANE_SVG=c=>`<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><path d="M32 3c2.6 0 4 3 4 6v15l21 12.5v6.5l-21-6v12.5l7 5v5l-11-3-11 3v-5l7-5V37l-21 6v-6.5L28 24V9c0-3 1.4-6 4-6z" fill="${c}" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>`;
+const ICON_T={url:'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(PLANE_SVG('#123a8f')),width:64,height:64,anchorY:32,mask:false};
+const ICON_F={url:'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(PLANE_SVG('#7a0f86')),width:64,height:64,anchorY:32,mask:false};
+const RGB_T=[28,100,242],RGB_F=[162,28,175];
+
+let staticKey='',staticLayers=[],visPaths=[],planes=[];
+function pathVisible(p){return state.layers.paths&&p.inEra(state.era)&&(state.flow==='all'||p.base===state.flow);}
+function coordOf(p,k){const q=p.pts[k];const ll=toLL(q.x,q.n);return [ll[0],ll[1],q.a*1000*state.exag+altOffset()];}
+function buildStatic(){
+  visPaths=PATHS.filter(pathVisible);
+  const pd=visPaths.map(p=>({p,path:p.pts.map((_,k)=>coordOf(p,k)),ground:p.pts.map(q=>{const ll=toLL(q.x,q.n);return [ll[0],ll[1],altOffset()+3];})}));
+  const drops=[];
+  visPaths.forEach(p=>p.pts.forEach((q,k)=>{if(q.a>0.03&&q.a<2.2&&(p.kind==='arr'?k%2===0:k>=2&&k<10)){const c=coordOf(p,k);drops.push({s:[c[0],c[1],altOffset()],t:c,f:p.future});}}));
+  const L=[];
+  if(state.base==='google'&&state.googleKey){
+    L.push(new deck.Tile3DLayer({id:'google3d',data:'https://tile.googleapis.com/v1/3dtiles/root.json',
+      loadOptions:{fetch:{headers:{'X-GOOG-API-KEY':state.googleKey}}},operation:'terrain+draw',
+      onTileError:()=>toast('Google 3D tiles failed. Check the key has the Map Tiles API enabled.',7000)}));
+    // outlines drawn in 3D so they sit above photoreal tiles
+    if(state.layers.apt){const r=AIRPORT?AIRPORT.ring:FALLBACK_APT;
+      L.push(new deck.PathLayer({id:'apt3d',data:[{path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+40];})}],getPath:d=>d.path,getColor:[225,29,46],getWidth:5,widthUnits:'pixels'}));}
+    if(state.layers.sub&&SUBS.length){
+      const sd=[];SUBS.forEach(s=>s.rings.forEach(r=>sd.push({col:STATUS[s.stats[state.era].sev].hex,path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+30];})})));
+      L.push(new deck.PathLayer({id:'sub3d',data:sd,getPath:d=>d.path,getColor:d=>hexRGB(d.col),getWidth:2.5,widthUnits:'pixels'}));
+    }
+  }
+  L.push(new deck.PathLayer({id:'tracks',data:pd,getPath:d=>d.ground,getColor:d=>[...(d.p.future?RGB_F:RGB_T),90],getWidth:2,widthUnits:'pixels'}));
+  L.push(new deck.LineLayer({id:'drops',data:drops,getSourcePosition:d=>d.s,getTargetPosition:d=>d.t,getColor:d=>[...(d.f?RGB_F:RGB_T),80],getWidth:1,widthUnits:'pixels'}));
+  L.push(new deck.PathLayer({id:'corridors',data:pd,getPath:d=>d.path,getColor:d=>[...(d.p.future?RGB_F:RGB_T),d.p.kind==='arr'?235:160],getWidth:d=>d.p.kind==='arr'?4:2.5,widthUnits:'pixels',billboard:true,capRounded:true,jointRounded:true}));
+  staticLayers=L;
+  // planes
+  planes=[];
+  visPaths.forEach(p=>{
+    if(p.kind==='dep'&&p.turn!==0&&state.flow==='all')return;
+    const n=p.kind==='arr'?2:1;
+    for(let k=0;k<n;k++)planes.push({p,t:(k/n+Math.random()*0.25)%1});
+  });
+}
+const hexRGB=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+function posAt(p,t){
+  const d=t*p.len;let k=1;while(k<p.cum.length-1&&p.cum[k]<d)k++;
+  const a=p.pts[k-1],b=p.pts[k],f=Math.min(1,Math.max(0,(d-p.cum[k-1])/Math.max(1e-6,p.cum[k]-p.cum[k-1])));
+  const x=a.x+(b.x-a.x)*f,n=a.n+(b.n-a.n)*f,al=a.a+(b.a-a.a)*f;const ll=toLL(x,n);
+  return {pos:[ll[0],ll[1],al*1000*state.exag+altOffset()+25],ground:[ll[0],ll[1],altOffset()+2],brg:p.segB[k-1],k,x,n,al};
+}
+function spotLayers(){
+  if(!state.spot)return [];
+  const e=state.spot.exp[state.era];const s=state.spot.local;
+  const sll=toLL(s.x,s.n),qll=toLL(e.q.x,e.q.n);
+  const top=[qll[0],qll[1],e.q.a*1000*state.exag+altOffset()];
+  return [
+    new deck.LineLayer({id:'spotline',data:[{s:[sll[0],sll[1],altOffset()+2],t:top}],getSourcePosition:d=>d.s,getTargetPosition:d=>d.t,getColor:[27,31,36,230],getWidth:2,widthUnits:'pixels'}),
+    new deck.ScatterplotLayer({id:'spotpin',data:[{p:[sll[0],sll[1],altOffset()+2]}],getPosition:d=>d.p,getRadius:60,radiusUnits:'meters',radiusMinPixels:6,getFillColor:hexRGB(STATUS[e.sev].hex),stroked:true,getLineColor:[255,255,255],lineWidthMinPixels:2}),
+    new deck.TextLayer({id:'spottxt',data:[{p:top,t:`${e.lat.toFixed(1)} km · ${fmtFt(e.alt)} ft`}],getPosition:d=>d.p,getText:d=>d.t,getSize:13,getColor:[255,255,255],background:true,getBackgroundColor:[27,31,36,235],backgroundPadding:[6,4],fontFamily:'IBM Plex Mono, monospace',getPixelOffset:[0,-16]})
+  ];
+}
+let last=performance.now();
+const SPEED=0.3; // km per second (≈4× real approach speed)
+function frame(now){
+  const dt=Math.min(0.1,(now-last)/1000);last=now;
+  const key=[state.era,state.flow,state.exag,state.base,state.googleKey?'k':'',state.terrain,state.layers.paths,state.layers.apt,state.layers.sub,RW.map(r=>r.A.x.toFixed(4)).join(),SUBS.length&&SUBS[0].stats?'s':''].join('|');
+  if(key!==staticKey){staticKey=key;buildStatic();}
+  const L=staticLayers.slice();
+  if(state.layers.planes&&planes.length){
+    const pd=[],trails=[];
+    planes.forEach(pl=>{
+      if(!state.paused)pl.t=(pl.t+dt*SPEED/pl.p.len)%1;
+      const c=posAt(pl.p,pl.t);c.f=pl.p.future;pd.push(c);
+      const t0=Math.max(0,pl.t-2.5/pl.p.len);const tr=[];for(let i=0;i<=6;i++)tr.push(posAt(pl.p,t0+(pl.t-t0)*i/6).pos);
+      trails.push({path:tr,f:pl.p.future});
+    });
+    L.push(new deck.PathLayer({id:'trails',data:trails,getPath:d=>d.path,getColor:d=>[...(d.f?RGB_F:RGB_T),200],getWidth:3,widthUnits:'pixels'}));
+    L.push(new deck.ScatterplotLayer({id:'shadows',data:pd,getPosition:d=>d.ground,getRadius:70,radiusUnits:'meters',radiusMinPixels:2,getFillColor:[0,0,0,55]}));
+    L.push(new deck.IconLayer({id:'planes',data:pd,getPosition:d=>d.pos,getIcon:d=>d.f?ICON_F:ICON_T,getSize:520,sizeUnits:'meters',sizeMinPixels:22,sizeMaxPixels:70,getAngle:d=>-d.brg,billboard:false}));
+  }
+  L.push(...spotLayers());
+  overlay.setProps({layers:L});
+  requestAnimationFrame(frame);
+}
+
+// ---------- visibility / controls ----------
+function setVis(id,v){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',v?'visible':'none');}
+function applyAll(){
+  const google=state.base==='google'&&!!state.googleKey;
+  setVis('sat',state.base==='sat');
+  ['apt-fill','apt-case','apt-line'].forEach(id=>setVis(id,state.layers.apt&&!google));
+  ['sub-fill','sub-line','sub-sel'].forEach(id=>setVis(id,state.layers.sub&&!google));
+  ['sub-dot','sub-lbl'].forEach(id=>setVis(id,state.layers.sub));
+  placeLabelIds.forEach(id=>setVis(id,!state.layers.sub));
+  setVis('rw3-fill',state.era==='future'&&!google);
+  if(map.getLayer('building-3d'))setVis('building-3d',state.layers.bld&&!google);
+  try{map.setTerrain(state.terrain&&!google?{source:'dem',exaggeration:1}:null);}catch(e){}
+  if(map.getLayer('sub-fill'))renderSubs();
+  const flowTxt={all:'All corridors','34':'North wind · RWY 34','16':'South wind · RWY 16','27':'West wind · RWY 27','09':'East wind · RWY 09'}[state.flow];
+  document.getElementById('modeText').textContent=(state.era==='today'?'Today':'2031+')+' · '+flowTxt;
+  renderList();renderCard();
+}
+document.querySelectorAll('input[name=base]').forEach(i=>i.addEventListener('change',()=>{
+  state.base=i.value;document.getElementById('keyBox').hidden=i.value!=='google';
+  if(i.value==='google'&&!state.googleKey){try{const k=localStorage.getItem('tfpm:gkey');if(k){state.googleKey=k;document.getElementById('gKey').value=k;}}catch(e){}}
+  applyAll();
+}));
+document.getElementById('gKeyGo').addEventListener('click',()=>{
+  state.googleKey=document.getElementById('gKey').value.trim();
+  try{localStorage.setItem('tfpm:gkey',state.googleKey);}catch(e){}
+  if(state.googleKey)toast('Loading Google photorealistic 3D…',4000);applyAll();
+});
+document.querySelectorAll('input[name=era]').forEach(i=>i.addEventListener('change',()=>{state.era=i.value;applyAll();}));
+document.querySelectorAll('input[name=flow]').forEach(i=>i.addEventListener('change',()=>{state.flow=i.value;applyAll();}));
+[['lApt','apt'],['lSub','sub'],['lPaths','paths'],['lPlanes','planes'],['lBld','bld']].forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.layers[k]=e.target.checked;applyAll();}));
+document.getElementById('lTerrain').addEventListener('change',e=>{state.terrain=e.target.checked;applyAll();});
+const exag=document.getElementById('exag');
+exag.addEventListener('input',()=>{state.exag=+exag.value;document.getElementById('exagOut').textContent='×'+exag.value;});
+document.getElementById('westOnly').addEventListener('change',e=>{state.westOnly=e.target.checked;renderList();});
+document.getElementById('vTilt').onclick=()=>map.easeTo({center:[144.815,-37.705],zoom:11.4,pitch:62,bearing:-25,duration:1500});
+document.getElementById('vWest').onclick=()=>map.easeTo({center:[144.80,-37.70],zoom:12,pitch:64,bearing:70,duration:1500});
+document.getElementById('vTop').onclick=()=>map.easeTo({center:[144.80,-37.72],zoom:10.8,pitch:0,bearing:0,duration:1500});
+const pauseBtn=document.getElementById('vPause');
+pauseBtn.onclick=()=>{state.paused=!state.paused;pauseBtn.textContent=state.paused?'Play aircraft':'Pause aircraft';};
+
+// ---------- spot check / suburb select ----------
+const fmtFt=km=>Math.max(0,Math.round(km*3281/100)*100).toLocaleString('en-AU');
+function spotCheck(lngLat,title){
+  const local=toL(lngLat.lng,lngLat.lat);
+  const sub=SUBS.find(s=>s.bbox&&local.x>=s.bbox.minx&&local.x<=s.bbox.maxx&&local.n>=s.bbox.minn&&local.n<=s.bbox.maxn&&s.inside(local));
+  state.spot={lngLat,title:title||(sub?'Spot in '+sub.name:'Selected spot'),local,sub,exp:{today:exposure(local,'today'),future:exposure(local,'future')}};
+  if(sub)setSel(sub,false);else renderCard();
+}
+function setSel(s,fly){
+  state.sel=s;
+  if(map.getLayer('sub-sel'))map.setFilter('sub-sel',['==',['get','name'],s?s.name:'']);
+  if(s&&fly){const b=s.bbox,a=toLL(b.minx,b.minn),c=toLL(b.maxx,b.maxn);map.fitBounds([a,c],{padding:80,pitch:55,bearing:map.getBearing(),duration:1400,maxZoom:14});}
+  renderCard();renderList();
+}
+map.on('click',e=>spotCheck(e.lngLat));
+function eraLine(e,era){
+  const st=STATUS[e.sev];
+  const d=e.sev===0?`Nearest corridor is ${e.path.label(era)}, <b>${e.lat.toFixed(1)} km</b> away.`
+    :`${e.path.label(era)} pass <b>${e.lat.toFixed(1)} km</b> to the side at about <b>${fmtFt(e.alt)} ft</b>.`;
+  return `<div class="k">${era==='today'?'Today':'2031+'}</div><div><span class="chip ${st.c}">${st.t}</span><p>${d}</p></div>`;
+}
+function statBar(st){return `<div class="bar" title="Share of suburb area"><i style="width:${st.u*100}%;background:var(--under)"></i><i style="width:${st.n*100}%;background:var(--near)"></i><i style="width:${st.c*100}%;background:var(--clear)"></i></div>`;}
+function subBlock(s){
+  if(!s.stats)return '';
+  const row=era=>{const st=s.stats[era];return `<div class="k">${era==='today'?'Today':'2031+'}</div><div><span class="chip ${STATUS[st.sev].c}">${STATUS[st.sev].t}</span><p><b>${Math.round(st.u*100)}%</b> under · <b>${Math.round(st.n*100)}%</b> near · <b>${Math.round(st.c*100)}%</b> clear</p>${statBar(st)}</div>`;};
+  return `<div><div class="nm">${s.name}</div><div class="sub">${s.area.toFixed(1)} km² · ${s.dAir.toFixed(1)} km from the airport</div></div><div class="era">${row('today')}${row('future')}</div>`;
+}
+function renderCard(){
+  const card=document.getElementById('card');const sp=state.spot,s=state.sel;
+  let h='';
+  if(sp){
+    h+=`<div><div class="nm">${escapeHtml(sp.title)}</div><div class="sub">${Math.abs(sp.lngLat.lat).toFixed(4)}°S ${sp.lngLat.lng.toFixed(4)}°E · ${Math.hypot(sp.local.x,sp.local.n).toFixed(1)} km from the airport</div></div>
+    <div class="era">${eraLine(sp.exp.today,'today')}${eraLine(sp.exp.future,'future')}</div>`;
+    if(sp.exp.future.sev>sp.exp.today.sev)h+='<p class="note" style="color:#9a5b00">This spot gets worse when the third runway opens.</p>';
+  }
+  if(s&&s.stats)h+=(sp?'<hr style="border:0;border-top:1px solid var(--line);margin:0;width:100%">':'')+subBlock(s);
+  card.innerHTML=h||'<p class="note">Search an address, click anywhere on the map, or pick a suburb below.</p>';
+}
+const escapeHtml=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function renderList(){
+  const listEl=document.getElementById('list');
+  const ready=SUBS.filter(s=>s.stats);
+  if(!ready.length){listEl.innerHTML='';return;}
+  const rows=ready.filter(s=>!state.westOnly||s.west).sort((a,b)=>a.stats.future.sev-b.stats.future.sev||a.stats.future.u-b.stats.future.u||a.stats.future.n-b.stats.future.n||a.name.localeCompare(b.name));
+  const cnt=[0,0,0];rows.forEach(s=>cnt[s.stats.future.sev]++);
+  document.getElementById('summary').innerHTML=`With three runways: <b style="color:var(--clear)">${cnt[0]}</b> clear, <b style="color:#b07f00">${cnt[1]}</b> near, <b style="color:var(--under)">${cnt[2]}</b> under. A suburb is Under when at least 15% of its area is under a corridor.`;
+  listEl.innerHTML='<div class="lhead"><span>Suburb</span><span>Today</span><span>2031+</span><span style="text-align:right">% under 2031</span></div>'+
+    rows.map((s,i)=>`<button class="lrow${state.sel===s?' on':''}" data-i="${SUBS.indexOf(s)}"><span>${escapeHtml(s.name)}</span><span><span class="chip ${STATUS[s.stats.today.sev].c}">${STATUS[s.stats.today.sev].t}</span></span><span><span class="chip ${STATUS[s.stats.future.sev].c}">${STATUS[s.stats.future.sev].t}</span></span><span class="n">${Math.round(s.stats.future.u*100)}%</span></button>`).join('');
+}
+document.getElementById('list').addEventListener('click',e=>{const b=e.target.closest('.lrow');if(!b)return;const s=SUBS[+b.dataset.i];state.spot=null;setSel(s,true);});
+document.getElementById('searchForm').addEventListener('submit',async e=>{
+  e.preventDefault();const q=document.getElementById('q').value.trim();if(!q)return;
+  toast('Searching…');
+  try{
+    const r=await fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=au&viewbox=144.3,-37.3,145.3,-38.2&bounded=1&q='+encodeURIComponent(q+', Victoria'));
+    const j=await r.json();
+    if(!j.length){toast('No match found. Try adding the suburb name.',5000);return;}
+    const lng=+j[0].lon,lat=+j[0].lat;
+    map.flyTo({center:[lng,lat],zoom:14,pitch:60,duration:1800});
+    spotCheck({lng,lat},j[0].display_name.split(',').slice(0,3).join(','));
+    toast('Address found.',2500);
+  }catch(err){toast('Address search is unavailable right now. Click the spot on the map instead.',6000);}
+});
+})();
+</script>
+</body>
+</html>
