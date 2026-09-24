@@ -12,7 +12,7 @@
 :root{
   --bg:#f6f6f3; --panel:#ffffff; --panel2:#f1f2ef; --line:#dde0e3; --text:#1b1f24; --muted:#5c6570; --dim:#8a929c;
   --red:#e11d2e; --today:#1c64f2; --future:#a21caf;
-  --under:#e8590c; --near:#f2b300; --clear:#2f9e44;
+  --q:#2f9e44; --a:#a3c93a; --n:#f2b300; --l:#ea580c; --v:#9d174d;
   --display:'Barlow Condensed','Arial Narrow',sans-serif;
   --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -20,21 +20,24 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{background:var(--bg);color:var(--text);font:14px/1.5 var(--sans);overflow:hidden}
-.app{display:grid;grid-template-columns:minmax(0,1fr) 390px;height:100%}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 400px;height:100%}
 .stage{position:relative;min-height:0}
 #map{position:absolute;inset:0}
-.hud{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;display:grid;gap:5px;box-shadow:0 2px 10px rgba(0,0,0,.08);max-width:min(310px,calc(100% - 24px));z-index:2}
+.hud{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;display:grid;gap:5px;box-shadow:0 2px 10px rgba(0,0,0,.08);max-width:min(300px,calc(100% - 24px));z-index:2}
 .hud .mode{font:600 16px/1.2 var(--display);letter-spacing:.04em;text-transform:uppercase}
 .hud .row{display:flex;align-items:center;gap:8px;color:var(--muted)}
+.ramp{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:2px}
+.ramp span{height:8px;border-radius:2px}
+.ramp-l{display:grid;grid-template-columns:repeat(5,1fr);font:10px/1.2 var(--mono);color:var(--muted)}
 .sw{width:20px;height:4px;border-radius:2px;flex:none}
-.dot{width:10px;height:10px;border-radius:50%;flex:none;border:1.5px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.2)}
-.views{position:absolute;right:12px;top:12px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;z-index:2;max-width:60%}
+.views{position:absolute;right:12px;top:12px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;z-index:2;max-width:62%}
 .btn{font:500 12px/1 var(--sans);color:var(--text);background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px 11px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.08)}
 .btn:hover{border-color:var(--muted)}
+.btn.on{background:var(--text);color:#fff;border-color:var(--text)}
 .btn:focus-visible,select:focus-visible,input:focus-visible,.lrow:focus-visible,.seg input:focus-visible+span{outline:2px solid var(--today);outline-offset:2px}
 .toast{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);background:#1b1f24;color:#fff;font-size:12px;padding:8px 14px;border-radius:20px;z-index:3;max-width:calc(100% - 32px);text-align:center}
 .hint{position:absolute;left:12px;bottom:34px;font-size:11px;color:var(--muted);background:rgba(255,255,255,.9);padding:4px 8px;border-radius:4px;z-index:2}
-.panel{background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;padding-block:20px 32px;padding-inline:20px;display:flex;flex-direction:column;gap:22px}
+.panel{background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;padding-block:20px 32px;padding-inline:20px;display:flex;flex-direction:column;gap:24px}
 h1{font:600 30px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;margin:0;text-wrap:balance}
 .lede{color:var(--muted);margin:8px 0 0;font-size:13px}
 h2{font:600 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
@@ -43,52 +46,66 @@ h2{font:600 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;
 .seg input{position:absolute;opacity:0;pointer-events:none}
 .seg span{display:block;text-align:center;padding:7px 8px;border-radius:5px;font-size:12px;color:var(--muted);white-space:nowrap}
 .seg input:checked+span{background:var(--text);color:#fff;font-weight:600}
-.stack{display:grid;gap:12px}
+.stack{display:grid;gap:14px}
 .checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;font-size:13px}
 .checks label{display:flex;gap:8px;align-items:center;cursor:pointer}
 input[type=checkbox],input[type=range]{accent-color:var(--today)}
 .range{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
-.range input{flex:1}
-.range output{font:500 12px var(--mono);color:var(--text);min-width:30px;text-align:right}
+.range input{flex:1;min-width:0}
+.range output{font:500 12px var(--mono);color:var(--text);min-width:44px;text-align:right}
 .search{display:flex;gap:6px}
 .search input,.keyrow input{flex:1;min-width:0;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:9px 10px;font:14px var(--sans);color:var(--text)}
 .keyrow{display:flex;gap:6px;margin-top:8px}
 .card{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:12px;margin-top:10px}
 .card .nm{font:600 21px/1.05 var(--display);letter-spacing:.03em;text-transform:uppercase}
 .card .sub{color:var(--muted);font-size:12px;margin-top:4px;font-family:var(--mono)}
-.era{display:grid;grid-template-columns:62px 1fr;gap:8px 10px;align-items:start}
-.era .k{font:600 12px/1.8 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.era p{margin:4px 0 0;font-size:12.5px;color:var(--muted)}
+.era{display:grid;grid-template-columns:58px 1fr;gap:10px;align-items:start}
+.era .k{font:600 12px/1.9 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.era p{margin:5px 0 0;font-size:12.5px;color:var(--muted)}
 .era p b{color:var(--text);font-weight:500;font-family:var(--mono);font-size:12px}
-.bar{display:flex;height:8px;border-radius:4px;overflow:hidden;margin-top:6px;background:var(--line)}
-.bar i{display:block;height:100%}
-.chip{display:inline-block;font:600 11px/1 var(--sans);padding:4px 7px;border-radius:3px;color:#fff}
-.s2{background:var(--under)}.s1{background:var(--near);color:#231a00}.s0{background:var(--clear)}
+.chip{display:inline-block;font:600 11px/1 var(--sans);padding:4px 7px;border-radius:3px;color:#fff;white-space:nowrap;font-variant-numeric:tabular-nums}
+.chip.dk{color:#231a00}
+.gauge{position:relative;height:54px;margin-top:4px}
+.gauge .scale{position:absolute;left:0;right:0;top:22px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--q) 0%,var(--q) 25%,var(--a) 25%,var(--a) 37.5%,var(--n) 37.5%,var(--n) 50%,var(--l) 50%,var(--l) 62.5%,var(--v) 62.5%,var(--v) 100%)}
+.gauge .mk{position:absolute;top:0;transform:translateX(-50%);font:10px/1.1 var(--mono);color:var(--muted);text-align:center;white-space:nowrap}
+.gauge .mk::after{content:"";display:block;width:2px;height:14px;background:currentColor;margin:3px auto 0}
+.gauge .mk.b{top:32px}.gauge .mk.b::after{display:none}.gauge .mk.b::before{content:"";display:block;width:2px;height:8px;background:currentColor;margin:0 auto 2px}
+.gauge .mk.me{color:var(--text);font-weight:500}
+.cmp{font-size:13px;margin:0}
+.cmp b{font-family:var(--mono);font-weight:500}
 .summary{font-size:13px;color:var(--muted);margin:0 0 10px}
-.summary b{font-family:var(--mono);font-weight:500}
+.summary b{font-family:var(--mono);font-weight:500;color:var(--text)}
 .list{display:grid;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.lhead,.lrow{display:grid;grid-template-columns:1fr 56px 56px 58px;gap:6px;align-items:center;padding:7px 10px}
+.lhead,.lrow{display:grid;grid-template-columns:1fr 52px 52px 62px;gap:6px;align-items:center;padding:7px 10px}
 .lhead{font:600 11px/1.1 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);background:var(--panel2)}
 .lrow{border:0;border-top:1px solid var(--line);background:none;color:var(--text);font:13px var(--sans);text-align:left;cursor:pointer;width:100%}
 .lrow:hover{background:var(--panel2)}
 .lrow.on{background:#e8eefc}
 .lrow .n{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+table.dist{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
+table.dist th{font:600 11px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--dim);text-align:right;padding:4px 4px;border-bottom:1px solid var(--line)}
+table.dist th:first-child,table.dist td:first-child{text-align:left}
+table.dist td{font-family:var(--mono);text-align:right;padding:4px 4px;border-bottom:1px solid var(--line)}
+table.dist td .chip{min-width:30px;text-align:center}
+.tblwrap{overflow-x:auto}
 .facts{display:grid;gap:8px;margin:0;font-size:13px}
 .facts div{display:grid;grid-template-columns:118px 1fr;gap:10px}
 .facts dt{color:var(--muted)}
-.facts dd{margin:0;font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
+.facts dd{margin:0;font-family:var(--mono);font-size:12px}
 .note{font-size:12.5px;color:var(--muted);margin:0}
 .note+.note{margin-top:8px}
 a{color:var(--today)}
 ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
 .maplibregl-ctrl-attrib{font-size:10px}
-@media (max-width:880px){
+@media (max-width:900px){
   body{overflow:auto}
-  .app{grid-template-columns:1fr;grid-template-rows:68svh auto;height:auto}
+  .app{grid-template-columns:1fr;grid-template-rows:70svh auto;height:auto}
   .panel{border-left:0;border-top:1px solid var(--line);padding-inline:16px}
-  .hud{font-size:11px;padding:8px 10px;max-width:200px}
+  .hud{font-size:11px;padding:8px 10px;max-width:190px}
   .hud .extra{display:none}
   .hint{display:none}
+  .views{max-width:55%}
+  .btn{padding:7px 9px}
 }
 </style>
 </head>
@@ -99,29 +116,71 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
     <div class="hud">
       <div class="mode" id="modeText">Today · All corridors</div>
       <div class="row"><span class="sw" style="background:var(--red)"></span>Airport land boundary</div>
-      <div class="row"><span class="sw" style="background:var(--today)"></span>Corridors, existing runways</div>
-      <div class="row"><span class="sw" style="background:var(--future)"></span>Corridors, third runway (2031)</div>
-      <div class="row extra"><span class="dot" style="background:var(--under)"></span>Under
-        <span class="dot" style="background:var(--near);margin-left:6px"></span>Near
-        <span class="dot" style="background:var(--clear);margin-left:6px"></span>Clear</div>
+      <div class="row extra"><span class="sw" style="background:var(--today)"></span>Existing runways</div>
+      <div class="row extra"><span class="sw" style="background:var(--future)"></span>Third runway (2031)</div>
+      <div>
+        <div style="color:var(--muted)">Loudest overflight, dB(A)</div>
+        <div class="ramp"><span style="background:var(--q)"></span><span style="background:var(--a)"></span><span style="background:var(--n)"></span><span style="background:var(--l)"></span><span style="background:var(--v)"></span></div>
+        <div class="ramp-l"><span>&lt;60</span><span>60</span><span>65</span><span>70</span><span>75+</span></div>
+      </div>
     </div>
     <div class="views">
       <button class="btn" id="vTilt">3D view</button>
       <button class="btn" id="vWest">West side</button>
       <button class="btn" id="vTop">Top-down</button>
-      <button class="btn" id="vPause">Pause aircraft</button>
+      <button class="btn" id="vRide">Ride an approach</button>
+      <button class="btn" id="vPause">Pause</button>
     </div>
-    <div class="hint">Ctrl-drag or right-drag to tilt and rotate · Click anywhere to check that spot</div>
+    <div class="hint">Ctrl-drag or right-drag to tilt · Click anywhere to check how loud that spot gets</div>
     <div class="toast" id="toast">Loading map…</div>
   </div>
 
   <aside class="panel">
     <header>
       <h1>Tullamarine Flight Path Map</h1>
-      <p class="lede">Real map with suburb boundaries, Melbourne Airport's land outlined in red, and aircraft flying the approach and departure corridors, today and after the third runway opens in 2031.</p>
+      <p class="lede">How loud each spot in Melbourne's west gets when a plane flies over, today and after the third runway opens in 2031. Loudness depends on how high the plane is and how far to the side you are.</p>
     </header>
 
+    <section>
+      <h2>Check an address</h2>
+      <form class="search" id="searchForm"><input id="q" placeholder="e.g. 12 Smith St, Taylors Lakes" autocomplete="off"><button class="btn" type="submit">Check</button></form>
+      <div class="card" id="card"><p class="note">Search an address, click anywhere on the map, or pick a suburb below.</p></div>
+    </section>
+
     <section class="stack">
+      <div>
+        <h2>Runway system</h2>
+        <div class="seg" role="radiogroup" aria-label="Runway system">
+          <label><input type="radio" name="era" value="today" id="eToday" checked><span>Today · 2 runways</span></label>
+          <label><input type="radio" name="era" value="future" id="eFuture"><span>2031+ · 3 runways</span></label>
+        </div>
+      </div>
+      <div>
+        <h2>Aircraft</h2>
+        <div class="seg" role="radiogroup" aria-label="Aircraft type">
+          <label><input type="radio" name="ac" value="narrow" id="acN" checked><span>Typical jet · A320/737</span></label>
+          <label><input type="radio" name="ac" value="wide" id="acW"><span>Wide-body · 787/A330</span></label>
+        </div>
+      </div>
+      <div>
+        <h2>Loudness map</h2>
+        <div class="seg" role="radiogroup" aria-label="Loudness map">
+          <label><input type="radio" name="nm" value="off" id="nmOff"><span>Off</span></label>
+          <label><input type="radio" name="nm" value="flat" id="nmFlat" checked><span>Flat</span></label>
+          <label><input type="radio" name="nm" value="3d" id="nm3d"><span>3D</span></label>
+        </div>
+        <div class="range" style="margin-top:10px"><label for="thr">Shade overflights louder than</label><input type="range" id="thr" min="55" max="80" step="1" value="60"><output id="thrOut">60 dB</output></div>
+      </div>
+      <div>
+        <h2>Wind direction in use</h2>
+        <div class="seg" role="radiogroup" aria-label="Wind direction">
+          <label><input type="radio" name="flow" value="all" id="fAll" checked><span>All</span></label>
+          <label><input type="radio" name="flow" value="34" id="f34"><span>North · 34</span></label>
+          <label><input type="radio" name="flow" value="16" id="f16"><span>South · 16</span></label>
+          <label><input type="radio" name="flow" value="27" id="f27"><span>West · 27</span></label>
+          <label><input type="radio" name="flow" value="09" id="f09"><span>East · 09</span></label>
+        </div>
+      </div>
       <div>
         <h2>Base map</h2>
         <div class="seg" role="radiogroup" aria-label="Base map">
@@ -134,38 +193,17 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
           <div class="keyrow"><input id="gKey" type="password" placeholder="Paste API key" autocomplete="off"><button class="btn" id="gKeyGo">Load</button></div>
         </div>
       </div>
-      <div>
-        <h2>Runway system</h2>
-        <div class="seg" role="radiogroup" aria-label="Runway system">
-          <label><input type="radio" name="era" value="today" id="eToday" checked><span>Today · 2 runways</span></label>
-          <label><input type="radio" name="era" value="future" id="eFuture"><span>2031+ · 3 runways</span></label>
-        </div>
-      </div>
-      <div>
-        <h2>Wind direction in use</h2>
-        <div class="seg" role="radiogroup" aria-label="Wind direction">
-          <label><input type="radio" name="flow" value="all" id="fAll" checked><span>All</span></label>
-          <label><input type="radio" name="flow" value="34" id="f34"><span>North · 34</span></label>
-          <label><input type="radio" name="flow" value="16" id="f16"><span>South · 16</span></label>
-          <label><input type="radio" name="flow" value="27" id="f27"><span>West · 27</span></label>
-          <label><input type="radio" name="flow" value="09" id="f09"><span>East · 09</span></label>
-        </div>
-      </div>
       <div class="checks">
         <label><input type="checkbox" id="lApt" checked> Airport boundary</label>
-        <label><input type="checkbox" id="lSub" checked> Suburb colours</label>
-        <label><input type="checkbox" id="lPaths" checked> Corridors</label>
+        <label><input type="checkbox" id="lSub" checked> Suburb outlines</label>
+        <label><input type="checkbox" id="lPaths" checked> Flight corridors</label>
         <label><input type="checkbox" id="lPlanes" checked> Aircraft</label>
+        <label><input type="checkbox" id="lRings" checked> Noise rings</label>
+        <label><input type="checkbox" id="lAlt" checked> Altitude markers</label>
         <label><input type="checkbox" id="lBld" checked> 3D buildings</label>
         <label><input type="checkbox" id="lTerrain"> Terrain</label>
       </div>
-      <div class="range"><label for="exag">Aircraft height ×</label><input type="range" id="exag" min="1" max="4" step="0.5" value="1.5"><output id="exagOut">×1.5</output></div>
-    </section>
-
-    <section>
-      <h2>Check an address</h2>
-      <form class="search" id="searchForm"><input id="q" placeholder="e.g. 12 Smith St, Taylors Lakes" autocomplete="off"><button class="btn" type="submit">Check</button></form>
-      <div class="card" id="card"><p class="note">Search an address, click anywhere on the map, or pick a suburb below.</p></div>
+      <div class="range"><label for="exag">Flight height ×</label><input type="range" id="exag" min="1" max="4" step="0.5" value="1"><output id="exagOut">×1</output></div>
     </section>
 
     <section>
@@ -176,25 +214,35 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
     </section>
 
     <section>
+      <h2>How loud, by distance from the runway</h2>
+      <p class="note" style="margin-bottom:10px">Landing planes descend on a fixed 3° slope, so their height depends only on the distance to touchdown. Being 1 to 2 km to the side of the path cuts the noise a lot, even close in.</p>
+      <div class="tblwrap"><table class="dist" id="tArr"></table></div>
+      <p class="note" style="margin:14px 0 10px">Departures are louder because the engines run at take-off power, but they climb faster and spread onto different routes.</p>
+      <div class="tblwrap"><table class="dist" id="tDep"></table></div>
+    </section>
+
+    <section>
       <h2>Key facts</h2>
       <dl class="facts">
-        <div><dt>Airport site</dt><dd>2,741 ha (≈2,650 ha Commonwealth-leased + ≈90 ha freehold)</dd></div>
+        <div><dt>Airport site</dt><dd>2,741 ha</dd></div>
         <div><dt>Main runway</dt><dd>16/34 · 3,657 m · becomes 16L/34R</dd></div>
-        <div><dt>Cross runway</dt><dd>09/27 · 2,286 m · cut to 1,940 m for construction, later restored</dd></div>
-        <div><dt>Third runway</dt><dd>16R/34L · 3,000 m · 1,311 m west of main runway</dd></div>
-        <div><dt>Approved</dt><dd>10 Sep 2024, with noise conditions</dd></div>
-        <div><dt>Opening</dt><dd>2031 (planned)</dd></div>
+        <div><dt>Cross runway</dt><dd>09/27 · 2,286 m · mainly high winds after 2031</dd></div>
+        <div><dt>Third runway</dt><dd>16R/34L · 3,000 m · 1,311 m west of main runway · opens 2031</dd></div>
+        <div><dt>70 dB(A)</dt><dd>≈ car passing at 60 km/h; ≈ 60 dB indoors with windows open, enough to interrupt conversation (the N70 measure)</dd></div>
+        <div><dt>60 dB(A)</dt><dd>≈ ordinary conversation; the N60 night measure</dd></div>
+        <div><dt>10 dB less</dt><dd>sounds about half as loud</dd></div>
       </dl>
     </section>
 
     <section>
-      <h2>How to read this map</h2>
-      <p class="note">Suburb boundaries, the airport boundary and today's runways come live from OpenStreetMap. The third runway is placed from the published figures (3,000 m, 1,311 m west of the main runway), so its exact position is approximate.</p>
-      <p class="note">Corridors are simplified: straight approaches on a 3° glide slope and generic departure fans. Real radar tracks spread several kilometres and departures follow set routes. "Under" means within 1.5 km of a corridor with aircraft below about 4,300 ft. "Near" means within 3.5 km with aircraft below about 6,500 ft. The generic turning fans can only mark a spot as Near. Aircraft are shown sped up 4×.</p>
-      <p class="note">These are screening rules, not official noise contours. Check the exact address before buying:</p>
+      <h2>How the loudness is worked out</h2>
+      <p class="note">For each spot, the model finds how close each corridor passes in 3D and looks up the peak level heard on the ground, L<sub>Amax</sub>, from NATS representative aircraft noise tables (single-aisle 125–180 seat jets and 250-seat twin-aisle jets). It then applies the standard SAE AIR 1751 extra ground attenuation for aircraft seen low to the side. Wide-body levels are calibrated to Melbourne Airport's third runway fact sheet, which quotes 80 dB(A) for a wide-body arrival at 600 ft and 82 dB(A) for a departure at 1,300 ft. Newer 787 and A350 types are quieter close in than the NATS average. The typical-jet levels already match the fact sheet's 78 to 79 dB(A).</p>
+      <p class="note">The map shows the loudest single overflight at each spot, not how many flights there are each day. The runways in use change with the wind, so a spot may only hear planes some of the time. Corridors are simplified: straight 3° approaches and generic departure fans. Real tracks spread out and departures follow set routes. Treat the numbers as a guide, accurate to within about ±5 dB.</p>
+      <p class="note">Before buying, check the exact address in the official tools:</p>
       <ul class="links">
         <li><a href="https://www.melbourneairport.com.au/community/aircraft-noise" target="_blank" rel="noopener">Melbourne Airport Flight Path and Noise Tool</a></li>
-        <li><a href="https://au.webtrak.aero/mel3" target="_blank" rel="noopener">WebTrak Melbourne (real radar tracks)</a></li>
+        <li><a href="https://au.webtrak.aero/mel3" target="_blank" rel="noopener">WebTrak Melbourne (real radar tracks and measured noise)</a></li>
+        <li><a href="https://www.nats.aero/environment/noise-and-emissions/measuring-noise/lmax/" target="_blank" rel="noopener">NATS representative Lmax data</a></li>
       </ul>
     </section>
   </aside>
@@ -207,9 +255,9 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
 'use strict';
 const toastEl=document.getElementById('toast');
 function toast(msg,ms){toastEl.textContent=msg;toastEl.hidden=false;clearTimeout(toast.t);if(ms)toast.t=setTimeout(()=>toastEl.hidden=true,ms);}
-if(!window.maplibregl||!window.deck){toast('The map libraries did not load. Check your internet connection and reload.');return;}
+if(!window.maplibregl||!window.deck){toast('The map libraries did not load. Open this page in Chrome or Safari, not inside another app.');return;}
 
-// ---------- geometry helpers (local km: x east, n north) ----------
+// ---------- geometry (local km: x east, n north) ----------
 const D2R=Math.PI/180;
 const LAT0=-37.6733, LON0=144.8433;
 const KX=111.320*Math.cos(LAT0*D2R), KY=110.574;
@@ -224,7 +272,7 @@ function inRing(p,r){let c=false;for(let i=0,j=r.length-1;i<r.length;j=i++){cons
 function simplify(pts,tol){
   if(pts.length<=4)return pts;
   const f=pts[0],l=pts[pts.length-1];
-  if(Math.abs(f.x-l.x)<1e-9&&Math.abs(f.n-l.n)<1e-9){ // closed ring: split at the farthest vertex
+  if(Math.abs(f.x-l.x)<1e-9&&Math.abs(f.n-l.n)<1e-9){
     let m=1;for(let i=1;i<pts.length-1;i++)if(dist(pts[i],f)>dist(pts[m],f))m=i;
     return simplifyOpen(pts.slice(0,m+1),tol).concat(simplifyOpen(pts.slice(m),tol).slice(1));
   }
@@ -260,7 +308,6 @@ function stitch(ways){
   }
   return out;
 }
-// OSM element -> list of local rings (outer only), simplified
 function elementRings(el,tol){
   let raw=[];
   if(el.type==='way'&&el.geometry)raw=[el.geometry.map(g=>[g.lon,g.lat])];
@@ -283,13 +330,12 @@ function defaultRunways(){
   return [main,cross,deriveNew(main)];
 }
 let RW=defaultRunways();
-let runwaySource='estimated';
 
-// ---------- flight paths ----------
+// ---------- flight paths (a = altitude km above airport) ----------
 const TAN3=Math.tan(3*D2R);
-function arrivalPts(th,brg){const p=[];for(let d=24;d>0;d-=1){const q=add(th,brg+180,d);p.push({x:q.x,n:q.n,a:d*TAN3});}
-  p.push({x:th.x,n:th.n,a:0.01});const r=add(th,brg,1.6);p.push({x:r.x,n:r.n,a:0.01});return p;}
-function departurePts(th,brg,len,turn){const G=0.1,p=[{x:th.x,n:th.n,a:0.01}];let q=add(th,brg,len*0.6),d=0,h=brg;p.push({x:q.x,n:q.n,a:0.01});
+function arrivalPts(th,brg){const p=[];for(let d=26;d>0;d-=1){const q=add(th,brg+180,d);p.push({x:q.x,n:q.n,a:d*TAN3});}
+  p.push({x:th.x,n:th.n,a:0.015});const r=add(th,brg,1.6);p.push({x:r.x,n:r.n,a:0.005});return p;}
+function departurePts(th,brg,len,turn){const G=0.1,p=[{x:th.x,n:th.n,a:0.005}];let q=add(th,brg,len*0.6),d=0,h=brg;p.push({x:q.x,n:q.n,a:0.01});
   for(let i=0;i<6;i++){q=add(q,h,1);d+=1;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}
   for(let i=1;i<=4;i++){h=brg+turn*i/4;q=add(q,h,0.5);d+=0.5;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}
   for(let i=0;i<7;i++){q=add(q,h,2);d+=2;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}
@@ -300,7 +346,7 @@ function buildPaths(){
   RW.forEach(r=>{
     [[r.A,r.brg,0],[r.B,(r.brg+180)%360,1]].forEach(([th,brg,i])=>{
       const mk=(kind,turn,pts)=>{
-        const P={rw:r,i,kind,turn,pts,base:r.base[i],future:r.era==='future'};
+        const P={rw:r,i,kind,turn,pts,th,base:r.base[i],future:r.era==='future'};
         P.label=era=>`RWY ${r.names[era][i]} ${kind==='arr'?'arrivals':'departures'}`;
         P.inEra=era=>r.era==='both'||era==='future';
         P.cum=[0];let L=0;for(let k=1;k<pts.length;k++){L+=Math.hypot(pts[k].x-pts[k-1].x,pts[k].n-pts[k-1].n,pts[k].a-pts[k-1].a);P.cum.push(L);}P.len=L;
@@ -314,24 +360,53 @@ function buildPaths(){
 }
 buildPaths();
 
-// ---------- exposure ----------
-function exposure(s,era){
-  let best={sev:0,lat:Infinity,alt:0,q:null,path:null};
+// ---------- noise model ----------
+// NATS representative Lmax, dB(A), by height in ft directly below the aircraft
+const CURVES={
+  narrow:{arr:[[1000,77],[2000,69],[3000,64],[4000,61],[5000,59],[6000,57],[7000,56],[8000,55]],
+          dep:[[1000,85],[2000,75],[3000,70],[4000,66],[5000,63],[6000,60],[7000,59],[8000,58],[9000,57],[10000,56]]},
+  wide:  {arr:[[1000,84],[2000,74],[3000,68],[4000,64],[5000,60],[6000,58],[7000,56],[8000,55]],
+          dep:[[1000,92],[2000,83],[3000,77],[4000,73],[5000,69],[6000,66],[7000,64],[8000,61],[9000,59],[10000,58]]}
+};
+// Calibrate wide-bodies to Melbourne Airport's measured figures (80 dB arrival at 600 ft, 82 dB departure at 1,300 ft):
+// newer 787/A350-type aircraft are quieter close in than the NATS 250-seat average. Offset tapers to zero by 4,000 ft.
+[['arr',5],['dep',6]].forEach(([k,off])=>{CURVES.wide[k]=CURVES.wide[k].map(([h,l])=>[h,l-off*Math.max(0,Math.min(1,(4000-h)/3000))]);});
+function curveL(ac,kind,ft){
+  const c=CURVES[ac][kind];
+  if(ft<=c[0][0]){const f=Math.max(ft,250);return Math.min(c[0][1]+2,c[0][1]+7*Math.log2(c[0][0]/f));}
+  for(let i=1;i<c.length;i++){if(ft<=c[i][0]){const t=Math.log(ft/c[i-1][0])/Math.log(c[i][0]/c[i-1][0]);return c[i-1][1]+(c[i][1]-c[i-1][1])*t;}}
+  const last=c[c.length-1];return last[1]-6*Math.log2(ft/last[0]);
+}
+// SAE AIR 1751 lateral (ground) attenuation
+function latAtten(latM,altM){
+  if(latM<1)return 0;const beta=Math.atan2(altM,latM)/D2R;if(beta>=50)return 0;
+  const G=11.83*(1-Math.exp(-0.00274*Math.min(latM,914)));
+  const Lam=1.137-0.0229*beta+9.72*Math.exp(-0.142*beta);
+  return G*Lam/10.86;
+}
+function levelAt(ac,kind,latKm,altKm){const latM=latKm*1000,altM=Math.max(altKm*1000,8);return curveL(ac,kind,Math.hypot(latM,altM)*3.281)-latAtten(latM,altM);}
+function noiseAt(s,era,ac){
+  let best={L:0,lat:0,alt:0,q:null,path:null,along:0};
   for(const p of PATHS){
     if(!p.inEra(era))continue;
     const pts=p.pts;
     for(let k=0;k<pts.length-1;k++){
       const a=pts[k],b=pts[k+1],dx=b.x-a.x,dn=b.n-a.n,l2=dx*dx+dn*dn;
       let t=l2?((s.x-a.x)*dx+(s.n-a.n)*dn)/l2:0;t=t<0?0:t>1?1:t;
-      const qx=a.x+dx*t,qn=a.n+dn*t,alt=a.a+(b.a-a.a)*t,lat=Math.hypot(s.x-qx,s.n-qn);
-      let sev=0;if(lat<1.5&&alt<1.3)sev=2;else if(lat<3.5&&alt<2.0)sev=1;
-      if(sev===2&&p.kind==='dep'&&p.turn!==0)sev=1;
-      if(sev>best.sev||(sev===best.sev&&lat<best.lat))best={sev,lat,alt,q:{x:qx,n:qn,a:alt},path:p};
+      const qx=a.x+dx*t,qn=a.n+dn*t,lat=Math.hypot(s.x-qx,s.n-qn);
+      if(lat>9)continue;
+      const alt=a.a+(b.a-a.a)*t;
+      const L=levelAt(ac,p.kind,lat,alt);
+      if(L>best.L)best={L,lat,alt,q:{x:qx,n:qn,a:alt},path:p,along:p.kind==='arr'?Math.hypot(qx-p.th.x,qn-p.th.n):Math.hypot(qx-pts[0].x,qn-pts[0].n)};
     }
   }
   return best;
 }
-const STATUS=[{t:'Clear',c:'s0',hex:'#2f9e44'},{t:'Near',c:'s1',hex:'#f2b300'},{t:'Under',c:'s2',hex:'#e8590c'}];
+const BANDS=[{min:75,t:'Very loud',hex:'#9d174d'},{min:70,t:'Loud',hex:'#ea580c'},{min:65,t:'Noticeable',hex:'#f2b300',dk:1},{min:60,t:'Audible',hex:'#a3c93a',dk:1},{min:-99,t:'Quiet',hex:'#2f9e44'}];
+const band=L=>BANDS.find(b=>L>=b.min);
+const hexRGB=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+const chip=(L,withText)=>{const b=band(L);return `<span class="chip${b.dk?' dk':''}" style="background:${b.hex}">${Math.round(L)} dB${withText?' · '+b.t:''}</span>`;};
+const SLANT70={};['narrow','wide'].forEach(ac=>{SLANT70[ac]={};['arr','dep'].forEach(k=>{let lo=100,hi=80000;for(let i=0;i<50;i++){const m=(lo+hi)/2;if(curveL(ac,k,m)>=70)lo=m;else hi=m;}SLANT70[ac][k]=lo/3.281;});});
 
 // ---------- fallback data ----------
 const FALLBACK_APT=[[-2.9,3.4],[0.0,3.6],[1.4,3.0],[2.1,1.8],[2.1,-0.4],[1.9,-2.2],[1.2,-2.9],[-0.6,-2.7],[-2.2,-2.3],[-3.3,-1.0],[-3.4,1.4],[-3.2,2.8]].map(([x,n])=>({x,n}));
@@ -351,19 +426,20 @@ const cacheGet=k=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):nu
 const cacheSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
 
 // ---------- state ----------
-const state={base:'map',era:'today',flow:'all',exag:1.5,paused:false,westOnly:true,terrain:false,googleKey:'',
-  layers:{apt:true,sub:true,paths:true,planes:true,bld:true},sel:null,spot:null};
-let AIRPORT=null; // {ring:[{x,n}], ha, source}
-let SUBS=[];      // suburbs
-const altOffset=()=>state.base==='google'?135:(state.terrain?132:0); // metres
+const DEFAULT_REF={lng:144.862,lat:-37.761,title:'Avondale Heights'};
+const state={base:'map',era:'today',flow:'all',ac:'narrow',noise:'flat',thr:60,exag:1,paused:false,westOnly:true,terrain:false,googleKey:'',
+  layers:{apt:true,sub:true,paths:true,planes:true,rings:true,alt:true,bld:true},sel:null,spot:null,ref:cacheGet('tfpm:ref')||DEFAULT_REF,follow:null};
+let AIRPORT=null, SUBS=[], subsReady=false;
+const altOffset=()=>state.base==='google'?135:(state.terrain?132:0);
 
 // ---------- map ----------
 const map=new maplibregl.Map({
   container:'map',style:'https://tiles.openfreemap.org/styles/liberty',
-  center:[144.815,-37.705],zoom:11.4,pitch:60,bearing:-25,maxPitch:85,antialias:true,attributionControl:{compact:true}
+  center:[144.815,-37.715],zoom:11.3,pitch:62,bearing:-25,maxPitch:85,antialias:true,attributionControl:{compact:true}
 });
 map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'bottom-right');
-const overlay=new deck.MapboxOverlay({interleaved:true,layers:[]});
+let meshFailed=false;
+const overlay=new deck.MapboxOverlay({interleaved:true,layers:[],onError:(err,layer)=>{if(layer&&layer.id==='planes3d')meshFailed=true;}});
 map.addControl(overlay);
 let firstLabelLayer=null, satBefore=null, placeLabelIds=[];
 
@@ -372,6 +448,7 @@ map.on('load',()=>{
   firstLabelLayer=(layers.find(l=>l.type==='symbol')||{}).id;
   satBefore=(layers.find(l=>/^(tunnel|road|highway|bridge|building|aeroway)/.test(l.id)||l.type==='fill-extrusion'||l.type==='symbol')||{}).id;
   placeLabelIds=layers.filter(l=>l.type==='symbol'&&/^label_(other|village|town|city)/.test(l.id)).map(l=>l.id);
+  try{map.setSky({'sky-color':'#8ec5ff','horizon-color':'#eaf3ff','fog-color':'#f4f7fb','sky-horizon-blend':0.6,'horizon-fog-blend':0.7,'fog-ground-blend':0.85,'atmosphere-blend':0.8});}catch(e){}
   map.addSource('sat',{type:'raster',tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],tileSize:256,maxzoom:19,attribution:'Imagery © Esri, Maxar, Earthstar Geographics'});
   map.addLayer({id:'sat',type:'raster',source:'sat',layout:{visibility:'none'}},satBefore);
   map.addSource('dem',{type:'raster-dem',tiles:['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],encoding:'terrarium',tileSize:256,maxzoom:14,attribution:'Terrain: Mapzen/AWS'});
@@ -379,25 +456,25 @@ map.on('load',()=>{
   map.addSource('subpts',{type:'geojson',data:fc([])});
   map.addSource('apt',{type:'geojson',data:fc([])});
   map.addSource('rw3',{type:'geojson',data:fc([])});
-  map.addLayer({id:'sub-fill',type:'fill',source:'subs',paint:{'fill-color':['get','col'],'fill-opacity':0.26}},firstLabelLayer);
-  map.addLayer({id:'sub-line',type:'line',source:'subs',paint:{'line-color':['get','col'],'line-width':1.6,'line-opacity':0.9}},firstLabelLayer);
+  map.addLayer({id:'sub-fill',type:'fill',source:'subs',paint:{'fill-color':['get','col'],'fill-opacity':0.2}},firstLabelLayer);
+  map.addLayer({id:'sub-line',type:'line',source:'subs',paint:{'line-color':'#39424e','line-width':1.1,'line-opacity':0.55,'line-dasharray':[3,2]}},firstLabelLayer);
   map.addLayer({id:'sub-sel',type:'line',source:'subs',filter:['==',['get','name'],''],paint:{'line-color':'#1b1f24','line-width':3.5}},firstLabelLayer);
-  map.addLayer({id:'apt-fill',type:'fill',source:'apt',paint:{'fill-color':'#e11d2e','fill-opacity':0.1}},firstLabelLayer);
+  map.addLayer({id:'apt-fill',type:'fill',source:'apt',paint:{'fill-color':'#e11d2e','fill-opacity':0.08}},firstLabelLayer);
   map.addLayer({id:'apt-case',type:'line',source:'apt',paint:{'line-color':'#ffffff','line-width':7,'line-opacity':0.9}},firstLabelLayer);
   map.addLayer({id:'apt-line',type:'line',source:'apt',paint:{'line-color':'#e11d2e','line-width':3.5}},firstLabelLayer);
-  map.addLayer({id:'rw3-fill',type:'fill',source:'rw3',paint:{'fill-color':'#a21caf','fill-opacity':0.75}},firstLabelLayer);
+  map.addLayer({id:'rw3-fill',type:'fill',source:'rw3',paint:{'fill-color':'#a21caf','fill-opacity':0.8}},firstLabelLayer);
   map.addLayer({id:'sub-dot',type:'circle',source:'subpts',paint:{'circle-radius':5,'circle-color':['get','col'],'circle-stroke-color':'#fff','circle-stroke-width':1.5}});
-  map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['get','name'],'text-font':['Noto Sans Bold'],'text-size':12.5,'text-offset':[0,0.9],'text-anchor':'top','text-max-width':8},paint:{'text-color':'#1b1f24','text-halo-color':'#ffffff','text-halo-width':1.6}});
+  map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['get','label'],'text-font':['Noto Sans Bold'],'text-size':12.5,'text-offset':[0,0.9],'text-anchor':'top','text-max-width':9},paint:{'text-color':'#1b1f24','text-halo-color':'#ffffff','text-halo-width':1.7}});
   renderRunway3();renderAirport();applyAll();
   toast('Loading airport boundary and suburbs from OpenStreetMap…');
   loadData();
   requestAnimationFrame(frame);
 });
 map.on('error',e=>{if(e&&e.error&&/openfreemap/.test(String(e.error.message||'')))toast('The street map could not load. Try Satellite.',6000);});
+['dragstart','wheel','touchstart'].forEach(ev=>map.on(ev,()=>{if(state.follow)stopRide();}));
 
 function fc(f){return {type:'FeatureCollection',features:f};}
 const ringLL=r=>r.map(p=>toLL(p.x,p.n));
-
 function renderAirport(){
   if(!map.getSource('apt'))return;
   const ring=AIRPORT?AIRPORT.ring:FALLBACK_APT;
@@ -409,20 +486,21 @@ function renderRunway3(){
   const w=0.03,c=[add(r.A,r.brg-90,w),add(r.B,r.brg-90,w),add(r.B,r.brg+90,w),add(r.A,r.brg+90,w)];c.push(c[0]);
   map.getSource('rw3').setData(fc([{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[ringLL(c)]}}]));
 }
+const subStat=s=>s.stats&&s.stats[state.ac]&&s.stats[state.ac][state.era];
 function renderSubs(){
   if(!map.getSource('subs'))return;
   const f=[],pts=[];
   SUBS.forEach(s=>{
-    const col=STATUS[s.stats[state.era].sev].hex;
+    const st=subStat(s);const col=st?band(st.med).hex:'#8a929c';
+    const label=st?`${s.name}\n${Math.round(st.med)} dB`:s.name;
     f.push({type:'Feature',properties:{name:s.name,col},geometry:{type:'MultiPolygon',coordinates:s.rings.map(r=>[ringLL(r)])}});
-    pts.push({type:'Feature',properties:{name:s.name,col},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
+    pts.push({type:'Feature',properties:{name:s.name,col,label},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
   });
   map.getSource('subs').setData(fc(f));map.getSource('subpts').setData(fc(pts));
 }
 
 // ---------- data loading ----------
 async function loadData(){
-  // airport + runways
   let apt=cacheGet('tfpm:v2:apt');
   if(!apt){
     try{
@@ -434,51 +512,47 @@ async function loadData(){
   if(apt)applyAirportData(apt.elements);
   else toast('OpenStreetMap is busy, so the airport outline is indicative. Reload to retry.',7000);
 
-  // suburbs
   let subs=cacheGet('tfpm:v2:subs');
   if(!subs){
     try{
-      toast('Loading suburb boundaries (can take up to a minute)…');
+      toast('Loading suburb boundaries (can take up to a minute the first time)…');
       const j=await overpass('[out:json][timeout:150];relation["boundary"="administrative"]["admin_level"="10"](-37.96,144.55,-37.52,145.0);out geom;');
       subs=j.elements.filter(e=>e.tags&&e.tags.name).map(e=>({name:e.tags.name,rings:elementRings(e,0.02).map(r=>r.map(p=>[+p.x.toFixed(4),+p.n.toFixed(4)]))})).filter(s=>s.rings.length);
       cacheSet('tfpm:v2:subs',subs);
     }catch(e){subs=null;}
   }
-  if(subs&&subs.length){
-    SUBS=subs.map(s=>({name:s.name,rings:s.rings.map(r=>r.map(([x,n])=>({x,n})))}));
-  }else{
+  if(subs&&subs.length)SUBS=subs.map(s=>({name:s.name,rings:s.rings.map(r=>r.map(([x,n])=>({x,n})))}));
+  else{
     toast('Suburb boundaries could not load, so suburbs are shown as approximate circles. Reload to retry.',8000);
     SUBS=FALLBACK_SUBS.map(([name,lat,lon])=>{const c=toL(lon,lat);const r=[];for(let i=0;i<=24;i++){const a=i/24*Math.PI*2;r.push({x:c.x+Math.cos(a)*1.1,n:c.n+Math.sin(a)*1.1});}return {name,rings:[r]};});
   }
-  SUBS.forEach(prepSuburb);
-  await scoreAll();
+  SUBS.forEach(prepSuburb);subsReady=true;
+  await scoreSuburbs(state.ac);
 }
 function applyAirportData(els){
   const aero=els.find(e=>e.tags&&e.tags.aeroway==='aerodrome'&&e.type!=='node');
   if(aero){
     const rings=elementRings(aero,0.005).sort((a,b)=>Math.abs(ringArea(b))-Math.abs(ringArea(a)));
-    if(rings.length){const ha=rings.reduce((s,r)=>s+Math.abs(ringArea(r)),0)*100;AIRPORT={ring:rings[0],ha,source:'osm'};}
+    if(rings.length)AIRPORT={ring:rings[0]};
   }
   const rws=els.filter(e=>e.type==='way'&&e.tags&&e.tags.aeroway==='runway'&&e.geometry&&e.geometry.length>1);
   let main=null,cross=null,nw=null;
   rws.forEach(w=>{
     const ref=(w.tags.ref||'').toUpperCase().replace(/\s/g,'');
     const g=w.geometry.map(p=>toL(p.lon,p.lat));
-    // farthest pair along the way
-    let a=g[0],b=g[g.length-1];
+    const a=g[0],b=g[g.length-1];
     if(dist(a,b)<1.5)return;
     if(/16R|34L/.test(ref)){const A=a.n>b.n?a:b,B=A===a?b:a;nw=mkRunway('new',A,B,'future',{today:['',''],future:['16R','34L']},['16','34']);}
     else if(/16|34/.test(ref)){const A=a.n>b.n?a:b,B=A===a?b:a;main=mkRunway('main',A,B,'both',{today:['16','34'],future:['16L','34R']},['16','34']);}
     else if(/09|27/.test(ref)){const A=a.x<b.x?a:b,B=A===a?b:a;cross=mkRunway('cross',A,B,'both',{today:['09','27'],future:['09','27']},['09','27']);}
   });
   if(main||cross){
-    const d=defaultRunways();
-    const m=main||d[0];
+    const d=defaultRunways();const m=main||d[0];
     RW=[m,cross||d[1],nw||deriveNew(m)];
-    runwaySource=nw?'osm':'derived';buildPaths();renderRunway3();
+    buildPaths();renderRunway3();GRID={};
   }
   renderAirport();
-  if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);
+  if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);else renderCard();
 }
 function prepSuburb(s){
   let big=s.rings[0];s.rings.forEach(r=>{if(Math.abs(ringArea(r))>Math.abs(ringArea(big)))big=r;});
@@ -495,110 +569,229 @@ function prepSuburb(s){
   if(!s.samples.length)s.samples=[s.label];
   s.west=toLL(s.label.x,s.label.n)[0]<144.905;
   s.dAir=Math.hypot(s.label.x,s.label.n);
+  s.stats={};
 }
-async function scoreAll(){
+let scoring=null;
+async function scoreSuburbs(ac){
+  if(!subsReady)return;
+  if(SUBS.every(s=>s.stats[ac])){renderSubs();renderList();renderCard();return;}
+  if(scoring===ac)return;scoring=ac;
   const total=SUBS.length;
   for(let i=0;i<total;i++){
-    const s=SUBS[i];s.stats={};
+    const s=SUBS[i];if(s.stats[ac])continue;const out={};
     ['today','future'].forEach(era=>{
-      const cnt=[0,0,0];s.samples.forEach(p=>cnt[exposure(p,era).sev]++);
-      const N=s.samples.length,u=cnt[2]/N,nr=cnt[1]/N;
-      s.stats[era]={u,n:nr,c:cnt[0]/N,sev:u>=0.15?2:(u>0||u+nr>=0.15)?1:0};
+      const Ls=s.samples.map(p=>noiseAt(p,era,ac).L).sort((a,b)=>a-b);
+      out[era]={med:Ls[Math.floor(Ls.length/2)],p90:Ls[Math.min(Ls.length-1,Math.floor(Ls.length*0.9))],min:Ls[0]};
     });
-    if(i%8===7){toast(`Scoring suburbs ${i+1} of ${total}…`);await new Promise(r=>setTimeout(r,0));}
+    s.stats[ac]=out;
+    if(i%6===5){toast(`Working out loudness for each suburb: ${i+1} of ${total}…`);await new Promise(r=>setTimeout(r,0));}
   }
-  renderSubs();renderList();
-  toast(`${total} suburbs loaded. Click any suburb or spot on the map.`,5000);
+  scoring=null;
+  renderSubs();renderList();renderCard();
+  toast(`${total} suburbs loaded. Click any spot to see how loud it gets.`,5000);
 }
 
-// ---------- deck layers ----------
+// ---------- loudness grid ----------
+let GRID={};
+function getGrid(){
+  const key=state.era+'|'+state.ac;
+  if(GRID[key])return GRID[key];
+  const cells=[],step=0.4;
+  for(let x=-27;x<=20;x+=step)for(let n=-25;n<=15;n+=step){
+    const L=noiseAt({x,n},state.era,state.ac).L;
+    if(L>=55){const ll=toLL(x,n);cells.push({ll,L,col:hexRGB(band(L).hex)});}
+  }
+  GRID[key]=cells;return cells;
+}
+
+// ---------- 3D aircraft mesh ----------
+function buildPlaneMesh(){
+  const P=[],N=[];
+  function tri(a,b,c,ctr){
+    const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]],v=[c[0]-a[0],c[1]-a[1],c[2]-a[2]];
+    let n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
+    const l=Math.hypot(n[0],n[1],n[2]);if(l<1e-9)return;n=n.map(q=>q/l);
+    const g=[(a[0]+b[0]+c[0])/3-ctr[0],(a[1]+b[1]+c[1])/3-ctr[1],(a[2]+b[2]+c[2])/3-ctr[2]];
+    if(n[0]*g[0]+n[1]*g[1]+n[2]*g[2]<0){n=n.map(q=>-q);const t=b;b=c;c=t;}
+    P.push(...a,...b,...c);for(let i=0;i<3;i++)N.push(...n);
+  }
+  const quad=(a,b,c,d,ctr)=>{tri(a,b,c,ctr);tri(a,c,d,ctr);};
+  function tube(cx,cz,rings,seg){
+    const ctr=[cx,(rings[0].y+rings[rings.length-1].y)/2,cz];
+    const pt=(rg,i)=>{const a=i/seg*Math.PI*2;return [cx+Math.cos(a)*rg.r,rg.y,cz+(rg.z||0)+Math.sin(a)*rg.r];};
+    for(let k=0;k<rings.length-1;k++)for(let i=0;i<seg;i++)quad(pt(rings[k],i),pt(rings[k],i+1),pt(rings[k+1],i+1),pt(rings[k+1],i),ctr);
+  }
+  function slabXY(poly,z0,z1){
+    const ctr=[poly.reduce((s,p)=>s+p[0],0)/poly.length,poly.reduce((s,p)=>s+p[1],0)/poly.length,(z0+z1)/2];
+    for(let i=1;i<poly.length-1;i++){tri([...poly[0],z1],[...poly[i],z1],[...poly[i+1],z1],ctr);tri([...poly[0],z0],[...poly[i],z0],[...poly[i+1],z0],ctr);}
+    for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length];quad([a[0],a[1],z0],[b[0],b[1],z0],[b[0],b[1],z1],[a[0],a[1],z1],ctr);}
+  }
+  function slabYZ(poly,x0,x1){
+    const ctr=[(x0+x1)/2,poly.reduce((s,p)=>s+p[0],0)/poly.length,poly.reduce((s,p)=>s+p[1],0)/poly.length];
+    for(let i=1;i<poly.length-1;i++){tri([x1,...poly[0]],[x1,...poly[i]],[x1,...poly[i+1]],ctr);tri([x0,...poly[0]],[x0,...poly[i]],[x0,...poly[i+1]],ctr);}
+    for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length];quad([x0,a[0],a[1]],[x0,b[0],b[1]],[x1,b[0],b[1]],[x1,a[0],a[1]],ctr);}
+  }
+  tube(0,0,[{y:-19.5,r:0.05,z:1.4},{y:-16.5,r:1.1,z:0.9},{y:-12,r:2,z:0},{y:13,r:2},{y:16,r:1.55,z:-0.2},{y:18.4,r:0.6,z:-0.45},{y:19.3,r:0.05,z:-0.5}],12);
+  [-1,1].forEach(sx=>{
+    tube(6*sx,-1.6,[{y:-1.4,r:0.05},{y:-1,r:0.65},{y:0,r:1.05},{y:3.4,r:1.15},{y:3.5,r:0.05}],10);
+    slabXY([[1.8*sx,4],[17.5*sx,-5],[17.5*sx,-7],[1.8*sx,-2.6]],-0.9,-0.45);
+    slabXY([[0.8*sx,-14.4],[6.6*sx,-18.1],[6.6*sx,-19.1],[0.8*sx,-17.7]],0.95,1.15);
+  });
+  slabYZ([[-12.5,1.6],[-17.8,8.6],[-19.3,8.6],[-18.9,1.6]],-0.25,0.25);
+  const n=P.length/3;
+  return {attributes:{positions:{value:new Float32Array(P),size:3},normals:{value:new Float32Array(N),size:3},texCoords:{value:new Float32Array(n*2),size:2}}};
+}
+const PLANE_MESH=buildPlaneMesh();
+function planeMatrix(brg,pitchDeg,k){
+  const ph=-brg*D2R,p=pitchDeg*D2R,c=Math.cos(ph),s=Math.sin(ph),cp=Math.cos(p),sp=Math.sin(p);
+  return [c*k,s*k,0,0, -s*cp*k,c*cp*k,sp*k,0, s*sp*k,-c*sp*k,cp*k,0, 0,0,0,1];
+}
 const PLANE_SVG=c=>`<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><path d="M32 3c2.6 0 4 3 4 6v15l21 12.5v6.5l-21-6v12.5l7 5v5l-11-3-11 3v-5l7-5V37l-21 6v-6.5L28 24V9c0-3 1.4-6 4-6z" fill="${c}" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>`;
 const ICON_T={url:'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(PLANE_SVG('#123a8f')),width:64,height:64,anchorY:32,mask:false};
 const ICON_F={url:'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(PLANE_SVG('#7a0f86')),width:64,height:64,anchorY:32,mask:false};
 const RGB_T=[28,100,242],RGB_F=[162,28,175];
 
+// ---------- deck layers ----------
 let staticKey='',staticLayers=[],visPaths=[],planes=[];
-function pathVisible(p){return state.layers.paths&&p.inEra(state.era)&&(state.flow==='all'||p.base===state.flow);}
+function pathVisible(p){return p.inEra(state.era)&&(state.flow==='all'||p.base===state.flow);}
 function coordOf(p,k){const q=p.pts[k];const ll=toLL(q.x,q.n);return [ll[0],ll[1],q.a*1000*state.exag+altOffset()];}
+function altMarkers(){
+  const out=[];
+  visPaths.forEach(p=>{
+    if(p.kind==='dep'&&p.turn!==0)return;
+    [1000,2000,3000,4000,5000].forEach(ft=>{
+      const target=ft/3281;
+      for(let k=0;k<p.pts.length-1;k++){
+        const a=p.pts[k],b=p.pts[k+1];
+        if((a.a-target)*(b.a-target)<=0&&a.a!==b.a){
+          const t=(target-a.a)/(b.a-a.a),x=a.x+(b.x-a.x)*t,n=a.n+(b.n-a.n)*t;
+          const km=p.kind==='arr'?Math.hypot(x-p.th.x,n-p.th.n):Math.hypot(x-p.pts[0].x,n-p.pts[0].n);
+          const ll=toLL(x,n);
+          out.push({p:[ll[0],ll[1],target*1000*state.exag+altOffset()],g:[ll[0],ll[1],altOffset()+2],t:`${ft.toLocaleString('en-AU')} ft · ${km.toFixed(1)} km`,f:p.future});
+          break;
+        }
+      }
+    });
+  });
+  return out;
+}
 function buildStatic(){
   visPaths=PATHS.filter(pathVisible);
-  const pd=visPaths.map(p=>({p,path:p.pts.map((_,k)=>coordOf(p,k)),ground:p.pts.map(q=>{const ll=toLL(q.x,q.n);return [ll[0],ll[1],altOffset()+3];})}));
-  const drops=[];
-  visPaths.forEach(p=>p.pts.forEach((q,k)=>{if(q.a>0.03&&q.a<2.2&&(p.kind==='arr'?k%2===0:k>=2&&k<10)){const c=coordOf(p,k);drops.push({s:[c[0],c[1],altOffset()],t:c,f:p.future});}}));
   const L=[];
-  if(state.base==='google'&&state.googleKey){
+  const google=state.base==='google'&&state.googleKey;
+  if(google){
     L.push(new deck.Tile3DLayer({id:'google3d',data:'https://tile.googleapis.com/v1/3dtiles/root.json',
       loadOptions:{fetch:{headers:{'X-GOOG-API-KEY':state.googleKey}}},operation:'terrain+draw',
       onTileError:()=>toast('Google 3D tiles failed. Check the key has the Map Tiles API enabled.',7000)}));
-    // outlines drawn in 3D so they sit above photoreal tiles
     if(state.layers.apt){const r=AIRPORT?AIRPORT.ring:FALLBACK_APT;
       L.push(new deck.PathLayer({id:'apt3d',data:[{path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+40];})}],getPath:d=>d.path,getColor:[225,29,46],getWidth:5,widthUnits:'pixels'}));}
     if(state.layers.sub&&SUBS.length){
-      const sd=[];SUBS.forEach(s=>s.rings.forEach(r=>sd.push({col:STATUS[s.stats[state.era].sev].hex,path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+30];})})));
+      const sd=[];SUBS.forEach(s=>{const st=subStat(s);s.rings.forEach(r=>sd.push({col:st?band(st.med).hex:'#8a929c',path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+30];})}));});
       L.push(new deck.PathLayer({id:'sub3d',data:sd,getPath:d=>d.path,getColor:d=>hexRGB(d.col),getWidth:2.5,widthUnits:'pixels'}));
     }
   }
-  L.push(new deck.PathLayer({id:'tracks',data:pd,getPath:d=>d.ground,getColor:d=>[...(d.p.future?RGB_F:RGB_T),90],getWidth:2,widthUnits:'pixels'}));
-  L.push(new deck.LineLayer({id:'drops',data:drops,getSourcePosition:d=>d.s,getTargetPosition:d=>d.t,getColor:d=>[...(d.f?RGB_F:RGB_T),80],getWidth:1,widthUnits:'pixels'}));
-  L.push(new deck.PathLayer({id:'corridors',data:pd,getPath:d=>d.path,getColor:d=>[...(d.p.future?RGB_F:RGB_T),d.p.kind==='arr'?235:160],getWidth:d=>d.p.kind==='arr'?4:2.5,widthUnits:'pixels',billboard:true,capRounded:true,jointRounded:true}));
+  if(state.noise!=='off'){
+    const cells=getGrid().filter(c=>c.L>=state.thr);
+    const is3d=state.noise==='3d';
+    L.push(new deck.ColumnLayer({id:'noise',data:cells,diskResolution:4,radius:283,angle:45,coverage:1,extruded:is3d,
+      getPosition:d=>[d.ll[0],d.ll[1],altOffset()+1],getElevation:d=>Math.max(1,(d.L-52)*16),
+      getFillColor:d=>[...d.col,is3d?215:105],material:{ambient:0.6,diffuse:0.5,shininess:10}}));
+  }
+  if(state.layers.paths){
+    const pd=visPaths.map(p=>({p,path:p.pts.map((_,k)=>coordOf(p,k)),ground:p.pts.map(q=>{const ll=toLL(q.x,q.n);return [ll[0],ll[1],altOffset()+3];})}));
+    const drops=[];
+    visPaths.forEach(p=>p.pts.forEach((q,k)=>{if(q.a>0.03&&q.a<2.2&&(p.kind==='arr'?k%2===0:k>=2&&k<10)){const c=coordOf(p,k);drops.push({s:[c[0],c[1],altOffset()],t:c,f:p.future});}}));
+    L.push(new deck.PathLayer({id:'tracks',data:pd,getPath:d=>d.ground,getColor:d=>[...(d.p.future?RGB_F:RGB_T),90],getWidth:2,widthUnits:'pixels'}));
+    L.push(new deck.LineLayer({id:'drops',data:drops,getSourcePosition:d=>d.s,getTargetPosition:d=>d.t,getColor:d=>[...(d.f?RGB_F:RGB_T),80],getWidth:1,widthUnits:'pixels'}));
+    L.push(new deck.PathLayer({id:'corridors',data:pd,getPath:d=>d.path,getColor:d=>[...(d.p.future?RGB_F:RGB_T),d.p.kind==='arr'?235:160],getWidth:d=>d.p.kind==='arr'?4:2.5,widthUnits:'pixels',billboard:true,capRounded:true,jointRounded:true}));
+  }
+  if(state.layers.alt&&state.layers.paths){
+    const am=altMarkers();
+    L.push(new deck.LineLayer({id:'altdrop',data:am,getSourcePosition:d=>d.g,getTargetPosition:d=>d.p,getColor:[27,31,36,150],getWidth:1.5,widthUnits:'pixels'}));
+    L.push(new deck.ScatterplotLayer({id:'altdot',data:am,getPosition:d=>d.p,getRadius:40,radiusUnits:'meters',radiusMinPixels:3.5,getFillColor:[255,255,255],stroked:true,getLineColor:d=>d.f?RGB_F:RGB_T,lineWidthMinPixels:2}));
+    L.push(new deck.TextLayer({id:'alttxt',data:am,getPosition:d=>d.p,getText:d=>d.t,characterSet:'auto',getSize:11.5,getColor:[27,31,36],background:true,getBackgroundColor:[255,255,255,230],backgroundPadding:[5,3],fontFamily:'IBM Plex Mono, monospace',getPixelOffset:[0,-14]}));
+  }
   staticLayers=L;
-  // planes
   planes=[];
-  visPaths.forEach(p=>{
+  if(state.layers.paths||state.layers.planes)visPaths.forEach(p=>{
     if(p.kind==='dep'&&p.turn!==0&&state.flow==='all')return;
     const n=p.kind==='arr'?2:1;
-    for(let k=0;k<n;k++)planes.push({p,t:(k/n+Math.random()*0.25)%1});
+    for(let k=0;k<n;k++)planes.push({p,t:(k/n+Math.random()*0.25)%1,ph:Math.random()});
   });
+  if(state.follow&&!planes.includes(state.follow))stopRide();
 }
-const hexRGB=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
 function posAt(p,t){
   const d=t*p.len;let k=1;while(k<p.cum.length-1&&p.cum[k]<d)k++;
   const a=p.pts[k-1],b=p.pts[k],f=Math.min(1,Math.max(0,(d-p.cum[k-1])/Math.max(1e-6,p.cum[k]-p.cum[k-1])));
   const x=a.x+(b.x-a.x)*f,n=a.n+(b.n-a.n)*f,al=a.a+(b.a-a.a)*f;const ll=toLL(x,n);
-  return {pos:[ll[0],ll[1],al*1000*state.exag+altOffset()+25],ground:[ll[0],ll[1],altOffset()+2],brg:p.segB[k-1],k,x,n,al};
+  const climb=Math.atan2((b.a-a.a),Math.hypot(b.x-a.x,b.n-a.n))/D2R;
+  return {pos:[ll[0],ll[1],al*1000*state.exag+altOffset()+4],ground:[ll[0],ll[1],altOffset()+2],brg:p.segB[k-1],climb,x,n,al};
+}
+function refLayers(){
+  const r=state.ref;if(!r)return [];
+  const g=[r.lng,r.lat,altOffset()+3];
+  return [
+    new deck.ScatterplotLayer({id:'refpin',data:[{p:g}],getPosition:d=>d.p,getRadius:90,radiusUnits:'meters',radiusMinPixels:7,getFillColor:[255,255,255],stroked:true,getLineColor:[27,31,36],lineWidthMinPixels:3}),
+    new deck.TextLayer({id:'reftxt',data:[{p:g,t:'Reference: '+r.title}],getPosition:d=>d.p,getText:d=>d.t,characterSet:'auto',getSize:12,getColor:[255,255,255],background:true,getBackgroundColor:[27,31,36,235],backgroundPadding:[6,4],fontFamily:'IBM Plex Sans, sans-serif',getPixelOffset:[0,18]})
+  ];
 }
 function spotLayers(){
   if(!state.spot)return [];
-  const e=state.spot.exp[state.era];const s=state.spot.local;
-  const sll=toLL(s.x,s.n),qll=toLL(e.q.x,e.q.n);
+  const e=state.spot.noise[state.era][state.ac];if(!e.q)return [];
+  const s=state.spot.local,sll=toLL(s.x,s.n),qll=toLL(e.q.x,e.q.n);
   const top=[qll[0],qll[1],e.q.a*1000*state.exag+altOffset()];
   return [
     new deck.LineLayer({id:'spotline',data:[{s:[sll[0],sll[1],altOffset()+2],t:top}],getSourcePosition:d=>d.s,getTargetPosition:d=>d.t,getColor:[27,31,36,230],getWidth:2,widthUnits:'pixels'}),
-    new deck.ScatterplotLayer({id:'spotpin',data:[{p:[sll[0],sll[1],altOffset()+2]}],getPosition:d=>d.p,getRadius:60,radiusUnits:'meters',radiusMinPixels:6,getFillColor:hexRGB(STATUS[e.sev].hex),stroked:true,getLineColor:[255,255,255],lineWidthMinPixels:2}),
-    new deck.TextLayer({id:'spottxt',data:[{p:top,t:`${e.lat.toFixed(1)} km · ${fmtFt(e.alt)} ft`}],getPosition:d=>d.p,getText:d=>d.t,getSize:13,getColor:[255,255,255],background:true,getBackgroundColor:[27,31,36,235],backgroundPadding:[6,4],fontFamily:'IBM Plex Mono, monospace',getPixelOffset:[0,-16]})
+    new deck.ScatterplotLayer({id:'spotpin',data:[{p:[sll[0],sll[1],altOffset()+2]}],getPosition:d=>d.p,getRadius:70,radiusUnits:'meters',radiusMinPixels:7,getFillColor:hexRGB(band(e.L).hex),stroked:true,getLineColor:[255,255,255],lineWidthMinPixels:2}),
+    new deck.TextLayer({id:'spottxt',data:[{p:top,t:`${Math.round(e.L)} dB · ${fmtFt(e.alt)} ft · ${e.lat.toFixed(1)} km to the side`}],getPosition:d=>d.p,getText:d=>d.t,characterSet:'auto',getSize:13,getColor:[255,255,255],background:true,getBackgroundColor:[27,31,36,235],backgroundPadding:[6,4],fontFamily:'IBM Plex Mono, monospace',getPixelOffset:[0,-16]})
   ];
 }
 let last=performance.now();
-const SPEED=0.3; // km per second (≈4× real approach speed)
+const SPEED=0.3; // km/s, about 4x real approach speed
 function frame(now){
   const dt=Math.min(0.1,(now-last)/1000);last=now;
-  const key=[state.era,state.flow,state.exag,state.base,state.googleKey?'k':'',state.terrain,state.layers.paths,state.layers.apt,state.layers.sub,RW.map(r=>r.A.x.toFixed(4)).join(),SUBS.length&&SUBS[0].stats?'s':''].join('|');
+  const key=[state.era,state.flow,state.exag,state.base,state.googleKey?'k':'',state.terrain,state.layers.paths,state.layers.apt,state.layers.sub,state.layers.alt,state.noise,state.thr,state.ac,RW.map(r=>r.A.x.toFixed(4)).join(),SUBS.filter(s=>subStat(s)).length].join('|');
   if(key!==staticKey){staticKey=key;buildStatic();}
   const L=staticLayers.slice();
-  if(state.layers.planes&&planes.length){
-    const pd=[],trails=[];
+  if(planes.length){
+    const pd=[],trails=[],rings=[];
+    const zoom=map.getZoom(),k=Math.max(1,Math.min(26,Math.pow(2,13.4-zoom)));
+    const tsec=now/1000;
     planes.forEach(pl=>{
-      if(!state.paused)pl.t=(pl.t+dt*SPEED/pl.p.len)%1;
-      const c=posAt(pl.p,pl.t);c.f=pl.p.future;pd.push(c);
+      if(!state.paused){const nt=pl.t+dt*SPEED/pl.p.len;if(nt>=1&&state.follow===pl)stopRide();pl.t=nt%1;}
+      const c=posAt(pl.p,pl.t);c.f=pl.p.future;
+      const pitch=c.al<0.02?0:(pl.p.kind==='arr'?2:Math.min(12,c.climb+4));
+      c.m=planeMatrix(c.brg,pitch,k);pd.push(c);
       const t0=Math.max(0,pl.t-2.5/pl.p.len);const tr=[];for(let i=0;i<=6;i++)tr.push(posAt(pl.p,t0+(pl.t-t0)*i/6).pos);
       trails.push({path:tr,f:pl.p.future});
+      const s70=SLANT70[state.ac][pl.p.kind],h=c.al*1000;
+      if(s70>h){const r=Math.sqrt(s70*s70-h*h);const ph=(tsec*0.55+pl.ph)%1;rings.push({g:c.ground,r,ph});}
+      if(state.follow===pl){map.jumpTo({center:[c.pos[0],c.pos[1]],bearing:c.brg,pitch:72,zoom:Math.max(12.2,14.6-c.al*0.9)});}
     });
-    L.push(new deck.PathLayer({id:'trails',data:trails,getPath:d=>d.path,getColor:d=>[...(d.f?RGB_F:RGB_T),200],getWidth:3,widthUnits:'pixels'}));
-    L.push(new deck.ScatterplotLayer({id:'shadows',data:pd,getPosition:d=>d.ground,getRadius:70,radiusUnits:'meters',radiusMinPixels:2,getFillColor:[0,0,0,55]}));
-    L.push(new deck.IconLayer({id:'planes',data:pd,getPosition:d=>d.pos,getIcon:d=>d.f?ICON_F:ICON_T,getSize:520,sizeUnits:'meters',sizeMinPixels:22,sizeMaxPixels:70,getAngle:d=>-d.brg,billboard:false}));
+    if(state.layers.rings&&rings.length){
+      L.push(new deck.ScatterplotLayer({id:'ring-fill',data:rings,getPosition:d=>d.g,getRadius:d=>d.r,radiusUnits:'meters',getFillColor:[234,88,12,28],stroked:false}));
+      L.push(new deck.ScatterplotLayer({id:'ring-pulse',data:rings,getPosition:d=>d.g,getRadius:d=>d.r*(0.25+0.75*d.ph),radiusUnits:'meters',filled:false,stroked:true,getLineColor:d=>[234,88,12,Math.round(220*(1-d.ph))],lineWidthMinPixels:2,updateTriggers:{getRadius:tsec,getLineColor:tsec}}));
+    }
+    if(state.layers.planes){
+      L.push(new deck.PathLayer({id:'trails',data:trails,getPath:d=>d.path,getColor:d=>[...(d.f?RGB_F:RGB_T),190],getWidth:3,widthUnits:'pixels'}));
+      L.push(new deck.ScatterplotLayer({id:'shadows',data:pd,getPosition:d=>d.ground,getRadius:22*k,radiusUnits:'meters',radiusMinPixels:2,getFillColor:[0,0,0,50]}));
+      if(!meshFailed)L.push(new deck.SimpleMeshLayer({id:'planes3d',data:pd,mesh:PLANE_MESH,getPosition:d=>d.pos,getColor:d=>d.f?[226,208,250]:[250,251,253],getTransformMatrix:d=>d.m,material:{ambient:0.5,diffuse:0.75,shininess:48,specularColor:[255,255,255]}}));
+      else L.push(new deck.IconLayer({id:'planes',data:pd,getPosition:d=>d.pos,getIcon:d=>d.f?ICON_F:ICON_T,getSize:520,sizeUnits:'meters',sizeMinPixels:22,sizeMaxPixels:70,getAngle:d=>-d.brg,billboard:false}));
+    }
   }
-  L.push(...spotLayers());
+  L.push(...refLayers(),...spotLayers());
   overlay.setProps({layers:L});
   requestAnimationFrame(frame);
 }
 
-// ---------- visibility / controls ----------
+// ---------- controls ----------
 function setVis(id,v){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',v?'visible':'none');}
 function applyAll(){
   const google=state.base==='google'&&!!state.googleKey;
   setVis('sat',state.base==='sat');
   ['apt-fill','apt-case','apt-line'].forEach(id=>setVis(id,state.layers.apt&&!google));
-  ['sub-fill','sub-line','sub-sel'].forEach(id=>setVis(id,state.layers.sub&&!google));
+  ['sub-line','sub-sel'].forEach(id=>setVis(id,state.layers.sub&&!google));
+  setVis('sub-fill',state.layers.sub&&!google&&state.noise==='off');
   ['sub-dot','sub-lbl'].forEach(id=>setVis(id,state.layers.sub));
   placeLabelIds.forEach(id=>setVis(id,!state.layers.sub));
   setVis('rw3-fill',state.era==='future'&&!google);
@@ -607,81 +800,120 @@ function applyAll(){
   if(map.getLayer('sub-fill'))renderSubs();
   const flowTxt={all:'All corridors','34':'North wind · RWY 34','16':'South wind · RWY 16','27':'West wind · RWY 27','09':'East wind · RWY 09'}[state.flow];
   document.getElementById('modeText').textContent=(state.era==='today'?'Today':'2031+')+' · '+flowTxt;
-  renderList();renderCard();
+  renderList();renderCard();renderTables();
 }
-document.querySelectorAll('input[name=base]').forEach(i=>i.addEventListener('change',()=>{
-  state.base=i.value;document.getElementById('keyBox').hidden=i.value!=='google';
-  if(i.value==='google'&&!state.googleKey){try{const k=localStorage.getItem('tfpm:gkey');if(k){state.googleKey=k;document.getElementById('gKey').value=k;}}catch(e){}}
+function onRadio(name,fn){document.querySelectorAll(`input[name=${name}]`).forEach(i=>i.addEventListener('change',()=>fn(i.value)));}
+onRadio('base',v=>{
+  state.base=v;document.getElementById('keyBox').hidden=v!=='google';
+  if(v==='google'&&!state.googleKey){try{const k=localStorage.getItem('tfpm:gkey');if(k){state.googleKey=k;document.getElementById('gKey').value=k;}}catch(e){}}
   applyAll();
-}));
+});
 document.getElementById('gKeyGo').addEventListener('click',()=>{
   state.googleKey=document.getElementById('gKey').value.trim();
   try{localStorage.setItem('tfpm:gkey',state.googleKey);}catch(e){}
   if(state.googleKey)toast('Loading Google photorealistic 3D…',4000);applyAll();
 });
-document.querySelectorAll('input[name=era]').forEach(i=>i.addEventListener('change',()=>{state.era=i.value;applyAll();}));
-document.querySelectorAll('input[name=flow]').forEach(i=>i.addEventListener('change',()=>{state.flow=i.value;applyAll();}));
-[['lApt','apt'],['lSub','sub'],['lPaths','paths'],['lPlanes','planes'],['lBld','bld']].forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.layers[k]=e.target.checked;applyAll();}));
+onRadio('era',v=>{state.era=v;if(state.noise!=='off'&&!GRID[state.era+'|'+state.ac])toast('Working out the loudness map…',1500);applyAll();});
+onRadio('flow',v=>{state.flow=v;applyAll();});
+onRadio('ac',v=>{state.ac=v;if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);applyAll();scoreSuburbs(v);});
+onRadio('nm',v=>{state.noise=v;applyAll();if(v==='3d'&&map.getPitch()<45)map.easeTo({pitch:60,duration:900});});
+[['lApt','apt'],['lSub','sub'],['lPaths','paths'],['lPlanes','planes'],['lRings','rings'],['lAlt','alt'],['lBld','bld']].forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.layers[k]=e.target.checked;applyAll();}));
 document.getElementById('lTerrain').addEventListener('change',e=>{state.terrain=e.target.checked;applyAll();});
 const exag=document.getElementById('exag');
 exag.addEventListener('input',()=>{state.exag=+exag.value;document.getElementById('exagOut').textContent='×'+exag.value;});
+const thr=document.getElementById('thr');
+thr.addEventListener('input',()=>{state.thr=+thr.value;document.getElementById('thrOut').textContent=thr.value+' dB';renderList();});
 document.getElementById('westOnly').addEventListener('change',e=>{state.westOnly=e.target.checked;renderList();});
-document.getElementById('vTilt').onclick=()=>map.easeTo({center:[144.815,-37.705],zoom:11.4,pitch:62,bearing:-25,duration:1500});
-document.getElementById('vWest').onclick=()=>map.easeTo({center:[144.80,-37.70],zoom:12,pitch:64,bearing:70,duration:1500});
-document.getElementById('vTop').onclick=()=>map.easeTo({center:[144.80,-37.72],zoom:10.8,pitch:0,bearing:0,duration:1500});
+document.getElementById('vTilt').onclick=()=>{stopRide();map.easeTo({center:[144.815,-37.715],zoom:11.3,pitch:62,bearing:-25,duration:1500});};
+document.getElementById('vWest').onclick=()=>{stopRide();map.easeTo({center:[144.80,-37.72],zoom:11.9,pitch:64,bearing:60,duration:1500});};
+document.getElementById('vTop').onclick=()=>{stopRide();map.easeTo({center:[144.80,-37.72],zoom:10.8,pitch:0,bearing:0,duration:1500});};
 const pauseBtn=document.getElementById('vPause');
-pauseBtn.onclick=()=>{state.paused=!state.paused;pauseBtn.textContent=state.paused?'Play aircraft':'Pause aircraft';};
+pauseBtn.onclick=()=>{state.paused=!state.paused;pauseBtn.textContent=state.paused?'Play':'Pause';};
+const rideBtn=document.getElementById('vRide');
+function stopRide(){state.follow=null;rideBtn.classList.remove('on');rideBtn.textContent='Ride an approach';}
+rideBtn.onclick=()=>{
+  if(state.follow){stopRide();return;}
+  const arr=planes.filter(p=>p.p.kind==='arr').sort((a,b)=>a.t-b.t);
+  if(!arr.length){toast('Turn on flight corridors to ride along.',3000);return;}
+  state.follow=arr[0];state.paused=false;pauseBtn.textContent='Pause';
+  rideBtn.classList.add('on');rideBtn.textContent='Stop ride';
+  toast('Riding a landing from 26 km out. Drag the map to stop.',4000);
+};
 
-// ---------- spot check / suburb select ----------
+// ---------- spot check / cards ----------
 const fmtFt=km=>Math.max(0,Math.round(km*3281/100)*100).toLocaleString('en-AU');
+function noiseSet(local){const o={};['today','future'].forEach(era=>{o[era]={};['narrow','wide'].forEach(ac=>{o[era][ac]=noiseAt(local,era,ac);});});return o;}
 function spotCheck(lngLat,title){
   const local=toL(lngLat.lng,lngLat.lat);
   const sub=SUBS.find(s=>s.bbox&&local.x>=s.bbox.minx&&local.x<=s.bbox.maxx&&local.n>=s.bbox.minn&&local.n<=s.bbox.maxn&&s.inside(local));
-  state.spot={lngLat,title:title||(sub?'Spot in '+sub.name:'Selected spot'),local,sub,exp:{today:exposure(local,'today'),future:exposure(local,'future')}};
+  state.spot={lngLat,title:title||(sub?'Spot in '+sub.name:'Selected spot'),local,sub,noise:noiseSet(local)};
   if(sub)setSel(sub,false);else renderCard();
 }
+let refCache=null;
+function refNoise(){const r=state.ref;const k=r.lng+','+r.lat+'|'+RW.map(x=>x.A.x.toFixed(4)).join();if(!refCache||refCache.k!==k)refCache={k,v:noiseSet(toL(r.lng,r.lat))};return refCache.v;}
 function setSel(s,fly){
   state.sel=s;
   if(map.getLayer('sub-sel'))map.setFilter('sub-sel',['==',['get','name'],s?s.name:'']);
-  if(s&&fly){const b=s.bbox,a=toLL(b.minx,b.minn),c=toLL(b.maxx,b.maxn);map.fitBounds([a,c],{padding:80,pitch:55,bearing:map.getBearing(),duration:1400,maxZoom:14});}
+  if(s&&fly){stopRide();const b=s.bbox,a=toLL(b.minx,b.minn),c=toLL(b.maxx,b.maxn);map.fitBounds([a,c],{padding:80,pitch:55,bearing:map.getBearing(),duration:1400,maxZoom:14});}
   renderCard();renderList();
 }
-map.on('click',e=>spotCheck(e.lngLat));
-function eraLine(e,era){
-  const st=STATUS[e.sev];
-  const d=e.sev===0?`Nearest corridor is ${e.path.label(era)}, <b>${e.lat.toFixed(1)} km</b> away.`
-    :`${e.path.label(era)} pass <b>${e.lat.toFixed(1)} km</b> to the side at about <b>${fmtFt(e.alt)} ft</b>.`;
-  return `<div class="k">${era==='today'?'Today':'2031+'}</div><div><span class="chip ${st.c}">${st.t}</span><p>${d}</p></div>`;
+map.on('click',e=>{stopRide();spotCheck(e.lngLat);});
+function cmpText(L,refL){
+  const d=L-refL,r=Math.pow(2,d/10);
+  if(Math.abs(d)<1)return `About the same as <b>${escapeHtml(state.ref.title)}</b>.`;
+  if(d<0)return `<b>${Math.abs(d).toFixed(0)} dB quieter</b> than ${escapeHtml(state.ref.title)}. Sounds about <b>${Math.round(r*100)}%</b> as loud.`;
+  return `<b>${d.toFixed(0)} dB louder</b> than ${escapeHtml(state.ref.title)}. Sounds about <b>${r.toFixed(1)}×</b> as loud.`;
 }
-function statBar(st){return `<div class="bar" title="Share of suburb area"><i style="width:${st.u*100}%;background:var(--under)"></i><i style="width:${st.n*100}%;background:var(--near)"></i><i style="width:${st.c*100}%;background:var(--clear)"></i></div>`;}
+function gauge(L,refL){
+  const pos=v=>Math.max(0,Math.min(100,(v-50)/40*100));
+  return `<div class="gauge"><div class="scale"></div>
+    <div class="mk" style="left:${pos(60)}%">talk</div><div class="mk" style="left:${pos(70)}%">car 60 km/h</div>
+    <div class="mk b" style="left:${pos(refL)}%">ref</div><div class="mk b me" style="left:${pos(L)}%">here</div></div>`;
+}
+function eraBlock(e,era,refL){
+  const where=e.path?`${e.path.label(era)}: <b>${e.lat.toFixed(1)} km</b> to the side at <b>${fmtFt(e.alt)} ft</b>, ${e.along.toFixed(1)} km from the runway.`:'No corridor nearby.';
+  return `<div class="k">${era==='today'?'Today':'2031+'}</div><div>${chip(e.L,true)}<p>${where}</p><p class="cmp" style="margin-top:4px">${cmpText(e.L,refL)}</p>${gauge(e.L,refL)}</div>`;
+}
 function subBlock(s){
-  if(!s.stats)return '';
-  const row=era=>{const st=s.stats[era];return `<div class="k">${era==='today'?'Today':'2031+'}</div><div><span class="chip ${STATUS[st.sev].c}">${STATUS[st.sev].t}</span><p><b>${Math.round(st.u*100)}%</b> under · <b>${Math.round(st.n*100)}%</b> near · <b>${Math.round(st.c*100)}%</b> clear</p>${statBar(st)}</div>`;};
-  return `<div><div class="nm">${s.name}</div><div class="sub">${s.area.toFixed(1)} km² · ${s.dAir.toFixed(1)} km from the airport</div></div><div class="era">${row('today')}${row('future')}</div>`;
+  const st=s.stats&&s.stats[state.ac];if(!st)return `<div><div class="nm">${escapeHtml(s.name)}</div><p class="note">Working out loudness…</p></div>`;
+  const row=era=>`<div class="k">${era==='today'?'Today':'2031+'}</div><div>${chip(st[era].med)}<p>Most of the suburb: <b>${Math.round(st[era].med)} dB</b>. Loudest 10%: <b>${Math.round(st[era].p90)} dB</b>. Quietest corner: <b>${Math.round(st[era].min)} dB</b>.</p></div>`;
+  return `<div><div class="nm">${escapeHtml(s.name)}</div><div class="sub">${s.area.toFixed(1)} km² · ${s.dAir.toFixed(1)} km from the airport</div></div><div class="era">${row('today')}${row('future')}</div>`;
 }
 function renderCard(){
-  const card=document.getElementById('card');const sp=state.spot,s=state.sel;
+  const card=document.getElementById('card');const sp=state.spot,s=state.sel;const ac=state.ac;
+  const rn=refNoise();
   let h='';
   if(sp){
     h+=`<div><div class="nm">${escapeHtml(sp.title)}</div><div class="sub">${Math.abs(sp.lngLat.lat).toFixed(4)}°S ${sp.lngLat.lng.toFixed(4)}°E · ${Math.hypot(sp.local.x,sp.local.n).toFixed(1)} km from the airport</div></div>
-    <div class="era">${eraLine(sp.exp.today,'today')}${eraLine(sp.exp.future,'future')}</div>`;
-    if(sp.exp.future.sev>sp.exp.today.sev)h+='<p class="note" style="color:#9a5b00">This spot gets worse when the third runway opens.</p>';
+    <div class="era">${eraBlock(sp.noise.today[ac],'today',rn.today[ac].L)}${eraBlock(sp.noise.future[ac],'future',rn.future[ac].L)}</div>
+    <div><button class="btn" id="setRef">Use this spot as my reference</button></div>`;
   }
-  if(s&&s.stats)h+=(sp?'<hr style="border:0;border-top:1px solid var(--line);margin:0;width:100%">':'')+subBlock(s);
-  card.innerHTML=h||'<p class="note">Search an address, click anywhere on the map, or pick a suburb below.</p>';
+  if(s)h+=(sp?'<hr style="border:0;border-top:1px solid var(--line);margin:0;width:100%">':'')+subBlock(s);
+  if(!h)h=`<p class="note">Search an address, click anywhere on the map, or pick a suburb below. Every spot is compared with your reference, now <b>${escapeHtml(state.ref.title)}</b> (loudest overflight about ${Math.round(rn.today[ac].L)} dB today).</p>`;
+  card.innerHTML=h;
+  const b=document.getElementById('setRef');
+  if(b)b.onclick=()=>{state.ref={lng:sp.lngLat.lng,lat:sp.lngLat.lat,title:sp.title};cacheSet('tfpm:ref',state.ref);renderCard();renderList();toast('Reference updated.',2500);};
 }
 const escapeHtml=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function renderList(){
   const listEl=document.getElementById('list');
-  const ready=SUBS.filter(s=>s.stats);
+  const ready=SUBS.filter(s=>s.stats&&s.stats[state.ac]);
   if(!ready.length){listEl.innerHTML='';return;}
-  const rows=ready.filter(s=>!state.westOnly||s.west).sort((a,b)=>a.stats.future.sev-b.stats.future.sev||a.stats.future.u-b.stats.future.u||a.stats.future.n-b.stats.future.n||a.name.localeCompare(b.name));
-  const cnt=[0,0,0];rows.forEach(s=>cnt[s.stats.future.sev]++);
-  document.getElementById('summary').innerHTML=`With three runways: <b style="color:var(--clear)">${cnt[0]}</b> clear, <b style="color:#b07f00">${cnt[1]}</b> near, <b style="color:var(--under)">${cnt[2]}</b> under. A suburb is Under when at least 15% of its area is under a corridor.`;
-  listEl.innerHTML='<div class="lhead"><span>Suburb</span><span>Today</span><span>2031+</span><span style="text-align:right">% under 2031</span></div>'+
-    rows.map((s,i)=>`<button class="lrow${state.sel===s?' on':''}" data-i="${SUBS.indexOf(s)}"><span>${escapeHtml(s.name)}</span><span><span class="chip ${STATUS[s.stats.today.sev].c}">${STATUS[s.stats.today.sev].t}</span></span><span><span class="chip ${STATUS[s.stats.future.sev].c}">${STATUS[s.stats.future.sev].t}</span></span><span class="n">${Math.round(s.stats.future.u*100)}%</span></button>`).join('');
+  const ac=state.ac,rn=refNoise(),refL=rn.future[ac].L;
+  const rows=ready.filter(s=>!state.westOnly||s.west).sort((a,b)=>a.stats[ac].future.med-b.stats[ac].future.med||a.name.localeCompare(b.name));
+  const ok=rows.filter(s=>s.stats[ac].future.med<state.thr).length;
+  document.getElementById('summary').innerHTML=`With three runways, <b>${ok}</b> of ${rows.length} suburbs have their loudest overflights under <b>${state.thr} dB</b> across most of the suburb. Quietest first. The last column compares 2031 with your reference, ${escapeHtml(state.ref.title)}.`;
+  listEl.innerHTML='<div class="lhead"><span>Suburb</span><span>Today</span><span>2031+</span><span style="text-align:right">vs ref</span></div>'+
+    rows.map(s=>{const st=s.stats[ac];const d=st.future.med-refL;return `<button class="lrow${state.sel===s?' on':''}" data-i="${SUBS.indexOf(s)}"><span>${escapeHtml(s.name)}</span><span>${chip(st.today.med).replace(' dB','')}</span><span>${chip(st.future.med).replace(' dB','')}</span><span class="n">${d>0?'+':''}${Math.round(d)} dB</span></button>`;}).join('');
 }
 document.getElementById('list').addEventListener('click',e=>{const b=e.target.closest('.lrow');if(!b)return;const s=SUBS[+b.dataset.i];state.spot=null;setSel(s,true);});
+function renderTables(){
+  const ac=state.ac;
+  const arrRows=[3,5,8,10,12,15,20,25].map(d=>{const alt=d*TAN3;return `<tr><td>${d} km</td><td>${fmtFt(alt)}</td><td>${chip(levelAt(ac,'arr',0,alt)).replace(' dB','')}</td><td>${chip(levelAt(ac,'arr',1,alt)).replace(' dB','')}</td><td>${chip(levelAt(ac,'arr',2,alt)).replace(' dB','')}</td></tr>`;}).join('');
+  document.getElementById('tArr').innerHTML=`<tr><th>To touchdown</th><th>Height ft</th><th>Under path</th><th>1 km aside</th><th>2 km aside</th></tr>${arrRows}`;
+  const depRows=[2,4,6,8,10,15,20].map(d=>{const alt=Math.min(3,d*0.1);return `<tr><td>${d} km</td><td>${fmtFt(alt)}</td><td>${chip(levelAt(ac,'dep',0,alt)).replace(' dB','')}</td><td>${chip(levelAt(ac,'dep',1,alt)).replace(' dB','')}</td><td>${chip(levelAt(ac,'dep',2,alt)).replace(' dB','')}</td></tr>`;}).join('');
+  document.getElementById('tDep').innerHTML=`<tr><th>After lift-off</th><th>Height ft</th><th>Under path</th><th>1 km aside</th><th>2 km aside</th></tr>${depRows}`;
+}
 document.getElementById('searchForm').addEventListener('submit',async e=>{
   e.preventDefault();const q=document.getElementById('q').value.trim();if(!q)return;
   toast('Searching…');
@@ -690,11 +922,12 @@ document.getElementById('searchForm').addEventListener('submit',async e=>{
     const j=await r.json();
     if(!j.length){toast('No match found. Try adding the suburb name.',5000);return;}
     const lng=+j[0].lon,lat=+j[0].lat;
-    map.flyTo({center:[lng,lat],zoom:14,pitch:60,duration:1800});
+    stopRide();map.flyTo({center:[lng,lat],zoom:14,pitch:60,duration:1800});
     spotCheck({lng,lat},j[0].display_name.split(',').slice(0,3).join(','));
     toast('Address found.',2500);
   }catch(err){toast('Address search is unavailable right now. Click the spot on the map instead.',6000);}
 });
+renderTables();renderCard();
 })();
 </script>
 </body>
