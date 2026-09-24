@@ -7,105 +7,109 @@
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
 :root{
-  --bg:#f6f6f3; --panel:#ffffff; --panel2:#f1f2ef; --line:#dde0e3; --text:#1b1f24; --muted:#5c6570; --dim:#8a929c;
-  --red:#e11d2e; --today:#1c64f2; --future:#a21caf;
-  --q:#2f9e44; --a:#a3c93a; --n:#f2b300; --l:#ea580c; --v:#9d174d;
-  --display:'Barlow Condensed','Arial Narrow',sans-serif;
+  --ink:#15181d; --ink2:#3d4450; --muted:#6b7280; --dim:#9aa1ab; --line:#e4e6ea; --soft:#f4f5f7; --panel:#ffffff; --bg:#eef0f2;
+  --red:#c8102e; --flight:#2f4f86; --future:#8e2f6f;
+  --n0:#8fae98; --n1:#e3c48c; --n2:#d9923e; --n3:#b8482c; --n4:#6b1f45;
   --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --cond:'IBM Plex Sans Condensed','IBM Plex Sans','Arial Narrow',sans-serif;
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
-body{background:var(--bg);color:var(--text);font:14px/1.5 var(--sans);overflow:hidden}
-.app{display:grid;grid-template-columns:minmax(0,1fr) 400px;height:100%}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 var(--sans);overflow:hidden;-webkit-font-smoothing:antialiased}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 410px;height:100%}
 .stage{position:relative;min-height:0}
 #map{position:absolute;inset:0}
-.hud{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;display:grid;gap:5px;box-shadow:0 2px 10px rgba(0,0,0,.08);max-width:min(300px,calc(100% - 24px));z-index:2}
-.hud .mode{font:600 16px/1.2 var(--display);letter-spacing:.04em;text-transform:uppercase}
-.hud .row{display:flex;align-items:center;gap:8px;color:var(--muted)}
-.ramp{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:2px}
-.ramp span{height:8px;border-radius:2px}
-.ramp-l{display:grid;grid-template-columns:repeat(5,1fr);font:10px/1.2 var(--mono);color:var(--muted)}
-.sw{width:20px;height:4px;border-radius:2px;flex:none}
-.views{position:absolute;right:12px;top:12px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;z-index:2;max-width:62%}
-.btn{font:500 12px/1 var(--sans);color:var(--text);background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px 11px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-.btn:hover{border-color:var(--muted)}
-.btn.on{background:var(--text);color:#fff;border-color:var(--text)}
-.btn:focus-visible,select:focus-visible,input:focus-visible,.lrow:focus-visible,.seg input:focus-visible+span{outline:2px solid var(--today);outline-offset:2px}
-.toast{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);background:#1b1f24;color:#fff;font-size:12px;padding:8px 14px;border-radius:20px;z-index:3;max-width:calc(100% - 32px);text-align:center}
-.hint{position:absolute;left:12px;bottom:34px;font-size:11px;color:var(--muted);background:rgba(255,255,255,.9);padding:4px 8px;border-radius:4px;z-index:2}
-.panel{background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;padding-block:20px 32px;padding-inline:20px;display:flex;flex-direction:column;gap:24px}
-h1{font:600 30px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;margin:0;text-wrap:balance}
-.lede{color:var(--muted);margin:8px 0 0;font-size:13px}
-h2{font:600 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
-.seg{display:flex;flex-wrap:wrap;gap:4px;background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:3px}
-.seg label{flex:1 1 auto;cursor:pointer;position:relative}
+.glass{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(21,24,29,.08);border-radius:10px;box-shadow:0 6px 24px rgba(21,24,29,.10)}
+.legend{position:absolute;left:14px;top:14px;padding:12px 14px;font-size:12px;display:grid;gap:8px;z-index:2;width:236px}
+.legend .t{font:600 11px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.legend .mode{font:600 14px/1.2 var(--sans)}
+.nramp{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
+.nramp span{height:7px}
+.nramp span:first-child{border-radius:4px 0 0 4px}.nramp span:last-child{border-radius:0 4px 4px 0}
+.nlab{display:grid;grid-template-columns:repeat(5,1fr);font-size:10px;color:var(--muted);text-align:center}
+.lg{display:flex;align-items:center;gap:8px;color:var(--ink2)}
+.views{position:absolute;right:14px;top:14px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;z-index:2;max-width:62%}
+.btn{font:500 12.5px/1 var(--sans);color:var(--ink);background:rgba(255,255,255,.94);border:1px solid rgba(21,24,29,.1);border-radius:8px;padding:9px 12px;cursor:pointer;box-shadow:0 2px 8px rgba(21,24,29,.08)}
+.btn:hover{background:#fff;border-color:rgba(21,24,29,.25)}
+.btn.on,.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn:focus-visible,select:focus-visible,input:focus-visible,.lrow:focus-visible,.seg input:focus-visible+span,summary:focus-visible{outline:2px solid var(--flight);outline-offset:2px}
+.toast{position:absolute;left:50%;bottom:36px;transform:translateX(-50%);background:rgba(21,24,29,.92);color:#fff;font-size:12.5px;padding:9px 16px;border-radius:20px;z-index:3;max-width:calc(100% - 32px);text-align:center}
+.hint{position:absolute;left:14px;bottom:36px;font-size:11.5px;color:var(--ink2);padding:6px 10px;z-index:2}
+.panel{background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;padding-block:24px 36px;padding-inline:22px;display:flex;flex-direction:column;gap:26px}
+h1{font:600 24px/1.15 var(--sans);letter-spacing:-.01em;margin:0;text-wrap:balance}
+.lede{color:var(--muted);margin:8px 0 0;font-size:13.5px;max-width:60ch}
+h2{font:600 11.5px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.seg{display:flex;gap:3px;background:var(--soft);border-radius:9px;padding:3px}
+.seg label{flex:1 1 0;cursor:pointer;position:relative;min-width:0}
 .seg input{position:absolute;opacity:0;pointer-events:none}
-.seg span{display:block;text-align:center;padding:7px 8px;border-radius:5px;font-size:12px;color:var(--muted);white-space:nowrap}
-.seg input:checked+span{background:var(--text);color:#fff;font-weight:600}
-.stack{display:grid;gap:14px}
-.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;font-size:13px}
-.checks label{display:flex;gap:8px;align-items:center;cursor:pointer}
-input[type=checkbox],input[type=range]{accent-color:var(--today)}
-.range{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
-.range input{flex:1;min-width:0}
-.range output{font:500 12px var(--mono);color:var(--text);min-width:44px;text-align:right}
+.seg span{display:block;text-align:center;padding:8px 6px;border-radius:7px;font-size:12.5px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg input:checked+span{background:#fff;color:var(--ink);font-weight:600;box-shadow:0 1px 4px rgba(21,24,29,.12)}
+.stack{display:grid;gap:16px}
+.layers{display:grid;gap:2px}
+.layers label{display:grid;grid-template-columns:18px 30px 1fr;align-items:center;gap:8px;padding:6px 4px;border-radius:6px;cursor:pointer;font-size:13.5px}
+.layers label:hover{background:var(--soft)}
+.layers small{display:block;color:var(--muted);font-size:11.5px;line-height:1.3}
+.layers .grp{font:600 11px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding:10px 4px 4px}
+.key{height:10px;display:block;border-radius:2px}
+input[type=checkbox],input[type=range]{accent-color:var(--ink)}
 .search{display:flex;gap:6px}
-.search input,.keyrow input{flex:1;min-width:0;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:9px 10px;font:14px var(--sans);color:var(--text)}
+.search input,.keyrow input{flex:1;min-width:0;background:var(--soft);border:1px solid transparent;border-radius:9px;padding:11px 12px;font:14px var(--sans);color:var(--ink)}
+.search input:focus{background:#fff;border-color:var(--line)}
 .keyrow{display:flex;gap:6px;margin-top:8px}
-.card{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:12px;margin-top:10px}
-.card .nm{font:600 21px/1.05 var(--display);letter-spacing:.03em;text-transform:uppercase}
-.card .sub{color:var(--muted);font-size:12px;margin-top:4px;font-family:var(--mono)}
-.era{display:grid;grid-template-columns:58px 1fr;gap:10px;align-items:start}
-.era .k{font:600 12px/1.9 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.era p{margin:5px 0 0;font-size:12.5px;color:var(--muted)}
-.era p b{color:var(--text);font-weight:500;font-family:var(--mono);font-size:12px}
-.chip{display:inline-block;font:600 11px/1 var(--sans);padding:4px 7px;border-radius:3px;color:#fff;white-space:nowrap;font-variant-numeric:tabular-nums}
-.chip.dk{color:#231a00}
-.gauge{position:relative;height:54px;margin-top:4px}
-.gauge .scale{position:absolute;left:0;right:0;top:22px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--q) 0%,var(--q) 25%,var(--a) 25%,var(--a) 37.5%,var(--n) 37.5%,var(--n) 50%,var(--l) 50%,var(--l) 62.5%,var(--v) 62.5%,var(--v) 100%)}
-.gauge .mk{position:absolute;top:0;transform:translateX(-50%);font:10px/1.1 var(--mono);color:var(--muted);text-align:center;white-space:nowrap}
-.gauge .mk::after{content:"";display:block;width:2px;height:14px;background:currentColor;margin:3px auto 0}
-.gauge .mk.b{top:32px}.gauge .mk.b::after{display:none}.gauge .mk.b::before{content:"";display:block;width:2px;height:8px;background:currentColor;margin:0 auto 2px}
-.gauge .mk.me{color:var(--text);font-weight:500}
-.cmp{font-size:13px;margin:0}
-.cmp b{font-family:var(--mono);font-weight:500}
-.summary{font-size:13px;color:var(--muted);margin:0 0 10px}
-.summary b{font-family:var(--mono);font-weight:500;color:var(--text)}
-.list{display:grid;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.lhead,.lrow{display:grid;grid-template-columns:1fr 52px 52px 62px;gap:6px;align-items:center;padding:7px 10px}
-.lhead{font:600 11px/1.1 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);background:var(--panel2)}
-.lrow{border:0;border-top:1px solid var(--line);background:none;color:var(--text);font:13px var(--sans);text-align:left;cursor:pointer;width:100%}
-.lrow:hover{background:var(--panel2)}
-.lrow.on{background:#e8eefc}
-.lrow .n{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
-table.dist{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
-table.dist th{font:600 11px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--dim);text-align:right;padding:4px 4px;border-bottom:1px solid var(--line)}
-table.dist th:first-child,table.dist td:first-child{text-align:left}
-table.dist td{font-family:var(--mono);text-align:right;padding:4px 4px;border-bottom:1px solid var(--line)}
-table.dist td .chip{min-width:30px;text-align:center}
-.tblwrap{overflow-x:auto}
-.facts{display:grid;gap:8px;margin:0;font-size:13px}
-.facts div{display:grid;grid-template-columns:118px 1fr;gap:10px}
-.facts dt{color:var(--muted)}
-.facts dd{margin:0;font-family:var(--mono);font-size:12px}
-.note{font-size:12.5px;color:var(--muted);margin:0}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:14px;margin-top:12px}
+.card .nm{font:600 18px/1.2 var(--sans);text-wrap:balance}
+.card .sub{color:var(--muted);font-size:12.5px;margin-top:3px}
+.verdict{display:grid;gap:6px}
+.verdict .when{font:600 11px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.verdict .word{display:flex;align-items:center;gap:10px;font:600 20px/1.1 var(--sans)}
+.meter{display:inline-flex;gap:3px}
+.meter i{width:14px;height:6px;border-radius:3px;background:var(--line)}
+.verdict p{margin:0;font-size:13.5px;color:var(--ink2);max-width:60ch}
+.verdict p.cmp{color:var(--ink);font-weight:500}
+.split{height:1px;background:var(--line)}
+.summary{font-size:13.5px;color:var(--ink2);margin:0 0 12px}
+.list{display:grid;border-top:1px solid var(--line)}
+.lhead,.lrow{display:grid;grid-template-columns:1fr 92px 92px;gap:8px;align-items:center;padding:9px 4px}
+.lhead{font:600 11px/1.1 var(--cond);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.lrow{border:0;border-top:1px solid var(--line);background:none;color:var(--ink);font:13.5px var(--sans);text-align:left;cursor:pointer;width:100%}
+.lrow:hover{background:var(--soft)}
+.lrow.on{background:#eef2f9}
+.lvl{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink2);white-space:nowrap}
+.lvl b{width:9px;height:9px;border-radius:50%;flex:none}
+.lrow .cmpw{grid-column:1/-1;font-size:12px;color:var(--muted);margin-top:-4px}
+.profile svg{width:100%;height:auto;display:block;margin-top:8px}
+.rules{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.rules li{font-size:13.5px;color:var(--ink2);padding-left:14px;position:relative;max-width:60ch}
+.rules li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--ink)}
+details{border-top:1px solid var(--line);padding-top:14px}
+summary{cursor:pointer;font:600 11.5px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:" +"}
+details[open] summary::after{content:" −"}
+details .stack{margin-top:14px}
+.range{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink2)}
+.range input{flex:1;min-width:0}
+.range output{font-size:12.5px;color:var(--ink);min-width:30px;text-align:right}
+.note{font-size:12.5px;color:var(--muted);margin:0;max-width:62ch}
 .note+.note{margin-top:8px}
-a{color:var(--today)}
+a{color:var(--flight)}
 ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
 .maplibregl-ctrl-attrib{font-size:10px}
+.maplibregl-popup-content{font:13px/1.45 var(--sans);border-radius:10px;padding:12px 14px;box-shadow:0 8px 28px rgba(21,24,29,.18)}
+.maplibregl-popup-content b{font-weight:600}
+.maplibregl-popup-content .st{display:inline-block;font:600 10.5px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:4px 6px;border-radius:4px;background:var(--soft);color:var(--ink2);margin:4px 0}
 @media (max-width:900px){
   body{overflow:auto}
   .app{grid-template-columns:1fr;grid-template-rows:70svh auto;height:auto}
   .panel{border-left:0;border-top:1px solid var(--line);padding-inline:16px}
-  .hud{font-size:11px;padding:8px 10px;max-width:190px}
-  .hud .extra{display:none}
+  .legend{width:180px;padding:9px 11px;font-size:11px;left:10px;top:10px}
+  .legend .extra{display:none}
   .hint{display:none}
-  .views{max-width:55%}
-  .btn{padding:7px 9px}
+  .views{max-width:52%;right:10px;top:10px}
+  .btn{padding:8px 10px;font-size:12px}
 }
 </style>
 </head>
@@ -113,138 +117,130 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
 <div class="app">
   <div class="stage">
     <div id="map"></div>
-    <div class="hud">
-      <div class="mode" id="modeText">Today · All corridors</div>
-      <div class="row"><span class="sw" style="background:var(--red)"></span>Airport land boundary</div>
-      <div class="row extra"><span class="sw" style="background:var(--today)"></span>Existing runways</div>
-      <div class="row extra"><span class="sw" style="background:var(--future)"></span>Third runway (2031)</div>
+    <div class="legend glass">
+      <div class="mode" id="modeText">Today</div>
       <div>
-        <div style="color:var(--muted)">Loudest overflight, dB(A)</div>
-        <div class="ramp"><span style="background:var(--q)"></span><span style="background:var(--a)"></span><span style="background:var(--n)"></span><span style="background:var(--l)"></span><span style="background:var(--v)"></span></div>
-        <div class="ramp-l"><span>&lt;60</span><span>60</span><span>65</span><span>70</span><span>75+</span></div>
+        <div class="t" style="margin-bottom:6px">Plane noise</div>
+        <div class="nramp"><span style="background:var(--n0)"></span><span style="background:var(--n1)"></span><span style="background:var(--n2)"></span><span style="background:var(--n3)"></span><span style="background:var(--n4)"></span></div>
+        <div class="nlab"><span>Quiet</span><span>Faint</span><span>Heard</span><span>Loud</span><span>V. loud</span></div>
       </div>
+      <div class="lg extra"><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="#c8102e" stroke-width="3"/></svg>Airport land</div>
+      <div class="lg extra"><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="#2f4f86" stroke-width="2.5"/></svg>Flight paths</div>
+      <div class="lg extra"><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="#8e2f6f" stroke-width="2.5"/></svg>New runway paths (2031)</div>
     </div>
     <div class="views">
       <button class="btn" id="vTilt">3D view</button>
       <button class="btn" id="vWest">West side</button>
-      <button class="btn" id="vTop">Top-down</button>
-      <button class="btn" id="vRide">Ride an approach</button>
+      <button class="btn" id="vTop">From above</button>
+      <button class="btn" id="vRide">Fly a landing</button>
       <button class="btn" id="vPause">Pause</button>
     </div>
-    <div class="hint">Ctrl-drag or right-drag to tilt · Click anywhere to check how loud that spot gets</div>
+    <div class="hint glass">Right-drag or Ctrl-drag to tilt · Tap anywhere to see how loud it gets there</div>
     <div class="toast" id="toast">Loading map…</div>
   </div>
 
   <aside class="panel">
     <header>
       <h1>Tullamarine Flight Path Map</h1>
-      <p class="lede">How loud each spot in Melbourne's west gets when a plane flies over, today and after the third runway opens in 2031. Loudness depends on how high the plane is and how far to the side you are.</p>
+      <p class="lede">See how much plane noise any street in Melbourne's west gets, today and once the third runway opens in 2031. You can also see train lines, highways and data centres, existing and planned.</p>
     </header>
 
     <section>
-      <h2>Check an address</h2>
-      <form class="search" id="searchForm"><input id="q" placeholder="e.g. 12 Smith St, Taylors Lakes" autocomplete="off"><button class="btn" type="submit">Check</button></form>
-      <div class="card" id="card"><p class="note">Search an address, click anywhere on the map, or pick a suburb below.</p></div>
-    </section>
-
-    <section class="stack">
-      <div>
-        <h2>Runway system</h2>
-        <div class="seg" role="radiogroup" aria-label="Runway system">
-          <label><input type="radio" name="era" value="today" id="eToday" checked><span>Today · 2 runways</span></label>
-          <label><input type="radio" name="era" value="future" id="eFuture"><span>2031+ · 3 runways</span></label>
-        </div>
-      </div>
-      <div>
-        <h2>Aircraft</h2>
-        <div class="seg" role="radiogroup" aria-label="Aircraft type">
-          <label><input type="radio" name="ac" value="narrow" id="acN" checked><span>Typical jet · A320/737</span></label>
-          <label><input type="radio" name="ac" value="wide" id="acW"><span>Wide-body · 787/A330</span></label>
-        </div>
-      </div>
-      <div>
-        <h2>Loudness map</h2>
-        <div class="seg" role="radiogroup" aria-label="Loudness map">
-          <label><input type="radio" name="nm" value="off" id="nmOff"><span>Off</span></label>
-          <label><input type="radio" name="nm" value="flat" id="nmFlat" checked><span>Flat</span></label>
-          <label><input type="radio" name="nm" value="3d" id="nm3d"><span>3D</span></label>
-        </div>
-        <div class="range" style="margin-top:10px"><label for="thr">Shade overflights louder than</label><input type="range" id="thr" min="55" max="80" step="1" value="60"><output id="thrOut">60 dB</output></div>
-      </div>
-      <div>
-        <h2>Wind direction in use</h2>
-        <div class="seg" role="radiogroup" aria-label="Wind direction">
-          <label><input type="radio" name="flow" value="all" id="fAll" checked><span>All</span></label>
-          <label><input type="radio" name="flow" value="34" id="f34"><span>North · 34</span></label>
-          <label><input type="radio" name="flow" value="16" id="f16"><span>South · 16</span></label>
-          <label><input type="radio" name="flow" value="27" id="f27"><span>West · 27</span></label>
-          <label><input type="radio" name="flow" value="09" id="f09"><span>East · 09</span></label>
-        </div>
-      </div>
-      <div>
-        <h2>Base map</h2>
-        <div class="seg" role="radiogroup" aria-label="Base map">
-          <label><input type="radio" name="base" value="map" id="bMap" checked><span>Map</span></label>
-          <label><input type="radio" name="base" value="sat" id="bSat"><span>Satellite</span></label>
-          <label><input type="radio" name="base" value="google" id="bGoogle"><span>Google 3D</span></label>
-        </div>
-        <div id="keyBox" hidden>
-          <p class="note" style="margin-top:8px">Google's photorealistic 3D needs your own Google Maps Platform API key with the Map Tiles API enabled. The key stays in this browser.</p>
-          <div class="keyrow"><input id="gKey" type="password" placeholder="Paste API key" autocomplete="off"><button class="btn" id="gKeyGo">Load</button></div>
-        </div>
-      </div>
-      <div class="checks">
-        <label><input type="checkbox" id="lApt" checked> Airport boundary</label>
-        <label><input type="checkbox" id="lSub" checked> Suburb outlines</label>
-        <label><input type="checkbox" id="lPaths" checked> Flight corridors</label>
-        <label><input type="checkbox" id="lPlanes" checked> Aircraft</label>
-        <label><input type="checkbox" id="lRings" checked> Noise rings</label>
-        <label><input type="checkbox" id="lAlt" checked> Altitude markers</label>
-        <label><input type="checkbox" id="lBld" checked> 3D buildings</label>
-        <label><input type="checkbox" id="lTerrain"> Terrain</label>
-      </div>
-      <div class="range"><label for="exag">Flight height ×</label><input type="range" id="exag" min="1" max="4" step="0.5" value="1"><output id="exagOut">×1</output></div>
+      <h2>Check a place</h2>
+      <form class="search" id="searchForm"><input id="q" placeholder="Type an address or suburb" autocomplete="off"><button class="btn primary" type="submit">Check</button></form>
+      <div class="card" id="card"></div>
     </section>
 
     <section>
-      <h2>Suburb shortlist</h2>
+      <h2>Show me</h2>
+      <div class="seg" role="radiogroup" aria-label="Runways" style="margin-bottom:12px">
+        <label><input type="radio" name="era" value="today" checked><span>Today</span></label>
+        <label><input type="radio" name="era" value="future"><span>After 2031 (3 runways)</span></label>
+      </div>
+      <div class="seg" role="radiogroup" aria-label="Base map" style="margin-bottom:10px">
+        <label><input type="radio" name="base" value="map" checked><span>Street map</span></label>
+        <label><input type="radio" name="base" value="sat"><span>Satellite</span></label>
+      </div>
+      <div class="layers">
+        <div class="grp">Planes</div>
+        <label><input type="checkbox" id="lNoise" checked><span class="key" style="background:linear-gradient(90deg,#e3c48c,#d9923e,#b8482c,#6b1f45)"></span><span>Plane noise shading<small>Darker means louder when a plane goes over</small></span></label>
+        <label><input type="checkbox" id="lPaths" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#2f4f86" stroke-width="2.5"/></svg><span>Flight paths</span></label>
+        <label><input type="checkbox" id="lPlanes" checked><svg width="30" height="12" viewBox="0 0 30 12"><path d="M15 1l2 4h8v2h-8l-2 4h-1l1-4H9L7 9H6l1-3-1-3h1l2 2h6L14 1z" fill="#3d4450"/></svg><span>Moving planes</span></label>
+        <label><input type="checkbox" id="lApt" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#c8102e" stroke-width="3"/></svg><span>Airport land</span></label>
+        <div class="grp">Transport</div>
+        <label><input type="checkbox" id="lRail" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#2a2f36" stroke-width="4"/><line x1="0" y1="5" x2="30" y2="5" stroke="#fff" stroke-width="1.6" stroke-dasharray="4 4"/></svg><span>Train lines and stations</span></label>
+        <label><input type="checkbox" id="lRailPlan" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#0e7c73" stroke-width="3.5" stroke-dasharray="5 3"/></svg><span>Planned train lines<small>Airport Rail, Suburban Rail Loop West</small></span></label>
+        <label><input type="checkbox" id="lRoad" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="4"/></svg><span>Freeways and highways</span></label>
+        <label><input type="checkbox" id="lRoadPlan" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="8" stroke-opacity=".25"/><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="2.5" stroke-dasharray="5 3"/></svg><span>Planned roads<small>Outer Ring Road land, roads being built</small></span></label>
+        <div class="grp">Other</div>
+        <label><input type="checkbox" id="lDc" checked><svg width="30" height="12"><circle cx="15" cy="6" r="5" fill="#4b2a8c" stroke="#fff" stroke-width="1.5"/></svg><span>Data centres<small>Filled: operating. Outline: planned</small></span></label>
+        <label><input type="checkbox" id="lSub" checked><svg width="30" height="10"><text x="0" y="9" font-size="9" font-family="IBM Plex Sans Condensed,sans-serif" font-weight="600" fill="#3d4450" letter-spacing="1">ABC</text></svg><span>Suburb names</span></label>
+        <label><input type="checkbox" id="lBld" checked><svg width="30" height="12"><path d="M6 11V4l6-3 6 3v7z" fill="#cfd3da"/></svg><span>3D buildings</span></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Quietest suburbs in the west</h2>
       <p class="summary" id="summary">Loading suburb boundaries…</p>
-      <div class="checks" style="grid-template-columns:1fr;margin-bottom:10px"><label><input type="checkbox" id="westOnly" checked> Western and north-western suburbs only</label></div>
       <div class="list" id="list"></div>
     </section>
 
-    <section>
-      <h2>How loud, by distance from the runway</h2>
-      <p class="note" style="margin-bottom:10px">Landing planes descend on a fixed 3° slope, so their height depends only on the distance to touchdown. Being 1 to 2 km to the side of the path cuts the noise a lot, even close in.</p>
-      <div class="tblwrap"><table class="dist" id="tArr"></table></div>
-      <p class="note" style="margin:14px 0 10px">Departures are louder because the engines run at take-off power, but they climb faster and spread onto different routes.</p>
-      <div class="tblwrap"><table class="dist" id="tDep"></table></div>
+    <section class="profile">
+      <h2>How close is too close?</h2>
+      <p class="note" style="color:var(--ink2);font-size:13.5px">This side view shows a plane coming in to land. The coloured strips show how loud it is on the ground right under it, and 1 km to the side.</p>
+      <div id="profile"></div>
+      <ul class="rules" id="rules"></ul>
     </section>
 
-    <section>
-      <h2>Key facts</h2>
-      <dl class="facts">
-        <div><dt>Airport site</dt><dd>2,741 ha</dd></div>
-        <div><dt>Main runway</dt><dd>16/34 · 3,657 m · becomes 16L/34R</dd></div>
-        <div><dt>Cross runway</dt><dd>09/27 · 2,286 m · mainly high winds after 2031</dd></div>
-        <div><dt>Third runway</dt><dd>16R/34L · 3,000 m · 1,311 m west of main runway · opens 2031</dd></div>
-        <div><dt>70 dB(A)</dt><dd>≈ car passing at 60 km/h; ≈ 60 dB indoors with windows open, enough to interrupt conversation (the N70 measure)</dd></div>
-        <div><dt>60 dB(A)</dt><dd>≈ ordinary conversation; the N60 night measure</dd></div>
-        <div><dt>10 dB less</dt><dd>sounds about half as loud</dd></div>
-      </dl>
-    </section>
+    <details>
+      <summary>More options</summary>
+      <div class="stack">
+        <div>
+          <h2>Which way the wind blows</h2>
+          <div class="seg" role="radiogroup" aria-label="Wind direction">
+            <label><input type="radio" name="flow" value="all" checked><span>All</span></label>
+            <label><input type="radio" name="flow" value="34"><span>North</span></label>
+            <label><input type="radio" name="flow" value="16"><span>South</span></label>
+            <label><input type="radio" name="flow" value="27"><span>West</span></label>
+            <label><input type="radio" name="flow" value="09"><span>East</span></label>
+          </div>
+          <p class="note" style="margin-top:6px">Planes land and take off into the wind, so the wind decides which flight paths are busy on any given day.</p>
+        </div>
+        <div>
+          <h2>Plane size</h2>
+          <div class="seg" role="radiogroup" aria-label="Plane size">
+            <label><input type="radio" name="ac" value="narrow" checked><span>Everyday jet (737, A320)</span></label>
+            <label><input type="radio" name="ac" value="wide"><span>Big jet (787, A330)</span></label>
+          </div>
+        </div>
+        <div class="range"><label for="exag">Stretch plane heights</label><input type="range" id="exag" min="1" max="4" step="0.5" value="1"><output id="exagOut">×1</output></div>
+        <label style="display:flex;gap:8px;align-items:center;font-size:13.5px"><input type="checkbox" id="lTerrain"> Show hills (terrain)</label>
+        <div>
+          <h2>Google photorealistic 3D</h2>
+          <p class="note">Needs your own Google Maps Platform API key with the Map Tiles API turned on. The key stays in this browser.</p>
+          <div class="keyrow"><input id="gKey" type="password" placeholder="Paste API key" autocomplete="off"><button class="btn" id="gKeyGo">Use Google 3D</button></div>
+        </div>
+      </div>
+    </details>
 
-    <section>
-      <h2>How the loudness is worked out</h2>
-      <p class="note">For each spot, the model finds how close each corridor passes in 3D and looks up the peak level heard on the ground, L<sub>Amax</sub>, from NATS representative aircraft noise tables (single-aisle 125–180 seat jets and 250-seat twin-aisle jets). It then applies the standard SAE AIR 1751 extra ground attenuation for aircraft seen low to the side. Wide-body levels are calibrated to Melbourne Airport's third runway fact sheet, which quotes 80 dB(A) for a wide-body arrival at 600 ft and 82 dB(A) for a departure at 1,300 ft. Newer 787 and A350 types are quieter close in than the NATS average. The typical-jet levels already match the fact sheet's 78 to 79 dB(A).</p>
-      <p class="note">The map shows the loudest single overflight at each spot, not how many flights there are each day. The runways in use change with the wind, so a spot may only hear planes some of the time. Corridors are simplified: straight 3° approaches and generic departure fans. Real tracks spread out and departures follow set routes. Treat the numbers as a guide, accurate to within about ±5 dB.</p>
-      <p class="note">Before buying, check the exact address in the official tools:</p>
-      <ul class="links">
-        <li><a href="https://www.melbourneairport.com.au/community/aircraft-noise" target="_blank" rel="noopener">Melbourne Airport Flight Path and Noise Tool</a></li>
-        <li><a href="https://au.webtrak.aero/mel3" target="_blank" rel="noopener">WebTrak Melbourne (real radar tracks and measured noise)</a></li>
-        <li><a href="https://www.nats.aero/environment/noise-and-emissions/measuring-noise/lmax/" target="_blank" rel="noopener">NATS representative Lmax data</a></li>
-      </ul>
-    </section>
+    <details>
+      <summary>How this is worked out</summary>
+      <div class="stack">
+        <p class="note">Plane noise: for every spot, the map works out how close each flight path passes and how high the plane is there. It then looks up how loud that plane sounds on the ground, using published measurements from NATS, the UK air traffic service, and Melbourne Airport's third runway noise fact sheet. The loudness words match common measures. "Loud" starts where a plane interrupts a conversation indoors with the windows open, the level airports track as N70. Ten points louder sounds about twice as loud.</p>
+        <p class="note">It shows the loudest single plane, not how many fly over each day, which changes with the wind. Flight paths are simplified, so treat the results as a guide. Real planes spread out a few hundred metres either side.</p>
+        <p class="note">Suburbs, the airport boundary, today's runways, train lines, stations and highways come from OpenStreetMap. The third runway is placed from Melbourne Airport's published figures. Planned train lines and roads are drawn from public announcements. Where the exact route isn't public, the line is marked as approximate. Data centres come from OpenStreetMap, Data Center Map and 2026 planning news, with locations found from their street addresses.</p>
+        <p class="note">Check the exact address before buying:</p>
+        <ul class="links">
+          <li><a href="https://www.melbourneairport.com.au/community/aircraft-noise" target="_blank" rel="noopener">Melbourne Airport Flight Path and Noise Tool</a></li>
+          <li><a href="https://au.webtrak.aero/mel3" target="_blank" rel="noopener">WebTrak: real flight tracks and measured noise</a></li>
+          <li><a href="https://bigbuild.vic.gov.au/projects/melbourne-airport-rail" target="_blank" rel="noopener">Melbourne Airport Rail (Big Build)</a></li>
+          <li><a href="https://bigbuild.vic.gov.au/projects/suburban-rail-loop/srl-west" target="_blank" rel="noopener">SRL West (Big Build)</a></li>
+          <li><a href="https://transport.vic.gov.au/news-and-resources/projects/outer-metropolitan-ring-e6-transport-corridor" target="_blank" rel="noopener">Outer Metropolitan Ring / E6 (Transport Victoria)</a></li>
+          <li><a href="https://certifiedstrategic.com/insights/melbourne-data-centre-pipeline-four-new-campuses" target="_blank" rel="noopener">Melbourne data centre pipeline, 2026</a></li>
+          <li><a href="https://www.datacentermap.com/australia/melbourne/" target="_blank" rel="noopener">Data Center Map: Melbourne</a></li>
+        </ul>
+      </div>
+    </details>
   </aside>
 </div>
 
@@ -255,7 +251,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
 'use strict';
 const toastEl=document.getElementById('toast');
 function toast(msg,ms){toastEl.textContent=msg;toastEl.hidden=false;clearTimeout(toast.t);if(ms)toast.t=setTimeout(()=>toastEl.hidden=true,ms);}
-if(!window.maplibregl||!window.deck){toast('The map libraries did not load. Open this page in Chrome or Safari, not inside another app.');return;}
+if(!window.maplibregl||!window.deck){toast('The map could not load. Open this page in Chrome or Safari, not inside another app.');return;}
 
 // ---------- geometry (local km: x east, n north) ----------
 const D2R=Math.PI/180;
@@ -330,8 +326,9 @@ function defaultRunways(){
   return [main,cross,deriveNew(main)];
 }
 let RW=defaultRunways();
+const RWNAME={main:'main runway',cross:'east-west runway',new:'new third runway'};
 
-// ---------- flight paths (a = altitude km above airport) ----------
+// ---------- flight paths (a = height km) ----------
 const TAN3=Math.tan(3*D2R);
 function arrivalPts(th,brg){const p=[];for(let d=26;d>0;d-=1){const q=add(th,brg+180,d);p.push({x:q.x,n:q.n,a:d*TAN3});}
   p.push({x:th.x,n:th.n,a:0.015});const r=add(th,brg,1.6);p.push({x:r.x,n:r.n,a:0.005});return p;}
@@ -347,7 +344,7 @@ function buildPaths(){
     [[r.A,r.brg,0],[r.B,(r.brg+180)%360,1]].forEach(([th,brg,i])=>{
       const mk=(kind,turn,pts)=>{
         const P={rw:r,i,kind,turn,pts,th,base:r.base[i],future:r.era==='future'};
-        P.label=era=>`RWY ${r.names[era][i]} ${kind==='arr'?'arrivals':'departures'}`;
+        P.plain=()=>`planes ${kind==='arr'?'landing on':'taking off from'} the ${RWNAME[r.key]}`;
         P.inEra=era=>r.era==='both'||era==='future';
         P.cum=[0];let L=0;for(let k=1;k<pts.length;k++){L+=Math.hypot(pts[k].x-pts[k-1].x,pts[k].n-pts[k-1].n,pts[k].a-pts[k-1].a);P.cum.push(L);}P.len=L;
         P.segB=pts.slice(1).map((p,k)=>brgOf(pts[k],p));
@@ -360,16 +357,13 @@ function buildPaths(){
 }
 buildPaths();
 
-// ---------- noise model ----------
-// NATS representative Lmax, dB(A), by height in ft directly below the aircraft
+// ---------- noise model (internal units: dB(A) Lmax) ----------
 const CURVES={
   narrow:{arr:[[1000,77],[2000,69],[3000,64],[4000,61],[5000,59],[6000,57],[7000,56],[8000,55]],
           dep:[[1000,85],[2000,75],[3000,70],[4000,66],[5000,63],[6000,60],[7000,59],[8000,58],[9000,57],[10000,56]]},
   wide:  {arr:[[1000,84],[2000,74],[3000,68],[4000,64],[5000,60],[6000,58],[7000,56],[8000,55]],
           dep:[[1000,92],[2000,83],[3000,77],[4000,73],[5000,69],[6000,66],[7000,64],[8000,61],[9000,59],[10000,58]]}
 };
-// Calibrate wide-bodies to Melbourne Airport's measured figures (80 dB arrival at 600 ft, 82 dB departure at 1,300 ft):
-// newer 787/A350-type aircraft are quieter close in than the NATS 250-seat average. Offset tapers to zero by 4,000 ft.
 [['arr',5],['dep',6]].forEach(([k,off])=>{CURVES.wide[k]=CURVES.wide[k].map(([h,l])=>[h,l-off*Math.max(0,Math.min(1,(4000-h)/3000))]);});
 function curveL(ac,kind,ft){
   const c=CURVES[ac][kind];
@@ -377,7 +371,6 @@ function curveL(ac,kind,ft){
   for(let i=1;i<c.length;i++){if(ft<=c[i][0]){const t=Math.log(ft/c[i-1][0])/Math.log(c[i][0]/c[i-1][0]);return c[i-1][1]+(c[i][1]-c[i-1][1])*t;}}
   const last=c[c.length-1];return last[1]-6*Math.log2(ft/last[0]);
 }
-// SAE AIR 1751 lateral (ground) attenuation
 function latAtten(latM,altM){
   if(latM<1)return 0;const beta=Math.atan2(altM,latM)/D2R;if(beta>=50)return 0;
   const G=11.83*(1-Math.exp(-0.00274*Math.min(latM,914)));
@@ -385,10 +378,11 @@ function latAtten(latM,altM){
   return G*Lam/10.86;
 }
 function levelAt(ac,kind,latKm,altKm){const latM=latKm*1000,altM=Math.max(altKm*1000,8);return curveL(ac,kind,Math.hypot(latM,altM)*3.281)-latAtten(latM,altM);}
-function noiseAt(s,era,ac){
+function noiseAt(s,era,ac,flow){
   let best={L:0,lat:0,alt:0,q:null,path:null,along:0};
   for(const p of PATHS){
     if(!p.inEra(era))continue;
+    if(flow&&flow!=='all'&&p.base!==flow)continue;
     const pts=p.pts;
     for(let k=0;k<pts.length-1;k++){
       const a=pts[k],b=pts[k+1],dx=b.x-a.x,dn=b.n-a.n,l2=dx*dx+dn*dn;
@@ -402,18 +396,87 @@ function noiseAt(s,era,ac){
   }
   return best;
 }
-const BANDS=[{min:75,t:'Very loud',hex:'#9d174d'},{min:70,t:'Loud',hex:'#ea580c'},{min:65,t:'Noticeable',hex:'#f2b300',dk:1},{min:60,t:'Audible',hex:'#a3c93a',dk:1},{min:-99,t:'Quiet',hex:'#2f9e44'}];
-const band=L=>BANDS.find(b=>L>=b.min);
-const hexRGB=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
-const chip=(L,withText)=>{const b=band(L);return `<span class="chip${b.dk?' dk':''}" style="background:${b.hex}">${Math.round(L)} dB${withText?' · '+b.t:''}</span>`;};
-const SLANT70={};['narrow','wide'].forEach(ac=>{SLANT70[ac]={};['arr','dep'].forEach(k=>{let lo=100,hi=80000;for(let i=0;i<50;i++){const m=(lo+hi)/2;if(curveL(ac,k,m)>=70)lo=m;else hi=m;}SLANT70[ac][k]=lo/3.281;});});
 
-// ---------- fallback data ----------
+// ---------- plain-language translation ----------
+const LEVELS=[
+  {min:76,w:'Very loud',hex:'#6b1f45',d:'Like a truck roaring past. Windows rattle and you pause the TV until it has gone.'},
+  {min:70,w:'Loud',hex:'#b8482c',d:'Like standing next to a busy road. With the windows open, talking inside stops for a few seconds.'},
+  {min:63,w:'Noticeable',hex:'#d9923e',d:'You hear every plane clearly, like people talking nearby, but it will not stop a conversation.'},
+  {min:56,w:'Faint',hex:'#e3c48c',d:'You hear planes if you listen for them, like a quiet office.'},
+  {min:-99,w:'Quiet',hex:'#8fae98',d:'Planes are barely noticeable over the usual sounds of the street.'}
+];
+const lev=L=>LEVELS.find(l=>L>=l.min);
+const levIdx=L=>4-LEVELS.findIndex(l=>L>=l.min);
+const meter=L=>{const n=levIdx(L)+1,c=lev(L).hex;let h='<span class="meter">';for(let i=0;i<5;i++)h+=`<i style="${i<n?'background:'+c:''}"></i>`;return h+'</span>';};
+const lvlTag=L=>`<span class="lvl"><b style="background:${lev(L).hex}"></b>${lev(L).w}</span>`;
+function heightWords(altKm){
+  const m=Math.round(altKm*1000/50)*50;
+  if(altKm<0.03)return 'on or just above the runway';
+  if(altKm<0.3)return `very low, about ${m} m up. Planes look huge and you can read the airline name`;
+  if(altKm<0.6)return `low, about ${m} m up (a Eureka Tower is about 300 m)`;
+  if(altKm<1.1)return `at medium height, about ${m} m up`;
+  return `high, about ${altKm.toFixed(1)} km up, and look small`;
+}
+function sideWords(latKm){
+  if(latKm<0.15)return 'right overhead';
+  if(latKm<1)return `about ${Math.round(latKm*1000/50)*50} m to the side`;
+  return `about ${latKm.toFixed(1)} km to the side`;
+}
+function relWords(d){
+  const r=Math.pow(2,d/10);
+  if(r<0.3)return 'much quieter, under a third as loud';
+  if(r<0.42)return 'about a third as loud';
+  if(r<0.62)return 'about half as loud';
+  if(r<0.85)return 'a bit quieter';
+  if(r<1.18)return 'about the same';
+  if(r<1.6)return 'a bit louder';
+  if(r<2.4)return 'about twice as loud';
+  return 'much louder, over twice as loud';
+}
+const SLANT70={};['narrow','wide'].forEach(ac=>{SLANT70[ac]={};['arr','dep'].forEach(k=>{let lo=100,hi=80000;for(let i=0;i<50;i++){const m=(lo+hi)/2;if(curveL(ac,k,m)>=70)lo=m;else hi=m;}SLANT70[ac][k]=lo/3.281;});});
+const hexRGB=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+
+// ---------- fixed data: planned transport + data centres ----------
+const PLANS=[
+  {kind:'rail',cert:'route',name:'Airport Rail, stage 1',status:'Under construction, due 2030',about:'Six kilometres of new raised track from West Footscray to Albion, a rebuilt Sunshine station and new Albion and Tottenham stations.',url:'https://bigbuild.vic.gov.au/projects/melbourne-airport-rail',
+   coords:[[144.8846,-37.8016],[144.8625,-37.7990],[144.8480,-37.7945],[144.8327,-37.7885],[144.8246,-37.7770]]},
+  {kind:'rail',cert:'approx',name:'Airport Rail to the airport (approximate route)',status:'Planned, opening 2033 at the earliest',about:'Trains will run via Sunshine to a new airport station between Terminals 3 and 4. This line shows the general direction only, not the exact track.',url:'https://bigbuild.vic.gov.au/projects/melbourne-airport-rail',
+   coords:[[144.8246,-37.7770],[144.8380,-37.7640],[144.8500,-37.7500],[144.8620,-37.7360],[144.8700,-37.7200],[144.8640,-37.7020],[144.8540,-37.6860],[144.8450,-37.6700]]},
+  {kind:'rail',cert:'concept',name:'Suburban Rail Loop West (route not decided)',status:'Future stage, still being planned',about:'Planned to link Sunshine and Werribee. The government says the route is still under investigation, so this only shows the two ends.',url:'https://bigbuild.vic.gov.au/projects/suburban-rail-loop/srl-west',
+   coords:[[144.8327,-37.7885],[144.6600,-37.8990]]},
+  {kind:'road',cert:'approx',name:'Outer Metropolitan Ring Road (approximate)',status:'Land reserved, not funded',about:'A future freeway and rail corridor from the Princes Freeway west of Werribee, through the Melton area and north of the airport, to the Hume Freeway near Beveridge. The land is reserved, and construction is not expected for many years. The shaded band shows the general area only.',url:'https://transport.vic.gov.au/news-and-resources/projects/outer-metropolitan-ring-e6-transport-corridor',
+   coords:[[144.585,-37.915],[144.600,-37.850],[144.612,-37.790],[144.622,-37.730],[144.640,-37.675],[144.690,-37.625],[144.760,-37.605],[144.830,-37.585],[144.890,-37.545],[144.950,-37.505],[144.985,-37.480]]}
+];
+const DCS=[
+  ['NEXTDC M2','NEXTDC','75 Sharps Road, Tullamarine','live'],
+  ['Vantage MEL1','Vantage Data Centers','45 Tullamarine Park Road, Tullamarine','live'],
+  ['Microsoft, Garden Drive','Microsoft','70 Garden Drive, Tullamarine','live'],
+  ['AirTrunk MEL2','AirTrunk','Tullamarine','live','Exact site not published; placed at the suburb'],
+  ['AirTrunk MEL1','AirTrunk','Derrimut','live','Exact site not published; placed at the suburb'],
+  ['Equinix ME4','Equinix','2 Davis Court, Derrimut','live'],
+  ['Digital Realty MEL10','Digital Realty','98 Radnor Drive, Deer Park','live'],
+  ['Digital Realty MEL11','Digital Realty','72 Radnor Drive, Deer Park','live'],
+  ['Digital Realty MEL12','Digital Realty','54 Radnor Drive, Deer Park','live'],
+  ['STACK MEL01','STACK Infrastructure','399 Palmers Road, Truganina','live'],
+  ['Microsoft, Woods Road','Microsoft','281 Woods Road, Truganina','live'],
+  ['Amazon Web Services','Amazon','22 Delivery Drive, Truganina','live'],
+  ['CDC Laverton','CDC Data Centres','Leakes Road, Laverton North','live'],
+  ['NEXTDC M3','NEXTDC','25 Indwe Street, West Footscray','live'],
+  ['CDC Brooklyn','CDC Data Centres','594 Geelong Road, Brooklyn','live'],
+  ['GreenSquareDC MEL1','GreenSquareDC','44 Simcock Avenue, Spotswood','live'],
+  ['Biztactix Sunshine','Biztactix','9A Western Avenue, Sunshine','live'],
+  ['Mickleham hyperscale campus','AirTrunk (reported)','45 Donnybrook Road, Mickleham','plan','Planning application lodged July 2026. About A$4 billion reported.'],
+  ['Truganina data centre','Goodman','433 Mount Atkinson Road, Truganina','plan','Planning application lodged July 2026.'],
+  ['Campbellfield AI campus','Zerra DC','300 Barry Road, Campbellfield','plan','Application filed April 2026, on the former Ford site.'],
+  ['Cherry Lane','Stockland','72 Cherry Lane, Laverton North','plan','Listed as in development on Data Center Map.'],
+  ['Francis Street','Stockland','413 Francis Street, Brooklyn','plan','Listed as in development on Data Center Map.'],
+  ['Sunshine Road','Perri Projects','63 Sunshine Road, West Footscray','plan','Listed as in development on Data Center Map.']
+];
 const FALLBACK_APT=[[-2.9,3.4],[0.0,3.6],[1.4,3.0],[2.1,1.8],[2.1,-0.4],[1.9,-2.2],[1.2,-2.9],[-0.6,-2.7],[-2.2,-2.3],[-3.3,-1.0],[-3.4,1.4],[-3.2,2.8]].map(([x,n])=>({x,n}));
 FALLBACK_APT.push(FALLBACK_APT[0]);
 const FALLBACK_SUBS=[['Sunbury',-37.577,144.726],['Diggers Rest',-37.627,144.719],['Bulla',-37.635,144.803],['Greenvale',-37.638,144.886],['Attwood',-37.668,144.888],['Westmeadows',-37.676,144.884],['Gladstone Park',-37.689,144.886],['Tullamarine',-37.701,144.880],['Airport West',-37.724,144.880],['Keilor Park',-37.721,144.853],['Keilor',-37.718,144.835],['Keilor East',-37.736,144.861],['Keilor North',-37.690,144.795],['Keilor Lodge',-37.697,144.812],['Keilor Downs',-37.723,144.808],['Kealba',-37.737,144.828],['Taylors Lakes',-37.698,144.786],['Sydenham',-37.700,144.766],['Hillside',-37.690,144.740],['Taylors Hill',-37.715,144.753],['Delahey',-37.720,144.775],['Kings Park',-37.733,144.772],['Caroline Springs',-37.741,144.736],['St Albans',-37.745,144.800],['Albanvale',-37.746,144.769],['Cairnlea',-37.757,144.790],['Deer Park',-37.767,144.772],['Sunshine',-37.788,144.832],['Sunshine North',-37.770,144.830],['Avondale Heights',-37.761,144.862],['Tarneit',-37.833,144.695],['Truganina',-37.816,144.738],['Point Cook',-37.915,144.750],['Werribee',-37.900,144.660]];
 
-// ---------- Overpass ----------
+// ---------- network helpers ----------
 const EPS=['https://overpass-api.de/api/interpreter','https://overpass.kumi.systems/api/interpreter','https://maps.mail.ru/osm/tools/overpass/api/interpreter'];
 async function overpass(q){
   for(const ep of EPS){
@@ -424,50 +487,72 @@ async function overpass(q){
 }
 const cacheGet=k=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):null;}catch(e){return null;}};
 const cacheSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function geocode(q){
+  const r=await fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=au&viewbox=144.3,-37.3,145.3,-38.2&bounded=1&q='+encodeURIComponent(q+', Victoria'));
+  const j=await r.json();return j.length?{lng:+j[0].lon,lat:+j[0].lat,name:j[0].display_name}:null;
+}
 
 // ---------- state ----------
 const DEFAULT_REF={lng:144.862,lat:-37.761,title:'Avondale Heights'};
-const state={base:'map',era:'today',flow:'all',ac:'narrow',noise:'flat',thr:60,exag:1,paused:false,westOnly:true,terrain:false,googleKey:'',
-  layers:{apt:true,sub:true,paths:true,planes:true,rings:true,alt:true,bld:true},sel:null,spot:null,ref:cacheGet('tfpm:ref')||DEFAULT_REF,follow:null};
-let AIRPORT=null, SUBS=[], subsReady=false;
-const altOffset=()=>state.base==='google'?135:(state.terrain?132:0);
+const state={base:'map',era:'today',flow:'all',ac:'narrow',exag:1,paused:false,terrain:false,googleKey:'',
+  layers:{noise:true,paths:true,planes:true,apt:true,rail:true,railPlan:true,road:true,roadPlan:true,dc:true,sub:true,bld:true},
+  sel:null,spot:null,ref:cacheGet('tfpm:ref')||DEFAULT_REF,follow:null};
+let AIRPORT=null, SUBS=[], subsReady=false, DCPTS=[];
+const altOffset=()=>state.googleKey&&state.base==='google'?135:(state.terrain?132:0);
 
 // ---------- map ----------
 const map=new maplibregl.Map({
-  container:'map',style:'https://tiles.openfreemap.org/styles/liberty',
-  center:[144.815,-37.715],zoom:11.3,pitch:62,bearing:-25,maxPitch:85,antialias:true,attributionControl:{compact:true}
+  container:'map',style:'https://tiles.openfreemap.org/styles/positron',
+  center:[144.815,-37.715],zoom:11.3,pitch:60,bearing:-25,maxPitch:85,antialias:true,attributionControl:{compact:true}
 });
 map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'bottom-right');
 let meshFailed=false;
 const overlay=new deck.MapboxOverlay({interleaved:true,layers:[],onError:(err,layer)=>{if(layer&&layer.id==='planes3d')meshFailed=true;}});
 map.addControl(overlay);
-let firstLabelLayer=null, satBefore=null, placeLabelIds=[];
+let firstLabel=null,placeIds=[],vsrc=null;
 
 map.on('load',()=>{
-  const layers=map.getStyle().layers;
-  firstLabelLayer=(layers.find(l=>l.type==='symbol')||{}).id;
-  satBefore=(layers.find(l=>/^(tunnel|road|highway|bridge|building|aeroway)/.test(l.id)||l.type==='fill-extrusion'||l.type==='symbol')||{}).id;
-  placeLabelIds=layers.filter(l=>l.type==='symbol'&&/^label_(other|village|town|city)/.test(l.id)).map(l=>l.id);
-  try{map.setSky({'sky-color':'#8ec5ff','horizon-color':'#eaf3ff','fog-color':'#f4f7fb','sky-horizon-blend':0.6,'horizon-fog-blend':0.7,'fog-ground-blend':0.85,'atmosphere-blend':0.8});}catch(e){}
+  const style=map.getStyle();
+  vsrc=Object.keys(style.sources).find(k=>style.sources[k].type==='vector');
+  firstLabel=(style.layers.find(l=>l.type==='symbol')||{}).id;
+  placeIds=style.layers.filter(l=>l.type==='symbol'&&l['source-layer']==='place'&&!/city|country|state|continent/.test(l.id)).map(l=>l.id);
+  const roadBefore=(style.layers.find(l=>l['source-layer']==='transportation'||l.type==='symbol')||{}).id;
+  try{map.setSky({'sky-color':'#9cc7f2','horizon-color':'#eef3f8','fog-color':'#f3f5f8','sky-horizon-blend':0.6,'horizon-fog-blend':0.75,'fog-ground-blend':0.85,'atmosphere-blend':0.7});}catch(e){}
   map.addSource('sat',{type:'raster',tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],tileSize:256,maxzoom:19,attribution:'Imagery © Esri, Maxar, Earthstar Geographics'});
-  map.addLayer({id:'sat',type:'raster',source:'sat',layout:{visibility:'none'}},satBefore);
+  map.addLayer({id:'sat',type:'raster',source:'sat',layout:{visibility:'none'},paint:{'raster-saturation':-0.15,'raster-contrast':0.05}},roadBefore);
   map.addSource('dem',{type:'raster-dem',tiles:['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],encoding:'terrarium',tileSize:256,maxzoom:14,attribution:'Terrain: Mapzen/AWS'});
-  map.addSource('subs',{type:'geojson',data:fc([])});
-  map.addSource('subpts',{type:'geojson',data:fc([])});
-  map.addSource('apt',{type:'geojson',data:fc([])});
-  map.addSource('rw3',{type:'geojson',data:fc([])});
-  map.addLayer({id:'sub-fill',type:'fill',source:'subs',paint:{'fill-color':['get','col'],'fill-opacity':0.2}},firstLabelLayer);
-  map.addLayer({id:'sub-line',type:'line',source:'subs',paint:{'line-color':'#39424e','line-width':1.1,'line-opacity':0.55,'line-dasharray':[3,2]}},firstLabelLayer);
-  map.addLayer({id:'sub-sel',type:'line',source:'subs',filter:['==',['get','name'],''],paint:{'line-color':'#1b1f24','line-width':3.5}},firstLabelLayer);
-  map.addLayer({id:'apt-fill',type:'fill',source:'apt',paint:{'fill-color':'#e11d2e','fill-opacity':0.08}},firstLabelLayer);
-  map.addLayer({id:'apt-case',type:'line',source:'apt',paint:{'line-color':'#ffffff','line-width':7,'line-opacity':0.9}},firstLabelLayer);
-  map.addLayer({id:'apt-line',type:'line',source:'apt',paint:{'line-color':'#e11d2e','line-width':3.5}},firstLabelLayer);
-  map.addLayer({id:'rw3-fill',type:'fill',source:'rw3',paint:{'fill-color':'#a21caf','fill-opacity':0.8}},firstLabelLayer);
-  map.addLayer({id:'sub-dot',type:'circle',source:'subpts',paint:{'circle-radius':5,'circle-color':['get','col'],'circle-stroke-color':'#fff','circle-stroke-width':1.5}});
-  map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['get','label'],'text-font':['Noto Sans Bold'],'text-size':12.5,'text-offset':[0,0.9],'text-anchor':'top','text-max-width':9},paint:{'text-color':'#1b1f24','text-halo-color':'#ffffff','text-halo-width':1.7}});
+  ['subs','subpts','apt','rw3','plans','dcs'].forEach(id=>map.addSource(id,{type:'geojson',data:fc([])}));
+  const ZW=(a,b)=>['interpolate',['exponential',1.6],['zoom'],8,a,15,b];
+  if(vsrc){
+    map.addLayer({id:'bld3d',type:'fill-extrusion',source:vsrc,'source-layer':'building',minzoom:13,paint:{'fill-extrusion-color':'#dde1e7','fill-extrusion-height':['coalesce',['get','render_height'],7],'fill-extrusion-base':['coalesce',['get','render_min_height'],0],'fill-extrusion-opacity':0.85}},firstLabel);
+    map.addLayer({id:'road-case',type:'line',source:vsrc,'source-layer':'transportation',filter:['match',['get','class'],['motorway','trunk'],true,false],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#ffffff','line-width':ZW(2.2,11)}},firstLabel);
+    map.addLayer({id:'road',type:'line',source:vsrc,'source-layer':'transportation',filter:['match',['get','class'],['motorway','trunk'],true,false],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#d08a2a','line-width':ZW(1.2,7)}},firstLabel);
+    map.addLayer({id:'road-build',type:'line',source:vsrc,'source-layer':'transportation',filter:['match',['get','class'],['motorway_construction','trunk_construction','primary_construction'],true,false],paint:{'line-color':'#d08a2a','line-width':ZW(1.2,6),'line-dasharray':[2,1.5]}},firstLabel);
+    const railF=['all',['==',['get','class'],'rail'],['!',['has','service']]];
+    map.addLayer({id:'rail',type:'line',source:vsrc,'source-layer':'transportation',filter:railF,paint:{'line-color':'#2a2f36','line-width':ZW(1.6,5)}},firstLabel);
+    map.addLayer({id:'rail-dash',type:'line',source:vsrc,'source-layer':'transportation',filter:railF,paint:{'line-color':'#ffffff','line-width':ZW(0.6,2.2),'line-dasharray':[3,3]}},firstLabel);
+    map.addLayer({id:'station',type:'circle',source:vsrc,'source-layer':'poi',minzoom:10.5,filter:['all',['==',['get','class'],'railway'],['match',['get','subclass'],['station','halt'],true,false]],paint:{'circle-radius':['interpolate',['linear'],['zoom'],10.5,2.5,15,6],'circle-color':'#ffffff','circle-stroke-color':'#2a2f36','circle-stroke-width':2}});
+    map.addLayer({id:'station-lbl',type:'symbol',source:vsrc,'source-layer':'poi',minzoom:12.5,filter:['all',['==',['get','class'],'railway'],['match',['get','subclass'],['station','halt'],true,false]],layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':11,'text-offset':[0,1],'text-anchor':'top'},paint:{'text-color':'#2a2f36','text-halo-color':'#fff','text-halo-width':1.5}});
+  }
+  map.addLayer({id:'sub-line',type:'line',source:'subs',paint:{'line-color':'#5b6472','line-width':['interpolate',['linear'],['zoom'],10,0.6,14,1.4],'line-opacity':0.5,'line-dasharray':[4,3]}},firstLabel);
+  map.addLayer({id:'sub-sel',type:'line',source:'subs',filter:['==',['get','name'],''],paint:{'line-color':'#15181d','line-width':3}},firstLabel);
+  map.addLayer({id:'apt-fill',type:'fill',source:'apt',paint:{'fill-color':'#c8102e','fill-opacity':0.05}},firstLabel);
+  map.addLayer({id:'apt-case',type:'line',source:'apt',paint:{'line-color':'#ffffff','line-width':6,'line-opacity':0.9}},firstLabel);
+  map.addLayer({id:'apt-line',type:'line',source:'apt',paint:{'line-color':'#c8102e','line-width':2.6}},firstLabel);
+  map.addLayer({id:'rw3-fill',type:'fill',source:'rw3',paint:{'fill-color':'#8e2f6f','fill-opacity':0.85}},firstLabel);
+  map.addLayer({id:'plan-road-band',type:'line',source:'plans',filter:['==',['get','kind'],'road'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#d08a2a','line-opacity':0.16,'line-width':['interpolate',['exponential',2],['zoom'],8,3,12,40,15,320]}},firstLabel);
+  map.addLayer({id:'plan-road',type:'line',source:'plans',filter:['==',['get','kind'],'road'],paint:{'line-color':'#b8741d','line-width':2,'line-dasharray':[3,2]}},firstLabel);
+  map.addLayer({id:'plan-rail-band',type:'line',source:'plans',filter:['all',['==',['get','kind'],'rail'],['==',['get','cert'],'approx']],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#0e7c73','line-opacity':0.14,'line-width':['interpolate',['exponential',2],['zoom'],9,4,12,22,15,180]}},firstLabel);
+  map.addLayer({id:'plan-rail',type:'line',source:'plans',filter:['==',['get','kind'],'rail'],layout:{'line-cap':'round'},paint:{'line-color':'#0e7c73','line-width':['match',['get','cert'],'route',4,'approx',3,2],'line-dasharray':['match',['get','cert'],'route',['literal',[2,1]],'approx',['literal',[1.5,1.5]],['literal',[0.5,2]]]}},firstLabel);
+  map.addLayer({id:'plan-lbl',type:'symbol',source:'plans',layout:{'symbol-placement':'line','text-field':['get','name'],'text-font':['Noto Sans Bold'],'text-size':11,'text-letter-spacing':0.04,'symbol-spacing':320},paint:{'text-color':['match',['get','kind'],'road','#8a5613','#0b5f58'],'text-halo-color':'#ffffff','text-halo-width':1.8}});
+  map.addLayer({id:'dc',type:'circle',source:'dcs',paint:{'circle-radius':['interpolate',['linear'],['zoom'],9,4,15,9],'circle-color':['match',['get','st'],'plan','#ffffff','#4b2a8c'],'circle-stroke-color':['match',['get','st'],'plan','#4b2a8c','#ffffff'],'circle-stroke-width':['match',['get','st'],'plan',2.6,1.8],'circle-pitch-alignment':'map'}});
+  map.addLayer({id:'dc-lbl',type:'symbol',source:'dcs',minzoom:11.5,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':11,'text-offset':[0,1.1],'text-anchor':'top','text-max-width':10},paint:{'text-color':'#4b2a8c','text-halo-color':'#fff','text-halo-width':1.6}});
+  map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['format',['upcase',['get','name']],{},'\n',{},['get','word'],{'font-scale':0.85,'text-font':['literal',['Noto Sans Regular']]}],'text-font':['Noto Sans Bold'],'text-size':['interpolate',['linear'],['zoom'],9,9.5,14,13],'text-letter-spacing':0.08,'text-max-width':12,'text-line-height':1.3},paint:{'text-color':'#2b313a','text-halo-color':'rgba(255,255,255,0.95)','text-halo-width':1.8}});
+  map.getSource('plans').setData(fc(PLANS.map(p=>({type:'Feature',properties:{kind:p.kind,cert:p.cert,name:p.name,status:p.status,about:p.about,url:p.url},geometry:{type:'LineString',coordinates:p.coords}}))));
   renderRunway3();renderAirport();applyAll();
-  toast('Loading airport boundary and suburbs from OpenStreetMap…');
-  loadData();
+  toast('Loading suburbs and the airport boundary…');
+  loadData();loadDCs();
   requestAnimationFrame(frame);
 });
 map.on('error',e=>{if(e&&e.error&&/openfreemap/.test(String(e.error.message||'')))toast('The street map could not load. Try Satellite.',6000);});
@@ -475,14 +560,9 @@ map.on('error',e=>{if(e&&e.error&&/openfreemap/.test(String(e.error.message||'')
 
 function fc(f){return {type:'FeatureCollection',features:f};}
 const ringLL=r=>r.map(p=>toLL(p.x,p.n));
-function renderAirport(){
-  if(!map.getSource('apt'))return;
-  const ring=AIRPORT?AIRPORT.ring:FALLBACK_APT;
-  map.getSource('apt').setData(fc([{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[ringLL(ring)]}}]));
-}
+function renderAirport(){if(!map.getSource('apt'))return;const ring=AIRPORT?AIRPORT.ring:FALLBACK_APT;map.getSource('apt').setData(fc([{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[ringLL(ring)]}}]));}
 function renderRunway3(){
-  if(!map.getSource('rw3'))return;
-  const r=RW.find(x=>x.key==='new');
+  if(!map.getSource('rw3'))return;const r=RW.find(x=>x.key==='new');
   const w=0.03,c=[add(r.A,r.brg-90,w),add(r.B,r.brg-90,w),add(r.B,r.brg+90,w),add(r.A,r.brg+90,w)];c.push(c[0]);
   map.getSource('rw3').setData(fc([{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[ringLL(c)]}}]));
 }
@@ -491,39 +571,32 @@ function renderSubs(){
   if(!map.getSource('subs'))return;
   const f=[],pts=[];
   SUBS.forEach(s=>{
-    const st=subStat(s);const col=st?band(st.med).hex:'#8a929c';
-    const label=st?`${s.name}\n${Math.round(st.med)} dB`:s.name;
-    f.push({type:'Feature',properties:{name:s.name,col},geometry:{type:'MultiPolygon',coordinates:s.rings.map(r=>[ringLL(r)])}});
-    pts.push({type:'Feature',properties:{name:s.name,col,label},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
+    const st=subStat(s);
+    f.push({type:'Feature',properties:{name:s.name},geometry:{type:'MultiPolygon',coordinates:s.rings.map(r=>[ringLL(r)])}});
+    pts.push({type:'Feature',properties:{name:s.name,word:st?lev(st.med).w:''},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
   });
   map.getSource('subs').setData(fc(f));map.getSource('subpts').setData(fc(pts));
 }
+function renderDCs(){if(map.getSource('dcs'))map.getSource('dcs').setData(fc(DCPTS.map(d=>({type:'Feature',properties:{name:d.name,op:d.op,st:d.st,addr:d.addr||'',note:d.note||'',src:d.src||''},geometry:{type:'Point',coordinates:[d.lng,d.lat]}}))));}
 
 // ---------- data loading ----------
 async function loadData(){
   let apt=cacheGet('tfpm:v2:apt');
   if(!apt){
-    try{
-      const j=await overpass('[out:json][timeout:60];(nwr["aeroway"="aerodrome"]["icao"="YMML"];way["aeroway"="runway"](-37.72,144.78,-37.62,144.90););out geom;');
-      apt={elements:j.elements.filter(e=>e.type!=='node'||(e.tags&&e.tags.aeroway==='aerodrome'))};
-      cacheSet('tfpm:v2:apt',apt);
-    }catch(e){apt=null;}
+    try{const j=await overpass('[out:json][timeout:60];(nwr["aeroway"="aerodrome"]["icao"="YMML"];way["aeroway"="runway"](-37.72,144.78,-37.62,144.90););out geom;');
+      apt={elements:j.elements.filter(e=>e.type!=='node'||(e.tags&&e.tags.aeroway==='aerodrome'))};cacheSet('tfpm:v2:apt',apt);}catch(e){apt=null;}
   }
   if(apt)applyAirportData(apt.elements);
-  else toast('OpenStreetMap is busy, so the airport outline is indicative. Reload to retry.',7000);
-
   let subs=cacheGet('tfpm:v2:subs');
   if(!subs){
-    try{
-      toast('Loading suburb boundaries (can take up to a minute the first time)…');
+    try{toast('Loading suburb boundaries (up to a minute the first time)…');
       const j=await overpass('[out:json][timeout:150];relation["boundary"="administrative"]["admin_level"="10"](-37.96,144.55,-37.52,145.0);out geom;');
       subs=j.elements.filter(e=>e.tags&&e.tags.name).map(e=>({name:e.tags.name,rings:elementRings(e,0.02).map(r=>r.map(p=>[+p.x.toFixed(4),+p.n.toFixed(4)]))})).filter(s=>s.rings.length);
-      cacheSet('tfpm:v2:subs',subs);
-    }catch(e){subs=null;}
+      cacheSet('tfpm:v2:subs',subs);}catch(e){subs=null;}
   }
   if(subs&&subs.length)SUBS=subs.map(s=>({name:s.name,rings:s.rings.map(r=>r.map(([x,n])=>({x,n})))}));
   else{
-    toast('Suburb boundaries could not load, so suburbs are shown as approximate circles. Reload to retry.',8000);
+    toast('Suburb boundaries could not load, so suburbs are approximate. Reload to try again.',8000);
     SUBS=FALLBACK_SUBS.map(([name,lat,lon])=>{const c=toL(lon,lat);const r=[];for(let i=0;i<=24;i++){const a=i/24*Math.PI*2;r.push({x:c.x+Math.cos(a)*1.1,n:c.n+Math.sin(a)*1.1});}return {name,rings:[r]};});
   }
   SUBS.forEach(prepSuburb);subsReady=true;
@@ -531,28 +604,21 @@ async function loadData(){
 }
 function applyAirportData(els){
   const aero=els.find(e=>e.tags&&e.tags.aeroway==='aerodrome'&&e.type!=='node');
-  if(aero){
-    const rings=elementRings(aero,0.005).sort((a,b)=>Math.abs(ringArea(b))-Math.abs(ringArea(a)));
-    if(rings.length)AIRPORT={ring:rings[0]};
-  }
+  if(aero){const rings=elementRings(aero,0.005).sort((a,b)=>Math.abs(ringArea(b))-Math.abs(ringArea(a)));if(rings.length)AIRPORT={ring:rings[0]};}
   const rws=els.filter(e=>e.type==='way'&&e.tags&&e.tags.aeroway==='runway'&&e.geometry&&e.geometry.length>1);
   let main=null,cross=null,nw=null;
   rws.forEach(w=>{
     const ref=(w.tags.ref||'').toUpperCase().replace(/\s/g,'');
-    const g=w.geometry.map(p=>toL(p.lon,p.lat));
-    const a=g[0],b=g[g.length-1];
+    const g=w.geometry.map(p=>toL(p.lon,p.lat));const a=g[0],b=g[g.length-1];
     if(dist(a,b)<1.5)return;
     if(/16R|34L/.test(ref)){const A=a.n>b.n?a:b,B=A===a?b:a;nw=mkRunway('new',A,B,'future',{today:['',''],future:['16R','34L']},['16','34']);}
     else if(/16|34/.test(ref)){const A=a.n>b.n?a:b,B=A===a?b:a;main=mkRunway('main',A,B,'both',{today:['16','34'],future:['16L','34R']},['16','34']);}
     else if(/09|27/.test(ref)){const A=a.x<b.x?a:b,B=A===a?b:a;cross=mkRunway('cross',A,B,'both',{today:['09','27'],future:['09','27']},['09','27']);}
   });
-  if(main||cross){
-    const d=defaultRunways();const m=main||d[0];
-    RW=[m,cross||d[1],nw||deriveNew(m)];
-    buildPaths();renderRunway3();GRID={};
-  }
+  if(main||cross){const d=defaultRunways();const m=main||d[0];RW=[m,cross||d[1],nw||deriveNew(m)];buildPaths();renderRunway3();GRID={};refCache=null;staticKey='';}
   renderAirport();
   if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);else renderCard();
+  renderProfile();
 }
 function prepSuburb(s){
   let big=s.rings[0];s.rings.forEach(r=>{if(Math.abs(ringArea(r))>Math.abs(ringArea(big)))big=r;});
@@ -584,27 +650,65 @@ async function scoreSuburbs(ac){
       out[era]={med:Ls[Math.floor(Ls.length/2)],p90:Ls[Math.min(Ls.length-1,Math.floor(Ls.length*0.9))],min:Ls[0]};
     });
     s.stats[ac]=out;
-    if(i%6===5){toast(`Working out loudness for each suburb: ${i+1} of ${total}…`);await new Promise(r=>setTimeout(r,0));}
+    if(i%6===5){toast(`Working out plane noise for each suburb: ${i+1} of ${total}`);await sleep(0);}
   }
   scoring=null;
   renderSubs();renderList();renderCard();
-  toast(`${total} suburbs loaded. Click any spot to see how loud it gets.`,5000);
+  toast('Ready. Tap any street to see how loud it gets.',4500);
 }
-
-// ---------- loudness grid ----------
-let GRID={};
-function getGrid(){
-  const key=state.era+'|'+state.ac;
-  if(GRID[key])return GRID[key];
-  const cells=[],step=0.4;
-  for(let x=-27;x<=20;x+=step)for(let n=-25;n<=15;n+=step){
-    const L=noiseAt({x,n},state.era,state.ac).L;
-    if(L>=55){const ll=toLL(x,n);cells.push({ll,L,col:hexRGB(band(L).hex)});}
+async function loadDCs(){
+  const cached=cacheGet('tfpm:v1:dcgeo')||{};
+  let osm=cacheGet('tfpm:v1:dcosm');
+  if(!osm){try{const j=await overpass('[out:json][timeout:60];(nwr["telecom"="data_center"](-37.98,144.5,-37.45,145.05);nwr["building"="data_center"](-37.98,144.5,-37.45,145.05););out center tags;');
+    osm=j.elements.map(e=>({lat:e.lat||(e.center&&e.center.lat),lng:e.lon||(e.center&&e.center.lon),name:(e.tags&&(e.tags.name||e.tags.operator))||'Data centre',op:(e.tags&&e.tags.operator)||''})).filter(d=>d.lat&&d.lng);cacheSet('tfpm:v1:dcosm',osm);}catch(e){osm=[];}}
+  DCPTS=[];
+  for(const [name,op,addr,st,note] of DCS){
+    let g=cached[addr];
+    if(g===undefined){try{g=await geocode(addr);await sleep(1100);}catch(e){g=null;}cached[addr]=g;cacheSet('tfpm:v1:dcgeo',cached);}
+    if(!g){const sub=addr.split(',').pop().trim();let gs=cached['@'+sub];if(gs===undefined){try{gs=await geocode(sub);await sleep(1100);}catch(e){gs=null;}cached['@'+sub]=gs;cacheSet('tfpm:v1:dcgeo',cached);}g=gs;}
+    if(g){DCPTS.push({lng:g.lng,lat:g.lat,name,op,st,addr,note:note||'',src:st==='plan'?'2026 planning news / Data Center Map':'Data Center Map'});renderDCs();}
   }
-  GRID[key]=cells;return cells;
+  osm.forEach(o=>{const near=DCPTS.some(d=>dist(toL(d.lng,d.lat),toL(o.lng,o.lat))<0.4);if(!near)DCPTS.push({lng:o.lng,lat:o.lat,name:o.name,op:o.op,st:'live',src:'OpenStreetMap'});});
+  renderDCs();
 }
 
-// ---------- 3D aircraft mesh ----------
+// ---------- smooth noise shading ----------
+let GRID={};
+const GX0=-27,GN1=15,GSTEP=0.3,GCOLS=158,GROWS=135;
+const RAMP=[[55,[227,196,140,0]],[58,[227,196,140,70]],[63,[217,146,62,115]],[70,[184,72,44,150]],[76,[107,31,69,175]],[84,[70,15,45,195]]];
+function rampColor(L){
+  if(L<=RAMP[0][0])return RAMP[0][1];
+  for(let i=1;i<RAMP.length;i++){if(L<=RAMP[i][0]){const t=(L-RAMP[i-1][0])/(RAMP[i][0]-RAMP[i-1][0]),a=RAMP[i-1][1],b=RAMP[i][1];return a.map((v,k)=>v+(b[k]-v)*t);}}
+  return RAMP[RAMP.length-1][1];
+}
+function getGrid(){
+  const key=state.era+'|'+state.ac+'|'+state.flow;
+  if(GRID[key])return GRID[key];
+  const vals=new Float32Array(GCOLS*GROWS);
+  for(let j=0;j<GROWS;j++)for(let i=0;i<GCOLS;i++)vals[j*GCOLS+i]=noiseAt({x:GX0+i*GSTEP,n:GN1-j*GSTEP},state.era,state.ac,state.flow).L;
+  let image=null;
+  try{const cv=document.createElement('canvas');cv.width=GCOLS;cv.height=GROWS;const ctx=cv.getContext('2d');
+    const img=ctx.createImageData(GCOLS,GROWS);for(let k=0;k<vals.length;k++){const c=rampColor(vals[k]);img.data[k*4]=c[0];img.data[k*4+1]=c[1];img.data[k*4+2]=c[2];img.data[k*4+3]=c[3];}ctx.putImageData(img,0,0);image=cv;}catch(e){image=null;}
+  const contours=[];
+  const T={1:[[3,0]],2:[[0,1]],3:[[3,1]],4:[[1,2]],5:[[3,0],[1,2]],6:[[0,2]],7:[[3,2]],8:[[3,2]],9:[[0,2]],10:[[0,1],[3,2]],11:[[1,2]],12:[[3,1]],13:[[0,1]],14:[[3,0]]};
+  [63,70,76].forEach(lv=>{
+    const P=(i,j)=>({x:GX0+i*GSTEP,n:GN1-j*GSTEP});
+    const V=(i,j)=>vals[j*GCOLS+i];
+    const lerp=(p,q,a,b)=>{const t=(lv-a)/(b-a);return {x:p.x+(q.x-p.x)*t,n:p.n+(q.n-p.n)*t};};
+    for(let j=0;j<GROWS-1;j++)for(let i=0;i<GCOLS-1;i++){
+      const v0=V(i,j),v1=V(i+1,j),v2=V(i+1,j+1),v3=V(i,j+1);
+      const idx=(v0>=lv?1:0)|(v1>=lv?2:0)|(v2>=lv?4:0)|(v3>=lv?8:0);
+      if(idx===0||idx===15)continue;
+      const E=[()=>lerp(P(i,j),P(i+1,j),v0,v1),()=>lerp(P(i+1,j),P(i+1,j+1),v1,v2),()=>lerp(P(i,j+1),P(i+1,j+1),v3,v2),()=>lerp(P(i,j),P(i,j+1),v0,v3)];
+      T[idx].forEach(([a,b])=>{const p=E[a](),q=E[b]();contours.push({s:toLL(p.x,p.n),t:toLL(q.x,q.n),lv});});
+    }
+  });
+  const sw=toLL(GX0-GSTEP/2,GN1-(GROWS-1)*GSTEP-GSTEP/2),ne=toLL(GX0+(GCOLS-1)*GSTEP+GSTEP/2,GN1+GSTEP/2);
+  GRID[key]={image,bounds:[sw[0],sw[1],ne[0],ne[1]],contours,vals};
+  return GRID[key];
+}
+
+// ---------- 3D aircraft ----------
 function buildPlaneMesh(){
   const P=[],N=[];
   function tri(a,b,c,ctr){
@@ -631,9 +735,9 @@ function buildPlaneMesh(){
     for(let i=1;i<poly.length-1;i++){tri([x1,...poly[0]],[x1,...poly[i]],[x1,...poly[i+1]],ctr);tri([x0,...poly[0]],[x0,...poly[i]],[x0,...poly[i+1]],ctr);}
     for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length];quad([x0,a[0],a[1]],[x0,b[0],b[1]],[x1,b[0],b[1]],[x1,a[0],a[1]],ctr);}
   }
-  tube(0,0,[{y:-19.5,r:0.05,z:1.4},{y:-16.5,r:1.1,z:0.9},{y:-12,r:2,z:0},{y:13,r:2},{y:16,r:1.55,z:-0.2},{y:18.4,r:0.6,z:-0.45},{y:19.3,r:0.05,z:-0.5}],12);
+  tube(0,0,[{y:-19.5,r:0.05,z:1.4},{y:-16.5,r:1.1,z:0.9},{y:-12,r:2,z:0},{y:13,r:2},{y:16,r:1.55,z:-0.2},{y:18.4,r:0.6,z:-0.45},{y:19.3,r:0.05,z:-0.5}],14);
   [-1,1].forEach(sx=>{
-    tube(6*sx,-1.6,[{y:-1.4,r:0.05},{y:-1,r:0.65},{y:0,r:1.05},{y:3.4,r:1.15},{y:3.5,r:0.05}],10);
+    tube(6*sx,-1.6,[{y:-1.4,r:0.05},{y:-1,r:0.65},{y:0,r:1.05},{y:3.4,r:1.15},{y:3.5,r:0.05}],12);
     slabXY([[1.8*sx,4],[17.5*sx,-5],[17.5*sx,-7],[1.8*sx,-2.6]],-0.9,-0.45);
     slabXY([[0.8*sx,-14.4],[6.6*sx,-18.1],[6.6*sx,-19.1],[0.8*sx,-17.7]],0.95,1.15);
   });
@@ -647,30 +751,22 @@ function planeMatrix(brg,pitchDeg,k){
   return [c*k,s*k,0,0, -s*cp*k,c*cp*k,sp*k,0, s*sp*k,-c*sp*k,cp*k,0, 0,0,0,1];
 }
 const PLANE_SVG=c=>`<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><path d="M32 3c2.6 0 4 3 4 6v15l21 12.5v6.5l-21-6v12.5l7 5v5l-11-3-11 3v-5l7-5V37l-21 6v-6.5L28 24V9c0-3 1.4-6 4-6z" fill="${c}" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>`;
-const ICON_T={url:'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(PLANE_SVG('#123a8f')),width:64,height:64,anchorY:32,mask:false};
-const ICON_F={url:'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(PLANE_SVG('#7a0f86')),width:64,height:64,anchorY:32,mask:false};
-const RGB_T=[28,100,242],RGB_F=[162,28,175];
+const ICON_T={url:'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(PLANE_SVG('#2f4f86')),width:64,height:64,anchorY:32,mask:false};
+const ICON_F={url:'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(PLANE_SVG('#8e2f6f')),width:64,height:64,anchorY:32,mask:false};
+const RGB_T=[47,79,134],RGB_F=[142,47,111];
 
 // ---------- deck layers ----------
 let staticKey='',staticLayers=[],visPaths=[],planes=[];
 function pathVisible(p){return p.inEra(state.era)&&(state.flow==='all'||p.base===state.flow);}
 function coordOf(p,k){const q=p.pts[k];const ll=toLL(q.x,q.n);return [ll[0],ll[1],q.a*1000*state.exag+altOffset()];}
-function altMarkers(){
+function heightMarkers(){
   const out=[];
   visPaths.forEach(p=>{
-    if(p.kind==='dep'&&p.turn!==0)return;
-    [1000,2000,3000,4000,5000].forEach(ft=>{
-      const target=ft/3281;
-      for(let k=0;k<p.pts.length-1;k++){
-        const a=p.pts[k],b=p.pts[k+1];
-        if((a.a-target)*(b.a-target)<=0&&a.a!==b.a){
-          const t=(target-a.a)/(b.a-a.a),x=a.x+(b.x-a.x)*t,n=a.n+(b.n-a.n)*t;
-          const km=p.kind==='arr'?Math.hypot(x-p.th.x,n-p.th.n):Math.hypot(x-p.pts[0].x,n-p.pts[0].n);
-          const ll=toLL(x,n);
-          out.push({p:[ll[0],ll[1],target*1000*state.exag+altOffset()],g:[ll[0],ll[1],altOffset()+2],t:`${ft.toLocaleString('en-AU')} ft · ${km.toFixed(1)} km`,f:p.future});
-          break;
-        }
-      }
+    if(p.kind!=='arr')return;
+    [[0.3,'Very low from here'],[0.6,'Low from here'],[1.1,'Medium height from here']].forEach(([h,t])=>{
+      for(let k=0;k<p.pts.length-1;k++){const a=p.pts[k],b=p.pts[k+1];
+        if((a.a-h)*(b.a-h)<=0&&a.a!==b.a){const f=(h-a.a)/(b.a-a.a),x=a.x+(b.x-a.x)*f,n=a.n+(b.n-a.n)*f,ll=toLL(x,n);
+          out.push({p:[ll[0],ll[1],h*1000*state.exag+altOffset()],g:[ll[0],ll[1],altOffset()+2],t:`${t} · ${Math.hypot(x-p.th.x,n-p.th.n).toFixed(0)} km out`,f:p.future});break;}}
     });
   });
   return out;
@@ -680,36 +776,25 @@ function buildStatic(){
   const L=[];
   const google=state.base==='google'&&state.googleKey;
   if(google){
-    L.push(new deck.Tile3DLayer({id:'google3d',data:'https://tile.googleapis.com/v1/3dtiles/root.json',
-      loadOptions:{fetch:{headers:{'X-GOOG-API-KEY':state.googleKey}}},operation:'terrain+draw',
-      onTileError:()=>toast('Google 3D tiles failed. Check the key has the Map Tiles API enabled.',7000)}));
-    if(state.layers.apt){const r=AIRPORT?AIRPORT.ring:FALLBACK_APT;
-      L.push(new deck.PathLayer({id:'apt3d',data:[{path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+40];})}],getPath:d=>d.path,getColor:[225,29,46],getWidth:5,widthUnits:'pixels'}));}
-    if(state.layers.sub&&SUBS.length){
-      const sd=[];SUBS.forEach(s=>{const st=subStat(s);s.rings.forEach(r=>sd.push({col:st?band(st.med).hex:'#8a929c',path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+30];})}));});
-      L.push(new deck.PathLayer({id:'sub3d',data:sd,getPath:d=>d.path,getColor:d=>hexRGB(d.col),getWidth:2.5,widthUnits:'pixels'}));
-    }
+    L.push(new deck.Tile3DLayer({id:'google3d',data:'https://tile.googleapis.com/v1/3dtiles/root.json',loadOptions:{fetch:{headers:{'X-GOOG-API-KEY':state.googleKey}}},operation:'terrain+draw',onTileError:()=>toast('Google 3D did not load. Check the key has the Map Tiles API turned on.',7000)}));
+    if(state.layers.apt){const r=AIRPORT?AIRPORT.ring:FALLBACK_APT;L.push(new deck.PathLayer({id:'apt3d',data:[{path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+40];})}],getPath:d=>d.path,getColor:[200,16,46],getWidth:4,widthUnits:'pixels'}));}
   }
-  if(state.noise!=='off'){
-    const cells=getGrid().filter(c=>c.L>=state.thr);
-    const is3d=state.noise==='3d';
-    L.push(new deck.ColumnLayer({id:'noise',data:cells,diskResolution:4,radius:283,angle:45,coverage:1,extruded:is3d,
-      getPosition:d=>[d.ll[0],d.ll[1],altOffset()+1],getElevation:d=>Math.max(1,(d.L-52)*16),
-      getFillColor:d=>[...d.col,is3d?215:105],material:{ambient:0.6,diffuse:0.5,shininess:10}}));
+  if(state.layers.noise){
+    const g=getGrid();
+    if(g.image)L.push(new deck.BitmapLayer({id:'noise',image:g.image,bounds:g.bounds,opacity:state.base==='sat'?0.85:1,parameters:{depthTest:false},textureParameters:{minFilter:'linear',magFilter:'linear'}}));
+    L.push(new deck.LineLayer({id:'noise-contours',data:g.contours,getSourcePosition:d=>[d.s[0],d.s[1],altOffset()+1],getTargetPosition:d=>[d.t[0],d.t[1],altOffset()+1],getColor:d=>d.lv>=76?[107,31,69,200]:d.lv>=70?[184,72,44,180]:[190,120,50,140],getWidth:d=>d.lv>=70?1.4:1,widthUnits:'pixels',parameters:{depthTest:false}}));
   }
   if(state.layers.paths){
     const pd=visPaths.map(p=>({p,path:p.pts.map((_,k)=>coordOf(p,k)),ground:p.pts.map(q=>{const ll=toLL(q.x,q.n);return [ll[0],ll[1],altOffset()+3];})}));
     const drops=[];
     visPaths.forEach(p=>p.pts.forEach((q,k)=>{if(q.a>0.03&&q.a<2.2&&(p.kind==='arr'?k%2===0:k>=2&&k<10)){const c=coordOf(p,k);drops.push({s:[c[0],c[1],altOffset()],t:c,f:p.future});}}));
-    L.push(new deck.PathLayer({id:'tracks',data:pd,getPath:d=>d.ground,getColor:d=>[...(d.p.future?RGB_F:RGB_T),90],getWidth:2,widthUnits:'pixels'}));
-    L.push(new deck.LineLayer({id:'drops',data:drops,getSourcePosition:d=>d.s,getTargetPosition:d=>d.t,getColor:d=>[...(d.f?RGB_F:RGB_T),80],getWidth:1,widthUnits:'pixels'}));
-    L.push(new deck.PathLayer({id:'corridors',data:pd,getPath:d=>d.path,getColor:d=>[...(d.p.future?RGB_F:RGB_T),d.p.kind==='arr'?235:160],getWidth:d=>d.p.kind==='arr'?4:2.5,widthUnits:'pixels',billboard:true,capRounded:true,jointRounded:true}));
-  }
-  if(state.layers.alt&&state.layers.paths){
-    const am=altMarkers();
-    L.push(new deck.LineLayer({id:'altdrop',data:am,getSourcePosition:d=>d.g,getTargetPosition:d=>d.p,getColor:[27,31,36,150],getWidth:1.5,widthUnits:'pixels'}));
-    L.push(new deck.ScatterplotLayer({id:'altdot',data:am,getPosition:d=>d.p,getRadius:40,radiusUnits:'meters',radiusMinPixels:3.5,getFillColor:[255,255,255],stroked:true,getLineColor:d=>d.f?RGB_F:RGB_T,lineWidthMinPixels:2}));
-    L.push(new deck.TextLayer({id:'alttxt',data:am,getPosition:d=>d.p,getText:d=>d.t,characterSet:'auto',getSize:11.5,getColor:[27,31,36],background:true,getBackgroundColor:[255,255,255,230],backgroundPadding:[5,3],fontFamily:'IBM Plex Mono, monospace',getPixelOffset:[0,-14]}));
+    L.push(new deck.PathLayer({id:'tracks',data:pd,getPath:d=>d.ground,getColor:d=>[...(d.p.future?RGB_F:RGB_T),70],getWidth:1.5,widthUnits:'pixels'}));
+    L.push(new deck.LineLayer({id:'drops',data:drops,getSourcePosition:d=>d.s,getTargetPosition:d=>d.t,getColor:d=>[...(d.f?RGB_F:RGB_T),55],getWidth:1,widthUnits:'pixels'}));
+    L.push(new deck.PathLayer({id:'corridors',data:pd,getPath:d=>d.path,getColor:d=>[...(d.p.future?RGB_F:RGB_T),d.p.kind==='arr'?230:130],getWidth:d=>d.p.kind==='arr'?2.6:1.6,widthUnits:'pixels',billboard:true,capRounded:true,jointRounded:true}));
+    const hm=heightMarkers();
+    L.push(new deck.LineLayer({id:'hdrop',data:hm,getSourcePosition:d=>d.g,getTargetPosition:d=>d.p,getColor:[21,24,29,120],getWidth:1,widthUnits:'pixels'}));
+    L.push(new deck.ScatterplotLayer({id:'hdot',data:hm,getPosition:d=>d.p,getRadius:30,radiusUnits:'meters',radiusMinPixels:3,getFillColor:[255,255,255],stroked:true,getLineColor:d=>d.f?RGB_F:RGB_T,lineWidthMinPixels:1.5}));
+    L.push(new deck.TextLayer({id:'htxt',data:hm,getPosition:d=>d.p,getText:d=>d.t,characterSet:'auto',getSize:11.5,getColor:[21,24,29],background:true,getBackgroundColor:[255,255,255,235],backgroundPadding:[6,3],fontFamily:'IBM Plex Sans, sans-serif',fontWeight:500,getPixelOffset:[0,-13]}));
   }
   staticLayers=L;
   planes=[];
@@ -731,8 +816,8 @@ function refLayers(){
   const r=state.ref;if(!r)return [];
   const g=[r.lng,r.lat,altOffset()+3];
   return [
-    new deck.ScatterplotLayer({id:'refpin',data:[{p:g}],getPosition:d=>d.p,getRadius:90,radiusUnits:'meters',radiusMinPixels:7,getFillColor:[255,255,255],stroked:true,getLineColor:[27,31,36],lineWidthMinPixels:3}),
-    new deck.TextLayer({id:'reftxt',data:[{p:g,t:'Reference: '+r.title}],getPosition:d=>d.p,getText:d=>d.t,characterSet:'auto',getSize:12,getColor:[255,255,255],background:true,getBackgroundColor:[27,31,36,235],backgroundPadding:[6,4],fontFamily:'IBM Plex Sans, sans-serif',getPixelOffset:[0,18]})
+    new deck.ScatterplotLayer({id:'refpin',data:[{p:g}],getPosition:d=>d.p,getRadius:70,radiusUnits:'meters',radiusMinPixels:6,getFillColor:[255,255,255],stroked:true,getLineColor:[21,24,29],lineWidthMinPixels:2.5}),
+    new deck.TextLayer({id:'reftxt',data:[{p:g,t:'Compared with: '+r.title}],getPosition:d=>d.p,getText:d=>d.t,characterSet:'auto',getSize:11.5,getColor:[255,255,255],background:true,getBackgroundColor:[21,24,29,230],backgroundPadding:[7,4],fontFamily:'IBM Plex Sans, sans-serif',fontWeight:500,getPixelOffset:[0,17]})
   ];
 }
 function spotLayers(){
@@ -741,42 +826,39 @@ function spotLayers(){
   const s=state.spot.local,sll=toLL(s.x,s.n),qll=toLL(e.q.x,e.q.n);
   const top=[qll[0],qll[1],e.q.a*1000*state.exag+altOffset()];
   return [
-    new deck.LineLayer({id:'spotline',data:[{s:[sll[0],sll[1],altOffset()+2],t:top}],getSourcePosition:d=>d.s,getTargetPosition:d=>d.t,getColor:[27,31,36,230],getWidth:2,widthUnits:'pixels'}),
-    new deck.ScatterplotLayer({id:'spotpin',data:[{p:[sll[0],sll[1],altOffset()+2]}],getPosition:d=>d.p,getRadius:70,radiusUnits:'meters',radiusMinPixels:7,getFillColor:hexRGB(band(e.L).hex),stroked:true,getLineColor:[255,255,255],lineWidthMinPixels:2}),
-    new deck.TextLayer({id:'spottxt',data:[{p:top,t:`${Math.round(e.L)} dB · ${fmtFt(e.alt)} ft · ${e.lat.toFixed(1)} km to the side`}],getPosition:d=>d.p,getText:d=>d.t,characterSet:'auto',getSize:13,getColor:[255,255,255],background:true,getBackgroundColor:[27,31,36,235],backgroundPadding:[6,4],fontFamily:'IBM Plex Mono, monospace',getPixelOffset:[0,-16]})
+    new deck.LineLayer({id:'spotline',data:[{s:[sll[0],sll[1],altOffset()+2],t:top}],getSourcePosition:d=>d.s,getTargetPosition:d=>d.t,getColor:[21,24,29,210],getWidth:1.5,widthUnits:'pixels'}),
+    new deck.ScatterplotLayer({id:'spotpin',data:[{p:[sll[0],sll[1],altOffset()+2]}],getPosition:d=>d.p,getRadius:55,radiusUnits:'meters',radiusMinPixels:7,getFillColor:hexRGB(lev(e.L).hex),stroked:true,getLineColor:[255,255,255],lineWidthMinPixels:2.5}),
+    new deck.TextLayer({id:'spottxt',data:[{p:[sll[0],sll[1],altOffset()+2],t:lev(e.L).w}],getPosition:d=>d.p,getText:d=>d.t,characterSet:'auto',getSize:13,getColor:[255,255,255],background:true,getBackgroundColor:[...hexRGB(lev(e.L).hex),240],backgroundPadding:[8,4],fontFamily:'IBM Plex Sans, sans-serif',fontWeight:600,getPixelOffset:[0,-20]})
   ];
 }
 let last=performance.now();
-const SPEED=0.3; // km/s, about 4x real approach speed
+const SPEED=0.3;
 function frame(now){
   const dt=Math.min(0.1,(now-last)/1000);last=now;
-  const key=[state.era,state.flow,state.exag,state.base,state.googleKey?'k':'',state.terrain,state.layers.paths,state.layers.apt,state.layers.sub,state.layers.alt,state.noise,state.thr,state.ac,RW.map(r=>r.A.x.toFixed(4)).join(),SUBS.filter(s=>subStat(s)).length].join('|');
+  const key=[state.era,state.flow,state.exag,state.base,state.googleKey?'k':'',state.terrain,state.layers.paths,state.layers.apt,state.layers.noise,state.ac,RW.map(r=>r.A.x.toFixed(4)).join()].join('|');
   if(key!==staticKey){staticKey=key;buildStatic();}
   const L=staticLayers.slice();
   if(planes.length){
     const pd=[],trails=[],rings=[];
-    const zoom=map.getZoom(),k=Math.max(1,Math.min(26,Math.pow(2,13.4-zoom)));
+    const k=Math.max(1,Math.min(26,Math.pow(2,13.4-map.getZoom())));
     const tsec=now/1000;
     planes.forEach(pl=>{
       if(!state.paused){const nt=pl.t+dt*SPEED/pl.p.len;if(nt>=1&&state.follow===pl)stopRide();pl.t=nt%1;}
       const c=posAt(pl.p,pl.t);c.f=pl.p.future;
       const pitch=c.al<0.02?0:(pl.p.kind==='arr'?2:Math.min(12,c.climb+4));
       c.m=planeMatrix(c.brg,pitch,k);pd.push(c);
-      const t0=Math.max(0,pl.t-2.5/pl.p.len);const tr=[];for(let i=0;i<=6;i++)tr.push(posAt(pl.p,t0+(pl.t-t0)*i/6).pos);
+      const t0=Math.max(0,pl.t-2/pl.p.len);const tr=[];for(let i=0;i<=6;i++)tr.push(posAt(pl.p,t0+(pl.t-t0)*i/6).pos);
       trails.push({path:tr,f:pl.p.future});
       const s70=SLANT70[state.ac][pl.p.kind],h=c.al*1000;
-      if(s70>h){const r=Math.sqrt(s70*s70-h*h);const ph=(tsec*0.55+pl.ph)%1;rings.push({g:c.ground,r,ph});}
-      if(state.follow===pl){map.jumpTo({center:[c.pos[0],c.pos[1]],bearing:c.brg,pitch:72,zoom:Math.max(12.2,14.6-c.al*0.9)});}
+      if(s70>h)rings.push({g:c.ground,r:Math.sqrt(s70*s70-h*h),ph:(tsec*0.5+pl.ph)%1});
+      if(state.follow===pl)map.jumpTo({center:[c.pos[0],c.pos[1]],bearing:c.brg,pitch:72,zoom:Math.max(12.2,14.6-c.al*0.9)});
     });
-    if(state.layers.rings&&rings.length){
-      L.push(new deck.ScatterplotLayer({id:'ring-fill',data:rings,getPosition:d=>d.g,getRadius:d=>d.r,radiusUnits:'meters',getFillColor:[234,88,12,28],stroked:false}));
-      L.push(new deck.ScatterplotLayer({id:'ring-pulse',data:rings,getPosition:d=>d.g,getRadius:d=>d.r*(0.25+0.75*d.ph),radiusUnits:'meters',filled:false,stroked:true,getLineColor:d=>[234,88,12,Math.round(220*(1-d.ph))],lineWidthMinPixels:2,updateTriggers:{getRadius:tsec,getLineColor:tsec}}));
-    }
     if(state.layers.planes){
-      L.push(new deck.PathLayer({id:'trails',data:trails,getPath:d=>d.path,getColor:d=>[...(d.f?RGB_F:RGB_T),190],getWidth:3,widthUnits:'pixels'}));
-      L.push(new deck.ScatterplotLayer({id:'shadows',data:pd,getPosition:d=>d.ground,getRadius:22*k,radiusUnits:'meters',radiusMinPixels:2,getFillColor:[0,0,0,50]}));
-      if(!meshFailed)L.push(new deck.SimpleMeshLayer({id:'planes3d',data:pd,mesh:PLANE_MESH,getPosition:d=>d.pos,getColor:d=>d.f?[226,208,250]:[250,251,253],getTransformMatrix:d=>d.m,material:{ambient:0.5,diffuse:0.75,shininess:48,specularColor:[255,255,255]}}));
-      else L.push(new deck.IconLayer({id:'planes',data:pd,getPosition:d=>d.pos,getIcon:d=>d.f?ICON_F:ICON_T,getSize:520,sizeUnits:'meters',sizeMinPixels:22,sizeMaxPixels:70,getAngle:d=>-d.brg,billboard:false}));
+      if(rings.length)L.push(new deck.ScatterplotLayer({id:'ring-pulse',data:rings,getPosition:d=>d.g,getRadius:d=>d.r*(0.2+0.8*d.ph),radiusUnits:'meters',filled:false,stroked:true,getLineColor:d=>[184,72,44,Math.round(170*(1-d.ph))],lineWidthMinPixels:1.5,parameters:{depthTest:false},updateTriggers:{getRadius:tsec,getLineColor:tsec}}));
+      L.push(new deck.PathLayer({id:'trails',data:trails,getPath:d=>d.path,getColor:d=>[...(d.f?RGB_F:RGB_T),150],getWidth:2,widthUnits:'pixels'}));
+      L.push(new deck.ScatterplotLayer({id:'shadows',data:pd,getPosition:d=>d.ground,getRadius:20*k,radiusUnits:'meters',radiusMinPixels:2,getFillColor:[21,24,29,45]}));
+      if(!meshFailed)L.push(new deck.SimpleMeshLayer({id:'planes3d',data:pd,mesh:PLANE_MESH,getPosition:d=>d.pos,getColor:d=>d.f?[232,214,236]:[252,252,253],getTransformMatrix:d=>d.m,material:{ambient:0.55,diffuse:0.7,shininess:60,specularColor:[255,255,255]}}));
+      else L.push(new deck.IconLayer({id:'planes',data:pd,getPosition:d=>d.pos,getIcon:d=>d.f?ICON_F:ICON_T,getSize:520,sizeUnits:'meters',sizeMinPixels:20,sizeMaxPixels:64,getAngle:d=>-d.brg,billboard:false}));
     }
   }
   L.push(...refLayers(),...spotLayers());
@@ -787,147 +869,164 @@ function frame(now){
 // ---------- controls ----------
 function setVis(id,v){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',v?'visible':'none');}
 function applyAll(){
-  const google=state.base==='google'&&!!state.googleKey;
+  const google=state.base==='google'&&!!state.googleKey,Ly=state.layers;
   setVis('sat',state.base==='sat');
-  ['apt-fill','apt-case','apt-line'].forEach(id=>setVis(id,state.layers.apt&&!google));
-  ['sub-line','sub-sel'].forEach(id=>setVis(id,state.layers.sub&&!google));
-  setVis('sub-fill',state.layers.sub&&!google&&state.noise==='off');
-  ['sub-dot','sub-lbl'].forEach(id=>setVis(id,state.layers.sub));
-  placeLabelIds.forEach(id=>setVis(id,!state.layers.sub));
+  ['apt-fill','apt-case','apt-line'].forEach(id=>setVis(id,Ly.apt&&!google));
+  ['sub-line','sub-lbl','sub-sel'].forEach(id=>setVis(id,Ly.sub));
+  placeIds.forEach(id=>setVis(id,!Ly.sub));
   setVis('rw3-fill',state.era==='future'&&!google);
-  if(map.getLayer('building-3d'))setVis('building-3d',state.layers.bld&&!google);
+  setVis('bld3d',Ly.bld&&!google);
+  ['rail','rail-dash','station','station-lbl'].forEach(id=>setVis(id,Ly.rail));
+  ['road','road-case'].forEach(id=>setVis(id,Ly.road));
+  ['road-build','plan-road','plan-road-band'].forEach(id=>setVis(id,Ly.roadPlan));
+  ['plan-rail','plan-rail-band'].forEach(id=>setVis(id,Ly.railPlan));
+  if(map.getLayer('plan-lbl'))map.setFilter('plan-lbl',['any',['all',['==',['get','kind'],'road'],Ly.roadPlan],['all',['==',['get','kind'],'rail'],Ly.railPlan]]);
+  ['dc','dc-lbl'].forEach(id=>setVis(id,Ly.dc));
   try{map.setTerrain(state.terrain&&!google?{source:'dem',exaggeration:1}:null);}catch(e){}
-  if(map.getLayer('sub-fill'))renderSubs();
-  const flowTxt={all:'All corridors','34':'North wind · RWY 34','16':'South wind · RWY 16','27':'West wind · RWY 27','09':'East wind · RWY 09'}[state.flow];
-  document.getElementById('modeText').textContent=(state.era==='today'?'Today':'2031+')+' · '+flowTxt;
-  renderList();renderCard();renderTables();
+  if(map.getSource('subs'))renderSubs();
+  const flowTxt={all:'',34:' · north wind',16:' · south wind',27:' · west wind','09':' · east wind'}[state.flow];
+  document.getElementById('modeText').textContent=(state.era==='today'?'Today':'After 2031, three runways')+flowTxt;
+  renderList();renderCard();renderProfile();
 }
 function onRadio(name,fn){document.querySelectorAll(`input[name=${name}]`).forEach(i=>i.addEventListener('change',()=>fn(i.value)));}
-onRadio('base',v=>{
-  state.base=v;document.getElementById('keyBox').hidden=v!=='google';
-  if(v==='google'&&!state.googleKey){try{const k=localStorage.getItem('tfpm:gkey');if(k){state.googleKey=k;document.getElementById('gKey').value=k;}}catch(e){}}
-  applyAll();
-});
-document.getElementById('gKeyGo').addEventListener('click',()=>{
-  state.googleKey=document.getElementById('gKey').value.trim();
-  try{localStorage.setItem('tfpm:gkey',state.googleKey);}catch(e){}
-  if(state.googleKey)toast('Loading Google photorealistic 3D…',4000);applyAll();
-});
-onRadio('era',v=>{state.era=v;if(state.noise!=='off'&&!GRID[state.era+'|'+state.ac])toast('Working out the loudness map…',1500);applyAll();});
-onRadio('flow',v=>{state.flow=v;applyAll();});
-onRadio('ac',v=>{state.ac=v;if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);applyAll();scoreSuburbs(v);});
-onRadio('nm',v=>{state.noise=v;applyAll();if(v==='3d'&&map.getPitch()<45)map.easeTo({pitch:60,duration:900});});
-[['lApt','apt'],['lSub','sub'],['lPaths','paths'],['lPlanes','planes'],['lRings','rings'],['lAlt','alt'],['lBld','bld']].forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.layers[k]=e.target.checked;applyAll();}));
+function heavy(fn){toast('Working it out…');setTimeout(()=>{fn();toast('Done.',1200);},40);}
+onRadio('base',v=>{state.base=v;applyAll();});
+onRadio('era',v=>heavy(()=>{state.era=v;if(state.layers.noise)getGrid();applyAll();}));
+onRadio('flow',v=>heavy(()=>{state.flow=v;if(state.layers.noise)getGrid();applyAll();}));
+onRadio('ac',v=>heavy(()=>{state.ac=v;refCache=null;if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);if(state.layers.noise)getGrid();applyAll();scoreSuburbs(v);}));
+[['lNoise','noise'],['lPaths','paths'],['lPlanes','planes'],['lApt','apt'],['lRail','rail'],['lRailPlan','railPlan'],['lRoad','road'],['lRoadPlan','roadPlan'],['lDc','dc'],['lSub','sub'],['lBld','bld']].forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.layers[k]=e.target.checked;applyAll();}));
 document.getElementById('lTerrain').addEventListener('change',e=>{state.terrain=e.target.checked;applyAll();});
 const exag=document.getElementById('exag');
 exag.addEventListener('input',()=>{state.exag=+exag.value;document.getElementById('exagOut').textContent='×'+exag.value;});
-const thr=document.getElementById('thr');
-thr.addEventListener('input',()=>{state.thr=+thr.value;document.getElementById('thrOut').textContent=thr.value+' dB';renderList();});
-document.getElementById('westOnly').addEventListener('change',e=>{state.westOnly=e.target.checked;renderList();});
-document.getElementById('vTilt').onclick=()=>{stopRide();map.easeTo({center:[144.815,-37.715],zoom:11.3,pitch:62,bearing:-25,duration:1500});};
+document.getElementById('gKeyGo').addEventListener('click',()=>{
+  state.googleKey=document.getElementById('gKey').value.trim();
+  try{localStorage.setItem('tfpm:gkey',state.googleKey);}catch(e){}
+  state.base=state.googleKey?'google':'map';if(state.googleKey)toast('Loading Google 3D…',4000);applyAll();
+});
+try{const k=localStorage.getItem('tfpm:gkey');if(k)document.getElementById('gKey').value=k;}catch(e){}
+document.getElementById('vTilt').onclick=()=>{stopRide();map.easeTo({center:[144.815,-37.715],zoom:11.3,pitch:60,bearing:-25,duration:1500});};
 document.getElementById('vWest').onclick=()=>{stopRide();map.easeTo({center:[144.80,-37.72],zoom:11.9,pitch:64,bearing:60,duration:1500});};
 document.getElementById('vTop').onclick=()=>{stopRide();map.easeTo({center:[144.80,-37.72],zoom:10.8,pitch:0,bearing:0,duration:1500});};
 const pauseBtn=document.getElementById('vPause');
 pauseBtn.onclick=()=>{state.paused=!state.paused;pauseBtn.textContent=state.paused?'Play':'Pause';};
 const rideBtn=document.getElementById('vRide');
-function stopRide(){state.follow=null;rideBtn.classList.remove('on');rideBtn.textContent='Ride an approach';}
+function stopRide(){state.follow=null;rideBtn.classList.remove('on');rideBtn.textContent='Fly a landing';}
 rideBtn.onclick=()=>{
   if(state.follow){stopRide();return;}
   const arr=planes.filter(p=>p.p.kind==='arr').sort((a,b)=>a.t-b.t);
-  if(!arr.length){toast('Turn on flight corridors to ride along.',3000);return;}
+  if(!arr.length){toast('Turn on flight paths to fly along.',3000);return;}
   state.follow=arr[0];state.paused=false;pauseBtn.textContent='Pause';
-  rideBtn.classList.add('on');rideBtn.textContent='Stop ride';
-  toast('Riding a landing from 26 km out. Drag the map to stop.',4000);
+  rideBtn.classList.add('on');rideBtn.textContent='Stop';
+  toast('Flying a landing from 26 km out. Drag the map to stop.',4000);
 };
 
-// ---------- spot check / cards ----------
-const fmtFt=km=>Math.max(0,Math.round(km*3281/100)*100).toLocaleString('en-AU');
+// ---------- click handling ----------
+map.on('click',e=>{
+  stopRide();
+  const ids=['dc','plan-rail','plan-road','plan-road-band','plan-rail-band'].filter(id=>map.getLayer(id)&&map.getLayoutProperty(id,'visibility')!=='none');
+  const f=ids.length?map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers:ids}):[];
+  if(f.length){
+    const p=f[0].properties;let h;
+    if(f[0].layer.id==='dc')h=`<b>${escapeHtml(p.name)}</b><br>${escapeHtml(p.op)}<br><span class="st">${p.st==='plan'?'Planned':'Operating'}</span><br>${p.addr?escapeHtml(p.addr)+'<br>':''}${p.note?escapeHtml(p.note)+'<br>':''}<small style="color:#6b7280">Source: ${escapeHtml(p.src)}</small>`;
+    else h=`<b>${escapeHtml(p.name)}</b><br><span class="st">${escapeHtml(p.status)}</span><br>${escapeHtml(p.about)}<br><a href="${p.url}" target="_blank" rel="noopener">Official project page</a>`;
+    new maplibregl.Popup({closeButton:true,maxWidth:'280px'}).setLngLat(e.lngLat).setHTML(h).addTo(map);
+    return;
+  }
+  spotCheck(e.lngLat);
+});
+['dc','plan-rail','plan-road'].forEach(id=>{map.on('mouseenter',id,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',id,()=>map.getCanvas().style.cursor='');});
+
+// ---------- spot check and panel ----------
 function noiseSet(local){const o={};['today','future'].forEach(era=>{o[era]={};['narrow','wide'].forEach(ac=>{o[era][ac]=noiseAt(local,era,ac);});});return o;}
 function spotCheck(lngLat,title){
   const local=toL(lngLat.lng,lngLat.lat);
   const sub=SUBS.find(s=>s.bbox&&local.x>=s.bbox.minx&&local.x<=s.bbox.maxx&&local.n>=s.bbox.minn&&local.n<=s.bbox.maxn&&s.inside(local));
-  state.spot={lngLat,title:title||(sub?'Spot in '+sub.name:'Selected spot'),local,sub,noise:noiseSet(local)};
+  state.spot={lngLat,title:title||(sub?'A spot in '+sub.name:'This spot'),local,sub,noise:noiseSet(local)};
   if(sub)setSel(sub,false);else renderCard();
 }
 let refCache=null;
-function refNoise(){const r=state.ref;const k=r.lng+','+r.lat+'|'+RW.map(x=>x.A.x.toFixed(4)).join();if(!refCache||refCache.k!==k)refCache={k,v:noiseSet(toL(r.lng,r.lat))};return refCache.v;}
+function refNoise(){const r=state.ref;const k=r.lng+','+r.lat;if(!refCache||refCache.k!==k)refCache={k,v:noiseSet(toL(r.lng,r.lat))};return refCache.v;}
 function setSel(s,fly){
   state.sel=s;
   if(map.getLayer('sub-sel'))map.setFilter('sub-sel',['==',['get','name'],s?s.name:'']);
   if(s&&fly){stopRide();const b=s.bbox,a=toLL(b.minx,b.minn),c=toLL(b.maxx,b.maxn);map.fitBounds([a,c],{padding:80,pitch:55,bearing:map.getBearing(),duration:1400,maxZoom:14});}
   renderCard();renderList();
 }
-map.on('click',e=>{stopRide();spotCheck(e.lngLat);});
-function cmpText(L,refL){
-  const d=L-refL,r=Math.pow(2,d/10);
-  if(Math.abs(d)<1)return `About the same as <b>${escapeHtml(state.ref.title)}</b>.`;
-  if(d<0)return `<b>${Math.abs(d).toFixed(0)} dB quieter</b> than ${escapeHtml(state.ref.title)}. Sounds about <b>${Math.round(r*100)}%</b> as loud.`;
-  return `<b>${d.toFixed(0)} dB louder</b> than ${escapeHtml(state.ref.title)}. Sounds about <b>${r.toFixed(1)}×</b> as loud.`;
-}
-function gauge(L,refL){
-  const pos=v=>Math.max(0,Math.min(100,(v-50)/40*100));
-  return `<div class="gauge"><div class="scale"></div>
-    <div class="mk" style="left:${pos(60)}%">talk</div><div class="mk" style="left:${pos(70)}%">car 60 km/h</div>
-    <div class="mk b" style="left:${pos(refL)}%">ref</div><div class="mk b me" style="left:${pos(L)}%">here</div></div>`;
-}
-function eraBlock(e,era,refL){
-  const where=e.path?`${e.path.label(era)}: <b>${e.lat.toFixed(1)} km</b> to the side at <b>${fmtFt(e.alt)} ft</b>, ${e.along.toFixed(1)} km from the runway.`:'No corridor nearby.';
-  return `<div class="k">${era==='today'?'Today':'2031+'}</div><div>${chip(e.L,true)}<p>${where}</p><p class="cmp" style="margin-top:4px">${cmpText(e.L,refL)}</p>${gauge(e.L,refL)}</div>`;
-}
-function subBlock(s){
-  const st=s.stats&&s.stats[state.ac];if(!st)return `<div><div class="nm">${escapeHtml(s.name)}</div><p class="note">Working out loudness…</p></div>`;
-  const row=era=>`<div class="k">${era==='today'?'Today':'2031+'}</div><div>${chip(st[era].med)}<p>Most of the suburb: <b>${Math.round(st[era].med)} dB</b>. Loudest 10%: <b>${Math.round(st[era].p90)} dB</b>. Quietest corner: <b>${Math.round(st[era].min)} dB</b>.</p></div>`;
-  return `<div><div class="nm">${escapeHtml(s.name)}</div><div class="sub">${s.area.toFixed(1)} km² · ${s.dAir.toFixed(1)} km from the airport</div></div><div class="era">${row('today')}${row('future')}</div>`;
+const escapeHtml=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function verdict(e,era,refL,isRef){
+  const l=lev(e.L);
+  const why=e.path?`The loudest planes here are ${e.path.plain()}. They pass ${sideWords(e.lat)} and are ${heightWords(e.alt)}.`:'No flight path comes close.';
+  const cmp=isRef?'':`<p class="cmp">Compared with ${escapeHtml(state.ref.title)}: ${relWords(e.L-refL)}.</p>`;
+  return `<div class="verdict"><div class="when">${era==='today'?'Today':'After 2031'}</div><div class="word">${meter(e.L)}${l.w}</div><p>${l.d}</p><p>${why}</p>${cmp}</div>`;
 }
 function renderCard(){
-  const card=document.getElementById('card');const sp=state.spot,s=state.sel;const ac=state.ac;
+  const card=document.getElementById('card');const sp=state.spot,s=state.sel,ac=state.ac;
   const rn=refNoise();
   let h='';
   if(sp){
-    h+=`<div><div class="nm">${escapeHtml(sp.title)}</div><div class="sub">${Math.abs(sp.lngLat.lat).toFixed(4)}°S ${sp.lngLat.lng.toFixed(4)}°E · ${Math.hypot(sp.local.x,sp.local.n).toFixed(1)} km from the airport</div></div>
-    <div class="era">${eraBlock(sp.noise.today[ac],'today',rn.today[ac].L)}${eraBlock(sp.noise.future[ac],'future',rn.future[ac].L)}</div>
-    <div><button class="btn" id="setRef">Use this spot as my reference</button></div>`;
+    const isRef=Math.abs(sp.lngLat.lng-state.ref.lng)<1e-5&&Math.abs(sp.lngLat.lat-state.ref.lat)<1e-5;
+    h+=`<div><div class="nm">${escapeHtml(sp.title)}</div><div class="sub">${Math.hypot(sp.local.x,sp.local.n).toFixed(1)} km from the airport</div></div>
+      ${verdict(sp.noise.today[ac],'today',rn.today[ac].L,isRef)}<div class="split"></div>${verdict(sp.noise.future[ac],'future',rn.future[ac].L,isRef)}
+      ${isRef?'':'<div><button class="btn" id="setRef">Compare everything with this spot</button></div>'}`;
+  }else if(s&&s.stats[ac]){
+    const st=s.stats[ac];
+    const row=era=>`<div class="verdict"><div class="when">${era==='today'?'Today':'After 2031'}</div><div class="word">${meter(st[era].med)}${lev(st[era].med).w}</div><p>Most of ${escapeHtml(s.name)} is ${lev(st[era].med).w.toLowerCase()}. The loudest corner is ${lev(st[era].p90).w.toLowerCase()} and the quietest is ${lev(st[era].min).w.toLowerCase()}.</p><p class="cmp">Compared with ${escapeHtml(state.ref.title)}: ${relWords(st[era].med-rn[era][ac].L)}.</p></div>`;
+    h+=`<div><div class="nm">${escapeHtml(s.name)}</div><div class="sub">${s.dAir.toFixed(1)} km from the airport · tap a street for more detail</div></div>${row('today')}<div class="split"></div>${row('future')}`;
+  }else{
+    h=`<p class="note" style="color:var(--ink2);font-size:13.5px">Type an address, tap any street on the map, or pick a suburb below. Everything is compared with <b>${escapeHtml(state.ref.title)}</b>, where planes are ${lev(rn.today[ac].L).w.toLowerCase()} today. You can change this to your own street.</p>`;
   }
-  if(s)h+=(sp?'<hr style="border:0;border-top:1px solid var(--line);margin:0;width:100%">':'')+subBlock(s);
-  if(!h)h=`<p class="note">Search an address, click anywhere on the map, or pick a suburb below. Every spot is compared with your reference, now <b>${escapeHtml(state.ref.title)}</b> (loudest overflight about ${Math.round(rn.today[ac].L)} dB today).</p>`;
   card.innerHTML=h;
   const b=document.getElementById('setRef');
-  if(b)b.onclick=()=>{state.ref={lng:sp.lngLat.lng,lat:sp.lngLat.lat,title:sp.title};cacheSet('tfpm:ref',state.ref);renderCard();renderList();toast('Reference updated.',2500);};
+  if(b)b.onclick=()=>{state.ref={lng:sp.lngLat.lng,lat:sp.lngLat.lat,title:sp.title};cacheSet('tfpm:ref',state.ref);renderCard();renderList();toast('Now comparing everything with this spot.',2500);};
 }
-const escapeHtml=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function renderList(){
-  const listEl=document.getElementById('list');
-  const ready=SUBS.filter(s=>s.stats&&s.stats[state.ac]);
+  const listEl=document.getElementById('list');const ac=state.ac;
+  const ready=SUBS.filter(s=>s.stats&&s.stats[ac]&&s.west);
   if(!ready.length){listEl.innerHTML='';return;}
-  const ac=state.ac,rn=refNoise(),refL=rn.future[ac].L;
-  const rows=ready.filter(s=>!state.westOnly||s.west).sort((a,b)=>a.stats[ac].future.med-b.stats[ac].future.med||a.name.localeCompare(b.name));
-  const ok=rows.filter(s=>s.stats[ac].future.med<state.thr).length;
-  document.getElementById('summary').innerHTML=`With three runways, <b>${ok}</b> of ${rows.length} suburbs have their loudest overflights under <b>${state.thr} dB</b> across most of the suburb. Quietest first. The last column compares 2031 with your reference, ${escapeHtml(state.ref.title)}.`;
-  listEl.innerHTML='<div class="lhead"><span>Suburb</span><span>Today</span><span>2031+</span><span style="text-align:right">vs ref</span></div>'+
-    rows.map(s=>{const st=s.stats[ac];const d=st.future.med-refL;return `<button class="lrow${state.sel===s?' on':''}" data-i="${SUBS.indexOf(s)}"><span>${escapeHtml(s.name)}</span><span>${chip(st.today.med).replace(' dB','')}</span><span>${chip(st.future.med).replace(' dB','')}</span><span class="n">${d>0?'+':''}${Math.round(d)} dB</span></button>`;}).join('');
+  const refL=refNoise().future[ac].L;
+  const rows=ready.sort((a,b)=>a.stats[ac].future.med-b.stats[ac].future.med||a.name.localeCompare(b.name));
+  const calm=rows.filter(s=>s.stats[ac].future.med<63).length;
+  document.getElementById('summary').innerHTML=`After 2031, <b>${calm}</b> of ${rows.length} western suburbs are faint or quiet across most of the suburb. Quietest first.`;
+  listEl.innerHTML='<div class="lhead"><span>Suburb</span><span>Today</span><span>After 2031</span></div>'+
+    rows.map(s=>{const st=s.stats[ac];const cw=relWords(st.future.med-refL);return `<button class="lrow${state.sel===s?' on':''}" data-i="${SUBS.indexOf(s)}"><span>${escapeHtml(s.name)}</span><span>${lvlTag(st.today.med)}</span><span>${lvlTag(st.future.med)}</span><span class="cmpw">${cw.charAt(0).toUpperCase()+cw.slice(1)} compared with ${escapeHtml(state.ref.title)}</span></button>`;}).join('');
 }
-document.getElementById('list').addEventListener('click',e=>{const b=e.target.closest('.lrow');if(!b)return;const s=SUBS[+b.dataset.i];state.spot=null;setSel(s,true);});
-function renderTables(){
-  const ac=state.ac;
-  const arrRows=[3,5,8,10,12,15,20,25].map(d=>{const alt=d*TAN3;return `<tr><td>${d} km</td><td>${fmtFt(alt)}</td><td>${chip(levelAt(ac,'arr',0,alt)).replace(' dB','')}</td><td>${chip(levelAt(ac,'arr',1,alt)).replace(' dB','')}</td><td>${chip(levelAt(ac,'arr',2,alt)).replace(' dB','')}</td></tr>`;}).join('');
-  document.getElementById('tArr').innerHTML=`<tr><th>To touchdown</th><th>Height ft</th><th>Under path</th><th>1 km aside</th><th>2 km aside</th></tr>${arrRows}`;
-  const depRows=[2,4,6,8,10,15,20].map(d=>{const alt=Math.min(3,d*0.1);return `<tr><td>${d} km</td><td>${fmtFt(alt)}</td><td>${chip(levelAt(ac,'dep',0,alt)).replace(' dB','')}</td><td>${chip(levelAt(ac,'dep',1,alt)).replace(' dB','')}</td><td>${chip(levelAt(ac,'dep',2,alt)).replace(' dB','')}</td></tr>`;}).join('');
-  document.getElementById('tDep').innerHTML=`<tr><th>After lift-off</th><th>Height ft</th><th>Under path</th><th>1 km aside</th><th>2 km aside</th></tr>${depRows}`;
+document.getElementById('list').addEventListener('click',e=>{const b=e.target.closest('.lrow');if(!b)return;state.spot=null;setSel(SUBS[+b.dataset.i],true);});
+function renderProfile(){
+  const ac=state.ac,W=360,H=196,x0=14,x1=346,yG=112,maxKm=25,maxAlt=1.4;
+  const X=km=>x0+(km/maxKm)*(x1-x0),Y=a=>yG-(a/maxAlt)*(yG-22);
+  const F='font-family="IBM Plex Sans,sans-serif"';
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Side view of a plane landing, with how loud it is on the ground">`;
+  [0.5,1].forEach(a=>{s+=`<line x1="${x0}" x2="${x1}" y1="${Y(a)}" y2="${Y(a)}" stroke="#e4e6ea"/><text x="${x1}" y="${Y(a)-3}" font-size="9" text-anchor="end" fill="#9aa1ab" ${F}>${a*1000} m up</text>`;});
+  s+=`<line x1="${x0}" x2="${x1}" y1="${yG}" y2="${yG}" stroke="#cfd3da"/>`;
+  s+=`<line x1="${X(0)}" y1="${Y(0)}" x2="${X(maxKm)}" y2="${Y(maxKm*TAN3)}" stroke="#2f4f86" stroke-width="2"/>`;
+  s+=`<circle cx="${X(12)}" cy="${Y(12*TAN3)}" r="3.5" fill="#2f4f86"/><text x="${X(12)}" y="${Y(12*TAN3)-8}" font-size="9.5" text-anchor="middle" fill="#2f4f86" ${F}>landing plane</text>`;
+  s+=`<rect x="${x0-2}" y="${yG-2}" width="16" height="4" fill="#15181d"/>`;
+  const strip=(y,lat,label)=>{let o=`<text x="${x0}" y="${y-4}" font-size="9.5" fill="#3d4450" ${F}>${label}</text>`;for(let km=0;km<maxKm;km+=0.5){const L=levelAt(ac,'arr',lat,Math.max(0.015,(km+0.25)*TAN3));o+=`<rect x="${X(km)}" y="${y}" width="${X(km+0.5)-X(km)+0.3}" height="12" fill="${lev(L).hex}"/>`;}return o;};
+  s+=strip(yG+18,0,'Right under the flight path')+strip(yG+48,1,'1 km to the side');
+  [0,5,10,15,20,25].forEach(km=>{s+=`<text x="${X(km)}" y="${H-3}" font-size="9.5" text-anchor="${km===0?'start':km===25?'end':'middle'}" fill="#6b7280" ${F}>${km===0?'Runway':km+' km away'}</text>`;});
+  s+='</svg>';
+  document.getElementById('profile').innerHTML=s;
+  const findKm=(lat,thr,maxK)=>{for(let km=maxK;km>=0;km-=0.5)if(levelAt(ac,'arr',lat,Math.min(3,km*TAN3))>=thr)return km;return 0;};
+  const underLoud=findKm(0,70,30),underHeard=findKm(0,63,40),sideLoud=findKm(1,70,30);
+  document.getElementById('rules').innerHTML=[
+    `Right under the landing path, planes are <b>loud</b> for the last ${Math.round(underLoud)} km before the runway and still <b>noticeable</b> out to about ${Math.round(underHeard)} km.`,
+    `Just 1 km to the side, landing planes ${sideLoud>0?`are only loud within about ${Math.round(sideLoud)} km of the runway`:'are never loud'}. <b>Being off to the side matters about as much as being further away.</b>`,
+    'Planes taking off are louder than landing ones at the same spot, but they climb quickly and fan out onto different routes.',
+    'On most days only some flight paths are busy, depending on the wind. A spot under one path gets quiet days when the wind changes.'
+  ].map(t=>`<li>${t}</li>`).join('');
 }
 document.getElementById('searchForm').addEventListener('submit',async e=>{
   e.preventDefault();const q=document.getElementById('q').value.trim();if(!q)return;
   toast('Searching…');
   try{
-    const r=await fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=au&viewbox=144.3,-37.3,145.3,-38.2&bounded=1&q='+encodeURIComponent(q+', Victoria'));
-    const j=await r.json();
-    if(!j.length){toast('No match found. Try adding the suburb name.',5000);return;}
-    const lng=+j[0].lon,lat=+j[0].lat;
-    stopRide();map.flyTo({center:[lng,lat],zoom:14,pitch:60,duration:1800});
-    spotCheck({lng,lat},j[0].display_name.split(',').slice(0,3).join(','));
-    toast('Address found.',2500);
-  }catch(err){toast('Address search is unavailable right now. Click the spot on the map instead.',6000);}
+    const g=await geocode(q);
+    if(!g){toast('No match found. Try adding the suburb name.',5000);return;}
+    stopRide();map.flyTo({center:[g.lng,g.lat],zoom:14.5,pitch:60,duration:1800});
+    spotCheck({lng:g.lng,lat:g.lat},g.name.split(',').slice(0,3).join(','));
+    toast('Found it.',2000);
+  }catch(err){toast('Search is unavailable right now. Tap the spot on the map instead.',6000);}
 });
-renderTables();renderCard();
+renderProfile();renderCard();
 })();
 </script>
 </body>
