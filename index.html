@@ -98,6 +98,13 @@ details .stack{margin-top:14px}
 a{color:var(--flight)}
 ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
 .maplibregl-ctrl-attrib{font-size:10px}
+.allbtns{display:flex;gap:6px;margin:10px 0 4px}
+.allbtns .btn{flex:1;box-shadow:none}
+.crow{display:grid;gap:4px}
+.crow .ramp5{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
+.crow .ramp5 span{height:7px}
+.crow .ramp5 span:first-child{border-radius:4px 0 0 4px}.crow .ramp5 span:last-child{border-radius:0 4px 4px 0}
+.flag{font-size:12.5px;color:var(--muted)!important;margin:0}
 .maplibregl-popup-content{font:13px/1.45 var(--sans);border-radius:10px;padding:12px 14px;box-shadow:0 8px 28px rgba(21,24,29,.18)}
 .maplibregl-popup-content b{font-weight:600}
 .maplibregl-popup-content .st{display:inline-block;font:600 10.5px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:4px 6px;border-radius:4px;background:var(--soft);color:var(--ink2);margin:4px 0}
@@ -124,6 +131,11 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
         <div class="nramp"><span style="background:var(--n0)"></span><span style="background:var(--n1)"></span><span style="background:var(--n2)"></span><span style="background:var(--n3)"></span><span style="background:var(--n4)"></span></div>
         <div class="nlab"><span>Quiet</span><span>Faint</span><span>Heard</span><span>Loud</span><span>V. loud</span></div>
       </div>
+      <div class="crow" id="crimeLegend" hidden>
+        <div class="t">Crime compared with average</div>
+        <div class="ramp5"><span style="background:#d9cfe9"></span><span style="background:#b6a2d6"></span><span style="background:#8f74bd"></span><span style="background:#684b9e"></span><span style="background:#42286d"></span></div>
+        <div class="nlab"><span>Much lower</span><span>Lower</span><span>Average</span><span>Higher</span><span>Much higher</span></div>
+      </div>
       <div class="lg extra"><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="#c8102e" stroke-width="3"/></svg>Airport land</div>
       <div class="lg extra"><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="#2f4f86" stroke-width="2.5"/></svg>Flight paths</div>
       <div class="lg extra"><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="#8e2f6f" stroke-width="2.5"/></svg>New runway paths (2031)</div>
@@ -134,6 +146,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
       <button class="btn" id="vTop">From above</button>
       <button class="btn" id="vRide">Fly a landing</button>
       <button class="btn" id="vPause">Pause</button>
+      <button class="btn" id="vClean">Clean map</button>
     </div>
     <div class="hint glass">Right-drag or Ctrl-drag to tilt · Tap anywhere to see how loud it gets there</div>
     <div class="toast" id="toast">Loading map…</div>
@@ -161,6 +174,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
         <label><input type="radio" name="base" value="map" checked><span>Street map</span></label>
         <label><input type="radio" name="base" value="sat"><span>Satellite</span></label>
       </div>
+      <div class="allbtns"><button class="btn" id="allOff">Turn everything off</button><button class="btn" id="allOn">Turn everything on</button></div>
       <div class="layers">
         <div class="grp">Planes</div>
         <label><input type="checkbox" id="lNoise" checked><span class="key" style="background:linear-gradient(90deg,#e3c48c,#d9923e,#b8482c,#6b1f45)"></span><span>Plane noise shading<small>Darker means louder when a plane goes over</small></span></label>
@@ -172,15 +186,26 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
         <label><input type="checkbox" id="lRailPlan" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#0e7c73" stroke-width="3.5" stroke-dasharray="5 3"/></svg><span>Planned train lines<small>Airport Rail, Suburban Rail Loop West</small></span></label>
         <label><input type="checkbox" id="lRoad" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="4"/></svg><span>Freeways and highways</span></label>
         <label><input type="checkbox" id="lRoadPlan" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="8" stroke-opacity=".25"/><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="2.5" stroke-dasharray="5 3"/></svg><span>Planned roads<small>Outer Ring Road land, roads being built</small></span></label>
+        <div class="grp">Neighbourhood</div>
+        <label><input type="checkbox" id="lCrime"><span class="key" style="background:linear-gradient(90deg,#d9cfe9,#8f74bd,#42286d)"></span><span>Crime by suburb<small>Darker means more crime per resident</small></span></label>
+        <div class="seg" role="radiogroup" aria-label="Crime type" id="crimeSeg" style="margin:4px 0 6px 26px" hidden>
+          <label><input type="radio" name="cm" value="all" checked><span>All crime</span></label>
+          <label><input type="radio" name="cm" value="person"><span>Crimes against people</span></label>
+        </div>
         <div class="grp">Other</div>
-        <label><input type="checkbox" id="lDc" checked><svg width="30" height="12"><circle cx="15" cy="6" r="5" fill="#4b2a8c" stroke="#fff" stroke-width="1.5"/></svg><span>Data centres<small>Filled: operating. Outline: planned</small></span></label>
+        <label><input type="checkbox" id="lDc" checked><svg width="30" height="12"><circle cx="15" cy="6" r="5" fill="#334155" stroke="#fff" stroke-width="1.5"/></svg><span>Data centres<small>Filled: operating. Outline: planned</small></span></label>
         <label><input type="checkbox" id="lSub" checked><svg width="30" height="10"><text x="0" y="9" font-size="9" font-family="IBM Plex Sans Condensed,sans-serif" font-weight="600" fill="#3d4450" letter-spacing="1">ABC</text></svg><span>Suburb names</span></label>
         <label><input type="checkbox" id="lBld" checked><svg width="30" height="12"><path d="M6 11V4l6-3 6 3v7z" fill="#cfd3da"/></svg><span>3D buildings</span></label>
       </div>
     </section>
 
     <section>
-      <h2>Quietest suburbs in the west</h2>
+      <h2>Best suburbs in the west</h2>
+      <div class="seg" role="radiogroup" aria-label="Sort suburbs" style="margin-bottom:12px">
+        <label><input type="radio" name="sort" value="both" checked><span>Best of both</span></label>
+        <label><input type="radio" name="sort" value="noise"><span>Quietest skies</span></label>
+        <label><input type="radio" name="sort" value="crime"><span>Lowest crime</span></label>
+      </div>
       <p class="summary" id="summary">Loading suburb boundaries…</p>
       <div class="list" id="list"></div>
     </section>
@@ -229,6 +254,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
         <p class="note">Plane noise: for every spot, the map works out how close each flight path passes and how high the plane is there. It then looks up how loud that plane sounds on the ground, using published measurements from NATS, the UK air traffic service, and Melbourne Airport's third runway noise fact sheet. The loudness words match common measures. "Loud" starts where a plane interrupts a conversation indoors with the windows open, the level airports track as N70. Ten points louder sounds about twice as loud.</p>
         <p class="note">It shows the loudest single plane, not how many fly over each day, which changes with the wind. Flight paths are simplified, so treat the results as a guide. Real planes spread out a few hundred metres either side.</p>
         <p class="note">Suburbs, the airport boundary, today's runways, train lines, stations and highways come from OpenStreetMap. The third runway is placed from Melbourne Airport's published figures. Planned train lines and roads are drawn from public announcements. Where the exact route isn't public, the line is marked as approximate. Data centres come from OpenStreetMap, Data Center Map and 2026 planning news, with locations found from their street addresses.</p>
+        <p class="note">Crime: offences recorded by Victoria Police in the year to June 2026, published by the Crime Statistics Agency Victoria, divided by each suburb's 2021 census population (as republished suburb by suburb on AU Crime Tracker). "All crime" is compared with the Victorian average of about 87 offences per 1,000 people. "Crimes against people" (assault, robbery, threats and similar) is compared with the typical western suburb, about 11 per 1,000. Three things can make a suburb look worse than its streets are. Big shopping centres add shoplifting. Fast-growing estates have many more residents than in 2021. Suburbs with prisons or very few residents skew the rate. The map flags these cases where they apply.</p>
         <p class="note">Check the exact address before buying:</p>
         <ul class="links">
           <li><a href="https://www.melbourneairport.com.au/community/aircraft-noise" target="_blank" rel="noopener">Melbourne Airport Flight Path and Noise Tool</a></li>
@@ -238,6 +264,8 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
           <li><a href="https://transport.vic.gov.au/news-and-resources/projects/outer-metropolitan-ring-e6-transport-corridor" target="_blank" rel="noopener">Outer Metropolitan Ring / E6 (Transport Victoria)</a></li>
           <li><a href="https://certifiedstrategic.com/insights/melbourne-data-centre-pipeline-four-new-campuses" target="_blank" rel="noopener">Melbourne data centre pipeline, 2026</a></li>
           <li><a href="https://www.datacentermap.com/australia/melbourne/" target="_blank" rel="noopener">Data Center Map: Melbourne</a></li>
+          <li><a href="https://www.crimestatistics.vic.gov.au/" target="_blank" rel="noopener">Crime Statistics Agency Victoria</a></li>
+          <li><a href="https://www.aucrimetracker.com/vic/" target="_blank" rel="noopener">AU Crime Tracker: Victorian suburbs</a></li>
         </ul>
       </div>
     </details>
@@ -493,10 +521,32 @@ async function geocode(q){
   const j=await r.json();return j.length?{lng:+j[0].lon,lat:+j[0].lat,name:j[0].display_name}:null;
 }
 
+// ---------- crime (CSA Victoria, year to June 2026; [offences, 2021 population, crimes against people, property crimes]) ----------
+const CRIME={"keilor":[275,5906,44,139],"keilor east":[691,15078,95,411],"keilor park":[263,2684,33,159],"keilor north":[39,67,1,29],"keilor downs":[572,9857,89,340],"keilor lodge":[40,1668,9,20],"kealba":[284,3226,43,146],"taylors lakes":[1484,15174,124,1146],"sydenham":[544,10578,97,310],"delahey":[333,8077,56,159],"kings park":[396,8203,77,205],"st albans":[4034,38042,609,2362],"albanvale":[231,5641,51,121],"cairnlea":[473,10038,61,305],"deer park":[1478,18145,255,860],"sunshine":[3349,9445,398,1482],"sunshine north":[1406,12047,131,917],"sunshine west":[1270,18552,163,856],"ardeer":[357,3170,72,217],"albion":[519,4334,67,340],"braybrook":[1613,9682,150,1062],"derrimut":[851,8651,91,631],"avondale heights":[514,12388,89,305],"airport west":[1100,8173,107,722],"niddrie":[247,5901,41,162],"essendon":[1423,21240,149,1012],"maribyrnong":[2397,12573,257,1851],"footscray":[4408,17131,596,2872],"west footscray":[866,11729,73,678],"caroline springs":[1372,24488,284,752],"hillside":[483,17331,87,257],"taylors hill":[488,15419,94,246],"burnside":[298,5800,27,220],"burnside heights":[140,6377,36,72],"plumpton":[8,79,2,5],"fraser rise":[684,9097,95,426],"aintree":[404,7982,74,244],"rockbank":[718,2583,70,548],"deanside":[367,654,53,253],"ravenhall":[831,2295,47,531],"melton":[2180,7953,322,1056],"melton south":[1441,11362,321,690],"melton west":[1132,8784,233,658],"kurunjang":[624,10711,129,287],"cobblebank":[245,3601,60,139],"diggers rest":[392,5669,38,254],"sunbury":[2768,38851,501,1507],"bulla":[136,668,15,90],"greenvale":[968,21274,212,508],"attwood":[121,3309,16,81],"westmeadows":[473,6502,94,282],"gladstone park":[516,8213,90,285],"broadmeadows":[3869,12524,606,1760],"craigieburn":[4281,65178,912,2331],"mickleham":[1309,17452,295,737],"truganina":[3192,36305,438,2251],"tarneit":[4621,56370,719,3226],"hoppers crossing":[3971,37216,520,2731],"werribee":[5349,50027,830,2925],"point cook":[3009,66781,535,1981],"williams landing":[697,9448,95,494],"wyndham vale":[1807,20518,362,947],"manor lakes":[876,12675,150,560],"laverton":[827,4760,101,525],"altona meadows":[1123,18479,173,588],"altona":[856,11490,117,509],"altona north":[1552,12962,175,1103],"seabrook":[154,4952,24,96],"brooklyn":[447,1979,50,318],"newport":[825,13658,98,558],"williamstown":[1220,14407,130,812],"spotswood":[521,2820,30,411],"yarraville":[1150,15636,141,811],"seddon":[434,5143,58,293],"kingsville":[201,3920,19,149],"moonee ponds":[1704,16224,167,1216],"ascot vale":[2021,15197,233,1294],"strathmore":[371,8980,54,240]};
+const VIC_RATE=86.8, WEST_PERSON=10.5; // per 1,000 residents
+const MALLS={'taylors lakes':'Watergardens shopping centre','maribyrnong':'Highpoint shopping centre','airport west':'Westfield Airport West','hoppers crossing':'Pacific Werribee shopping centre','broadmeadows':'Broadmeadows Central','sunshine':'Sunshine Marketplace and the Sunshine town centre','footscray':'the Footscray shopping strip and station','melton':'the Melton town centre','werribee':'the Werribee town centre'};
+const GROWTH=new Set(['rockbank','deanside','fraser rise','cobblebank','mickleham','aintree','truganina','tarneit','manor lakes','wyndham vale','diggers rest','thornhill park','weir views']);
+const CLEVELS=[{max:0.6,w:'Much lower',hex:'#d9cfe9'},{max:0.85,w:'Lower',hex:'#b6a2d6'},{max:1.15,w:'About average',hex:'#8f74bd'},{max:1.6,w:'Higher',hex:'#684b9e'},{max:Infinity,w:'Much higher',hex:'#42286d'}];
+function crimeFor(name){
+  const k=(name||'').toLowerCase().trim(),c=CRIME[k];if(!c)return null;
+  const [off,pop,per,prop]=c;
+  const all=off/pop*1000,person=per/pop*1000,property=prop/pop*1000;
+  const small=pop<3000;
+  const val=state.crimeMode==='person'?person:all,base=state.crimeMode==='person'?WEST_PERSON:VIC_RATE;
+  const ratio=val/base,lvl=CLEVELS.findIndex(l=>ratio<l.max);
+  const flags=[];
+  if(small)flags.push(`Only about ${pop.toLocaleString('en-AU')} people lived here in 2021, so a few incidents swing the rate a lot.`);
+  if(k==='ravenhall')flags.push('Ravenhall has several prisons, and offences recorded there count towards the suburb.');
+  if(MALLS[k])flags.push(`Includes ${MALLS[k]}, where shoplifting and car-park theft push the numbers up. The streets around it are usually calmer.`);
+  if(GROWTH.has(k))flags.push('A fast-growing estate with many more residents than in 2021, so the real rate is probably lower than shown.');
+  return {off,pop,all,person,property,ratio,lvl,word:CLEVELS[lvl].w,hex:CLEVELS[lvl].hex,small,flags};
+}
+const crimeTag=c=>c?`<span class="lvl"><b style="background:${c.hex}"></b>${c.word}</span>`:'<span class="lvl" style="color:#9aa1ab">No data</span>';
+
 // ---------- state ----------
 const DEFAULT_REF={lng:144.862,lat:-37.761,title:'Avondale Heights'};
 const state={base:'map',era:'today',flow:'all',ac:'narrow',exag:1,paused:false,terrain:false,googleKey:'',
-  layers:{noise:true,paths:true,planes:true,apt:true,rail:true,railPlan:true,road:true,roadPlan:true,dc:true,sub:true,bld:true},
+  layers:{noise:true,paths:true,planes:true,apt:true,rail:true,railPlan:true,road:true,roadPlan:true,dc:true,sub:true,bld:true,crime:false,markers:true},crimeMode:'all',sort:'both',
   sel:null,spot:null,ref:cacheGet('tfpm:ref')||DEFAULT_REF,follow:null};
 let AIRPORT=null, SUBS=[], subsReady=false, DCPTS=[];
 const altOffset=()=>state.googleKey&&state.base==='google'?135:(state.terrain?132:0);
@@ -535,6 +585,8 @@ map.on('load',()=>{
     map.addLayer({id:'station',type:'circle',source:vsrc,'source-layer':'poi',minzoom:10.5,filter:['all',['==',['get','class'],'railway'],['match',['get','subclass'],['station','halt'],true,false]],paint:{'circle-radius':['interpolate',['linear'],['zoom'],10.5,2.5,15,6],'circle-color':'#ffffff','circle-stroke-color':'#2a2f36','circle-stroke-width':2}});
     map.addLayer({id:'station-lbl',type:'symbol',source:vsrc,'source-layer':'poi',minzoom:12.5,filter:['all',['==',['get','class'],'railway'],['match',['get','subclass'],['station','halt'],true,false]],layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':11,'text-offset':[0,1],'text-anchor':'top'},paint:{'text-color':'#2a2f36','text-halo-color':'#fff','text-halo-width':1.5}});
   }
+  map.addLayer({id:'crime-fill',type:'fill',source:'subs',filter:['has','ccol'],layout:{visibility:'none'},paint:{'fill-color':['get','ccol'],'fill-opacity':0.55}},firstLabel);
+  map.addLayer({id:'crime-line',type:'line',source:'subs',filter:['has','ccol'],layout:{visibility:'none'},paint:{'line-color':'#ffffff','line-width':1.2,'line-opacity':0.9}},firstLabel);
   map.addLayer({id:'sub-line',type:'line',source:'subs',paint:{'line-color':'#5b6472','line-width':['interpolate',['linear'],['zoom'],10,0.6,14,1.4],'line-opacity':0.5,'line-dasharray':[4,3]}},firstLabel);
   map.addLayer({id:'sub-sel',type:'line',source:'subs',filter:['==',['get','name'],''],paint:{'line-color':'#15181d','line-width':3}},firstLabel);
   map.addLayer({id:'apt-fill',type:'fill',source:'apt',paint:{'fill-color':'#c8102e','fill-opacity':0.05}},firstLabel);
@@ -546,8 +598,8 @@ map.on('load',()=>{
   map.addLayer({id:'plan-rail-band',type:'line',source:'plans',filter:['all',['==',['get','kind'],'rail'],['==',['get','cert'],'approx']],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#0e7c73','line-opacity':0.14,'line-width':['interpolate',['exponential',2],['zoom'],9,4,12,22,15,180]}},firstLabel);
   map.addLayer({id:'plan-rail',type:'line',source:'plans',filter:['==',['get','kind'],'rail'],layout:{'line-cap':'round'},paint:{'line-color':'#0e7c73','line-width':['match',['get','cert'],'route',4,'approx',3,2],'line-dasharray':['match',['get','cert'],'route',['literal',[2,1]],'approx',['literal',[1.5,1.5]],['literal',[0.5,2]]]}},firstLabel);
   map.addLayer({id:'plan-lbl',type:'symbol',source:'plans',layout:{'symbol-placement':'line','text-field':['get','name'],'text-font':['Noto Sans Bold'],'text-size':11,'text-letter-spacing':0.04,'symbol-spacing':320},paint:{'text-color':['match',['get','kind'],'road','#8a5613','#0b5f58'],'text-halo-color':'#ffffff','text-halo-width':1.8}});
-  map.addLayer({id:'dc',type:'circle',source:'dcs',paint:{'circle-radius':['interpolate',['linear'],['zoom'],9,4,15,9],'circle-color':['match',['get','st'],'plan','#ffffff','#4b2a8c'],'circle-stroke-color':['match',['get','st'],'plan','#4b2a8c','#ffffff'],'circle-stroke-width':['match',['get','st'],'plan',2.6,1.8],'circle-pitch-alignment':'map'}});
-  map.addLayer({id:'dc-lbl',type:'symbol',source:'dcs',minzoom:11.5,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':11,'text-offset':[0,1.1],'text-anchor':'top','text-max-width':10},paint:{'text-color':'#4b2a8c','text-halo-color':'#fff','text-halo-width':1.6}});
+  map.addLayer({id:'dc',type:'circle',source:'dcs',paint:{'circle-radius':['interpolate',['linear'],['zoom'],9,4,15,9],'circle-color':['match',['get','st'],'plan','#ffffff','#334155'],'circle-stroke-color':['match',['get','st'],'plan','#334155','#ffffff'],'circle-stroke-width':['match',['get','st'],'plan',2.6,1.8],'circle-pitch-alignment':'map'}});
+  map.addLayer({id:'dc-lbl',type:'symbol',source:'dcs',minzoom:11.5,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':11,'text-offset':[0,1.1],'text-anchor':'top','text-max-width':10},paint:{'text-color':'#334155','text-halo-color':'#fff','text-halo-width':1.6}});
   map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['format',['upcase',['get','name']],{},'\n',{},['get','word'],{'font-scale':0.85,'text-font':['literal',['Noto Sans Regular']]}],'text-font':['Noto Sans Bold'],'text-size':['interpolate',['linear'],['zoom'],9,9.5,14,13],'text-letter-spacing':0.08,'text-max-width':12,'text-line-height':1.3},paint:{'text-color':'#2b313a','text-halo-color':'rgba(255,255,255,0.95)','text-halo-width':1.8}});
   map.getSource('plans').setData(fc(PLANS.map(p=>({type:'Feature',properties:{kind:p.kind,cert:p.cert,name:p.name,status:p.status,about:p.about,url:p.url},geometry:{type:'LineString',coordinates:p.coords}}))));
   renderRunway3();renderAirport();applyAll();
@@ -571,9 +623,11 @@ function renderSubs(){
   if(!map.getSource('subs'))return;
   const f=[],pts=[];
   SUBS.forEach(s=>{
-    const st=subStat(s);
-    f.push({type:'Feature',properties:{name:s.name},geometry:{type:'MultiPolygon',coordinates:s.rings.map(r=>[ringLL(r)])}});
-    pts.push({type:'Feature',properties:{name:s.name,word:st?lev(st.med).w:''},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
+    const st=subStat(s),c=crimeFor(s.name);
+    const props={name:s.name};if(c)props.ccol=c.hex;
+    f.push({type:'Feature',properties:props,geometry:{type:'MultiPolygon',coordinates:s.rings.map(r=>[ringLL(r)])}});
+    const parts=[];if(state.layers.noise&&st)parts.push('Planes: '+lev(st.med).w.toLowerCase());if(state.layers.crime)parts.push('Crime: '+(c?c.word.toLowerCase():'no data'));
+    pts.push({type:'Feature',properties:{name:s.name,word:parts.join('  ·  ')},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
   });
   map.getSource('subs').setData(fc(f));map.getSource('subpts').setData(fc(pts));
 }
@@ -813,7 +867,7 @@ function posAt(p,t){
   return {pos:[ll[0],ll[1],al*1000*state.exag+altOffset()+4],ground:[ll[0],ll[1],altOffset()+2],brg:p.segB[k-1],climb,x,n,al};
 }
 function refLayers(){
-  const r=state.ref;if(!r)return [];
+  const r=state.ref;if(!r||!state.layers.markers)return [];
   const g=[r.lng,r.lat,altOffset()+3];
   return [
     new deck.ScatterplotLayer({id:'refpin',data:[{p:g}],getPosition:d=>d.p,getRadius:70,radiusUnits:'meters',radiusMinPixels:6,getFillColor:[255,255,255],stroked:true,getLineColor:[21,24,29],lineWidthMinPixels:2.5}),
@@ -882,6 +936,10 @@ function applyAll(){
   ['plan-rail','plan-rail-band'].forEach(id=>setVis(id,Ly.railPlan));
   if(map.getLayer('plan-lbl'))map.setFilter('plan-lbl',['any',['all',['==',['get','kind'],'road'],Ly.roadPlan],['all',['==',['get','kind'],'rail'],Ly.railPlan]]);
   ['dc','dc-lbl'].forEach(id=>setVis(id,Ly.dc));
+  ['crime-fill','crime-line'].forEach(id=>setVis(id,Ly.crime));
+  document.getElementById('crimeLegend').hidden=!Ly.crime;document.getElementById('crimeSeg').hidden=!Ly.crime;
+  document.querySelector('.legend .nramp').parentElement.hidden=!Ly.noise;
+  document.getElementById('vClean').classList.toggle('on',allOff());
   try{map.setTerrain(state.terrain&&!google?{source:'dem',exaggeration:1}:null);}catch(e){}
   if(map.getSource('subs'))renderSubs();
   const flowTxt={all:'',34:' · north wind',16:' · south wind',27:' · west wind','09':' · east wind'}[state.flow];
@@ -894,7 +952,23 @@ onRadio('base',v=>{state.base=v;applyAll();});
 onRadio('era',v=>heavy(()=>{state.era=v;if(state.layers.noise)getGrid();applyAll();}));
 onRadio('flow',v=>heavy(()=>{state.flow=v;if(state.layers.noise)getGrid();applyAll();}));
 onRadio('ac',v=>heavy(()=>{state.ac=v;refCache=null;if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);if(state.layers.noise)getGrid();applyAll();scoreSuburbs(v);}));
-[['lNoise','noise'],['lPaths','paths'],['lPlanes','planes'],['lApt','apt'],['lRail','rail'],['lRailPlan','railPlan'],['lRoad','road'],['lRoadPlan','roadPlan'],['lDc','dc'],['lSub','sub'],['lBld','bld']].forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.layers[k]=e.target.checked;applyAll();}));
+const LAYER_BOXES=[['lNoise','noise'],['lPaths','paths'],['lPlanes','planes'],['lApt','apt'],['lRail','rail'],['lRailPlan','railPlan'],['lRoad','road'],['lRoadPlan','roadPlan'],['lDc','dc'],['lCrime','crime'],['lSub','sub'],['lBld','bld']];
+LAYER_BOXES.forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.layers[k]=e.target.checked;if(e.target.checked)state.layers.markers=true;applyAll();}));
+function allOff(){return LAYER_BOXES.every(([,k])=>k==='bld'||!state.layers[k])&&!state.layers.markers;}
+let savedLayers=null;
+function setAll(on){
+  LAYER_BOXES.forEach(([id,k])=>{if(k==='bld')return;state.layers[k]=on;document.getElementById(id).checked=on;});
+  state.layers.markers=on;if(!on){state.spot=null;stopRide();}
+  applyAll();
+}
+document.getElementById('allOff').onclick=()=>{savedLayers=null;setAll(false);};
+document.getElementById('allOn').onclick=()=>{setAll(true);};
+document.getElementById('vClean').onclick=()=>{
+  if(allOff()&&savedLayers){Object.assign(state.layers,savedLayers);LAYER_BOXES.forEach(([id,k])=>document.getElementById(id).checked=state.layers[k]);savedLayers=null;applyAll();}
+  else{savedLayers=Object.assign({},state.layers);setAll(false);toast('Clean map. Tap Clean map again to bring everything back.',3500);}
+};
+onRadio('cm',v=>{state.crimeMode=v;applyAll();});
+onRadio('sort',v=>{state.sort=v;renderList();});
 document.getElementById('lTerrain').addEventListener('change',e=>{state.terrain=e.target.checked;applyAll();});
 const exag=document.getElementById('exag');
 exag.addEventListener('input',()=>{state.exag=+exag.value;document.getElementById('exagOut').textContent='×'+exag.value;});
@@ -975,6 +1049,12 @@ function renderCard(){
   }else{
     h=`<p class="note" style="color:var(--ink2);font-size:13.5px">Type an address, tap any street on the map, or pick a suburb below. Everything is compared with <b>${escapeHtml(state.ref.title)}</b>, where planes are ${lev(rn.today[ac].L).w.toLowerCase()} today. You can change this to your own street.</p>`;
   }
+  const cs=sp?sp.sub:s;
+  if(cs&&(sp||s)){const c=crimeFor(cs.name);
+    h+=`<div class="split"></div><div class="verdict"><div class="when">Crime in ${escapeHtml(cs.name)}</div>`+(c?`<div class="word"><span class="meter">${[0,1,2,3,4].map(i=>`<i style="${i<=c.lvl?'background:'+c.hex:''}"></i>`).join('')}</span>${c.word}${state.crimeMode==='person'?' (crimes against people)':''}</div>
+      <p>About <b>${Math.round(c.all)}</b> recorded crimes per 1,000 residents a year. The Victorian average is about ${Math.round(VIC_RATE)}.</p>
+      <p>Crimes against people (assault, robbery, threats): about <b>${c.person.toFixed(0)}</b> per 1,000, where a typical western suburb has ${Math.round(WEST_PERSON)}. Property crime (theft, burglary, car theft): about <b>${Math.round(c.property)}</b> per 1,000.</p>
+      ${c.flags.map(f=>`<p class="flag">${f}</p>`).join('')}`:'<p>No suburb-level crime figures are available for this suburb yet.</p>')+'</div>';}
   card.innerHTML=h;
   const b=document.getElementById('setRef');
   if(b)b.onclick=()=>{state.ref={lng:sp.lngLat.lng,lat:sp.lngLat.lat,title:sp.title};cacheSet('tfpm:ref',state.ref);renderCard();renderList();toast('Now comparing everything with this spot.',2500);};
@@ -984,11 +1064,18 @@ function renderList(){
   const ready=SUBS.filter(s=>s.stats&&s.stats[ac]&&s.west);
   if(!ready.length){listEl.innerHTML='';return;}
   const refL=refNoise().future[ac].L;
-  const rows=ready.sort((a,b)=>a.stats[ac].future.med-b.stats[ac].future.med||a.name.localeCompare(b.name));
-  const calm=rows.filter(s=>s.stats[ac].future.med<63).length;
-  document.getElementById('summary').innerHTML=`After 2031, <b>${calm}</b> of ${rows.length} western suburbs are faint or quiet across most of the suburb. Quietest first.`;
-  listEl.innerHTML='<div class="lhead"><span>Suburb</span><span>Today</span><span>After 2031</span></div>'+
-    rows.map(s=>{const st=s.stats[ac];const cw=relWords(st.future.med-refL);return `<button class="lrow${state.sel===s?' on':''}" data-i="${SUBS.indexOf(s)}"><span>${escapeHtml(s.name)}</span><span>${lvlTag(st.today.med)}</span><span>${lvlTag(st.future.med)}</span><span class="cmpw">${cw.charAt(0).toUpperCase()+cw.slice(1)} compared with ${escapeHtml(state.ref.title)}</span></button>`;}).join('');
+  const nIdx=s=>levIdx(s.stats[ac].future.med);
+  const cOf=s=>{const c=crimeFor(s.name);return c&&!c.small?c:null;};
+  let rows=ready.slice(),sumTxt;
+  if(state.sort==='noise'){rows.sort((a,b)=>a.stats[ac].future.med-b.stats[ac].future.med||a.name.localeCompare(b.name));
+    sumTxt=`After 2031, <b>${rows.filter(s=>s.stats[ac].future.med<63).length}</b> of ${rows.length} western suburbs have faint or quiet plane noise across most of the suburb. Quietest first.`;}
+  else if(state.sort==='crime'){rows=rows.filter(cOf).sort((a,b)=>cOf(a).ratio-cOf(b).ratio);
+    sumTxt=`<b>${rows.length}</b> western suburbs with reliable crime figures, lowest crime first${state.crimeMode==='person'?' (crimes against people)':''}.`;}
+  else{rows=rows.filter(cOf).sort((a,b)=>(nIdx(a)+cOf(a).lvl)-(nIdx(b)+cOf(b).lvl)||a.stats[ac].future.med-b.stats[ac].future.med);
+    sumTxt='Suburbs with quiet skies after 2031 <b>and</b> low crime come first. Only suburbs with reliable crime figures are listed.';}
+  document.getElementById('summary').innerHTML=sumTxt;
+  listEl.innerHTML='<div class="lhead"><span>Suburb</span><span>Planes 2031</span><span>Crime</span></div>'+
+    rows.map(s=>{const st=s.stats[ac];const cw=relWords(st.future.med-refL);const c=crimeFor(s.name);return `<button class="lrow${state.sel===s?' on':''}" data-i="${SUBS.indexOf(s)}"><span>${escapeHtml(s.name)}</span><span>${lvlTag(st.future.med)}</span><span>${crimeTag(c)}</span><span class="cmpw">Planes ${cw} compared with ${escapeHtml(state.ref.title)}${c&&c.flags.length?'. Crime figure has a caveat, tap for details':''}</span></button>`;}).join('');
 }
 document.getElementById('list').addEventListener('click',e=>{const b=e.target.closest('.lrow');if(!b)return;state.spot=null;setSel(SUBS[+b.dataset.i],true);});
 function renderProfile(){
