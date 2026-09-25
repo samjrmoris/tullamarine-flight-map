@@ -105,6 +105,17 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
 .crow .ramp5 span{height:7px}
 .crow .ramp5 span:first-child{border-radius:4px 0 0 4px}.crow .ramp5 span:last-child{border-radius:0 4px 4px 0}
 .flag{font-size:12.5px;color:var(--muted)!important;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px 26px}
+.chips label{display:inline-flex!important;grid-template-columns:none!important;gap:6px;align-items:center;padding:5px 9px!important;border:1px solid var(--line);border-radius:14px;font-size:12.5px!important}
+.chips label:hover{background:var(--soft)}
+.lrow{grid-template-columns:1fr!important}
+.lrow .nmr{display:flex;justify-content:space-between;gap:8px;font-weight:500}
+.lrow .tg{display:flex;flex-wrap:wrap;gap:4px 12px}
+.lhead{display:none!important}
+.seg.wrap{flex-wrap:wrap}.seg.wrap label{flex:1 1 30%}
+.schl{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:4px}
+.schl li{font-size:13px;color:var(--ink2);display:flex;justify-content:space-between;gap:10px}
+.schl li b{font-weight:500;color:var(--ink);white-space:nowrap}
 .maplibregl-popup-content{font:13px/1.45 var(--sans);border-radius:10px;padding:12px 14px;box-shadow:0 8px 28px rgba(21,24,29,.18)}
 .maplibregl-popup-content b{font-weight:600}
 .maplibregl-popup-content .st{display:inline-block;font:600 10.5px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:4px 6px;border-radius:4px;background:var(--soft);color:var(--ink2);margin:4px 0}
@@ -135,6 +146,16 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
         <div class="t">Crime compared with average</div>
         <div class="ramp5"><span style="background:#d9cfe9"></span><span style="background:#b6a2d6"></span><span style="background:#8f74bd"></span><span style="background:#684b9e"></span><span style="background:#42286d"></span></div>
         <div class="nlab"><span>Much lower</span><span>Lower</span><span>Average</span><span>Higher</span><span>Much higher</span></div>
+      </div>
+      <div class="crow" id="invLegend" hidden>
+        <div class="t" id="invLegendT">House prices, growth last 12 months</div>
+        <div class="ramp5"><span style="background:#e3eee6"></span><span style="background:#b8d6c1"></span><span style="background:#83b796"></span><span style="background:#4b8f68"></span><span style="background:#1f5c3d"></span></div>
+        <div class="nlab" id="invLegendL"><span>Falling</span><span>Slow</span><span>Steady</span><span>Strong</span><span>Hot</span></div>
+      </div>
+      <div class="crow" id="schLegend" hidden>
+        <div class="t">School results (NAPLAN)</div>
+        <div class="lg"><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#1e3a8a"/></svg>Well above average <svg width="12" height="12" style="margin-left:4px"><circle cx="6" cy="6" r="5" fill="#3b6fd8"/></svg>Above</div>
+        <div class="lg"><svg width="12" height="12"><circle cx="6" cy="6" r="5" fill="#9bb8ee"/></svg>Around or below <svg width="12" height="12" style="margin-left:4px"><circle cx="6" cy="6" r="4.5" fill="#fff" stroke="#8a929c" stroke-width="1.5"/></svg>Not rated</div>
       </div>
       <div class="lg extra"><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="#c8102e" stroke-width="3"/></svg>Airport land</div>
       <div class="lg extra"><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="#2f4f86" stroke-width="2.5"/></svg>Flight paths</div>
@@ -192,6 +213,20 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
           <label><input type="radio" name="cm" value="all" checked><span>All crime</span></label>
           <label><input type="radio" name="cm" value="person"><span>Crimes against people</span></label>
         </div>
+        <label><input type="checkbox" id="lInv"><span class="key" style="background:linear-gradient(90deg,#e3eee6,#83b796,#1f5c3d)"></span><span>Property market<small>House prices, growth and rent by suburb</small></span></label>
+        <div class="seg wrap" role="radiogroup" aria-label="Property measure" id="invSeg" style="margin:4px 0 6px 26px" hidden>
+          <label><input type="radio" name="im" value="growth" checked><span>Growth</span></label>
+          <label><input type="radio" name="im" value="price"><span>Price</span></label>
+          <label><input type="radio" name="im" value="yield"><span>Rent return</span></label>
+        </div>
+        <label><input type="checkbox" id="lSch"><svg width="30" height="12"><circle cx="9" cy="6" r="5" fill="#1e3a8a"/><circle cx="21" cy="6" r="4" fill="#9bb8ee"/></svg><span>Schools<small>Kinders to universities, rated schools coloured</small></span></label>
+        <div class="chips" id="schChips" hidden>
+          <label><input type="checkbox" id="sK" checked> Kinder</label>
+          <label><input type="checkbox" id="sP" checked> Primary</label>
+          <label><input type="checkbox" id="sS" checked> Secondary</label>
+          <label><input type="checkbox" id="sU" checked> Uni and TAFE</label>
+          <label><input type="checkbox" id="sTop"> Above average only</label>
+        </div>
         <div class="grp">Other</div>
         <label><input type="checkbox" id="lDc" checked><svg width="30" height="12"><circle cx="15" cy="6" r="5" fill="#334155" stroke="#fff" stroke-width="1.5"/></svg><span>Data centres<small>Filled: operating. Outline: planned</small></span></label>
         <label><input type="checkbox" id="lSub" checked><svg width="30" height="10"><text x="0" y="9" font-size="9" font-family="IBM Plex Sans Condensed,sans-serif" font-weight="600" fill="#3d4450" letter-spacing="1">ABC</text></svg><span>Suburb names</span></label>
@@ -201,10 +236,13 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
 
     <section>
       <h2>Best suburbs in the west</h2>
-      <div class="seg" role="radiogroup" aria-label="Sort suburbs" style="margin-bottom:12px">
-        <label><input type="radio" name="sort" value="both" checked><span>Best of both</span></label>
+      <div class="seg wrap" role="radiogroup" aria-label="Sort suburbs" style="margin-bottom:12px">
+        <label><input type="radio" name="sort" value="family" checked><span>Best for family</span></label>
         <label><input type="radio" name="sort" value="noise"><span>Quietest skies</span></label>
         <label><input type="radio" name="sort" value="crime"><span>Lowest crime</span></label>
+        <label><input type="radio" name="sort" value="schools"><span>Best schools</span></label>
+        <label><input type="radio" name="sort" value="growth"><span>Fastest growth</span></label>
+        <label><input type="radio" name="sort" value="value"><span>Rising on a budget</span></label>
       </div>
       <p class="summary" id="summary">Loading suburb boundaries…</p>
       <div class="list" id="list"></div>
@@ -255,6 +293,8 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
         <p class="note">It shows the loudest single plane, not how many fly over each day, which changes with the wind. Flight paths are simplified, so treat the results as a guide. Real planes spread out a few hundred metres either side.</p>
         <p class="note">Suburbs, the airport boundary, today's runways, train lines, stations and highways come from OpenStreetMap. The third runway is placed from Melbourne Airport's published figures. Planned train lines and roads are drawn from public announcements. Where the exact route isn't public, the line is marked as approximate. Data centres come from OpenStreetMap, Data Center Map and 2026 planning news, with locations found from their street addresses.</p>
         <p class="note">Crime: offences recorded by Victoria Police in the year to June 2026, published by the Crime Statistics Agency Victoria, divided by each suburb's 2021 census population (as republished suburb by suburb on AU Crime Tracker). "All crime" is compared with the Victorian average of about 87 offences per 1,000 people. "Crimes against people" (assault, robbery, threats and similar) is compared with the typical western suburb, about 11 per 1,000. Three things can make a suburb look worse than its streets are. Big shopping centres add shoplifting. Fast-growing estates have many more residents than in 2021. Suburbs with prisons or very few residents skew the rate. The map flags these cases where they apply.</p>
+        <p class="note">Property: median house price, price change over the 12 months to June 2026, and gross rental yield (a year's rent as a share of the price). The figures are from CoreLogic, as published suburb by suburb on Your Investment Property. "Rising" means under $1m with growth of 8% or more in the last year. "Rising on a budget" ranks suburbs under $800k that are showing growth. Past growth doesn't guarantee future growth. This isn't financial advice.</p>
+        <p class="note">Schools: scores out of 100 from SchoolRank, which compares each school's NAPLAN results with the national average for the same year level. About 50 is average. Kindergartens, TAFEs and universities are shown from OpenStreetMap without ratings. Scores reflect test results, which are shaped partly by the families a school serves, so visit and check zones on findmyschool.vic.gov.au.</p>
         <p class="note">Check the exact address before buying:</p>
         <ul class="links">
           <li><a href="https://www.melbourneairport.com.au/community/aircraft-noise" target="_blank" rel="noopener">Melbourne Airport Flight Path and Noise Tool</a></li>
@@ -266,6 +306,9 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
           <li><a href="https://www.datacentermap.com/australia/melbourne/" target="_blank" rel="noopener">Data Center Map: Melbourne</a></li>
           <li><a href="https://www.crimestatistics.vic.gov.au/" target="_blank" rel="noopener">Crime Statistics Agency Victoria</a></li>
           <li><a href="https://www.aucrimetracker.com/vic/" target="_blank" rel="noopener">AU Crime Tracker: Victorian suburbs</a></li>
+          <li><a href="https://www.yourinvestmentpropertymag.com.au/top-suburbs/vic" target="_blank" rel="noopener">Your Investment Property: suburb data (CoreLogic)</a></li>
+          <li><a href="https://schoolrank.com.au/" target="_blank" rel="noopener">SchoolRank (NAPLAN-based scores)</a></li>
+          <li><a href="https://www.findmyschool.vic.gov.au/" target="_blank" rel="noopener">Find My School: Victorian school zones</a></li>
         </ul>
       </div>
     </details>
@@ -543,10 +586,44 @@ function crimeFor(name){
 }
 const crimeTag=c=>c?`<span class="lvl"><b style="background:${c.hex}"></b>${c.word}</span>`:'<span class="lvl" style="color:#9aa1ab">No data</span>';
 
+// ---------- property (CoreLogic via Your Investment Property, 12 months to June 2026: [median house $, growth %, yield %, weekly rent $]) ----------
+const PROP={"keilor":[1210000,11.01,3.35,650],"keilor east":[1150000,14.14,3.22,625],"keilor park":[912500,10.71,3.57,620],"keilor downs":[853000,3.9,3.52,550],"keilor lodge":[1065500,6.98,3.17,725],"kealba":[770000,9.22,3.73,540],"taylors lakes":[991000,7.14,3.23,600],"sydenham":[751500,7.28,3.67,530],"delahey":[741000,12.96,3.78,500],"kings park":[663000,6.94,3.97,500],"st albans":[730500,10.68,3.69,500],"albanvale":[680000,7.09,3.95,480],"cairnlea":[950000,9.83,3.26,650],"deer park":[700000,4.87,3.78,500],"sunshine":[857500,7.86,3.26,530],"sunshine north":[785000,4.88,3.52,520],"sunshine west":[785000,12.14,3.6,500],"ardeer":[708000,1.14,3.47,515],"albion":[801000,7.44,3.46,530],"braybrook":[770000,3.36,3.8,560],"avondale heights":[1080000,12.21,3.1,598],"airport west":[1058500,15.68,3.45,625],"niddrie":[1240000,-3.8,2.82,650],"essendon":[1838000,11.06,2.21,798],"maribyrnong":[1208000,5.04,3.36,750],"footscray":[950000,3.26,3.61,638],"west footscray":[1045000,13.9,3.24,640],"strathmore":[1500000,-10.45,2.53,800],"caroline springs":[800000,7.38,3.48,550],"hillside":[829250,6.04,3.24,555],"taylors hill":[941000,5.73,3.26,600],"burnside":[782000,-0.76,3.51,570],"burnside heights":[787500,5.0,3.61,580],"fraser rise":[685000,-2.14,3.74,520],"aintree":[702000,1.01,3.76,550],"rockbank":[623000,-0.8,3.86,480],"deanside":[687500,2.61,3.82,520],"melton":[565000,16.49,4.01,410],"melton south":[586500,10.66,3.93,430],"melton west":[616500,11.18,3.8,430],"kurunjang":[615000,13.89,3.74,430],"cobblebank":[645000,2.99,3.76,460],"diggers rest":[635200,0.99,3.98,520],"sunbury":[720000,7.78,3.86,550],"greenvale":[898000,5.65,3.74,650],"attwood":[912500,17.74,3.67,550],"westmeadows":[780000,15.73,3.78,550],"gladstone park":[803500,8.43,3.78,580],"tullamarine":[820000,10.07,4.29,592],"broadmeadows":[660000,10.0,4.07,500],"craigieburn":[723000,6.32,4.03,550],"mickleham":[704500,3.11,4.0,545],"truganina":[672000,0.78,4.03,530],"tarneit":[671750,2.56,3.98,530],"hoppers crossing":[700000,10.64,3.71,480],"werribee":[660000,6.97,3.65,470],"point cook":[840000,6.33,3.45,580],"williams landing":[880000,6.67,3.84,600],"wyndham vale":[610000,3.39,3.83,450],"manor lakes":[648000,1.25,3.71,470],"laverton":[620000,3.33,3.72,460],"altona meadows":[775000,6.46,3.8,548],"altona":[1210000,2.46,2.94,660],"altona north":[950000,0.0,3.42,650],"seabrook":[800000,6.1,3.68,530],"brooklyn":[885500,0.34,3.39,605],"newport":[1230000,-3.53,3.11,750],"williamstown":[1580000,2.6,2.68,860],"spotswood":[1135000,-6.22,3.26,700],"yarraville":[1200000,5.26,3.16,710],"seddon":[1100000,0.0,3.39,720],"kingsville":[1190000,-0.83,3.32,730],"moonee ponds":[1570000,4.67,2.68,760],"ascot vale":[1350000,3.85,3.0,775]};
+const RAIL_HUBS=[[144.8327,-37.7885,'Sunshine'],[144.8246,-37.7770,'Albion'],[144.8625,-37.7990,'Tottenham'],[144.8846,-37.8016,'West Footscray']];
+const IRAMPS={growth:{t:'House prices, growth last 12 months',cuts:[0,4,8,12],words:['Falling','Slow','Steady','Strong','Hot']},price:{t:'Median house price',cuts:[700000,850000,1000000,1300000],words:['Under $700k','$700k–850k','$850k–1m','$1m–1.3m','Over $1.3m']},yield:{t:'Rent return (yearly rent as % of price)',cuts:[3,3.4,3.7,4],words:['Under 3%','3–3.4%','3.4–3.7%','3.7–4%','4% or more']}};
+const IHEX=['#e3eee6','#b8d6c1','#83b796','#4b8f68','#1f5c3d'];
+const money=v=>v>=1e6?'$'+(v/1e6).toFixed(2).replace(/0$/,'')+'m':'$'+Math.round(v/1000)+'k';
+function propFor(name){
+  const k=(name||'').toLowerCase().trim(),p=PROP[k];if(!p)return null;
+  const [median,growth,yld,rent]=p;
+  const m=IRAMPS[state.investMode],v=state.investMode==='growth'?growth:state.investMode==='price'?median:yld;
+  let i=0;while(i<m.cuts.length&&v>=m.cuts[i])i++;
+  const gIdx=(()=>{let j=0;const c=IRAMPS.growth.cuts;while(j<c.length&&growth>=c[j])j++;return j;})();
+  const tags=[];
+  if(median<1e6&&growth>=8)tags.push('Rising');
+  if(median>=1.2e6)tags.push('Established, premium');
+  if(median<700000)tags.push('Entry price');
+  const ll=null;
+  return {median,growth,yld,rent,idx:i,hex:IHEX[i],word:m.words[i],gIdx,gWord:IRAMPS.growth.words[gIdx],tags};
+}
+const growthWords=g=>g<0?`down ${Math.abs(g).toFixed(1)}%`:`up ${g.toFixed(1)}%`;
+// ---------- schools (SchoolRank, NAPLAN-based score /100): [name, suburb, level p|s|c, sector g|c|i, score] ----------
+const SCH=[["Overnewton Anglican Community College","Keilor","c","i",63],["Keilor Primary School","Keilor","p","g",54],["St Augustine's Primary School","Keilor","p","c",52],["Penleigh & Essendon Grammar School","Keilor East","c","i",78],["Essendon Keilor College","Keilor East","s","g",57],["St Peter's School","Keilor East","p","c",46],["Keilor Heights Primary School","Keilor East","p","g",40],["St Mary MacKillop Primary School","Keilor Downs","p","c",62],["Keilor Downs Secondary College","Keilor Downs","s","g",56],["Keilor Views Primary School","Keilor Downs","p","g",54],["Monmia Primary School","Keilor Downs","p","g",45],["Catholic Regional College North Keilor","Keilor Lodge","s","c",56],["St Paul's Kealba Catholic School","Kealba","p","c",56],["Taylors Lakes Primary School","Taylors Lakes","p","g",65],["Taylors Lakes Secondary College","Taylors Lakes","s","g",51],["Emmaus Catholic Primary School","Sydenham","p","c",60],["Sydenham Primary School","Sydenham","p","g",56],["Mackellar Primary School","Delahey","p","g",55],["Copperfield College","Delahey","s","g",46],["Movelle Primary School","Kings Park","p","g",70],["Resurrection School","Kings Park","p","c",55],["Kings Park Primary School","St Albans","p","g",62],["St Albans Meadows Primary School","St Albans","p","g",61],["St Albans Primary School","St Albans","p","g",58],["Sacred Heart School","St Albans","p","c",58],["St Albans Secondary College","St Albans","s","g",55],["Holy Eucharist School","St Albans","p","c",53],["Victoria University Secondary College","St Albans","s","g",53],["St Albans East Primary School","St Albans","p","g",52],["University Park Primary School","St Albans","p","g",51],["St Albans Heights Primary School","St Albans","p","g",48],["Catholic Regional College St Albans","St Albans","s","c",47],["Stevensville Primary School","St Albans","p","g",42],["St Albans North Primary School","St Albans","p","g",41],["Albanvale Primary School","Albanvale","p","g",61],["Cairnlea Park Primary School","Cairnlea","p","g",61],["Deer Park West Primary School","Deer Park","p","g",58],["St Peter Chanel School","Deer Park","p","c",54],["Deer Park North Primary School","Deer Park","p","g",42],["Our Lady of the Immaculate Conception School","Sunshine","p","c",58],["Sunshine Harvester Primary School","Sunshine","p","g",57],["Sunshine Heights Primary School","Sunshine","p","g",53],["Sunshine Primary School","Sunshine","p","g",41],["St Bernadette's School","Sunshine North","p","c",66],["Albion North Primary School","Sunshine North","p","g",62],["Sunshine Christian School","Sunshine North","p","i",58],["Sunshine North Primary School","Sunshine North","p","g",50],["St Paul's School","Sunshine West","p","c",62],["St Peter's School","Sunshine West","p","c",59],["Marian College","Sunshine West","s","c",57],["Ardeer South Primary School","Sunshine West","p","g",53],["Sunshine College","Sunshine West","s","g",50],["Glengala Primary School","Sunshine West","p","g",39],["Mother of God School","Ardeer","p","c",59],["Ardeer Primary School","Ardeer","p","g",31],["Albion Primary School","Albion","p","g",61],["St Theresa's School","Albion","p","c",58],["Caroline Chisholm Catholic College","Braybrook","s","c",64],["Braybrook College","Braybrook","s","g",58],["Dinjerra Primary School","Braybrook","p","g",49],["Christ the King Primary School","Braybrook","p","c",40],["St Lawrence Catholic Primary School","Derrimut","p","c",55],["Derrimut Primary School","Derrimut","p","g",51],["St Martin de Porres School","Avondale Heights","p","c",58],["Avondale Primary School","Avondale Heights","p","g",56],["St Christopher's School","Airport West","p","c",58],["Rosehill Secondary College","Niddrie","s","g",61],["Niddrie Primary School","Niddrie","p","g",51],["St John Bosco's School","Niddrie","p","c",50],["Lowther Hall Anglican Grammar School","Essendon","c","i",75],["St Therese's School","Essendon","p","c",72],["Essendon Primary School","Essendon","p","g",62],["Aberfeldie Primary School","Essendon","p","g",62],["St Columba's College","Essendon","s","c",61],["St Bernard's College","Essendon","s","c",58],["Buckley Park College","Essendon","s","g",57],["St Margaret's Primary School","Maribyrnong","p","c",66],["Maribyrnong College","Maribyrnong","s","g",61],["St John's School","Footscray","p","c",67],["Footscray North Primary School","Footscray","p","g",61],["Footscray Primary School","Footscray","p","g",59],["Footscray City Primary School","Footscray","p","g",59],["Footscray High School","Footscray","s","g",58],["St Monica's School","Footscray","p","c",52],["Footscray West Primary School","West Footscray","p","g",65],["Strathmore North Primary School","Strathmore","p","g",75],["St Vincent de Paul's School","Strathmore","p","c",65],["Strathmore Primary School","Strathmore","p","g",62],["Strathmore Secondary College","Strathmore","s","g",54],["Southern Cross Grammar","Caroline Springs","c","i",66],["Catholic Regional College Caroline Springs","Caroline Springs","s","c",59],["St George Preca School","Caroline Springs","p","c",58],["Christ the Priest Catholic Primary School","Caroline Springs","p","c",55],["Springside Primary School","Caroline Springs","p","g",51],["Brookside P-9 College","Caroline Springs","c","g",47],["Creekside K-9 College","Caroline Springs","c","g",46],["Cana Catholic Primary School","Hillside","p","c",54],["Parkwood Green Primary School","Hillside","p","g",48],["Gilson College","Taylors Hill","c","i",61],["Taylors Hill Primary School","Taylors Hill","p","g",43],["Burnside Primary School","Burnside","p","g",65],["Kororoit Creek Primary School","Burnside Heights","p","g",56],["Springside West Secondary College","Fraser Rise","s","g",44],["Yarrabing Secondary College","Aintree","s","g",52],["Aintree Primary School","Aintree","p","g",47],["Rockbank Primary School","Rockbank","p","g",49],["Deanside Primary School","Deanside","p","g",40],["Melton Primary School","Melton","p","g",48],["Kurunjang Secondary College","Kurunjang","s","g",45],["St Dominic's School","Melton","p","c",43],["Muhammadiyah Australia College","Melton","c","i",42],["Melton Secondary College","Melton","s","g",42],["Kurunjang Primary School","Kurunjang","p","g",34],["Al Iman College","Melton South","c","i",56],["St Anthony's School","Melton South","p","c",56],["Staughton College","Melton South","s","g",42],["Coburn Primary School","Melton South","p","g",36],["Melton South Primary School","Melton South","p","g",30],["OneSchool Global Vic","Melton West","c","i",60],["St Catherine of Siena School","Melton West","p","c",52],["St Francis Catholic College","Melton West","s","c",51],["Wedge Park Primary School","Melton West","p","g",40],["Melton West Primary School","Melton West","p","g",31],["Diggers Rest Primary School","Diggers Rest","p","g",57],["Red Rock Christian College","Sunbury","c","i",57],["Salesian College Sunbury","Sunbury","s","c",56],["Our Lady of Mount Carmel School","Sunbury","p","c",54],["St Anne's School","Sunbury","p","c",53],["Sunbury West Primary School","Sunbury","p","g",52],["Killara Primary School","Sunbury","p","g",51],["Holy Trinity Catholic Primary School","Sunbury","p","c",49],["Kismet Park Primary School","Sunbury","p","g",48],["Sunbury Heights Primary School","Sunbury","p","g",46],["Sunbury Downs Secondary College","Sunbury","s","g",41],["Goonawarra Primary School","Sunbury","p","g",40],["Sunbury College","Sunbury","s","g",39],["Sunbury Primary School","Sunbury","p","g",39],["Aitken College","Greenvale","c","i",62],["St Carlo Borromeo School","Greenvale","p","c",56],["Mary Queen of Heaven Catholic Primary School","Greenvale","p","c",55],["Kolbe Catholic College","Greenvale","s","c",52],["Greenvale Primary School","Greenvale","p","g",51],["Keelonith Primary School","Greenvale","p","g",51],["Greenvale Secondary College","Greenvale","s","g",43],["Westmeadows Primary School","Westmeadows","p","g",46],["School of the Good Shepherd","Gladstone Park","p","c",56],["Gladstone Park Primary School","Gladstone Park","p","g",54],["Gladstone Views Primary School","Gladstone Park","p","g",47],["Gladstone Park Secondary College","Gladstone Park","s","g",45],["Tullamarine Primary School","Tullamarine","p","g",52],["Sirius College","Broadmeadows","c","i",59],["St Dominic's School","Broadmeadows","p","c",54],["Penola Catholic College","Broadmeadows","s","c",52],["Broadmeadows Primary School","Broadmeadows","p","g",43],["Broadmeadows Valley Primary School","Broadmeadows","p","g",42],["Hume Central Secondary College","Broadmeadows","s","g",35],["Meadows Primary School","Broadmeadows","p","g",27],["Newbury Primary School","Craigieburn","p","g",57],["Oscar Romero Catholic Primary School","Craigieburn","p","c",56],["Our Lady's School","Craigieburn","p","c",51],["Mother Teresa School","Craigieburn","p","c",50],["Craigieburn South Primary School","Craigieburn","p","g",46],["Willmott Park Primary School","Craigieburn","p","g",45],["Elevation Secondary College","Craigieburn","s","g",42],["Aitken Creek Primary School","Craigieburn","p","g",41],["Craigieburn Primary School","Craigieburn","p","g",39],["Mount Ridley P-12 College","Craigieburn","c","g",38],["Aitken Hill Primary School","Craigieburn","p","g",34],["Craigieburn Secondary College","Craigieburn","s","g",33],["Hume Anglican Grammar","Mickleham","c","i",64],["Holy Cross Catholic Primary School","Mickleham","p","c",55],["Gaayip-Yagila Primary School","Mickleham","p","g",47],["Mickleham Primary School","Mickleham","p","g",47],["Mickleham Secondary College","Mickleham","s","g",40],["Yubup Primary School","Mickleham","p","g",38],["Westbourne Grammar School","Truganina","c","i",73],["St Clare's Catholic Primary School","Truganina","p","c",66],["Al-Taqwa College","Truganina","c","i",62],["Bemin Secondary College","Truganina","s","g",54],["Warreen Primary School","Truganina","p","g",54],["Dohertys Creek P-9 College","Truganina","c","g",54],["Truganina P-9 College","Truganina","c","g",51],["Garrang Wilam Primary School","Truganina","p","g",45],["Truganina South Primary School","Truganina","p","g",44],["Islamic College of Melbourne","Tarneit","c","i",65],["St Francis of Assisi Catholic Primary School","Tarneit","p","c",64],["Tarneit Rise Primary School","Tarneit","p","g",64],["Good News Lutheran College","Tarneit","c","i",63],["Thomas Carr College","Tarneit","s","c",61],["St John the Apostle Catholic Primary School","Tarneit","p","c",58],["Brinbeal Secondary College","Tarneit","s","g",55],["Tarneit P-9 College","Tarneit","c","g",52],["Barayip Primary School","Tarneit","p","g",51],["Davis Creek Primary School","Tarneit","p","g",49],["Wimba Primary School","Tarneit","p","g",48],["Nearnung Primary School","Tarneit","p","g",47],["Karwan Primary School","Tarneit","p","g",40],["Bellbridge Primary School","Hoppers Crossing","p","g",52],["St James the Apostle School","Hoppers Crossing","p","c",51],["St Peter Apostle School","Hoppers Crossing","p","c",51],["Woodville Primary School","Hoppers Crossing","p","g",50],["Cambridge Primary School","Hoppers Crossing","p","g",48],["Hoppers Crossing Secondary College","Hoppers Crossing","s","g",47],["Mossfiel Primary School","Hoppers Crossing","p","g",46],["The Grange P-12 College","Hoppers Crossing","c","g",45],["Baden Powell P-9 College","Hoppers Crossing","c","g",44],["Suzanne Cory High School","Werribee","s","g",95],["Heathdale Christian College","Werribee","c","i",72],["St Joseph's Catholic Primary School","Werribee","p","c",65],["Bethany Catholic Primary School","Werribee","p","c",64],["MacKillop Catholic Regional College","Werribee","s","c",63],["Riverwalk Primary School","Werribee","p","g",59],["Werribee Primary School","Werribee","p","g",56],["Werribee Secondary College","Werribee","s","g",55],["Wyndham Park Primary School","Werribee","p","g",55],["Corpus Christi School","Werribee","p","c",50],["St Andrew's School","Werribee","p","c",48],["Westgrove Primary School","Werribee","p","g",46],["Lollypop Creek Primary School","Werribee","p","g",44],["Walcom Ngarrwa Secondary College","Werribee","s","g",42],["Manorvale Primary School","Werribee","p","g",41],["Thomas Chirnside Primary School","Werribee","p","g",40],["Wyndham Central Secondary College","Werribee","s","g",35],["Alamanda K-9 College","Point Cook","c","g",62],["Lumen Christi School","Point Cook","p","c",61],["Stella Maris Catholic Primary School","Point Cook","p","c",59],["Featherbrook P-9 College","Point Cook","c","g",58],["Carranballac P-9 College","Point Cook","c","g",56],["Saltwater P-9 College","Point Cook","c","g",55],["St Mary of the Cross Catholic Primary School","Point Cook","p","c",53],["Point Cook Prep - Year 9 College","Point Cook","c","g",48],["Manor Lakes P-12 College","Wyndham Vale","c","g",49],["Iramoo Primary School","Wyndham Vale","p","g",49],["Riverbend Primary School","Wyndham Vale","p","g",44],["Wyndham Vale Primary School","Wyndham Vale","p","g",43],["Our Lady of the Southern Cross","Manor Lakes","p","c",60],["Ngarri Primary School","Manor Lakes","p","g",54],["St Martin de Porres School","Laverton","p","c",65],["Laverton P-12 College","Laverton","c","g",44],["Altona Green Primary School","Altona Meadows","p","g",63],["Queen of Peace Primary School","Altona Meadows","p","c",61],["Altona Meadows Primary School","Altona Meadows","p","g",44],["Altona Primary School","Altona","p","g",71],["Mount St Joseph Girls' College","Altona","s","c",63],["Altona College","Altona","c","g",49],["St Mary's School","Altona","p","c",49],["St Leo the Great Primary School","Altona North","p","c",68],["Emmanuel College","Altona North","s","c",56],["Altona North Primary School","Altona North","p","g",38],["Seabrook Primary School","Seabrook","p","g",69],["Annunciation School","Brooklyn","p","c",65],["Sacred Heart School","Newport","p","c",66],["Newport Gardens Primary School","Newport","p","g",66],["Newport Lakes Primary School","Newport","p","g",63],["Australian Islamic Centre College","Newport","p","i",35],["Williamstown North Primary School","Williamstown","p","g",65],["Williamstown Primary School","Williamstown","p","g",63],["Williamstown High School","Williamstown","s","g",60],["Newmark Primary","Williamstown","p","i",60],["St Mary's School","Williamstown","p","c",59],["Bayside P-12 College","Williamstown","c","g",54],["Spotswood Primary School","Spotswood","p","g",62],["St Margaret Mary's School","Spotswood","p","c",61],["Wembley Primary School","Yarraville","p","g",61],["Yarraville West Primary School","Yarraville","p","g",60],["Kingsville Primary School","Yarraville","p","g",60],["St Augustine's School","Yarraville","p","c",59],["Corpus Christi School","Kingsville","p","c",58],["St Monica's Primary School","Moonee Ponds","p","c",66],["Moonee Ponds Primary School","Moonee Ponds","p","g",65],["Moonee Ponds West Primary School","Moonee Ponds","p","g",65],["Ascot Vale Primary School","Ascot Vale","p","g",69],["St Mary's School","Ascot Vale","p","c",61],["Ascot Vale West Primary School","Ascot Vale","p","g",50]];
+const SLEVEL={p:'Primary school',s:'Secondary school',c:'Prep to Year 9 or 12',k:'Kindergarten',u:'University or TAFE',o:'School'};
+const SSECT={g:'Government',c:'Catholic',i:'Independent'};
+const sBand=sc=>sc==null?{w:'Not rated',hex:'#ffffff',i:-1}:sc>=65?{w:'Well above average',hex:'#1e3a8a',i:3}:sc>=55?{w:'Above average',hex:'#3b6fd8',i:2}:sc>=45?{w:'Around average',hex:'#9bb8ee',i:1}:{w:'Below average',hex:'#c9d6ee',i:0};
+const normName=t=>String(t||'').toLowerCase().replace(/&/g,' and ').replace(/[’'`.]/g,'').replace(/[^a-z0-9]+/g,' ').replace(/\b(the|catholic|school|primary|college|p ?12|p ?9|k ?9)\b/g,m=>m).trim();
+const SCHBY={};SCH.forEach(r=>{const k=r[1].toLowerCase();(SCHBY[k]=SCHBY[k]||[]).push(r);});
+function schoolsFor(name){
+  const list=(SCHBY[(name||'').toLowerCase()]||[]).slice().sort((a,b)=>b[4]-a[4]);
+  const bestP=list.find(r=>r[2]==='p'||r[2]==='c'),bestS=list.find(r=>r[2]==='s'||r[2]==='c');
+  const top=list.length?Math.max(...list.map(r=>r[4])):null;
+  return {list,bestP,bestS,top,band:sBand(bestP?bestP[4]:top)};
+}
+
 // ---------- state ----------
 const DEFAULT_REF={lng:144.862,lat:-37.761,title:'Avondale Heights'};
 const state={base:'map',era:'today',flow:'all',ac:'narrow',exag:1,paused:false,terrain:false,googleKey:'',
-  layers:{noise:true,paths:true,planes:true,apt:true,rail:true,railPlan:true,road:true,roadPlan:true,dc:true,sub:true,bld:true,crime:false,markers:true},crimeMode:'all',sort:'both',
+  layers:{noise:true,paths:true,planes:true,apt:true,rail:true,railPlan:true,road:true,roadPlan:true,dc:true,sub:true,bld:true,crime:false,invest:false,schools:false,markers:true},crimeMode:'all',investMode:'growth',sort:'family',schF:{k:true,p:true,s:true,u:true,top:false},
   sel:null,spot:null,ref:cacheGet('tfpm:ref')||DEFAULT_REF,follow:null};
 let AIRPORT=null, SUBS=[], subsReady=false, DCPTS=[];
 const altOffset=()=>state.googleKey&&state.base==='google'?135:(state.terrain?132:0);
@@ -587,6 +664,8 @@ map.on('load',()=>{
   }
   map.addLayer({id:'crime-fill',type:'fill',source:'subs',filter:['has','ccol'],layout:{visibility:'none'},paint:{'fill-color':['get','ccol'],'fill-opacity':0.55}},firstLabel);
   map.addLayer({id:'crime-line',type:'line',source:'subs',filter:['has','ccol'],layout:{visibility:'none'},paint:{'line-color':'#ffffff','line-width':1.2,'line-opacity':0.9}},firstLabel);
+  map.addLayer({id:'inv-fill',type:'fill',source:'subs',filter:['has','icol'],layout:{visibility:'none'},paint:{'fill-color':['get','icol'],'fill-opacity':0.6}},firstLabel);
+  map.addLayer({id:'inv-line',type:'line',source:'subs',filter:['has','icol'],layout:{visibility:'none'},paint:{'line-color':'#ffffff','line-width':1.2,'line-opacity':0.9}},firstLabel);
   map.addLayer({id:'sub-line',type:'line',source:'subs',paint:{'line-color':'#5b6472','line-width':['interpolate',['linear'],['zoom'],10,0.6,14,1.4],'line-opacity':0.5,'line-dasharray':[4,3]}},firstLabel);
   map.addLayer({id:'sub-sel',type:'line',source:'subs',filter:['==',['get','name'],''],paint:{'line-color':'#15181d','line-width':3}},firstLabel);
   map.addLayer({id:'apt-fill',type:'fill',source:'apt',paint:{'fill-color':'#c8102e','fill-opacity':0.05}},firstLabel);
@@ -600,11 +679,14 @@ map.on('load',()=>{
   map.addLayer({id:'plan-lbl',type:'symbol',source:'plans',layout:{'symbol-placement':'line','text-field':['get','name'],'text-font':['Noto Sans Bold'],'text-size':11,'text-letter-spacing':0.04,'symbol-spacing':320},paint:{'text-color':['match',['get','kind'],'road','#8a5613','#0b5f58'],'text-halo-color':'#ffffff','text-halo-width':1.8}});
   map.addLayer({id:'dc',type:'circle',source:'dcs',paint:{'circle-radius':['interpolate',['linear'],['zoom'],9,4,15,9],'circle-color':['match',['get','st'],'plan','#ffffff','#334155'],'circle-stroke-color':['match',['get','st'],'plan','#334155','#ffffff'],'circle-stroke-width':['match',['get','st'],'plan',2.6,1.8],'circle-pitch-alignment':'map'}});
   map.addLayer({id:'dc-lbl',type:'symbol',source:'dcs',minzoom:11.5,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':11,'text-offset':[0,1.1],'text-anchor':'top','text-max-width':10},paint:{'text-color':'#334155','text-halo-color':'#fff','text-halo-width':1.6}});
+  map.addSource('schools',{type:'geojson',data:fc([])});
+  map.addLayer({id:'sch',type:'circle',source:'schools',layout:{visibility:'none'},paint:{'circle-radius':['interpolate',['linear'],['zoom'],9,['match',['get','lv'],'k',1.6,'u',4,2.6],14,['match',['get','lv'],'k',5,'u',9,7.5]],'circle-color':['get','col'],'circle-stroke-color':['case',['get','rated'],'#ffffff',['match',['get','lv'],'k','#c0587e','u','#15181d','#8a929c']],'circle-stroke-width':['case',['get','rated'],1.6,1.4],'circle-pitch-alignment':'map'}});
+  map.addLayer({id:'sch-lbl',type:'symbol',source:'schools',minzoom:12.3,layout:{visibility:'none','text-field':['case',['get','rated'],['concat',['get','name'],'  ',['to-string',['get','score']]],['get','name']],'text-font':['Noto Sans Regular'],'text-size':10.5,'text-offset':[0,1.1],'text-anchor':'top','text-max-width':11,'text-optional':true},paint:{'text-color':'#1e3a8a','text-halo-color':'#fff','text-halo-width':1.6}});
   map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['format',['upcase',['get','name']],{},'\n',{},['get','word'],{'font-scale':0.85,'text-font':['literal',['Noto Sans Regular']]}],'text-font':['Noto Sans Bold'],'text-size':['interpolate',['linear'],['zoom'],9,9.5,14,13],'text-letter-spacing':0.08,'text-max-width':12,'text-line-height':1.3},paint:{'text-color':'#2b313a','text-halo-color':'rgba(255,255,255,0.95)','text-halo-width':1.8}});
   map.getSource('plans').setData(fc(PLANS.map(p=>({type:'Feature',properties:{kind:p.kind,cert:p.cert,name:p.name,status:p.status,about:p.about,url:p.url},geometry:{type:'LineString',coordinates:p.coords}}))));
   renderRunway3();renderAirport();applyAll();
   toast('Loading suburbs and the airport boundary…');
-  loadData();loadDCs();
+  loadData();loadDCs();loadSchools();
   requestAnimationFrame(frame);
 });
 map.on('error',e=>{if(e&&e.error&&/openfreemap/.test(String(e.error.message||'')))toast('The street map could not load. Try Satellite.',6000);});
@@ -624,9 +706,9 @@ function renderSubs(){
   const f=[],pts=[];
   SUBS.forEach(s=>{
     const st=subStat(s),c=crimeFor(s.name);
-    const props={name:s.name};if(c)props.ccol=c.hex;
+    const props={name:s.name};if(c)props.ccol=c.hex;const pr=propFor(s.name);if(pr)props.icol=pr.hex;
     f.push({type:'Feature',properties:props,geometry:{type:'MultiPolygon',coordinates:s.rings.map(r=>[ringLL(r)])}});
-    const parts=[];if(state.layers.noise&&st)parts.push('Planes: '+lev(st.med).w.toLowerCase());if(state.layers.crime)parts.push('Crime: '+(c?c.word.toLowerCase():'no data'));
+    const parts=[];if(state.layers.noise&&st)parts.push('Planes: '+lev(st.med).w.toLowerCase());if(state.layers.crime)parts.push('Crime: '+(c?c.word.toLowerCase():'no data'));if(state.layers.invest&&pr)parts.push(state.investMode==='growth'?growthWords(pr.growth):state.investMode==='price'?money(pr.median):pr.yld.toFixed(1)+'% rent return');
     pts.push({type:'Feature',properties:{name:s.name,word:parts.join('  ·  ')},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
   });
   map.getSource('subs').setData(fc(f));map.getSource('subpts').setData(fc(pts));
@@ -724,6 +806,49 @@ async function loadDCs(){
   }
   osm.forEach(o=>{const near=DCPTS.some(d=>dist(toL(d.lng,d.lat),toL(o.lng,o.lat))<0.4);if(!near)DCPTS.push({lng:o.lng,lat:o.lat,name:o.name,op:o.op,st:'live',src:'OpenStreetMap'});});
   renderDCs();
+}
+
+// ---------- schools on the map ----------
+let SCHPTS=[];
+function classifyOSM(t){
+  const a=t.amenity||'',n=(t.name||'').toLowerCase();
+  if(a==='kindergarten'||a==='childcare'||/kinder|early learning|childcare|child care/.test(n))return 'k';
+  if(a==='university'||a==='college'&&!/secondary|grammar|high school|p-12|p-9|k-9/.test(n)||/tafe|university|polytechnic|institute of/.test(n))return 'u';
+  if(/p-12|p-9|k-9|k-12|prep|p–12|grammar|lutheran college|christian college|islamic college|anglican/.test(n))return 'c';
+  if(/primary/.test(n))return 'p';
+  if(/secondary|high school|college/.test(n))return 's';
+  return 'o';
+}
+const nk=t=>String(t||'').toLowerCase().replace(/&/g,' and ').replace(/[’'`.]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+async function loadSchools(){
+  for(let i=0;i<400&&!subsReady;i++)await sleep(300);
+  let osm=cacheGet('tfpm:v1:schosm');
+  if(!osm){try{const j=await overpass('[out:json][timeout:90];(nwr["amenity"~"^(school|kindergarten|university|college)$"](-37.96,144.55,-37.52,145.0););out center tags;');
+    osm=j.elements.map(e=>({lat:e.lat||(e.center&&e.center.lat),lng:e.lon||(e.center&&e.center.lon),name:(e.tags&&e.tags.name)||'',lv:classifyOSM(e.tags||{})})).filter(d=>d.lat&&d.lng&&d.name);cacheSet('tfpm:v1:schosm',osm);}catch(e){osm=[];}}
+  const byName={};osm.forEach(o=>{(byName[nk(o.name)]=byName[nk(o.name)]||[]).push(o);});
+  const used=new Set();SCHPTS=[];
+  const unmatched=[];
+  SCH.forEach(([name,sub,lv,sec,score])=>{
+    const cands=byName[nk(name)]||[];
+    let best=null,bd=Infinity;const subC=SUBS.find(x=>x.name.toLowerCase()===sub.toLowerCase());
+    cands.forEach(o=>{const d=subC?dist(toL(o.lng,o.lat),subC.label):0;if(d<bd){bd=d;best=o;}});
+    if(best&&bd<8){used.add(best);SCHPTS.push({lng:best.lng,lat:best.lat,name,sub,lv,sec,score});}
+    else unmatched.push([name,sub,lv,sec,score]);
+  });
+  osm.forEach(o=>{if(!used.has(o))SCHPTS.push({lng:o.lng,lat:o.lat,name:o.name,sub:'',lv:o.lv,sec:'',score:null});});
+  renderSchools();
+  const cached=cacheGet('tfpm:v1:schgeo')||{};
+  for(const [name,sub,lv,sec,score] of unmatched.filter(r=>r[4]>=50)){
+    const key=name+'|'+sub;let g=cached[key];
+    if(g===undefined){try{g=await geocode(name+', '+sub);await sleep(1100);}catch(e){g=null;}cached[key]=g;cacheSet('tfpm:v1:schgeo',cached);}
+    if(g){SCHPTS.push({lng:g.lng,lat:g.lat,name,sub,lv,sec,score});renderSchools();}
+  }
+}
+function renderSchools(){
+  if(!map.getSource('schools'))return;
+  const F=state.schF;
+  const show=d=>{const t=d.lv;const ok=(t==='k'&&F.k)||(t==='u'&&F.u)||(t==='p'&&F.p)||(t==='s'&&F.s)||(t==='c'&&(F.p||F.s))||(t==='o'&&(F.p||F.s));if(!ok)return false;if(F.top)return d.score!=null&&d.score>=55;return true;};
+  map.getSource('schools').setData(fc(SCHPTS.filter(show).map(d=>{const b=sBand(d.score);return {type:'Feature',properties:{name:d.name,lv:d.lv,sec:d.sec,score:d.score==null?-1:d.score,rated:d.score!=null,col:d.score==null?'#ffffff':b.hex,sub:d.sub},geometry:{type:'Point',coordinates:[d.lng,d.lat]}};})));
 }
 
 // ---------- smooth noise shading ----------
@@ -937,6 +1062,12 @@ function applyAll(){
   if(map.getLayer('plan-lbl'))map.setFilter('plan-lbl',['any',['all',['==',['get','kind'],'road'],Ly.roadPlan],['all',['==',['get','kind'],'rail'],Ly.railPlan]]);
   ['dc','dc-lbl'].forEach(id=>setVis(id,Ly.dc));
   ['crime-fill','crime-line'].forEach(id=>setVis(id,Ly.crime));
+  ['inv-fill','inv-line'].forEach(id=>setVis(id,Ly.invest));
+  ['sch','sch-lbl'].forEach(id=>setVis(id,Ly.schools));
+  document.getElementById('invLegend').hidden=!Ly.invest;document.getElementById('invSeg').hidden=!Ly.invest;
+  {const m=IRAMPS[state.investMode];document.getElementById('invLegendT').textContent=m.t;document.getElementById('invLegendL').innerHTML=m.words.map(w=>`<span>${w}</span>`).join('');}
+  document.getElementById('schLegend').hidden=!Ly.schools;document.getElementById('schChips').hidden=!Ly.schools;
+  renderSchools();
   document.getElementById('crimeLegend').hidden=!Ly.crime;document.getElementById('crimeSeg').hidden=!Ly.crime;
   document.querySelector('.legend .nramp').parentElement.hidden=!Ly.noise;
   document.getElementById('vClean').classList.toggle('on',allOff());
@@ -952,7 +1083,7 @@ onRadio('base',v=>{state.base=v;applyAll();});
 onRadio('era',v=>heavy(()=>{state.era=v;if(state.layers.noise)getGrid();applyAll();}));
 onRadio('flow',v=>heavy(()=>{state.flow=v;if(state.layers.noise)getGrid();applyAll();}));
 onRadio('ac',v=>heavy(()=>{state.ac=v;refCache=null;if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);if(state.layers.noise)getGrid();applyAll();scoreSuburbs(v);}));
-const LAYER_BOXES=[['lNoise','noise'],['lPaths','paths'],['lPlanes','planes'],['lApt','apt'],['lRail','rail'],['lRailPlan','railPlan'],['lRoad','road'],['lRoadPlan','roadPlan'],['lDc','dc'],['lCrime','crime'],['lSub','sub'],['lBld','bld']];
+const LAYER_BOXES=[['lNoise','noise'],['lPaths','paths'],['lPlanes','planes'],['lApt','apt'],['lRail','rail'],['lRailPlan','railPlan'],['lRoad','road'],['lRoadPlan','roadPlan'],['lDc','dc'],['lCrime','crime'],['lInv','invest'],['lSch','schools'],['lSub','sub'],['lBld','bld']];
 LAYER_BOXES.forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.layers[k]=e.target.checked;if(e.target.checked)state.layers.markers=true;applyAll();}));
 function allOff(){return LAYER_BOXES.every(([,k])=>k==='bld'||!state.layers[k])&&!state.layers.markers;}
 let savedLayers=null;
@@ -968,6 +1099,8 @@ document.getElementById('vClean').onclick=()=>{
   else{savedLayers=Object.assign({},state.layers);setAll(false);toast('Clean map. Tap Clean map again to bring everything back.',3500);}
 };
 onRadio('cm',v=>{state.crimeMode=v;applyAll();});
+onRadio('im',v=>{state.investMode=v;applyAll();});
+[['sK','k'],['sP','p'],['sS','s'],['sU','u'],['sTop','top']].forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.schF[k]=e.target.checked;renderSchools();}));
 onRadio('sort',v=>{state.sort=v;renderList();});
 document.getElementById('lTerrain').addEventListener('change',e=>{state.terrain=e.target.checked;applyAll();});
 const exag=document.getElementById('exag');
@@ -997,18 +1130,19 @@ rideBtn.onclick=()=>{
 // ---------- click handling ----------
 map.on('click',e=>{
   stopRide();
-  const ids=['dc','plan-rail','plan-road','plan-road-band','plan-rail-band'].filter(id=>map.getLayer(id)&&map.getLayoutProperty(id,'visibility')!=='none');
+  const ids=['sch','dc','plan-rail','plan-road','plan-road-band','plan-rail-band'].filter(id=>map.getLayer(id)&&map.getLayoutProperty(id,'visibility')!=='none');
   const f=ids.length?map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers:ids}):[];
   if(f.length){
     const p=f[0].properties;let h;
-    if(f[0].layer.id==='dc')h=`<b>${escapeHtml(p.name)}</b><br>${escapeHtml(p.op)}<br><span class="st">${p.st==='plan'?'Planned':'Operating'}</span><br>${p.addr?escapeHtml(p.addr)+'<br>':''}${p.note?escapeHtml(p.note)+'<br>':''}<small style="color:#6b7280">Source: ${escapeHtml(p.src)}</small>`;
+    if(f[0].layer.id==='sch'){const sc=p.score>=0?+p.score:null,b=sBand(sc);h=`<b>${escapeHtml(p.name)}</b><br>${SLEVEL[p.lv]||'School'}${p.sec?' · '+SSECT[p.sec]:''}<br><span class="st">${sc==null?'Not rated':b.w}</span><br>${sc==null?'No NAPLAN-based score available (kinders, TAFEs, new or special schools).':`Score ${sc} out of 100. About 50 is the national average for NAPLAN results.`}<br><small style="color:#6b7280">Check zones at findmyschool.vic.gov.au</small>`;}
+    else if(f[0].layer.id==='dc')h=`<b>${escapeHtml(p.name)}</b><br>${escapeHtml(p.op)}<br><span class="st">${p.st==='plan'?'Planned':'Operating'}</span><br>${p.addr?escapeHtml(p.addr)+'<br>':''}${p.note?escapeHtml(p.note)+'<br>':''}<small style="color:#6b7280">Source: ${escapeHtml(p.src)}</small>`;
     else h=`<b>${escapeHtml(p.name)}</b><br><span class="st">${escapeHtml(p.status)}</span><br>${escapeHtml(p.about)}<br><a href="${p.url}" target="_blank" rel="noopener">Official project page</a>`;
     new maplibregl.Popup({closeButton:true,maxWidth:'280px'}).setLngLat(e.lngLat).setHTML(h).addTo(map);
     return;
   }
   spotCheck(e.lngLat);
 });
-['dc','plan-rail','plan-road'].forEach(id=>{map.on('mouseenter',id,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',id,()=>map.getCanvas().style.cursor='');});
+['sch','dc','plan-rail','plan-road'].forEach(id=>{map.on('mouseenter',id,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',id,()=>map.getCanvas().style.cursor='');});
 
 // ---------- spot check and panel ----------
 function noiseSet(local){const o={};['today','future'].forEach(era=>{o[era]={};['narrow','wide'].forEach(ac=>{o[era][ac]=noiseAt(local,era,ac);});});return o;}
@@ -1055,10 +1189,20 @@ function renderCard(){
       <p>About <b>${Math.round(c.all)}</b> recorded crimes per 1,000 residents a year. The Victorian average is about ${Math.round(VIC_RATE)}.</p>
       <p>Crimes against people (assault, robbery, threats): about <b>${c.person.toFixed(0)}</b> per 1,000, where a typical western suburb has ${Math.round(WEST_PERSON)}. Property crime (theft, burglary, car theft): about <b>${Math.round(c.property)}</b> per 1,000.</p>
       ${c.flags.map(f=>`<p class="flag">${f}</p>`).join('')}`:'<p>No suburb-level crime figures are available for this suburb yet.</p>')+'</div>';}
+  if(cs&&(sp||s)){
+    const pr=propFor(cs.name);
+    h+=`<div class="split"></div><div class="verdict"><div class="when">Property in ${escapeHtml(cs.name)}</div>`+(pr?`<div class="word">${money(pr.median)}<span style="font-size:13px;font-weight:500;color:${pr.growth<0?'#b8482c':'#1f5c3d'}">${growthWords(pr.growth)} in a year</span></div>
+      <p>Median house price, with growth that is <b>${pr.gWord.toLowerCase()}</b> compared with other suburbs. Houses rent for about <b>$${pr.rent}</b> a week, a yearly return of about <b>${pr.yld.toFixed(1)}%</b> of the price.</p>
+      ${pr.tags.length?`<p>${pr.tags.map(t=>`<span class="lvl" style="margin-right:10px"><b style="background:#4b8f68"></b>${t}</span>`).join('')}</p>`:''}
+      ${nearRail(cs)?`<p class="flag">About ${nearRail(cs).d.toFixed(1)} km from ${nearRail(cs).n} station, part of the Airport Rail upgrade (stage 1 due 2030).</p>`:''}`:'<p>No property figures for this suburb.</p>')+'</div>';
+    const sf=schoolsFor(cs.name);
+    h+=`<div class="split"></div><div class="verdict"><div class="when">Schools in ${escapeHtml(cs.name)}</div>`+(sf.list.length?`<div class="word">${sf.band.w}</div><ul class="schl">${sf.list.slice(0,5).map(r=>`<li><span>${escapeHtml(r[0])} <span style="color:#9aa1ab">· ${r[2]==='p'?'primary':r[2]==='s'?'secondary':'P to 9/12'}, ${SSECT[r[3]].toLowerCase()}</span></span><b style="color:${sBand(r[4]).hex==='#c9d6ee'?'#6b7280':sBand(r[4]).hex}">${r[4]}</b></li>`).join('')}</ul><p class="flag">Scores out of 100 from NAPLAN results, where about 50 is average. Nearby suburbs' schools may be closer to your street, so turn on the Schools layer to see them.</p>`:'<p>No rated schools listed in this suburb. Turn on the Schools layer to see schools nearby.</p>')+'</div>';
+  }
   card.innerHTML=h;
   const b=document.getElementById('setRef');
   if(b)b.onclick=()=>{state.ref={lng:sp.lngLat.lng,lat:sp.lngLat.lat,title:sp.title};cacheSet('tfpm:ref',state.ref);renderCard();renderList();toast('Now comparing everything with this spot.',2500);};
 }
+function nearRail(s){if(!s||!s.label)return null;let best=null;RAIL_HUBS.forEach(([lng,lat,n])=>{const d=dist(s.label,toL(lng,lat));if(d<3&&(!best||d<best.d))best={d,n};});return best;}
 function renderList(){
   const listEl=document.getElementById('list');const ac=state.ac;
   const ready=SUBS.filter(s=>s.stats&&s.stats[ac]&&s.west);
@@ -1066,16 +1210,25 @@ function renderList(){
   const refL=refNoise().future[ac].L;
   const nIdx=s=>levIdx(s.stats[ac].future.med);
   const cOf=s=>{const c=crimeFor(s.name);return c&&!c.small?c:null;};
+  const sIdx=s=>{const f=schoolsFor(s.name);return f.bestP?Math.max(0,f.band.i):1;};
+  const pOf=s=>propFor(s.name);
   let rows=ready.slice(),sumTxt;
   if(state.sort==='noise'){rows.sort((a,b)=>a.stats[ac].future.med-b.stats[ac].future.med||a.name.localeCompare(b.name));
     sumTxt=`After 2031, <b>${rows.filter(s=>s.stats[ac].future.med<63).length}</b> of ${rows.length} western suburbs have faint or quiet plane noise across most of the suburb. Quietest first.`;}
   else if(state.sort==='crime'){rows=rows.filter(cOf).sort((a,b)=>cOf(a).ratio-cOf(b).ratio);
     sumTxt=`<b>${rows.length}</b> western suburbs with reliable crime figures, lowest crime first${state.crimeMode==='person'?' (crimes against people)':''}.`;}
-  else{rows=rows.filter(cOf).sort((a,b)=>(nIdx(a)+cOf(a).lvl)-(nIdx(b)+cOf(b).lvl)||a.stats[ac].future.med-b.stats[ac].future.med);
-    sumTxt='Suburbs with quiet skies after 2031 <b>and</b> low crime come first. Only suburbs with reliable crime figures are listed.';}
+  else if(state.sort==='schools'){rows=rows.filter(s=>schoolsFor(s.name).bestP).sort((a,b)=>schoolsFor(b.name).bestP[4]-schoolsFor(a.name).bestP[4]);
+    sumTxt='Ranked by the best-scoring primary or P-12 school in each suburb.';}
+  else if(state.sort==='growth'){rows=rows.filter(pOf).sort((a,b)=>pOf(b).growth-pOf(a).growth);
+    sumTxt='House price growth over the 12 months to June 2026, fastest first. Past growth doesn\'t guarantee future growth.';}
+  else if(state.sort==='value'){rows=rows.filter(s=>{const p=pOf(s);return p&&p.median<800000&&p.growth>=5;}).sort((a,b)=>pOf(b).growth-pOf(a).growth);
+    sumTxt='Suburbs with a median house price under $800k that grew at least 5% last year, fastest first.';}
+  else{const score=s=>nIdx(s)+(cOf(s)?cOf(s).lvl:4)+(3-sIdx(s));rows=rows.filter(cOf).sort((a,b)=>score(a)-score(b)||a.stats[ac].future.med-b.stats[ac].future.med);
+    sumTxt='Quiet skies after 2031, low crime and good schools, with all three weighted equally. Only suburbs with reliable crime figures are listed.';}
   document.getElementById('summary').innerHTML=sumTxt;
-  listEl.innerHTML='<div class="lhead"><span>Suburb</span><span>Planes 2031</span><span>Crime</span></div>'+
-    rows.map(s=>{const st=s.stats[ac];const cw=relWords(st.future.med-refL);const c=crimeFor(s.name);return `<button class="lrow${state.sel===s?' on':''}" data-i="${SUBS.indexOf(s)}"><span>${escapeHtml(s.name)}</span><span>${lvlTag(st.future.med)}</span><span>${crimeTag(c)}</span><span class="cmpw">Planes ${cw} compared with ${escapeHtml(state.ref.title)}${c&&c.flags.length?'. Crime figure has a caveat, tap for details':''}</span></button>`;}).join('');
+  listEl.innerHTML=rows.map(s=>{const st=s.stats[ac];const c=crimeFor(s.name),pr=pOf(s),sf=schoolsFor(s.name);
+    return `<button class="lrow${state.sel===s?' on':''}" data-i="${SUBS.indexOf(s)}"><span class="nmr"><span>${escapeHtml(s.name)}</span><span style="color:#6b7280;font-weight:400;font-size:12.5px">${pr?money(pr.median)+' · '+growthWords(pr.growth):''}</span></span>
+      <span class="tg"><span class="lvl" title="Plane noise after 2031"><b style="background:${lev(st.future.med).hex}"></b>Planes: ${lev(st.future.med).w.toLowerCase()}</span><span class="lvl"><b style="background:${c?c.hex:'#e4e6ea'}"></b>Crime: ${c?c.word.toLowerCase():'no data'}</span><span class="lvl"><b style="background:${sf.bestP?sBand(sf.bestP[4]).hex:'#e4e6ea'}"></b>Schools: ${sf.bestP?sBand(sf.bestP[4]).w.toLowerCase():'no data'}</span></span></button>`;}).join('');
 }
 document.getElementById('list').addEventListener('click',e=>{const b=e.target.closest('.lrow');if(!b)return;state.spot=null;setSel(SUBS[+b.dataset.i],true);});
 function renderProfile(){
