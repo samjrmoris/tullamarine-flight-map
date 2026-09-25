@@ -215,15 +215,21 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
         <div class="grp">Planes</div>
         <label><input type="checkbox" id="lNoise"><span class="key" style="background:linear-gradient(90deg,#e3c48c,#d9923e,#b8482c,#6b1f45)"></span><span>Plane noise shading<small>Darker means louder when a plane goes over</small></span></label>
         <label><input type="checkbox" id="lPaths" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#2f4f86" stroke-width="2.5"/></svg><span>Flight paths</span></label>
+        <div class="subopt"><div class="cap">Show flight paths, planes and noise for</div>
+          <div class="chips" style="margin:0">
+            <label><input type="checkbox" id="aML" checked> Melbourne (Tullamarine)</label>
+            <label><input type="checkbox" id="aEN" checked> Essendon Fields</label>
+            <label><input type="checkbox" id="aAV" checked> Avalon</label>
+          </div></div>
         <label><input type="checkbox" id="lPlanes" checked><svg width="30" height="12" viewBox="0 0 30 12"><path d="M15 1l2 4h8v2h-8l-2 4h-1l1-4H9L7 9H6l1-3-1-3h1l2 2h6L14 1z" fill="#3d4450"/></svg><span>Moving planes</span></label>
         <label><input type="checkbox" id="lApt" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#c8102e" stroke-width="3"/></svg><span>Airport land<small>Melbourne, Essendon Fields, Avalon and Point Cook airfields</small></span></label>
         <div class="grp">Transport</div>
         <label><input type="checkbox" id="lRail" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#2a2f36" stroke-width="4"/><line x1="0" y1="5" x2="30" y2="5" stroke="#fff" stroke-width="1.6" stroke-dasharray="4 4"/></svg><span>Train lines and stations</span></label>
-        <label><input type="checkbox" id="lRailPlan" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#0e7c73" stroke-width="3.5" stroke-dasharray="5 3"/></svg><span>Planned train lines<small>Airport Rail, Suburban Rail Loop West</small></span></label>
+        <label><input type="checkbox" id="lRailPlan"><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#0e7c73" stroke-width="3.5" stroke-dasharray="5 3"/></svg><span>Planned train lines<small>Airport Rail, Suburban Rail Loop West</small></span></label>
         <label><input type="checkbox" id="lRoad" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="4"/></svg><span>Freeways and highways</span></label>
-        <label><input type="checkbox" id="lRoadPlan" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="8" stroke-opacity=".25"/><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="2.5" stroke-dasharray="5 3"/></svg><span>Planned roads<small>Outer Ring Road land, roads being built</small></span></label>
+        <label><input type="checkbox" id="lRoadPlan"><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="8" stroke-opacity=".25"/><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="2.5" stroke-dasharray="5 3"/></svg><span>Planned roads<small>Outer Ring Road land, roads being built</small></span></label>
         <div class="grp">Neighbourhood</div>
-        <label><input type="checkbox" id="lCrime" checked><span class="key" style="background:linear-gradient(90deg,#d9cfe9,#8f74bd,#42286d)"></span><span>Crime by suburb<small>Darker means more crime per resident</small></span></label>
+        <label><input type="checkbox" id="lCrime"><span class="key" style="background:linear-gradient(90deg,#d9cfe9,#8f74bd,#42286d)"></span><span>Crime by suburb<small>Darker means more crime per resident</small></span></label>
         <div class="subopt" id="crimeSeg" hidden>
           <div class="cap">Which crimes to count</div>
           <div class="seg" role="radiogroup" aria-label="Which crimes to count">
@@ -231,7 +237,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
             <label><input type="radio" name="cm" value="person"><span>Crimes against people<br><small style="font-weight:400;color:var(--muted)">assault, robbery, threats</small></span></label>
           </div>
         </div>
-        <label><input type="checkbox" id="lInv" checked><span class="key" style="background:linear-gradient(90deg,#e3eee6,#83b796,#1f5c3d)"></span><span>Property market<small>House prices, growth and rent by suburb</small></span></label>
+        <label><input type="checkbox" id="lInv"><span class="key" style="background:linear-gradient(90deg,#e3eee6,#83b796,#1f5c3d)"></span><span>Property market<small>House prices, growth and rent by suburb</small></span></label>
         <div class="subopt" id="invSeg" hidden>
           <div class="cap">Colour suburbs by</div>
           <div class="seg" role="radiogroup" aria-label="Colour suburbs by">
@@ -315,6 +321,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
       <div class="stack">
         <p class="note">Plane noise: for every spot, the map works out how close each flight path passes and how high the plane is there. It then looks up how loud that plane sounds on the ground, using published measurements from NATS, the UK air traffic service, and Melbourne Airport's third runway noise fact sheet. The loudness words match common measures. "Loud" starts where a plane interrupts a conversation indoors with the windows open, the level airports track as N70. Ten points louder sounds about twice as loud.</p>
         <p class="note">Other airports: Essendon Fields handles business jets, turboprops, air ambulance and police aircraft, with far fewer flights than Tullamarine. Its loudness uses NATS figures for a 50 to 70 seat turboprop, which sits at the louder end of its traffic. Avalon handles Jetstar A320s and 737s and uses the same jet figures as Tullamarine. RAAF Base Williams at Point Cook is outlined only. Its light aircraft and helicopters aren't in the noise estimate.</p>
+        <p class="note">Switching an airport off hides its flight paths, planes and noise shading. Suburb rankings and spot checks always include every airport, because you'll hear them all.</p>
         <p class="note">It shows the loudest single plane, not how many fly over each day, which changes with the wind. Flight paths are simplified, so treat the results as a guide. Real planes spread out a few hundred metres either side.</p>
         <p class="note">Suburbs, the airport boundary, today's runways, train lines, stations and highways come from OpenStreetMap. The third runway is placed from Melbourne Airport's published figures. Planned train lines and roads are drawn from public announcements. Where the exact route isn't public, the line is marked as approximate. Data centres come from OpenStreetMap, Data Center Map and 2026 planning news, with locations found from their street addresses.</p>
         <p class="note">Crime: offences recorded by Victoria Police in the year to June 2026, published by the Crime Statistics Agency Victoria, divided by each suburb's 2021 census population (as republished suburb by suburb on AU Crime Tracker). "All crime" is compared with the Victorian average of about 87 offences per 1,000 people. "Crimes against people" (assault, robbery, threats and similar) is compared with the typical western suburb, about 11 per 1,000. Three things can make a suburb look worse than its streets are. Big shopping centres add shoplifting. Fast-growing estates have many more residents than in 2021. Suburbs with prisons or very few residents skew the rate. The map flags these cases where they apply.</p>
@@ -441,7 +448,7 @@ function buildPaths(){
   const mkAll=(r,extra)=>{
     [[r.A,r.brg,0],[r.B,(r.brg+180)%360,1]].forEach(([th,brg,i])=>{
       const mk=(kind,turn,pts)=>{
-        const P={rw:r,i,kind,turn,pts,th,base:r.base[i],travel:brg,future:r.era==='future',ac:r.ac||null,extra};
+        const P={rw:r,i,kind,turn,pts,th,base:r.base[i],travel:brg,future:r.era==='future',ac:r.ac||null,extra,apt:extra?r.icao:'YMML'};
         P.plain=()=>extra?`planes ${kind==='arr'?'landing at':'taking off from'} ${r.airport}`:`planes ${kind==='arr'?'landing on':'taking off from'} the ${RWNAME[r.key]}`;
         P.inEra=era=>r.era==='both'||era==='future';
         P.cum=[0];let L=0;for(let k=1;k<pts.length;k++){L+=Math.hypot(pts[k].x-pts[k-1].x,pts[k].n-pts[k-1].n,pts[k].a-pts[k-1].a);P.cum.push(L);}P.len=L;
@@ -481,11 +488,12 @@ function latAtten(latM,altM){
   return G*Lam/10.86;
 }
 function levelAt(ac,kind,latKm,altKm){const latM=latKm*1000,altM=Math.max(altKm*1000,8);return curveL(ac,kind,Math.hypot(latM,altM)*3.281)-latAtten(latM,altM);}
-function noiseAt(s,era,ac,flow){
+function noiseAt(s,era,ac,flow,apts){
   let best={L:0,lat:0,alt:0,q:null,path:null,along:0};
   for(const p of PATHS){
     if(!p.inEra(era))continue;
     if(!flowOK(p,flow))continue;
+    if(apts&&!apts[p.apt])continue;
     const pts=p.pts;
     for(let k=0;k<pts.length-1;k++){
       const a=pts[k],b=pts[k+1],dx=b.x-a.x,dn=b.n-a.n,l2=dx*dx+dn*dn;
@@ -655,7 +663,7 @@ function schoolsFor(name){
 // ---------- state ----------
 const DEFAULT_REF={lng:144.862,lat:-37.761,title:'Avondale Heights'};
 const state={base:'map',era:'today',flow:'all',ac:'narrow',exag:1,paused:false,terrain:false,googleKey:'',
-  layers:{noise:false,paths:true,planes:true,apt:true,rail:true,railPlan:true,road:true,roadPlan:true,dc:true,sub:false,bld:true,crime:true,invest:true,schools:true,markers:true},crimeMode:'all',investMode:'growth',sort:'family',schF:{k:true,p:true,s:true,u:true,min:0},
+  layers:{noise:false,paths:true,planes:true,apt:true,rail:true,railPlan:false,road:true,roadPlan:false,dc:true,sub:false,bld:true,crime:false,invest:false,schools:true,markers:true},apts:{YMML:true,YMEN:true,YMAV:true},crimeMode:'all',investMode:'growth',sort:'family',schF:{k:true,p:true,s:true,u:true,min:0},
   sel:null,spot:null,ref:cacheGet('tfpm:ref')||DEFAULT_REF,follow:null};
 let AIRPORT=null, SUBS=[], subsReady=false, DCPTS=[];
 const altOffset=()=>state.googleKey&&state.base==='google'?135:(state.terrain?132:0);
@@ -801,7 +809,7 @@ function applyAirportData(els){
     if(dist(a,b)<0.8)return;
     for(const [icao,o] of Object.entries(OTHER_APT)){
       if(o.noModel)continue;
-      if(dist(c,toL(o.lng,o.lat))<3.5){const ref=(w.tags.ref||'').replace(/\s/g,'');const r=mkRunway('extra',a,b,'both',{today:[ref,ref],future:[ref,ref]},['x','x']);Object.assign(r,{airport:o.name,ac:o.ac,arrKm:o.arrKm,depKm:o.depKm});EXTRA_RW.push(r);return;}
+      if(dist(c,toL(o.lng,o.lat))<3.5){const ref=(w.tags.ref||'').replace(/\s/g,'');const r=mkRunway('extra',a,b,'both',{today:[ref,ref],future:[ref,ref]},['x','x']);Object.assign(r,{airport:o.name,ac:o.ac,arrKm:o.arrKm,depKm:o.depKm,icao});EXTRA_RW.push(r);return;}
     }
   });
   const rws=allRw.filter(w=>{const g=w.geometry;const c=toL((g[0].lon+g[g.length-1].lon)/2,(g[0].lat+g[g.length-1].lat)/2);return Math.hypot(c.x,c.n)<5;});
@@ -926,10 +934,10 @@ function rampColor(L){
   return RAMP[RAMP.length-1][1];
 }
 function getGrid(){
-  const key=state.era+'|'+state.ac+'|'+state.flow;
+  const key=state.era+'|'+state.ac+'|'+state.flow+'|'+Object.keys(state.apts).filter(k=>state.apts[k]).join();
   if(GRID[key])return GRID[key];
   const vals=new Float32Array(GCOLS*GROWS);
-  for(let j=0;j<GROWS;j++)for(let i=0;i<GCOLS;i++)vals[j*GCOLS+i]=noiseAt({x:GX0+i*GSTEP,n:GN1-j*GSTEP},state.era,state.ac,state.flow).L;
+  for(let j=0;j<GROWS;j++)for(let i=0;i<GCOLS;i++)vals[j*GCOLS+i]=noiseAt({x:GX0+i*GSTEP,n:GN1-j*GSTEP},state.era,state.ac,state.flow,state.apts).L;
   let image=null;
   try{const cv=document.createElement('canvas');cv.width=GCOLS;cv.height=GROWS;const ctx=cv.getContext('2d');
     const img=ctx.createImageData(GCOLS,GROWS);for(let k=0;k<vals.length;k++){const c=rampColor(vals[k]);img.data[k*4]=c[0];img.data[k*4+1]=c[1];img.data[k*4+2]=c[2];img.data[k*4+3]=c[3];}ctx.putImageData(img,0,0);image=cv;}catch(e){image=null;}
@@ -1001,7 +1009,7 @@ const RGB_T=[47,79,134],RGB_F=[142,47,111];
 
 // ---------- deck layers ----------
 let staticKey='',staticLayers=[],visPaths=[],planes=[];
-function pathVisible(p){return p.inEra(state.era)&&flowOK(p,state.flow);}
+function pathVisible(p){return p.inEra(state.era)&&flowOK(p,state.flow)&&state.apts[p.apt]!==false;}
 function coordOf(p,k){const q=p.pts[k];const ll=toLL(q.x,q.n);return [ll[0],ll[1],q.a*1000*state.exag+altOffset()];}
 function heightMarkers(){
   const out=[];
@@ -1079,7 +1087,7 @@ let last=performance.now();
 const SPEED=0.3;
 function frame(now){
   const dt=Math.min(0.1,(now-last)/1000);last=now;
-  const key=[state.era,state.flow,state.exag,state.base,state.googleKey?'k':'',state.terrain,state.layers.paths,state.layers.apt,state.layers.noise,state.ac,RW.map(r=>r.A.x.toFixed(4)).join()].join('|');
+  const key=[state.era,state.flow,state.exag,state.base,state.googleKey?'k':'',state.terrain,state.layers.paths,state.layers.apt,state.layers.noise,state.ac,JSON.stringify(state.apts),RW.map(r=>r.A.x.toFixed(4)).join()].join('|');
   if(key!==staticKey){staticKey=key;buildStatic();}
   if(spinning&&!state.follow)map.setBearing(map.getBearing()+dt*7);
   const L=staticLayers.slice();
@@ -1167,6 +1175,7 @@ document.getElementById('vClean').onclick=()=>{
   else{savedLayers=Object.assign({},state.layers);setAll(false);toast('Clean map. Tap Clean map again to bring everything back.',3500);}
 };
 onRadio('cm',v=>{state.crimeMode=v;applyAll();});
+[['aML','YMML'],['aEN','YMEN'],['aAV','YMAV']].forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{const on=e.target.checked;const go=()=>{state.apts[k]=on;applyAll();};if(state.layers.noise)heavy(()=>{state.apts[k]=on;getGrid();applyAll();});else go();}));
 onRadio('im',v=>{state.investMode=v;applyAll();});
 const sMin=document.getElementById('sMin');
 const sWord=v=>v<=0?'Show all':v>=65?v+'+ · well above average':v>=55?v+'+ · above average':v>=45?v+'+ · around average or better':v+'+';
