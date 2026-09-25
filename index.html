@@ -735,7 +735,7 @@ map.on('load',()=>{
   map.addSource('sch3d',{type:'geojson',data:fc([])});
   map.addLayer({id:'sch-3d',type:'fill-extrusion',source:'sch3d',layout:{visibility:'none'},paint:{'fill-extrusion-color':['get','col'],'fill-extrusion-height':['get','h'],'fill-extrusion-opacity':0.9}},'sch');
   map.addLayer({id:'sch-lbl',type:'symbol',source:'schools',minzoom:12.3,layout:{visibility:'none','text-field':['case',['get','rated'],['concat',['get','name'],'  ',['to-string',['get','score']]],['get','name']],'text-font':['Noto Sans Regular'],'text-size':10.5,'text-offset':[0,1.1],'text-anchor':'top','text-max-width':11,'text-optional':true},paint:{'text-color':'#1e3a8a','text-halo-color':'#fff','text-halo-width':1.6}});
-  map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['format',['upcase',['get','name']],{},'\n',{},['get','word'],{'font-scale':0.85,'text-font':['literal',['Noto Sans Regular']]}],'text-font':['Noto Sans Bold'],'text-size':['interpolate',['linear'],['zoom'],9,9.5,14,13],'text-letter-spacing':0.08,'text-max-width':12,'text-line-height':1.3},paint:{'text-color':'#2b313a','text-halo-color':'rgba(255,255,255,0.95)','text-halo-width':1.8}});
+  map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['format',['upcase',['get','name']],{},'\n',{},['get','word'],{'font-scale':0.85,'text-font':['literal',['Noto Sans Regular']]}],'text-font':['Noto Sans Bold'],'text-size':['interpolate',['linear'],['zoom'],9,9.5,14,13],'text-letter-spacing':0.04,'text-max-width':20,'text-line-height':1.3},paint:{'text-color':'#2b313a','text-halo-color':'rgba(255,255,255,0.95)','text-halo-width':1.8}});
   map.getSource('plans').setData(fc(PLANS.map(p=>({type:'Feature',properties:{kind:p.kind,cert:p.cert,name:p.name,status:p.status,about:p.about,url:p.url},geometry:{type:'LineString',coordinates:p.coords}}))));
   renderRunway3();renderAirport();applyAll();
   toast('Loading suburbs and the airport boundary…');
@@ -767,8 +767,10 @@ function renderSubs(){
     const st=subStat(s),c=crimeFor(s.name);
     const props={name:s.name};if(c){props.ccol=c.hex;props.cpat='hatch'+c.lvl;}const pr=propFor(s.name);if(pr)props.icol=pr.hex;
     f.push({type:'Feature',properties:props,geometry:{type:'MultiPolygon',coordinates:s.rings.map(r=>[ringLL(r)])}});
-    const parts=[];if(state.layers.noise&&st)parts.push('Planes: '+lev(st.med).w.toLowerCase());if(state.layers.crime)parts.push('Crime: '+(c?c.word.toLowerCase():'no data'));if(state.layers.invest&&pr)parts.push(state.investMode==='growth'?growthWords(pr.growth):state.investMode==='price'?money(pr.median):pr.yld.toFixed(1)+'% rent return');
-    pts.push({type:'Feature',properties:{name:s.name,word:parts.join('  ·  ')},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
+    const parts=[];if(state.layers.noise&&st)parts.push('Planes: '+lev(st.med).w.toLowerCase());
+    if(state.layers.crime)parts.push(c?`Crime ${c.word.toLowerCase()} · ${Math.round(state.crimeMode==='person'?c.person:c.all)} per 1,000`:'Crime: no data');
+    if(state.layers.invest)parts.push(pr?(state.investMode==='growth'?`${pr.growth>=0?'+':''}${pr.growth.toFixed(1)}% last year · ${money(pr.median)}`:state.investMode==='price'?`${money(pr.median)} median · ${pr.growth>=0?'+':''}${pr.growth.toFixed(1)}%`:`${pr.yld.toFixed(1)}% rent return · $${pr.rent}/wk`):'Property: no data');
+    pts.push({type:'Feature',properties:{name:s.name,word:parts.join('\n')},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
   });
   map.getSource('subs').setData(fc(f));map.getSource('subpts').setData(fc(pts));
 }
@@ -1129,8 +1131,9 @@ function applyAll(){
   const google=state.base==='google'&&!!state.googleKey,Ly=state.layers;
   setVis('sat',state.base==='sat');
   ['apt-fill','apt-case','apt-line'].forEach(id=>setVis(id,Ly.apt&&!google));
-  ['sub-line','sub-lbl','sub-sel'].forEach(id=>setVis(id,Ly.sub));
-  placeIds.forEach(id=>setVis(id,!Ly.sub));
+  ['sub-line','sub-sel'].forEach(id=>setVis(id,Ly.sub));
+  const statsOn=Ly.crime||Ly.invest;setVis('sub-lbl',Ly.sub||statsOn);
+  placeIds.forEach(id=>setVis(id,!(Ly.sub||statsOn)));
   setVis('rw3-fill',state.era==='future'&&!google);
   setVis('bld3d',Ly.bld&&!google);
   ['rail','rail-dash','station','station-lbl'].forEach(id=>setVis(id,Ly.rail));
