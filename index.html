@@ -154,7 +154,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
         <div class="nlab"><span>Quiet</span><span>Faint</span><span>Heard</span><span>Loud</span><span>V. loud</span></div>
       </div>
       <div class="crow" id="crimeLegend" hidden>
-        <div class="t">Crime compared with average</div>
+        <div class="t">Crime compared with average <span style="text-transform:none;letter-spacing:0">(striped when property is on)</span></div>
         <div class="ramp5"><span style="background:#d9cfe9"></span><span style="background:#b6a2d6"></span><span style="background:#8f74bd"></span><span style="background:#684b9e"></span><span style="background:#42286d"></span></div>
         <div class="nlab"><span>Much lower</span><span>Lower</span><span>Average</span><span>Higher</span><span>Much higher</span></div>
       </div>
@@ -179,8 +179,12 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
       <button class="btn" id="vRide">Fly a landing</button>
       <button class="btn" id="vPause">Pause</button>
       <button class="btn" id="vClean">Clean map</button>
+      <button class="btn" id="vRotL" title="Rotate left" aria-label="Rotate left">⟲</button>
+      <button class="btn" id="vRotR" title="Rotate right" aria-label="Rotate right">⟳</button>
+      <button class="btn" id="vRotMode">Rotate mode</button>
+      <button class="btn" id="vSpin">Spin</button>
     </div>
-    <div class="hint glass">Right-drag or Ctrl-drag to tilt · Tap anywhere to see how loud it gets there</div>
+    <div class="hint glass">To spin the map: tap Rotate mode, then drag in any direction. Or right-click and drag, or twist two fingers on a phone. Tap anywhere to check that spot</div>
     <div class="toast" id="toast">Loading map…</div>
   </div>
 
@@ -209,17 +213,17 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
       <div class="allbtns"><button class="btn" id="allOff">Turn everything off</button><button class="btn" id="allOn">Turn everything on</button></div>
       <div class="layers">
         <div class="grp">Planes</div>
-        <label><input type="checkbox" id="lNoise" checked><span class="key" style="background:linear-gradient(90deg,#e3c48c,#d9923e,#b8482c,#6b1f45)"></span><span>Plane noise shading<small>Darker means louder when a plane goes over</small></span></label>
+        <label><input type="checkbox" id="lNoise"><span class="key" style="background:linear-gradient(90deg,#e3c48c,#d9923e,#b8482c,#6b1f45)"></span><span>Plane noise shading<small>Darker means louder when a plane goes over</small></span></label>
         <label><input type="checkbox" id="lPaths" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#2f4f86" stroke-width="2.5"/></svg><span>Flight paths</span></label>
         <label><input type="checkbox" id="lPlanes" checked><svg width="30" height="12" viewBox="0 0 30 12"><path d="M15 1l2 4h8v2h-8l-2 4h-1l1-4H9L7 9H6l1-3-1-3h1l2 2h6L14 1z" fill="#3d4450"/></svg><span>Moving planes</span></label>
-        <label><input type="checkbox" id="lApt" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#c8102e" stroke-width="3"/></svg><span>Airport land</span></label>
+        <label><input type="checkbox" id="lApt" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#c8102e" stroke-width="3"/></svg><span>Airport land<small>Melbourne, Essendon Fields, Avalon and Point Cook airfields</small></span></label>
         <div class="grp">Transport</div>
         <label><input type="checkbox" id="lRail" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#2a2f36" stroke-width="4"/><line x1="0" y1="5" x2="30" y2="5" stroke="#fff" stroke-width="1.6" stroke-dasharray="4 4"/></svg><span>Train lines and stations</span></label>
         <label><input type="checkbox" id="lRailPlan" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#0e7c73" stroke-width="3.5" stroke-dasharray="5 3"/></svg><span>Planned train lines<small>Airport Rail, Suburban Rail Loop West</small></span></label>
         <label><input type="checkbox" id="lRoad" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="4"/></svg><span>Freeways and highways</span></label>
         <label><input type="checkbox" id="lRoadPlan" checked><svg width="30" height="10"><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="8" stroke-opacity=".25"/><line x1="0" y1="5" x2="30" y2="5" stroke="#d08a2a" stroke-width="2.5" stroke-dasharray="5 3"/></svg><span>Planned roads<small>Outer Ring Road land, roads being built</small></span></label>
         <div class="grp">Neighbourhood</div>
-        <label><input type="checkbox" id="lCrime"><span class="key" style="background:linear-gradient(90deg,#d9cfe9,#8f74bd,#42286d)"></span><span>Crime by suburb<small>Darker means more crime per resident</small></span></label>
+        <label><input type="checkbox" id="lCrime" checked><span class="key" style="background:linear-gradient(90deg,#d9cfe9,#8f74bd,#42286d)"></span><span>Crime by suburb<small>Darker means more crime per resident</small></span></label>
         <div class="subopt" id="crimeSeg" hidden>
           <div class="cap">Which crimes to count</div>
           <div class="seg" role="radiogroup" aria-label="Which crimes to count">
@@ -227,7 +231,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
             <label><input type="radio" name="cm" value="person"><span>Crimes against people<br><small style="font-weight:400;color:var(--muted)">assault, robbery, threats</small></span></label>
           </div>
         </div>
-        <label><input type="checkbox" id="lInv"><span class="key" style="background:linear-gradient(90deg,#e3eee6,#83b796,#1f5c3d)"></span><span>Property market<small>House prices, growth and rent by suburb</small></span></label>
+        <label><input type="checkbox" id="lInv" checked><span class="key" style="background:linear-gradient(90deg,#e3eee6,#83b796,#1f5c3d)"></span><span>Property market<small>House prices, growth and rent by suburb</small></span></label>
         <div class="subopt" id="invSeg" hidden>
           <div class="cap">Colour suburbs by</div>
           <div class="seg" role="radiogroup" aria-label="Colour suburbs by">
@@ -236,7 +240,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
             <label><input type="radio" name="im" value="yield"><span>Rent return<br><small style="font-weight:400;color:var(--muted)">rent as % of price</small></span></label>
           </div>
         </div>
-        <label><input type="checkbox" id="lSch"><svg width="30" height="12"><circle cx="9" cy="6" r="5" fill="#1e3a8a"/><circle cx="21" cy="6" r="4" fill="#9bb8ee"/></svg><span>Schools<small>Kinders to universities, rated schools coloured</small></span></label>
+        <label><input type="checkbox" id="lSch" checked><svg width="30" height="12"><circle cx="9" cy="6" r="5" fill="#1e3a8a"/><circle cx="21" cy="6" r="4" fill="#9bb8ee"/></svg><span>Schools<small>Rated schools stand up as columns: the taller, the better the results</small></span></label>
         <div class="chips" id="schChips" hidden>
           <label><input type="checkbox" id="sK" checked> Kinder</label>
           <label><input type="checkbox" id="sP" checked> Primary</label>
@@ -248,9 +252,9 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
           <div class="cap" id="sMinCap">Scores are out of 100 and based on NAPLAN results. 50 is about the national average. Kinders, TAFEs and unis have no score and are hidden when a minimum is set.</div>
         </div>
         <div class="grp">Other</div>
-        <label><input type="checkbox" id="lDc" checked><svg width="30" height="12"><circle cx="15" cy="6" r="5" fill="#334155" stroke="#fff" stroke-width="1.5"/></svg><span>Data centres<small>Filled: operating. Outline: planned</small></span></label>
-        <label><input type="checkbox" id="lSub" checked><svg width="30" height="10"><text x="0" y="9" font-size="9" font-family="IBM Plex Sans Condensed,sans-serif" font-weight="600" fill="#3d4450" letter-spacing="1">ABC</text></svg><span>Suburb names</span></label>
-        <label><input type="checkbox" id="lBld" checked><svg width="30" height="12"><path d="M6 11V4l6-3 6 3v7z" fill="#cfd3da"/></svg><span>3D buildings</span></label>
+        <label><input type="checkbox" id="lDc" checked><svg width="30" height="12"><circle cx="15" cy="6" r="5" fill="#334155" stroke="#fff" stroke-width="1.5"/></svg><span>Data centres<small>Dark blocks: operating. Pale blocks: planned. Shown larger than real</small></span></label>
+        <label><input type="checkbox" id="lSub"><svg width="30" height="10"><text x="0" y="9" font-size="9" font-family="IBM Plex Sans Condensed,sans-serif" font-weight="600" fill="#3d4450" letter-spacing="1">ABC</text></svg><span>Suburb names</span></label>
+        <label><input type="checkbox" id="lBld" checked><svg width="30" height="12"><path d="M6 11V4l6-3 6 3v7z" fill="#cfd3da"/></svg><span>3D buildings<small>Real building shapes rise up when you zoom in to street level</small></span></label>
       </div>
     </section>
 
@@ -310,6 +314,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
       <summary>How this is worked out</summary>
       <div class="stack">
         <p class="note">Plane noise: for every spot, the map works out how close each flight path passes and how high the plane is there. It then looks up how loud that plane sounds on the ground, using published measurements from NATS, the UK air traffic service, and Melbourne Airport's third runway noise fact sheet. The loudness words match common measures. "Loud" starts where a plane interrupts a conversation indoors with the windows open, the level airports track as N70. Ten points louder sounds about twice as loud.</p>
+        <p class="note">Other airports: Essendon Fields handles business jets, turboprops, air ambulance and police aircraft, with far fewer flights than Tullamarine. Its loudness uses NATS figures for a 50 to 70 seat turboprop, which sits at the louder end of its traffic. Avalon handles Jetstar A320s and 737s and uses the same jet figures as Tullamarine. RAAF Base Williams at Point Cook is outlined only. Its light aircraft and helicopters aren't in the noise estimate.</p>
         <p class="note">It shows the loudest single plane, not how many fly over each day, which changes with the wind. Flight paths are simplified, so treat the results as a guide. Real planes spread out a few hundred metres either side.</p>
         <p class="note">Suburbs, the airport boundary, today's runways, train lines, stations and highways come from OpenStreetMap. The third runway is placed from Melbourne Airport's published figures. Planned train lines and roads are drawn from public announcements. Where the exact route isn't public, the line is marked as approximate. Data centres come from OpenStreetMap, Data Center Map and 2026 planning news, with locations found from their street addresses.</p>
         <p class="note">Crime: offences recorded by Victoria Police in the year to June 2026, published by the Crime Statistics Agency Victoria, divided by each suburb's 2021 census population (as republished suburb by suburb on AU Crime Tracker). "All crime" is compared with the Victorian average of about 87 offences per 1,000 people. "Crimes against people" (assault, robbery, threats and similar) is compared with the typical western suburb, about 11 per 1,000. Three things can make a suburb look worse than its streets are. Big shopping centres add shoplifting. Fast-growing estates have many more residents than in 2021. Suburbs with prisons or very few residents skew the rate. The map flags these cases where they apply.</p>
@@ -421,31 +426,37 @@ const RWNAME={main:'main runway',cross:'east-west runway',new:'new third runway'
 
 // ---------- flight paths (a = height km) ----------
 const TAN3=Math.tan(3*D2R);
-function arrivalPts(th,brg){const p=[];for(let d=26;d>0;d-=1){const q=add(th,brg+180,d);p.push({x:q.x,n:q.n,a:d*TAN3});}
+function arrivalPts(th,brg,km){const p=[];for(let d=km||26;d>0;d-=1){const q=add(th,brg+180,d);p.push({x:q.x,n:q.n,a:d*TAN3});}
   p.push({x:th.x,n:th.n,a:0.015});const r=add(th,brg,1.6);p.push({x:r.x,n:r.n,a:0.005});return p;}
-function departurePts(th,brg,len,turn){const G=0.1,p=[{x:th.x,n:th.n,a:0.005}];let q=add(th,brg,len*0.6),d=0,h=brg;p.push({x:q.x,n:q.n,a:0.01});
+function departurePts(th,brg,len,turn,straightKm){const G=0.1,p=[{x:th.x,n:th.n,a:0.005}];let q=add(th,brg,len*0.6),d=0,h=brg;p.push({x:q.x,n:q.n,a:0.01});
+  if(straightKm){for(let i=0;i<straightKm;i++){q=add(q,h,1);d+=1;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}return p;}
   for(let i=0;i<6;i++){q=add(q,h,1);d+=1;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}
   for(let i=1;i<=4;i++){h=brg+turn*i/4;q=add(q,h,0.5);d+=0.5;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}
   for(let i=0;i<7;i++){q=add(q,h,2);d+=2;p.push({x:q.x,n:q.n,a:Math.min(3,d*G)});}
   return p;}
 let PATHS=[];
+let EXTRA_RW=[];
 function buildPaths(){
   PATHS=[];
-  RW.forEach(r=>{
+  const mkAll=(r,extra)=>{
     [[r.A,r.brg,0],[r.B,(r.brg+180)%360,1]].forEach(([th,brg,i])=>{
       const mk=(kind,turn,pts)=>{
-        const P={rw:r,i,kind,turn,pts,th,base:r.base[i],future:r.era==='future'};
-        P.plain=()=>`planes ${kind==='arr'?'landing on':'taking off from'} the ${RWNAME[r.key]}`;
+        const P={rw:r,i,kind,turn,pts,th,base:r.base[i],travel:brg,future:r.era==='future',ac:r.ac||null,extra};
+        P.plain=()=>extra?`planes ${kind==='arr'?'landing at':'taking off from'} ${r.airport}`:`planes ${kind==='arr'?'landing on':'taking off from'} the ${RWNAME[r.key]}`;
         P.inEra=era=>r.era==='both'||era==='future';
         P.cum=[0];let L=0;for(let k=1;k<pts.length;k++){L+=Math.hypot(pts[k].x-pts[k-1].x,pts[k].n-pts[k-1].n,pts[k].a-pts[k-1].a);P.cum.push(L);}P.len=L;
         P.segB=pts.slice(1).map((p,k)=>brgOf(pts[k],p));
         PATHS.push(P);
       };
-      mk('arr',0,arrivalPts(th,brg));
-      [-40,0,40].forEach(t=>mk('dep',t,departurePts(th,brg,r.len,t)));
+      mk('arr',0,arrivalPts(th,brg,extra?r.arrKm:26));
+      if(extra)mk('dep',0,departurePts(th,brg,r.len,0,r.depKm));
+      else [-40,0,40].forEach(t=>mk('dep',t,departurePts(th,brg,r.len,t)));
     });
-  });
+  };
+  RW.forEach(r=>mkAll(r,false));EXTRA_RW.forEach(r=>mkAll(r,true));
 }
+const FLOWB={34:340,16:160,27:270,'09':90};
+function flowOK(p,flow){if(!flow||flow==='all')return true;const d=Math.abs((((p.travel-FLOWB[flow])%360)+540)%360-180);return d<=45;}
 buildPaths();
 
 // ---------- noise model (internal units: dB(A) Lmax) ----------
@@ -455,6 +466,7 @@ const CURVES={
   wide:  {arr:[[1000,84],[2000,74],[3000,68],[4000,64],[5000,60],[6000,58],[7000,56],[8000,55]],
           dep:[[1000,92],[2000,83],[3000,77],[4000,73],[5000,69],[6000,66],[7000,64],[8000,61],[9000,59],[10000,58]]}
 };
+CURVES.turbo={arr:[[1000,79],[2000,70],[3000,66],[4000,64],[5000,62],[6000,61],[7000,59],[8000,57],[9000,57],[10000,56]],dep:[[1000,78],[2000,71],[3000,67],[4000,64],[5000,62],[6000,60],[7000,58],[8000,56],[9000,56]]};
 [['arr',5],['dep',6]].forEach(([k,off])=>{CURVES.wide[k]=CURVES.wide[k].map(([h,l])=>[h,l-off*Math.max(0,Math.min(1,(4000-h)/3000))]);});
 function curveL(ac,kind,ft){
   const c=CURVES[ac][kind];
@@ -473,7 +485,7 @@ function noiseAt(s,era,ac,flow){
   let best={L:0,lat:0,alt:0,q:null,path:null,along:0};
   for(const p of PATHS){
     if(!p.inEra(era))continue;
-    if(flow&&flow!=='all'&&p.base!==flow)continue;
+    if(!flowOK(p,flow))continue;
     const pts=p.pts;
     for(let k=0;k<pts.length-1;k++){
       const a=pts[k],b=pts[k+1],dx=b.x-a.x,dn=b.n-a.n,l2=dx*dx+dn*dn;
@@ -481,7 +493,7 @@ function noiseAt(s,era,ac,flow){
       const qx=a.x+dx*t,qn=a.n+dn*t,lat=Math.hypot(s.x-qx,s.n-qn);
       if(lat>9)continue;
       const alt=a.a+(b.a-a.a)*t;
-      const L=levelAt(ac,p.kind,lat,alt);
+      const L=levelAt(p.ac||ac,p.kind,lat,alt);
       if(L>best.L)best={L,lat,alt,q:{x:qx,n:qn,a:alt},path:p,along:p.kind==='arr'?Math.hypot(qx-p.th.x,qn-p.th.n):Math.hypot(qx-pts[0].x,qn-pts[0].n)};
     }
   }
@@ -643,7 +655,7 @@ function schoolsFor(name){
 // ---------- state ----------
 const DEFAULT_REF={lng:144.862,lat:-37.761,title:'Avondale Heights'};
 const state={base:'map',era:'today',flow:'all',ac:'narrow',exag:1,paused:false,terrain:false,googleKey:'',
-  layers:{noise:true,paths:true,planes:true,apt:true,rail:true,railPlan:true,road:true,roadPlan:true,dc:true,sub:true,bld:true,crime:false,invest:false,schools:false,markers:true},crimeMode:'all',investMode:'growth',sort:'family',schF:{k:true,p:true,s:true,u:true,min:0},
+  layers:{noise:false,paths:true,planes:true,apt:true,rail:true,railPlan:true,road:true,roadPlan:true,dc:true,sub:false,bld:true,crime:true,invest:true,schools:true,markers:true},crimeMode:'all',investMode:'growth',sort:'family',schF:{k:true,p:true,s:true,u:true,min:0},
   sel:null,spot:null,ref:cacheGet('tfpm:ref')||DEFAULT_REF,follow:null};
 let AIRPORT=null, SUBS=[], subsReady=false, DCPTS=[];
 const altOffset=()=>state.googleKey&&state.base==='google'?135:(state.terrain?132:0);
@@ -683,6 +695,8 @@ map.on('load',()=>{
     map.addLayer({id:'station-lbl',type:'symbol',source:vsrc,'source-layer':'poi',minzoom:12.5,filter:['all',['==',['get','class'],'railway'],['match',['get','subclass'],['station','halt'],true,false]],layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':11,'text-offset':[0,1],'text-anchor':'top'},paint:{'text-color':'#2a2f36','text-halo-color':'#fff','text-halo-width':1.5}});
   }
   map.addLayer({id:'crime-fill',type:'fill',source:'subs',filter:['has','ccol'],layout:{visibility:'none'},paint:{'fill-color':['get','ccol'],'fill-opacity':0.55}},firstLabel);
+  CLEVELS.forEach((l,i)=>{try{const c=document.createElement('canvas');c.width=c.height=10;const x=c.getContext('2d');x.strokeStyle=l.hex;x.lineWidth=3;x.beginPath();x.moveTo(-2,12);x.lineTo(12,-2);x.moveTo(-2,2);x.lineTo(2,-2);x.moveTo(8,12);x.lineTo(12,8);x.stroke();const d=x.getImageData(0,0,10,10);map.addImage('hatch'+i,{width:10,height:10,data:new Uint8Array(d.data.buffer)});}catch(e){}});
+  map.addLayer({id:'crime-hatch',type:'fill',source:'subs',filter:['has','cpat'],layout:{visibility:'none'},paint:{'fill-pattern':['get','cpat'],'fill-opacity':0.9}},firstLabel);
   map.addLayer({id:'crime-line',type:'line',source:'subs',filter:['has','ccol'],layout:{visibility:'none'},paint:{'line-color':'#ffffff','line-width':1.2,'line-opacity':0.9}},firstLabel);
   map.addLayer({id:'inv-fill',type:'fill',source:'subs',filter:['has','icol'],layout:{visibility:'none'},paint:{'fill-color':['get','icol'],'fill-opacity':0.6}},firstLabel);
   map.addLayer({id:'inv-line',type:'line',source:'subs',filter:['has','icol'],layout:{visibility:'none'},paint:{'line-color':'#ffffff','line-width':1.2,'line-opacity':0.9}},firstLabel);
@@ -691,16 +705,23 @@ map.on('load',()=>{
   map.addLayer({id:'apt-fill',type:'fill',source:'apt',paint:{'fill-color':'#c8102e','fill-opacity':0.05}},firstLabel);
   map.addLayer({id:'apt-case',type:'line',source:'apt',paint:{'line-color':'#ffffff','line-width':6,'line-opacity':0.9}},firstLabel);
   map.addLayer({id:'apt-line',type:'line',source:'apt',paint:{'line-color':'#c8102e','line-width':2.6}},firstLabel);
+  map.addSource('aptpts',{type:'geojson',data:fc([])});
+  map.addLayer({id:'apt-lbl',type:'symbol',source:'aptpts',layout:{'text-field':['get','name'],'text-font':['Noto Sans Bold'],'text-size':11.5,'text-letter-spacing':0.1,'text-max-width':12},paint:{'text-color':'#c8102e','text-halo-color':'#ffffff','text-halo-width':2}});
   map.addLayer({id:'rw3-fill',type:'fill',source:'rw3',paint:{'fill-color':'#8e2f6f','fill-opacity':0.85}},firstLabel);
   map.addLayer({id:'plan-road-band',type:'line',source:'plans',filter:['==',['get','kind'],'road'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#d08a2a','line-opacity':0.16,'line-width':['interpolate',['exponential',2],['zoom'],8,3,12,40,15,320]}},firstLabel);
   map.addLayer({id:'plan-road',type:'line',source:'plans',filter:['==',['get','kind'],'road'],paint:{'line-color':'#b8741d','line-width':2,'line-dasharray':[3,2]}},firstLabel);
   map.addLayer({id:'plan-rail-band',type:'line',source:'plans',filter:['all',['==',['get','kind'],'rail'],['==',['get','cert'],'approx']],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#0e7c73','line-opacity':0.14,'line-width':['interpolate',['exponential',2],['zoom'],9,4,12,22,15,180]}},firstLabel);
   map.addLayer({id:'plan-rail',type:'line',source:'plans',filter:['==',['get','kind'],'rail'],layout:{'line-cap':'round'},paint:{'line-color':'#0e7c73','line-width':['match',['get','cert'],'route',4,'approx',3,2],'line-dasharray':['match',['get','cert'],'route',['literal',[2,1]],'approx',['literal',[1.5,1.5]],['literal',[0.5,2]]]}},firstLabel);
   map.addLayer({id:'plan-lbl',type:'symbol',source:'plans',layout:{'symbol-placement':'line','text-field':['get','name'],'text-font':['Noto Sans Bold'],'text-size':11,'text-letter-spacing':0.04,'symbol-spacing':320},paint:{'text-color':['match',['get','kind'],'road','#8a5613','#0b5f58'],'text-halo-color':'#ffffff','text-halo-width':1.8}});
-  map.addLayer({id:'dc',type:'circle',source:'dcs',paint:{'circle-radius':['interpolate',['linear'],['zoom'],9,4,15,9],'circle-color':['match',['get','st'],'plan','#ffffff','#334155'],'circle-stroke-color':['match',['get','st'],'plan','#334155','#ffffff'],'circle-stroke-width':['match',['get','st'],'plan',2.6,1.8],'circle-pitch-alignment':'map'}});
+  map.addLayer({id:'dc',type:'circle',source:'dcs',paint:{'circle-radius':['interpolate',['linear'],['zoom'],9,4,15,9],'circle-color':['match',['get','st'],'plan','#ffffff','#334155'],'circle-stroke-color':['match',['get','st'],'plan','#334155','#ffffff'],'circle-stroke-width':['match',['get','st'],'plan',2.6,1.8],'circle-pitch-alignment':'viewport'}});
+  map.addSource('dc3d',{type:'geojson',data:fc([])});
+  map.addLayer({id:'dc-3d-live',type:'fill-extrusion',source:'dc3d',filter:['!=',['get','st'],'plan'],paint:{'fill-extrusion-color':'#334155','fill-extrusion-height':70,'fill-extrusion-opacity':0.95}},'dc');
+  map.addLayer({id:'dc-3d-plan',type:'fill-extrusion',source:'dc3d',filter:['==',['get','st'],'plan'],paint:{'fill-extrusion-color':'#a8b3c4','fill-extrusion-height':45,'fill-extrusion-opacity':0.55}},'dc');
   map.addLayer({id:'dc-lbl',type:'symbol',source:'dcs',minzoom:11.5,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':11,'text-offset':[0,1.1],'text-anchor':'top','text-max-width':10},paint:{'text-color':'#334155','text-halo-color':'#fff','text-halo-width':1.6}});
   map.addSource('schools',{type:'geojson',data:fc([])});
-  map.addLayer({id:'sch',type:'circle',source:'schools',layout:{visibility:'none'},paint:{'circle-radius':['interpolate',['linear'],['zoom'],9,['match',['get','lv'],'k',1.6,'u',4,2.6],14,['match',['get','lv'],'k',5,'u',9,7.5]],'circle-color':['get','col'],'circle-stroke-color':['case',['get','rated'],'#ffffff',['match',['get','lv'],'k','#c0587e','u','#15181d','#8a929c']],'circle-stroke-width':['case',['get','rated'],1.6,1.4],'circle-pitch-alignment':'map'}});
+  map.addLayer({id:'sch',type:'circle',source:'schools',layout:{visibility:'none'},paint:{'circle-radius':['interpolate',['linear'],['zoom'],9,['match',['get','lv'],'k',1.6,'u',4,2.6],14,['match',['get','lv'],'k',5,'u',9,7.5]],'circle-color':['get','col'],'circle-stroke-color':['case',['get','rated'],'#ffffff',['match',['get','lv'],'k','#c0587e','u','#15181d','#8a929c']],'circle-stroke-width':['case',['get','rated'],1.6,1.4],'circle-pitch-alignment':'viewport'}});
+  map.addSource('sch3d',{type:'geojson',data:fc([])});
+  map.addLayer({id:'sch-3d',type:'fill-extrusion',source:'sch3d',layout:{visibility:'none'},paint:{'fill-extrusion-color':['get','col'],'fill-extrusion-height':['get','h'],'fill-extrusion-opacity':0.9}},'sch');
   map.addLayer({id:'sch-lbl',type:'symbol',source:'schools',minzoom:12.3,layout:{visibility:'none','text-field':['case',['get','rated'],['concat',['get','name'],'  ',['to-string',['get','score']]],['get','name']],'text-font':['Noto Sans Regular'],'text-size':10.5,'text-offset':[0,1.1],'text-anchor':'top','text-max-width':11,'text-optional':true},paint:{'text-color':'#1e3a8a','text-halo-color':'#fff','text-halo-width':1.6}});
   map.addLayer({id:'sub-lbl',type:'symbol',source:'subpts',layout:{'text-field':['format',['upcase',['get','name']],{},'\n',{},['get','word'],{'font-scale':0.85,'text-font':['literal',['Noto Sans Regular']]}],'text-font':['Noto Sans Bold'],'text-size':['interpolate',['linear'],['zoom'],9,9.5,14,13],'text-letter-spacing':0.08,'text-max-width':12,'text-line-height':1.3},paint:{'text-color':'#2b313a','text-halo-color':'rgba(255,255,255,0.95)','text-halo-width':1.8}});
   map.getSource('plans').setData(fc(PLANS.map(p=>({type:'Feature',properties:{kind:p.kind,cert:p.cert,name:p.name,status:p.status,about:p.about,url:p.url},geometry:{type:'LineString',coordinates:p.coords}}))));
@@ -714,7 +735,13 @@ map.on('error',e=>{if(e&&e.error&&/openfreemap/.test(String(e.error.message||'')
 
 function fc(f){return {type:'FeatureCollection',features:f};}
 const ringLL=r=>r.map(p=>toLL(p.x,p.n));
-function renderAirport(){if(!map.getSource('apt'))return;const ring=AIRPORT?AIRPORT.ring:FALLBACK_APT;map.getSource('apt').setData(fc([{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[ringLL(ring)]}}]));}
+function renderAirport(){
+  if(!map.getSource('apt'))return;const ring=AIRPORT?AIRPORT.ring:FALLBACK_APT;
+  const feats=[{type:'Feature',properties:{name:'Melbourne Airport'},geometry:{type:'Polygon',coordinates:[ringLL(ring)]}}];
+  const pts=[{type:'Feature',properties:{name:'MELBOURNE AIRPORT'},geometry:{type:'Point',coordinates:toLL(ringCentroid(ring).x,ringCentroid(ring).n)}}];
+  Object.entries(OTHER_APT).forEach(([icao,o])=>{const r=OTHER_RINGS[icao];if(r)feats.push({type:'Feature',properties:{name:o.name},geometry:{type:'Polygon',coordinates:[ringLL(r)]}});pts.push({type:'Feature',properties:{name:o.name.toUpperCase()},geometry:{type:'Point',coordinates:r?toLL(ringCentroid(r).x,ringCentroid(r).n):[o.lng,o.lat]}});});
+  map.getSource('apt').setData(fc(feats));if(map.getSource('aptpts'))map.getSource('aptpts').setData(fc(pts));
+}
 function renderRunway3(){
   if(!map.getSource('rw3'))return;const r=RW.find(x=>x.key==='new');
   const w=0.03,c=[add(r.A,r.brg-90,w),add(r.B,r.brg-90,w),add(r.B,r.brg+90,w),add(r.A,r.brg+90,w)];c.push(c[0]);
@@ -726,21 +753,22 @@ function renderSubs(){
   const f=[],pts=[];
   SUBS.forEach(s=>{
     const st=subStat(s),c=crimeFor(s.name);
-    const props={name:s.name};if(c)props.ccol=c.hex;const pr=propFor(s.name);if(pr)props.icol=pr.hex;
+    const props={name:s.name};if(c){props.ccol=c.hex;props.cpat='hatch'+c.lvl;}const pr=propFor(s.name);if(pr)props.icol=pr.hex;
     f.push({type:'Feature',properties:props,geometry:{type:'MultiPolygon',coordinates:s.rings.map(r=>[ringLL(r)])}});
     const parts=[];if(state.layers.noise&&st)parts.push('Planes: '+lev(st.med).w.toLowerCase());if(state.layers.crime)parts.push('Crime: '+(c?c.word.toLowerCase():'no data'));if(state.layers.invest&&pr)parts.push(state.investMode==='growth'?growthWords(pr.growth):state.investMode==='price'?money(pr.median):pr.yld.toFixed(1)+'% rent return');
     pts.push({type:'Feature',properties:{name:s.name,word:parts.join('  ·  ')},geometry:{type:'Point',coordinates:toLL(s.label.x,s.label.n)}});
   });
   map.getSource('subs').setData(fc(f));map.getSource('subpts').setData(fc(pts));
 }
-function renderDCs(){if(map.getSource('dcs'))map.getSource('dcs').setData(fc(DCPTS.map(d=>({type:'Feature',properties:{name:d.name,op:d.op,st:d.st,addr:d.addr||'',note:d.note||'',src:d.src||''},geometry:{type:'Point',coordinates:[d.lng,d.lat]}}))));}
+const blockAt=(lng,lat,half,sides)=>{const c=toL(lng,lat),r=[];for(let i=0;i<=sides;i++){const a=(i/sides)*Math.PI*2+Math.PI/sides;r.push(toLL(c.x+Math.cos(a)*half,c.n+Math.sin(a)*half));}return r;};
+function renderDCs(){if(map.getSource('dc3d'))map.getSource('dc3d').setData(fc(DCPTS.map(d=>({type:'Feature',properties:{st:d.st},geometry:{type:'Polygon',coordinates:[blockAt(d.lng,d.lat,0.11,4)]}}))));if(map.getSource('dcs'))map.getSource('dcs').setData(fc(DCPTS.map(d=>({type:'Feature',properties:{name:d.name,op:d.op,st:d.st,addr:d.addr||'',note:d.note||'',src:d.src||''},geometry:{type:'Point',coordinates:[d.lng,d.lat]}}))));}
 
 // ---------- data loading ----------
 async function loadData(){
-  let apt=cacheGet('tfpm:v2:apt');
+  let apt=cacheGet('tfpm:v3:apt');
   if(!apt){
-    try{const j=await overpass('[out:json][timeout:60];(nwr["aeroway"="aerodrome"]["icao"="YMML"];way["aeroway"="runway"](-37.72,144.78,-37.62,144.90););out geom;');
-      apt={elements:j.elements.filter(e=>e.type!=='node'||(e.tags&&e.tags.aeroway==='aerodrome'))};cacheSet('tfpm:v2:apt',apt);}catch(e){apt=null;}
+    try{const j=await overpass('[out:json][timeout:90];(nwr["aeroway"="aerodrome"]["icao"~"^(YMML|YMEN|YMAV|YMPC)$"];way["aeroway"="runway"](-37.72,144.78,-37.62,144.90);way["aeroway"="runway"](around:2500,-37.728,144.902);way["aeroway"="runway"](around:3500,-38.039,144.469););out geom;');
+      apt={elements:j.elements.filter(e=>e.type!=='node'||(e.tags&&e.tags.aeroway==='aerodrome'))};cacheSet('tfpm:v3:apt',apt);}catch(e){apt=null;}
   }
   if(apt)applyAirportData(apt.elements);
   let subs=cacheGet('tfpm:v2:subs');
@@ -758,10 +786,25 @@ async function loadData(){
   SUBS.forEach(prepSuburb);subsReady=true;
   await scoreSuburbs(state.ac);
 }
+const OTHER_APT={YMEN:{name:'Essendon Fields Airport',lng:144.902,lat:-37.728,ac:'turbo',arrKm:14,depKm:12},YMAV:{name:'Avalon Airport',lng:144.469,lat:-38.039,ac:null,arrKm:26,depKm:22},YMPC:{name:'RAAF Base Williams, Point Cook',lng:144.753,lat:-37.932,noModel:true}};
+let OTHER_RINGS={};
 function applyAirportData(els){
-  const aero=els.find(e=>e.tags&&e.tags.aeroway==='aerodrome'&&e.type!=='node');
-  if(aero){const rings=elementRings(aero,0.005).sort((a,b)=>Math.abs(ringArea(b))-Math.abs(ringArea(a)));if(rings.length)AIRPORT={ring:rings[0]};}
-  const rws=els.filter(e=>e.type==='way'&&e.tags&&e.tags.aeroway==='runway'&&e.geometry&&e.geometry.length>1);
+  els.filter(e=>e.tags&&e.tags.aeroway==='aerodrome'&&e.type!=='node').forEach(aero=>{
+    const rings=elementRings(aero,0.005).sort((a,b)=>Math.abs(ringArea(b))-Math.abs(ringArea(a)));if(!rings.length)return;
+    const icao=(aero.tags.icao||'').toUpperCase();
+    if(icao==='YMML')AIRPORT={ring:rings[0]};else if(OTHER_APT[icao])OTHER_RINGS[icao]=rings[0];
+  });
+  const allRw=els.filter(e=>e.type==='way'&&e.tags&&e.tags.aeroway==='runway'&&e.geometry&&e.geometry.length>1);
+  EXTRA_RW=[];
+  allRw.forEach(w=>{
+    const g=w.geometry.map(p=>toL(p.lon,p.lat));const a=g[0],b=g[g.length-1],c={x:(a.x+b.x)/2,n:(a.n+b.n)/2};
+    if(dist(a,b)<0.8)return;
+    for(const [icao,o] of Object.entries(OTHER_APT)){
+      if(o.noModel)continue;
+      if(dist(c,toL(o.lng,o.lat))<3.5){const ref=(w.tags.ref||'').replace(/\s/g,'');const r=mkRunway('extra',a,b,'both',{today:[ref,ref],future:[ref,ref]},['x','x']);Object.assign(r,{airport:o.name,ac:o.ac,arrKm:o.arrKm,depKm:o.depKm});EXTRA_RW.push(r);return;}
+    }
+  });
+  const rws=allRw.filter(w=>{const g=w.geometry;const c=toL((g[0].lon+g[g.length-1].lon)/2,(g[0].lat+g[g.length-1].lat)/2);return Math.hypot(c.x,c.n)<5;});
   let main=null,cross=null,nw=null;
   rws.forEach(w=>{
     const ref=(w.tags.ref||'').toUpperCase().replace(/\s/g,'');
@@ -771,7 +814,8 @@ function applyAirportData(els){
     else if(/16|34/.test(ref)){const A=a.n>b.n?a:b,B=A===a?b:a;main=mkRunway('main',A,B,'both',{today:['16','34'],future:['16L','34R']},['16','34']);}
     else if(/09|27/.test(ref)){const A=a.x<b.x?a:b,B=A===a?b:a;cross=mkRunway('cross',A,B,'both',{today:['09','27'],future:['09','27']},['09','27']);}
   });
-  if(main||cross){const d=defaultRunways();const m=main||d[0];RW=[m,cross||d[1],nw||deriveNew(m)];buildPaths();renderRunway3();GRID={};refCache=null;staticKey='';}
+  if(main||cross){const d=defaultRunways();const m=main||d[0];RW=[m,cross||d[1],nw||deriveNew(m)];}
+  buildPaths();renderRunway3();GRID={};refCache=null;staticKey='';
   renderAirport();
   if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);else renderCard();
   renderProfile();
@@ -868,12 +912,13 @@ function renderSchools(){
   if(!map.getSource('schools'))return;
   const F=state.schF;
   const show=d=>{const t=d.lv;const ok=(t==='k'&&F.k)||(t==='u'&&F.u)||(t==='p'&&F.p)||(t==='s'&&F.s)||(t==='c'&&(F.p||F.s))||(t==='o'&&(F.p||F.s));if(!ok)return false;if(F.min>0)return d.score!=null&&d.score>=F.min;return true;};
+  if(map.getSource('sch3d'))map.getSource('sch3d').setData(fc(SCHPTS.filter(d=>show(d)&&d.score!=null).map(d=>({type:'Feature',properties:{col:sBand(d.score).hex,h:Math.max(25,(d.score-30)*6)},geometry:{type:'Polygon',coordinates:[blockAt(d.lng,d.lat,0.05,8)]}}))));
   map.getSource('schools').setData(fc(SCHPTS.filter(show).map(d=>{const b=sBand(d.score);return {type:'Feature',properties:{name:d.name,lv:d.lv,sec:d.sec,score:d.score==null?-1:d.score,rated:d.score!=null,col:d.score==null?'#ffffff':b.hex,sub:d.sub},geometry:{type:'Point',coordinates:[d.lng,d.lat]}};})));
 }
 
 // ---------- smooth noise shading ----------
 let GRID={};
-const GX0=-27,GN1=15,GSTEP=0.3,GCOLS=158,GROWS=135;
+const GX0=-40,GN1=15,GSTEP=0.35,GCOLS=178,GROWS=172;
 const RAMP=[[55,[227,196,140,0]],[58,[227,196,140,70]],[63,[217,146,62,115]],[70,[184,72,44,150]],[76,[107,31,69,175]],[84,[70,15,45,195]]];
 function rampColor(L){
   if(L<=RAMP[0][0])return RAMP[0][1];
@@ -956,12 +1001,12 @@ const RGB_T=[47,79,134],RGB_F=[142,47,111];
 
 // ---------- deck layers ----------
 let staticKey='',staticLayers=[],visPaths=[],planes=[];
-function pathVisible(p){return p.inEra(state.era)&&(state.flow==='all'||p.base===state.flow);}
+function pathVisible(p){return p.inEra(state.era)&&flowOK(p,state.flow);}
 function coordOf(p,k){const q=p.pts[k];const ll=toLL(q.x,q.n);return [ll[0],ll[1],q.a*1000*state.exag+altOffset()];}
 function heightMarkers(){
   const out=[];
   visPaths.forEach(p=>{
-    if(p.kind!=='arr')return;
+    if(p.kind!=='arr'||p.extra)return;
     [[0.3,'Very low from here'],[0.6,'Low from here'],[1.1,'Medium height from here']].forEach(([h,t])=>{
       for(let k=0;k<p.pts.length-1;k++){const a=p.pts[k],b=p.pts[k+1];
         if((a.a-h)*(b.a-h)<=0&&a.a!==b.a){const f=(h-a.a)/(b.a-a.a),x=a.x+(b.x-a.x)*f,n=a.n+(b.n-a.n)*f,ll=toLL(x,n);
@@ -976,7 +1021,7 @@ function buildStatic(){
   const google=state.base==='google'&&state.googleKey;
   if(google){
     L.push(new deck.Tile3DLayer({id:'google3d',data:'https://tile.googleapis.com/v1/3dtiles/root.json',loadOptions:{fetch:{headers:{'X-GOOG-API-KEY':state.googleKey}}},operation:'terrain+draw',onTileError:()=>toast('Google 3D did not load. Check the key has the Map Tiles API turned on.',7000)}));
-    if(state.layers.apt){const r=AIRPORT?AIRPORT.ring:FALLBACK_APT;L.push(new deck.PathLayer({id:'apt3d',data:[{path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+40];})}],getPath:d=>d.path,getColor:[200,16,46],getWidth:4,widthUnits:'pixels'}));}
+    if(state.layers.apt){const r0=AIRPORT?AIRPORT.ring:FALLBACK_APT;L.push(new deck.PathLayer({id:'apt3d',data:[r0,...Object.values(OTHER_RINGS)].map(r=>({path:r.map(p=>{const ll=toLL(p.x,p.n);return [ll[0],ll[1],altOffset()+40];})})),getPath:d=>d.path,getColor:[200,16,46],getWidth:4,widthUnits:'pixels'}));}
   }
   if(state.layers.noise){
     const g=getGrid();
@@ -1036,6 +1081,7 @@ function frame(now){
   const dt=Math.min(0.1,(now-last)/1000);last=now;
   const key=[state.era,state.flow,state.exag,state.base,state.googleKey?'k':'',state.terrain,state.layers.paths,state.layers.apt,state.layers.noise,state.ac,RW.map(r=>r.A.x.toFixed(4)).join()].join('|');
   if(key!==staticKey){staticKey=key;buildStatic();}
+  if(spinning&&!state.follow)map.setBearing(map.getBearing()+dt*7);
   const L=staticLayers.slice();
   if(planes.length){
     const pd=[],trails=[],rings=[];
@@ -1081,7 +1127,9 @@ function applyAll(){
   ['plan-rail','plan-rail-band'].forEach(id=>setVis(id,Ly.railPlan));
   if(map.getLayer('plan-lbl'))map.setFilter('plan-lbl',['any',['all',['==',['get','kind'],'road'],Ly.roadPlan],['all',['==',['get','kind'],'rail'],Ly.railPlan]]);
   ['dc','dc-lbl'].forEach(id=>setVis(id,Ly.dc));
-  ['crime-fill','crime-line'].forEach(id=>setVis(id,Ly.crime));
+  setVis('crime-fill',Ly.crime&&!Ly.invest);setVis('crime-hatch',Ly.crime&&Ly.invest);setVis('crime-line',Ly.crime);
+  ['dc-3d-live','dc-3d-plan'].forEach(id=>setVis(id,Ly.dc));setVis('sch-3d',Ly.schools);
+  ['apt-lbl'].forEach(id=>setVis(id,Ly.apt));
   ['inv-fill','inv-line'].forEach(id=>setVis(id,Ly.invest));
   ['sch','sch-lbl'].forEach(id=>setVis(id,Ly.schools));
   document.getElementById('invLegend').hidden=!Ly.invest;document.getElementById('invSeg').hidden=!Ly.invest;
@@ -1104,7 +1152,7 @@ onRadio('era',v=>heavy(()=>{state.era=v;if(state.layers.noise)getGrid();applyAll
 onRadio('flow',v=>heavy(()=>{state.flow=v;if(state.layers.noise)getGrid();applyAll();}));
 onRadio('ac',v=>heavy(()=>{state.ac=v;refCache=null;if(state.spot)spotCheck(state.spot.lngLat,state.spot.title);if(state.layers.noise)getGrid();applyAll();scoreSuburbs(v);}));
 const LAYER_BOXES=[['lNoise','noise'],['lPaths','paths'],['lPlanes','planes'],['lApt','apt'],['lRail','rail'],['lRailPlan','railPlan'],['lRoad','road'],['lRoadPlan','roadPlan'],['lDc','dc'],['lCrime','crime'],['lInv','invest'],['lSch','schools'],['lSub','sub'],['lBld','bld']];
-LAYER_BOXES.forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{state.layers[k]=e.target.checked;if(e.target.checked)state.layers.markers=true;applyAll();}));
+LAYER_BOXES.forEach(([id,k])=>document.getElementById(id).addEventListener('change',e=>{const on=e.target.checked;const go=()=>{state.layers[k]=on;if(on)state.layers.markers=true;applyAll();};if(k==='noise'&&on&&!GRID[state.era+'|'+state.ac+'|'+state.flow])heavy(()=>{getGrid();go();});else go();}));
 function allOff(){return LAYER_BOXES.every(([,k])=>k==='bld'||!state.layers[k])&&!state.layers.markers;}
 let savedLayers=null;
 function setAll(on){
@@ -1137,6 +1185,18 @@ try{const k=localStorage.getItem('tfpm:gkey');if(k)document.getElementById('gKey
 document.getElementById('vTilt').onclick=()=>{stopRide();map.easeTo({center:[144.815,-37.715],zoom:11.3,pitch:60,bearing:-25,duration:1500});};
 document.getElementById('vWest').onclick=()=>{stopRide();map.easeTo({center:[144.80,-37.72],zoom:11.9,pitch:64,bearing:60,duration:1500});};
 document.getElementById('vTop').onclick=()=>{stopRide();map.easeTo({center:[144.80,-37.72],zoom:10.8,pitch:0,bearing:0,duration:1500});};
+document.getElementById('vRotL').onclick=()=>map.easeTo({bearing:map.getBearing()-45,pitch:Math.max(map.getPitch(),45),duration:700});
+document.getElementById('vRotR').onclick=()=>map.easeTo({bearing:map.getBearing()+45,pitch:Math.max(map.getPitch(),45),duration:700});
+let spinning=false,rotMode=false,rotDrag=null,suppressClick=false;
+const spinBtn=document.getElementById('vSpin'),rotBtn=document.getElementById('vRotMode');
+function stopSpin(){spinning=false;spinBtn.classList.remove('on');spinBtn.textContent='Spin';}
+spinBtn.onclick=()=>{if(spinning){stopSpin();return;}spinning=true;spinBtn.classList.add('on');spinBtn.textContent='Stop spin';if(map.getPitch()<40)map.easeTo({pitch:60,duration:800});};
+rotBtn.onclick=()=>{rotMode=!rotMode;rotBtn.classList.toggle('on',rotMode);rotBtn.textContent=rotMode?'Rotate mode on':'Rotate mode';if(rotMode){map.dragPan.disable();toast('Drag left or right to spin the map. Drag up or down to tilt. Tap Rotate mode again to move the map normally.',4500);}else map.dragPan.enable();};
+const cont=map.getCanvasContainer();
+cont.addEventListener('pointerdown',e=>{if(!rotMode||(e.pointerType==='mouse'&&e.button!==0))return;rotDrag={x:e.clientX,y:e.clientY,b:map.getBearing(),p:map.getPitch(),moved:false};stopSpin();});
+window.addEventListener('pointermove',e=>{if(!rotDrag)return;const dx=e.clientX-rotDrag.x,dy=e.clientY-rotDrag.y;if(Math.abs(dx)+Math.abs(dy)>4)rotDrag.moved=true;map.jumpTo({bearing:rotDrag.b-dx*0.35,pitch:Math.max(0,Math.min(85,rotDrag.p-dy*0.25))});});
+window.addEventListener('pointerup',()=>{if(rotDrag&&rotDrag.moved){suppressClick=true;setTimeout(()=>suppressClick=false,50);}rotDrag=null;});
+['dragstart','wheel'].forEach(ev=>map.on(ev,()=>stopSpin()));
 const pauseBtn=document.getElementById('vPause');
 pauseBtn.onclick=()=>{state.paused=!state.paused;pauseBtn.textContent=state.paused?'Play':'Pause';};
 const rideBtn=document.getElementById('vRide');
@@ -1152,6 +1212,7 @@ rideBtn.onclick=()=>{
 
 // ---------- click handling ----------
 map.on('click',e=>{
+  if(suppressClick)return;
   stopRide();
   const ids=['sch','dc','plan-rail','plan-road','plan-road-band','plan-rail-band'].filter(id=>map.getLayer(id)&&map.getLayoutProperty(id,'visibility')!=='none');
   const f=ids.length?map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers:ids}):[];
@@ -1198,6 +1259,7 @@ function renderCard(){
     const isRef=Math.abs(sp.lngLat.lng-state.ref.lng)<1e-5&&Math.abs(sp.lngLat.lat-state.ref.lat)<1e-5;
     h+=`<div><div class="nm">${escapeHtml(sp.title)}</div><div class="sub">${Math.hypot(sp.local.x,sp.local.n).toFixed(1)} km from the airport</div></div>
       ${verdict(sp.noise.today[ac],'today',rn.today[ac].L,isRef)}<div class="split"></div>${verdict(sp.noise.future[ac],'future',rn.future[ac].L,isRef)}
+      ${(()=>{const n=[];const dPC=dist(sp.local,toL(144.753,-37.932)),dEN=dist(sp.local,toL(144.902,-37.728));if(dPC<4)n.push(`About ${dPC.toFixed(1)} km from RAAF Base Williams at Point Cook. Expect some light aircraft and helicopters there, which aren't in this estimate.`);if(dEN<5)n.push(`About ${dEN.toFixed(1)} km from Essendon Fields Airport. Its traffic is mostly business jets, turboprops and air ambulance, with far fewer flights than Tullamarine.`);return n.map(t=>`<p class="flag">${t}</p>`).join('');})()}
       ${isRef?'':'<div><button class="btn" id="setRef">Compare everything with this spot</button></div>'}`;
   }else if(s&&s.stats[ac]){
     const st=s.stats[ac];
