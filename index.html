@@ -247,7 +247,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
             <label><input type="radio" name="im" value="yield"><span>Rent return<br><small style="font-weight:400;color:var(--muted)">rent as % of price</small></span></label>
           </div>
         </div>
-        <label><input type="checkbox" id="lSch" checked><svg width="30" height="12"><circle cx="9" cy="6" r="5" fill="#1e3a8a"/><circle cx="21" cy="6" r="4" fill="#9bb8ee"/></svg><span>Schools<small>Rated schools stand up as columns: the taller, the better the results</small></span></label>
+        <label><input type="checkbox" id="lSch"><svg width="30" height="12"><circle cx="9" cy="6" r="5" fill="#1e3a8a"/><circle cx="21" cy="6" r="4" fill="#9bb8ee"/></svg><span>Schools<small>Rated schools stand up as columns: the taller, the better the results</small></span></label>
         <div class="chips" id="schChips" hidden>
           <label><input type="checkbox" id="sK" checked> Kinder</label>
           <label><input type="checkbox" id="sP" checked> Primary</label>
@@ -664,7 +664,7 @@ function schoolsFor(name){
 // ---------- state ----------
 const DEFAULT_REF={lng:144.862,lat:-37.761,title:'Avondale Heights'};
 const state={base:'map',era:'today',flow:'all',ac:'narrow',exag:1,paused:false,terrain:false,googleKey:'',
-  layers:{noise:false,paths:true,planes:true,apt:true,rail:true,railPlan:false,road:true,roadPlan:false,dc:true,sub:false,bld:true,crime:false,invest:false,schools:true,markers:true},apts:{YMML:true,YMEN:true,YMAV:true},crimeMode:'all',investMode:'growth',sort:'family',schF:{k:true,p:true,s:true,u:true,min:0},
+  layers:{noise:false,paths:true,planes:true,apt:true,rail:true,railPlan:false,road:true,roadPlan:false,dc:true,sub:false,bld:true,crime:false,invest:false,schools:false,markers:true},apts:{YMML:true,YMEN:true,YMAV:true},crimeMode:'all',investMode:'growth',sort:'family',schF:{k:true,p:true,s:true,u:true,min:0},
   sel:null,spot:null,ref:cacheGet('tfpm:ref')||DEFAULT_REF,follow:null};
 let AIRPORT=null, SUBS=[], subsReady=false, DCPTS=[];
 const altOffset=()=>state.googleKey&&state.base==='google'?135:(state.terrain?132:0);
