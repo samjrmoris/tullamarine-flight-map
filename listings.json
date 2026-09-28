@@ -1,0 +1,20 @@
+[
+  {
+    "id": "11-carisbrook-court-taylors-hill",
+    "address": "11 Carisbrook Court, Taylors Hill VIC 3037",
+    "suburb": "Taylors Hill",
+    "url": "https://www.domain.com.au/11-carisbrook-court-taylors-hill-vic-3037-2020892216",
+    "status": "For sale",
+    "checked": "2026-09-29",
+    "guide": [899000, 950000],
+    "beds": 4, "baths": 2, "cars": 7, "land": 667, "building": 300,
+    "lastSold": null,
+    "estimate": {"low": 790000, "mid": 920000, "high": 1050000, "source": "Domain, updated 17 Sep 2026"},
+    "comps": {"n": 8, "low": 840000, "median": 877500, "high": 978000, "desc": "4-bed, 2-bath houses on 590 to 650 m² that sold in Taylors Hill in July and August 2026"},
+    "fair": [870000, 970000],
+    "verdict": "fair",
+    "headline": "Fairly priced",
+    "summary": "The $899k to $950k guide sits inside what similar houses nearby sold for, and matches Domain's $920k estimate. It has a bigger than usual house (300 m²) and lots of parking, which supports the upper half. With Melbourne prices easing (down 3.9% over three months), aim for the lower end of the guide.",
+    "notes": ["No previous sale on record for this address, so there's no 'up or down since last sale' figure."]
+  }
+]
