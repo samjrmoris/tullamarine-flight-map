@@ -192,7 +192,7 @@ Done:
 - Market sentences (Cotality HVI, August 2026 results) added for Sydney, Brisbane, Perth and Adelaide (`set_market.py`). These were empty, not only SA.
 - SA crime switched to the official SA Police 2025-26 suburb CSV (data.sa.gov.au) with person/property split; SA rate 65.25 per 1,000 (`official_crime.py`).
 - NT: rate 135.17 per 1,000; Darwin/Palmerston region populations from ABS 2021 council areas.
-- ACT crime switched to official ACT Policing district figures (June 2026 spreadsheet, 12 months to June 2026), Caris's decision. The removal-company suburb figures were dropped: Gungahlin's 11 suburbs summed to 3,183 vs the official district total of 3,202. ACT rate 57.89. `act_districts.py`.
+- ACT crime switched to official ACT Policing district figures (June 2026 spreadsheet, 12 months to June 2026), Sam's decision. The removal-company suburb figures were dropped: Gungahlin's 11 suburbs summed to 3,183 vs the official district total of 3,202. ACT rate 57.89. `act_districts.py`.
 - Site name changed to "Flight Path Australia" (page title, header, picker). Repo name and URL kept.
 - BUG FIXED (affects live Melbourne too): OpenStreetMap now tags Australian suburbs admin_level 9, not 10, so the suburb query returned nothing and an empty result was cached forever. Query now accepts 9 or 10, never caches an empty list, cache key bumped to `v3:subs`, old `v2:subs` removed.
 
