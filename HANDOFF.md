@@ -200,3 +200,5 @@ Still open:
 - Schools: DONE. SchoolRank blocks this machine, so the claude.ai chat fetched SA (64 suburbs) and ACT (55); merged 30 Sep. Adelaide now 122 rated schools, Canberra 77. Not independently re-checked from here: spot-check a few on schoolrank.com.au in a normal browser.
 - Spot-check suspicious house medians: Kingston ACT $615k, Phillip ACT $432k (mostly-unit suburbs), plus the existing list in section 4.6.
 - README, merge to main, house-check skill (section 4, steps 7 and 8).
+
+**Released 30 Sep 2026:** `multi-state` merged into `main` (560d6b8) and pushed; live site checked (Sydney loads, suburbs, airports, market note, no console errors). Next: house-check skill (step 8); optional full property refresh (5 of 34 spot-checked suburbs had newer figures at the source).
