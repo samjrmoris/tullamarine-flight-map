@@ -192,3 +192,67 @@
 {"n": "Seaford", "crime": [480, 4493, 79, 401]}
 {"n": "Aldinga Beach", "crime": [297, 10667, 111, 186]}
 {"n": "_meta", "name": "SA Police suburb crime statistics 2025-26 (data.sa.gov.au)", "url": "https://data.sa.gov.au/data/dataset/860126f7-eeb5-4fbc-be44-069aa0467d11", "period": "financial year to 30 June 2026", "level": "suburb", "stateRatePer1000": 65.25, "stateRateSource": "116,237 offences against the person and property with a suburb recorded, 2025-26 / 1,781,516 residents (ABS 2021 Census) = 65.25 per 1,000", "notes": "Offences = against the person + against property, the only two groups SA Police publish by suburb. Sexual offences are published without a location, so they are left out of both suburb and state figures. Suburb populations are ABS 2021 Census (via AU Crime Tracker)."}
+{"n":"Glenelg","schools":[["St Peter's Woodlands Grammar School","p","i",63],["St Mary's Memorial School","p","c",57]]}
+{"n":"Glenelg North","schools":[["St Leonards Primary School","p","g",59]]}
+{"n":"Glenelg East","schools":[["Glenelg Primary School","p","g",54]]}
+{"n":"Novar Gardens","schools":[["Immanuel Primary School","p","i",67],["Immanuel College","s","i",62]]}
+{"n":"Netley","schools":[]}
+{"n":"Plympton","schools":[["Plympton Primary School","p","g",62],["St John the Baptist Catholic School","p","c",55],["Plympton International College","c","g",51]]}
+{"n":"Plympton Park","schools":[]}
+{"n":"North Plympton","schools":[]}
+{"n":"Kurralta Park","schools":[]}
+{"n":"Marleston","schools":[]}
+{"n":"Richmond","schools":[["Tenison Woods Catholic Primary School","p","c",59]]}
+{"n":"West Richmond","schools":[]}
+{"n":"Mile End","schools":[["Temple Christian College","s","i",63],["St George College","c","i",52]]}
+{"n":"Torrensville","schools":[["Torrensville Primary School","p","g",60]]}
+{"n":"Thebarton","schools":[["Warriappendi Secondary School","s","g",16]]}
+{"n":"Lockleys","schools":[["St Francis School","p","c",57],["Lockleys North Primary School","p","g",52]]}
+{"n":"Brooklyn Park","schools":[["Brooklyn Park Primary School","p","g",63],["St John Bosco School","p","c",59]]}
+{"n":"Underdale","schools":[["Underdale High School","s","g",45]]}
+{"n":"Fulham","schools":[]}
+{"n":"Henley Beach","schools":[["Star of the Sea School","p","c",66],["Fulham Gardens Primary School","p","g",58],["Fulham North Primary School","p","g",56],["St Michael's College","c","c",55],["Henley High School","s","g",45]]}
+{"n":"Henley Beach South","schools":[["Henley Beach Primary School","p","g",53]]}
+{"n":"Grange","schools":[["Grange Primary School","p","g",60]]}
+{"n":"Kidman Park","schools":[["Kidman Park Primary School","p","g",55]]}
+{"n":"Flinders Park","schools":[["Flinders Park Primary School","p","g",62],["Nazareth Catholic College","c","c",50]]}
+{"n":"Cowandilla","schools":[["Cowandilla Primary School","p","g",60]]}
+{"n":"Hilton","schools":[]}
+{"n":"Camden Park","schools":[]}
+{"n":"Park Holme","schools":[["Ascot Park Primary School","p","g",47]]}
+{"n":"Morphettville","schools":[["Dara School","c","i",83]]}
+{"n":"Glengowrie","schools":[["Our Lady of Grace School","p","c",54]]}
+{"n":"Somerton Park","schools":[["Sacred Heart College","c","c",54]]}
+{"n":"Warradale","schools":[["Christ the King School","p","c",64],["Warradale Primary School","p","g",56]]}
+{"n":"Brighton","schools":[["Brighton Primary School","p","g",57]]}
+{"n":"Hove","schools":[["McAuley Community School","p","c",50]]}
+{"n":"Edwardstown","schools":[["St Anthony's School","p","c",60]]}
+{"n":"Goodwood","schools":[["Goodwood Primary School","p","g",62],["St Thomas' School","p","c",52]]}
+{"n":"Keswick","schools":[["Richmond Primary School","p","g",70]]}
+{"n":"Unley","schools":[["Saint Spyridon College","p","i",68],["Unley Primary School","p","g",60]]}
+{"n":"Kensington Park","schools":[["Pembroke School","c","i",69]]}
+{"n":"Norwood","schools":[["Norwood Primary School","p","g",72],["St Joseph's Memorial School","p","c",62]]}
+{"n":"North Adelaide","schools":[["North Adelaide Primary School","p","g",68],["St Dominic's Priory College","c","c",63]]}
+{"n":"Prospect","schools":[["Blackfriars Priory School","c","c",63],["Rosary School","p","c",63],["Prospect Primary School","p","g",61],["Prospect North Primary School","p","g",59],["Prescott College","s","i",45]]}
+{"n":"Walkerville","schools":[["St Andrew's School","p","i",86],["Walkerville Primary School","p","g",67],["St Monica's Parish School","p","c",51]]}
+{"n":"Parafield Gardens","schools":[["Garden College","c","i",57],["Holy Family Catholic School","p","c",51],["The Pines School","p","g",50],["Parafield Gardens Primary School","p","g",45],["Parafield Gardens High School","s","g",33],["Karrendi Primary School","p","g",31]]}
+{"n":"Green Fields","schools":[]}
+{"n":"Mawson Lakes","schools":[["Endeavour College","s","i",65],["Mawson Lakes School","p","g",56]]}
+{"n":"Pooraka","schools":[["Pooraka Primary School","p","g",49]]}
+{"n":"Para Hills","schools":[["Para Hills School","p","g",48],["East Para Primary School","p","g",45]]}
+{"n":"Salisbury","schools":[["St Augustine's Parish School","p","c",51],["Salisbury Primary School","p","g",42]]}
+{"n":"Salisbury North","schools":[["Salisbury High School","s","g",45],["Salisbury North Primary School","p","g",36],["Lake Windemere B-6 School","p","g",34]]}
+{"n":"Paralowie","schools":[["Bethany Christian School Incorporated","p","i",48],["Settlers Farm Campus R-6","p","g",39],["Paralowie School","c","g",36]]}
+{"n":"Salisbury East","schools":[["Tyndale Christian School","c","i",54],["Keller Road Primary School","p","g",49],["Madison Park School","p","g",45],["Salisbury East High School","s","g",40]]}
+{"n":"Burton","schools":[["Burton Primary School","p","g",42]]}
+{"n":"Elizabeth","schools":[["Playford College","c","i",52],["Indie School Elizabeth","p","i",25],["Playford International College","s","g",23],["Kaurna Plains School","c","g",12],["Edmund Rice Flexi School","s","c",9]]}
+{"n":"Munno Para","schools":[["Munno Para Primary School","p","g",36]]}
+{"n":"Angle Vale","schools":[["Trinity College Gawler River","c","i",51],["Riverbanks College B-12","c","g",33],["Angle Vale Primary School","p","g",31]]}
+{"n":"Two Wells","schools":[["Two Wells Primary School","p","g",27]]}
+{"n":"Golden Grove","schools":[["Pedare Christian College","c","i",59],["Gleeson College","s","c",47],["Golden Grove Primary School","p","g",46],["Golden Grove High School","s","g",42]]}
+{"n":"Modbury","schools":[["Modbury High School","s","g",55],["Modbury West School","p","g",48]]}
+{"n":"Tea Tree Gully","schools":[["Saint David's Parish School","p","c",49],["Tea Tree Gully Primary School","p","g",45]]}
+{"n":"Mount Barker","schools":[["Cornerstone College","s","i",58],["St Francis de Sales College","c","c",56],["Mount Barker Primary School","p","g",55],["Mount Barker Waldorf School","c","i",51],["Mount Barker South Primary School","p","g",50],["St Mark's Lutheran School","p","i",49],["Mount Barker High School","s","g",42]]}
+{"n":"Morphett Vale","schools":[["Sunrise Christian School Morphett Vale","p","i",58],["Woodcroft College","c","i",55],["Southern Vales Christian College","c","i",51],["Coorara Primary School","p","g",51],["Morphett Vale Primary School","p","g",50],["Antonio Catholic School","p","c",48],["Pimpala Primary School","p","g",46],["Prescott College Southern","c","i",45],["Calvary Lutheran Primary School","p","i",44],["Flaxmill School P-6","p","g",41],["Wirreanda Secondary School","s","g",30],["Morphett Vale East School","p","g",29]]}
+{"n":"Seaford","schools":[["Moana Primary School","p","g",51],["All Saints Catholic Primary School","p","c",41],["Seaford Secondary College","s","g",36]]}
+{"n":"Aldinga Beach","schools":[]}

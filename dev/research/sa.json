@@ -55,7 +55,20 @@
     "yield": 2.57,
     "rent": 790
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Peter's Woodlands Grammar School",
+     "p",
+     "i",
+     63
+    ],
+    [
+     "St Mary's Memorial School",
+     "p",
+     "c",
+     57
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": [
@@ -78,7 +91,14 @@
     "yield": 2.84,
     "rent": 768
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Leonards Primary School",
+     "p",
+     "g",
+     59
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -99,7 +119,14 @@
     "yield": 2.41,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Glenelg Primary School",
+     "p",
+     "g",
+     54
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -120,7 +147,20 @@
     "yield": 3.05,
     "rent": 705
    },
-   "schools": null,
+   "schools": [
+    [
+     "Immanuel Primary School",
+     "p",
+     "i",
+     67
+    ],
+    [
+     "Immanuel College",
+     "s",
+     "i",
+     62
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -141,7 +181,7 @@
     "yield": 3.31,
     "rent": 650
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -162,7 +202,26 @@
     "yield": 3.2,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Plympton Primary School",
+     "p",
+     "g",
+     62
+    ],
+    [
+     "St John the Baptist Catholic School",
+     "p",
+     "c",
+     55
+    ],
+    [
+     "Plympton International College",
+     "c",
+     "g",
+     51
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -183,7 +242,7 @@
     "yield": 3.22,
     "rent": 680
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -204,7 +263,7 @@
     "yield": 3.35,
     "rent": 700
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -225,7 +284,7 @@
     "yield": 3.3,
     "rent": 700
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -246,7 +305,7 @@
     "yield": 3.58,
     "rent": 670
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -267,7 +326,14 @@
     "yield": 3.54,
     "rent": 660
    },
-   "schools": null,
+   "schools": [
+    [
+     "Tenison Woods Catholic Primary School",
+     "p",
+     "c",
+     59
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -288,7 +354,7 @@
     "yield": 3.55,
     "rent": 625
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -309,7 +375,20 @@
     "yield": 3.09,
     "rent": 688
    },
-   "schools": null,
+   "schools": [
+    [
+     "Temple Christian College",
+     "s",
+     "i",
+     63
+    ],
+    [
+     "St George College",
+     "c",
+     "i",
+     52
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -330,7 +409,14 @@
     "yield": 3.06,
     "rent": 692
    },
-   "schools": null,
+   "schools": [
+    [
+     "Torrensville Primary School",
+     "p",
+     "g",
+     60
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -351,7 +437,14 @@
     "yield": 3.17,
     "rent": 665
    },
-   "schools": null,
+   "schools": [
+    [
+     "Warriappendi Secondary School",
+     "s",
+     "g",
+     16
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -372,7 +465,20 @@
     "yield": 2.74,
     "rent": 720
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Francis School",
+     "p",
+     "c",
+     57
+    ],
+    [
+     "Lockleys North Primary School",
+     "p",
+     "g",
+     52
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -393,7 +499,20 @@
     "yield": 3.32,
     "rent": 670
    },
-   "schools": null,
+   "schools": [
+    [
+     "Brooklyn Park Primary School",
+     "p",
+     "g",
+     63
+    ],
+    [
+     "St John Bosco School",
+     "p",
+     "c",
+     59
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -414,7 +533,14 @@
     "yield": 3.16,
     "rent": 618
    },
-   "schools": null,
+   "schools": [
+    [
+     "Underdale High School",
+     "s",
+     "g",
+     45
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -435,7 +561,7 @@
     "yield": 2.77,
     "rent": 750
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -456,7 +582,38 @@
     "yield": 2.77,
     "rent": 880
    },
-   "schools": null,
+   "schools": [
+    [
+     "Star of the Sea School",
+     "p",
+     "c",
+     66
+    ],
+    [
+     "Fulham Gardens Primary School",
+     "p",
+     "g",
+     58
+    ],
+    [
+     "Fulham North Primary School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "St Michael's College",
+     "c",
+     "c",
+     55
+    ],
+    [
+     "Henley High School",
+     "s",
+     "g",
+     45
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -477,7 +634,14 @@
     "yield": 2.64,
     "rent": 860
    },
-   "schools": null,
+   "schools": [
+    [
+     "Henley Beach Primary School",
+     "p",
+     "g",
+     53
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -498,7 +662,14 @@
     "yield": 2.9,
     "rent": 800
    },
-   "schools": null,
+   "schools": [
+    [
+     "Grange Primary School",
+     "p",
+     "g",
+     60
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -519,7 +690,14 @@
     "yield": 3.16,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Kidman Park Primary School",
+     "p",
+     "g",
+     55
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -540,7 +718,20 @@
     "yield": 3.32,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Flinders Park Primary School",
+     "p",
+     "g",
+     62
+    ],
+    [
+     "Nazareth Catholic College",
+     "c",
+     "c",
+     50
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -561,7 +752,14 @@
     "yield": 3.36,
     "rent": 640
    },
-   "schools": null,
+   "schools": [
+    [
+     "Cowandilla Primary School",
+     "p",
+     "g",
+     60
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -582,7 +780,7 @@
     "yield": 3.19,
     "rent": 695
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -603,7 +801,7 @@
     "yield": 3.19,
     "rent": 695
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -624,7 +822,14 @@
     "yield": 3.43,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Ascot Park Primary School",
+     "p",
+     "g",
+     47
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -645,7 +850,14 @@
     "yield": 3.27,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Dara School",
+     "c",
+     "i",
+     83
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -666,7 +878,14 @@
     "yield": 2.96,
     "rent": 710
    },
-   "schools": null,
+   "schools": [
+    [
+     "Our Lady of Grace School",
+     "p",
+     "c",
+     54
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -687,7 +906,14 @@
     "yield": 2.44,
     "rent": 760
    },
-   "schools": null,
+   "schools": [
+    [
+     "Sacred Heart College",
+     "c",
+     "c",
+     54
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -708,7 +934,20 @@
     "yield": 3.26,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Christ the King School",
+     "p",
+     "c",
+     64
+    ],
+    [
+     "Warradale Primary School",
+     "p",
+     "g",
+     56
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -729,7 +968,14 @@
     "yield": 2.73,
     "rent": 785
    },
-   "schools": null,
+   "schools": [
+    [
+     "Brighton Primary School",
+     "p",
+     "g",
+     57
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -750,7 +996,14 @@
     "yield": 2.76,
     "rent": 730
    },
-   "schools": null,
+   "schools": [
+    [
+     "McAuley Community School",
+     "p",
+     "c",
+     50
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -771,7 +1024,14 @@
     "yield": 3.35,
     "rent": 650
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Anthony's School",
+     "p",
+     "c",
+     60
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -792,7 +1052,20 @@
     "yield": 2.47,
     "rent": 685
    },
-   "schools": null,
+   "schools": [
+    [
+     "Goodwood Primary School",
+     "p",
+     "g",
+     62
+    ],
+    [
+     "St Thomas' School",
+     "p",
+     "c",
+     52
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -808,7 +1081,14 @@
     "area": null
    },
    "prop": null,
-   "schools": null,
+   "schools": [
+    [
+     "Richmond Primary School",
+     "p",
+     "g",
+     70
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -829,7 +1109,20 @@
     "yield": 2.31,
     "rent": 800
    },
-   "schools": null,
+   "schools": [
+    [
+     "Saint Spyridon College",
+     "p",
+     "i",
+     68
+    ],
+    [
+     "Unley Primary School",
+     "p",
+     "g",
+     60
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -850,7 +1143,14 @@
     "yield": 2.42,
     "rent": 850
    },
-   "schools": null,
+   "schools": [
+    [
+     "Pembroke School",
+     "c",
+     "i",
+     69
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -871,7 +1171,20 @@
     "yield": 2.58,
     "rent": 740
    },
-   "schools": null,
+   "schools": [
+    [
+     "Norwood Primary School",
+     "p",
+     "g",
+     72
+    ],
+    [
+     "St Joseph's Memorial School",
+     "p",
+     "c",
+     62
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -892,7 +1205,20 @@
     "yield": 2.67,
     "rent": 750
    },
-   "schools": null,
+   "schools": [
+    [
+     "North Adelaide Primary School",
+     "p",
+     "g",
+     68
+    ],
+    [
+     "St Dominic's Priory College",
+     "c",
+     "c",
+     63
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -913,7 +1239,38 @@
     "yield": 2.59,
     "rent": 680
    },
-   "schools": null,
+   "schools": [
+    [
+     "Blackfriars Priory School",
+     "c",
+     "c",
+     63
+    ],
+    [
+     "Rosary School",
+     "p",
+     "c",
+     63
+    ],
+    [
+     "Prospect Primary School",
+     "p",
+     "g",
+     61
+    ],
+    [
+     "Prospect North Primary School",
+     "p",
+     "g",
+     59
+    ],
+    [
+     "Prescott College",
+     "s",
+     "i",
+     45
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -934,7 +1291,26 @@
     "yield": 2.11,
     "rent": 950
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Andrew's School",
+     "p",
+     "i",
+     86
+    ],
+    [
+     "Walkerville Primary School",
+     "p",
+     "g",
+     67
+    ],
+    [
+     "St Monica's Parish School",
+     "p",
+     "c",
+     51
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -955,7 +1331,44 @@
     "yield": 3.93,
     "rent": 620
    },
-   "schools": null,
+   "schools": [
+    [
+     "Garden College",
+     "c",
+     "i",
+     57
+    ],
+    [
+     "Holy Family Catholic School",
+     "p",
+     "c",
+     51
+    ],
+    [
+     "The Pines School",
+     "p",
+     "g",
+     50
+    ],
+    [
+     "Parafield Gardens Primary School",
+     "p",
+     "g",
+     45
+    ],
+    [
+     "Parafield Gardens High School",
+     "s",
+     "g",
+     33
+    ],
+    [
+     "Karrendi Primary School",
+     "p",
+     "g",
+     31
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -976,7 +1389,7 @@
     "yield": 3.45,
     "rent": null
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -997,7 +1410,20 @@
     "yield": 3.81,
     "rent": 660
    },
-   "schools": null,
+   "schools": [
+    [
+     "Endeavour College",
+     "s",
+     "i",
+     65
+    ],
+    [
+     "Mawson Lakes School",
+     "p",
+     "g",
+     56
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1018,7 +1444,14 @@
     "yield": 3.83,
     "rent": 600
    },
-   "schools": null,
+   "schools": [
+    [
+     "Pooraka Primary School",
+     "p",
+     "g",
+     49
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1039,7 +1472,20 @@
     "yield": 3.84,
     "rent": 595
    },
-   "schools": null,
+   "schools": [
+    [
+     "Para Hills School",
+     "p",
+     "g",
+     48
+    ],
+    [
+     "East Para Primary School",
+     "p",
+     "g",
+     45
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1060,7 +1506,20 @@
     "yield": 4.06,
     "rent": 550
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Augustine's Parish School",
+     "p",
+     "c",
+     51
+    ],
+    [
+     "Salisbury Primary School",
+     "p",
+     "g",
+     42
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1081,7 +1540,26 @@
     "yield": 4.32,
     "rent": 550
    },
-   "schools": null,
+   "schools": [
+    [
+     "Salisbury High School",
+     "s",
+     "g",
+     45
+    ],
+    [
+     "Salisbury North Primary School",
+     "p",
+     "g",
+     36
+    ],
+    [
+     "Lake Windemere B-6 School",
+     "p",
+     "g",
+     34
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1102,7 +1580,26 @@
     "yield": 4.15,
     "rent": 600
    },
-   "schools": null,
+   "schools": [
+    [
+     "Bethany Christian School Incorporated",
+     "p",
+     "i",
+     48
+    ],
+    [
+     "Settlers Farm Campus R-6",
+     "p",
+     "g",
+     39
+    ],
+    [
+     "Paralowie School",
+     "c",
+     "g",
+     36
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1123,7 +1620,32 @@
     "yield": 4.01,
     "rent": 590
    },
-   "schools": null,
+   "schools": [
+    [
+     "Tyndale Christian School",
+     "c",
+     "i",
+     54
+    ],
+    [
+     "Keller Road Primary School",
+     "p",
+     "g",
+     49
+    ],
+    [
+     "Madison Park School",
+     "p",
+     "g",
+     45
+    ],
+    [
+     "Salisbury East High School",
+     "s",
+     "g",
+     40
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1144,7 +1666,14 @@
     "yield": 4.15,
     "rent": 600
    },
-   "schools": null,
+   "schools": [
+    [
+     "Burton Primary School",
+     "p",
+     "g",
+     42
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1165,7 +1694,38 @@
     "yield": 4.33,
     "rent": 490
    },
-   "schools": null,
+   "schools": [
+    [
+     "Playford College",
+     "c",
+     "i",
+     52
+    ],
+    [
+     "Indie School Elizabeth",
+     "p",
+     "i",
+     25
+    ],
+    [
+     "Playford International College",
+     "s",
+     "g",
+     23
+    ],
+    [
+     "Kaurna Plains School",
+     "c",
+     "g",
+     12
+    ],
+    [
+     "Edmund Rice Flexi School",
+     "s",
+     "c",
+     9
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1186,7 +1746,14 @@
     "yield": 4.29,
     "rent": 570
    },
-   "schools": null,
+   "schools": [
+    [
+     "Munno Para Primary School",
+     "p",
+     "g",
+     36
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1207,7 +1774,26 @@
     "yield": 3.57,
     "rent": 650
    },
-   "schools": null,
+   "schools": [
+    [
+     "Trinity College Gawler River",
+     "c",
+     "i",
+     51
+    ],
+    [
+     "Riverbanks College B-12",
+     "c",
+     "g",
+     33
+    ],
+    [
+     "Angle Vale Primary School",
+     "p",
+     "g",
+     31
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1228,7 +1814,14 @@
     "yield": 4.15,
     "rent": 695
    },
-   "schools": null,
+   "schools": [
+    [
+     "Two Wells Primary School",
+     "p",
+     "g",
+     27
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1249,7 +1842,32 @@
     "yield": 3.53,
     "rent": 655
    },
-   "schools": null,
+   "schools": [
+    [
+     "Pedare Christian College",
+     "c",
+     "i",
+     59
+    ],
+    [
+     "Gleeson College",
+     "s",
+     "c",
+     47
+    ],
+    [
+     "Golden Grove Primary School",
+     "p",
+     "g",
+     46
+    ],
+    [
+     "Golden Grove High School",
+     "s",
+     "g",
+     42
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1270,7 +1888,20 @@
     "yield": 3.79,
     "rent": 650
    },
-   "schools": null,
+   "schools": [
+    [
+     "Modbury High School",
+     "s",
+     "g",
+     55
+    ],
+    [
+     "Modbury West School",
+     "p",
+     "g",
+     48
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1291,7 +1922,20 @@
     "yield": 3.64,
     "rent": 620
    },
-   "schools": null,
+   "schools": [
+    [
+     "Saint David's Parish School",
+     "p",
+     "c",
+     49
+    ],
+    [
+     "Tea Tree Gully Primary School",
+     "p",
+     "g",
+     45
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1312,7 +1956,50 @@
     "yield": 3.86,
     "rent": 615
    },
-   "schools": null,
+   "schools": [
+    [
+     "Cornerstone College",
+     "s",
+     "i",
+     58
+    ],
+    [
+     "St Francis de Sales College",
+     "c",
+     "c",
+     56
+    ],
+    [
+     "Mount Barker Primary School",
+     "p",
+     "g",
+     55
+    ],
+    [
+     "Mount Barker Waldorf School",
+     "c",
+     "i",
+     51
+    ],
+    [
+     "Mount Barker South Primary School",
+     "p",
+     "g",
+     50
+    ],
+    [
+     "St Mark's Lutheran School",
+     "p",
+     "i",
+     49
+    ],
+    [
+     "Mount Barker High School",
+     "s",
+     "g",
+     42
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1333,7 +2020,80 @@
     "yield": 4.11,
     "rent": 600
    },
-   "schools": null,
+   "schools": [
+    [
+     "Sunrise Christian School Morphett Vale",
+     "p",
+     "i",
+     58
+    ],
+    [
+     "Woodcroft College",
+     "c",
+     "i",
+     55
+    ],
+    [
+     "Southern Vales Christian College",
+     "c",
+     "i",
+     51
+    ],
+    [
+     "Coorara Primary School",
+     "p",
+     "g",
+     51
+    ],
+    [
+     "Morphett Vale Primary School",
+     "p",
+     "g",
+     50
+    ],
+    [
+     "Antonio Catholic School",
+     "p",
+     "c",
+     48
+    ],
+    [
+     "Pimpala Primary School",
+     "p",
+     "g",
+     46
+    ],
+    [
+     "Prescott College Southern",
+     "c",
+     "i",
+     45
+    ],
+    [
+     "Calvary Lutheran Primary School",
+     "p",
+     "i",
+     44
+    ],
+    [
+     "Flaxmill School P-6",
+     "p",
+     "g",
+     41
+    ],
+    [
+     "Wirreanda Secondary School",
+     "s",
+     "g",
+     30
+    ],
+    [
+     "Morphett Vale East School",
+     "p",
+     "g",
+     29
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1354,7 +2114,26 @@
     "yield": 3.78,
     "rent": 650
    },
-   "schools": null,
+   "schools": [
+    [
+     "Moana Primary School",
+     "p",
+     "g",
+     51
+    ],
+    [
+     "All Saints Catholic Primary School",
+     "p",
+     "c",
+     41
+    ],
+    [
+     "Seaford Secondary College",
+     "s",
+     "g",
+     36
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1370,7 +2149,7 @@
     "area": null
    },
    "prop": null,
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []

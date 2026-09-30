@@ -271,3 +271,58 @@
 {"n": "Mawson", "schools": null}
 {"n": "Curtin", "schools": null}
 {"n": "Farrer", "schools": null}
+{"n":"Pialligo","schools":[]}
+{"n":"Campbell","schools":[["St Thomas More's Primary School","p","c",71],["Campbell Primary School","p","g",63],["Campbell High School","s","g",60]]}
+{"n":"Reid","schools":[]}
+{"n":"Turner","schools":[["Turner School","p","g",65]]}
+{"n":"Ainslie","schools":[["North Ainslie Primary School","p","g",60]]}
+{"n":"Hackett","schools":[["Blue Gum Community School","c","i",61]]}
+{"n":"Watson","schools":[["Rosary Primary School","p","c",58],["Majura Primary School","p","g",58]]}
+{"n":"Downer","schools":[]}
+{"n":"Dickson","schools":[["Emmaus Christian School","c","i",60],["Daramalan College","s","i",56]]}
+{"n":"Lyneham","schools":[["Lyneham High School","s","g",64],["Brindabella Christian College","c","i",62],["Lyneham Primary School","p","g",58]]}
+{"n":"O'Connor","schools":[["St Joseph's Primary School","p","c",53]]}
+{"n":"Kingston","schools":[]}
+{"n":"Griffith","schools":[["St Clare's College","s","c",53],["St Edmund's College Canberra","c","i",45]]}
+{"n":"Narrabundah","schools":[["St Benedict's Primary School","p","c",53]]}
+{"n":"Red Hill","schools":[["Canberra Grammar School","c","i",68],["Red Hill Primary School","p","g",60],["St Bede's Primary School","p","c",52]]}
+{"n":"Gordon","schools":[["Covenant Christian School","c","i",57],["Gordon Primary School","p","g",39]]}
+{"n":"Conder","schools":[["St Clare of Assisi Primary School","p","c",48],["Charles Conder Primary School","p","g",42],["Lanyon High School","s","g",29]]}
+{"n":"Banks","schools":[]}
+{"n":"Calwell","schools":[["St Francis of Assisi Primary School","p","c",50],["Calwell Primary School","p","g",41],["Calwell High School","s","g",34]]}
+{"n":"Theodore","schools":[["Theodore Primary School","p","g",42]]}
+{"n":"Isabella Plains","schools":[["St Mary MacKillop College","s","c",53]]}
+{"n":"Chisholm","schools":[["Caroline Chisholm School","c","g",37]]}
+{"n":"Gowrie","schools":[["Gowrie Primary School","p","g",62],["Holy Family Primary School","p","c",56]]}
+{"n":"Fadden","schools":[["Fadden Primary School","p","g",50]]}
+{"n":"Macarthur","schools":[]}
+{"n":"Wanniassa","schools":[["St Anthony's Parish Primary School","p","c",61],["Trinity Christian School","c","i",60],["Wanniassa Hills Primary School","p","g",53],["Wanniassa School","c","g",38]]}
+{"n":"Kambah","schools":[["Taylor Primary School","p","g",57],["St Thomas the Apostle Primary School","p","c",57],["Namadgi School","c","g",46]]}
+{"n":"Gungahlin","schools":[["Burgmann Anglican School","c","i",64]]}
+{"n":"Franklin","schools":[["Franklin School","p","g",48]]}
+{"n":"Harrison","schools":[["Mother Teresa School","p","c",58],["Harrison School","c","g",48]]}
+{"n":"Crace","schools":[]}
+{"n":"Forde","schools":[]}
+{"n":"Bonner","schools":[["Neville Bonner Primary School","p","g",54]]}
+{"n":"Casey","schools":[]}
+{"n":"Ngunnawal","schools":[["Ngunnawal Primary School","p","g",59]]}
+{"n":"Amaroo","schools":[["Good Shepherd Primary School","p","c",58],["Amaroo School","c","g",53]]}
+{"n":"Throsby","schools":[["Throsby School","p","g",59]]}
+{"n":"Taylor","schools":[["Aunty Agnes Shea High School","s","g",62],["Margaret Hendry School","p","g",51]]}
+{"n":"Belconnen","schools":[]}
+{"n":"Bruce","schools":[["Radford College","c","i",64]]}
+{"n":"Macquarie","schools":[["Canberra High School","s","g",62],["Macquarie Primary School","p","g",52]]}
+{"n":"Page","schools":[["St Matthew's Primary School","p","c",52]]}
+{"n":"Kaleen","schools":[["Maribyrnong Primary School","p","g",61],["St Michael's Primary School","p","c",53],["Kaleen Primary School","p","g",52],["University of Canberra High School Kaleen","s","g",44]]}
+{"n":"Giralang","schools":[["Giralang Primary School","p","g",54]]}
+{"n":"Evatt","schools":[["St Monica's Primary School","p","c",57],["Miles Franklin Primary School","p","g",52],["Evatt Primary School","p","g",49]]}
+{"n":"Florey","schools":[["St Francis Xavier College","s","c",52],["St John the Apostle Primary School","p","c",46],["Florey Primary School","p","g",43]]}
+{"n":"Holt","schools":[["Kingsford Smith School","c","g",42]]}
+{"n":"Dunlop","schools":[]}
+{"n":"Coombs","schools":[["Charles Weston School","p","g",52]]}
+{"n":"Wright","schools":[]}
+{"n":"Denman Prospect","schools":[["Evelyn Scott School","c","g",53]]}
+{"n":"Phillip","schools":[]}
+{"n":"Mawson","schools":[["Canberra Christian School","p","i",56],["Mawson Primary School","p","g",56]]}
+{"n":"Curtin","schools":[["Holy Trinity Primary School","p","c",59],["Curtin Primary School","p","g",58]]}
+{"n":"Farrer","schools":[["Farrer Primary School","p","g",51]]}

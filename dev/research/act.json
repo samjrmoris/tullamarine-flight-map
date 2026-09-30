@@ -15,7 +15,7 @@
    "postcode": "2609",
    "crime": null,
    "prop": null,
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": [
@@ -38,7 +38,26 @@
     "yield": 2.66,
     "rent": 980
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Thomas More's Primary School",
+     "p",
+     "c",
+     71
+    ],
+    [
+     "Campbell Primary School",
+     "p",
+     "g",
+     63
+    ],
+    [
+     "Campbell High School",
+     "s",
+     "g",
+     60
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -59,7 +78,7 @@
     "yield": 2.5,
     "rent": 885
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -116,7 +135,14 @@
     "yield": 2.25,
     "rent": 775
    },
-   "schools": null,
+   "schools": [
+    [
+     "Turner School",
+     "p",
+     "g",
+     65
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -137,7 +163,14 @@
     "yield": 2.82,
     "rent": 750
    },
-   "schools": null,
+   "schools": [
+    [
+     "North Ainslie Primary School",
+     "p",
+     "g",
+     60
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -158,7 +191,14 @@
     "yield": 2.86,
     "rent": 760
    },
-   "schools": null,
+   "schools": [
+    [
+     "Blue Gum Community School",
+     "c",
+     "i",
+     61
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -179,7 +219,20 @@
     "yield": 3.34,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Rosary Primary School",
+     "p",
+     "c",
+     58
+    ],
+    [
+     "Majura Primary School",
+     "p",
+     "g",
+     58
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -200,7 +253,7 @@
     "yield": 3.14,
     "rent": 720
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -221,7 +274,20 @@
     "yield": 3.4,
     "rent": 750
    },
-   "schools": null,
+   "schools": [
+    [
+     "Emmaus Christian School",
+     "c",
+     "i",
+     60
+    ],
+    [
+     "Daramalan College",
+     "s",
+     "i",
+     56
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -242,7 +308,26 @@
     "yield": 3.18,
     "rent": 692
    },
-   "schools": null,
+   "schools": [
+    [
+     "Lyneham High School",
+     "s",
+     "g",
+     64
+    ],
+    [
+     "Brindabella Christian College",
+     "c",
+     "i",
+     62
+    ],
+    [
+     "Lyneham Primary School",
+     "p",
+     "g",
+     58
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -263,7 +348,14 @@
     "yield": 2.54,
     "rent": 750
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Joseph's Primary School",
+     "p",
+     "c",
+     53
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -284,7 +376,7 @@
     "yield": 3.95,
     "rent": 690
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -305,7 +397,20 @@
     "yield": 2.2,
     "rent": 780
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Clare's College",
+     "s",
+     "c",
+     53
+    ],
+    [
+     "St Edmund's College Canberra",
+     "c",
+     "i",
+     45
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -326,7 +431,14 @@
     "yield": 3.0,
     "rent": 780
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Benedict's Primary School",
+     "p",
+     "c",
+     53
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -347,7 +459,26 @@
     "yield": 2.36,
     "rent": 1160
    },
-   "schools": null,
+   "schools": [
+    [
+     "Canberra Grammar School",
+     "c",
+     "i",
+     68
+    ],
+    [
+     "Red Hill Primary School",
+     "p",
+     "g",
+     60
+    ],
+    [
+     "St Bede's Primary School",
+     "p",
+     "c",
+     52
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -368,7 +499,20 @@
     "yield": 4.12,
     "rent": 675
    },
-   "schools": null,
+   "schools": [
+    [
+     "Covenant Christian School",
+     "c",
+     "i",
+     57
+    ],
+    [
+     "Gordon Primary School",
+     "p",
+     "g",
+     39
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -389,7 +533,26 @@
     "yield": 4.28,
     "rent": 720
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Clare of Assisi Primary School",
+     "p",
+     "c",
+     48
+    ],
+    [
+     "Charles Conder Primary School",
+     "p",
+     "g",
+     42
+    ],
+    [
+     "Lanyon High School",
+     "s",
+     "g",
+     29
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -410,7 +573,7 @@
     "yield": 4.3,
     "rent": 670
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -431,7 +594,26 @@
     "yield": 4.16,
     "rent": 670
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Francis of Assisi Primary School",
+     "p",
+     "c",
+     50
+    ],
+    [
+     "Calwell Primary School",
+     "p",
+     "g",
+     41
+    ],
+    [
+     "Calwell High School",
+     "s",
+     "g",
+     34
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -452,7 +634,14 @@
     "yield": 4.17,
     "rent": 680
    },
-   "schools": null,
+   "schools": [
+    [
+     "Theodore Primary School",
+     "p",
+     "g",
+     42
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -473,7 +662,14 @@
     "yield": 4.41,
     "rent": 650
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Mary MacKillop College",
+     "s",
+     "c",
+     53
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -494,7 +690,14 @@
     "yield": 4.28,
     "rent": 725
    },
-   "schools": null,
+   "schools": [
+    [
+     "Caroline Chisholm School",
+     "c",
+     "g",
+     37
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -515,7 +718,20 @@
     "yield": 4.15,
     "rent": 782
    },
-   "schools": null,
+   "schools": [
+    [
+     "Gowrie Primary School",
+     "p",
+     "g",
+     62
+    ],
+    [
+     "Holy Family Primary School",
+     "p",
+     "c",
+     56
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -536,7 +752,14 @@
     "yield": 3.75,
     "rent": 790
    },
-   "schools": null,
+   "schools": [
+    [
+     "Fadden Primary School",
+     "p",
+     "g",
+     50
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -557,7 +780,7 @@
     "yield": null,
     "rent": null
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -578,7 +801,32 @@
     "yield": 4.15,
     "rent": 680
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Anthony's Parish Primary School",
+     "p",
+     "c",
+     61
+    ],
+    [
+     "Trinity Christian School",
+     "c",
+     "i",
+     60
+    ],
+    [
+     "Wanniassa Hills Primary School",
+     "p",
+     "g",
+     53
+    ],
+    [
+     "Wanniassa School",
+     "c",
+     "g",
+     38
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -599,7 +847,26 @@
     "yield": 3.98,
     "rent": 680
    },
-   "schools": null,
+   "schools": [
+    [
+     "Taylor Primary School",
+     "p",
+     "g",
+     57
+    ],
+    [
+     "St Thomas the Apostle Primary School",
+     "p",
+     "c",
+     57
+    ],
+    [
+     "Namadgi School",
+     "c",
+     "g",
+     46
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -620,7 +887,14 @@
     "yield": 4.06,
     "rent": 750
    },
-   "schools": null,
+   "schools": [
+    [
+     "Burgmann Anglican School",
+     "c",
+     "i",
+     64
+    ]
+   ],
    "mall": "Gungahlin Marketplace",
    "growthArea": false,
    "flags": []
@@ -641,7 +915,14 @@
     "yield": 3.77,
     "rent": 800
    },
-   "schools": null,
+   "schools": [
+    [
+     "Franklin School",
+     "p",
+     "g",
+     48
+    ]
+   ],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -662,7 +943,20 @@
     "yield": 3.9,
     "rent": 790
    },
-   "schools": null,
+   "schools": [
+    [
+     "Mother Teresa School",
+     "p",
+     "c",
+     58
+    ],
+    [
+     "Harrison School",
+     "c",
+     "g",
+     48
+    ]
+   ],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -683,7 +977,7 @@
     "yield": 3.86,
     "rent": 760
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -704,7 +998,7 @@
     "yield": 3.69,
     "rent": 850
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -725,7 +1019,14 @@
     "yield": 4.13,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Neville Bonner Primary School",
+     "p",
+     "g",
+     54
+    ]
+   ],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -746,7 +1047,7 @@
     "yield": 4.12,
     "rent": 700
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -767,7 +1068,14 @@
     "yield": 4.25,
     "rent": 655
    },
-   "schools": null,
+   "schools": [
+    [
+     "Ngunnawal Primary School",
+     "p",
+     "g",
+     59
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -788,7 +1096,20 @@
     "yield": 3.91,
     "rent": 750
    },
-   "schools": null,
+   "schools": [
+    [
+     "Good Shepherd Primary School",
+     "p",
+     "c",
+     58
+    ],
+    [
+     "Amaroo School",
+     "c",
+     "g",
+     53
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -809,7 +1130,14 @@
     "yield": 3.82,
     "rent": 825
    },
-   "schools": null,
+   "schools": [
+    [
+     "Throsby School",
+     "p",
+     "g",
+     59
+    ]
+   ],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -830,7 +1158,20 @@
     "yield": 4.02,
     "rent": 825
    },
-   "schools": null,
+   "schools": [
+    [
+     "Aunty Agnes Shea High School",
+     "s",
+     "g",
+     62
+    ],
+    [
+     "Margaret Hendry School",
+     "p",
+     "g",
+     51
+    ]
+   ],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -851,7 +1192,7 @@
     "yield": 5.5,
     "rent": 580
    },
-   "schools": null,
+   "schools": [],
    "mall": "Westfield Belconnen",
    "growthArea": false,
    "flags": []
@@ -872,7 +1213,14 @@
     "yield": 3.77,
     "rent": 790
    },
-   "schools": null,
+   "schools": [
+    [
+     "Radford College",
+     "c",
+     "i",
+     64
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -893,7 +1241,20 @@
     "yield": 3.57,
     "rent": 670
    },
-   "schools": null,
+   "schools": [
+    [
+     "Canberra High School",
+     "s",
+     "g",
+     62
+    ],
+    [
+     "Macquarie Primary School",
+     "p",
+     "g",
+     52
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -914,7 +1275,14 @@
     "yield": 3.94,
     "rent": 660
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Matthew's Primary School",
+     "p",
+     "c",
+     52
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -935,7 +1303,32 @@
     "yield": 3.68,
     "rent": 700
    },
-   "schools": null,
+   "schools": [
+    [
+     "Maribyrnong Primary School",
+     "p",
+     "g",
+     61
+    ],
+    [
+     "St Michael's Primary School",
+     "p",
+     "c",
+     53
+    ],
+    [
+     "Kaleen Primary School",
+     "p",
+     "g",
+     52
+    ],
+    [
+     "University of Canberra High School Kaleen",
+     "s",
+     "g",
+     44
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -956,7 +1349,14 @@
     "yield": 3.78,
     "rent": 715
    },
-   "schools": null,
+   "schools": [
+    [
+     "Giralang Primary School",
+     "p",
+     "g",
+     54
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -977,7 +1377,26 @@
     "yield": 4.03,
     "rent": 665
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Monica's Primary School",
+     "p",
+     "c",
+     57
+    ],
+    [
+     "Miles Franklin Primary School",
+     "p",
+     "g",
+     52
+    ],
+    [
+     "Evatt Primary School",
+     "p",
+     "g",
+     49
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -998,7 +1417,26 @@
     "yield": 4.02,
     "rent": 660
    },
-   "schools": null,
+   "schools": [
+    [
+     "St Francis Xavier College",
+     "s",
+     "c",
+     52
+    ],
+    [
+     "St John the Apostle Primary School",
+     "p",
+     "c",
+     46
+    ],
+    [
+     "Florey Primary School",
+     "p",
+     "g",
+     43
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1019,7 +1457,14 @@
     "yield": 4.37,
     "rent": 660
    },
-   "schools": null,
+   "schools": [
+    [
+     "Kingsford Smith School",
+     "c",
+     "g",
+     42
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1040,7 +1485,7 @@
     "yield": 4.22,
     "rent": 720
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1061,7 +1506,14 @@
     "yield": 4.18,
     "rent": 910
    },
-   "schools": null,
+   "schools": [
+    [
+     "Charles Weston School",
+     "p",
+     "g",
+     52
+    ]
+   ],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -1082,7 +1534,7 @@
     "yield": 4.09,
     "rent": 980
    },
-   "schools": null,
+   "schools": [],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -1103,7 +1555,14 @@
     "yield": 3.9,
     "rent": 1000
    },
-   "schools": null,
+   "schools": [
+    [
+     "Evelyn Scott School",
+     "c",
+     "g",
+     53
+    ]
+   ],
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -1124,7 +1583,7 @@
     "yield": 5.32,
     "rent": 615
    },
-   "schools": null,
+   "schools": [],
    "mall": "Westfield Woden",
    "growthArea": false,
    "flags": []
@@ -1145,7 +1604,20 @@
     "yield": 3.48,
     "rent": 710
    },
-   "schools": null,
+   "schools": [
+    [
+     "Canberra Christian School",
+     "p",
+     "i",
+     56
+    ],
+    [
+     "Mawson Primary School",
+     "p",
+     "g",
+     56
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1166,7 +1638,20 @@
     "yield": 2.92,
     "rent": 800
    },
-   "schools": null,
+   "schools": [
+    [
+     "Holy Trinity Primary School",
+     "p",
+     "c",
+     59
+    ],
+    [
+     "Curtin Primary School",
+     "p",
+     "g",
+     58
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -1187,7 +1672,14 @@
     "yield": 3.51,
     "rent": 748
    },
-   "schools": null,
+   "schools": [
+    [
+     "Farrer Primary School",
+     "p",
+     "g",
+     51
+    ]
+   ],
    "mall": null,
    "growthArea": false,
    "flags": []

@@ -197,7 +197,6 @@ Done:
 - BUG FIXED (affects live Melbourne too): OpenStreetMap now tags Australian suburbs admin_level 9, not 10, so the suburb query returned nothing and an empty result was cached forever. Query now accepts 9 or 10, never caches an empty list, cache key bumped to `v3:subs`, old `v2:subs` removed.
 
 Still open:
-- Schools: SchoolRank blocks this machine (Vercel bot check / HTTP 429). SA (64 suburbs) and ACT (55) have no school scores; the request was handed to the claude.ai chat (`request_for_other_chat_schools.md`). Returned lines go into `fill_sa.jsonl` / `fill_act.jsonl`, then `merge_fills.py`, then `build_regions.py`.
-- If schools stay missing: the suburb card says "No rated schools listed" for a suburb with no data; the wording should say the scores are missing instead.
+- Schools: DONE. SchoolRank blocks this machine, so the claude.ai chat fetched SA (64 suburbs) and ACT (55); merged 30 Sep. Adelaide now 122 rated schools, Canberra 77. Not independently re-checked from here: spot-check a few on schoolrank.com.au in a normal browser.
 - Spot-check suspicious house medians: Kingston ACT $615k, Phillip ACT $432k (mostly-unit suburbs), plus the existing list in section 4.6.
 - README, merge to main, house-check skill (section 4, steps 7 and 8).

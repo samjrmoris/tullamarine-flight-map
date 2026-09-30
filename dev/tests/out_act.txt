@@ -15,7 +15,7 @@ SPOT  Home 15.2 km from the airport Today Faint You hear planes if you listen fo
 LIST family Quiet skies, low crime and good schools, with all three weighted equally. Only suburbs with reliable crime figures are listed. rows 6
 LIST noise 1 of 7 suburbs have faint or quiet plane noise across most of the suburb. Quietest first. rows 7
 LIST crime 6 suburbs with reliable crime figures, lowest crime first. rows 6
-LIST schools Ranked by the best-scoring primary or P-12 school in each suburb. rows 1
+LIST schools Ranked by the best-scoring primary or P-12 school in each suburb. rows 5
 LIST growth House price growth over the 12 months to June 2026, fastest first. Past growth doesn't guarantee future growth. rows 6
 LIST value Suburbs with a median house price under $850k that grew at least 5% last year, fastest first. rows 0
 LIST drops Biggest dollar falls in the median house price over the 12 months to June 2026 come first. Falling suburbs can mean room to negotiate. rows 6
