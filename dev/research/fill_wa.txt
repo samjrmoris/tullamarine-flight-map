@@ -1,0 +1,185 @@
+Redcliffe|St Maria Goretti's Catholic School|p|c|49
+Redcliffe|Redcliffe Primary School|p|g|43
+Rivervale|St Augustine's Primary School|p|c|56
+Rivervale|Rivervale Primary School|p|g|43
+Cloverdale|Notre Dame Catholic Primary School|p|c|59
+Cloverdale|Belmay Primary School|p|g|37
+Cloverdale|Cloverdale Primary School|p|g|31
+Kewdale|Australian Islamic College (Kewdale)|c|i|72
+Kewdale|Kewdale Primary School|p|g|55
+Kewdale|Carlisle Primary School|p|g|52
+High Wycombe|Matthew Gibney Catholic Primary School|p|c|61
+High Wycombe|High Wycombe Primary School|p|g|38
+High Wycombe|Edney Primary School|p|g|32
+Forrestfield|Heritage College Perth|c|i|56
+Forrestfield|HillSide Christian College|c|i|55
+Forrestfield|Dawson Park Primary School|p|g|52
+Forrestfield|Darling Range Sports College|s|g|45
+Forrestfield|Woodlupine Primary School|p|g|41
+Forrestfield|Forrestfield Primary School|p|g|30
+Maida Vale|Maida Vale Primary School|p|g|50
+Kalamunda|Kalamunda Senior High School|s|g|56
+Kalamunda|Kalamunda Primary School|p|g|54
+Guildford|Guildford Primary School|p|g|62
+Guildford|Guildford Grammar School|c|i|59
+Bassendean|Casa Mia Montessori Community School|p|i|67
+Bassendean|St Michael's School|p|c|59
+Bassendean|Bassendean Primary School|p|g|56
+Bassendean|Anzac Terrace Primary School|p|g|45
+Caversham|Caversham Valley Primary School|p|g|53
+Midland|Indie School Western Australia|s|i|22
+Midland|Moorditj Noongar Community College|p|g|2
+Bayswater|St Columba's School|p|c|65
+Bayswater|Hillcrest Primary School|p|g|60
+Bayswater|Bayswater Primary School|p|g|58
+Bayswater|Durham Road School|c|g|46
+Maylands|Maylands Peninsula Primary School|p|g|53
+Inglewood|Inglewood Primary School|p|g|70
+Inglewood|St Peter's Primary School|p|c|58
+Morley|Weld Square Primary School|p|g|62
+Morley|Morley Primary School|p|g|61
+Morley|Hampton Park Primary School|p|g|61
+Morley|John Forrest Secondary College|s|g|61
+Morley|Hampton Senior High School|s|g|53
+Morley|Infant Jesus School|p|c|51
+Beechboro|West Beechboro Primary School|p|g|51
+Beechboro|East Beechboro Primary School|p|g|44
+Beechboro|Beechboro Primary School|p|g|38
+Kiara|Kiara College|s|g|36
+Lockridge|Good Shepherd Catholic School|p|c|61
+Lockridge|Lockridge Primary School|p|g|28
+Victoria Park|Regent College|p|i|79
+Victoria Park|Ursula Frayne Catholic College|c|c|66
+Victoria Park|Victoria Park Primary School|p|g|64
+Victoria Park|Victoria Park Christian School|p|i|59
+Lathlain|Lathlain Primary School|p|g|57
+Kensington|Kensington Primary School|p|g|68
+Kensington|Kent Street Senior High School|s|g|61
+Wattle Grove|Wattle Grove Primary School|p|g|77
+Lesmurdie|Lesmurdie Senior High School|s|g|62
+Lesmurdie|Falls Road Primary School|p|g|61
+Lesmurdie|Mazenod College|s|c|58
+Lesmurdie|St Brigid's College|c|c|55
+Lesmurdie|Lesmurdie Primary School|p|g|49
+Gosnells|St Munchin's Catholic School|p|c|58
+Gosnells|Southern River College|s|g|41
+Gosnells|Gosnells Primary School|p|g|39
+Gosnells|Ashburton Drive Primary School|p|g|38
+Gosnells|Wirrabirra Primary School|p|g|33
+Gosnells|Seaforth Primary School|p|g|32
+Maddington|East Maddington Primary School|p|g|49
+Maddington|Maddington Primary School|p|g|45
+Maddington|Bramfield Park Primary School|p|g|41
+Maddington|Yule Brook College|s|g|31
+Kenwick|Rehoboth Christian College|c|i|72
+Kenwick|Kenwick School|c|g|50
+Kenwick|East Kenwick Primary School|p|g|39
+Kenwick|Communicare Academy|s|i|27
+Beckenham|Beckenham Primary School|p|g|51
+Cannington|Cannington Community College|c|g|45
+Queens Park|St Norbert College|s|c|69
+Queens Park|St Joseph's School|p|c|65
+Queens Park|Queens Park Primary School|p|g|50
+Thornlie|Australian Islamic College (Thornlie)|c|i|63
+Thornlie|South Thornlie Primary School|p|g|56
+Thornlie|Sacred Heart Primary School|p|c|56
+Thornlie|Forest Crescent Primary School|p|g|52
+Thornlie|Thornlie Primary School|p|g|48
+Thornlie|Thornlie Senior High School|s|g|48
+Thornlie|Yale Primary School|p|g|34
+Canning Vale|Caladenia Primary School|p|g|75
+Canning Vale|Ranford Primary School|p|g|69
+Canning Vale|Campbell Primary School|p|g|69
+Canning Vale|Canning Vale College|s|g|65
+Canning Vale|St Emilie's Catholic Primary School|p|c|63
+Canning Vale|Canning Vale Primary School|p|g|62
+Canning Vale|Excelsior Primary School|p|g|59
+Atwell|Harmony Primary School|p|g|65
+Atwell|Atwell Primary School|p|g|53
+Atwell|Atwell College|s|g|53
+Success|Success Primary School|p|g|64
+Success|Jandakot Primary School|p|g|61
+Success|Emmanuel Catholic College|s|c|56
+Aubin Grove|Aubin Grove Primary School|p|g|63
+Bibra Lake|Blue Gum Montessori School|p|i|68
+Bibra Lake|Perth Waldorf School|c|i|52
+Bibra Lake|Bibra Lake Primary School|p|g|52
+Leeming|Leeming Senior High School|s|g|71
+Leeming|West Leeming Primary School|p|g|65
+Leeming|Banksia Park Primary School|p|g|61
+Leeming|Leeming Primary School|p|g|61
+Leeming|Leeming Senior High School Education Support Centre|s|g|27
+Bull Creek|Oberthur Primary School|p|g|81
+Bull Creek|All Saints' College|c|i|76
+Bull Creek|Bull Creek Primary School|p|g|70
+Willetton|Willetton Senior High School|s|g|81
+Willetton|Burrendah Primary School|p|g|77
+Willetton|Willetton Primary School|p|g|72
+Willetton|Rostrata Primary School|p|g|72
+Willetton|OneSchool Global WA|c|i|63
+Willetton|Orana Catholic Primary School|p|c|61
+Harrisdale|Carey Baptist College|c|i|73
+Harrisdale|Harrisdale Senior High School|s|g|70
+Harrisdale|North Harrisdale Primary School|p|g|66
+Harrisdale|Harrisdale Primary School|p|g|64
+Piara Waters|Aspiri Primary School|p|g|63
+Piara Waters|Piara Waters Senior High School|s|g|60
+Piara Waters|Riva Primary School|p|g|60
+Piara Waters|Piara Waters Primary School|p|g|58
+Piara Waters|St John Bosco College|c|c|56
+Southern River|Providence Christian College|c|i|71
+Southern River|Southern Grove Primary School|p|g|61
+Southern River|Bletchley Park Primary School|p|g|61
+Southern River|Yarralinka Primary School|p|g|45
+Ellenbrook|Ellenbrook Christian College|c|i|58
+Ellenbrook|St Helena's Catholic Primary School|p|c|55
+Ellenbrook|Aveley Secondary College|s|g|50
+Ellenbrook|Anne Hamersley Primary School|p|g|48
+Ellenbrook|Holy Cross College|c|c|48
+Ellenbrook|Malvern Springs Primary School|p|g|47
+Ellenbrook|Ellenbrook Secondary College|s|g|47
+Ellenbrook|Ellenbrook Primary School|p|g|44
+Ellenbrook|Ellen Stirling Primary School|p|g|43
+Ellenbrook|Arbor Grove Primary School|p|g|38
+Baldivis|Rockingham John Calvin School|p|i|67
+Baldivis|Sheoak Grove Primary School|p|g|52
+Baldivis|Settlers Primary School|p|g|51
+Baldivis|Mother Teresa Catholic College|c|c|51
+Baldivis|Makybe Rise Primary School|p|g|51
+Baldivis|Tranby College|c|i|50
+Baldivis|Rivergums Primary School|p|g|48
+Baldivis|Baldivis Gardens Primary School|p|g|46
+Baldivis|Pine View Primary School|p|g|45
+Baldivis|Ridge View Secondary College|s|g|45
+Baldivis|Baldivis Secondary College|s|g|44
+Baldivis|Baldivis Primary School|p|g|41
+Baldivis|Tuart Rise Primary School|p|g|39
+Byford|Byford John Calvin School|p|i|62
+Byford|Salvado Catholic College|c|c|52
+Byford|West Byford Primary School|p|g|48
+Byford|Beenyup Primary School|p|g|46
+Byford|Byford Secondary College|s|g|41
+Byford|Woodland Grove Primary School|p|g|41
+Byford|Byford Primary School|p|g|37
+Byford|Marri Grove Primary School|p|g|36
+Alkimos|Alkimos Beach Primary School|p|g|56
+Alkimos|St James' Anglican School|c|i|55
+Alkimos|Northshore Christian Grammar School|c|i|54
+Alkimos|Alkimos College|s|g|53
+Alkimos|Shorehaven Primary School|p|g|45
+Alkimos|Alkimos Primary School|p|g|45
+Joondalup|Lake Joondalup Baptist College|c|i|60
+Joondalup|Joondalup Primary School|p|g|40
+Joondalup|Alta-1 College|s|i|17
+Scarborough|St John's School|p|c|61
+Scarborough|Scarborough Primary School|p|g|54
+Mount Lawley|Mount Lawley Primary School|p|g|74
+Mount Lawley|Perth College|c|i|73
+Mount Lawley|Mount Lawley Senior High School|s|g|72
+Mount Lawley|St Paul's Primary School|p|c|71
+Como|Como Primary School|p|g|68
+Como|Penrhos College|c|i|67
+Como|Como Secondary College|s|g|57
+Como|Collier Primary School|p|g|54
+Applecross|Applecross Primary School|p|g|75
+Applecross|St Benedict's School|p|c|62

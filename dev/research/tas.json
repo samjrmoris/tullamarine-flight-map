@@ -1,0 +1,1466 @@
+{
+ "region": "tas",
+ "crimeSource": {
+  "name": "Tasmania Police (DPFEM) Corporate Performance Report, June 2026 - offences by police division",
+  "url": "https://www.police.tas.gov.au/uploads/Corporate-Performance-Report-June-2026.pdf",
+  "period": "financial year to 30 June 2026",
+  "level": "district",
+  "stateRatePer1000": 59.7,
+  "stateRateSource": "33,296 total offences statewide (same report, year to 30 June 2026) / 557,571 Tasmanian residents (ABS 2021 Census). Using a current ERP (~575k) would give ~58.",
+  "notes": "Tasmania Police publishes no suburb-level offence counts. Finest level is the police DIVISION (13 statewide; Southern District = Hobart, Glenorchy, Kingston, Bridgewater, Clarence, East Coast). Every suburb carries its whole division's totals; 'area' names the division. Suburbs were assigned to divisions by their council (Hobart City->Hobart, Glenorchy City->Glenorchy, Clarence City->Clarence, Brighton->Bridgewater, Kingborough->Kingston, Sorell->East Coast); Tasmania Police does not publish division boundaries, so the Sorell->East Coast mapping in particular is an assumption. Division populations are not published, so population is null (no per-capita rate at suburb level). person = 'Offences Against the Person' table; property = 'Offences Against Property' table; offences = 'Total Offences' table (includes fraud and other categories). Division sums reconcile with district totals within ~15 offences. Figures read from the PDF via an automated extractor; worth a spot-check."
+ },
+ "suburbs": [
+  {
+   "name": "Cambridge",
+   "postcode": "7170",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 911250,
+    "growth": 5.16,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [
+    [
+     "Cambridge Primary School",
+     "p",
+     "g",
+     59
+    ]
+   ],
+   "mall": "Cambridge Park retail precinct",
+   "growthArea": false,
+   "flags": [
+    "Hobart Airport sits in/next to this locality; Cambridge aerodrome also here"
+   ]
+  },
+  {
+   "name": "Seven Mile Beach",
+   "postcode": "7170",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 1305000,
+    "growth": 18.64,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Adjoins Hobart Airport runway"
+   ]
+  },
+  {
+   "name": "Lauderdale",
+   "postcode": "7021",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 800000,
+    "growth": 7.38,
+    "yield": 4.14,
+    "rent": 690
+   },
+   "schools": [
+    [
+     "Lauderdale Primary School",
+     "p",
+     "g",
+     45
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Rokeby",
+   "postcode": "7019",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 615000,
+    "growth": 12.43,
+    "yield": 4.9,
+    "rent": 568
+   },
+   "schools": [
+    [
+     "Emmanuel Christian School",
+     "c",
+     "i",
+     38
+    ],
+    [
+     "Bayview Secondary College",
+     "s",
+     "g",
+     29
+    ],
+    [
+     "Rokeby Primary School",
+     "p",
+     "g",
+     22
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Howrah",
+   "postcode": "7018",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 821000,
+    "growth": 9.91,
+    "yield": 4.19,
+    "rent": 670
+   },
+   "schools": [
+    [
+     "Howrah Primary School",
+     "p",
+     "g",
+     52
+    ]
+   ],
+   "mall": "Shoreline Plaza",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Tranmere",
+   "postcode": "7018",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 1175000,
+    "growth": 6.82,
+    "yield": 3.56,
+    "rent": 740
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bellerive",
+   "postcode": "7018",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 905000,
+    "growth": 2.67,
+    "yield": 3.79,
+    "rent": 670
+   },
+   "schools": [
+    [
+     "The Cottage School",
+     "p",
+     "i",
+     71
+    ],
+    [
+     "Corpus Christi Catholic School",
+     "p",
+     "c",
+     56
+    ],
+    [
+     "Bellerive Primary School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "Clarence High School",
+     "s",
+     "g",
+     51
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Blundstone Arena (major events) and Bellerive police divisional HQ"
+   ]
+  },
+  {
+   "name": "Rosny",
+   "postcode": "7018",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 1000000,
+    "growth": 6.38,
+    "yield": 3.69,
+    "rent": 720
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Next to Rosny Park / Eastlands shopping centre"
+   ]
+  },
+  {
+   "name": "Lindisfarne",
+   "postcode": "7015",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 791325,
+    "growth": 1.65,
+    "yield": 4.06,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Lindisfarne Primary School",
+     "p",
+     "g",
+     60
+    ],
+    [
+     "St Cuthbert's Catholic School",
+     "p",
+     "c",
+     57
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Geilston Bay",
+   "postcode": "7015",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 782500,
+    "growth": 7.93,
+    "yield": 4.32,
+    "rent": 675
+   },
+   "schools": [
+    [
+     "Australian Christian College - Hobart",
+     "c",
+     "i",
+     55
+    ],
+    [
+     "Lindisfarne North Primary School",
+     "p",
+     "g",
+     45
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Rose Bay",
+   "postcode": "7015",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 945000,
+    "growth": -0.87,
+    "yield": 3.81,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Rose Bay High School",
+     "s",
+     "g",
+     44
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Montagu Bay",
+   "postcode": "7018",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 741500,
+    "growth": 8.66,
+    "yield": 3.93,
+    "rent": 610
+   },
+   "schools": [
+    [
+     "Montagu Bay Primary School",
+     "p",
+     "g",
+     58
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Mornington",
+   "postcode": "7018",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 672000,
+    "growth": 13.13,
+    "yield": 4.88,
+    "rent": 580
+   },
+   "schools": [
+    [
+     "MacKillop Catholic College",
+     "s",
+     "c",
+     55
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Warrane",
+   "postcode": "7018",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 610000,
+    "growth": 10.91,
+    "yield": 4.94,
+    "rent": 570
+   },
+   "schools": [
+    [
+     "Eastside Lutheran College",
+     "c",
+     "i",
+     51
+    ],
+    [
+     "Warrane Primary School",
+     "p",
+     "g",
+     42
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Clarendon Vale",
+   "postcode": "7019",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 510000,
+    "growth": 9.68,
+    "yield": 5.22,
+    "rent": 540
+   },
+   "schools": [
+    [
+     "John Paul II Catholic School",
+     "p",
+     "c",
+     51
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Oakdowns",
+   "postcode": "7019",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 764500,
+    "growth": 8.75,
+    "yield": 4.94,
+    "rent": 625
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Risdon Vale",
+   "postcode": "7016",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 529000,
+    "growth": 15.75,
+    "yield": 5.48,
+    "rent": 550
+   },
+   "schools": [
+    [
+     "Risdon Vale Primary School",
+     "p",
+     "g",
+     35
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Risdon Prison Complex is in this locality"
+   ]
+  },
+  {
+   "name": "Richmond",
+   "postcode": "7025",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 975000,
+    "growth": -4.41,
+    "yield": 3.7,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Richmond Primary School",
+     "p",
+     "g",
+     57
+    ],
+    [
+     "St John's Catholic School",
+     "p",
+     "c",
+     52
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Tourist village"
+   ]
+  },
+  {
+   "name": "Acton Park",
+   "postcode": "7170",
+   "crime": {
+    "offences": 3434,
+    "population": null,
+    "person": 559,
+    "property": 2699,
+    "area": "Clarence police division"
+   },
+   "prop": {
+    "median": 1330000,
+    "growth": 11.76,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Sorell",
+   "postcode": "7172",
+   "crime": {
+    "offences": 845,
+    "population": null,
+    "person": 185,
+    "property": 615,
+    "area": "East Coast police division"
+   },
+   "prop": {
+    "median": 730000,
+    "growth": 8.96,
+    "yield": 4.54,
+    "rent": 630
+   },
+   "schools": [
+    [
+     "Sorell School",
+     "c",
+     "g",
+     35
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Division assignment (East Coast) assumed from Sorell police station/LGA"
+   ]
+  },
+  {
+   "name": "Midway Point",
+   "postcode": "7171",
+   "crime": {
+    "offences": 845,
+    "population": null,
+    "person": 185,
+    "property": 615,
+    "area": "East Coast police division"
+   },
+   "prop": {
+    "median": 709000,
+    "growth": 15.28,
+    "yield": 4.65,
+    "rent": 610
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Population grew 2,859 (2016) to 3,384 (2021) per YIP page",
+    "Division assignment (East Coast) assumed from LGA"
+   ]
+  },
+  {
+   "name": "Penna",
+   "postcode": "7171",
+   "crime": {
+    "offences": 845,
+    "population": null,
+    "person": 185,
+    "property": 615,
+    "area": "East Coast police division"
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": 3.81,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Only 3 house sales in 12 months; no median published",
+    "Division assignment (East Coast) assumed from LGA"
+   ]
+  },
+  {
+   "name": "Hobart",
+   "postcode": "7000",
+   "crime": {
+    "offences": 5159,
+    "population": null,
+    "person": 833,
+    "property": 4086,
+    "area": "Hobart police division"
+   },
+   "prop": {
+    "median": 903250,
+    "growth": -17.51,
+    "yield": 3.91,
+    "rent": 690
+   },
+   "schools": [
+    [
+     "St Michael's Collegiate School",
+     "c",
+     "i",
+     61
+    ],
+    [
+     "St Mary's College",
+     "c",
+     "c",
+     55
+    ]
+   ],
+   "mall": "Hobart CBD retail (Cat & Fiddle, Centrepoint)",
+   "growthArea": false,
+   "flags": [
+    "CBD and Salamanca/waterfront nightlife",
+    "House median based on few sales (22)"
+   ]
+  },
+  {
+   "name": "Sandy Bay",
+   "postcode": "7005",
+   "crime": {
+    "offences": 5159,
+    "population": null,
+    "person": 833,
+    "property": 4086,
+    "area": "Hobart police division"
+   },
+   "prop": {
+    "median": 1300000,
+    "growth": 1.96,
+    "yield": 3.19,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "Princes Street Primary School",
+     "p",
+     "g",
+     67
+    ],
+    [
+     "Waimea Heights Primary School",
+     "p",
+     "g",
+     66
+    ],
+    [
+     "The Hutchins School",
+     "c",
+     "i",
+     63
+    ],
+    [
+     "Fahan School",
+     "c",
+     "i",
+     61
+    ],
+    [
+     "Mount Carmel College",
+     "c",
+     "c",
+     56
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "University of Tasmania campus and Wrest Point casino"
+   ]
+  },
+  {
+   "name": "Battery Point",
+   "postcode": "7004",
+   "crime": {
+    "offences": 5159,
+    "population": null,
+    "person": 833,
+    "property": 4086,
+    "area": "Hobart police division"
+   },
+   "prop": {
+    "median": 2070000,
+    "growth": 47.86,
+    "yield": 2.97,
+    "rent": 780
+   },
+   "schools": [
+    [
+     "Albuera Street Primary School",
+     "p",
+     "g",
+     74
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Adjoins Salamanca nightlife strip",
+    "House median based on few sales (18); growth figure volatile"
+   ]
+  },
+  {
+   "name": "South Hobart",
+   "postcode": "7004",
+   "crime": {
+    "offences": 5159,
+    "population": null,
+    "person": 833,
+    "property": 4086,
+    "area": "Hobart police division"
+   },
+   "prop": {
+    "median": 874000,
+    "growth": 0.69,
+    "yield": 3.89,
+    "rent": 640
+   },
+   "schools": [
+    [
+     "South Hobart Primary School",
+     "p",
+     "g",
+     66
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "North Hobart",
+   "postcode": "7000",
+   "crime": {
+    "offences": 5159,
+    "population": null,
+    "person": 833,
+    "property": 4086,
+    "area": "Hobart police division"
+   },
+   "prop": {
+    "median": 905000,
+    "growth": 3.72,
+    "yield": 3.8,
+    "rent": 620
+   },
+   "schools": [
+    [
+     "The Friends' School",
+     "c",
+     "i",
+     60
+    ],
+    [
+     "Campbell Street Primary School",
+     "p",
+     "g",
+     55
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Elizabeth Street restaurant/bar strip"
+   ]
+  },
+  {
+   "name": "West Hobart",
+   "postcode": "7000",
+   "crime": {
+    "offences": 5159,
+    "population": null,
+    "person": 833,
+    "property": 4086,
+    "area": "Hobart police division"
+   },
+   "prop": {
+    "median": 1020000,
+    "growth": 7.37,
+    "yield": 3.6,
+    "rent": 678
+   },
+   "schools": [
+    [
+     "Lansdowne Crescent Primary School",
+     "p",
+     "g",
+     62
+    ],
+    [
+     "Goulburn Street Primary School",
+     "p",
+     "g",
+     59
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "New Town",
+   "postcode": "7008",
+   "crime": {
+    "offences": 5159,
+    "population": null,
+    "person": 833,
+    "property": 4086,
+    "area": "Hobart police division"
+   },
+   "prop": {
+    "median": 885000,
+    "growth": 0.0,
+    "yield": 4.01,
+    "rent": 675
+   },
+   "schools": [
+    [
+     "New Town Primary School",
+     "p",
+     "g",
+     58
+    ],
+    [
+     "Hobart City High School",
+     "s",
+     "g",
+     55
+    ],
+    [
+     "Sacred Heart College",
+     "c",
+     "c",
+     50
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Lenah Valley",
+   "postcode": "7008",
+   "crime": {
+    "offences": 5159,
+    "population": null,
+    "person": 833,
+    "property": 4086,
+    "area": "Hobart police division"
+   },
+   "prop": {
+    "median": 850000,
+    "growth": 12.96,
+    "yield": 4.35,
+    "rent": 675
+   },
+   "schools": [
+    [
+     "Lenah Valley Primary School",
+     "p",
+     "g",
+     73
+    ],
+    [
+     "Immaculate Heart of Mary Catholic School",
+     "p",
+     "c",
+     57
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Mount Stuart",
+   "postcode": "7000",
+   "crime": {
+    "offences": 5159,
+    "population": null,
+    "person": 833,
+    "property": 4086,
+    "area": "Hobart police division"
+   },
+   "prop": {
+    "median": 958500,
+    "growth": 0.37,
+    "yield": 4.1,
+    "rent": 688
+   },
+   "schools": [
+    [
+     "Mount Stuart Primary School",
+     "p",
+     "g",
+     65
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Moonah",
+   "postcode": "7009",
+   "crime": {
+    "offences": 3669,
+    "population": null,
+    "person": 642,
+    "property": 2819,
+    "area": "Glenorchy police division"
+   },
+   "prop": {
+    "median": 695000,
+    "growth": 8.26,
+    "yield": 4.66,
+    "rent": 622
+   },
+   "schools": [
+    [
+     "St Therese's Catholic School",
+     "p",
+     "c",
+     56
+    ],
+    [
+     "Bowen Road Primary School",
+     "p",
+     "g",
+     49
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Main Road Moonah shopping strip"
+   ]
+  },
+  {
+   "name": "West Moonah",
+   "postcode": "7009",
+   "crime": {
+    "offences": 3669,
+    "population": null,
+    "person": 642,
+    "property": 2819,
+    "area": "Glenorchy police division"
+   },
+   "prop": {
+    "median": 690000,
+    "growth": 6.98,
+    "yield": 4.44,
+    "rent": 620
+   },
+   "schools": [
+    [
+     "Hilliard Christian School",
+     "c",
+     "i",
+     54
+    ],
+    [
+     "Springfield Gardens Primary School",
+     "p",
+     "g",
+     40
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Glenorchy",
+   "postcode": "7010",
+   "crime": {
+    "offences": 3669,
+    "population": null,
+    "person": 642,
+    "property": 2819,
+    "area": "Glenorchy police division"
+   },
+   "prop": {
+    "median": 647500,
+    "growth": 11.64,
+    "yield": 4.84,
+    "rent": 580
+   },
+   "schools": [
+    [
+     "Dominic College",
+     "c",
+     "c",
+     52
+    ],
+    [
+     "Glenorchy Primary School",
+     "p",
+     "g",
+     30
+    ],
+    [
+     "Indie School - Glenorchy",
+     "c",
+     "i",
+     30
+    ],
+    [
+     "Cosgrove High School",
+     "s",
+     "g",
+     24
+    ]
+   ],
+   "mall": "Northgate Shopping Centre",
+   "growthArea": false,
+   "flags": [
+    "Glenorchy CBD / Elwick racecourse / MONA nearby"
+   ]
+  },
+  {
+   "name": "Claremont",
+   "postcode": "7011",
+   "crime": {
+    "offences": 3669,
+    "population": null,
+    "person": 642,
+    "property": 2819,
+    "area": "Glenorchy police division"
+   },
+   "prop": {
+    "median": 613500,
+    "growth": 11.55,
+    "yield": 4.76,
+    "rent": 570
+   },
+   "schools": [
+    [
+     "OneSchool Global Tas",
+     "c",
+     "i",
+     69
+    ],
+    [
+     "Holy Rosary Catholic School",
+     "p",
+     "c",
+     42
+    ],
+    [
+     "Windermere Primary School",
+     "p",
+     "g",
+     36
+    ],
+    [
+     "Austins Ferry Primary School",
+     "p",
+     "g",
+     33
+    ]
+   ],
+   "mall": "Claremont Plaza",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Berriedale",
+   "postcode": "7011",
+   "crime": {
+    "offences": 3669,
+    "population": null,
+    "person": 642,
+    "property": 2819,
+    "area": "Glenorchy police division"
+   },
+   "prop": {
+    "median": 650000,
+    "growth": 11.49,
+    "yield": 4.73,
+    "rent": 558
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "MONA (Museum of Old and New Art) is here"
+   ]
+  },
+  {
+   "name": "Montrose",
+   "postcode": "7010",
+   "crime": {
+    "offences": 3669,
+    "population": null,
+    "person": 642,
+    "property": 2819,
+    "area": "Glenorchy police division"
+   },
+   "prop": {
+    "median": 686500,
+    "growth": 12.54,
+    "yield": 4.45,
+    "rent": 630
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Rosetta",
+   "postcode": "7010",
+   "crime": {
+    "offences": 3669,
+    "population": null,
+    "person": 642,
+    "property": 2819,
+    "area": "Glenorchy police division"
+   },
+   "prop": {
+    "median": 720000,
+    "growth": 13.83,
+    "yield": 4.41,
+    "rent": 620
+   },
+   "schools": [
+    [
+     "Rosetta Primary School",
+     "p",
+     "g",
+     52
+    ],
+    [
+     "Montrose Bay High School",
+     "s",
+     "g",
+     29
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bridgewater",
+   "postcode": "7030",
+   "crime": {
+    "offences": 2607,
+    "population": null,
+    "person": 541,
+    "property": 1949,
+    "area": "Bridgewater police division"
+   },
+   "prop": {
+    "median": 520000,
+    "growth": 23.81,
+    "yield": 5.47,
+    "rent": 500
+   },
+   "schools": [
+    [
+     "Northern Christian School",
+     "p",
+     "i",
+     49
+    ],
+    [
+     "St Paul's Catholic School",
+     "p",
+     "c",
+     35
+    ],
+    [
+     "JRLF - Senior School",
+     "s",
+     "g",
+     18
+    ],
+    [
+     "JRLF - East Derwent Primary School",
+     "p",
+     "g",
+     5
+    ]
+   ],
+   "mall": "Cove Hill Fair",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Brighton",
+   "postcode": "7030",
+   "crime": {
+    "offences": 2607,
+    "population": null,
+    "person": 541,
+    "property": 1949,
+    "area": "Bridgewater police division"
+   },
+   "prop": {
+    "median": 658222,
+    "growth": 9.7,
+    "yield": 4.57,
+    "rent": 575
+   },
+   "schools": [
+    [
+     "Brighton High School",
+     "s",
+     "g",
+     41
+    ],
+    [
+     "Brighton Primary School",
+     "p",
+     "g",
+     41
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "New residential estates; 2021 census may undercount"
+   ]
+  },
+  {
+   "name": "Old Beach",
+   "postcode": "7017",
+   "crime": {
+    "offences": 2607,
+    "population": null,
+    "person": 541,
+    "property": 1949,
+    "area": "Bridgewater police division"
+   },
+   "prop": {
+    "median": 710000,
+    "growth": -5.27,
+    "yield": 4.14,
+    "rent": 645
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "New residential estates; 2021 census may undercount"
+   ]
+  },
+  {
+   "name": "Gagebrook",
+   "postcode": "7030",
+   "crime": {
+    "offences": 2607,
+    "population": null,
+    "person": 541,
+    "property": 1949,
+    "area": "Bridgewater police division"
+   },
+   "prop": {
+    "median": 457000,
+    "growth": 20.11,
+    "yield": 5.66,
+    "rent": 470
+   },
+   "schools": [
+    [
+     "JRLF - Gagebrook Primary School",
+     "p",
+     "g",
+     12
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kingston",
+   "postcode": "7050",
+   "crime": {
+    "offences": 1615,
+    "population": null,
+    "person": 242,
+    "property": 1307,
+    "area": "Kingston police division"
+   },
+   "prop": {
+    "median": 820000,
+    "growth": 9.33,
+    "yield": 4.28,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Southern Christian College",
+     "c",
+     "i",
+     63
+    ],
+    [
+     "Calvin Christian School",
+     "c",
+     "i",
+     62
+    ],
+    [
+     "Kingston Primary School",
+     "p",
+     "g",
+     54
+    ],
+    [
+     "Kingston High School",
+     "s",
+     "g",
+     43
+    ]
+   ],
+   "mall": "Channel Court Shopping Centre",
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Blackmans Bay",
+   "postcode": "7052",
+   "crime": {
+    "offences": 1615,
+    "population": null,
+    "person": 242,
+    "property": 1307,
+    "area": "Kingston police division"
+   },
+   "prop": {
+    "median": 850000,
+    "growth": 3.34,
+    "yield": 3.84,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Illawarra Primary School",
+     "p",
+     "g",
+     64
+    ],
+    [
+     "Blackmans Bay Primary School",
+     "p",
+     "g",
+     52
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Taroona",
+   "postcode": "7053",
+   "crime": {
+    "offences": 1615,
+    "population": null,
+    "person": 242,
+    "property": 1307,
+    "area": "Kingston police division"
+   },
+   "prop": {
+    "median": 950000,
+    "growth": 1.09,
+    "yield": 3.65,
+    "rent": 765
+   },
+   "schools": [
+    [
+     "Taroona Primary School",
+     "p",
+     "g",
+     65
+    ],
+    [
+     "Taroona High School",
+     "s",
+     "g",
+     55
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  }
+ ]
+}

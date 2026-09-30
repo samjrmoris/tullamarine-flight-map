@@ -1,0 +1,128 @@
+{"n": "Glenelg", "crime": [590, 3440, 144, 410]}
+{"n": "West Beach", "crime": [143, 5175, 23, 109]}
+{"n": "Glenelg North", "crime": [334, 6594, 65, 244]}
+{"n": "Glenelg East", "crime": [135, 3855, 18, 108]}
+{"n": "Novar Gardens", "crime": [168, 2508, 36, 119]}
+{"n": "Netley", "crime": [55, 1910, 3, 49]}
+{"n": "Plympton", "crime": [372, 5459, 56, 291]}
+{"n": "Plympton Park", "crime": [189, 3881, 42, 128]}
+{"n": "North Plympton", "crime": [86, 3610, 13, 64]}
+{"n": "Kurralta Park", "crime": [172, 3139, 41, 118]}
+{"n": "Marleston", "crime": [114, 1950, 6, 104]}
+{"n": "Richmond", "crime": [177, 3474, 24, 143]}
+{"n": "West Richmond", "crime": [110, 1087, 9, 91]}
+{"n": "Mile End", "crime": [469, 4536, 94, 348]}
+{"n": "Torrensville", "crime": [318, 4110, 39, 252]}
+{"n": "Thebarton", "crime": [171, 1442, 27, 137]}
+{"n": "Lockleys", "crime": [131, 5987, 33, 87]}
+{"n": "Brooklyn Park", "crime": [318, 5040, 63, 234]}
+{"n": "Underdale", "crime": [157, 2429, 28, 123]}
+{"n": "Fulham", "crime": [261, 2920, 26, 224]}
+{"n": "Henley Beach", "crime": [302, 6259, 58, 220]}
+{"n": "Henley Beach South", "crime": [146, 2799, 38, 105]}
+{"n": "Grange", "crime": [240, 6143, 41, 183]}
+{"n": "Kidman Park", "crime": [116, 3874, 29, 80]}
+{"n": "Flinders Park", "crime": [199, 5489, 47, 138]}
+{"n": "Cowandilla", "crime": [74, 1455, 22, 46]}
+{"n": "Hilton", "crime": [219, 908, 18, 195]}
+{"n": "Camden Park", "crime": [168, 3338, 25, 134]}
+{"n": "Park Holme", "crime": [265, 3199, 33, 226]}
+{"n": "Morphettville", "crime": [212, 3686, 45, 157]}
+{"n": "Glengowrie", "crime": [137, 5767, 23, 103]}
+{"n": "Somerton Park", "crime": [143, 5811, 27, 105]}
+{"n": "Warradale", "crime": [171, 5801, 28, 127]}
+{"n": "Brighton", "crime": [313, 3834, 30, 273]}
+{"n": "Hove", "crime": [101, 3189, 18, 76]}
+{"n": "Edwardstown", "crime": [626, 4514, 114, 471]}
+{"n": "Goodwood", "crime": [140, 2823, 23, 109]}
+{"n": "Keswick", "crime": [83, 754, 8, 72]}
+{"n": "Unley", "crime": [266, 3997, 25, 226]}
+{"n": "Kensington Park", "crime": [53, 2627, 12, 39]}
+{"n": "Norwood", "crime": [551, 6354, 63, 458]}
+{"n": "North Adelaide", "crime": [935, 6823, null, null]}
+{"n": "Prospect", "crime": [1175, 14584, null, null]}
+{"n": "Walkerville", "crime": [235, 2867, null, null]}
+{"n": "Parafield Gardens", "crime": [1074, 18466, null, null]}
+{"n": "Green Fields", "crime": [43, 170, null, null]}
+{"n": "Mawson Lakes", "crime": [885, 13794, null, null]}
+{"n": "Pooraka", "crime": [573, 7583, null, null]}
+{"n": "Para Hills", "crime": [395, 6793, null, null]}
+{"n": "Salisbury", "crime": [1782, 8841, null, null]}
+{"n": "Salisbury North", "crime": [822, 10684, null, null]}
+{"n": "Paralowie", "crime": [1198, 17504, null, null]}
+{"n": "Salisbury East", "crime": [424, 9274, null, null]}
+{"n": "Burton", "crime": [342, 6519, null, null]}
+{"n": "Elizabeth", "crime": [1389, 1033, null, null]}
+{"n": "Munno Para", "crime": [860, 4719, null, null]}
+{"n": "Angle Vale", "crime": [458, 4051, null, null]}
+{"n": "Two Wells", "crime": [90, 3233, null, null]}
+{"n": "Golden Grove", "crime": [437, 10299, null, null]}
+{"n": "Modbury", "crime": [968, 5593, null, null]}
+{"n": "Tea Tree Gully", "crime": [120, 3499, null, null]}
+{"n": "Mount Barker", "crime": [626, 18331, null, null]}
+{"n": "Morphett Vale", "crime": [1630, 24002, null, null]}
+{"n": "Seaford", "crime": [462, 4493, null, null]}
+{"n": "Aldinga Beach", "crime": [408, 10667, null, null]}
+{"n": "Glenelg", "prop": [1950000, 30.87, 2.57, 790]}
+{"n": "Glenelg North", "prop": [1420000, 12.7, 2.84, 768]}
+{"n": "Glenelg East", "prop": [1800000, 22.03, 2.41, 700]}
+{"n": "Novar Gardens", "prop": [1320000, 22.79, 3.05, 705]}
+{"n": "Netley", "prop": [1117500, 19.77, 3.31, 650]}
+{"n": "Plympton", "prop": [1276000, 29.87, 3.2, 700]}
+{"n": "Plympton Park", "prop": [1160000, 17.41, 3.22, 680]}
+{"n": "North Plympton", "prop": [1111113, 16.96, 3.35, 700]}
+{"n": "Kurralta Park", "prop": [1084250, 14.74, 3.3, 700]}
+{"n": "Marleston", "prop": [992000, 13.37, 3.58, 670]}
+{"n": "Richmond", "prop": [1126000, 12.6, 3.54, 660]}
+{"n": "West Richmond", "prop": [963000, 15.16, 3.55, 625]}
+{"n": "Mile End", "prop": [1170000, 4.0, 3.09, 688]}
+{"n": "Torrensville", "prop": [1145000, 4.09, 3.06, 692]}
+{"n": "Thebarton", "prop": [1365000, 33.24, 3.17, 665]}
+{"n": "Lockleys", "prop": [1450000, 18.37, 2.74, 720]}
+{"n": "Brooklyn Park", "prop": [1091000, 19.23, 3.32, 670]}
+{"n": "Underdale", "prop": [1115000, -3.46, 3.16, 618]}
+{"n": "Fulham", "prop": [1550000, 13.35, 2.77, 750]}
+{"n": "Henley Beach", "prop": [1710000, 11.04, 2.77, 880]}
+{"n": "Henley Beach South", "prop": [1790000, 4.07, 2.64, 860]}
+{"n": "Grange", "prop": [1610000, 8.05, 2.9, 800]}
+{"n": "Kidman Park", "prop": [1212000, 17.67, 3.16, 700]}
+{"n": "Flinders Park", "prop": [1195000, 14.35, 3.32, 700]}
+{"n": "Cowandilla", "prop": [995000, 6.99, 3.36, 640]}
+{"n": "Hilton", "prop": [1165000, 17.68, 3.19, 695]}
+{"n": "Camden Park", "prop": [975000, -0.51, 3.19, 695]}
+{"n": "Park Holme", "prop": [950000, 4.17, 3.43, 700]}
+{"n": "Morphettville", "prop": [1021500, 19.75, 3.27, 700]}
+{"n": "Glengowrie", "prop": [1400000, 10.45, 2.96, 710]}
+{"n": "Somerton Park", "prop": [2200000, 22.05, 2.44, 760]}
+{"n": "Warradale", "prop": [1240000, 15.89, 3.26, 700]}
+{"n": "Brighton", "prop": [1405000, 4.46, 2.73, 785]}
+{"n": "Hove", "prop": [1401000, 19.23, 2.76, 730]}
+{"n": "Edwardstown", "prop": [1002500, 8.38, 3.35, 650]}
+{"n": "Goodwood", "prop": [1622500, 10.37, 2.47, 685]}
+{"n": "Keswick", "prop": null}
+{"n": "Unley", "prop": [1800000, 8.4, 2.31, 800]}
+{"n": "Kensington Park", "prop": [1849550, 5.09, 2.42, 850]}
+{"n": "Norwood", "prop": [1675000, 12.61, 2.58, 740]}
+{"n": "North Adelaide", "prop": [1679000, 3.32, 2.67, 750]}
+{"n": "Prospect", "prop": [1400000, 10.67, 2.59, 680]}
+{"n": "Walkerville", "prop": [1972500, -8.89, 2.11, 950]}
+{"n": "Parafield Gardens", "prop": [840000, 18.14, 3.93, 620]}
+{"n": "Green Fields", "prop": [null, null, 3.45, null]}
+{"n": "Mawson Lakes", "prop": [885000, 5.11, 3.81, 660]}
+{"n": "Pooraka", "prop": [860000, 15.36, 3.83, 600]}
+{"n": "Para Hills", "prop": [811000, 13.43, 3.84, 595]}
+{"n": "Salisbury", "prop": [787000, 20.15, 4.06, 550]}
+{"n": "Salisbury North", "prop": [660000, 10.0, 4.32, 550]}
+{"n": "Paralowie", "prop": [755000, 12.69, 4.15, 600]}
+{"n": "Salisbury East", "prop": [795000, 17.78, 4.01, 590]}
+{"n": "Burton", "prop": [716500, 7.26, 4.15, 600]}
+{"n": "Elizabeth", "prop": [671000, 18.76, 4.33, 490]}
+{"n": "Munno Para", "prop": [665000, 10.83, 4.29, 570]}
+{"n": "Angle Vale", "prop": [855000, 8.23, 3.57, 650]}
+{"n": "Two Wells", "prop": [900000, 5.26, 4.15, 695]}
+{"n": "Golden Grove", "prop": [947500, 9.28, 3.53, 655]}
+{"n": "Modbury", "prop": [857250, 10.97, 3.79, 650]}
+{"n": "Tea Tree Gully", "prop": [940500, 13.99, 3.64, 620]}
+{"n": "Mount Barker", "prop": [840000, 15.07, 3.86, 615]}
+{"n": "Morphett Vale", "prop": [782500, 13.41, 4.11, 600]}
+{"n": "Seaford", "prop": [897500, 19.27, 3.78, 650]}

@@ -1,0 +1,1424 @@
+{
+ "region": "wa",
+ "crimeSource": {
+  "name": "RedSuburbs (republishes WA Police Force locality crime statistics; population = ABS 2021 Census)",
+  "url": "https://redsuburbs.com.au/states/wa/",
+  "period": "calendar year 2025",
+  "level": "suburb",
+  "stateRatePer1000": 107.85,
+  "stateRateSource": "RedSuburbs WA page: 285,969 offences in 2025 / 2,651,542 residents (ABS 2021) = 107.85 per 1,000",
+  "notes": "Suburb pages at redsuburbs.com.au/suburbs/<slug>/. 'person' = RedSuburbs 'violent crimes'; 'property' = RedSuburbs 'property crimes'; total also includes drug, deception and other offences. Period is calendar 2025, not year to March 2026 (WA Police locality data is only available via a Power BI dashboard, not fetchable; aucrimetracker WA pages load no data). Perth Airport is its own locality, so airport offences are not in Belmont/Redcliffe etc. Rates for fast-growing estates use 2021 population and overstate per-capita crime."
+ },
+ "suburbs": [
+  {
+   "name": "Belmont",
+   "postcode": "6104",
+   "crime": {
+    "offences": 1830,
+    "population": 6959,
+    "person": 336,
+    "property": 946,
+    "area": null
+   },
+   "prop": {
+    "median": 902000,
+    "growth": 18.37,
+    "yield": 4.03,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Belmont Primary School",
+     "p",
+     "g",
+     59
+    ],
+    [
+     "Belmont City College",
+     "s",
+     "g",
+     47
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Directly beside Perth Airport; Perth Airport itself is a separate locality so airport crime is not counted here"
+   ]
+  },
+  {
+   "name": "Redcliffe",
+   "postcode": "6104",
+   "crime": {
+    "offences": 956,
+    "population": 5030,
+    "person": 214,
+    "property": 431,
+    "area": null
+   },
+   "prop": {
+    "median": 913500,
+    "growth": 18.64,
+    "yield": 4.22,
+    "rent": 775
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Adjoins Perth Airport (airport is a separate locality); METRONET Redcliffe station area redeveloping"
+   ]
+  },
+  {
+   "name": "Ascot",
+   "postcode": "6104",
+   "crime": {
+    "offences": 449,
+    "population": 3095,
+    "person": 73,
+    "property": 240,
+    "area": null
+   },
+   "prop": {
+    "median": 1343000,
+    "growth": 32.32,
+    "yield": 3.7,
+    "rent": 850
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Rivervale",
+   "postcode": "6103",
+   "crime": {
+    "offences": 1602,
+    "population": 10897,
+    "person": 371,
+    "property": 752,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Cloverdale",
+   "postcode": "6105",
+   "crime": {
+    "offences": 1996,
+    "population": 8864,
+    "person": 320,
+    "property": 1164,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": "Belmont Forum",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kewdale",
+   "postcode": "6105",
+   "crime": {
+    "offences": 709,
+    "population": 7397,
+    "person": 159,
+    "property": 337,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Large industrial/freight area (Kewdale freight terminal) inflates property offences per resident"
+   ]
+  },
+  {
+   "name": "Welshpool",
+   "postcode": "6106",
+   "crime": {
+    "offences": 318,
+    "population": 16,
+    "person": 37,
+    "property": 169,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Mostly industrial; 2021 population only 16, so per-capita rate is meaningless"
+   ]
+  },
+  {
+   "name": "High Wycombe",
+   "postcode": "6057",
+   "crime": {
+    "offences": 674,
+    "population": 12198,
+    "person": 182,
+    "property": 248,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Forrestfield",
+   "postcode": "6058",
+   "crime": {
+    "offences": 1258,
+    "population": 13181,
+    "person": 289,
+    "property": 550,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Maida Vale",
+   "postcode": "6057",
+   "crime": {
+    "offences": 163,
+    "population": 4499,
+    "person": 50,
+    "property": 63,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kalamunda",
+   "postcode": "6076",
+   "crime": {
+    "offences": 259,
+    "population": 7163,
+    "person": 36,
+    "property": 182,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Guildford",
+   "postcode": "6055",
+   "crime": {
+    "offences": 303,
+    "population": 2040,
+    "person": 48,
+    "property": 127,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bassendean",
+   "postcode": "6054",
+   "crime": {
+    "offences": 1025,
+    "population": 10837,
+    "person": 231,
+    "property": 487,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Hazelmere",
+   "postcode": "6055",
+   "crime": {
+    "offences": 131,
+    "population": 935,
+    "person": 15,
+    "property": 60,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Largely industrial/semi-rural; small resident population"
+   ]
+  },
+  {
+   "name": "South Guildford",
+   "postcode": "6055",
+   "crime": {
+    "offences": 200,
+    "population": 3781,
+    "person": 76,
+    "property": 86,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Caversham",
+   "postcode": "6055",
+   "crime": {
+    "offences": 506,
+    "population": 7419,
+    "person": 153,
+    "property": 196,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Midland",
+   "postcode": "6056",
+   "crime": {
+    "offences": 2949,
+    "population": 6335,
+    "person": 526,
+    "property": 1612,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": "Midland Gate",
+   "growthArea": false,
+   "flags": [
+    "Regional centre: Midland Gate, hospital and train station inflate offences per resident"
+   ]
+  },
+  {
+   "name": "Bayswater",
+   "postcode": "6053",
+   "crime": {
+    "offences": 1231,
+    "population": 15288,
+    "person": 240,
+    "property": 651,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Maylands",
+   "postcode": "6051",
+   "crime": {
+    "offences": 1476,
+    "population": 13199,
+    "person": 276,
+    "property": 694,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Inglewood",
+   "postcode": "6052",
+   "crime": {
+    "offences": 441,
+    "population": 5837,
+    "person": 73,
+    "property": 273,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Morley",
+   "postcode": "6062",
+   "crime": {
+    "offences": 2157,
+    "population": 22539,
+    "person": 389,
+    "property": 1151,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": "Galleria (Morley)",
+   "growthArea": false,
+   "flags": [
+    "Galleria regional shopping centre"
+   ]
+  },
+  {
+   "name": "Beechboro",
+   "postcode": "6063",
+   "crime": {
+    "offences": 1140,
+    "population": 9112,
+    "person": 325,
+    "property": 447,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kiara",
+   "postcode": "6054",
+   "crime": {
+    "offences": 183,
+    "population": 1776,
+    "person": 25,
+    "property": 81,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Lockridge",
+   "postcode": "6054",
+   "crime": {
+    "offences": 587,
+    "population": 3322,
+    "person": 182,
+    "property": 214,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Victoria Park",
+   "postcode": "6100",
+   "crime": {
+    "offences": 1259,
+    "population": 9334,
+    "person": 158,
+    "property": 730,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Albany Highway dining/nightlife strip"
+   ]
+  },
+  {
+   "name": "Lathlain",
+   "postcode": "6100",
+   "crime": {
+    "offences": 225,
+    "population": 3699,
+    "person": 37,
+    "property": 132,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Carlisle",
+   "postcode": "6101",
+   "crime": {
+    "offences": 856,
+    "population": 6733,
+    "person": 218,
+    "property": 403,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kensington",
+   "postcode": "6151",
+   "crime": {
+    "offences": 387,
+    "population": 4627,
+    "person": 63,
+    "property": 186,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Wattle Grove",
+   "postcode": "6107",
+   "crime": {
+    "offences": 306,
+    "population": 6547,
+    "person": 55,
+    "property": 84,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Lesmurdie",
+   "postcode": "6076",
+   "crime": {
+    "offences": 259,
+    "population": 8413,
+    "person": 65,
+    "property": 97,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Gosnells",
+   "postcode": "6110",
+   "crime": {
+    "offences": 2958,
+    "population": 21149,
+    "person": 695,
+    "property": 1200,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Maddington",
+   "postcode": "6109",
+   "crime": {
+    "offences": 2442,
+    "population": 12419,
+    "person": 382,
+    "property": 1302,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": "Maddington Central",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kenwick",
+   "postcode": "6107",
+   "crime": {
+    "offences": 756,
+    "population": 5684,
+    "person": 187,
+    "property": 308,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Beckenham",
+   "postcode": "6107",
+   "crime": {
+    "offences": 904,
+    "population": 9092,
+    "person": 164,
+    "property": 494,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Cannington",
+   "postcode": "6107",
+   "crime": {
+    "offences": 3474,
+    "population": 6875,
+    "person": 408,
+    "property": 2143,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": "Westfield Carousel",
+   "growthArea": false,
+   "flags": [
+    "Westfield Carousel drives high theft counts relative to small population"
+   ]
+  },
+  {
+   "name": "Queens Park",
+   "postcode": "6107",
+   "crime": {
+    "offences": 647,
+    "population": 7268,
+    "person": 149,
+    "property": 318,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Thornlie",
+   "postcode": "6108",
+   "crime": {
+    "offences": 2348,
+    "population": 23665,
+    "person": 533,
+    "property": 1025,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Canning Vale",
+   "postcode": "6155",
+   "crime": {
+    "offences": 1868,
+    "population": 34504,
+    "person": 567,
+    "property": 754,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Jandakot",
+   "postcode": "6164",
+   "crime": {
+    "offences": 253,
+    "population": 2533,
+    "person": 30,
+    "property": 183,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Contains Jandakot Airport; small population"
+   ]
+  },
+  {
+   "name": "Atwell",
+   "postcode": "6164",
+   "crime": {
+    "offences": 466,
+    "population": 9287,
+    "person": 109,
+    "property": 262,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Success",
+   "postcode": "6164",
+   "crime": {
+    "offences": 1340,
+    "population": 11340,
+    "person": 177,
+    "property": 899,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": "Cockburn Gateway",
+   "growthArea": false,
+   "flags": [
+    "Cockburn Gateway shopping centre"
+   ]
+  },
+  {
+   "name": "Aubin Grove",
+   "postcode": "6164",
+   "crime": {
+    "offences": 182,
+    "population": 6786,
+    "person": 60,
+    "property": 80,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bibra Lake",
+   "postcode": "6163",
+   "crime": {
+    "offences": 651,
+    "population": 5892,
+    "person": 89,
+    "property": 337,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Large industrial area"
+   ]
+  },
+  {
+   "name": "Leeming",
+   "postcode": "6149",
+   "crime": {
+    "offences": 229,
+    "population": 10883,
+    "person": 40,
+    "property": 131,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bull Creek",
+   "postcode": "6149",
+   "crime": {
+    "offences": 418,
+    "population": 8030,
+    "person": 34,
+    "property": 342,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Willetton",
+   "postcode": "6155",
+   "crime": {
+    "offences": 768,
+    "population": 19262,
+    "person": 175,
+    "property": 372,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Harrisdale",
+   "postcode": "6112",
+   "crime": {
+    "offences": 708,
+    "population": 11667,
+    "person": 292,
+    "property": 214,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Piara Waters",
+   "postcode": "6112",
+   "crime": {
+    "offences": 470,
+    "population": 15029,
+    "person": 156,
+    "property": 138,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Southern River",
+   "postcode": "6110",
+   "crime": {
+    "offences": 694,
+    "population": 12852,
+    "person": 145,
+    "property": 400,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Ellenbrook",
+   "postcode": "6069",
+   "crime": {
+    "offences": 2978,
+    "population": 24668,
+    "person": 739,
+    "property": 1373,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": "Ellenbrook Central",
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Baldivis",
+   "postcode": "6171",
+   "crime": {
+    "offences": 2555,
+    "population": 37697,
+    "person": 642,
+    "property": 1162,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": "Stockland Baldivis",
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Byford",
+   "postcode": "6122",
+   "crime": {
+    "offences": 1256,
+    "population": 18878,
+    "person": 377,
+    "property": 471,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Alkimos",
+   "postcode": "6038",
+   "crime": {
+    "offences": 740,
+    "population": 10203,
+    "person": 210,
+    "property": 293,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Joondalup",
+   "postcode": "6027",
+   "crime": {
+    "offences": 1881,
+    "population": 9193,
+    "person": 293,
+    "property": 1099,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": "Lakeside Joondalup",
+   "growthArea": false,
+   "flags": [
+    "City centre: Lakeside Joondalup, ECU campus, hospital; small resident population"
+   ]
+  },
+  {
+   "name": "Scarborough",
+   "postcode": "6019",
+   "crime": {
+    "offences": 1188,
+    "population": 17605,
+    "person": 324,
+    "property": 466,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Beachfront nightlife/tourist precinct"
+   ]
+  },
+  {
+   "name": "Mount Lawley",
+   "postcode": "6050",
+   "crime": {
+    "offences": 899,
+    "population": 11328,
+    "person": 101,
+    "property": 559,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Beaufort Street dining/nightlife strip"
+   ]
+  },
+  {
+   "name": "Como",
+   "postcode": "6152",
+   "crime": {
+    "offences": 1266,
+    "population": 14786,
+    "person": 205,
+    "property": 693,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Applecross",
+   "postcode": "6153",
+   "crime": {
+    "offences": 442,
+    "population": 7228,
+    "person": 79,
+    "property": 224,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "East Victoria Park",
+   "postcode": "6101",
+   "crime": {
+    "offences": 1631,
+    "population": 10569,
+    "person": 275,
+    "property": 827,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Albany Highway strip"
+   ]
+  },
+  {
+   "name": "Eden Hill",
+   "postcode": "6054",
+   "crime": {
+    "offences": 240,
+    "population": 3703,
+    "person": 91,
+    "property": 80,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Ashfield",
+   "postcode": "6054",
+   "crime": {
+    "offences": 185,
+    "population": 1395,
+    "person": 66,
+    "property": 51,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Embleton",
+   "postcode": "6062",
+   "crime": {
+    "offences": 338,
+    "population": 3600,
+    "person": 76,
+    "property": 157,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bedford",
+   "postcode": "6052",
+   "crime": {
+    "offences": 354,
+    "population": 5716,
+    "person": 88,
+    "property": 140,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Dianella",
+   "postcode": "6059",
+   "crime": {
+    "offences": 957,
+    "population": 24169,
+    "person": 204,
+    "property": 445,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Aveley",
+   "postcode": "6069",
+   "crime": {
+    "offences": 573,
+    "population": 13998,
+    "person": 132,
+    "property": 252,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  }
+ ]
+}

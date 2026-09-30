@@ -1,0 +1,2727 @@
+{
+ "region": "qld",
+ "crimeSource": {
+  "name": "AU Crime Tracker (aucrimetracker.com), republishing Queensland Police Service suburb-level reported offences",
+  "url": "https://www.aucrimetracker.com/qld/<suburb-slug>/",
+  "period": "12 months to August 2026 (site label '2025 - 2026 (Aug)')",
+  "level": "suburb",
+  "stateRatePer1000": 110.0,
+  "stateRateSource": "Queensland Government Statistician's Office, Crime report, Queensland, 2024-25 (620,898 recorded offences, 10,998.1 per 100,000 persons; FY 2024-25): https://www.qgso.qld.gov.au/issues/7856/crime-report-qld-2024-25.pdf",
+  "notes": "QLD pages on aucrimetracker do not render the population number; population here is back-calculated as offences / published rate per 100,000 (2021 census basis) and rounded, so may be off by 1-2 people (checked: Ascot gives 6,531, matching the 2021 census). Duplicate QLD place names use a '-brisbane' slug (ascot-brisbane, albion-brisbane, red-hill-brisbane, the-gap-brisbane). 'person' = site's 'offences against persons' (homicide, assault, sexual offences, robbery, other); 'property' = site's 'property crime' (arson, theft, damage, etc.). The QLD 'person' share looks low next to the official state split (about 6-10% of offences vs 14% statewide), so person counts may exclude some categories. The state rate is for a different period (FY 2024-25) because the site's own implied QLD total (1,107,708) is far above the official 620,898 and was not used. All 73 suburbs are in Brisbane City except North Lakes, Mango Hill, Redcliffe, Kallangur, Strathpine and Albany Creek (Moreton Bay), Springfield Lakes (Ipswich), Springwood (Logan), and Capalaba and Cleveland (Redland)."
+ },
+ "suburbs": [
+  {
+   "name": "Hendra",
+   "postcode": "4011",
+   "crime": {
+    "offences": 391,
+    "population": 4914,
+    "person": 24,
+    "property": 236,
+    "area": null
+   },
+   "prop": {
+    "median": 2062500,
+    "growth": 5.77,
+    "yield": 2.55,
+    "rent": 1150
+   },
+   "schools": [
+    [
+     "Aviation High",
+     "s",
+     "g",
+     57
+    ],
+    [
+     "Our Lady Help of Christians School",
+     "p",
+     "c",
+     53
+    ],
+    [
+     "Hendra State School",
+     "p",
+     "g",
+     29
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Clayfield",
+   "postcode": "4011",
+   "crime": {
+    "offences": 677,
+    "population": 10897,
+    "person": 44,
+    "property": 451,
+    "area": null
+   },
+   "prop": {
+    "median": 2092000,
+    "growth": 17.96,
+    "yield": 2.34,
+    "rent": 930
+   },
+   "schools": [
+    [
+     "St Rita's College",
+     "c",
+     "c",
+     67
+    ],
+    [
+     "Eagle Junction State School",
+     "p",
+     "g",
+     66
+    ],
+    [
+     "Clayfield College",
+     "c",
+     "i",
+     61
+    ],
+    [
+     "St Agatha's Primary School",
+     "p",
+     "c",
+     59
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Ascot",
+   "postcode": "4007",
+   "crime": {
+    "offences": 466,
+    "population": 6531,
+    "person": 34,
+    "property": 279,
+    "area": null
+   },
+   "prop": {
+    "median": 2762500,
+    "growth": 15.1,
+    "yield": 1.98,
+    "rent": 1295
+   },
+   "schools": [
+    [
+     "St Margaret's Anglican Girls School",
+     "c",
+     "i",
+     69
+    ],
+    [
+     "Ascot State School",
+     "p",
+     "g",
+     60
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Eagle Farm and Doomben racecourses"
+   ]
+  },
+  {
+   "name": "Hamilton",
+   "postcode": "4007",
+   "crime": {
+    "offences": 688,
+    "population": 8922,
+    "person": 51,
+    "property": 417,
+    "area": null
+   },
+   "prop": {
+    "median": 2115000,
+    "growth": 30.96,
+    "yield": 2.22,
+    "rent": 1100
+   },
+   "schools": [
+    [
+     "Hamilton State School",
+     "p",
+     "g",
+     60
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Racecourse Rd dining strip and Portside Wharf / cruise terminal"
+   ]
+  },
+  {
+   "name": "Nundah",
+   "postcode": "4012",
+   "crime": {
+    "offences": 1108,
+    "population": 13098,
+    "person": 65,
+    "property": 690,
+    "area": null
+   },
+   "prop": {
+    "median": 1395000,
+    "growth": 28.57,
+    "yield": 2.97,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Mary MacKillop College",
+     "s",
+     "c",
+     61
+    ],
+    [
+     "Northgate State School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "Nundah State School",
+     "p",
+     "g",
+     54
+    ],
+    [
+     "St Joseph's School",
+     "p",
+     "c",
+     41
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Wavell Heights",
+   "postcode": "4012",
+   "crime": {
+    "offences": 294,
+    "population": 10338,
+    "person": 24,
+    "property": 178,
+    "area": null
+   },
+   "prop": {
+    "median": 1650000,
+    "growth": 16.61,
+    "yield": 2.69,
+    "rent": 780
+   },
+   "schools": [
+    [
+     "Our Lady of the Angels' School",
+     "p",
+     "c",
+     70
+    ],
+    [
+     "Wavell State High School",
+     "s",
+     "g",
+     48
+    ],
+    [
+     "Wavell Heights State School",
+     "p",
+     "g",
+     40
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Nudgee",
+   "postcode": "4014",
+   "crime": {
+    "offences": 113,
+    "population": 4376,
+    "person": 7,
+    "property": 63,
+    "area": null
+   },
+   "prop": {
+    "median": 1337500,
+    "growth": 11.69,
+    "yield": 3.15,
+    "rent": 825
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "No rated schools listed on schoolrank for this suburb (Nudgee College is listed under Boondall)"
+   ]
+  },
+  {
+   "name": "Banyo",
+   "postcode": "4014",
+   "crime": {
+    "offences": 642,
+    "population": 6105,
+    "person": 27,
+    "property": 500,
+    "area": null
+   },
+   "prop": {
+    "median": 1195000,
+    "growth": 8.64,
+    "yield": 3.14,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "St Pius' Primary School",
+     "p",
+     "c",
+     61
+    ],
+    [
+     "Earnshaw State College",
+     "c",
+     "g",
+     50
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Northgate",
+   "postcode": "4013",
+   "crime": {
+    "offences": 480,
+    "population": 4876,
+    "person": 38,
+    "property": 198,
+    "area": null
+   },
+   "prop": {
+    "median": 1458000,
+    "growth": 19.02,
+    "yield": 2.88,
+    "rent": 750
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "No rated schools listed on schoolrank for this suburb (Northgate State School is listed under Nundah)"
+   ]
+  },
+  {
+   "name": "Virginia",
+   "postcode": "4014",
+   "crime": {
+    "offences": 435,
+    "population": 2395,
+    "person": 12,
+    "property": 286,
+    "area": null
+   },
+   "prop": {
+    "median": 1300000,
+    "growth": 7.44,
+    "yield": 2.94,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Virginia State School",
+     "p",
+     "g",
+     59
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Large industrial area with small resident population inflates the per-capita rate"
+   ]
+  },
+  {
+   "name": "Boondall",
+   "postcode": "4034",
+   "crime": {
+    "offences": 543,
+    "population": 9604,
+    "person": 55,
+    "property": 180,
+    "area": null
+   },
+   "prop": {
+    "median": 1152500,
+    "growth": 23.26,
+    "yield": 3.41,
+    "rent": 720
+   },
+   "schools": [
+    [
+     "Boondall State School",
+     "p",
+     "g",
+     58
+    ],
+    [
+     "St Joseph's Nudgee College",
+     "c",
+     "c",
+     57
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Brisbane Entertainment Centre (events inflate crime counts)"
+   ]
+  },
+  {
+   "name": "Taigum",
+   "postcode": "4018",
+   "crime": {
+    "offences": 458,
+    "population": 7801,
+    "person": 33,
+    "property": 291,
+    "area": null
+   },
+   "prop": {
+    "median": 1090000,
+    "growth": 17.84,
+    "yield": 3.53,
+    "rent": 760
+   },
+   "schools": [
+    [
+     "Taigum State School",
+     "p",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Zillmere",
+   "postcode": "4034",
+   "crime": {
+    "offences": 877,
+    "population": 9323,
+    "person": 74,
+    "property": 441,
+    "area": null
+   },
+   "prop": {
+    "median": 1020000,
+    "growth": 17.31,
+    "yield": 3.41,
+    "rent": 655
+   },
+   "schools": [
+    [
+     "St Flannan's School",
+     "p",
+     "c",
+     60
+    ],
+    [
+     "Zillmere State School",
+     "p",
+     "g",
+     21
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Chermside",
+   "postcode": "4032",
+   "crime": {
+    "offences": 3109,
+    "population": 11426,
+    "person": 209,
+    "property": 2168,
+    "area": null
+   },
+   "prop": {
+    "median": 1205000,
+    "growth": 27.51,
+    "yield": 3.03,
+    "rent": 690
+   },
+   "schools": [],
+   "mall": "Westfield Chermside",
+   "growthArea": false,
+   "flags": [
+    "Major regional shopping centre and Prince Charles Hospital precinct inflate crime counts"
+   ]
+  },
+  {
+   "name": "Aspley",
+   "postcode": "4034",
+   "crime": {
+    "offences": 918,
+    "population": 12872,
+    "person": 51,
+    "property": 650,
+    "area": null
+   },
+   "prop": {
+    "median": 1310000,
+    "growth": 17.75,
+    "yield": 3.15,
+    "rent": 780
+   },
+   "schools": [
+    [
+     "Aspley State School",
+     "p",
+     "g",
+     61
+    ],
+    [
+     "St Dympna's Parish School",
+     "p",
+     "c",
+     59
+    ],
+    [
+     "Aspley East State School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "Aspley State High School",
+     "s",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Carseldine",
+   "postcode": "4034",
+   "crime": {
+    "offences": 324,
+    "population": 10093,
+    "person": 29,
+    "property": 177,
+    "area": null
+   },
+   "prop": {
+    "median": 1320000,
+    "growth": 20.0,
+    "yield": 3.4,
+    "rent": 850
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bracken Ridge",
+   "postcode": "4017",
+   "crime": {
+    "offences": 632,
+    "population": 17488,
+    "person": 68,
+    "property": 395,
+    "area": null
+   },
+   "prop": {
+    "median": 1130000,
+    "growth": 19.58,
+    "yield": 3.45,
+    "rent": 720
+   },
+   "schools": [
+    [
+     "St John Fisher College",
+     "s",
+     "c",
+     63
+    ],
+    [
+     "St Joseph's Catholic Primary School",
+     "p",
+     "c",
+     62
+    ],
+    [
+     "Norris Road State School",
+     "p",
+     "g",
+     45
+    ],
+    [
+     "Bracken Ridge State High School",
+     "s",
+     "g",
+     42
+    ],
+    [
+     "Bracken Ridge State School",
+     "p",
+     "g",
+     32
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Sandgate",
+   "postcode": "4017",
+   "crime": {
+    "offences": 306,
+    "population": 4926,
+    "person": 32,
+    "property": 134,
+    "area": null
+   },
+   "prop": {
+    "median": 1330000,
+    "growth": 14.41,
+    "yield": 2.86,
+    "rent": 730
+   },
+   "schools": [
+    [
+     "Sacred Heart Primary School",
+     "p",
+     "c",
+     56
+    ],
+    [
+     "Sandgate State School",
+     "p",
+     "g",
+     48
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Shorncliffe",
+   "postcode": "4017",
+   "crime": {
+    "offences": 82,
+    "population": 1907,
+    "person": 16,
+    "property": 44,
+    "area": null
+   },
+   "prop": {
+    "median": 1600000,
+    "growth": -6.75,
+    "yield": 2.72,
+    "rent": 960
+   },
+   "schools": [
+    [
+     "Shorncliffe State School",
+     "p",
+     "g",
+     64
+    ],
+    [
+     "St Patrick's College",
+     "c",
+     "c",
+     55
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Brighton",
+   "postcode": "4017",
+   "crime": {
+    "offences": 253,
+    "population": 9664,
+    "person": 21,
+    "property": 157,
+    "area": null
+   },
+   "prop": {
+    "median": 1270000,
+    "growth": 19.81,
+    "yield": 3.06,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Brighton State School",
+     "p",
+     "g",
+     64
+    ],
+    [
+     "St Kieran's School",
+     "p",
+     "c",
+     61
+    ],
+    [
+     "Nashville State School",
+     "p",
+     "g",
+     51
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Wynnum",
+   "postcode": "4178",
+   "crime": {
+    "offences": 753,
+    "population": 14035,
+    "person": 72,
+    "property": 418,
+    "area": null
+   },
+   "prop": {
+    "median": 1385000,
+    "growth": 10.8,
+    "yield": 2.94,
+    "rent": 725
+   },
+   "schools": [
+    [
+     "Guardian Angels' Primary School",
+     "p",
+     "c",
+     64
+    ],
+    [
+     "Wynnum State School",
+     "p",
+     "g",
+     54
+    ],
+    [
+     "Wynnum State High School",
+     "s",
+     "g",
+     53
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Manly",
+   "postcode": "4179",
+   "crime": {
+    "offences": 242,
+    "population": 4273,
+    "person": 33,
+    "property": 131,
+    "area": null
+   },
+   "prop": {
+    "median": 1909000,
+    "growth": 20.06,
+    "yield": 2.64,
+    "rent": 875
+   },
+   "schools": [
+    [
+     "Manly State School",
+     "p",
+     "g",
+     62
+    ],
+    [
+     "St John Vianney's Primary School",
+     "p",
+     "c",
+     52
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Lota",
+   "postcode": "4179",
+   "crime": {
+    "offences": 94,
+    "population": 3518,
+    "person": 18,
+    "property": 53,
+    "area": null
+   },
+   "prop": {
+    "median": 1382500,
+    "growth": 11.49,
+    "yield": 2.95,
+    "rent": 720
+   },
+   "schools": [
+    [
+     "Lota State School",
+     "p",
+     "g",
+     69
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Tingalpa",
+   "postcode": "4173",
+   "crime": {
+    "offences": 559,
+    "population": 8461,
+    "person": 22,
+    "property": 349,
+    "area": null
+   },
+   "prop": {
+    "median": 1200000,
+    "growth": 12.68,
+    "yield": 3.34,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Tingalpa State School",
+     "p",
+     "g",
+     60
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Includes industrial land"
+   ]
+  },
+  {
+   "name": "Hemmant",
+   "postcode": "4174",
+   "crime": {
+    "offences": 136,
+    "population": 2886,
+    "person": 17,
+    "property": 70,
+    "area": null
+   },
+   "prop": {
+    "median": 1125000,
+    "growth": 14.21,
+    "yield": 3.44,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "Hemmant Flexible School",
+     "s",
+     "c",
+     13
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Mostly industrial / port-side land"
+   ]
+  },
+  {
+   "name": "Cannon Hill",
+   "postcode": "4170",
+   "crime": {
+    "offences": 687,
+    "population": 6701,
+    "person": 43,
+    "property": 497,
+    "area": null
+   },
+   "prop": {
+    "median": 1783000,
+    "growth": 26.45,
+    "yield": 2.97,
+    "rent": 830
+   },
+   "schools": [
+    [
+     "Cannon Hill Anglican College",
+     "c",
+     "i",
+     73
+    ],
+    [
+     "St Oliver Plunkett School",
+     "p",
+     "c",
+     56
+    ],
+    [
+     "Cannon Hill State School",
+     "p",
+     "g",
+     53
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Morningside",
+   "postcode": "4170",
+   "crime": {
+    "offences": 649,
+    "population": 11755,
+    "person": 59,
+    "property": 398,
+    "area": null
+   },
+   "prop": {
+    "median": 1600000,
+    "growth": 23.08,
+    "yield": 3.02,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "Morningside State School",
+     "p",
+     "g",
+     53
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bulimba",
+   "postcode": "4171",
+   "crime": {
+    "offences": 383,
+    "population": 7623,
+    "person": 38,
+    "property": 274,
+    "area": null
+   },
+   "prop": {
+    "median": 2300000,
+    "growth": 15.0,
+    "yield": 2.57,
+    "rent": 1300
+   },
+   "schools": [
+    [
+     "Sts Peter and Paul's School",
+     "p",
+     "c",
+     70
+    ],
+    [
+     "Bulimba State School",
+     "p",
+     "g",
+     59
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Hawthorne",
+   "postcode": "4171",
+   "crime": {
+    "offences": 147,
+    "population": 5090,
+    "person": 8,
+    "property": 99,
+    "area": null
+   },
+   "prop": {
+    "median": 2340000,
+    "growth": 7.34,
+    "yield": 2.47,
+    "rent": 1125
+   },
+   "schools": [
+    [
+     "Lourdes Hill College",
+     "c",
+     "c",
+     63
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Balmoral",
+   "postcode": "4171",
+   "crime": {
+    "offences": 175,
+    "population": 4173,
+    "person": 17,
+    "property": 113,
+    "area": null
+   },
+   "prop": {
+    "median": 2040000,
+    "growth": 15.74,
+    "yield": 2.71,
+    "rent": 1025
+   },
+   "schools": [
+    [
+     "Balmoral State High School",
+     "s",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "New Farm",
+   "postcode": "4005",
+   "crime": {
+    "offences": 1156,
+    "population": 12197,
+    "person": 77,
+    "property": 668,
+    "area": null
+   },
+   "prop": {
+    "median": 2367500,
+    "growth": 8.23,
+    "yield": 1.81,
+    "rent": 1150
+   },
+   "schools": [
+    [
+     "New Farm State School",
+     "p",
+     "g",
+     66
+    ],
+    [
+     "Holy Spirit School",
+     "p",
+     "c",
+     54
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Adjoins Fortitude Valley nightlife precinct"
+   ]
+  },
+  {
+   "name": "Teneriffe",
+   "postcode": "4005",
+   "crime": {
+    "offences": 210,
+    "population": 5521,
+    "person": 10,
+    "property": 158,
+    "area": null
+   },
+   "prop": {
+    "median": 3150000,
+    "growth": 30.52,
+    "yield": 2.01,
+    "rent": 1300
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Adjoins Fortitude Valley nightlife precinct"
+   ]
+  },
+  {
+   "name": "Kangaroo Point",
+   "postcode": "4169",
+   "crime": {
+    "offences": 934,
+    "population": 9689,
+    "person": 59,
+    "property": 627,
+    "area": null
+   },
+   "prop": {
+    "median": 1717500,
+    "growth": 36.36,
+    "yield": 2.54,
+    "rent": 820
+   },
+   "schools": [
+    [
+     "St Joseph's Primary School",
+     "p",
+     "c",
+     69
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Inner-city, adjoins CBD"
+   ]
+  },
+  {
+   "name": "East Brisbane",
+   "postcode": "4169",
+   "crime": {
+    "offences": 814,
+    "population": 6186,
+    "person": 53,
+    "property": 584,
+    "area": null
+   },
+   "prop": {
+    "median": 1705000,
+    "growth": 16.38,
+    "yield": 2.84,
+    "rent": 850
+   },
+   "schools": [
+    [
+     "Anglican Church Grammar School",
+     "c",
+     "i",
+     70
+    ],
+    [
+     "East Brisbane State School",
+     "p",
+     "g",
+     52
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Coorparoo",
+   "postcode": "4151",
+   "crime": {
+    "offences": 981,
+    "population": 18133,
+    "person": 55,
+    "property": 780,
+    "area": null
+   },
+   "prop": {
+    "median": 1820000,
+    "growth": 23.81,
+    "yield": 2.45,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "Loreto College Coorparoo",
+     "c",
+     "c",
+     71
+    ],
+    [
+     "Coorparoo State School",
+     "p",
+     "g",
+     68
+    ],
+    [
+     "Villanova College",
+     "c",
+     "c",
+     65
+    ],
+    [
+     "Brisbane School of Distance Education",
+     "c",
+     "g",
+     61
+    ],
+    [
+     "Our Lady of Mount Carmel School",
+     "p",
+     "c",
+     60
+    ],
+    [
+     "St James Primary School",
+     "p",
+     "c",
+     54
+    ],
+    [
+     "Coorparoo Secondary College",
+     "s",
+     "g",
+     42
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Camp Hill",
+   "postcode": "4152",
+   "crime": {
+    "offences": 425,
+    "population": 12255,
+    "person": 17,
+    "property": 348,
+    "area": null
+   },
+   "prop": {
+    "median": 2000000,
+    "growth": 13.64,
+    "yield": 2.61,
+    "rent": 880
+   },
+   "schools": [
+    [
+     "St Thomas' School",
+     "p",
+     "c",
+     68
+    ],
+    [
+     "Camp Hill State Infants and Primary School",
+     "p",
+     "g",
+     65
+    ],
+    [
+     "Whites Hill State College",
+     "c",
+     "g",
+     47
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Carina",
+   "postcode": "4152",
+   "crime": {
+    "offences": 347,
+    "population": 11680,
+    "person": 22,
+    "property": 261,
+    "area": null
+   },
+   "prop": {
+    "median": 1420000,
+    "growth": 14.52,
+    "yield": 3.12,
+    "rent": 785
+   },
+   "schools": [
+    [
+     "Mayfield State School",
+     "p",
+     "g",
+     63
+    ],
+    [
+     "St Martin's School",
+     "p",
+     "c",
+     60
+    ],
+    [
+     "San Sisto College",
+     "s",
+     "c",
+     57
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bardon",
+   "postcode": "4065",
+   "crime": {
+    "offences": 311,
+    "population": 10153,
+    "person": 15,
+    "property": 227,
+    "area": null
+   },
+   "prop": {
+    "median": 2065000,
+    "growth": 9.26,
+    "yield": 2.51,
+    "rent": 1000
+   },
+   "schools": [
+    [
+     "Rainworth State School",
+     "p",
+     "g",
+     73
+    ],
+    [
+     "Ithaca Creek State School",
+     "p",
+     "g",
+     70
+    ],
+    [
+     "Bardon State School",
+     "p",
+     "g",
+     60
+    ],
+    [
+     "St Joseph's School",
+     "p",
+     "c",
+     59
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Paddington",
+   "postcode": "4064",
+   "crime": {
+    "offences": 399,
+    "population": 9062,
+    "person": 15,
+    "property": 300,
+    "area": null
+   },
+   "prop": {
+    "median": 2262500,
+    "growth": 16.77,
+    "yield": 2.38,
+    "rent": 950
+   },
+   "schools": [
+    [
+     "Petrie Terrace State School",
+     "p",
+     "g",
+     65
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Ashgrove",
+   "postcode": "4060",
+   "crime": {
+    "offences": 504,
+    "population": 13451,
+    "person": 28,
+    "property": 392,
+    "area": null
+   },
+   "prop": {
+    "median": 1934695,
+    "growth": 4.58,
+    "yield": 2.53,
+    "rent": 900
+   },
+   "schools": [
+    [
+     "St Finbarr's School",
+     "p",
+     "c",
+     78
+    ],
+    [
+     "Ashgrove State School",
+     "p",
+     "g",
+     69
+    ],
+    [
+     "Marist College Ashgrove",
+     "c",
+     "c",
+     67
+    ],
+    [
+     "Oakleigh State School",
+     "p",
+     "g",
+     66
+    ],
+    [
+     "Mt St Michael's College",
+     "c",
+     "c",
+     65
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Red Hill",
+   "postcode": "4059",
+   "crime": {
+    "offences": 230,
+    "population": 5835,
+    "person": 25,
+    "property": 150,
+    "area": null
+   },
+   "prop": {
+    "median": 1730000,
+    "growth": -5.59,
+    "yield": 2.63,
+    "rent": 830
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kedron",
+   "postcode": "4031",
+   "crime": {
+    "offences": 757,
+    "population": 9907,
+    "person": 44,
+    "property": 540,
+    "area": null
+   },
+   "prop": {
+    "median": 1590000,
+    "growth": 20.36,
+    "yield": 2.66,
+    "rent": 775
+   },
+   "schools": [
+    [
+     "Mount Alvernia College",
+     "s",
+     "c",
+     77
+    ],
+    [
+     "St Anthony's School",
+     "p",
+     "c",
+     68
+    ],
+    [
+     "Kedron State School",
+     "p",
+     "g",
+     66
+    ],
+    [
+     "Padua College",
+     "c",
+     "c",
+     65
+    ],
+    [
+     "Kedron State High School",
+     "s",
+     "g",
+     61
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Windsor",
+   "postcode": "4030",
+   "crime": {
+    "offences": 806,
+    "population": 7811,
+    "person": 52,
+    "property": 541,
+    "area": null
+   },
+   "prop": {
+    "median": 1549000,
+    "growth": 10.64,
+    "yield": 2.75,
+    "rent": 770
+   },
+   "schools": [
+    [
+     "Windsor State School",
+     "p",
+     "g",
+     65
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Wooloowin",
+   "postcode": "4030",
+   "crime": {
+    "offences": 177,
+    "population": 4029,
+    "person": 21,
+    "property": 118,
+    "area": null
+   },
+   "prop": {
+    "median": 1556000,
+    "growth": -1.55,
+    "yield": 2.61,
+    "rent": 850
+   },
+   "schools": [
+    [
+     "Holy Cross School",
+     "p",
+     "c",
+     71
+    ],
+    [
+     "Wooloowin State School",
+     "p",
+     "g",
+     65
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Lutwyche",
+   "postcode": "4030",
+   "crime": {
+    "offences": 383,
+    "population": 4610,
+    "person": 24,
+    "property": 280,
+    "area": null
+   },
+   "prop": {
+    "median": 1455500,
+    "growth": 6.24,
+    "yield": 2.67,
+    "rent": 725
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Albion",
+   "postcode": "4010",
+   "crime": {
+    "offences": 493,
+    "population": 3446,
+    "person": 23,
+    "property": 281,
+    "area": null
+   },
+   "prop": {
+    "median": 1250500,
+    "growth": 20.53,
+    "yield": 3.13,
+    "rent": 780
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Small population with commercial/industrial land inflates the per-capita rate"
+   ]
+  },
+  {
+   "name": "Newstead",
+   "postcode": "4006",
+   "crime": {
+    "offences": 546,
+    "population": 7496,
+    "person": 28,
+    "property": 388,
+    "area": null
+   },
+   "prop": {
+    "median": 917500,
+    "growth": -2.26,
+    "yield": null,
+    "rent": null
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Adjoins Fortitude Valley nightlife precinct",
+    "Apartment-dominated: no house rent/yield data"
+   ]
+  },
+  {
+   "name": "North Lakes",
+   "postcode": "4509",
+   "crime": {
+    "offences": 1313,
+    "population": 23031,
+    "person": 107,
+    "property": 933,
+    "area": null
+   },
+   "prop": {
+    "median": 1030000,
+    "growth": 14.44,
+    "yield": 3.57,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "The Lakes College",
+     "c",
+     "i",
+     61
+    ],
+    [
+     "Bounty Boulevard State School",
+     "p",
+     "g",
+     48
+    ],
+    [
+     "North Lakes State College",
+     "c",
+     "g",
+     45
+    ]
+   ],
+   "mall": "Westfield North Lakes",
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Mango Hill",
+   "postcode": "4509",
+   "crime": {
+    "offences": 593,
+    "population": 14922,
+    "person": 50,
+    "property": 376,
+    "area": null
+   },
+   "prop": {
+    "median": 1113000,
+    "growth": 24.64,
+    "yield": 3.48,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "St Benedict's Primary School",
+     "p",
+     "c",
+     59
+    ],
+    [
+     "St Benedict's College",
+     "s",
+     "c",
+     58
+    ],
+    [
+     "Mango Hill State School",
+     "p",
+     "g",
+     54
+    ],
+    [
+     "Mango Hill State Secondary College",
+     "s",
+     "g",
+     47
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Redcliffe",
+   "postcode": "4020",
+   "crime": {
+    "offences": 1052,
+    "population": 10460,
+    "person": 137,
+    "property": 518,
+    "area": null
+   },
+   "prop": {
+    "median": 1000000,
+    "growth": 19.05,
+    "yield": 3.43,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Redcliffe State High School",
+     "s",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Moreton Bay Council; foreshore/entertainment strip"
+   ]
+  },
+  {
+   "name": "Kallangur",
+   "postcode": "4503",
+   "crime": {
+    "offences": 1273,
+    "population": 21761,
+    "person": 152,
+    "property": 680,
+    "area": null
+   },
+   "prop": {
+    "median": 905000,
+    "growth": 16.77,
+    "yield": 3.66,
+    "rent": 610
+   },
+   "schools": [
+    [
+     "Kallangur State School",
+     "p",
+     "g",
+     40
+    ],
+    [
+     "Dakabin State School",
+     "p",
+     "g",
+     39
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Strathpine",
+   "postcode": "4500",
+   "crime": {
+    "offences": 942,
+    "population": 10646,
+    "person": 59,
+    "property": 597,
+    "area": null
+   },
+   "prop": {
+    "median": 945000,
+    "growth": 15.24,
+    "yield": 3.81,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Pine Rivers State High School",
+     "s",
+     "g",
+     40
+    ],
+    [
+     "Strathpine West State School",
+     "p",
+     "g",
+     37
+    ],
+    [
+     "Strathpine State School",
+     "p",
+     "g",
+     35
+    ]
+   ],
+   "mall": "Westfield Strathpine",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Albany Creek",
+   "postcode": "4035",
+   "crime": {
+    "offences": 326,
+    "population": 16382,
+    "person": 44,
+    "property": 211,
+    "area": null
+   },
+   "prop": {
+    "median": 1297500,
+    "growth": 20.7,
+    "yield": 3.32,
+    "rent": 780
+   },
+   "schools": [
+    [
+     "Albany Hills State School",
+     "p",
+     "g",
+     60
+    ],
+    [
+     "All Saints Primary School",
+     "p",
+     "c",
+     55
+    ],
+    [
+     "Albany Creek State High School",
+     "s",
+     "g",
+     53
+    ],
+    [
+     "Good Shepherd Christian School",
+     "c",
+     "i",
+     52
+    ],
+    [
+     "Albany Creek State School",
+     "p",
+     "g",
+     49
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Everton Park",
+   "postcode": "4053",
+   "crime": {
+    "offences": 397,
+    "population": 10112,
+    "person": 27,
+    "property": 275,
+    "area": null
+   },
+   "prop": {
+    "median": 1322500,
+    "growth": 20.23,
+    "yield": 3.23,
+    "rent": 760
+   },
+   "schools": [
+    [
+     "Northside Christian College",
+     "c",
+     "i",
+     71
+    ],
+    [
+     "Everton Park State School",
+     "p",
+     "g",
+     55
+    ],
+    [
+     "Everton Park State High School",
+     "s",
+     "g",
+     55
+    ],
+    [
+     "Prince of Peace Lutheran College",
+     "c",
+     "i",
+     54
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Mitchelton",
+   "postcode": "4053",
+   "crime": {
+    "offences": 767,
+    "population": 9244,
+    "person": 53,
+    "property": 479,
+    "area": null
+   },
+   "prop": {
+    "median": 1348000,
+    "growth": 10.04,
+    "yield": 2.97,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Our Lady of Dolours School",
+     "p",
+     "c",
+     71
+    ],
+    [
+     "Mitchelton State High School",
+     "s",
+     "g",
+     58
+    ],
+    [
+     "Mitchelton State School",
+     "p",
+     "g",
+     57
+    ],
+    [
+     "Mt Maria College",
+     "s",
+     "c",
+     56
+    ]
+   ],
+   "mall": "Brookside Shopping Centre",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "The Gap",
+   "postcode": "4061",
+   "crime": {
+    "offences": 211,
+    "population": 17323,
+    "person": 22,
+    "property": 128,
+    "area": null
+   },
+   "prop": {
+    "median": 1412000,
+    "growth": 2.84,
+    "yield": 3.0,
+    "rent": 830
+   },
+   "schools": [
+    [
+     "Hilder Road State School",
+     "p",
+     "g",
+     75
+    ],
+    [
+     "Payne Road State School",
+     "p",
+     "g",
+     64
+    ],
+    [
+     "The Gap State High School",
+     "s",
+     "g",
+     63
+    ],
+    [
+     "The Gap State School",
+     "p",
+     "g",
+     63
+    ],
+    [
+     "St Peter Chanel Primary School",
+     "p",
+     "c",
+     62
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kenmore",
+   "postcode": "4069",
+   "crime": {
+    "offences": 214,
+    "population": 9675,
+    "person": 11,
+    "property": 164,
+    "area": null
+   },
+   "prop": {
+    "median": 1500000,
+    "growth": 15.38,
+    "yield": 3.18,
+    "rent": 882
+   },
+   "schools": [
+    [
+     "Kenmore State School",
+     "p",
+     "g",
+     76
+    ],
+    [
+     "Kenmore South State School",
+     "p",
+     "g",
+     74
+    ],
+    [
+     "Kenmore State High School",
+     "s",
+     "g",
+     63
+    ],
+    [
+     "Our Lady of the Rosary School",
+     "p",
+     "c",
+     55
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Indooroopilly",
+   "postcode": "4068",
+   "crime": {
+    "offences": 1323,
+    "population": 13622,
+    "person": 83,
+    "property": 1003,
+    "area": null
+   },
+   "prop": {
+    "median": 1860000,
+    "growth": 14.46,
+    "yield": 2.67,
+    "rent": 900
+   },
+   "schools": [
+    [
+     "St Peters Lutheran College",
+     "c",
+     "i",
+     77
+    ],
+    [
+     "Indooroopilly State School",
+     "p",
+     "g",
+     70
+    ],
+    [
+     "Indooroopilly State High School",
+     "s",
+     "g",
+     68
+    ],
+    [
+     "Brigidine College",
+     "c",
+     "c",
+     68
+    ],
+    [
+     "Holy Family Primary School",
+     "p",
+     "c",
+     67
+    ],
+    [
+     "Ambrose Treacy College",
+     "c",
+     "c",
+     62
+    ]
+   ],
+   "mall": "Westfield Indooroopilly",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Sherwood",
+   "postcode": "4075",
+   "crime": {
+    "offences": 221,
+    "population": 6081,
+    "person": 14,
+    "property": 165,
+    "area": null
+   },
+   "prop": {
+    "median": 1825000,
+    "growth": 10.61,
+    "yield": 2.66,
+    "rent": 795
+   },
+   "schools": [
+    [
+     "Sherwood State School",
+     "p",
+     "g",
+     70
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Oxley",
+   "postcode": "4075",
+   "crime": {
+    "offences": 747,
+    "population": 9100,
+    "person": 36,
+    "property": 535,
+    "area": null
+   },
+   "prop": {
+    "median": 1140500,
+    "growth": 23.63,
+    "yield": 3.27,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "Oxley State School",
+     "p",
+     "g",
+     56
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Forest Lake",
+   "postcode": "4078",
+   "crime": {
+    "offences": 780,
+    "population": 22674,
+    "person": 95,
+    "property": 519,
+    "area": null
+   },
+   "prop": {
+    "median": 1000000,
+    "growth": 15.21,
+    "yield": 3.49,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "St John's Anglican College",
+     "c",
+     "i",
+     67
+    ],
+    [
+     "Grand Avenue State School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "Forest Lake State School",
+     "p",
+     "g",
+     52
+    ],
+    [
+     "Forest Lake State High School",
+     "s",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Springfield Lakes",
+   "postcode": "4300",
+   "crime": {
+    "offences": 381,
+    "population": 17209,
+    "person": 58,
+    "property": 225,
+    "area": null
+   },
+   "prop": {
+    "median": 930000,
+    "growth": 16.98,
+    "yield": 3.64,
+    "rent": 675
+   },
+   "schools": [
+    [
+     "Good Shepherd Catholic Primary School",
+     "p",
+     "c",
+     61
+    ],
+    [
+     "Springfield Lakes State School",
+     "p",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Carindale",
+   "postcode": "4152",
+   "crime": {
+    "offences": 1300,
+    "population": 16535,
+    "person": 54,
+    "property": 986,
+    "area": null
+   },
+   "prop": {
+    "median": 1790000,
+    "growth": 8.48,
+    "yield": 2.86,
+    "rent": 900
+   },
+   "schools": [
+    [
+     "Citipointe Christian College",
+     "c",
+     "i",
+     71
+    ],
+    [
+     "Belmont State School",
+     "p",
+     "g",
+     68
+    ],
+    [
+     "Carina State School",
+     "p",
+     "g",
+     48
+    ]
+   ],
+   "mall": "Westfield Carindale",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Mansfield",
+   "postcode": "4122",
+   "crime": {
+    "offences": 280,
+    "population": 8852,
+    "person": 22,
+    "property": 181,
+    "area": null
+   },
+   "prop": {
+    "median": 1470000,
+    "growth": 13.03,
+    "yield": 2.83,
+    "rent": 790
+   },
+   "schools": [
+    [
+     "Mansfield State High School",
+     "s",
+     "g",
+     70
+    ],
+    [
+     "Mansfield State School",
+     "p",
+     "g",
+     65
+    ],
+    [
+     "Brisbane Adventist College",
+     "c",
+     "i",
+     59
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Sunnybank",
+   "postcode": "4109",
+   "crime": {
+    "offences": 1018,
+    "population": 8892,
+    "person": 66,
+    "property": 729,
+    "area": null
+   },
+   "prop": {
+    "median": 1550039,
+    "growth": 10.09,
+    "yield": 2.54,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Our Lady of Lourdes Primary School",
+     "p",
+     "c",
+     64
+    ],
+    [
+     "St Thomas More College",
+     "s",
+     "c",
+     63
+    ],
+    [
+     "Runcorn State School",
+     "p",
+     "g",
+     62
+    ],
+    [
+     "Sunnybank State School",
+     "p",
+     "g",
+     60
+    ],
+    [
+     "Sunnybank State High School",
+     "s",
+     "g",
+     48
+    ],
+    [
+     "Carinity Education - Southside",
+     "s",
+     "i",
+     32
+    ]
+   ],
+   "mall": "Sunnybank Plaza / Market Square",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Calamvale",
+   "postcode": "4116",
+   "crime": {
+    "offences": 729,
+    "population": 17996,
+    "person": 55,
+    "property": 559,
+    "area": null
+   },
+   "prop": {
+    "median": 1388000,
+    "growth": 13.31,
+    "yield": 3.03,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "Wisdom College",
+     "c",
+     "i",
+     51
+    ],
+    [
+     "Calamvale Community College",
+     "c",
+     "g",
+     41
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Rochedale",
+   "postcode": "4123",
+   "crime": {
+    "offences": 439,
+    "population": 7633,
+    "person": 15,
+    "property": 346,
+    "area": null
+   },
+   "prop": {
+    "median": 1800000,
+    "growth": 4.8,
+    "yield": 2.97,
+    "rent": 1100
+   },
+   "schools": [
+    [
+     "Redeemer Lutheran College",
+     "c",
+     "i",
+     73
+    ],
+    [
+     "Rochedale State School",
+     "p",
+     "g",
+     68
+    ],
+    [
+     "St Peter's Primary School",
+     "p",
+     "c",
+     61
+    ],
+    [
+     "Rochedale State High School",
+     "s",
+     "g",
+     49
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Springwood",
+   "postcode": "4127",
+   "crime": {
+    "offences": 1011,
+    "population": 9710,
+    "person": 66,
+    "property": 792,
+    "area": null
+   },
+   "prop": {
+    "median": 1135000,
+    "growth": 18.85,
+    "yield": 3.34,
+    "rent": 720
+   },
+   "schools": [
+    [
+     "Calvary Christian College",
+     "c",
+     "i",
+     65
+    ],
+    [
+     "Springwood State High School",
+     "s",
+     "g",
+     49
+    ],
+    [
+     "Chatswood Hills State School",
+     "p",
+     "g",
+     48
+    ],
+    [
+     "Springwood Central State School",
+     "p",
+     "g",
+     39
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Logan City Council (not Brisbane City)"
+   ]
+  },
+  {
+   "name": "Capalaba",
+   "postcode": "4157",
+   "crime": {
+    "offences": 1593,
+    "population": 18002,
+    "person": 92,
+    "property": 828,
+    "area": null
+   },
+   "prop": {
+    "median": 1088625,
+    "growth": 18.33,
+    "yield": 3.43,
+    "rent": 730
+   },
+   "schools": [
+    [
+     "St Luke's Catholic Parish School",
+     "p",
+     "c",
+     57
+    ],
+    [
+     "Capalaba State College",
+     "c",
+     "g",
+     38
+    ],
+    [
+     "Coolnwynpin State School",
+     "p",
+     "g",
+     36
+    ]
+   ],
+   "mall": "Capalaba Park Shopping Centre",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Cleveland",
+   "postcode": "4163",
+   "crime": {
+    "offences": 1603,
+    "population": 15849,
+    "person": 129,
+    "property": 745,
+    "area": null
+   },
+   "prop": {
+    "median": 1280000,
+    "growth": 7.56,
+    "yield": 3.03,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "Star of the Sea Primary School",
+     "p",
+     "c",
+     51
+    ],
+    [
+     "Cleveland State School",
+     "p",
+     "g",
+     50
+    ],
+    [
+     "Cleveland District State High School",
+     "s",
+     "g",
+     49
+    ]
+   ],
+   "mall": "Stockland Cleveland",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Coopers Plains",
+   "postcode": "4108",
+   "crime": {
+    "offences": 595,
+    "population": 5675,
+    "person": 33,
+    "property": 402,
+    "area": null
+   },
+   "prop": {
+    "median": 1220000,
+    "growth": 9.66,
+    "yield": 2.98,
+    "rent": 692
+   },
+   "schools": [
+    [
+     "Coopers Plains State School",
+     "p",
+     "g",
+     29
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Includes industrial land",
+    "Near Archerfield Airport"
+   ]
+  },
+  {
+   "name": "Salisbury",
+   "postcode": "4107",
+   "crime": {
+    "offences": 459,
+    "population": 6790,
+    "person": 25,
+    "property": 318,
+    "area": null
+   },
+   "prop": {
+    "median": 1317500,
+    "growth": 13.58,
+    "yield": 2.94,
+    "rent": 720
+   },
+   "schools": [
+    [
+     "Brisbane Christian College",
+     "c",
+     "i",
+     65
+    ],
+    [
+     "St Pius X School",
+     "p",
+     "c",
+     58
+    ],
+    [
+     "Salisbury State School",
+     "p",
+     "g",
+     56
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Includes industrial land",
+    "Near Archerfield Airport"
+   ]
+  },
+  {
+   "name": "Acacia Ridge",
+   "postcode": "4110",
+   "crime": {
+    "offences": 1119,
+    "population": 7486,
+    "person": 87,
+    "property": 787,
+    "area": null
+   },
+   "prop": {
+    "median": 950000,
+    "growth": 17.43,
+    "yield": 3.47,
+    "rent": 605
+   },
+   "schools": [
+    [
+     "Our Lady of Fatima Primary School",
+     "p",
+     "c",
+     44
+    ],
+    [
+     "Watson Road State School",
+     "p",
+     "g",
+     32
+    ],
+    [
+     "Acacia Ridge State School",
+     "p",
+     "g",
+     29
+    ],
+    [
+     "Aboriginal & Islander Independent Community School",
+     "c",
+     "i",
+     25
+    ],
+    [
+     "Y Schools Queensland - Brisbane South",
+     "s",
+     "i",
+     5
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Large industrial and rail freight area inflates the per-capita rate",
+    "Near Archerfield Airport"
+   ]
+  }
+ ]
+}

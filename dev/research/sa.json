@@ -1,0 +1,835 @@
+{
+ "region": "sa",
+ "status": "INCOMPLETE - WebFetch proxy rate-limited (HTTP 429) after first few fetches; null prop/schools/crime = NOT YET FETCHED, not 'no data'",
+ "crimeSource": {
+  "name": "AU Crime Tracker (republishing SAPOL suburb data)",
+  "url": "https://www.aucrimetracker.com/sa/",
+  "period": "year to March 2026",
+  "level": "suburb",
+  "stateRatePer1000": null,
+  "stateRateSource": null,
+  "notes": "aucrimetracker SA pages show only the 12-month total (and rate per 100k); person/property breakdown tables render empty. Totals for suburbs other than West Beach and Glenelg were read from the 'Surrounding suburbs' tables on the West Beach and Glenelg pages. Population for West Beach and Glenelg derived as offences / (rate per 100,000) x 100,000 (Glenelg 3,440 matches 2021 census). Better source for person/property split: SAPOL 2025-26 full-FY suburb CSV on data.sa.gov.au (resource cfce21c4-9712-454f-b32d-0f7c989accda, columns incl. 'Offence Level 1 Description' = OFFENCES AGAINST THE PERSON / AGAINST PROPERTY; sexual offences excluded from suburb data), which needs to be downloaded and aggregated with a script. State rate not obtained (SAPOL rolling-stats PDF was rate-limited)."
+ },
+ "suburbs": [
+  {
+   "name": "West Beach",
+   "postcode": "5024",
+   "crime": {
+    "offences": 238,
+    "population": 5175,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": {
+    "median": 1627000,
+    "growth": 11.44,
+    "yield": 2.74,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "West Beach Primary School",
+     "p",
+     "g",
+     56
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Glenelg",
+   "postcode": "5045",
+   "crime": {
+    "offences": 797,
+    "population": 3440,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Jetty Road / Moseley Square beach and nightlife strip inflates crime"
+   ]
+  },
+  {
+   "name": "Glenelg North",
+   "postcode": "5045",
+   "crime": {
+    "offences": 272,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Glenelg East",
+   "postcode": "5045",
+   "crime": {
+    "offences": 173,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Novar Gardens",
+   "postcode": "5040",
+   "crime": {
+    "offences": 170,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Netley",
+   "postcode": "5037",
+   "crime": {
+    "offences": 55,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Plympton",
+   "postcode": "5038",
+   "crime": {
+    "offences": 421,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Plympton Park",
+   "postcode": "5038",
+   "crime": {
+    "offences": 220,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "North Plympton",
+   "postcode": "5037",
+   "crime": {
+    "offences": 93,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kurralta Park",
+   "postcode": "5037",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Marleston",
+   "postcode": "5033",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Richmond",
+   "postcode": "5033",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "West Richmond",
+   "postcode": "5033",
+   "crime": {
+    "offences": 135,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Mile End",
+   "postcode": "5031",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Torrensville",
+   "postcode": "5031",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Thebarton",
+   "postcode": "5031",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Lockleys",
+   "postcode": "5032",
+   "crime": {
+    "offences": 133,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Brooklyn Park",
+   "postcode": "5032",
+   "crime": {
+    "offences": 373,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Underdale",
+   "postcode": "5032",
+   "crime": {
+    "offences": 174,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Fulham",
+   "postcode": "5024",
+   "crime": {
+    "offences": 165,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Henley Beach",
+   "postcode": "5022",
+   "crime": {
+    "offences": 375,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Henley Beach South",
+   "postcode": "5022",
+   "crime": {
+    "offences": 148,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Grange",
+   "postcode": "5022",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kidman Park",
+   "postcode": "5025",
+   "crime": {
+    "offences": 99,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Flinders Park",
+   "postcode": "5025",
+   "crime": {
+    "offences": 216,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Cowandilla",
+   "postcode": "5033",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Hilton",
+   "postcode": "5033",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Camden Park",
+   "postcode": "5038",
+   "crime": {
+    "offences": 204,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Park Holme",
+   "postcode": "5043",
+   "crime": {
+    "offences": 277,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Morphettville",
+   "postcode": "5043",
+   "crime": {
+    "offences": 229,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Glengowrie",
+   "postcode": "5044",
+   "crime": {
+    "offences": 259,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Somerton Park",
+   "postcode": "5044",
+   "crime": {
+    "offences": 185,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Warradale",
+   "postcode": "5046",
+   "crime": {
+    "offences": 243,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Brighton",
+   "postcode": "5048",
+   "crime": {
+    "offences": 305,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Hove",
+   "postcode": "5048",
+   "crime": {
+    "offences": 95,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Edwardstown",
+   "postcode": "5039",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Goodwood",
+   "postcode": "5034",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Keswick",
+   "postcode": "5035",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Unley",
+   "postcode": "5061",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kensington Park",
+   "postcode": "5068",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Norwood",
+   "postcode": "5067",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "North Adelaide",
+   "postcode": "5006",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Prospect",
+   "postcode": "5082",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Walkerville",
+   "postcode": "5081",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Parafield Gardens",
+   "postcode": "5107",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Green Fields",
+   "postcode": "5107",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Mawson Lakes",
+   "postcode": "5095",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Pooraka",
+   "postcode": "5095",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Para Hills",
+   "postcode": "5096",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Salisbury",
+   "postcode": "5108",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Salisbury North",
+   "postcode": "5108",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Paralowie",
+   "postcode": "5108",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Salisbury East",
+   "postcode": "5109",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Burton",
+   "postcode": "5110",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Elizabeth",
+   "postcode": "5112",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Munno Para",
+   "postcode": "5115",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Angle Vale",
+   "postcode": "5117",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Two Wells",
+   "postcode": "5501",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Golden Grove",
+   "postcode": "5125",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Modbury",
+   "postcode": "5092",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Tea Tree Gully",
+   "postcode": "5091",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Mount Barker",
+   "postcode": "5251",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Morphett Vale",
+   "postcode": "5162",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Seaford",
+   "postcode": "5169",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Aldinga Beach",
+   "postcode": "5173",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  }
+ ]
+}

@@ -1,0 +1,2952 @@
+{
+ "region": "nsw",
+ "crimeSource": {
+  "name": "AU Crime Tracker (republishing NSW BOCSAR recorded criminal incidents)",
+  "url": "https://www.aucrimetracker.com/nsw/",
+  "period": "year to March 2026",
+  "level": "suburb",
+  "stateRatePer1000": 77.7,
+  "stateRateSource": "AU Crime Tracker NSW page: 627,403 recorded incidents in year ending Mar 2026 / 8,072,163 NSW population (2021 census), computed = 77.7 per 1,000",
+  "notes": "Population is 2021 census, so fast-growing estates (growthArea true) are overstated per capita. 'person' = the page's Offences against the person headline total (assault, sexual offences, robbery, homicide, intimidation/stalking/harassment, abduction, blackmail, other); 'property' = the Property offences headline total (theft incl. break and enter and vehicle theft, malicious damage, arson), matching the Mascot worked example. 'offences' also includes drug, transport regulatory, justice-procedure and other categories, which dominate in CBDs such as Liverpool, Campbelltown and Parramatta. Ambiguous names use LGA-qualified slugs (kingswood-penrith, st-clair-penrith)."
+ },
+ "suburbs": [
+  {
+   "name": "Penrith",
+   "postcode": "2750",
+   "crime": {
+    "offences": 6612,
+    "population": 17966,
+    "person": 1069,
+    "property": 2151,
+    "area": null
+   },
+   "prop": {
+    "median": 1120000,
+    "growth": 15.46,
+    "yield": 3.12,
+    "rent": 630
+   },
+   "schools": [
+    [
+     "Penrith High School",
+     "s",
+     "g",
+     98
+    ],
+    [
+     "St Nicholas of Myra Primary School",
+     "p",
+     "c",
+     59
+    ],
+    [
+     "Penrith Public School",
+     "p",
+     "g",
+     48
+    ],
+    [
+     "Penrith South Public School",
+     "p",
+     "g",
+     47
+    ],
+    [
+     "Wadangali Public School",
+     "p",
+     "g",
+     31
+    ]
+   ],
+   "mall": "Westfield Penrith",
+   "growthArea": false,
+   "flags": [
+    "Regional CBD, Westfield Penrith and train station inflate counts relative to residents"
+   ]
+  },
+  {
+   "name": "Kingswood",
+   "postcode": "2747",
+   "crime": {
+    "offences": 1967,
+    "population": 10633,
+    "person": 548,
+    "property": 662,
+    "area": null
+   },
+   "prop": {
+    "median": 1125000,
+    "growth": 20.97,
+    "yield": 3.08,
+    "rent": 585
+   },
+   "schools": [
+    [
+     "Kingswood Public School",
+     "p",
+     "g",
+     64
+    ],
+    [
+     "St Dominic's College",
+     "s",
+     "c",
+     50
+    ],
+    [
+     "St Joseph's Primary School",
+     "p",
+     "c",
+     50
+    ],
+    [
+     "Kingswood South Public School",
+     "p",
+     "g",
+     45
+    ],
+    [
+     "Kingswood High School",
+     "s",
+     "g",
+     40
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Nepean Hospital and Western Sydney University Penrith campus nearby"
+   ]
+  },
+  {
+   "name": "Jamisontown",
+   "postcode": "2750",
+   "crime": {
+    "offences": 563,
+    "population": 5321,
+    "person": 126,
+    "property": 328,
+    "area": null
+   },
+   "prop": {
+    "median": 1140500,
+    "growth": 13.26,
+    "yield": 3.34,
+    "rent": 680
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Glenmore Park",
+   "postcode": "2745",
+   "crime": {
+    "offences": 604,
+    "population": 25021,
+    "person": 240,
+    "property": 277,
+    "area": null
+   },
+   "prop": {
+    "median": 1260000,
+    "growth": 5.88,
+    "yield": 3.31,
+    "rent": 790
+   },
+   "schools": [
+    [
+     "Caroline Chisholm College",
+     "s",
+     "c",
+     58
+    ],
+    [
+     "Nangamay Public School",
+     "p",
+     "g",
+     51
+    ],
+    [
+     "Bethany Catholic Primary School",
+     "p",
+     "c",
+     51
+    ],
+    [
+     "Surveyors Creek Public School",
+     "p",
+     "g",
+     51
+    ],
+    [
+     "Glenmore Park Public School",
+     "p",
+     "g",
+     43
+    ],
+    [
+     "Glenmore Park High School",
+     "s",
+     "g",
+     42
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "St Marys",
+   "postcode": "2760",
+   "crime": {
+    "offences": 3418,
+    "population": 13256,
+    "person": 559,
+    "property": 1059,
+    "area": null
+   },
+   "prop": {
+    "median": 1200000,
+    "growth": 16.67,
+    "yield": 2.88,
+    "rent": 575
+   },
+   "schools": [
+    [
+     "Our Lady of The Rosary Primary School",
+     "p",
+     "c",
+     53
+    ],
+    [
+     "St Marys South Public School",
+     "p",
+     "g",
+     34
+    ],
+    [
+     "Oxley Park Public School",
+     "p",
+     "g",
+     34
+    ],
+    [
+     "St Marys Public School",
+     "p",
+     "g",
+     32
+    ],
+    [
+     "Colyton High School",
+     "s",
+     "g",
+     31
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Town centre and train interchange; future Metro link to Western Sydney Airport starts here"
+   ]
+  },
+  {
+   "name": "Erskine Park",
+   "postcode": "2759",
+   "crime": {
+    "offences": 192,
+    "population": 6486,
+    "person": 75,
+    "property": 88,
+    "area": null
+   },
+   "prop": {
+    "median": 1328000,
+    "growth": 16.49,
+    "yield": 3.06,
+    "rent": 725
+   },
+   "schools": [
+    [
+     "James Erskine Public School",
+     "p",
+     "g",
+     45
+    ],
+    [
+     "Erskine Park High School",
+     "s",
+     "g",
+     42
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "St Clair",
+   "postcode": "2759",
+   "crime": {
+    "offences": 616,
+    "population": 19942,
+    "person": 225,
+    "property": 292,
+    "area": null
+   },
+   "prop": {
+    "median": 1210000,
+    "growth": 11.01,
+    "yield": 3.22,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "Holy Spirit Primary School",
+     "p",
+     "c",
+     60
+    ],
+    [
+     "St Clair Public School",
+     "p",
+     "g",
+     54
+    ],
+    [
+     "Clairgate Public School",
+     "p",
+     "g",
+     51
+    ],
+    [
+     "Blackwell Public School",
+     "p",
+     "g",
+     48
+    ],
+    [
+     "Banks Public School",
+     "p",
+     "g",
+     46
+    ],
+    [
+     "St Clair High School",
+     "s",
+     "g",
+     42
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Cambridge Park",
+   "postcode": "2747",
+   "crime": {
+    "offences": 395,
+    "population": 7054,
+    "person": 177,
+    "property": 112,
+    "area": null
+   },
+   "prop": {
+    "median": 1100000,
+    "growth": 17.65,
+    "yield": 3.33,
+    "rent": 610
+   },
+   "schools": [
+    [
+     "Cambridge Gardens Public School",
+     "p",
+     "g",
+     46
+    ],
+    [
+     "Cambridge Park High School",
+     "s",
+     "g",
+     37
+    ],
+    [
+     "Cambridge Park Public School",
+     "p",
+     "g",
+     34
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Emu Plains",
+   "postcode": "2750",
+   "crime": {
+    "offences": 496,
+    "population": 8126,
+    "person": 136,
+    "property": 251,
+    "area": null
+   },
+   "prop": {
+    "median": 1180000,
+    "growth": 12.38,
+    "yield": 3.26,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Leonay Public School",
+     "p",
+     "g",
+     61
+    ],
+    [
+     "Our Lady of The Way Primary School",
+     "p",
+     "c",
+     55
+    ],
+    [
+     "Penola Catholic College Emu Plains",
+     "s",
+     "c",
+     51
+    ],
+    [
+     "Emu Plains Public School",
+     "p",
+     "g",
+     47
+    ],
+    [
+     "Emu Heights Public School",
+     "p",
+     "g",
+     47
+    ],
+    [
+     "Nepean Creative and Performing Arts High School",
+     "s",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Contains Emu Plains Correctional Centre"
+   ]
+  },
+  {
+   "name": "Werrington",
+   "postcode": "2747",
+   "crime": {
+    "offences": 625,
+    "population": 5328,
+    "person": 187,
+    "property": 267,
+    "area": null
+   },
+   "prop": {
+    "median": 1125000,
+    "growth": 9.22,
+    "yield": 3.37,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Wollemi College",
+     "c",
+     "i",
+     71
+    ],
+    [
+     "Werrington County Public School",
+     "p",
+     "g",
+     41
+    ],
+    [
+     "Werrington Public School",
+     "p",
+     "g",
+     39
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Western Sydney University Werrington campus"
+   ]
+  },
+  {
+   "name": "Blacktown",
+   "postcode": "2148",
+   "crime": {
+    "offences": 7811,
+    "population": 50961,
+    "person": 1494,
+    "property": 2066,
+    "area": null
+   },
+   "prop": {
+    "median": 1171000,
+    "growth": 8.93,
+    "yield": 3.06,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Blacktown West Public School",
+     "p",
+     "g",
+     63
+    ],
+    [
+     "Tyndale Christian School",
+     "c",
+     "i",
+     63
+    ],
+    [
+     "St Patrick's Primary School",
+     "p",
+     "c",
+     60
+    ],
+    [
+     "Nagle College",
+     "s",
+     "c",
+     59
+    ],
+    [
+     "Blacktown Boys High School",
+     "s",
+     "g",
+     58
+    ],
+    [
+     "Lynwood Park Public School",
+     "p",
+     "g",
+     57
+    ],
+    [
+     "Blacktown South Public School",
+     "p",
+     "g",
+     57
+    ],
+    [
+     "Blacktown Girls High School",
+     "s",
+     "g",
+     56
+    ],
+    [
+     "Blacktown North Public School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "Marayong South Public School",
+     "p",
+     "g",
+     49
+    ],
+    [
+     "Walters Road Public School",
+     "p",
+     "g",
+     47
+    ],
+    [
+     "Evans High School",
+     "s",
+     "g",
+     47
+    ],
+    [
+     "Patrician Brothers' College Blacktown",
+     "s",
+     "c",
+     45
+    ],
+    [
+     "Shelley Public School",
+     "p",
+     "g",
+     43
+    ],
+    [
+     "Mitchell High School",
+     "s",
+     "g",
+     42
+    ],
+    [
+     "Marayong Public School",
+     "p",
+     "g",
+     37
+    ]
+   ],
+   "mall": "Westfield Blacktown",
+   "growthArea": false,
+   "flags": [
+    "Blacktown CBD, hospital and major rail interchange"
+   ]
+  },
+  {
+   "name": "Mount Druitt",
+   "postcode": "2770",
+   "crime": {
+    "offences": 5855,
+    "population": 16986,
+    "person": 736,
+    "property": 1261,
+    "area": null
+   },
+   "prop": {
+    "median": 1072500,
+    "growth": 7.25,
+    "yield": 3.03,
+    "rent": 628
+   },
+   "schools": [
+    [
+     "Australian Islamic College of Sydney",
+     "c",
+     "i",
+     65
+    ],
+    [
+     "Colyton Public School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "Bethel Christian School",
+     "c",
+     "i",
+     51
+    ],
+    [
+     "St Bishoy Coptic Orthodox College",
+     "c",
+     "i",
+     45
+    ],
+    [
+     "Mount Druitt Public School",
+     "p",
+     "g",
+     42
+    ],
+    [
+     "Chifley College Mount Druitt Campus",
+     "s",
+     "g",
+     30
+    ]
+   ],
+   "mall": "Westfield Mount Druitt",
+   "growthArea": false,
+   "flags": [
+    "Town centre, hospital and train interchange"
+   ]
+  },
+  {
+   "name": "Rooty Hill",
+   "postcode": "2766",
+   "crime": {
+    "offences": 827,
+    "population": 16176,
+    "person": 279,
+    "property": 341,
+    "area": null
+   },
+   "prop": {
+    "median": 1107500,
+    "growth": 10.75,
+    "yield": 3.22,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "St Aidan's Primary School",
+     "p",
+     "c",
+     62
+    ],
+    [
+     "St Agnes Catholic High School",
+     "s",
+     "c",
+     57
+    ],
+    [
+     "Rooty Hill Public School",
+     "p",
+     "g",
+     44
+    ],
+    [
+     "Rooty Hill High School",
+     "s",
+     "g",
+     41
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Plumpton",
+   "postcode": "2761",
+   "crime": {
+    "offences": 529,
+    "population": 10070,
+    "person": 140,
+    "property": 327,
+    "area": null
+   },
+   "prop": {
+    "median": 1075000,
+    "growth": 10.82,
+    "yield": 3.35,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Western Grammar School",
+     "c",
+     "i",
+     62
+    ],
+    [
+     "Good Shepherd Primary School",
+     "p",
+     "c",
+     58
+    ],
+    [
+     "Plumpton High School",
+     "s",
+     "g",
+     45
+    ],
+    [
+     "Plumpton Public School",
+     "p",
+     "g",
+     40
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Marsden Park",
+   "postcode": "2765",
+   "crime": {
+    "offences": 612,
+    "population": 14610,
+    "person": 189,
+    "property": 346,
+    "area": null
+   },
+   "prop": {
+    "median": 1242000,
+    "growth": 6.7,
+    "yield": 3.51,
+    "rent": 850
+   },
+   "schools": [
+    [
+     "St Luke's Catholic College (Secondary)",
+     "s",
+     "c",
+     59
+    ],
+    [
+     "St Luke's Catholic College (Primary)",
+     "p",
+     "c",
+     57
+    ],
+    [
+     "St Luke's Arrunga",
+     "c",
+     "c",
+     57
+    ],
+    [
+     "Marsden Park Anglican College",
+     "c",
+     "i",
+     54
+    ],
+    [
+     "Northbourne Public School",
+     "p",
+     "g",
+     50
+    ],
+    [
+     "Marsden Park Public School",
+     "p",
+     "g",
+     48
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Fast-growing new estates; 2021 population undercounts residents",
+    "Sydney Business Park / IKEA-Costco retail precinct"
+   ]
+  },
+  {
+   "name": "Schofields",
+   "postcode": "2762",
+   "crime": {
+    "offences": 608,
+    "population": 15213,
+    "person": 233,
+    "property": 276,
+    "area": null
+   },
+   "prop": {
+    "median": 1310000,
+    "growth": 4.38,
+    "yield": 3.19,
+    "rent": 830
+   },
+   "schools": [
+    [
+     "St John Paul II Catholic College",
+     "s",
+     "c",
+     62
+    ],
+    [
+     "Galungara Public School",
+     "p",
+     "g",
+     61
+    ],
+    [
+     "St Joseph's Primary School",
+     "p",
+     "c",
+     57
+    ],
+    [
+     "Schofields Public School",
+     "p",
+     "g",
+     54
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Growth-area estates; 2021 population undercounts residents"
+   ]
+  },
+  {
+   "name": "Riverstone",
+   "postcode": "2765",
+   "crime": {
+    "offences": 1011,
+    "population": 8627,
+    "person": 244,
+    "property": 220,
+    "area": null
+   },
+   "prop": {
+    "median": 1250000,
+    "growth": 12.87,
+    "yield": 3.14,
+    "rent": 710
+   },
+   "schools": [
+    [
+     "St John's Primary School",
+     "p",
+     "c",
+     71
+    ],
+    [
+     "South Creek School",
+     "c",
+     "g",
+     64
+    ],
+    [
+     "Norwest Christian College",
+     "c",
+     "i",
+     60
+    ],
+    [
+     "Australian Christian College - Marsden Park",
+     "c",
+     "i",
+     59
+    ],
+    [
+     "Ngarra Christian College",
+     "c",
+     "i",
+     56
+    ],
+    [
+     "Riverstone Public School",
+     "p",
+     "g",
+     43
+    ],
+    [
+     "Riverstone High School",
+     "s",
+     "g",
+     37
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Total inflated by 396 'against justice procedures' offences (breaches etc.)",
+    "Growth-area estates; 2021 population undercounts residents"
+   ]
+  },
+  {
+   "name": "Glenwood",
+   "postcode": "2768",
+   "crime": {
+    "offences": 324,
+    "population": 15829,
+    "person": 126,
+    "property": 138,
+    "area": null
+   },
+   "prop": {
+    "median": 1715000,
+    "growth": 2.54,
+    "yield": 2.69,
+    "rent": 870
+   },
+   "schools": [
+    [
+     "Caddies Creek Public School",
+     "p",
+     "g",
+     70
+    ],
+    [
+     "Parklea Public School",
+     "p",
+     "g",
+     64
+    ],
+    [
+     "Holy Cross Primary School",
+     "p",
+     "c",
+     62
+    ],
+    [
+     "Glenwood High School",
+     "s",
+     "g",
+     60
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kellyville Ridge",
+   "postcode": "2155",
+   "crime": {
+    "offences": 177,
+    "population": 10890,
+    "person": 72,
+    "property": 83,
+    "area": null
+   },
+   "prop": {
+    "median": 1632500,
+    "growth": 6.01,
+    "yield": 2.71,
+    "rent": 898
+   },
+   "schools": [
+    [
+     "Kellyville Ridge Public School",
+     "p",
+     "g",
+     67
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Quakers Hill",
+   "postcode": "2763",
+   "crime": {
+    "offences": 853,
+    "population": 27893,
+    "person": 345,
+    "property": 297,
+    "area": null
+   },
+   "prop": {
+    "median": 1380000,
+    "growth": 9.52,
+    "yield": 2.98,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "Quakers Hill Public School",
+     "p",
+     "g",
+     73
+    ],
+    [
+     "Hambledon Public School",
+     "p",
+     "g",
+     60
+    ],
+    [
+     "Barnier Public School",
+     "p",
+     "g",
+     60
+    ],
+    [
+     "Mary Immaculate Primary School",
+     "p",
+     "c",
+     59
+    ],
+    [
+     "Quakers Hill High School",
+     "s",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Stanhope Gardens",
+   "postcode": "2768",
+   "crime": {
+    "offences": 215,
+    "population": 9349,
+    "person": 66,
+    "property": 111,
+    "area": null
+   },
+   "prop": {
+    "median": 1605000,
+    "growth": 5.07,
+    "yield": 2.84,
+    "rent": 860
+   },
+   "schools": [
+    [
+     "St John XXIII Catholic College (Secondary)",
+     "s",
+     "c",
+     58
+    ],
+    [
+     "St John XXIII Catholic College (Primary)",
+     "p",
+     "c",
+     55
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Stanhope Village shopping centre"
+   ]
+  },
+  {
+   "name": "Doonside",
+   "postcode": "2767",
+   "crime": {
+    "offences": 1062,
+    "population": 13614,
+    "person": 390,
+    "property": 317,
+    "area": null
+   },
+   "prop": {
+    "median": 1120800,
+    "growth": 12.02,
+    "yield": 3.05,
+    "rent": 632
+   },
+   "schools": [
+    [
+     "St John Vianney's Primary School",
+     "p",
+     "c",
+     72
+    ],
+    [
+     "Mountain View Adventist College",
+     "c",
+     "i",
+     50
+    ],
+    [
+     "Doonside High School",
+     "s",
+     "g",
+     44
+    ],
+    [
+     "Crawford Public School",
+     "p",
+     "g",
+     40
+    ],
+    [
+     "Doonside Public School",
+     "p",
+     "g",
+     30
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Liverpool",
+   "postcode": "2170",
+   "crime": {
+    "offences": 14840,
+    "population": 31078,
+    "person": 1171,
+    "property": 2074,
+    "area": null
+   },
+   "prop": {
+    "median": 1297500,
+    "growth": 15.59,
+    "yield": 3.02,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "All Saints Catholic College",
+     "c",
+     "c",
+     55
+    ],
+    [
+     "Marsden Road Public School",
+     "p",
+     "g",
+     53
+    ],
+    [
+     "Al Amanah College",
+     "c",
+     "i",
+     53
+    ],
+    [
+     "Liverpool Girls High School",
+     "s",
+     "g",
+     39
+    ],
+    [
+     "Liverpool Public School",
+     "p",
+     "g",
+     39
+    ],
+    [
+     "Liverpool Boys High School",
+     "s",
+     "g",
+     37
+    ],
+    [
+     "Gulyangarri Public School",
+     "p",
+     "g",
+     36
+    ],
+    [
+     "Liverpool West Public School",
+     "p",
+     "g",
+     33
+    ]
+   ],
+   "mall": "Westfield Liverpool",
+   "growthArea": false,
+   "flags": [
+    "Regional CBD with courts, police station, Liverpool Hospital and rail interchange"
+   ]
+  },
+  {
+   "name": "Casula",
+   "postcode": "2170",
+   "crime": {
+    "offences": 962,
+    "population": 16584,
+    "person": 278,
+    "property": 452,
+    "area": null
+   },
+   "prop": {
+    "median": 1296500,
+    "growth": 12.74,
+    "yield": 3.25,
+    "rent": 790
+   },
+   "schools": [
+    [
+     "Casula Public School",
+     "p",
+     "g",
+     45
+    ],
+    [
+     "Casula High School",
+     "s",
+     "g",
+     33
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Prestons",
+   "postcode": "2170",
+   "crime": {
+    "offences": 585,
+    "population": 15694,
+    "person": 187,
+    "property": 290,
+    "area": null
+   },
+   "prop": {
+    "median": 1220000,
+    "growth": 5.9,
+    "yield": 3.48,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "William Carey Christian School",
+     "c",
+     "i",
+     66
+    ],
+    [
+     "St Catherine of Siena Catholic Primary School",
+     "p",
+     "c",
+     61
+    ],
+    [
+     "Amity College",
+     "c",
+     "i",
+     54
+    ],
+    [
+     "Dalmeny Public School",
+     "p",
+     "g",
+     50
+    ],
+    [
+     "Prestons Public School",
+     "p",
+     "g",
+     44
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Edmondson Park",
+   "postcode": "2174",
+   "crime": {
+    "offences": 626,
+    "population": 12080,
+    "person": 150,
+    "property": 333,
+    "area": null
+   },
+   "prop": {
+    "median": 1339000,
+    "growth": 5.89,
+    "yield": 3.31,
+    "rent": 850
+   },
+   "schools": [
+    [
+     "St Francis Catholic College",
+     "c",
+     "c",
+     66
+    ],
+    [
+     "Edmondson Park Public School",
+     "p",
+     "g",
+     55
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Fast-growing new estates; 2021 population undercounts residents",
+    "Ed.Square town centre at the station"
+   ]
+  },
+  {
+   "name": "Hoxton Park",
+   "postcode": "2171",
+   "crime": {
+    "offences": 149,
+    "population": 4572,
+    "person": 66,
+    "property": 69,
+    "area": null
+   },
+   "prop": {
+    "median": 1181000,
+    "growth": 19.81,
+    "yield": 3.43,
+    "rent": 720
+   },
+   "schools": [
+    [
+     "Good Shepherd Catholic Primary School",
+     "p",
+     "c",
+     61
+    ],
+    [
+     "Hoxton Park Public School",
+     "p",
+     "g",
+     44
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Green Valley",
+   "postcode": "2168",
+   "crime": {
+    "offences": 684,
+    "population": 12919,
+    "person": 146,
+    "property": 157,
+    "area": null
+   },
+   "prop": {
+    "median": 1195500,
+    "growth": 3.87,
+    "yield": 3.29,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "Green Valley Public School",
+     "p",
+     "g",
+     52
+    ],
+    [
+     "Minarah College",
+     "c",
+     "i",
+     50
+    ],
+    [
+     "James Busby High School",
+     "s",
+     "g",
+     38
+    ],
+    [
+     "Busby West Public School",
+     "p",
+     "g",
+     35
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Total inflated by 326 'against justice procedures' offences (breaches etc.)"
+   ]
+  },
+  {
+   "name": "Hinchinbrook",
+   "postcode": "2168",
+   "crime": {
+    "offences": 300,
+    "population": 11521,
+    "person": 134,
+    "property": 100,
+    "area": null
+   },
+   "prop": {
+    "median": 1163750,
+    "growth": 10.83,
+    "yield": 3.27,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "Good Samaritan Catholic College",
+     "s",
+     "c",
+     56
+    ],
+    [
+     "Hinchinbrook Public School",
+     "p",
+     "g",
+     46
+    ],
+    [
+     "Hoxton Park High School",
+     "s",
+     "g",
+     41
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Cecil Hills",
+   "postcode": "2171",
+   "crime": {
+    "offences": 145,
+    "population": 6906,
+    "person": 59,
+    "property": 56,
+    "area": null
+   },
+   "prop": {
+    "median": 1451000,
+    "growth": -2.52,
+    "yield": 3.01,
+    "rent": 850
+   },
+   "schools": [
+    [
+     "Cecil Hills Public School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "Cecil Hills High School",
+     "s",
+     "g",
+     41
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bonnyrigg",
+   "postcode": "2177",
+   "crime": {
+    "offences": 454,
+    "population": 9785,
+    "person": 119,
+    "property": 227,
+    "area": null
+   },
+   "prop": {
+    "median": 1259000,
+    "growth": 11.42,
+    "yield": 3.26,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "Our Lady of Mt Carmel Catholic Primary School Mount Pritchard",
+     "p",
+     "c",
+     72
+    ],
+    [
+     "Bonnyrigg High School",
+     "s",
+     "g",
+     56
+    ],
+    [
+     "Bonnyrigg Public School",
+     "p",
+     "g",
+     53
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Bonnyrigg Plaza shopping centre"
+   ]
+  },
+  {
+   "name": "Fairfield",
+   "postcode": "2165",
+   "crime": {
+    "offences": 2313,
+    "population": 18596,
+    "person": 440,
+    "property": 511,
+    "area": null
+   },
+   "prop": {
+    "median": 1370000,
+    "growth": 14.64,
+    "yield": 3.13,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "Our Lady of the Rosary Catholic Primary School",
+     "p",
+     "c",
+     57
+    ],
+    [
+     "Patrician Brothers' College Fairfield",
+     "s",
+     "c",
+     55
+    ],
+    [
+     "Fairvale Public School",
+     "p",
+     "g",
+     42
+    ],
+    [
+     "Fairfield Heights Public School",
+     "p",
+     "g",
+     42
+    ],
+    [
+     "Fairfield High School",
+     "s",
+     "g",
+     38
+    ],
+    [
+     "Fairfield Public School",
+     "p",
+     "g",
+     30
+    ]
+   ],
+   "mall": "Neeta City / Fairfield Forum",
+   "growthArea": false,
+   "flags": [
+    "Town centre and rail interchange"
+   ]
+  },
+  {
+   "name": "Cabramatta",
+   "postcode": "2166",
+   "crime": {
+    "offences": 3128,
+    "population": 21142,
+    "person": 296,
+    "property": 640,
+    "area": null
+   },
+   "prop": {
+    "median": 1427000,
+    "growth": 4.35,
+    "yield": 2.82,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Sacred Heart Catholic Primary School Cabramatta",
+     "p",
+     "c",
+     67
+    ],
+    [
+     "Cabramatta Public School",
+     "p",
+     "g",
+     65
+    ],
+    [
+     "Harrington Street Public School",
+     "p",
+     "g",
+     64
+    ],
+    [
+     "Lansvale East Public School",
+     "p",
+     "g",
+     62
+    ],
+    [
+     "Cabramatta High School",
+     "s",
+     "g",
+     61
+    ],
+    [
+     "Cabramatta West Public School",
+     "p",
+     "g",
+     53
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Busy town centre and rail station; total far exceeds person+property counts"
+   ]
+  },
+  {
+   "name": "Horsley Park",
+   "postcode": "2175",
+   "crime": {
+    "offences": 115,
+    "population": 1790,
+    "person": 32,
+    "property": 53,
+    "area": null
+   },
+   "prop": null,
+   "schools": [
+    [
+     "St Narsai Assyrian Christian College",
+     "s",
+     "i",
+     63
+    ],
+    [
+     "Marion Catholic Primary School",
+     "p",
+     "c",
+     56
+    ],
+    [
+     "Horsley Park Public School",
+     "p",
+     "g",
+     39
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Semi-rural acreage; small population makes per-capita rates volatile"
+   ]
+  },
+  {
+   "name": "Kemps Creek",
+   "postcode": "2178",
+   "crime": {
+    "offences": 229,
+    "population": 2121,
+    "person": 57,
+    "property": 141,
+    "area": null
+   },
+   "prop": {
+    "median": 3950000,
+    "growth": null,
+    "yield": 1.53,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Trinity Catholic Primary School",
+     "p",
+     "c",
+     59
+    ],
+    [
+     "Christadelphian Heritage College Sydney",
+     "c",
+     "i",
+     58
+    ],
+    [
+     "Mamre Anglican School",
+     "c",
+     "i",
+     54
+    ],
+    [
+     "Emmaus Catholic College",
+     "s",
+     "c",
+     51
+    ],
+    [
+     "Kemps Creek Public School",
+     "p",
+     "g",
+     35
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Semi-rural acreage next to Western Sydney Airport / Aerotropolis; small population makes per-capita rates volatile; house median from only ~18 sales"
+   ]
+  },
+  {
+   "name": "Austral",
+   "postcode": "2179",
+   "crime": {
+    "offences": 647,
+    "population": 6847,
+    "person": 250,
+    "property": 301,
+    "area": null
+   },
+   "prop": {
+    "median": 1110000,
+    "growth": 27.59,
+    "yield": 3.48,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "Arrahman College",
+     "p",
+     "i",
+     71
+    ],
+    [
+     "Al-Faisal College - Liverpool",
+     "c",
+     "i",
+     67
+    ],
+    [
+     "St Anthony of Padua Catholic College",
+     "c",
+     "c",
+     50
+    ],
+    [
+     "Unity Grammar College",
+     "c",
+     "i",
+     50
+    ],
+    [
+     "Austral Public School",
+     "p",
+     "g",
+     49
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Rezoned acreage turning into new estates; 2021 population undercounts residents"
+   ]
+  },
+  {
+   "name": "Leppington",
+   "postcode": "2179",
+   "crime": {
+    "offences": 652,
+    "population": 9423,
+    "person": 159,
+    "property": 306,
+    "area": null
+   },
+   "prop": {
+    "median": 1100000,
+    "growth": 6.49,
+    "yield": 3.18,
+    "rent": 820
+   },
+   "schools": [
+    [
+     "Leppington Anglican College",
+     "c",
+     "i",
+     58
+    ],
+    [
+     "Leppington Public School",
+     "p",
+     "g",
+     41
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "South West Growth Area estates; 2021 population undercounts residents"
+   ]
+  },
+  {
+   "name": "Middleton Grange",
+   "postcode": "2171",
+   "crime": {
+    "offences": 135,
+    "population": 7043,
+    "person": 69,
+    "property": 49,
+    "area": null
+   },
+   "prop": {
+    "median": 1252500,
+    "growth": 8.91,
+    "yield": 3.47,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "Thomas Hassall Anglican College",
+     "c",
+     "i",
+     56
+    ],
+    [
+     "Middleton Grange Public School",
+     "p",
+     "g",
+     49
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bringelly",
+   "postcode": "2556",
+   "crime": {
+    "offences": 139,
+    "population": 2433,
+    "person": 45,
+    "property": 67,
+    "area": null
+   },
+   "prop": {
+    "median": 3600000,
+    "growth": 17.47,
+    "yield": 1.49,
+    "rent": 840
+   },
+   "schools": [
+    [
+     "Bringelly Public School",
+     "p",
+     "g",
+     35
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Semi-rural acreage bordering Western Sydney Airport / Aerotropolis; small population makes per-capita rates volatile"
+   ]
+  },
+  {
+   "name": "Rossmore",
+   "postcode": "2557",
+   "crime": {
+    "offences": 160,
+    "population": 2241,
+    "person": 73,
+    "property": 71,
+    "area": null
+   },
+   "prop": null,
+   "schools": [
+    [
+     "Bellfield College",
+     "c",
+     "i",
+     51
+    ],
+    [
+     "Rossmore Public School",
+     "p",
+     "g",
+     27
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Semi-rural acreage near Western Sydney Airport; small population makes per-capita rates volatile"
+   ]
+  },
+  {
+   "name": "Luddenham",
+   "postcode": "2745",
+   "crime": {
+    "offences": 125,
+    "population": 1927,
+    "person": 51,
+    "property": 59,
+    "area": null
+   },
+   "prop": {
+    "median": 2970000,
+    "growth": 26.92,
+    "yield": 2.25,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Holy Family Primary School",
+     "p",
+     "c",
+     53
+    ],
+    [
+     "Luddenham Public School",
+     "p",
+     "g",
+     42
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Semi-rural locality adjoining the Western Sydney International Airport site; small population makes per-capita rates volatile"
+   ]
+  },
+  {
+   "name": "Oran Park",
+   "postcode": "2570",
+   "crime": {
+    "offences": 615,
+    "population": 17624,
+    "person": 247,
+    "property": 229,
+    "area": null
+   },
+   "prop": {
+    "median": 1200000,
+    "growth": 10.6,
+    "yield": 3.27,
+    "rent": 780
+   },
+   "schools": [
+    [
+     "Oran Park Anglican College",
+     "c",
+     "i",
+     60
+    ],
+    [
+     "St Benedict's Catholic College",
+     "s",
+     "c",
+     56
+    ],
+    [
+     "St Justin's Catholic Primary School",
+     "p",
+     "c",
+     55
+    ],
+    [
+     "Barramurra Public School",
+     "p",
+     "g",
+     53
+    ],
+    [
+     "Oran Park Public School",
+     "p",
+     "g",
+     50
+    ],
+    [
+     "Oran Park High School",
+     "s",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Fast-growing new estates; 2021 population undercounts residents",
+    "Oran Park Podium town centre"
+   ]
+  },
+  {
+   "name": "Gregory Hills",
+   "postcode": "2557",
+   "crime": {
+    "offences": 440,
+    "population": 9142,
+    "person": 144,
+    "property": 213,
+    "area": null
+   },
+   "prop": {
+    "median": 1106250,
+    "growth": 8.99,
+    "yield": 3.45,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "St Gregory's College Campbelltown",
+     "c",
+     "c",
+     51
+    ],
+    [
+     "Gregory Hills Public School",
+     "p",
+     "g",
+     46
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Fast-growing new estates; 2021 population undercounts residents",
+    "Gregory Hills Town Centre and business park"
+   ]
+  },
+  {
+   "name": "Harrington Park",
+   "postcode": "2567",
+   "crime": {
+    "offences": 228,
+    "population": 13332,
+    "person": 79,
+    "property": 109,
+    "area": null
+   },
+   "prop": {
+    "median": 1565000,
+    "growth": 10.99,
+    "yield": 2.86,
+    "rent": 840
+   },
+   "schools": [
+    [
+     "Harrington Park Public School",
+     "p",
+     "g",
+     56
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Narellan",
+   "postcode": "2567",
+   "crime": {
+    "offences": 738,
+    "population": 3358,
+    "person": 111,
+    "property": 278,
+    "area": null
+   },
+   "prop": {
+    "median": 1100000,
+    "growth": 10.0,
+    "yield": 3.26,
+    "rent": 680
+   },
+   "schools": [
+    [
+     "Elizabeth Macarthur High School",
+     "s",
+     "g",
+     51
+    ],
+    [
+     "Narellan Public School",
+     "p",
+     "g",
+     47
+    ]
+   ],
+   "mall": "Narellan Town Centre",
+   "growthArea": false,
+   "flags": [
+    "Small resident population vs a regional shopping centre inflates the per-capita rate"
+   ]
+  },
+  {
+   "name": "Camden",
+   "postcode": "2570",
+   "crime": {
+    "offences": 259,
+    "population": 3378,
+    "person": 93,
+    "property": 92,
+    "area": null
+   },
+   "prop": {
+    "median": 1200000,
+    "growth": 14.29,
+    "yield": 3.03,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Mount Hunter Public School",
+     "p",
+     "g",
+     54
+    ],
+    [
+     "St Paul's Catholic Primary School",
+     "p",
+     "c",
+     53
+    ],
+    [
+     "Camden South Public School",
+     "p",
+     "g",
+     52
+    ],
+    [
+     "Camden Public School",
+     "p",
+     "g",
+     51
+    ],
+    [
+     "Mawarra Public School",
+     "p",
+     "g",
+     45
+    ],
+    [
+     "Camden High School",
+     "s",
+     "g",
+     41
+    ],
+    [
+     "Cawdor Public School",
+     "p",
+     "g",
+     38
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Historic town centre; small resident population"
+   ]
+  },
+  {
+   "name": "Spring Farm",
+   "postcode": "2570",
+   "crime": {
+    "offences": 218,
+    "population": 9868,
+    "person": 73,
+    "property": 99,
+    "area": null
+   },
+   "prop": {
+    "median": 1140000,
+    "growth": 9.88,
+    "yield": 3.47,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Spring Farm Public School",
+     "p",
+     "g",
+     43
+    ]
+   ],
+   "mall": null,
+   "growthArea": true,
+   "flags": [
+    "Newer estates; 2021 population may undercount residents"
+   ]
+  },
+  {
+   "name": "Mount Annan",
+   "postcode": "2567",
+   "crime": {
+    "offences": 345,
+    "population": 11784,
+    "person": 135,
+    "property": 134,
+    "area": null
+   },
+   "prop": {
+    "median": 1230000,
+    "growth": 13.89,
+    "yield": 3.44,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Mount Annan Christian College",
+     "c",
+     "i",
+     55
+    ],
+    [
+     "Mount Annan Public School",
+     "p",
+     "g",
+     46
+    ],
+    [
+     "Mount Annan High School",
+     "s",
+     "g",
+     44
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Mount Annan Marketplace shopping centre"
+   ]
+  },
+  {
+   "name": "Campbelltown",
+   "postcode": "2560",
+   "crime": {
+    "offences": 6610,
+    "population": 16577,
+    "person": 799,
+    "property": 1459,
+    "area": null
+   },
+   "prop": null,
+   "schools": [
+    [
+     "St Peter's Anglican Grammar",
+     "p",
+     "i",
+     69
+    ],
+    [
+     "St Patrick's College Campbelltown",
+     "s",
+     "c",
+     68
+    ],
+    [
+     "St Thomas More Catholic Primary School",
+     "p",
+     "c",
+     60
+    ],
+    [
+     "St John The Evangelist Catholic Primary School",
+     "p",
+     "c",
+     55
+    ],
+    [
+     "Kentlyn Public School",
+     "p",
+     "g",
+     53
+    ],
+    [
+     "Briar Road Public School",
+     "p",
+     "g",
+     52
+    ],
+    [
+     "Campbelltown East Public School",
+     "p",
+     "g",
+     47
+    ],
+    [
+     "Campbelltown North Public School",
+     "p",
+     "g",
+     43
+    ],
+    [
+     "Campbelltown Public School",
+     "p",
+     "g",
+     38
+    ],
+    [
+     "Woodland Road Public School",
+     "p",
+     "g",
+     37
+    ],
+    [
+     "Campbelltown Performing Arts High School",
+     "s",
+     "g",
+     36
+    ],
+    [
+     "Airds High School",
+     "s",
+     "g",
+     29
+    ]
+   ],
+   "mall": "Macarthur Square",
+   "growthArea": false,
+   "flags": [
+    "Regional CBD, hospital and rail interchange; total includes 2,745 transport regulatory and 1,012 justice-procedure offences"
+   ]
+  },
+  {
+   "name": "Ingleburn",
+   "postcode": "2565",
+   "crime": {
+    "offences": 1696,
+    "population": 15264,
+    "person": 350,
+    "property": 582,
+    "area": null
+   },
+   "prop": {
+    "median": 1102500,
+    "growth": 15.45,
+    "yield": 3.32,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Holy Family Catholic Primary School",
+     "p",
+     "c",
+     57
+    ],
+    [
+     "Ingleburn High School",
+     "s",
+     "g",
+     49
+    ],
+    [
+     "Ingleburn Public School",
+     "p",
+     "g",
+     43
+    ],
+    [
+     "Sackville Street Public School",
+     "p",
+     "g",
+     39
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Total includes 423 transport regulatory offences (fare evasion at the station)"
+   ]
+  },
+  {
+   "name": "Minto",
+   "postcode": "2566",
+   "crime": {
+    "offences": 1254,
+    "population": 13940,
+    "person": 311,
+    "property": 494,
+    "area": null
+   },
+   "prop": {
+    "median": 1055000,
+    "growth": 11.35,
+    "yield": 3.52,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Al-Faisal College - Campbelltown",
+     "c",
+     "i",
+     70
+    ],
+    [
+     "Zahra Grammar School",
+     "p",
+     "i",
+     53
+    ],
+    [
+     "Sarah Redfern Public School",
+     "p",
+     "g",
+     47
+    ],
+    [
+     "Minto Public School",
+     "p",
+     "g",
+     44
+    ],
+    [
+     "Campbellfield Public School",
+     "p",
+     "g",
+     42
+    ],
+    [
+     "Sarah Redfern High School",
+     "s",
+     "g",
+     40
+    ],
+    [
+     "The Grange Public School",
+     "p",
+     "g",
+     37
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Leumeah",
+   "postcode": "2560",
+   "crime": {
+    "offences": 805,
+    "population": 9992,
+    "person": 224,
+    "property": 237,
+    "area": null
+   },
+   "prop": {
+    "median": 988500,
+    "growth": 9.83,
+    "yield": 3.42,
+    "rent": 620
+   },
+   "schools": [
+    [
+     "Leumeah Public School",
+     "p",
+     "g",
+     61
+    ],
+    [
+     "Leumeah High School",
+     "s",
+     "g",
+     44
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Parramatta",
+   "postcode": "2150",
+   "crime": {
+    "offences": 9720,
+    "population": 30211,
+    "person": 1159,
+    "property": 3193,
+    "area": null
+   },
+   "prop": {
+    "median": 1610000,
+    "growth": -14.72,
+    "yield": 2.4,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Our Lady of Mercy College Parramatta",
+     "s",
+     "c",
+     84
+    ],
+    [
+     "Parramatta High School",
+     "s",
+     "g",
+     72
+    ],
+    [
+     "Parramatta East Public School",
+     "p",
+     "g",
+     62
+    ],
+    [
+     "St Patrick's Primary School",
+     "p",
+     "c",
+     61
+    ],
+    [
+     "Bayanami Public School",
+     "p",
+     "g",
+     59
+    ],
+    [
+     "Macarthur Girls High School",
+     "s",
+     "g",
+     59
+    ],
+    [
+     "Parramatta Public School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "Arthur Phillip High School",
+     "s",
+     "g",
+     49
+    ],
+    [
+     "Parramatta West Public School",
+     "p",
+     "g",
+     45
+    ]
+   ],
+   "mall": "Westfield Parramatta",
+   "growthArea": false,
+   "flags": [
+    "Sydney's second CBD with nightlife, courts and major rail interchange; mostly apartments so house figures rest on few sales"
+   ]
+  },
+  {
+   "name": "Merrylands",
+   "postcode": "2160",
+   "crime": {
+    "offences": 3064,
+    "population": 32472,
+    "person": 605,
+    "property": 1022,
+    "area": null
+   },
+   "prop": {
+    "median": 1425000,
+    "growth": 5.56,
+    "yield": 2.9,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Cerdon College",
+     "s",
+     "c",
+     61
+    ],
+    [
+     "St Margaret Mary's Primary School",
+     "p",
+     "c",
+     60
+    ],
+    [
+     "Merrylands East Public School",
+     "p",
+     "g",
+     51
+    ],
+    [
+     "Sherwood Grange Public School",
+     "p",
+     "g",
+     48
+    ],
+    [
+     "Merrylands Public School",
+     "p",
+     "g",
+     40
+    ],
+    [
+     "Hilltop Road Public School",
+     "p",
+     "g",
+     39
+    ],
+    [
+     "Merrylands High School",
+     "s",
+     "g",
+     35
+    ]
+   ],
+   "mall": "Stockland Merrylands",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Guildford",
+   "postcode": "2161",
+   "crime": {
+    "offences": 1539,
+    "population": 24091,
+    "person": 438,
+    "property": 624,
+    "area": null
+   },
+   "prop": {
+    "median": 1373500,
+    "growth": 11.67,
+    "yield": 3.0,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "St Patrick's Primary School",
+     "p",
+     "c",
+     51
+    ],
+    [
+     "Granville South Public School",
+     "p",
+     "g",
+     44
+    ],
+    [
+     "Guildford Public School",
+     "p",
+     "g",
+     39
+    ],
+    [
+     "Old Guildford Public School",
+     "p",
+     "g",
+     27
+    ],
+    [
+     "Granville South Creative and Performing Arts High School",
+     "s",
+     "g",
+     21
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Wentworthville",
+   "postcode": "2145",
+   "crime": {
+    "offences": 862,
+    "population": 15098,
+    "person": 213,
+    "property": 431,
+    "area": null
+   },
+   "prop": {
+    "median": 1527000,
+    "growth": 4.23,
+    "yield": 2.57,
+    "rent": 700
+   },
+   "schools": [
+    [
+     "Darcy Road Public School",
+     "p",
+     "g",
+     64
+    ],
+    [
+     "Our Lady of Mount Carmel Primary School",
+     "p",
+     "c",
+     57
+    ],
+    [
+     "Wentworthville Public School",
+     "p",
+     "g",
+     55
+    ],
+    [
+     "Pendle Hill Public School",
+     "p",
+     "g",
+     50
+    ],
+    [
+     "Pendle Hill High School",
+     "s",
+     "g",
+     39
+    ],
+    [
+     "Toongabbie East Public School",
+     "p",
+     "g",
+     15
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Westmead",
+   "postcode": "2145",
+   "crime": {
+    "offences": 1169,
+    "population": 16555,
+    "person": 321,
+    "property": 507,
+    "area": null
+   },
+   "prop": {
+    "median": 2000000,
+    "growth": 12.68,
+    "yield": 2.3,
+    "rent": 710
+   },
+   "schools": [
+    [
+     "Mother Teresa Primary School",
+     "p",
+     "c",
+     70
+    ],
+    [
+     "Catherine McAuley Westmead",
+     "s",
+     "c",
+     63
+    ],
+    [
+     "Parramatta Marist High School",
+     "s",
+     "c",
+     62
+    ],
+    [
+     "Westmead Public School",
+     "p",
+     "g",
+     56
+    ],
+    [
+     "Sacred Heart Primary School",
+     "p",
+     "c",
+     51
+    ],
+    [
+     "Westmead Christian Grammar School",
+     "p",
+     "i",
+     45
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Westmead hospital precinct (Westmead and Children's hospitals); mostly apartments so house figures rest on few sales"
+   ]
+  },
+  {
+   "name": "Greystanes",
+   "postcode": "2145",
+   "crime": {
+    "offences": 637,
+    "population": 23511,
+    "person": 259,
+    "property": 244,
+    "area": null
+   },
+   "prop": {
+    "median": 1527500,
+    "growth": 14.63,
+    "yield": 2.76,
+    "rent": 800
+   },
+   "schools": [
+    [
+     "Greystanes Public School",
+     "p",
+     "g",
+     70
+    ],
+    [
+     "Widemere Public School",
+     "p",
+     "g",
+     60
+    ],
+    [
+     "Our Lady Queen of Peace Primary School",
+     "p",
+     "c",
+     59
+    ],
+    [
+     "Beresford Road Public School",
+     "p",
+     "g",
+     58
+    ],
+    [
+     "St Paul's Catholic College",
+     "s",
+     "c",
+     57
+    ],
+    [
+     "Greystanes High School",
+     "s",
+     "g",
+     52
+    ],
+    [
+     "Ringrose Public School",
+     "p",
+     "g",
+     39
+    ],
+    [
+     "Holroyd High School",
+     "s",
+     "g",
+     38
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Pemulwuy",
+   "postcode": "2145",
+   "crime": {
+    "offences": 228,
+    "population": 5532,
+    "person": 74,
+    "property": 111,
+    "area": null
+   },
+   "prop": {
+    "median": 1357500,
+    "growth": 2.14,
+    "yield": 3.5,
+    "rent": 970
+   },
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Wetherill Park",
+   "postcode": "2164",
+   "crime": {
+    "offences": 645,
+    "population": 6412,
+    "person": 146,
+    "property": 419,
+    "area": null
+   },
+   "prop": {
+    "median": 1465000,
+    "growth": 12.91,
+    "yield": 2.89,
+    "rent": 750
+   },
+   "schools": [
+    [
+     "Smithfield West Public School",
+     "p",
+     "g",
+     47
+    ],
+    [
+     "William Stimson Public School",
+     "p",
+     "g",
+     45
+    ]
+   ],
+   "mall": "Stockland Wetherill Park",
+   "growthArea": false,
+   "flags": [
+    "Large industrial area adds business-premises property crime"
+   ]
+  }
+ ]
+}

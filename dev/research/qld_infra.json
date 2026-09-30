@@ -1,0 +1,615 @@
+{
+ "qld": {
+  "city": "Brisbane",
+  "stateName": "Queensland",
+  "abbr": "QLD",
+  "mainAirport": {
+   "icao": "YBBN",
+   "name": "Brisbane Airport",
+   "short": "Brisbane Airport",
+   "lng": 153.117,
+   "lat": -27.3842,
+   "runways": [
+    {
+     "refs": [
+      "01R",
+      "19L"
+     ],
+     "ends": [
+      [
+       153.11817,
+       -27.40283
+      ],
+      [
+       153.13433,
+       -27.37467
+      ]
+     ],
+     "plain": "main runway (older eastern/legacy runway, 3.56 km)",
+     "era": "both",
+     "opens": null
+    },
+    {
+     "refs": [
+      "01L",
+      "19R"
+     ],
+     "ends": [
+      [
+       153.10683,
+       -27.383
+      ],
+      [
+       153.122,
+       -27.3565
+      ]
+     ],
+     "plain": "new parallel runway (western, 3.3 km, opened July 2020)",
+     "era": "both",
+     "opens": null
+    }
+   ],
+   "wideBodies": true,
+   "curfew": "No curfew - flights run 24 hours. At night, when wind and traffic allow, Airservices uses 'SODPROPS' (planes take off and land over Moreton Bay) to keep flights off homes.",
+   "noiseUrl": "https://www.bne.com.au/corporate/community-and-environment/runway-operations-noise",
+   "notes": "Two parallel north-south runways about 2 km apart: the legacy 01R/19L and the new 01L/19R (opened July 2020). The old cross runway 14/32 is closed (listed as CLOSED on OurAirports) and is not shown. Regular wide-body jets (A330, 787, 777, A350, A380) on international routes, plus 737/A320/A321 domestic jets and turboprops. The 2020 runway opening brought new flight paths and a big noise backlash; Airservices ran a Post-Implementation Review and a Noise Action Plan for Brisbane. Package 3 changes began 9 July 2026: northern arrivals moved further out over water (about 59,000 fewer people overflown incl. southern Bribie Island), southern arrivals redesigned (about 35,000 fewer), legacy-runway departures shifted south-east (about 44,500 fewer); Redcliffe, southern Moreton Bay, Bribie Island and Logan benefit most, while Bulimba (lined up with the new runway) sees no change and Russell Island gets a new path. Some changes still need CASA approval and may not happen until 2027. SODPROPS (Simultaneous Opposite Direction Parallel Runway Operations: arrivals and departures both over Moreton Bay) was about 3.8% of movements in early 2025 against a 5.3% target. Runway end coordinates from SkyVector (0.01-minute precision, about 20 m). Official map: engage.airservicesaustralia.com/nap4b?tool=map."
+  },
+  "otherAirports": [
+   {
+    "icao": "YBAF",
+    "name": "Archerfield Airport",
+    "lng": 153.008,
+    "lat": -27.57033,
+    "kind": "light",
+    "status": "open",
+    "opens": null,
+    "runways": [
+     {
+      "refs": [
+       "10L",
+       "28R"
+      ],
+      "ends": [
+       [
+        152.99817,
+        -27.57067
+       ],
+       [
+        153.01117,
+        -27.57433
+       ]
+      ],
+      "plain": "main east-west runway (1.7 km)",
+      "era": "both",
+      "opens": null
+     },
+     {
+      "refs": [
+       "04L",
+       "22R"
+      ],
+      "ends": [
+       [
+        153.00183,
+        -27.571
+       ],
+       [
+        153.0095,
+        -27.56567
+       ]
+      ],
+      "plain": "north-east/south-west runway (1.2 km)",
+      "era": "both",
+      "opens": null
+     }
+    ],
+    "note": "Brisbane's main general-aviation airport, 12 km south of the CBD: flying-school light aircraft, charter turboprops and helicopters, with circuit training over Archerfield, Coopers Plains, Salisbury, Acacia Ridge and Algester. Busy daytime light-aircraft drone rather than jet noise."
+   },
+   {
+    "icao": "YAMB",
+    "name": "RAAF Base Amberley",
+    "lng": 152.712,
+    "lat": -27.6405,
+    "kind": "military",
+    "status": "open",
+    "opens": null,
+    "runways": [
+     {
+      "refs": [
+       "15",
+       "33"
+      ],
+      "ends": [
+       [
+        152.70533,
+        -27.62167
+       ],
+       [
+        152.7165,
+        -27.64733
+       ]
+      ],
+      "plain": "main runway (3 km)",
+      "era": "both",
+      "opens": null
+     },
+     {
+      "refs": [
+       "04",
+       "22"
+      ],
+      "ends": [
+       [
+        152.70783,
+        -27.64467
+       ],
+       [
+        152.72033,
+        -27.63667
+       ]
+      ],
+      "plain": "cross runway (1.5 km)",
+      "era": "both",
+      "opens": null
+     }
+    ],
+    "note": "Australia's largest RAAF base, about 8 km south of Ipswich: F/A-18F Super Hornet and EA-18G Growler fighter jets plus C-17 and KC-30 heavy transports. Jet noise can be very loud (but irregular) in Ipswich, Yamanto, Deebing Heights, Ripley and Springfield-area suburbs under the circuit."
+   }
+  ],
+  "future": {
+   "label": "After independent parallel runway operations start (late 2027)",
+   "short": "Parallel ops start",
+   "explain": "Flight-path changes from July 2026 let Brisbane land planes on both runways side by side ('independent parallel runway operations'), which Airservices expects to use regularly from late 2027. Busy-period arrivals will then be split more evenly across both runways and their approach paths, so suburbs lined up with the new runway's approaches (such as Bulimba to the south) are likely to hear arrivals more often at peak times."
+  },
+  "plans": [
+   {
+    "kind": "rail",
+    "name": "Cross River Rail",
+    "status": "Under construction; services expected to start in 2029 (after testing)",
+    "about": "New 10.2 km line with 5.9 km twin tunnels under the Brisbane River and CBD, from Dutton Park to Bowen Hills, with new underground stations at Boggo Road, Woolloongabba, Albert Street and Roma Street. It also rebuilds eight southside stations (Salisbury to Dutton Park) and adds Gold Coast line stations at Pimpama, Hope Island and Merrimac.",
+    "url": "https://crossriverrail.qld.gov.au/about/project-overview/",
+    "cert": "approx",
+    "line": [
+     [
+      153.0291,
+      -27.4998
+     ],
+     [
+      153.0302,
+      -27.4934
+     ],
+     [
+      153.035,
+      -27.486
+     ],
+     [
+      153.027478,
+      -27.471861
+     ],
+     [
+      153.0191,
+      -27.4652
+     ],
+     [
+      153.0268,
+      -27.4526
+     ],
+     [
+      153.0386,
+      -27.4432
+     ]
+    ],
+    "note": "Dutton Park, Boggo Road, Albert Street and Roma Street points from station coordinates (Wikipedia); Woolloongabba, Exhibition and Bowen Hills points approximate."
+   },
+   {
+    "kind": "rail",
+    "name": "Logan and Gold Coast Faster Rail (Kuraby to Beenleigh)",
+    "status": "Under construction (main rail works started 2026; Kuraby station works underway, Loganlea relocation due 2027; full completion date not published)",
+    "about": "$5.75 billion project doubling the tracks from two to four along 20 km between Kuraby and Beenleigh, upgrading or relocating nine stations (Kuraby, Trinder Park, Woodridge, Kingston, Loganlea, Bethania, Edens Landing, Holmview, Beenleigh) and removing five level crossings. Means faster, more frequent Beenleigh and Gold Coast line trains, but more construction along the Logan rail corridor. Line points are approximate (station positions from general knowledge, not traced from official maps).",
+    "url": "https://www.tmr.qld.gov.au/projects/programs/logan-and-gold-coast-faster-rail",
+    "cert": "approx",
+    "line": [
+     [
+      153.0936,
+      -27.6069
+     ],
+     [
+      153.102,
+      -27.625
+     ],
+     [
+      153.1087,
+      -27.6317
+     ],
+     [
+      153.115,
+      -27.66
+     ],
+     [
+      153.135,
+      -27.673
+     ],
+     [
+      153.156,
+      -27.688
+     ],
+     [
+      153.169,
+      -27.704
+     ],
+     [
+      153.172,
+      -27.716
+     ],
+     [
+      153.199,
+      -27.7137
+     ]
+    ]
+   },
+   {
+    "kind": "rail",
+    "name": "The Wave - Direct Sunshine Coast Rail Line (Beerwah to Birtinya)",
+    "status": "Pre-construction; design contracts awarded 2026, major construction from early 2027, Stage 1 (Beerwah to Caloundra) targeted for 2032",
+    "about": "26 km new heavy-rail line branching off the Sunshine Coast line at Beerwah: Stage 1 to Caloundra (19 km, new stations at Aura/Bells Creek and Caloundra) and Stage 2 to Birtinya (7 km, via Aroona, incl. ~1 km tunnel), linking to a future metro to Maroochydore and Sunshine Coast Airport. About 70 km north of Brisbane CBD. Line points are approximate (station positions from general knowledge, not traced from official maps).",
+    "url": "https://www.tmr.qld.gov.au/projects/the-wave-stages-1-and-2-rail",
+    "cert": "approx",
+    "line": [
+     [
+      152.96,
+      -26.8556
+     ],
+     [
+      153.0,
+      -26.845
+     ],
+     [
+      153.06,
+      -26.83
+     ],
+     [
+      153.09,
+      -26.795
+     ],
+     [
+      153.105,
+      -26.78
+     ],
+     [
+      153.115,
+      -26.765
+     ],
+     [
+      153.117,
+      -26.745
+     ]
+    ]
+   },
+   {
+    "kind": "road",
+    "name": "Coomera Connector Stage 1 (M9, Coomera to Nerang)",
+    "status": "Partly open: 4 km between Shipper Drive and Helensvale Road opened 3 Dec 2025; remaining 12 km to Nerang-Broadbeach Road under construction, finish promised 'by 2032'",
+    "about": "16 km motorway east of the M1 on the northern Gold Coast, giving a second north-south route between Coomera and Nerang. Stage 2 north to Loganholme is still at business-case stage. Line points are approximate (station positions from general knowledge, not traced from official maps).",
+    "url": "https://www.tmr.qld.gov.au/projects/coomera-connector-stage-1",
+    "cert": "approx",
+    "line": [
+     [
+      153.338,
+      -27.866
+     ],
+     [
+      153.35,
+      -27.885
+     ],
+     [
+      153.345,
+      -27.915
+     ],
+     [
+      153.358,
+      -27.94
+     ],
+     [
+      153.365,
+      -27.955
+     ],
+     [
+      153.37,
+      -27.975
+     ],
+     [
+      153.37,
+      -27.998
+     ]
+    ]
+   },
+   {
+    "kind": "road",
+    "name": "Bruce Highway upgrade - Gateway Motorway to Dohles Rocks Road (Stage 1)",
+    "status": "Detailed design; construction expected to start late 2026",
+    "about": "$948 million rebuild of the Gateway Motorway / Bruce Highway / Gympie Arterial Road interchange at Bald Hills through to the Pine River, the first stage of widening the Bruce Highway north of Brisbane. Further business cases cover Anzac Avenue to Caboolture. Line points are approximate (station positions from general knowledge, not traced from official maps).",
+    "url": "https://www.tmr.qld.gov.au/projects/bruce-highway-brisbane-gympie-gateway-motorway-to-dohles-rocks-road-upgrade-stage-1",
+    "cert": "approx",
+    "line": [
+     [
+      153.012,
+      -27.335
+     ],
+     [
+      153.008,
+      -27.322
+     ],
+     [
+      153.005,
+      -27.31
+     ],
+     [
+      153.004,
+      -27.298
+     ]
+    ]
+   }
+  ],
+  "railHubs": [
+   [
+    153.0302,
+    -27.4934,
+    "Boggo Road",
+    "New Cross River Rail underground station next to the Boggo Road busway and PA Hospital (opening 2029)"
+   ],
+   [
+    153.035,
+    -27.486,
+    "Woolloongabba",
+    "New underground station beside the Gabba and future Olympic precinct (opening 2029; position approximate)"
+   ],
+   [
+    153.027478,
+    -27.471861,
+    "Albert Street",
+    "New CBD underground station (opening 2029)"
+   ],
+   [
+    153.0191,
+    -27.4652,
+    "Roma Street",
+    "Expanded interchange with new underground Cross River Rail platforms (2029)"
+   ],
+   [
+    153.0268,
+    -27.4526,
+    "Exhibition",
+    "Upgraded for all-day Cross River Rail services (position approximate)"
+   ],
+   [
+    153.0936,
+    -27.6069,
+    "Kuraby",
+    "Northern end of the Logan track duplication; station rebuild under way (position approximate)"
+   ],
+   [
+    153.135,
+    -27.673,
+    "Loganlea",
+    "Station being relocated with 400 new car parks, due 2027 (position approximate)"
+   ],
+   [
+    153.199,
+    -27.7137,
+    "Beenleigh",
+    "Southern end of Logan and Gold Coast Faster Rail; station upgrade (position approximate)"
+   ]
+  ],
+  "dataCentres": [
+   [
+    "NEXTDC B1",
+    "NEXTDC",
+    "20 Wharf Street, Brisbane City QLD",
+    "live",
+    "2.25 MW"
+   ],
+   [
+    "NEXTDC B2",
+    "NEXTDC",
+    "454 St Pauls Terrace, Fortitude Valley QLD",
+    "live",
+    "Brisbane's largest colocation site"
+   ],
+   [
+    "NEXTDC B2 expansion / HQ",
+    "NEXTDC",
+    "St Pauls Terrace, Fortitude Valley QLD",
+    "plan",
+    "Development application for HQ and data centre expansion next to B2; exact lot not confirmed"
+   ],
+   [
+    "Equinix BR1",
+    "Equinix",
+    "54-58 Alfred Street, Fortitude Valley QLD",
+    "live",
+    "Formerly Metronode Brisbane 1"
+   ],
+   [
+    "Brennan Brisbane",
+    "Brennan",
+    "73 Amelia Street, Fortitude Valley QLD",
+    "live",
+    ""
+   ],
+   [
+    "5G Networks Brisbane",
+    "5G Networks",
+    "148 Brunswick Street, Fortitude Valley QLD",
+    "live",
+    ""
+   ],
+   [
+    "Datacom Brisbane",
+    "Datacom",
+    "501 Ann Street, Fortitude Valley QLD",
+    "live",
+    ""
+   ],
+   [
+    "Vocus Brisbane",
+    "Vocus",
+    "123 Eagle Street, Brisbane City QLD",
+    "live",
+    "Level 8"
+   ],
+   [
+    "Servers Australia Brisbane B1",
+    "Servers Australia",
+    "14 Finchley Street, Milton QLD",
+    "live",
+    ""
+   ],
+   [
+    "DigiCo BNE1 (ex iseek Brisbane Airport)",
+    "DigiCo",
+    "2 Cycas Lane, Brisbane Airport QLD",
+    "live",
+    "1.8 MW"
+   ],
+   [
+    "iseek / DigiCo Brisbane Airport stage 2",
+    "DigiCo",
+    "2 Cycas Lane, Brisbane Airport QLD",
+    "plan",
+    "Expansion of the airport campus; status not confirmed"
+   ],
+   [
+    "DigiCo Brisbane BNE (ex iseek Woolloongabba)",
+    "DigiCo",
+    "100 Ipswich Road, Woolloongabba QLD",
+    "live",
+    "0.3 MW"
+   ],
+   [
+    "Interactive Brisbane",
+    "Interactive",
+    "19 McKechnie Drive, Eight Mile Plains QLD",
+    "live",
+    ""
+   ],
+   [
+    "Fujitsu Brisbane",
+    "Fujitsu",
+    "Eight Mile Plains QLD",
+    "live",
+    "2 MW; street address not public - suburb only"
+   ],
+   [
+    "DSColo Kenmore",
+    "Digital Sense",
+    "Kenmore QLD",
+    "live",
+    "Street address not confirmed - suburb only"
+   ],
+   [
+    "Polaris Data Centre",
+    "Polaris (Oper8@Polaris)",
+    "11 Mary Mackenroth Lane, Springfield Central QLD",
+    "live",
+    "Tier III, government and enterprise tenants"
+   ],
+   [
+    "Swanbank data centre proposal",
+    "(developer not confirmed)",
+    "Swanbank, Ipswich QLD",
+    "plan",
+    "Proposed 10-storey data centre in the Swanbank industrial precinct; suburb only"
+   ]
+  ],
+  "market": {
+   "text": "Brisbane home values fell 1.0% in August 2026 and 2.7% over three months, but are still up 10.8% over the year, and are 2.7% below the May 2026 peak (Cotality).",
+   "url": "https://discover.cotality.com/hubfs/Article-Reports/COTALITY%20HVI%20SEP%202026%20FINAL%20(1).pdf",
+   "month": "2026-08"
+  },
+  "tallBuilding": "Brisbane Skytower (222 Margaret St, the city's tallest building) is about 270 m tall",
+  "defaultHome": {
+   "title": "Kenmore",
+   "lng": 152.938,
+   "lat": -27.507
+  },
+  "schoolZoneUrl": "https://www.qgso.qld.gov.au/maps/edmap/",
+  "view": {
+   "center": [
+    153.02,
+    -27.47
+   ],
+   "zoom": 9.9,
+   "bearing": 0
+  },
+  "links": [
+   [
+    "SkyVector YBBN (runway end coordinates)",
+    "https://skyvector.com/airport/YBBN/Brisbane-Airport"
+   ],
+   [
+    "OurAirports YBBN runways",
+    "https://ourairports.com/airports/YBBN/runways.html"
+   ],
+   [
+    "SkyVector YBAF Archerfield",
+    "https://skyvector.com/airport/YBAF/Brisbane-Archerfield-Airport"
+   ],
+   [
+    "SkyVector YAMB Amberley",
+    "https://skyvector.com/airport/YAMB/Amberley-Airport"
+   ],
+   [
+    "Brisbane Airport - runway operations and noise",
+    "https://www.bne.com.au/corporate/community-and-environment/runway-operations-noise"
+   ],
+   [
+    "Airservices - Noise Action Plan for Brisbane",
+    "https://engage.airservicesaustralia.com/nap4b"
+   ],
+   [
+    "Airservices - Package 3 outcomes (July 2026)",
+    "https://www.airservicesaustralia.com/airservices-australia-releases-latest-noise-action-plan-for-brisbane-outcomes/"
+   ],
+   [
+    "ABC - Brisbane flight paths altered after noise review (10 Jul 2026)",
+    "https://www.abc.net.au/news/2026-07-10/brisbane-airport-flight-paths-changed-aircraft-noise/106900096"
+   ],
+   [
+    "Cross River Rail - project overview",
+    "https://crossriverrail.qld.gov.au/about/project-overview/"
+   ],
+   [
+    "TMR - Logan and Gold Coast Faster Rail",
+    "https://www.tmr.qld.gov.au/projects/programs/logan-and-gold-coast-faster-rail"
+   ],
+   [
+    "TMR - The Wave (Direct Sunshine Coast Rail) Stages 1 and 2",
+    "https://www.tmr.qld.gov.au/projects/the-wave-stages-1-and-2-rail"
+   ],
+   [
+    "TMR - Coomera Connector Stage 1",
+    "https://www.tmr.qld.gov.au/projects/coomera-connector-stage-1"
+   ],
+   [
+    "TMR - Bruce Hwy Gateway Motorway to Dohles Rocks Rd Stage 1",
+    "https://www.tmr.qld.gov.au/projects/bruce-highway-brisbane-gympie-gateway-motorway-to-dohles-rocks-road-upgrade-stage-1"
+   ],
+   [
+    "2032 Delivery Plan - transport",
+    "https://www.delivering2032.com.au/legacy-for-queensland/transport"
+   ],
+   [
+    "Datacentermap - Brisbane",
+    "https://www.datacentermap.com/australia/brisbane/"
+   ],
+   [
+    "Cotality Home Value Index, results to 31 Aug 2026",
+    "https://discover.cotality.com/hubfs/Article-Reports/COTALITY%20HVI%20SEP%202026%20FINAL%20(1).pdf"
+   ],
+   [
+    "EdMap - Queensland state school catchments",
+    "https://www.qgso.qld.gov.au/maps/edmap/"
+   ]
+  ]
+ }
+}

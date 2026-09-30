@@ -1,0 +1,786 @@
+{
+ "region": "nt",
+ "crimeSource": {
+  "name": "NT Police, Fire and Emergency Services - Northern Territory Crime Statistics (January 2026 publication, Table 3)",
+  "url": "https://pfes.nt.gov.au/sites/default/files/uploads/crime-publication/2026/NT_crime_statistics_January_2026_Website.pdf",
+  "period": "12 months to January 2026",
+  "level": "district",
+  "stateRatePer1000": null,
+  "stateRateSource": "Not computed: NT total 31,441 offences (12,595 against the person + 18,846 property) in 12 months to Jan 2026 per same Table 3; NT population could not be fetched (rate-limited) so rate left null. With 2021 census NT population it can be derived as 31441/pop*1000.",
+  "notes": "NT publishes crime only by police reporting region (Darwin, Palmerston, Alice Springs, Katherine, Tennant Creek, Nhulunbuy, NT Balance); no suburb-level counts. Darwin region = urban area from Buffalo Creek, Berrimah and East Arm westwards. Every Darwin suburb carries the whole Darwin-region totals and every Palmerston suburb the whole Palmerston-region totals. offences = person + property (the only two groups in the NT series; excludes drug, public order, traffic etc.). Region populations were not fetched (WebFetch rate-limited), so population is null; suggested ABS 2021 census: City of Darwin LGA (LGA71000) and City of Palmerston LGA (LGA72800). Newer monthly publications (to July 2026) exist but their PDFs could not be reached. Howard Springs and Humpty Doo are in 'NT Balance' (mostly remote NT) so region figures are not used; crime null."
+ },
+ "suburbs": [
+  {
+   "name": "Marrara",
+   "postcode": "0812",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Adjacent to Darwin Airport / RAAF Base Darwin runway"
+   ]
+  },
+  {
+   "name": "Jingili",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Moil",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Wagaman",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Wanguri",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Alawa",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Nakara",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Brinkin",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Tiwi",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Casuarina",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": "Casuarina Square",
+   "growthArea": false,
+   "flags": [
+    "Casuarina Square shopping centre; Royal Darwin Hospital / CDU nearby"
+   ]
+  },
+  {
+   "name": "Wulagi",
+   "postcode": "0812",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Anula",
+   "postcode": "0812",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Karama",
+   "postcode": "0812",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Malak",
+   "postcode": "0812",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Leanyer",
+   "postcode": "0812",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Muirhead",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Lyons",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Rapid Creek",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Millner",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Coconut Grove",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Nightcliff",
+   "postcode": "0810",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": {
+    "median": 1007500,
+    "growth": 5.77,
+    "yield": 4.83,
+    "rent": 740
+   },
+   "schools": [
+    [
+     "Nightcliff High School",
+     "s",
+     "g",
+     50
+    ],
+    [
+     "Nightcliff Primary School",
+     "p",
+     "g",
+     49
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Fannie Bay",
+   "postcode": "0820",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Parap",
+   "postcode": "0820",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Stuart Park",
+   "postcode": "0820",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Larrakeyah",
+   "postcode": "0820",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Darwin City",
+   "postcode": "0800",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "CBD and Mitchell St nightlife strip"
+   ]
+  },
+  {
+   "name": "The Gardens",
+   "postcode": "0820",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Ludmilla",
+   "postcode": "0820",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bayview",
+   "postcode": "0820",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Winnellie",
+   "postcode": "0820",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Industrial suburb next to Darwin Airport; few houses"
+   ]
+  },
+  {
+   "name": "Berrimah",
+   "postcode": "0828",
+   "crime": {
+    "offences": 8547,
+    "population": null,
+    "person": 3016,
+    "property": 5531,
+    "area": "Darwin police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Mostly industrial; east of airport"
+   ]
+  },
+  {
+   "name": "Palmerston City",
+   "postcode": "0830",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": "Gateway Shopping Centre / Palmerston CBD",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Gray",
+   "postcode": "0830",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Driver",
+   "postcode": "0830",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Moulden",
+   "postcode": "0830",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Woodroffe",
+   "postcode": "0830",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Durack",
+   "postcode": "0830",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Farrar",
+   "postcode": "0830",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Gunn",
+   "postcode": "0832",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bakewell",
+   "postcode": "0832",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Rosebery",
+   "postcode": "0832",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Johnston",
+   "postcode": "0832",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Zuccoli",
+   "postcode": "0832",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Bellamack",
+   "postcode": "0832",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Mitchell",
+   "postcode": "0832",
+   "crime": {
+    "offences": 3839,
+    "population": null,
+    "person": 1375,
+    "property": 2464,
+    "area": "Palmerston police reporting region"
+   },
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Howard Springs",
+   "postcode": "0835",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "In PFES 'NT Balance' region; SA2-level counts exist in the data.nt.gov.au CSV but could not be retrieved"
+   ]
+  },
+  {
+   "name": "Humpty Doo",
+   "postcode": "0836",
+   "crime": null,
+   "prop": null,
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "In PFES 'NT Balance' region; SA2-level counts exist in the data.nt.gov.au CSV but could not be retrieved"
+   ]
+  }
+ ]
+}

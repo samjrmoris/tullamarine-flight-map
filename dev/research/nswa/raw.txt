@@ -1,0 +1,361 @@
+#Mascot|2020
+C total=1364; pop=21591; assault=149; robbery=3; sexual=44; homicide=0; intimidation=82; abduction=0; otherperson=1; blackmail=8; theft=620; damage=96; arson=0
+P median=$2,002,500; growth=5.39%; yield=3.00%; rent=$1,150
+S J J Cahill Memorial High School|s|g|65
+S St Therese Catholic Primary School|p|c|58
+S Mascot Public School|p|g|56
+#Marrickville|2204
+C total=2538; pop=26570; assault=208; robbery=2; sexual=81; homicide=0; intimidation=133; abduction=1; otherperson=7; blackmail=6; theft=964; damage=195; arson=9
+P median=$2,150,000; growth=2.17%; yield=2.51%; rent=$1,050
+S Wilkins Public School|p|g|76
+S Ferncourt Public School|p|g|66
+S Marrickville Public School|p|g|60
+S St Brigid's Catholic Primary School|p|c|58
+S St Maroun's College|c|i|58
+S Casimir Catholic College|s|c|57
+S Marrickville West Public School|p|g|56
+S Marrickville High School|s|g|53
+#Tempe|2044
+C total=215; pop=3550; assault=17; robbery=1; sexual=11; homicide=0; intimidation=13; abduction=0; otherperson=0; blackmail=0; theft=99; damage=29; arson=2
+P median=$1,780,000; growth=5.95%; yield=2.83%; rent=$980
+S Tempe High School|s|g|66
+S Tempe Public School|p|g|61
+#St Peters|2044
+C total=255; pop=3629; assault=29; robbery=0; sexual=8; homicide=0; intimidation=20; abduction=1; otherperson=0; blackmail=0; theft=101; damage=28; arson=0
+P median=$1,852,000; growth=7.99%; yield=3.02%; rent=$1,000
+S St Peters Public School|p|g|64
+#Sydenham|2044
+C total=311; pop=1100; assault=26; robbery=0; sexual=3; homicide=0; intimidation=11; abduction=0; otherperson=0; blackmail=0; theft=53; damage=34; arson=0
+P median=$1,750,000; growth=12.90%; yield=3.07%; rent=$1,088
+#Dulwich Hill|2203
+C total=544; pop=14046; assault=63; robbery=1; sexual=32; homicide=0; intimidation=39; abduction=1; otherperson=3; blackmail=4; theft=190; damage=56; arson=1
+P median=$2,467,000; growth=7.03%; yield=2.31%; rent=$1,000
+S St Paul of the Cross Catholic Primary School|p|c|78
+S Dulwich High School of Visual Arts and Design|s|g|63
+S Dulwich Hill Public School|p|g|60
+#Earlwood|2206
+C total=439; pop=18053; assault=51; robbery=3; sexual=26; homicide=0; intimidation=48; abduction=1; otherperson=1; blackmail=3; theft=179; damage=46; arson=0
+P median=$2,100,000; growth=0.00%; yield=2.35%; rent=$1,012
+S Earlwood Public School|p|g|85
+S Our Lady of Lourdes Catholic Primary School|p|c|62
+S Undercliffe Public School|p|g|58
+S Clemton Park Public School|p|g|53
+#Ashfield|2131
+S Ashfield Public School|p|g|83
+S Ashfield Boys High School|s|g|62
+S St Vincent's College Ashfield|c|c|55
+C total=1386; pop=23012; assault=172; robbery=4; sexual=33; homicide=1; intimidation=100; abduction=0; otherperson=1; blackmail=4; theft=491; damage=102; arson=2
+P median=$2,282,500; growth=1.58%; yield=2.27%; rent=$1,000
+#Leichhardt|2040
+C total=817; pop=15158; assault=100; robbery=2; sexual=40; homicide=0; intimidation=70; abduction=0; otherperson=6; blackmail=5; theft=335; damage=80; arson=6
+P median=$2,210,000; growth=7.80%; yield=2.66%; rent=$1,000
+S Orange Grove Public School|p|g|68
+S Leichhardt Public School|p|g|65
+S Kegworth Public School|p|g|65
+S St Fiacre's Catholic Primary School|p|c|64
+S Sydney Secondary College Leichhardt Campus|s|g|62
+#Petersham|2049
+C total=499; pop=8200; assault=59; robbery=1; sexual=28; homicide=0; intimidation=28; abduction=0; otherperson=1; blackmail=0; theft=168; damage=57; arson=1
+P median=$2,167,500; growth=3.21%; yield=2.51%; rent=$1,090
+S Fort Street High School|s|g|92
+S Petersham Public School|p|g|64
+#Stanmore|2048
+C total=353; pop=7619; assault=28; robbery=2; sexual=19; homicide=0; intimidation=24; abduction=0; otherperson=1; blackmail=2; theft=164; damage=29; arson=0
+P median=$2,595,000; growth=18.63%; yield=2.58%; rent=$1,200
+S St Michael's Catholic Primary School|p|c|85
+S Newington College|c|i|73
+S Stanmore Public School|p|g|68
+#Newtown|2042
+C total=2285; pop=14690; assault=233; robbery=10; sexual=59; homicide=0; intimidation=76; abduction=1; otherperson=3; blackmail=4; theft=625; damage=138; arson=2
+P median=$1,930,000; growth=3.49%; yield=2.88%; rent=$990
+S Camdenville Public School|p|g|67
+S The Athena School|c|i|66
+S Newtown High School of Performing Arts|s|g|61
+S Newtown Public School|p|g|60
+S Newtown North Public School|p|g|56
+#Annandale|2038
+C total=486; pop=9487; assault=41; robbery=1; sexual=19; homicide=0; intimidation=26; abduction=0; otherperson=1; blackmail=3; theft=202; damage=41; arson=2
+P median=$2,446,000; growth=6.35%; yield=2.46%; rent=$1,100
+S St Brendan's Catholic Primary School|p|c|73
+S Annandale Public School|p|g|67
+S Annandale North Public School|p|g|60
+S Mackillop Education Waranara School|c|i|26
+#Summer Hill|2130
+C total=281; pop=7288; assault=32; robbery=0; sexual=17; homicide=0; intimidation=23; abduction=0; otherperson=0; blackmail=0; theft=108; damage=27; arson=0
+S Summer Hill Public School|p|g|87
+S St Patrick's Catholic Primary School|p|c|69
+S Trinity Grammar School|c|i|69
+P median=$2,634,000; growth=11.97%; yield=2.13%; rent=$998
+#Croydon|2132
+S Presbyterian Ladies' College Sydney|c|i|75
+S Holy Innocents' Catholic Primary School|p|c|69
+S Burwood Girls High School|s|g|68
+S Croydon Public School|p|g|66
+C total=302; pop=10755; assault=42; robbery=0; sexual=13; homicide=1; intimidation=26; abduction=0; otherperson=0; blackmail=1; theft=134; damage=23; arson=1
+P median=$2,351,000; growth=-4.35%; yield=2.17%; rent=$1,000
+#Botany|2019
+S St Bernard's Catholic Primary School|p|c|77
+S Banksmeadow Public School|p|g|59
+S Botany Public School|p|g|58
+S Pagewood Public School|p|g|53
+C total=382; pop=12960; assault=44; robbery=1; sexual=15; homicide=0; intimidation=43; abduction=1; otherperson=2; blackmail=7; theft=139; damage=40; arson=0
+P median=$2,097,500; growth=-1.53%; yield=2.86%; rent=$1,265
+#Eastlakes|2018
+S Eastlakes Public School|p|g|62
+C total=472; pop=6347; assault=63; robbery=1; sexual=12; homicide=0; intimidation=49; abduction=0; otherperson=2; blackmail=2; theft=144; damage=61; arson=6
+P median=$2,300,000; growth=15.80%; yield=2.61%; rent=$1,150
+#Rosebery|2018
+S Gardeners Road Public School|p|g|49
+C total=735; pop=13533; assault=56; robbery=0; sexual=27; homicide=0; intimidation=26; abduction=0; otherperson=0; blackmail=3; theft=251; damage=37; arson=2
+P median=$2,122,500; growth=-15.94%; yield=2.31%; rent=$1,292
+#Kensington|2033
+S Our Lady of the Sacred Heart College|s|c|68
+S Our Lady of the Rosary Catholic Primary School|p|c|66
+S Kensington Public School|p|g|61
+C total=684; pop=11927; assault=71; robbery=3; sexual=15; homicide=0; intimidation=37; abduction=0; otherperson=0; blackmail=6; theft=392; damage=50; arson=0
+P median=$3,622,500; growth=-9.44%; yield=2.18%; rent=$1,600
+#Kingsford|2032
+C total=781; pop=13492; assault=85; robbery=2; sexual=22; homicide=0; intimidation=28; abduction=0; otherperson=1; blackmail=5; theft=415; damage=65; arson=3
+P median=$2,943,500; growth=1.50%; yield=2.49%; rent=$1,265
+#Maroubra|2035
+S Mount Sinai College|p|i|66
+S Maroubra Junction Public School|p|g|66
+S St Mary - St Joseph Catholic Primary School|p|c|65
+S St Spyridon College|c|i|61
+S Corpus Christi College Maroubra|s|c|59
+S Maroubra Bay Public School|p|g|57
+S South Sydney High School|s|g|51
+C total=2596; pop=30722; assault=237; robbery=10; sexual=47; homicide=0; intimidation=149; abduction=0; otherperson=5; blackmail=6; theft=677; damage=164; arson=7
+P median=$2,971,000; growth=-0.97%; yield=2.44%; rent=$1,450
+#Pagewood|2035
+C total=199; pop=3885; assault=19; robbery=1; sexual=4; homicide=0; intimidation=19; abduction=0; otherperson=1; blackmail=1; theft=74; damage=18; arson=2
+P median=$2,750,000; growth=7.84%; yield=2.42%; rent=$1,300
+#Hillsdale|2036
+C total=193; pop=5647; assault=26; robbery=0; sexual=4; homicide=0; intimidation=17; abduction=0; otherperson=2; blackmail=2; theft=102; damage=7; arson=0
+P median=$2,030,000; growth=null; yield=null; rent=null
+#Matraville|2036
+S Sacred Heart Catholic Primary School Matraville|p|c|60
+S Matraville Soldiers Settlement Public School|p|g|48
+S Matraville Public School|p|g|44
+C total=531; pop=9925; assault=46; robbery=0; sexual=12; homicide=0; intimidation=47; abduction=0; otherperson=1; blackmail=3; theft=239; damage=41; arson=1
+P median=$2,800,000; growth=7.07%; yield=2.58%; rent=$1,690
+#Arncliffe|2205
+S Kingdom Culture Christian School|c|i|62
+S St Francis Xavier's Catholic Primary School|p|c|62
+S Athelstane Public School|p|g|53
+S Arncliffe Public School|p|g|50
+S Al Zahra College|c|i|48
+C total=481; pop=12023; assault=58; robbery=0; sexual=11; homicide=0; intimidation=40; abduction=0; otherperson=0; blackmail=1; theft=180; damage=39; arson=2
+P median=$1,870,000; growth=11.28%; yield=2.81%; rent=$900
+#Wolli Creek|2205
+C total=980; pop=10654; assault=56; robbery=1; sexual=9; homicide=0; intimidation=23; abduction=0; otherperson=0; blackmail=5; theft=242; damage=38; arson=0
+P median=null; growth=null; yield=null; rent=null
+#Rockdale|2216
+S St Dominic Savio School|p|i|68
+S St Joseph's Catholic Primary School|p|c|62
+S Rockdale Public School|p|g|59
+S Kyeemagh Public School|p|g|48
+C total=1009; pop=15475; assault=123; robbery=2; sexual=31; homicide=0; intimidation=60; abduction=0; otherperson=1; blackmail=7; theft=396; damage=73; arson=3
+P median=$1,835,000; growth=7.94%; yield=2.86%; rent=$870
+#Kogarah|2217
+S St George Girls High School|s|g|98
+S St George School|c|g|97
+S St Patrick's Catholic Primary School|p|c|70
+S Kogarah Public School|p|g|63
+S Moorefield Girls High School|s|g|54
+S James Cook Boys High School|s|g|49
+S Kogarah High School|s|g|41
+C total=1428; pop=16416; assault=146; robbery=0; sexual=30; homicide=0; intimidation=70; abduction=1; otherperson=1; blackmail=2; theft=306; damage=47; arson=1
+P median=$1,900,750; growth=3.87%; yield=2.58%; rent=$900
+#Bexley|2207
+S Sydney Technical High School|s|g|93
+S St Gabriel's Catholic Primary School Bexley|p|c|67
+S St Mary and St Mina's Coptic Orthodox College|c|i|61
+S Marist College Kogarah|s|c|60
+S Bexley North Public School|p|g|59
+S Carlton Public School|p|g|53
+S Bexley Public School|p|g|40
+C total=554; pop=19646; assault=81; robbery=2; sexual=23; homicide=0; intimidation=67; abduction=0; otherperson=2; blackmail=4; theft=180; damage=63; arson=3
+P median=$1,828,500; growth=2.21%; yield=2.82%; rent=$950
+#Brighton-Le-Sands|2216
+S St Thomas More's Catholic Primary School Brighton Le Sands|p|c|60
+S Brighton-Le-Sands Public School|p|g|56
+C total=366; pop=8336; assault=57; robbery=2; sexual=9; homicide=0; intimidation=41; abduction=0; otherperson=2; blackmail=2; theft=84; damage=47; arson=1
+P median=$2,055,000; growth=-4.42%; yield=2.55%; rent=$1,050
+#Kyeemagh|2216
+C total=78; pop=935; assault=12; robbery=0; sexual=1; homicide=0; intimidation=6; abduction=1; otherperson=0; blackmail=0; theft=17; damage=3; arson=0
+P median=$2,000,000; growth=-5.88%; yield=2.64%; rent=$1,100
+#Sans Souci|2219
+S St Finbar's Catholic Primary School Sans Souci|p|c|58
+S Sans Souci Public School|p|g|48
+C total=345; pop=10864; assault=46; robbery=0; sexual=13; homicide=0; intimidation=46; abduction=0; otherperson=0; blackmail=5; theft=92; damage=29; arson=2
+P median=$2,550,000; growth=5.37%; yield=2.25%; rent=$1,100
+#Ramsgate|2217
+S Ramsgate Public School|p|g|52
+C total=53; pop=1151; assault=7; robbery=0; sexual=0; homicide=0; intimidation=3; abduction=0; otherperson=0; blackmail=0; theft=22; damage=5; arson=1
+P median=$2,090,000; growth=null; yield=2.27%; rent=$990
+#Hurstville|2220
+S St George Christian School|c|i|83
+S Hurstville Public School|p|g|82
+S Danebank - An Anglican School for Girls|c|i|78
+S Hurstville Adventist School|p|i|78
+S Hurstville South Public School|p|g|71
+S Bethany College|s|c|66
+S St Mary's Star of the Sea Catholic Primary School|p|c|64
+S Georges River College Hurstville Campus|s|g|51
+C total=4049; pop=31162; assault=221; robbery=6; sexual=33; homicide=0; intimidation=104; abduction=1; otherperson=8; blackmail=5; theft=1006; damage=149; arson=6
+P median=$2,206,000; growth=8.27%; yield=2.39%; rent=$880
+#Carlton|2218
+S Carlton South Public School|p|g|60
+C total=325; pop=10631; assault=52; robbery=0; sexual=9; homicide=0; intimidation=43; abduction=0; otherperson=2; blackmail=5; theft=85; damage=40; arson=2
+P median=$1,812,500; growth=2.75%; yield=2.62%; rent=$850
+#Monterey|2217
+C total=111; pop=4619; assault=18; robbery=0; sexual=2; homicide=0; intimidation=18; abduction=0; otherperson=1; blackmail=1; theft=27; damage=11; arson=0
+P median=$2,600,000; growth=8.11%; yield=2.36%; rent=$1,200
+#Canterbury|2193
+S Canterbury Public School|p|g|63
+S Canterbury Girls High School|s|g|57
+S Canterbury South Public School|p|g|52
+S Canterbury Boys High School|s|g|50
+C total=373; pop=9430; assault=49; robbery=2; sexual=8; homicide=0; intimidation=40; abduction=0; otherperson=1; blackmail=1; theft=189; damage=27; arson=0
+P median=$2,102,500; growth=16.03%; yield=2.49%; rent=$828
+#Campsie|2194
+S St Mel's Catholic Primary School|p|c|72
+S Campsie Public School|p|g|61
+S Harcourt Public School|p|g|61
+C total=1537; pop=26132; assault=171; robbery=4; sexual=29; homicide=0; intimidation=127; abduction=1; otherperson=2; blackmail=3; theft=379; damage=69; arson=2
+P median=$2,150,000; growth=23.39%; yield=2.31%; rent=$850
+#Belmore|2192
+S All Saints Grammar|c|i|51
+S Belmore South Public School|p|g|49
+S St Joseph's Catholic Primary School|p|c|49
+S Belmore North Public School|p|g|36
+S Belmore Boys High School|s|g|28
+C total=581; pop=13781; assault=105; robbery=2; sexual=16; homicide=0; intimidation=48; abduction=0; otherperson=2; blackmail=2; theft=205; damage=44; arson=3
+P median=$1,894,000; growth=14.79%; yield=2.47%; rent=$900
+#Lakemba|2195
+S St Therese's Catholic Primary School|p|c|59
+S Holy Spirit Catholic College|s|c|52
+S Rissalah College|c|i|48
+S Al Hikma College|p|i|46
+S Lakemba Public School|p|g|40
+S Hampden Park Public School|p|g|36
+C total=698; pop=17092; assault=158; robbery=2; sexual=31; homicide=0; intimidation=72; abduction=2; otherperson=6; blackmail=5; theft=210; damage=63; arson=3
+P median=$1,600,000; growth=10.92%; yield=2.86%; rent=$825
+#Bankstown|2200
+S St Felix Catholic Primary School|p|c|72
+S St Brendan's Catholic Primary School|p|c|67
+S Bankstown West Public School|p|g|57
+S St Euphemia College|c|i|56
+S La Salle Catholic College|s|c|56
+S Bankstown Public School|p|g|55
+S Wattawa Heights Public School|p|g|45
+S Bankstown Girls High School|s|g|43
+S Bankstown North Public School|p|g|41
+C total=4925; pop=34933; assault=433; robbery=9; sexual=81; homicide=0; intimidation=261; abduction=1; otherperson=10; blackmail=8; theft=1025; damage=177; arson=9
+P median=$1,600,000; growth=3.23%; yield=2.80%; rent=$820
+#Punchbowl|2196
+S St Jerome's Catholic Primary School|p|c|61
+S St Charbel's College|c|i|51
+S Wiley Park Girls High School|s|g|38
+S Punchbowl Public School|p|g|35
+S Punchbowl Boys High School|s|g|33
+C total=1165; pop=21384; assault=156; robbery=5; sexual=19; homicide=1; intimidation=127; abduction=2; otherperson=1; blackmail=5; theft=441; damage=73; arson=5
+P median=$1,465,000; growth=8.52%; yield=2.97%; rent=$850
+#Beverly Hills|2209
+S Regina Coeli Catholic Primary School|p|c|63
+S Beverly Hills North Public School|p|g|56
+S Beverly Hills Public School|p|g|55
+S Beverly Hills Girls High School|s|g|54
+C total=408; pop=10483; assault=52; robbery=0; sexual=11; homicide=0; intimidation=36; abduction=0; otherperson=0; blackmail=1; theft=133; damage=32; arson=0
+P median=$1,873,500; growth=8.29%; yield=2.63%; rent=$870
+#Kingsgrove|2208
+S Our Lady of Fatima Catholic Primary School|p|c|70
+S St Ursula's College|s|c|69
+S Arkana College|p|i|58
+S Kingsgrove North High School|s|g|50
+S Kingsgrove Public School|p|g|48
+S Kingsgrove High School|s|g|47
+C total=584; pop=12881; assault=65; robbery=3; sexual=17; homicide=0; intimidation=40; abduction=0; otherperson=2; blackmail=3; theft=222; damage=35; arson=1
+P median=$1,930,000; growth=3.62%; yield=2.57%; rent=$900
+#Roselands|2196
+S McCallums Hill Public School|p|g|32
+C total=507; pop=12356; assault=70; robbery=0; sexual=19; homicide=0; intimidation=51; abduction=0; otherperson=1; blackmail=3; theft=238; damage=39; arson=1
+P median=$1,613,000; growth=6.26%; yield=2.82%; rent=$850
+#Riverwood|2210
+S St Joseph's Catholic Primary School|p|c|71
+S Riverwood Public School|p|g|54
+S Hannans Road Public School|p|g|51
+C total=1912; pop=12793; assault=185; robbery=6; sexual=25; homicide=1; intimidation=88; abduction=2; otherperson=3; blackmail=3; theft=350; damage=97; arson=3
+P median=$1,598,250; growth=14.16%; yield=2.92%; rent=$800
+#Padstow|2211
+S St Therese Catholic Primary School|p|c|60
+S Padstow North Public School|p|g|59
+S Padstow Heights Public School|p|g|55
+S Padstow Park Public School|p|g|54
+S Caroline Chisholm School|c|g|53
+C total=595; pop=14017; assault=79; robbery=3; sexual=16; homicide=0; intimidation=68; abduction=0; otherperson=0; blackmail=4; theft=216; damage=39; arson=1
+P median=$1,669,000; growth=4.31%; yield=2.85%; rent=$850
+#Revesby|2212
+S St Luke's Catholic Primary School|p|c|64
+S Broderick Gillawarna School|c|g|51
+S Revesby Public School|p|g|50
+S Revesby South Public School|p|g|49
+S Sir Joseph Banks High School|s|g|41
+C total=1168; pop=15268; assault=137; robbery=3; sexual=33; homicide=0; intimidation=95; abduction=1; otherperson=3; blackmail=2; theft=291; damage=60; arson=3
+P median=$1,622,000; growth=3.44%; yield=2.82%; rent=$950
+#Panania|2213
+S St Christopher's Catholic Primary School|p|c|63
+S East Hills Girls Technology High School|s|g|57
+S Panania Public School|p|g|57
+S Panania North Public School|p|g|53
+S East Hills Boys High School|s|g|52
+S Tower Street Public School|p|g|48
+S East Hills Public School|p|g|40
+C total=497; pop=13507; assault=76; robbery=3; sexual=18; homicide=0; intimidation=56; abduction=0; otherperson=3; blackmail=1; theft=139; damage=42; arson=2
+P median=$1,650,000; growth=6.45%; yield=2.77%; rent=$950
+#Sylvania|2224
+S Sylvania Heights Public School|p|g|60
+S Sylvania Public School|p|g|59
+S Sylvania High School|s|g|53
+C total=394; pop=10749; assault=64; robbery=0; sexual=16; homicide=0; intimidation=42; abduction=0; otherperson=1; blackmail=2; theft=110; damage=51; arson=1
+P median=$2,086,250; growth=12.77%; yield=2.70%; rent=$1,160
+#Kurnell|2231
+S Kurnell Public School|p|g|47
+C total=155; pop=2528; assault=19; robbery=0; sexual=4; homicide=0; intimidation=14; abduction=0; otherperson=0; blackmail=0; theft=25; damage=21; arson=1
+P median=$1,830,000; growth=-10.84%; yield=2.92%; rent=$1,025
+#Cronulla|2230
+S St Aloysius Catholic Primary School|p|c|70
+S Woolooware Public School|p|g|64
+S Burraneer Bay Public School|p|g|63
+S St Aloysius College Cronulla|s|c|62
+S Our Lady of Mercy Catholic College Burraneer|s|c|60
+S Cronulla South Public School|p|g|58
+S Cronulla Public School|p|g|57
+S Cronulla High School|s|g|55
+C total=1208; pop=17899; assault=195; robbery=2; sexual=36; homicide=0; intimidation=79; abduction=1; otherperson=3; blackmail=4; theft=211; damage=78; arson=0
+P median=$3,450,000; growth=2.22%; yield=1.96%; rent=$1,525
+#Caringbah|2229
+S Caringbah High School|s|g|86
+S Caringbah Public School|p|g|68
+S Caringbah North Public School|p|g|67
+S De La Salle Catholic College, Caringbah|s|c|60
+S Laguna Street Public School|p|g|58
+S Our Lady of Fatima Catholic Primary School|p|c|58
+S Endeavour Sports High School|s|g|51
+C total=1112; pop=12575; assault=124; robbery=4; sexual=15; homicide=0; intimidation=85; abduction=0; otherperson=2; blackmail=5; theft=268; damage=66; arson=4
+P median=$2,010,000; growth=2.39%; yield=2.86%; rent=$950
+#Sutherland|2232
+S Sutherland Public School|p|g|78
+S St Patrick's Catholic Primary School|p|c|66
+S Sutherland North Public School|p|g|63
+S St Patrick's College Sutherland|s|c|62
+C total=1859; pop=11570; assault=97; robbery=3; sexual=26; homicide=0; intimidation=62; abduction=1; otherperson=3; blackmail=2; theft=174; damage=74; arson=3
+P median=$1,682,500; growth=0.90%; yield=3.10%; rent=$970
+#Miranda|2228
+S Miranda Public School|p|g|75
+S Our Lady Star of the Sea Catholic Primary School Miranda|p|c|62
+S Miranda North Public School|p|g|55
+S Port Hacking High School|s|g|50
+C total=2187; pop=17942; assault=192; robbery=3; sexual=24; homicide=0; intimidation=114; abduction=0; otherperson=2; blackmail=3; theft=602; damage=115; arson=4
+P median=$2,030,000; growth=7.98%; yield=2.92%; rent=$1,200

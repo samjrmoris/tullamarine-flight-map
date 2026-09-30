@@ -1,0 +1,638 @@
+{
+ "region": "act",
+ "crimeSource": {
+  "name": "INCOMPLETE - ACT Policing quarterly suburb data (official xlsx not retrievable); partial totals via northremovals.com.au 'Worst Suburbs in Canberra 2026' which compiled ACT Policing quarters Apr-Jun 2025 to Jan-Mar 2026",
+  "url": "https://northremovals.com.au/worst-suburbs-in-canberra/",
+  "period": "year to March 2026",
+  "level": "suburb",
+  "stateRatePer1000": null,
+  "stateRateSource": null,
+  "notes": "PARTIAL FILE. WebFetch was rate-limited (HTTP 429) for the whole run after the first few pages; official ACT Policing spreadsheet https://police.act.gov.au/__data/assets/excel_doc/0006/336174/June26-Website-Stats-Monthy-Download.xlsx needed a fetch approval that timed out and police.act.gov.au is blocked from the shell. Only 7 suburbs have offence totals (no person/property split). Property and schools only for Braddon. Needs a re-run."
+ },
+ "suburbs": [
+  {
+   "name": "Pialligo",
+   "postcode": "2609",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "Adjoins Canberra Airport; tiny rural locality"
+   ]
+  },
+  {
+   "name": "Campbell",
+   "postcode": "2612",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Reid",
+   "postcode": "2612",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Braddon",
+   "postcode": "2612",
+   "crime": {
+    "offences": 809,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": {
+    "median": 1030000,
+    "growth": 39.31,
+    "yield": 3.22,
+    "rent": 650
+   },
+   "schools": [
+    [
+     "Merici College",
+     "s",
+     "c",
+     62
+    ],
+    [
+     "Ainslie School",
+     "p",
+     "g",
+     56
+    ]
+   ],
+   "mall": null,
+   "growthArea": false,
+   "flags": [
+    "CBD-fringe nightlife/dining strip (Lonsdale St)"
+   ]
+  },
+  {
+   "name": "Turner",
+   "postcode": "2612",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Ainslie",
+   "postcode": "2602",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Hackett",
+   "postcode": "2602",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Watson",
+   "postcode": "2602",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Downer",
+   "postcode": "2602",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Dickson",
+   "postcode": "2602",
+   "crime": {
+    "offences": 757,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Lyneham",
+   "postcode": "2602",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "O'Connor",
+   "postcode": "2602",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kingston",
+   "postcode": "2604",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Griffith",
+   "postcode": "2603",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Narrabundah",
+   "postcode": "2604",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Red Hill",
+   "postcode": "2603",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Gordon",
+   "postcode": "2906",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Conder",
+   "postcode": "2906",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Banks",
+   "postcode": "2906",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Calwell",
+   "postcode": "2905",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Theodore",
+   "postcode": "2905",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Isabella Plains",
+   "postcode": "2905",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Chisholm",
+   "postcode": "2905",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Gowrie",
+   "postcode": "2904",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Fadden",
+   "postcode": "2904",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Macarthur",
+   "postcode": "2904",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Wanniassa",
+   "postcode": "2903",
+   "crime": {
+    "offences": 439,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kambah",
+   "postcode": "2902",
+   "crime": {
+    "offences": 519,
+    "population": 15670,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Gungahlin",
+   "postcode": "2912",
+   "crime": {
+    "offences": 934,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": [],
+   "mall": "Gungahlin Marketplace",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Franklin",
+   "postcode": "2913",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Harrison",
+   "postcode": "2914",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Crace",
+   "postcode": "2911",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Forde",
+   "postcode": "2914",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Bonner",
+   "postcode": "2914",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Casey",
+   "postcode": "2913",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Ngunnawal",
+   "postcode": "2913",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Amaroo",
+   "postcode": "2914",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Throsby",
+   "postcode": "2914",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Taylor",
+   "postcode": "2913",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Belconnen",
+   "postcode": "2617",
+   "crime": {
+    "offences": 1817,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": [],
+   "mall": "Westfield Belconnen",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Bruce",
+   "postcode": "2617",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Macquarie",
+   "postcode": "2614",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Page",
+   "postcode": "2614",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Kaleen",
+   "postcode": "2617",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Giralang",
+   "postcode": "2617",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Evatt",
+   "postcode": "2617",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Florey",
+   "postcode": "2615",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Holt",
+   "postcode": "2615",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Dunlop",
+   "postcode": "2615",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Coombs",
+   "postcode": "2611",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Wright",
+   "postcode": "2611",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Denman Prospect",
+   "postcode": "2611",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": true,
+   "flags": []
+  },
+  {
+   "name": "Phillip",
+   "postcode": "2606",
+   "crime": {
+    "offences": 1154,
+    "population": null,
+    "person": null,
+    "property": null,
+    "area": null
+   },
+   "prop": null,
+   "schools": [],
+   "mall": "Westfield Woden",
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Mawson",
+   "postcode": "2607",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Curtin",
+   "postcode": "2605",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Farrer",
+   "postcode": "2607",
+   "crime": null,
+   "prop": null,
+   "schools": [],
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  }
+ ]
+}

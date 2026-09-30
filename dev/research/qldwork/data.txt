@@ -1,0 +1,74 @@
+# name|postcode|crime off,person,property,rate100k|prop median,growth,yield,rent|schools name;l;s;score ...
+Hendra|4011|391,24,236,7957|2062500,5.77,2.55,1150|Aviation High;s;g;57|Our Lady Help of Christians School;p;c;53|Hendra State School;p;g;29
+Clayfield|4011|677,44,451,6213|2092000,17.96,2.34,930|St Rita's College;c;c;67|Eagle Junction State School;p;g;66|Clayfield College;c;i;61|St Agatha's Primary School;p;c;59
+Ascot|4007|466,34,279,7135|2762500,15.10,1.98,1295|St Margaret's Anglican Girls School;c;i;69|Ascot State School;p;g;60
+Hamilton|4007|688,51,417,7711|2115000,30.96,2.22,1100|Hamilton State School;p;g;60
+Nundah|4012|1108,65,690,8459|1395000,28.57,2.97,750|Mary MacKillop College;s;c;61|Northgate State School;p;g;56|Nundah State School;p;g;54|St Joseph's School;p;c;41
+Wavell Heights|4012|294,24,178,2844|1650000,16.61,2.69,780|Our Lady of the Angels' School;p;c;70|Wavell State High School;s;g;48|Wavell Heights State School;p;g;40
+Nudgee|4014|113,7,63,2582|1337500,11.69,3.15,825|SCHOOLS404
+Banyo|4014|642,27,500,10516|1195000,8.64,3.14,750|St Pius' Primary School;p;c;61|Earnshaw State College;c;g;50
+Northgate|4013|480,38,198,9844|1458000,19.02,2.88,750|SCHOOLS404
+Virginia|4014|435,12,286,18163|1300000,7.44,2.94,750|Virginia State School;p;g;59
+Boondall|4034|543,55,180,5654|1152500,23.26,3.41,720|Boondall State School;p;g;58|St Joseph's Nudgee College;c;c;57
+Taigum|4018|458,33,291,5871|1090000,17.84,3.53,760|Taigum State School;p;g;46
+Zillmere|4034|877,74,441,9407|1020000,17.31,3.41,655|St Flannan's School;p;c;60|Zillmere State School;p;g;21
+Chermside|4032|3109,209,2168,27210|1205000,27.51,3.03,690|SCHOOLS404
+Aspley|4034|918,51,650,7132|1310000,17.75,3.15,780|Aspley State School;p;g;61|St Dympna's Parish School;p;c;59|Aspley East State School;p;g;56|Aspley State High School;s;g;46
+Carseldine|4034|324,29,177,3210|1320000,20.00,3.40,850|SCHOOLS404
+Bracken Ridge|4017|632,68,395,3614|1130000,19.58,3.45,720|St John Fisher College;s;c;63|St Joseph's Catholic Primary School;p;c;62|Norris Road State School;p;g;45|Bracken Ridge State High School;s;g;42|Bracken Ridge State School;p;g;32
+Sandgate|4017|306,32,134,6212|1330000,14.41,2.86,730|Sacred Heart Primary School;p;c;56|Sandgate State School;p;g;48
+Shorncliffe|4017|82,16,44,4300|1600000,-6.75,2.72,960|Shorncliffe State School;p;g;64|St Patrick's College;c;c;55
+Brighton|4017|253,21,157,2618|1270000,19.81,3.06,750|Brighton State School;p;g;64|St Kieran's School;p;c;61|Nashville State School;p;g;51
+Wynnum|4178|753,72,418,5365|1385000,10.80,2.94,725|Guardian Angels' Primary School;p;c;64|Wynnum State School;p;g;54|Wynnum State High School;s;g;53
+Manly|4179|242,33,131,5663|1909000,20.06,2.64,875|Manly State School;p;g;62|St John Vianney's Primary School;p;c;52
+Lota|4179|94,18,53,2672|1382500,11.49,2.95,720|Lota State School;p;g;69
+Tingalpa|4173|559,22,349,6607|1200000,12.68,3.34,750|Tingalpa State School;p;g;60
+Hemmant|4174|136,17,70,4712|1125000,14.21,3.44,800|Hemmant Flexible School;s;c;13
+Cannon Hill|4170|687,43,497,10252|1783000,26.45,2.97,830|Cannon Hill Anglican College;c;i;73|St Oliver Plunkett School;p;c;56|Cannon Hill State School;p;g;53
+Morningside|4170|649,59,398,5521|1600000,23.08,3.02,800|Morningside State School;p;g;53
+Bulimba|4171|383,38,274,5024|2300000,15.00,2.57,1300|Sts Peter and Paul's School;p;c;70|Bulimba State School;p;g;59
+Hawthorne|4171|147,8,99,2888|2340000,7.34,2.47,1125|Lourdes Hill College;c;c;63
+Balmoral|4171|175,17,113,4194|2040000,15.74,2.71,1025|Balmoral State High School;s;g;46
+New Farm|4005|1156,77,668,9478|2367500,8.23,1.81,1150|New Farm State School;p;g;66|Holy Spirit School;p;c;54
+Teneriffe|4005|210,10,158,3804|3150000,30.52,2.01,1300|NOSCHOOLS
+Kangaroo Point|4169|934,59,627,9640|1717500,36.36,2.54,820|St Joseph's Primary School;p;c;69
+East Brisbane|4169|814,53,584,13159|1705000,16.38,2.84,850|Anglican Church Grammar School;c;i;70|East Brisbane State School;p;g;52
+Coorparoo|4151|981,55,780,5410|1820000,23.81,2.45,800|Loreto College Coorparoo;c;c;71|Coorparoo State School;p;g;68|Villanova College;c;c;65|Brisbane School of Distance Education;c;g;61|Our Lady of Mount Carmel School;p;c;60|St James Primary School;p;c;54|Coorparoo Secondary College;s;g;42
+Camp Hill|4152|425,17,348,3468|2000000,13.64,2.61,880|St Thomas' School;p;c;68|Camp Hill State Infants and Primary School;p;g;65|Whites Hill State College;c;g;47
+Carina|4152|347,22,261,2971|1420000,14.52,3.12,785|Mayfield State School;p;g;63|St Martin's School;p;c;60|San Sisto College;s;c;57
+Bardon|4065|311,15,227,3063|2065000,9.26,2.51,1000|Rainworth State School;p;g;73|Ithaca Creek State School;p;g;70|Bardon State School;p;g;60|St Joseph's School;p;c;59
+Paddington|4064|399,15,300,4403|2262500,16.77,2.38,950|Petrie Terrace State School;p;g;65
+Ashgrove|4060|504,28,392,3747|1934695,4.58,2.53,900|St Finbarr's School;p;c;78|Ashgrove State School;p;g;69|Marist College Ashgrove;c;c;67|Oakleigh State School;p;g;66|Mt St Michael's College;c;c;65
+Red Hill|4059|230,25,150,3942|1730000,-5.59,2.63,830|NOSCHOOLS
+Kedron|4031|757,44,540,7641|1590000,20.36,2.66,775|Mount Alvernia College;s;c;77|St Anthony's School;p;c;68|Kedron State School;p;g;66|Padua College;c;c;65|Kedron State High School;s;g;61
+Windsor|4030|806,52,541,10319|1549000,10.64,2.75,770|Windsor State School;p;g;65
+Wooloowin|4030|177,21,118,4393|1556000,-1.55,2.61,850|Holy Cross School;p;c;71|Wooloowin State School;p;g;65
+Lutwyche|4030|383,24,280,8308|1455500,6.24,2.67,725|SCHOOLS404
+Albion|4010|493,23,281,14306|1250500,20.53,3.13,780|SCHOOLS404
+Newstead|4006|546,28,388,7284|917500,-2.26,null,null|SCHOOLS404
+North Lakes|4509|1313,107,933,5701|1030000,14.44,3.57,700|The Lakes College;c;i;61|Bounty Boulevard State School;p;g;48|North Lakes State College;c;g;45
+Mango Hill|4509|593,50,376,3974|1113000,24.64,3.48,700|St Benedict's Primary School;p;c;59|St Benedict's College;s;c;58|Mango Hill State School;p;g;54|Mango Hill State Secondary College;s;g;47
+Redcliffe|4020|1052,137,518,10057|1000000,19.05,3.43,650|Redcliffe State High School;s;g;46
+Kallangur|4503|1273,152,680,5850|905000,16.77,3.66,610|Kallangur State School;p;g;40|Dakabin State School;p;g;39
+Strathpine|4500|942,59,597,8848|945000,15.24,3.81,650|Pine Rivers State High School;s;g;40|Strathpine West State School;p;g;37|Strathpine State School;p;g;35
+Albany Creek|4035|326,44,211,1990|1297500,20.70,3.32,780|Albany Hills State School;p;g;60|All Saints Primary School;p;c;55|Albany Creek State High School;s;g;53|Good Shepherd Christian School;c;i;52|Albany Creek State School;p;g;49
+Everton Park|4053|397,27,275,3926|1322500,20.23,3.23,760|Northside Christian College;c;i;71|Everton Park State School;p;g;55|Everton Park State High School;s;g;55|Prince of Peace Lutheran College;c;i;54
+Mitchelton|4053|767,53,479,8297|1348000,10.04,2.97,750|Our Lady of Dolours School;p;c;71|Mitchelton State High School;s;g;58|Mitchelton State School;p;g;57|Mt Maria College;s;c;56
+The Gap|4061|211,22,128,1218|1412000,2.84,3.00,830|Hilder Road State School;p;g;75|Payne Road State School;p;g;64|The Gap State High School;s;g;63|The Gap State School;p;g;63|St Peter Chanel Primary School;p;c;62
+Kenmore|4069|214,11,164,2212|1500000,15.38,3.18,882|Kenmore State School;p;g;76|Kenmore South State School;p;g;74|Kenmore State High School;s;g;63|Our Lady of the Rosary School;p;c;55
+Indooroopilly|4068|1323,83,1003,9712|1860000,14.46,2.67,900|St Peters Lutheran College;c;i;77|Indooroopilly State School;p;g;70|Indooroopilly State High School;s;g;68|Brigidine College;c;c;68|Holy Family Primary School;p;c;67|Ambrose Treacy College;c;c;62
+Sherwood|4075|221,14,165,3634|1825000,10.61,2.66,795|Sherwood State School;p;g;70
+Oxley|4075|747,36,535,8209|1140500,23.63,3.27,700|Oxley State School;p;g;56
+Forest Lake|4078|780,95,519,3440|1000000,15.21,3.49,700|St John's Anglican College;c;i;67|Grand Avenue State School;p;g;56|Forest Lake State School;p;g;52|Forest Lake State High School;s;g;46
+Springfield Lakes|4300|381,58,225,2214|930000,16.98,3.64,675|Good Shepherd Catholic Primary School;p;c;61|Springfield Lakes State School;p;g;46
+Carindale|4152|1300,54,986,7862|1790000,8.48,2.86,900|Citipointe Christian College;c;i;71|Belmont State School;p;g;68|Carina State School;p;g;48
+Mansfield|4122|280,22,181,3163|1470000,13.03,2.83,790|Mansfield State High School;s;g;70|Mansfield State School;p;g;65|Brisbane Adventist College;c;i;59
+Sunnybank|4109|1018,66,729,11448|1550039,10.09,2.54,750|Our Lady of Lourdes Primary School;p;c;64|St Thomas More College;s;c;63|Runcorn State School;p;g;62|Sunnybank State School;p;g;60|Sunnybank State High School;s;g;48|Carinity Education - Southside;s;i;32
+Calamvale|4116|729,55,559,4051|1388000,13.31,3.03,800|Wisdom College;c;i;51|Calamvale Community College;c;g;41
+Rochedale|4123|439,15,346,5751|1800000,4.80,2.97,1100|Redeemer Lutheran College;c;i;73|Rochedale State School;p;g;68|St Peter's Primary School;p;c;61|Rochedale State High School;s;g;49
+Springwood|4127|1011,66,792,10412|1135000,18.85,3.34,720|Calvary Christian College;c;i;65|Springwood State High School;s;g;49|Chatswood Hills State School;p;g;48|Springwood Central State School;p;g;39
+Capalaba|4157|1593,92,828,8849|1088625,18.33,3.43,730|St Luke's Catholic Parish School;p;c;57|Capalaba State College;c;g;38|Coolnwynpin State School;p;g;36
+Cleveland|4163|1603,129,745,10114|1280000,7.56,3.03,800|Star of the Sea Primary School;p;c;51|Cleveland State School;p;g;50|Cleveland District State High School;s;g;49
+Coopers Plains|4108|595,33,402,10485|1220000,9.66,2.98,692|Coopers Plains State School;p;g;29
+Salisbury|4107|459,25,318,6760|1317500,13.58,2.94,720|Brisbane Christian College;c;i;65|St Pius X School;p;c;58|Salisbury State School;p;g;56
+Acacia Ridge|4110|1119,87,787,14948|950000,17.43,3.47,605|Our Lady of Fatima Primary School;p;c;44|Watson Road State School;p;g;32|Acacia Ridge State School;p;g;29|Aboriginal & Islander Independent Community School;c;i;25|Y Schools Queensland - Brisbane South;s;i;5

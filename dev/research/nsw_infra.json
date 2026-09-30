@@ -1,0 +1,1284 @@
+{
+ "nsw": {
+  "city": "Sydney",
+  "stateName": "New South Wales",
+  "abbr": "NSW",
+  "mainAirport": {
+   "icao": "YSSY",
+   "name": "Sydney Kingsford Smith International Airport",
+   "short": "Sydney Airport",
+   "lng": 151.17722,
+   "lat": -33.94611,
+   "runways": [
+    {
+     "refs": [
+      "16R",
+      "34L"
+     ],
+     "ends": [
+      [
+       151.17183,
+       -33.93017
+      ],
+      [
+       151.18067,
+       -33.96433
+      ]
+     ],
+     "plain": "main north-south runway (the long one that runs out into Botany Bay)",
+     "era": "both",
+     "opens": null
+    },
+    {
+     "refs": [
+      "16L",
+      "34R"
+     ],
+     "ends": [
+      [
+       151.18883,
+       -33.95167
+      ],
+      [
+       151.19383,
+       -33.97083
+      ]
+     ],
+     "plain": "parallel north-south runway (eastern side)",
+     "era": "both",
+     "opens": null
+    },
+    {
+     "refs": [
+      "07",
+      "25"
+     ],
+     "ends": [
+      [
+       151.16367,
+       -33.94367
+      ],
+      [
+       151.18883,
+       -33.93783
+      ]
+     ],
+     "plain": "east-west cross runway",
+     "era": "both",
+     "opens": null
+    }
+   ],
+   "wideBodies": true,
+   "curfew": "11pm to 6am curfew (Sydney Airport Curfew Act); a small number of freight/quieter aircraft movements allowed in shoulder periods",
+   "noiseUrl": "https://webtrak.emsbk.com/syd3",
+   "notes": "Busiest airport in Australia with regular wide-body jets (A380, 777, 787, A350, A330). Planes land from the north over the inner west/inner north (Marrickville, Leichhardt, Hunters Hill, Ryde side) and from the south over Botany Bay; the cross runway sends planes over the eastern suburbs and inner west when winds require. Runway end coordinates from SkyVector (0.01 minute precision, about 20 m). New Sydney airspace/flight paths took effect 9 July 2026 to fit in Western Sydney International."
+  },
+  "otherAirports": [
+   {
+    "icao": "YSWS",
+    "name": "Western Sydney International (Nancy-Bird Walton) Airport",
+    "lng": 150.71833,
+    "lat": -33.89083,
+    "kind": "jets",
+    "status": "future",
+    "opens": "25 Oct 2026 (passengers); freight flights began 27 Jul 2026",
+    "runways": [
+     {
+      "refs": [
+       "05",
+       "23"
+      ],
+      "ends": [
+       [
+        150.701,
+        -33.89917
+       ],
+       [
+        150.73567,
+        -33.8825
+       ]
+      ],
+      "plain": "single 3.7 km runway (future 05L/23R)",
+      "era": "both",
+      "opens": "2026",
+      "approx": true,
+      "placement": "Approximate: centred on the aerodrome reference point from the official ERSA (33°53'27\"S 150°43'06\"E), runway bearing 047 magnetic + 13° variation = about 060 true, length 3,700 m. Thresholds may be off by up to ~200 m; refine from OpenStreetMap."
+     },
+     {
+      "refs": [
+       "05R",
+       "23L"
+      ],
+      "ends": [
+       [
+        150.71128,
+        -33.91399
+       ],
+       [
+        150.74595,
+        -33.89732
+       ]
+      ],
+      "approx": true,
+      "placement": "Concept only: first runway shifted 1.9 km to the south-east (per the airport plan's ~1,900 m separation), same length.",
+      "plain": "planned second parallel runway about 1.9 km south-east of the first",
+      "era": "future",
+      "opens": "not before the 2050s (when demand reaches ~37 million passengers a year)"
+     }
+    ],
+    "note": "Open for freight since 27 July 2026 (Qantas Freight); first passenger flight is Jetstar to the Gold Coast on 25 October 2026, Air New Zealand from 26 Oct, Singapore Airlines from 23 Nov, Qantas from 28 Mar 2027. It runs 24 hours with no curfew. Flight paths took effect 9 July 2026: by day runway 23 is preferred, so planes land from the north-east over St Marys, Erskine Park, Kemps Creek and the Twin Creeks/Luddenham area and take off towards the south-west. From 11pm to 5:30am 'reciprocal runway operations' are used where safe: planes both land and take off over the south-west (Silverdale, Greendale, Warragamba side) so the heavily populated areas to the north-east get fewer night flights. Luddenham, Twin Creeks, Kemps Creek, Wallacia, Greendale and Silverdale are the closest affected communities; Blue Mountains towns get high-altitude overflights. Noise tools: wsiflightpaths.aerlabs.com and webtrak.emsbk.com/wsi3."
+   },
+   {
+    "icao": "YSBK",
+    "name": "Bankstown Airport",
+    "lng": 150.98833,
+    "lat": -33.925,
+    "kind": "light",
+    "status": "open",
+    "opens": null,
+    "runways": [
+     {
+      "refs": [
+       "11C",
+       "29C"
+      ],
+      "ends": [
+       [
+        150.9845,
+        -33.92017
+       ],
+       [
+        150.99583,
+        -33.9265
+       ]
+      ],
+      "plain": "centre runway (1.4 km)",
+      "era": "both",
+      "opens": null
+     },
+     {
+      "refs": [
+       "11L",
+       "29R"
+      ],
+      "ends": [
+       [
+        150.98667,
+        -33.92017
+       ],
+       [
+        150.9965,
+        -33.92567
+       ]
+      ],
+      "plain": "northern parallel runway (1.1 km)",
+      "era": "both",
+      "opens": null
+     }
+    ],
+    "note": "Sydney's busiest general-aviation airport: lots of light training aircraft, helicopters and some small turboprops/charter. Expect frequent low circuits over Georges Hall, Condell Park, Yagoona and Milperra rather than big-jet noise."
+   },
+   {
+    "icao": "YSCN",
+    "name": "Camden Airport",
+    "lng": 150.68667,
+    "lat": -34.04,
+    "kind": "light",
+    "status": "open",
+    "opens": null,
+    "runways": [
+     {
+      "refs": [
+       "06",
+       "24"
+      ],
+      "ends": [
+       [
+        150.68067,
+        -34.04067
+       ],
+       [
+        150.692,
+        -34.03617
+       ]
+      ],
+      "plain": "main runway (1.5 km)",
+      "era": "both",
+      "opens": null
+     },
+     {
+      "refs": [
+       "10",
+       "28"
+      ],
+      "ends": [
+       [
+        150.68167,
+        -34.0415
+       ],
+       [
+        150.689,
+        -34.04383
+       ]
+      ],
+      "plain": "short cross runway",
+      "era": "both",
+      "opens": null
+     }
+    ],
+    "note": "Small general-aviation field used for flight training, gliding and helicopters. Only light aircraft noise, mainly around Cobbitty, Elderslie and the Camden floodplain."
+   },
+   {
+    "icao": "YSRI",
+    "name": "RAAF Base Richmond",
+    "lng": 150.78389,
+    "lat": -33.60306,
+    "kind": "military",
+    "status": "open",
+    "opens": null,
+    "runways": [
+     {
+      "refs": [
+       "10",
+       "28"
+      ],
+      "ends": [
+       [
+        150.77117,
+        -33.60167
+       ],
+       [
+        150.79317,
+        -33.60733
+       ]
+      ],
+      "plain": "main runway (2.1 km)",
+      "era": "both",
+      "opens": null
+     }
+    ],
+    "note": "Air Force transport base (C-130J Hercules and visiting large military transports, not fighter jets). Low, heavy turboprop traffic over Richmond, Windsor, Clarendon and Hobartville, including training circuits."
+   }
+  ],
+  "future": {
+   "label": "After Western Sydney Airport opens to passengers (25 Oct 2026)",
+   "short": "WSI opens",
+   "explain": "Western Sydney International starts passenger flights on 25 October 2026 and runs 24 hours with no curfew, bringing jet noise to Luddenham, Twin Creeks, Kemps Creek, St Marys, Erskine Park and the Blue Mountains foothills for the first time. At night planes are meant to land and take off over the less-populated south-west, while by day most landings come in from the north-east."
+  },
+  "plans": [
+   {
+    "kind": "rail",
+    "name": "Sydney Metro – Western Sydney Airport line",
+    "status": "Under construction; opening expected late 2027 (risk of slipping to 2028)",
+    "about": "23 km driverless metro from St Marys through Orchard Hills, Luddenham, Airport Business Park and the Airport Terminal to Bradfield City Centre. It will not be running when the airport opens in October 2026.",
+    "url": "https://www.sydneymetro.info/westernsydneyairportline",
+    "cert": "approx",
+    "line": [
+     [
+      150.7745,
+      -33.7625
+     ],
+     [
+      150.7533,
+      -33.7877
+     ],
+     [
+      150.748,
+      -33.81
+     ],
+     [
+      150.7404,
+      -33.8385
+     ],
+     [
+      150.739,
+      -33.86
+     ],
+     [
+      150.733,
+      -33.88
+     ],
+     [
+      150.73,
+      -33.898
+     ],
+     [
+      150.7354,
+      -33.9247
+     ]
+    ]
+   },
+   {
+    "kind": "rail",
+    "name": "Sydney Metro West",
+    "status": "Under construction (tunnelling finished March 2026); opening 2032",
+    "about": "24 km underground metro linking Westmead and Parramatta to the Sydney CBD via Sydney Olympic Park, North Strathfield, Burwood North, Five Dock, The Bays, Pyrmont and Hunter Street, cutting Parramatta–CBD to about 20 minutes.",
+    "url": "https://www.sydneymetro.info/west/project-overview",
+    "cert": "route",
+    "line": [
+     [
+      150.987,
+      -33.8076
+     ],
+     [
+      151.003,
+      -33.8155
+     ],
+     [
+      151.068,
+      -33.8474
+     ],
+     [
+      151.088,
+      -33.8595
+     ],
+     [
+      151.1036,
+      -33.8687
+     ],
+     [
+      151.1296,
+      -33.8672
+     ],
+     [
+      151.1856,
+      -33.8672
+     ],
+     [
+      151.1945,
+      -33.8705
+     ],
+     [
+      151.2096,
+      -33.8657
+     ]
+    ]
+   },
+   {
+    "kind": "rail",
+    "name": "Sydney Metro City & Southwest – Sydenham to Bankstown conversion",
+    "status": "Testing complete; first passenger services targeted for October 2026 (awaiting safety accreditation)",
+    "about": "The old T3 Bankstown line (closed since September 2024) is being turned into driverless metro, giving direct trains from Bankstown, Punchbowl, Lakemba, Campsie and Canterbury through the CBD to Chatswood and the north-west.",
+    "url": "https://www.sydneymetro.info/citysouthwest/sydenham-bankstown",
+    "cert": "route",
+    "line": [
+     [
+      151.1675,
+      -33.9153
+     ],
+     [
+      151.1552,
+      -33.9139
+     ],
+     [
+      151.139,
+      -33.911
+     ],
+     [
+      151.1317,
+      -33.9095
+     ],
+     [
+      151.1185,
+      -33.9118
+     ],
+     [
+      151.103,
+      -33.9102
+     ],
+     [
+      151.0892,
+      -33.917
+     ],
+     [
+      151.0757,
+      -33.9195
+     ],
+     [
+      151.0673,
+      -33.923
+     ],
+     [
+      151.0555,
+      -33.9255
+     ],
+     [
+      151.0344,
+      -33.9177
+     ]
+    ]
+   },
+   {
+    "kind": "rail",
+    "name": "Parramatta Light Rail Stage 2",
+    "status": "Enabling works and bridge under way; main construction from early 2027; no official opening date yet",
+    "about": "10 km, 14-stop light rail from Camellia through Rydalmere, Ermington, Melrose Park and Wentworth Point to Sydney Olympic Park and Carter Street, including a new Parramatta River bridge.",
+    "url": "https://www.nsw.gov.au/driving-boating-and-transport/projects/parramatta-light-rail/stage-2",
+    "cert": "approx",
+    "line": [
+     [
+      151.029,
+      -33.8195
+     ],
+     [
+      151.036,
+      -33.8155
+     ],
+     [
+      151.046,
+      -33.815
+     ],
+     [
+      151.0555,
+      -33.815
+     ],
+     [
+      151.071,
+      -33.8155
+     ],
+     [
+      151.077,
+      -33.829
+     ],
+     [
+      151.07,
+      -33.844
+     ],
+     [
+      151.069,
+      -33.8475
+     ],
+     [
+      151.061,
+      -33.842
+     ]
+    ]
+   },
+   {
+    "kind": "road",
+    "name": "M12 Motorway",
+    "status": "Open since March 2026",
+    "about": "New 16 km motorway from the M7 at Cecil Hills to The Northern Road at Luddenham, the main road into Western Sydney International. Expect more traffic along the Elizabeth Drive corridor.",
+    "url": "https://www.transport.nsw.gov.au/projects/m12-motorway/index",
+    "cert": "approx",
+    "line": [
+     [
+      150.854,
+      -33.8745
+     ],
+     [
+      150.825,
+      -33.874
+     ],
+     [
+      150.795,
+      -33.876
+     ],
+     [
+      150.77,
+      -33.878
+     ],
+     [
+      150.748,
+      -33.874
+     ],
+     [
+      150.72,
+      -33.873
+     ],
+     [
+      150.7,
+      -33.8745
+     ]
+    ]
+   },
+   {
+    "kind": "road",
+    "name": "M6 Motorway Stage 1",
+    "status": "Under construction but stalled; no official opening date (third sinkhole Aug 2026)",
+    "about": "4 km twin tunnels from the M8 at Arncliffe to President Avenue, Kogarah, taking trucks off the Princes Highway. Future stages further south are on hold.",
+    "url": "https://www.transport.nsw.gov.au/projects/current-projects/m6-stage-1",
+    "cert": "approx",
+    "line": [
+     [
+      151.1455,
+      -33.9345
+     ],
+     [
+      151.145,
+      -33.942
+     ],
+     [
+      151.1445,
+      -33.95
+     ],
+     [
+      151.144,
+      -33.959
+     ],
+     [
+      151.144,
+      -33.9665
+     ]
+    ]
+   },
+   {
+    "kind": "road",
+    "name": "Western Harbour Tunnel",
+    "status": "Under construction; opening late 2028",
+    "about": "Motorway tunnel under Sydney Harbour from the Rozelle Interchange under Birchgrove and Balls Head to the Warringah Freeway at Cammeray, a second harbour crossing to relieve the Harbour Bridge and Harbour Tunnel.",
+    "url": "https://www.transport.nsw.gov.au/projects/current-projects/western-harbour-tunnel",
+    "cert": "approx",
+    "line": [
+     [
+      151.172,
+      -33.866
+     ],
+     [
+      151.179,
+      -33.857
+     ],
+     [
+      151.186,
+      -33.848
+     ],
+     [
+      151.195,
+      -33.84
+     ],
+     [
+      151.202,
+      -33.834
+     ],
+     [
+      151.21,
+      -33.829
+     ]
+    ]
+   },
+   {
+    "kind": "road",
+    "name": "Fifteenth Avenue upgrade (Liverpool–Bradfield transit corridor)",
+    "status": "Planning; construction from end of 2026, finish by 2031",
+    "about": "$1.4b upgrade of Fifteenth Avenue and Cowpasture Road with dedicated bus lanes between Liverpool/the M7 and Austral, with a future extension west to Bradfield City Centre.",
+    "url": "https://www.transport.nsw.gov.au/projects/current-projects/fifteenth-avenue-upgrade",
+    "cert": "approx",
+    "line": [
+     [
+      150.9245,
+      -33.9245
+     ],
+     [
+      150.89,
+      -33.923
+     ],
+     [
+      150.86,
+      -33.924
+     ],
+     [
+      150.833,
+      -33.9255
+     ],
+     [
+      150.79,
+      -33.9255
+     ],
+     [
+      150.7354,
+      -33.9247
+     ]
+    ]
+   },
+   {
+    "kind": "rail",
+    "name": "South West Rail Link extension & North South Rail Line (corridor)",
+    "status": "Corridor only; business case/planning funded, no construction date",
+    "about": "Protected rail corridor extending the Leppington line west to Bradfield and the airport metro, and the future North South line from Bradfield south to Macarthur and north beyond St Marys.",
+    "url": "https://www.transport.nsw.gov.au/corridors/nsrl-swrl",
+    "cert": "concept",
+    "line": [
+     [
+      150.808,
+      -33.954
+     ],
+     [
+      150.78,
+      -33.942
+     ],
+     [
+      150.7354,
+      -33.9247
+     ]
+    ]
+   },
+   {
+    "kind": "road",
+    "name": "Outer Sydney Orbital (corridor)",
+    "status": "Corridor only (stage 1 corridor identified); no construction date",
+    "about": "Future motorway and freight rail corridor running north-south west of the airport, from the Hume Motorway near Menangle through Luddenham and Orchard Hills towards Box Hill/Vineyard.",
+    "url": "https://www.transport.nsw.gov.au/corridors/outer-sydney-orbital",
+    "cert": "approx",
+    "line": [
+     [
+      150.74,
+      -34.12
+     ],
+     [
+      150.7,
+      -34.03
+     ],
+     [
+      150.685,
+      -33.94
+     ],
+     [
+      150.69,
+      -33.88
+     ],
+     [
+      150.72,
+      -33.82
+     ],
+     [
+      150.73,
+      -33.77
+     ],
+     [
+      150.77,
+      -33.7
+     ],
+     [
+      150.83,
+      -33.66
+     ],
+     [
+      150.88,
+      -33.64
+     ]
+    ]
+   }
+  ],
+  "railHubs": [
+   [
+    150.7745,
+    -33.7625,
+    "St Marys",
+    "Interchange between the T1 Western line and the new airport metro (from 2027)"
+   ],
+   [
+    150.7404,
+    -33.8385,
+    "Luddenham",
+    "New airport metro station next to Western Sydney University's Luddenham campus"
+   ],
+   [
+    150.7354,
+    -33.9247,
+    "Bradfield",
+    "Southern end of the airport metro, in the new Bradfield City Centre"
+   ],
+   [
+    150.987,
+    -33.8076,
+    "Westmead",
+    "Western end of Metro West, next to the hospital precinct (2032)"
+   ],
+   [
+    151.003,
+    -33.8155,
+    "Parramatta",
+    "Metro West station in the CBD, linking to trains and light rail (2032)"
+   ],
+   [
+    151.068,
+    -33.8474,
+    "Sydney Olympic Park",
+    "Metro West station and future Parramatta Light Rail stage 2 stop"
+   ],
+   [
+    151.0344,
+    -33.9177,
+    "Bankstown",
+    "End of the converted metro line from Sydenham (services targeted Oct 2026)"
+   ],
+   [
+    151.2096,
+    -33.8657,
+    "Hunter Street",
+    "CBD terminus of Metro West (2032)"
+   ]
+  ],
+  "dataCentres": [
+   [
+    "Digital Realty SYD10",
+    "Digital Realty",
+    "1-12 Templar Road, Erskine Park NSW",
+    "live",
+    ""
+   ],
+   [
+    "Digital Realty SYD11",
+    "Digital Realty",
+    "13-23 Templar Road, Erskine Park NSW",
+    "live",
+    ""
+   ],
+   [
+    "Digital Realty SYD14",
+    "Digital Realty",
+    "16 Lockwood Road, Erskine Park NSW",
+    "live",
+    ""
+   ],
+   [
+    "Digital Realty SYD13",
+    "Digital Realty",
+    "23-25 Waterloo Road, North Ryde NSW",
+    "live",
+    ""
+   ],
+   [
+    "Rackspace Sydney",
+    "Rackspace",
+    "1-11 Templar Road, Erskine Park NSW",
+    "live",
+    ""
+   ],
+   [
+    "STACK SYD01 campus",
+    "STACK Infrastructure",
+    "78 Lockwood Road, Erskine Park NSW",
+    "live",
+    "Campus with SYD01A/SYD01B"
+   ],
+   [
+    "NEXTDC S1",
+    "NEXTDC",
+    "4 Eden Park Drive, Macquarie Park NSW",
+    "live",
+    ""
+   ],
+   [
+    "NEXTDC S2",
+    "NEXTDC",
+    "6-8 Giffnock Avenue, Macquarie Park NSW",
+    "live",
+    ""
+   ],
+   [
+    "NEXTDC S3",
+    "NEXTDC",
+    "2 Broadcast Way, Artarmon NSW",
+    "live",
+    ""
+   ],
+   [
+    "NEXTDC S6",
+    "NEXTDC",
+    "3 Broadcast Way, Artarmon NSW",
+    "live",
+    ""
+   ],
+   [
+    "NEXTDC S4",
+    "NEXTDC",
+    "3-5 Johnston Crescent, Horsley Park NSW",
+    "plan",
+    "Large campus under construction"
+   ],
+   [
+    "NEXTDC S5",
+    "NEXTDC",
+    "Macquarie Park NSW",
+    "plan",
+    "Exact street address not public; suburb only"
+   ],
+   [
+    "NEXTDC S7 (with OpenAI)",
+    "NEXTDC",
+    "Eastern Creek NSW",
+    "plan",
+    "Hyperscale AI campus; exact site not public, suburb only"
+   ],
+   [
+    "DigiCo SYD1 (former Global Switch)",
+    "DigiCo",
+    "400 Harris Street, Ultimo NSW",
+    "live",
+    "East building at 273 Pyrmont St"
+   ],
+   [
+    "DigiCo SYD2",
+    "DigiCo",
+    "5 Broadcast Way, Artarmon NSW",
+    "live",
+    ""
+   ],
+   [
+    "Keppel DC Sydney Gore Hill",
+    "Keppel DC REIT",
+    "5 Broadcast Way, Artarmon NSW",
+    "live",
+    ""
+   ],
+   [
+    "Goodman SYD01",
+    "Goodman",
+    "2-8 Lanceley Place, Artarmon NSW",
+    "plan",
+    "Under construction"
+   ],
+   [
+    "Equinix SY1/SY2",
+    "Equinix",
+    "639 Gardeners Road, Mascot NSW",
+    "live",
+    ""
+   ],
+   [
+    "Summit Sydney",
+    "Summit",
+    "639 Gardeners Road, Mascot NSW",
+    "live",
+    ""
+   ],
+   [
+    "Equinix SY3",
+    "Equinix",
+    "47 Bourke Road, Alexandria NSW",
+    "live",
+    ""
+   ],
+   [
+    "Equinix SY4/SY5",
+    "Equinix",
+    "200 Bourke Road, Alexandria NSW",
+    "live",
+    ""
+   ],
+   [
+    "Equinix SY6",
+    "Equinix",
+    "8-14 Egerton Street, Silverwater NSW",
+    "live",
+    ""
+   ],
+   [
+    "Equinix SY9x",
+    "Equinix",
+    "8A Grand Avenue, Rosehill NSW",
+    "live",
+    ""
+   ],
+   [
+    "Equinix SY10x",
+    "Equinix",
+    "Rosehill NSW",
+    "plan",
+    "Under construction next to SY9x; suburb only"
+   ],
+   [
+    "Macquarie IC1",
+    "Macquarie Data Centres",
+    "477 Pitt Street, Sydney NSW",
+    "live",
+    ""
+   ],
+   [
+    "Macquarie IC2/IC3",
+    "Macquarie Data Centres",
+    "17-23 Talavera Road, Macquarie Park NSW",
+    "live",
+    "IC3 Super West expansion"
+   ],
+   [
+    "Goodman Macquarie Park",
+    "Goodman",
+    "4-10 Talavera Road, Macquarie Park NSW",
+    "plan",
+    ""
+   ],
+   [
+    "EdgeConneX SYD1",
+    "EdgeConneX",
+    "1-5 Khartoum Road, Macquarie Park NSW",
+    "plan",
+    ""
+   ],
+   [
+    "AWS Khartoum Road",
+    "Amazon Web Services",
+    "11-17 Khartoum Road, Macquarie Park NSW",
+    "plan",
+    ""
+   ],
+   [
+    "Julius Avenue Data Centre",
+    "ISPT",
+    "6-8 Julius Avenue, North Ryde NSW",
+    "plan",
+    ""
+   ],
+   [
+    "Unisys Rhodes",
+    "Unisys",
+    "1G Homebush Bay Drive, Rhodes NSW",
+    "live",
+    ""
+   ],
+   [
+    "Fujitsu Homebush",
+    "Fujitsu",
+    "Sydney Olympic Park NSW",
+    "live",
+    "Suburb only"
+   ],
+   [
+    "Fujitsu Western Sydney",
+    "Fujitsu",
+    "Greystanes NSW",
+    "live",
+    "Suburb only"
+   ],
+   [
+    "Vocus Baulkham Hills",
+    "Vocus",
+    "12 Brookhollow Avenue, Norwest NSW",
+    "live",
+    ""
+   ],
+   [
+    "GreenSquareDC SYD1",
+    "GreenSquareDC",
+    "3 Brookhollow Avenue, Norwest NSW",
+    "live",
+    "Second building planned"
+   ],
+   [
+    "Vocus Haymarket",
+    "Vocus",
+    "187 Thomas Street, Haymarket NSW",
+    "live",
+    ""
+   ],
+   [
+    "Vocus Glebe",
+    "Vocus",
+    "30 Ross Street, Glebe NSW",
+    "live",
+    ""
+   ],
+   [
+    "Vocus SYD04",
+    "Vocus",
+    "74 Mentmore Avenue, Rosebery NSW",
+    "live",
+    ""
+   ],
+   [
+    "5G Networks Sydney",
+    "5G Networks",
+    "55 Pyrmont Bridge Road, Pyrmont NSW",
+    "live",
+    ""
+   ],
+   [
+    "Telstra St Leonards",
+    "Telstra InfraCo",
+    "4A Herbert Street, St Leonards NSW",
+    "live",
+    ""
+   ],
+   [
+    "St Leonards Corporate Centre (5GN, Interactive, Servers Australia)",
+    "Various",
+    "39 Herbert Street, St Leonards NSW",
+    "live",
+    ""
+   ],
+   [
+    "12 Frederick Street",
+    "Gateway Capital",
+    "12 Frederick Street, St Leonards NSW",
+    "plan",
+    ""
+   ],
+   [
+    "Telstra Sydney (Pitt/Liverpool St exchange)",
+    "Telstra InfraCo",
+    "133 Liverpool Street, Sydney NSW",
+    "live",
+    ""
+   ],
+   [
+    "Telstra Chippendale",
+    "Telstra InfraCo",
+    "184-200 Broadway, Chippendale NSW",
+    "live",
+    ""
+   ],
+   [
+    "Amaze DataHaven",
+    "Amaze",
+    "340 George Street, Waterloo NSW",
+    "live",
+    ""
+   ],
+   [
+    "22 O'Riordan Street",
+    "Markham Real Estate Partners",
+    "22 O'Riordan Street, Alexandria NSW",
+    "plan",
+    ""
+   ],
+   [
+    "AirTrunk SYD1",
+    "AirTrunk",
+    "35 Huntingwood Drive, Huntingwood NSW",
+    "live",
+    "Address from Datacom@AirTrunk listing"
+   ],
+   [
+    "AirTrunk SYD3",
+    "AirTrunk",
+    "Huntingwood NSW",
+    "plan",
+    "Large campus under construction/expanding; suburb only"
+   ],
+   [
+    "AirTrunk SYD2",
+    "AirTrunk",
+    "Lane Cove West NSW",
+    "live",
+    "Suburb only"
+   ],
+   [
+    "Goodman Project Mars",
+    "Goodman",
+    "12 Mars Road, Lane Cove West NSW",
+    "plan",
+    ""
+   ],
+   [
+    "AirTrunk Kemps Creek",
+    "AirTrunk",
+    "Kemps Creek NSW",
+    "plan",
+    "Under construction; suburb only"
+   ],
+   [
+    "Microsoft Kemps Creek (SYD05-07)",
+    "Microsoft",
+    "769 Mamre Road, Kemps Creek NSW",
+    "live",
+    "Further buildings under construction"
+   ],
+   [
+    "Microsoft Huntingwood",
+    "Microsoft",
+    "6 Honeman Close, Huntingwood NSW",
+    "plan",
+    ""
+   ],
+   [
+    "Microsoft Seven Hills",
+    "Microsoft",
+    "57 Station Road, Seven Hills NSW",
+    "live",
+    ""
+   ],
+   [
+    "CDC Eastern Creek (EC1-EC6)",
+    "CDC Data Centres",
+    "17 Roberts Road, Eastern Creek NSW",
+    "live",
+    ""
+   ],
+   [
+    "Goodman Project Atlas",
+    "Goodman",
+    "10 Roberts Road, Eastern Creek NSW",
+    "plan",
+    ""
+   ],
+   [
+    "CDC Marsden Park",
+    "CDC Data Centres",
+    "105-113 Hollinsworth Road, Marsden Park NSW",
+    "live",
+    "Very large (500 MW) campus still expanding"
+   ],
+   [
+    "CDC Kemps Creek KC1",
+    "CDC Data Centres",
+    "871-901 Mamre Road, Kemps Creek NSW",
+    "plan",
+    ""
+   ],
+   [
+    "ISPT Mamre Road campus",
+    "ISPT",
+    "706-752 Mamre Road, Kemps Creek NSW",
+    "plan",
+    "Six buildings proposed"
+   ],
+   [
+    "Stockland Aldington Road",
+    "Stockland",
+    "90 Aldington Road, Kemps Creek NSW",
+    "plan",
+    ""
+   ],
+   [
+    "Stockland Davis Road",
+    "Stockland",
+    "2 Davis Road, Wetherill Park NSW",
+    "plan",
+    "Under construction"
+   ],
+   [
+    "EdgeConneX Wetherill Park",
+    "EdgeConneX",
+    "Wetherill Park NSW",
+    "plan",
+    "Under construction; suburb only"
+   ],
+   [
+    "AWS Glendenning",
+    "Amazon Web Services",
+    "2 Glendenning Road, Glendenning NSW",
+    "live",
+    ""
+   ],
+   [
+    "AWS Eastern Creek (William Dean St)",
+    "Amazon Web Services",
+    "1 William Dean Street, Eastern Creek NSW",
+    "live",
+    ""
+   ],
+   [
+    "AWS Eastern Creek Drive",
+    "Amazon Web Services",
+    "10 Eastern Creek Drive, Eastern Creek NSW",
+    "live",
+    ""
+   ],
+   [
+    "AWS Smeaton Grange",
+    "Amazon Web Services",
+    "Bluett Drive, Smeaton Grange NSW",
+    "live",
+    "Street-level only (Bluett Dr/Turner Rd)"
+   ],
+   [
+    "DCI SYD01",
+    "DCI Data Centers",
+    "90 Peter Brock Drive, Eastern Creek NSW",
+    "live",
+    "SYD02/SYD03 planned nearby"
+   ],
+   [
+    "Goodman Project Pluto",
+    "Goodman",
+    "132 McCredie Road, Guildford NSW",
+    "plan",
+    ""
+   ],
+   [
+    "Telstra/Doma Minchinbury",
+    "Doma / Telstra InfraCo",
+    "Minchinbury NSW",
+    "plan",
+    "Under construction; suburb only"
+   ]
+  ],
+  "market": {
+   "text": "Sydney home values fell 1.4% in August 2026, 4.7% over three months and 4.6% over the year, and are 7.1% below the February 2026 peak (Cotality).",
+   "url": "https://discover.cotality.com/hubfs/Article-Reports/COTALITY%20HVI%20SEP%202026%20FINAL%20(1).pdf",
+   "month": "2026-08"
+  },
+  "tallBuilding": "Sydney Tower Eye is about 309 m tall",
+  "defaultHome": {
+   "title": "Carlingford",
+   "lng": 151.048,
+   "lat": -33.778
+  },
+  "schoolZoneUrl": "https://schoolfinder.education.nsw.gov.au/",
+  "view": {
+   "center": [
+    150.95,
+    -33.89
+   ],
+   "zoom": 9.8,
+   "bearing": 0
+  },
+  "links": [
+   [
+    "SkyVector YSSY (runway ends)",
+    "https://skyvector.com/airport/YSSY/Sydney-Kingsford-Smith-Airport"
+   ],
+   [
+    "ERSA YSWS (3 Sep 2026)",
+    "https://www.airservicesaustralia.com/aip/current/ersa/FAC_YSWS_03SEP2026.pdf"
+   ],
+   [
+    "WSI flight paths (official)",
+    "https://www.wsiflightpaths.gov.au/"
+   ],
+   [
+    "WSI flight path status (DITRDCSA)",
+    "https://www.infrastructure.gov.au/infrastructure-transport-vehicles/aviation/airports/western-sydney-international-airport/western-sydney-international-airport-flight-paths"
+   ],
+   [
+    "New Sydney flight paths from 9 July 2026",
+    "https://minister.infrastructure.gov.au/c-king/media-release/new-flight-paths-sydney-take-effect-9-july"
+   ],
+   [
+    "WSI opening dates (PM)",
+    "https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026"
+   ],
+   [
+    "Airservices WebTrak Sydney",
+    "https://webtrak.emsbk.com/syd3"
+   ],
+   [
+    "Sydney Metro Western Sydney Airport",
+    "https://www.sydneymetro.info/westernsydneyairportline"
+   ],
+   [
+    "Sydney Metro West",
+    "https://www.sydneymetro.info/west/project-overview"
+   ],
+   [
+    "Sydenham to Bankstown",
+    "https://www.sydneymetro.info/citysouthwest/sydenham-bankstown"
+   ],
+   [
+    "Parramatta Light Rail Stage 2",
+    "https://www.nsw.gov.au/driving-boating-and-transport/projects/parramatta-light-rail/stage-2"
+   ],
+   [
+    "M12 Motorway",
+    "https://www.transport.nsw.gov.au/projects/m12-motorway/index"
+   ],
+   [
+    "Fifteenth Avenue upgrade",
+    "https://www.transport.nsw.gov.au/projects/current-projects/fifteenth-avenue-upgrade"
+   ],
+   [
+    "NSRL / SWRL corridors",
+    "https://www.transport.nsw.gov.au/corridors/nsrl-swrl"
+   ],
+   [
+    "Data Center Map – Sydney",
+    "https://www.datacentermap.com/australia/sydney/"
+   ],
+   [
+    "Cotality HVI Aug 2026",
+    "https://discover.cotality.com/hubfs/Article-Reports/COTALITY%20HVI%20SEP%202026%20FINAL%20(1).pdf"
+   ]
+  ]
+ }
+}
