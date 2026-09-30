@@ -3,11 +3,11 @@
 import json, math, os, sys, statistics, html
 
 S = os.path.dirname(os.path.abspath(__file__))
-OUT = '/home/claude/tullamarine-flight-map/regions'
+OUT = os.path.join(S, '..', '..', 'regions')
 esc = lambda t: html.escape(str(t), quote=False)
 
 def load(f):
-    return json.load(open(os.path.join(S, f)))
+    return json.load(open(os.path.join(S, f), encoding='utf-8'))
 
 CONF = {
  'nsw': dict(sub=['nsw_a.json', 'nsw_b.json'], infra=('nsw_infra.json', 'nsw'), bbox=[-34.12, 150.62, -33.62, 151.28],
@@ -285,7 +285,7 @@ def build(rid):
     if not R['crime']['stateRate'] and lvl == 'suburb':
         warn.append('no state crime rate')
     src = f"// {inf['stateName']} ({city}) region for the flight path map engine in ../index.html.\n// Generated from research files; field docs: regions/_schema.md\nwindow.REGION={js(R)};\n"
-    open(os.path.join(OUT, rid + '.js'), 'w').write(src)
+    open(os.path.join(OUT, rid + '.js'), 'w', encoding='utf-8', newline='\n').write(src)
     print(rid, R['meta']['counts'], 'grid', grid, 'typicalPerson', typical, 'plans', len(plans), 'dcs', len(dcs), 'airports', [(a['icao'], len(a['runways'])) for a in airports], 'warn', warn)
 
 for rid in (sys.argv[1:] or CONF.keys()):

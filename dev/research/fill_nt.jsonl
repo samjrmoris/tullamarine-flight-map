@@ -88,3 +88,49 @@
 {"n":"Zuccoli","schools":[["Mother Teresa Catholic Primary School","p","c",53],["Zuccoli Primary School","p","g",45]]}
 {"n":"Bellamack","schools":[]}
 {"n":"Mitchell","schools":[]}
+{"n": "Marrara", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Jingili", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Moil", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Wagaman", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Wanguri", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Alawa", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Nakara", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Brinkin", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Tiwi", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Casuarina", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Wulagi", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Anula", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Karama", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Malak", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Leanyer", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Muirhead", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Lyons", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Rapid Creek", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Millner", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Coconut Grove", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Nightcliff", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Fannie Bay", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Parap", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Stuart Park", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Larrakeyah", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Darwin City", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "The Gardens", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Ludmilla", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Bayview", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Winnellie", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Berrimah", "crime": [8547, 80530, 3016, 5531, "Darwin police reporting region"]}
+{"n": "Palmerston City", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Gray", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Driver", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Moulden", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Woodroffe", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Durack", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Farrar", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Gunn", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Bakewell", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Rosebery", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Johnston", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Zuccoli", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Bellamack", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "Mitchell", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
+{"n": "_meta", "stateRatePer1000": 135.17, "stateRateSource": "NT total 31,441 offences (12,595 against the person + 18,846 property), 12 months to January 2026 (PFES Table 3) / 232,605 residents (ABS 2021 Census) = 135.17 per 1,000. Region populations: City of Darwin 80,530 and City of Palmerston 37,247 (ABS 2021 Census, council areas used as the closest match to the police regions)."}

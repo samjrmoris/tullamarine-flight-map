@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Flight Path Map</title>
+<title>Flight Path Australia</title>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -232,7 +232,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
   <aside class="panel">
     <header>
       <label class="regsw" title="Change state"><span class="sr">State</span><select id="regionSel" aria-label="State"></select><span class="car" aria-hidden="true">▾</span></label>
-      <h1 id="title">Flight Path Map</h1>
+      <h1 id="title">Flight Path Australia</h1>
       <p class="lede" id="lede"></p>
     </header>
 
@@ -381,7 +381,7 @@ ul.links{margin:8px 0 0;padding-left:18px;font-size:13px;display:grid;gap:4px}
 </div>
 <div class="picker" id="picker" hidden role="dialog" aria-modal="true" aria-labelledby="pickQ">
   <div class="box">
-    <h2>Flight path map</h2>
+    <h2>Flight Path Australia</h2>
     <p class="q" id="pickQ">Which state are you buying in?</p>
     <p class="note" id="pickMsg">Pick a state to see plane noise, crime, house prices and schools around its capital city. You can switch later from the top of the side panel.</p>
     <div class="grid" id="pickGrid"></div>
@@ -913,12 +913,14 @@ async function loadData(){
       apt={elements:j.elements.filter(e=>e.type!=='node'||(e.tags&&e.tags.aeroway==='aerodrome'))};cacheSet(CK('v3:apt'),apt);}catch(e){apt=null;}
   }
   if(apt)applyAirportData(apt.elements);
-  let subs=cacheGet(CK('v2:subs'));
-  if(!subs){
+  try{localStorage.removeItem(CK('v2:subs'));}catch(e){}
+  let subs=cacheGet(CK('v3:subs'));
+  if(!subs||!subs.length){
     try{toast('Loading suburb boundaries (up to a minute the first time)…');
-      const j=await overpass('[out:json][timeout:150];relation["boundary"="administrative"]["admin_level"="10"]'+BB(R.bbox)+';out geom;');
-      subs=j.elements.filter(e=>e.tags&&e.tags.name).map(e=>({name:e.tags.name,rings:elementRings(e,0.02).map(r=>r.map(p=>[+p.x.toFixed(4),+p.n.toFixed(4)]))})).filter(s=>s.rings.length);
-      cacheSet(CK('v2:subs'),subs);}catch(e){subs=null;}
+      // OpenStreetMap now tags Australian suburbs admin_level 9 (it was 10); accept both
+      const j=await overpass('[out:json][timeout:150];relation["boundary"="administrative"]["admin_level"~"^(9|10)$"]'+BB(R.bbox)+';out geom;');
+      subs=j.elements.filter(e=>e.tags&&e.tags.name).map(e=>({name:e.tags.name,rings:elementRings(e,0.02).map(r=>r.map(p=>[+p.x.toFixed(4),+p.n.toFixed(4)]))})).filter((s,i,a)=>s.rings.length&&a.findIndex(t=>t.name===s.name)===i);
+      if(subs.length)cacheSet(CK('v3:subs'),subs);}catch(e){subs=null;}
   }
   if(subs&&subs.length)SUBS=subs.map(s=>({name:s.name,rings:s.rings.map(r=>r.map(([x,n])=>({x,n})))}));
   else{

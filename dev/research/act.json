@@ -1,13 +1,13 @@
 {
  "region": "act",
  "crimeSource": {
-  "name": "INCOMPLETE - ACT Policing quarterly suburb data (official xlsx not retrievable); partial totals via northremovals.com.au 'Worst Suburbs in Canberra 2026' which compiled ACT Policing quarters Apr-Jun 2025 to Jan-Mar 2026",
-  "url": "https://northremovals.com.au/worst-suburbs-in-canberra/",
-  "period": "year to March 2026",
-  "level": "suburb",
-  "stateRatePer1000": null,
-  "stateRateSource": null,
-  "notes": "PARTIAL FILE. WebFetch was rate-limited (HTTP 429) for the whole run after the first few pages; official ACT Policing spreadsheet https://police.act.gov.au/__data/assets/excel_doc/0006/336174/June26-Website-Stats-Monthy-Download.xlsx needed a fetch approval that timed out and police.act.gov.au is blocked from the shell. Only 7 suburbs have offence totals (no person/property split). Property and schools only for Braddon. Needs a re-run."
+  "name": "ACT Policing offence statistics by police district (June 2026 monthly download)",
+  "url": "https://police.act.gov.au/__data/assets/excel_doc/0006/336174/June26-Website-Stats-Monthy-Download.xlsx",
+  "period": "12 months, July 2025 to June 2026",
+  "level": "district",
+  "stateRatePer1000": 57.89,
+  "stateRateSource": "26,311 offences ACT-wide (traffic infringements and road collisions excluded) / 454,499 residents (ABS 2021 Census) = 57.89 per 1,000",
+  "notes": "ACT Policing publishes offences by police district, not by suburb. Every suburb carries its whole district figures; district populations are the matching ABS 2021 Census SA3 areas (Inner North = North Canberra, Inner South = South Canberra, Woden = Woden Valley). Pialligo sits in ACT Policing's \"Other Areas\" group, so it has no figure. Suburb figures compiled by a third party (northremovals.com.au) were dropped because they did not reconcile with the official district totals."
  },
  "suburbs": [
   {
@@ -15,7 +15,7 @@
    "postcode": "2609",
    "crime": null,
    "prop": null,
-   "schools": [],
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": [
@@ -25,9 +25,20 @@
   {
    "name": "Campbell",
    "postcode": "2612",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
+   },
+   "prop": {
+    "median": 1720000,
+    "growth": 0.88,
+    "yield": 2.66,
+    "rent": 980
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -35,9 +46,20 @@
   {
    "name": "Reid",
    "postcode": "2612",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
+   },
+   "prop": {
+    "median": 1750000,
+    "growth": -42.44,
+    "yield": 2.5,
+    "rent": 885
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -46,11 +68,11 @@
    "name": "Braddon",
    "postcode": "2612",
    "crime": {
-    "offences": 809,
-    "population": null,
-    "person": null,
-    "property": null,
-    "area": null
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
    },
    "prop": {
     "median": 1030000,
@@ -81,9 +103,20 @@
   {
    "name": "Turner",
    "postcode": "2612",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
+   },
+   "prop": {
+    "median": 1950000,
+    "growth": 7.22,
+    "yield": 2.25,
+    "rent": 775
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -91,9 +124,20 @@
   {
    "name": "Ainslie",
    "postcode": "2602",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
+   },
+   "prop": {
+    "median": 1400000,
+    "growth": -3.61,
+    "yield": 2.82,
+    "rent": 750
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -101,9 +145,20 @@
   {
    "name": "Hackett",
    "postcode": "2602",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
+   },
+   "prop": {
+    "median": 1252500,
+    "growth": -10.85,
+    "yield": 2.86,
+    "rent": 760
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -111,9 +166,20 @@
   {
    "name": "Watson",
    "postcode": "2602",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
+   },
+   "prop": {
+    "median": 1175000,
+    "growth": 10.85,
+    "yield": 3.34,
+    "rent": 700
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -121,9 +187,20 @@
   {
    "name": "Downer",
    "postcode": "2602",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
+   },
+   "prop": {
+    "median": 1220000,
+    "growth": 5.95,
+    "yield": 3.14,
+    "rent": 720
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -132,14 +209,19 @@
    "name": "Dickson",
    "postcode": "2602",
    "crime": {
-    "offences": 757,
-    "population": null,
-    "person": null,
-    "property": null,
-    "area": null
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
    },
-   "prop": null,
-   "schools": [],
+   "prop": {
+    "median": 1115000,
+    "growth": 5.31,
+    "yield": 3.4,
+    "rent": 750
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -147,9 +229,20 @@
   {
    "name": "Lyneham",
    "postcode": "2602",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
+   },
+   "prop": {
+    "median": 1275000,
+    "growth": 33.51,
+    "yield": 3.18,
+    "rent": 692
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -157,9 +250,20 @@
   {
    "name": "O'Connor",
    "postcode": "2602",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 6738,
+    "population": 61188,
+    "person": 995,
+    "property": 3600,
+    "area": "Inner North police district"
+   },
+   "prop": {
+    "median": 1590000,
+    "growth": 8.72,
+    "yield": 2.54,
+    "rent": 750
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -167,9 +271,20 @@
   {
    "name": "Kingston",
    "postcode": "2604",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 2171,
+    "population": 31592,
+    "person": 271,
+    "property": 1196,
+    "area": "Inner South police district"
+   },
+   "prop": {
+    "median": 615000,
+    "growth": -10.87,
+    "yield": 3.95,
+    "rent": 690
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -177,9 +292,20 @@
   {
    "name": "Griffith",
    "postcode": "2603",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 2171,
+    "population": 31592,
+    "person": 271,
+    "property": 1196,
+    "area": "Inner South police district"
+   },
+   "prop": {
+    "median": 2131000,
+    "growth": 8.45,
+    "yield": 2.2,
+    "rent": 780
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -187,9 +313,20 @@
   {
    "name": "Narrabundah",
    "postcode": "2604",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 2171,
+    "population": 31592,
+    "person": 271,
+    "property": 1196,
+    "area": "Inner South police district"
+   },
+   "prop": {
+    "median": 1365000,
+    "growth": 10.75,
+    "yield": 3.0,
+    "rent": 780
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -197,9 +334,20 @@
   {
    "name": "Red Hill",
    "postcode": "2603",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 2171,
+    "population": 31592,
+    "person": 271,
+    "property": 1196,
+    "area": "Inner South police district"
+   },
+   "prop": {
+    "median": 2468000,
+    "growth": 16.14,
+    "yield": 2.36,
+    "rent": 1160
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -207,9 +355,20 @@
   {
    "name": "Gordon",
    "postcode": "2906",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 887500,
+    "growth": -0.84,
+    "yield": 4.12,
+    "rent": 675
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -217,9 +376,20 @@
   {
    "name": "Conder",
    "postcode": "2906",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 900000,
+    "growth": -1.64,
+    "yield": 4.28,
+    "rent": 720
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -227,9 +397,20 @@
   {
    "name": "Banks",
    "postcode": "2906",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 922500,
+    "growth": 23.0,
+    "yield": 4.3,
+    "rent": 670
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -237,9 +418,20 @@
   {
    "name": "Calwell",
    "postcode": "2905",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 925000,
+    "growth": 10.12,
+    "yield": 4.16,
+    "rent": 670
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -247,9 +439,20 @@
   {
    "name": "Theodore",
    "postcode": "2905",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 900000,
+    "growth": 4.05,
+    "yield": 4.17,
+    "rent": 680
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -257,9 +460,20 @@
   {
    "name": "Isabella Plains",
    "postcode": "2905",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 857000,
+    "growth": 2.02,
+    "yield": 4.41,
+    "rent": 650
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -267,9 +481,20 @@
   {
    "name": "Chisholm",
    "postcode": "2905",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 910000,
+    "growth": 5.81,
+    "yield": 4.28,
+    "rent": 725
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -277,9 +502,20 @@
   {
    "name": "Gowrie",
    "postcode": "2904",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 1000000,
+    "growth": 1.39,
+    "yield": 4.15,
+    "rent": 782
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -287,9 +523,20 @@
   {
    "name": "Fadden",
    "postcode": "2904",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 1194500,
+    "growth": 8.59,
+    "yield": 3.75,
+    "rent": 790
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -297,9 +544,20 @@
   {
    "name": "Macarthur",
    "postcode": "2904",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
+   },
+   "prop": {
+    "median": 1042000,
+    "growth": 5.25,
+    "yield": null,
+    "rent": null
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -308,14 +566,19 @@
    "name": "Wanniassa",
    "postcode": "2903",
    "crime": {
-    "offences": 439,
-    "population": null,
-    "person": null,
-    "property": null,
-    "area": null
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
    },
-   "prop": null,
-   "schools": [],
+   "prop": {
+    "median": 907500,
+    "growth": 5.22,
+    "yield": 4.15,
+    "rent": 680
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -324,14 +587,19 @@
    "name": "Kambah",
    "postcode": "2902",
    "crime": {
-    "offences": 519,
-    "population": 15670,
-    "person": null,
-    "property": null,
-    "area": null
+    "offences": 4380,
+    "population": 89461,
+    "person": 766,
+    "property": 2019,
+    "area": "Tuggeranong police district"
    },
-   "prop": null,
-   "schools": [],
+   "prop": {
+    "median": 905000,
+    "growth": 4.56,
+    "yield": 3.98,
+    "rent": 680
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -340,14 +608,19 @@
    "name": "Gungahlin",
    "postcode": "2912",
    "crime": {
-    "offences": 934,
-    "population": null,
-    "person": null,
-    "property": null,
-    "area": null
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
    },
-   "prop": null,
-   "schools": [],
+   "prop": {
+    "median": 1051750,
+    "growth": 15.01,
+    "yield": 4.06,
+    "rent": 750
+   },
+   "schools": null,
    "mall": "Gungahlin Marketplace",
    "growthArea": false,
    "flags": []
@@ -355,9 +628,20 @@
   {
    "name": "Franklin",
    "postcode": "2913",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 1095500,
+    "growth": 8.47,
+    "yield": 3.77,
+    "rent": 800
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -365,9 +649,20 @@
   {
    "name": "Harrison",
    "postcode": "2914",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 1050000,
+    "growth": 5.47,
+    "yield": 3.9,
+    "rent": 790
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -375,9 +670,20 @@
   {
    "name": "Crace",
    "postcode": "2911",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 1105000,
+    "growth": -3.49,
+    "yield": 3.86,
+    "rent": 760
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -385,9 +691,20 @@
   {
    "name": "Forde",
    "postcode": "2914",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 1132500,
+    "growth": 6.34,
+    "yield": 3.69,
+    "rent": 850
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -395,9 +712,20 @@
   {
    "name": "Bonner",
    "postcode": "2914",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 1000000,
+    "growth": 7.7,
+    "yield": 4.13,
+    "rent": 700
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -405,9 +733,20 @@
   {
    "name": "Casey",
    "postcode": "2913",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 900000,
+    "growth": -6.25,
+    "yield": 4.12,
+    "rent": 700
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -415,9 +754,20 @@
   {
    "name": "Ngunnawal",
    "postcode": "2913",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 835250,
+    "growth": 11.37,
+    "yield": 4.25,
+    "rent": 655
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -425,9 +775,20 @@
   {
    "name": "Amaroo",
    "postcode": "2914",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 1025000,
+    "growth": 7.33,
+    "yield": 3.91,
+    "rent": 750
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -435,9 +796,20 @@
   {
    "name": "Throsby",
    "postcode": "2914",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 1150000,
+    "growth": 0.0,
+    "yield": 3.82,
+    "rent": 825
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -445,9 +817,20 @@
   {
    "name": "Taylor",
    "postcode": "2913",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 3202,
+    "population": 87682,
+    "person": 639,
+    "property": 1578,
+    "area": "Gungahlin police district"
+   },
+   "prop": {
+    "median": 1052000,
+    "growth": 3.8,
+    "yield": 4.02,
+    "rent": 825
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -456,14 +839,19 @@
    "name": "Belconnen",
    "postcode": "2617",
    "crime": {
-    "offences": 1817,
-    "population": null,
-    "person": null,
-    "property": null,
-    "area": null
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
    },
-   "prop": null,
-   "schools": [],
+   "prop": {
+    "median": 628500,
+    "growth": 6.98,
+    "yield": 5.5,
+    "rent": 580
+   },
+   "schools": null,
    "mall": "Westfield Belconnen",
    "growthArea": false,
    "flags": []
@@ -471,9 +859,20 @@
   {
    "name": "Bruce",
    "postcode": "2617",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
+   },
+   "prop": {
+    "median": 1230000,
+    "growth": 47.47,
+    "yield": 3.77,
+    "rent": 790
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -481,9 +880,20 @@
   {
    "name": "Macquarie",
    "postcode": "2614",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
+   },
+   "prop": {
+    "median": 1100000,
+    "growth": 15.79,
+    "yield": 3.57,
+    "rent": 670
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -491,9 +901,20 @@
   {
    "name": "Page",
    "postcode": "2614",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
+   },
+   "prop": {
+    "median": 842500,
+    "growth": 0.6,
+    "yield": 3.94,
+    "rent": 660
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -501,9 +922,20 @@
   {
    "name": "Kaleen",
    "postcode": "2617",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
+   },
+   "prop": {
+    "median": 1020000,
+    "growth": 2.51,
+    "yield": 3.68,
+    "rent": 700
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -511,9 +943,20 @@
   {
    "name": "Giralang",
    "postcode": "2617",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
+   },
+   "prop": {
+    "median": 965000,
+    "growth": 9.04,
+    "yield": 3.78,
+    "rent": 715
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -521,9 +964,20 @@
   {
    "name": "Evatt",
    "postcode": "2617",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
+   },
+   "prop": {
+    "median": 875000,
+    "growth": 0.17,
+    "yield": 4.03,
+    "rent": 665
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -531,9 +985,20 @@
   {
    "name": "Florey",
    "postcode": "2615",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
+   },
+   "prop": {
+    "median": 975000,
+    "growth": 22.18,
+    "yield": 4.02,
+    "rent": 660
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -541,9 +1006,20 @@
   {
    "name": "Holt",
    "postcode": "2615",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
+   },
+   "prop": {
+    "median": 810000,
+    "growth": -2.41,
+    "yield": 4.37,
+    "rent": 660
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -551,9 +1027,20 @@
   {
    "name": "Dunlop",
    "postcode": "2615",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 5765,
+    "population": 106061,
+    "person": 1023,
+    "property": 3127,
+    "area": "Belconnen police district"
+   },
+   "prop": {
+    "median": 910000,
+    "growth": 7.37,
+    "yield": 4.22,
+    "rent": 720
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -561,9 +1048,20 @@
   {
    "name": "Coombs",
    "postcode": "2611",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 549,
+    "population": 11435,
+    "person": 82,
+    "property": 243,
+    "area": "Molonglo police district"
+   },
+   "prop": {
+    "median": 1005000,
+    "growth": 2.55,
+    "yield": 4.18,
+    "rent": 910
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -571,9 +1069,20 @@
   {
    "name": "Wright",
    "postcode": "2611",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 549,
+    "population": 11435,
+    "person": 82,
+    "property": 243,
+    "area": "Molonglo police district"
+   },
+   "prop": {
+    "median": 1200000,
+    "growth": -4.23,
+    "yield": 4.09,
+    "rent": 980
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -581,9 +1090,20 @@
   {
    "name": "Denman Prospect",
    "postcode": "2611",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 549,
+    "population": 11435,
+    "person": 82,
+    "property": 243,
+    "area": "Molonglo police district"
+   },
+   "prop": {
+    "median": 1200000,
+    "growth": 20.3,
+    "yield": 3.9,
+    "rent": 1000
+   },
+   "schools": null,
    "mall": null,
    "growthArea": true,
    "flags": []
@@ -592,14 +1112,19 @@
    "name": "Phillip",
    "postcode": "2606",
    "crime": {
-    "offences": 1154,
-    "population": null,
-    "person": null,
-    "property": null,
-    "area": null
+    "offences": 2304,
+    "population": 39279,
+    "person": 387,
+    "property": 1184,
+    "area": "Woden police district"
    },
-   "prop": null,
-   "schools": [],
+   "prop": {
+    "median": 432000,
+    "growth": -15.44,
+    "yield": 5.32,
+    "rent": 615
+   },
+   "schools": null,
    "mall": "Westfield Woden",
    "growthArea": false,
    "flags": []
@@ -607,9 +1132,20 @@
   {
    "name": "Mawson",
    "postcode": "2607",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 2304,
+    "population": 39279,
+    "person": 387,
+    "property": 1184,
+    "area": "Woden police district"
+   },
+   "prop": {
+    "median": 1185000,
+    "growth": 5.33,
+    "yield": 3.48,
+    "rent": 710
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -617,9 +1153,20 @@
   {
    "name": "Curtin",
    "postcode": "2605",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 2304,
+    "population": 39279,
+    "person": 387,
+    "property": 1184,
+    "area": "Woden police district"
+   },
+   "prop": {
+    "median": 1400000,
+    "growth": 3.32,
+    "yield": 2.92,
+    "rent": 800
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []
@@ -627,9 +1174,20 @@
   {
    "name": "Farrer",
    "postcode": "2607",
-   "crime": null,
-   "prop": null,
-   "schools": [],
+   "crime": {
+    "offences": 2304,
+    "population": 39279,
+    "person": 387,
+    "property": 1184,
+    "area": "Woden police district"
+   },
+   "prop": {
+    "median": 1292500,
+    "growth": 0.58,
+    "yield": 3.51,
+    "rent": 748
+   },
+   "schools": null,
    "mall": null,
    "growthArea": false,
    "flags": []

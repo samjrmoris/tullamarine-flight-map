@@ -126,3 +126,69 @@
 {"n": "Mount Barker", "prop": [840000, 15.07, 3.86, 615]}
 {"n": "Morphett Vale", "prop": [782500, 13.41, 4.11, 600]}
 {"n": "Seaford", "prop": [897500, 19.27, 3.78, 650]}
+{"n": "West Beach", "crime": [161, 5175, 30, 131]}
+{"n": "Glenelg", "crime": [533, 3440, 127, 406]}
+{"n": "Glenelg North", "crime": [315, 6594, 67, 248]}
+{"n": "Glenelg East", "crime": [122, 3855, 19, 103]}
+{"n": "Novar Gardens", "crime": [188, 2508, 63, 125]}
+{"n": "Netley", "crime": [67, 1910, 8, 59]}
+{"n": "Plympton", "crime": [372, 5459, 57, 315]}
+{"n": "Plympton Park", "crime": [162, 3881, 32, 130]}
+{"n": "North Plympton", "crime": [99, 3610, 20, 79]}
+{"n": "Kurralta Park", "crime": [218, 3139, 44, 174]}
+{"n": "Marleston", "crime": [121, 1950, 15, 106]}
+{"n": "Richmond", "crime": [180, 3474, 28, 152]}
+{"n": "West Richmond", "crime": [87, 1087, 7, 80]}
+{"n": "Mile End", "crime": [505, 4536, 93, 412]}
+{"n": "Torrensville", "crime": [319, 4110, 46, 273]}
+{"n": "Thebarton", "crime": [152, 1442, 17, 135]}
+{"n": "Lockleys", "crime": [153, 5987, 46, 107]}
+{"n": "Brooklyn Park", "crime": [306, 5040, 76, 230]}
+{"n": "Underdale", "crime": [183, 2429, 29, 154]}
+{"n": "Fulham", "crime": [193, 2920, 25, 168]}
+{"n": "Henley Beach", "crime": [281, 6259, 74, 207]}
+{"n": "Henley Beach South", "crime": [166, 2799, 47, 119]}
+{"n": "Grange", "crime": [234, 6143, 46, 188]}
+{"n": "Kidman Park", "crime": [143, 3874, 33, 110]}
+{"n": "Flinders Park", "crime": [216, 5489, 40, 176]}
+{"n": "Cowandilla", "crime": [64, 1455, 19, 45]}
+{"n": "Hilton", "crime": [259, 908, 21, 238]}
+{"n": "Camden Park", "crime": [128, 3338, 29, 99]}
+{"n": "Park Holme", "crime": [292, 3199, 52, 240]}
+{"n": "Morphettville", "crime": [199, 3686, 61, 138]}
+{"n": "Glengowrie", "crime": [149, 5767, 33, 116]}
+{"n": "Somerton Park", "crime": [127, 5811, 24, 103]}
+{"n": "Warradale", "crime": [181, 5801, 39, 142]}
+{"n": "Brighton", "crime": [330, 3834, 31, 299]}
+{"n": "Hove", "crime": [81, 3189, 22, 59]}
+{"n": "Edwardstown", "crime": [662, 4514, 133, 529]}
+{"n": "Goodwood", "crime": [143, 2823, 24, 119]}
+{"n": "Keswick", "crime": [105, 754, 11, 94]}
+{"n": "Unley", "crime": [305, 3997, 28, 277]}
+{"n": "Kensington Park", "crime": [67, 2627, 14, 53]}
+{"n": "Norwood", "crime": [458, 6354, 70, 388]}
+{"n": "North Adelaide", "crime": [631, 6823, 124, 507]}
+{"n": "Prospect", "crime": [1102, 14584, 129, 973]}
+{"n": "Walkerville", "crime": [204, 2867, 36, 168]}
+{"n": "Parafield Gardens", "crime": [860, 18466, 243, 617]}
+{"n": "Green Fields", "crime": [35, 170, 9, 26]}
+{"n": "Mawson Lakes", "crime": [828, 13794, 131, 697]}
+{"n": "Pooraka", "crime": [721, 7583, 154, 567]}
+{"n": "Para Hills", "crime": [514, 6793, 124, 390]}
+{"n": "Salisbury", "crime": [1476, 8841, 367, 1109]}
+{"n": "Salisbury North", "crime": [887, 10684, 291, 596]}
+{"n": "Paralowie", "crime": [1045, 17504, 262, 783]}
+{"n": "Salisbury East", "crime": [362, 9274, 99, 263]}
+{"n": "Burton", "crime": [329, 6519, 72, 257]}
+{"n": "Elizabeth", "crime": [1199, 1033, 288, 911]}
+{"n": "Munno Para", "crime": [886, 4719, 184, 702]}
+{"n": "Angle Vale", "crime": [441, 4051, 72, 369]}
+{"n": "Two Wells", "crime": [160, 3233, 50, 110]}
+{"n": "Golden Grove", "crime": [361, 10299, 111, 250]}
+{"n": "Modbury", "crime": [1116, 5593, 187, 929]}
+{"n": "Tea Tree Gully", "crime": [72, 3499, 17, 55]}
+{"n": "Mount Barker", "crime": [706, 18331, 180, 526]}
+{"n": "Morphett Vale", "crime": [1399, 24002, 425, 974]}
+{"n": "Seaford", "crime": [480, 4493, 79, 401]}
+{"n": "Aldinga Beach", "crime": [297, 10667, 111, 186]}
+{"n": "_meta", "name": "SA Police suburb crime statistics 2025-26 (data.sa.gov.au)", "url": "https://data.sa.gov.au/data/dataset/860126f7-eeb5-4fbc-be44-069aa0467d11", "period": "financial year to 30 June 2026", "level": "suburb", "stateRatePer1000": 65.25, "stateRateSource": "116,237 offences against the person and property with a suburb recorded, 2025-26 / 1,781,516 residents (ABS 2021 Census) = 65.25 per 1,000", "notes": "Offences = against the person + against property, the only two groups SA Police publish by suburb. Sexual offences are published without a location, so they are left out of both suburb and state figures. Suburb populations are ABS 2021 Census (via AU Crime Tracker)."}

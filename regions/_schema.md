@@ -13,7 +13,7 @@ Conventions:
 - Coordinates are `[lon, lat]` (GeoJSON order) unless a field says otherwise. `bbox` is the exception: it uses Overpass order.
 - Local "km" coordinates are `x` km east and `n` km north of `origin`.
 - Strings are plain text unless the field says HTML. HTML fields are inserted as-is, so escape `&` and `<` yourself.
-- Keys in `crime.data`, `prop.data`, `crime.flags`, `crime.malls` and `crime.growth` are suburb names in lowercase, matching the OpenStreetMap suburb (admin_level 10) names.
+- Keys in `crime.data`, `prop.data`, `crime.flags`, `crime.malls` and `crime.growth` are suburb names in lowercase, matching the OpenStreetMap suburb (admin_level 9, formerly 10) names.
 - A section you have no data for can be an empty object or array. The engine shows "No data" instead.
 
 ---
@@ -151,7 +151,7 @@ List the main airport first. The order sets the airport-filter chips and the map
 
 ## Caches and shared data
 
-- Region caches in the browser: `tfpm:<cachePrefix>v2:subs`, `v3:apt`, `v1:dcgeo`, `v1:dcosm`, `v1:schosm`, `v1:schgeo`, `v1:chkgeo`, plus the user's `ref` and `watch`. When storage is full, the engine deletes other regions' `…v<n>:…` caches (never `ref`, `watch`, `tfpm:region` or `tfpm:gkey`) and tries once more.
+- Region caches in the browser: `tfpm:<cachePrefix>v3:subs`, `v3:apt`, `v1:dcgeo`, `v1:dcosm`, `v1:schosm`, `v1:schgeo`, `v1:chkgeo`, plus the user's `ref` and `watch`. When storage is full, the engine deletes other regions' `…v<n>:…` caches (never `ref`, `watch`, `tfpm:region` or `tfpm:gkey`) and tries once more.
 - `listings.json` (Houses I've checked) is shared by all states. An entry shows in a region when its optional `"state"` field equals the region `id`. When `"state"` is missing, it shows when the address ends in `" <ABBR> <postcode>"` for that state. Entries with neither count as `vic`.
 
 ## Checklist for a new state

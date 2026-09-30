@@ -2,23 +2,23 @@
  "region": "sa",
  "status": "INCOMPLETE - WebFetch proxy rate-limited (HTTP 429) after first few fetches; null prop/schools/crime = NOT YET FETCHED, not 'no data'",
  "crimeSource": {
-  "name": "AU Crime Tracker (republishing SAPOL suburb data)",
-  "url": "https://www.aucrimetracker.com/sa/",
-  "period": "year to March 2026",
+  "name": "SA Police suburb crime statistics 2025-26 (data.sa.gov.au)",
+  "url": "https://data.sa.gov.au/data/dataset/860126f7-eeb5-4fbc-be44-069aa0467d11",
+  "period": "financial year to 30 June 2026",
   "level": "suburb",
-  "stateRatePer1000": null,
-  "stateRateSource": null,
-  "notes": "aucrimetracker SA pages show only the 12-month total (and rate per 100k); person/property breakdown tables render empty. Totals for suburbs other than West Beach and Glenelg were read from the 'Surrounding suburbs' tables on the West Beach and Glenelg pages. Population for West Beach and Glenelg derived as offences / (rate per 100,000) x 100,000 (Glenelg 3,440 matches 2021 census). Better source for person/property split: SAPOL 2025-26 full-FY suburb CSV on data.sa.gov.au (resource cfce21c4-9712-454f-b32d-0f7c989accda, columns incl. 'Offence Level 1 Description' = OFFENCES AGAINST THE PERSON / AGAINST PROPERTY; sexual offences excluded from suburb data), which needs to be downloaded and aggregated with a script. State rate not obtained (SAPOL rolling-stats PDF was rate-limited)."
+  "stateRatePer1000": 65.25,
+  "stateRateSource": "116,237 offences against the person and property with a suburb recorded, 2025-26 / 1,781,516 residents (ABS 2021 Census) = 65.25 per 1,000",
+  "notes": "Offences = against the person + against property, the only two groups SA Police publish by suburb. Sexual offences are published without a location, so they are left out of both suburb and state figures. Suburb populations are ABS 2021 Census (via AU Crime Tracker)."
  },
  "suburbs": [
   {
    "name": "West Beach",
    "postcode": "5024",
    "crime": {
-    "offences": 238,
+    "offences": 161,
     "population": 5175,
-    "person": null,
-    "property": null,
+    "person": 30,
+    "property": 131,
     "area": null
    },
    "prop": {
@@ -43,13 +43,18 @@
    "name": "Glenelg",
    "postcode": "5045",
    "crime": {
-    "offences": 797,
+    "offences": 533,
     "population": 3440,
-    "person": null,
-    "property": null,
+    "person": 127,
+    "property": 406,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1950000,
+    "growth": 30.87,
+    "yield": 2.57,
+    "rent": 790
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -61,13 +66,18 @@
    "name": "Glenelg North",
    "postcode": "5045",
    "crime": {
-    "offences": 272,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 315,
+    "population": 6594,
+    "person": 67,
+    "property": 248,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1420000,
+    "growth": 12.7,
+    "yield": 2.84,
+    "rent": 768
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -77,13 +87,18 @@
    "name": "Glenelg East",
    "postcode": "5045",
    "crime": {
-    "offences": 173,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 122,
+    "population": 3855,
+    "person": 19,
+    "property": 103,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1800000,
+    "growth": 22.03,
+    "yield": 2.41,
+    "rent": 700
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -93,13 +108,18 @@
    "name": "Novar Gardens",
    "postcode": "5040",
    "crime": {
-    "offences": 170,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 188,
+    "population": 2508,
+    "person": 63,
+    "property": 125,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1320000,
+    "growth": 22.79,
+    "yield": 3.05,
+    "rent": 705
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -109,13 +129,18 @@
    "name": "Netley",
    "postcode": "5037",
    "crime": {
-    "offences": 55,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 67,
+    "population": 1910,
+    "person": 8,
+    "property": 59,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1117500,
+    "growth": 19.77,
+    "yield": 3.31,
+    "rent": 650
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -125,13 +150,18 @@
    "name": "Plympton",
    "postcode": "5038",
    "crime": {
-    "offences": 421,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 372,
+    "population": 5459,
+    "person": 57,
+    "property": 315,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1276000,
+    "growth": 29.87,
+    "yield": 3.2,
+    "rent": 700
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -141,13 +171,18 @@
    "name": "Plympton Park",
    "postcode": "5038",
    "crime": {
-    "offences": 220,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 162,
+    "population": 3881,
+    "person": 32,
+    "property": 130,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1160000,
+    "growth": 17.41,
+    "yield": 3.22,
+    "rent": 680
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -157,13 +192,18 @@
    "name": "North Plympton",
    "postcode": "5037",
    "crime": {
-    "offences": 93,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 99,
+    "population": 3610,
+    "person": 20,
+    "property": 79,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1111113,
+    "growth": 16.96,
+    "yield": 3.35,
+    "rent": 700
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -172,8 +212,19 @@
   {
    "name": "Kurralta Park",
    "postcode": "5037",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 218,
+    "population": 3139,
+    "person": 44,
+    "property": 174,
+    "area": null
+   },
+   "prop": {
+    "median": 1084250,
+    "growth": 14.74,
+    "yield": 3.3,
+    "rent": 700
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -182,8 +233,19 @@
   {
    "name": "Marleston",
    "postcode": "5033",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 121,
+    "population": 1950,
+    "person": 15,
+    "property": 106,
+    "area": null
+   },
+   "prop": {
+    "median": 992000,
+    "growth": 13.37,
+    "yield": 3.58,
+    "rent": 670
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -192,8 +254,19 @@
   {
    "name": "Richmond",
    "postcode": "5033",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 180,
+    "population": 3474,
+    "person": 28,
+    "property": 152,
+    "area": null
+   },
+   "prop": {
+    "median": 1126000,
+    "growth": 12.6,
+    "yield": 3.54,
+    "rent": 660
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -203,13 +276,18 @@
    "name": "West Richmond",
    "postcode": "5033",
    "crime": {
-    "offences": 135,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 87,
+    "population": 1087,
+    "person": 7,
+    "property": 80,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 963000,
+    "growth": 15.16,
+    "yield": 3.55,
+    "rent": 625
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -218,8 +296,19 @@
   {
    "name": "Mile End",
    "postcode": "5031",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 505,
+    "population": 4536,
+    "person": 93,
+    "property": 412,
+    "area": null
+   },
+   "prop": {
+    "median": 1170000,
+    "growth": 4.0,
+    "yield": 3.09,
+    "rent": 688
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -228,8 +317,19 @@
   {
    "name": "Torrensville",
    "postcode": "5031",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 319,
+    "population": 4110,
+    "person": 46,
+    "property": 273,
+    "area": null
+   },
+   "prop": {
+    "median": 1145000,
+    "growth": 4.09,
+    "yield": 3.06,
+    "rent": 692
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -238,8 +338,19 @@
   {
    "name": "Thebarton",
    "postcode": "5031",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 152,
+    "population": 1442,
+    "person": 17,
+    "property": 135,
+    "area": null
+   },
+   "prop": {
+    "median": 1365000,
+    "growth": 33.24,
+    "yield": 3.17,
+    "rent": 665
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -249,13 +360,18 @@
    "name": "Lockleys",
    "postcode": "5032",
    "crime": {
-    "offences": 133,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 153,
+    "population": 5987,
+    "person": 46,
+    "property": 107,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1450000,
+    "growth": 18.37,
+    "yield": 2.74,
+    "rent": 720
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -265,13 +381,18 @@
    "name": "Brooklyn Park",
    "postcode": "5032",
    "crime": {
-    "offences": 373,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 306,
+    "population": 5040,
+    "person": 76,
+    "property": 230,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1091000,
+    "growth": 19.23,
+    "yield": 3.32,
+    "rent": 670
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -281,13 +402,18 @@
    "name": "Underdale",
    "postcode": "5032",
    "crime": {
-    "offences": 174,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 183,
+    "population": 2429,
+    "person": 29,
+    "property": 154,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1115000,
+    "growth": -3.46,
+    "yield": 3.16,
+    "rent": 618
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -297,13 +423,18 @@
    "name": "Fulham",
    "postcode": "5024",
    "crime": {
-    "offences": 165,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 193,
+    "population": 2920,
+    "person": 25,
+    "property": 168,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1550000,
+    "growth": 13.35,
+    "yield": 2.77,
+    "rent": 750
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -313,13 +444,18 @@
    "name": "Henley Beach",
    "postcode": "5022",
    "crime": {
-    "offences": 375,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 281,
+    "population": 6259,
+    "person": 74,
+    "property": 207,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1710000,
+    "growth": 11.04,
+    "yield": 2.77,
+    "rent": 880
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -329,13 +465,18 @@
    "name": "Henley Beach South",
    "postcode": "5022",
    "crime": {
-    "offences": 148,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 166,
+    "population": 2799,
+    "person": 47,
+    "property": 119,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1790000,
+    "growth": 4.07,
+    "yield": 2.64,
+    "rent": 860
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -344,8 +485,19 @@
   {
    "name": "Grange",
    "postcode": "5022",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 234,
+    "population": 6143,
+    "person": 46,
+    "property": 188,
+    "area": null
+   },
+   "prop": {
+    "median": 1610000,
+    "growth": 8.05,
+    "yield": 2.9,
+    "rent": 800
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -355,13 +507,18 @@
    "name": "Kidman Park",
    "postcode": "5025",
    "crime": {
-    "offences": 99,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 143,
+    "population": 3874,
+    "person": 33,
+    "property": 110,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1212000,
+    "growth": 17.67,
+    "yield": 3.16,
+    "rent": 700
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -372,12 +529,17 @@
    "postcode": "5025",
    "crime": {
     "offences": 216,
-    "population": null,
-    "person": null,
-    "property": null,
+    "population": 5489,
+    "person": 40,
+    "property": 176,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1195000,
+    "growth": 14.35,
+    "yield": 3.32,
+    "rent": 700
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -386,8 +548,19 @@
   {
    "name": "Cowandilla",
    "postcode": "5033",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 64,
+    "population": 1455,
+    "person": 19,
+    "property": 45,
+    "area": null
+   },
+   "prop": {
+    "median": 995000,
+    "growth": 6.99,
+    "yield": 3.36,
+    "rent": 640
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -396,8 +569,19 @@
   {
    "name": "Hilton",
    "postcode": "5033",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 259,
+    "population": 908,
+    "person": 21,
+    "property": 238,
+    "area": null
+   },
+   "prop": {
+    "median": 1165000,
+    "growth": 17.68,
+    "yield": 3.19,
+    "rent": 695
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -407,13 +591,18 @@
    "name": "Camden Park",
    "postcode": "5038",
    "crime": {
-    "offences": 204,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 128,
+    "population": 3338,
+    "person": 29,
+    "property": 99,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 975000,
+    "growth": -0.51,
+    "yield": 3.19,
+    "rent": 695
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -423,13 +612,18 @@
    "name": "Park Holme",
    "postcode": "5043",
    "crime": {
-    "offences": 277,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 292,
+    "population": 3199,
+    "person": 52,
+    "property": 240,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 950000,
+    "growth": 4.17,
+    "yield": 3.43,
+    "rent": 700
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -439,13 +633,18 @@
    "name": "Morphettville",
    "postcode": "5043",
    "crime": {
-    "offences": 229,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 199,
+    "population": 3686,
+    "person": 61,
+    "property": 138,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1021500,
+    "growth": 19.75,
+    "yield": 3.27,
+    "rent": 700
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -455,13 +654,18 @@
    "name": "Glengowrie",
    "postcode": "5044",
    "crime": {
-    "offences": 259,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 149,
+    "population": 5767,
+    "person": 33,
+    "property": 116,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1400000,
+    "growth": 10.45,
+    "yield": 2.96,
+    "rent": 710
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -471,13 +675,18 @@
    "name": "Somerton Park",
    "postcode": "5044",
    "crime": {
-    "offences": 185,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 127,
+    "population": 5811,
+    "person": 24,
+    "property": 103,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 2200000,
+    "growth": 22.05,
+    "yield": 2.44,
+    "rent": 760
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -487,13 +696,18 @@
    "name": "Warradale",
    "postcode": "5046",
    "crime": {
-    "offences": 243,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 181,
+    "population": 5801,
+    "person": 39,
+    "property": 142,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1240000,
+    "growth": 15.89,
+    "yield": 3.26,
+    "rent": 700
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -503,13 +717,18 @@
    "name": "Brighton",
    "postcode": "5048",
    "crime": {
-    "offences": 305,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 330,
+    "population": 3834,
+    "person": 31,
+    "property": 299,
     "area": null
    },
-   "prop": null,
+   "prop": {
+    "median": 1405000,
+    "growth": 4.46,
+    "yield": 2.73,
+    "rent": 785
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -519,10 +738,73 @@
    "name": "Hove",
    "postcode": "5048",
    "crime": {
-    "offences": 95,
-    "population": null,
-    "person": null,
-    "property": null,
+    "offences": 81,
+    "population": 3189,
+    "person": 22,
+    "property": 59,
+    "area": null
+   },
+   "prop": {
+    "median": 1401000,
+    "growth": 19.23,
+    "yield": 2.76,
+    "rent": 730
+   },
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Edwardstown",
+   "postcode": "5039",
+   "crime": {
+    "offences": 662,
+    "population": 4514,
+    "person": 133,
+    "property": 529,
+    "area": null
+   },
+   "prop": {
+    "median": 1002500,
+    "growth": 8.38,
+    "yield": 3.35,
+    "rent": 650
+   },
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Goodwood",
+   "postcode": "5034",
+   "crime": {
+    "offences": 143,
+    "population": 2823,
+    "person": 24,
+    "property": 119,
+    "area": null
+   },
+   "prop": {
+    "median": 1622500,
+    "growth": 10.37,
+    "yield": 2.47,
+    "rent": 685
+   },
+   "schools": null,
+   "mall": null,
+   "growthArea": false,
+   "flags": []
+  },
+  {
+   "name": "Keswick",
+   "postcode": "5035",
+   "crime": {
+    "offences": 105,
+    "population": 754,
+    "person": 11,
+    "property": 94,
     "area": null
    },
    "prop": null,
@@ -532,40 +814,21 @@
    "flags": []
   },
   {
-   "name": "Edwardstown",
-   "postcode": "5039",
-   "crime": null,
-   "prop": null,
-   "schools": null,
-   "mall": null,
-   "growthArea": false,
-   "flags": []
-  },
-  {
-   "name": "Goodwood",
-   "postcode": "5034",
-   "crime": null,
-   "prop": null,
-   "schools": null,
-   "mall": null,
-   "growthArea": false,
-   "flags": []
-  },
-  {
-   "name": "Keswick",
-   "postcode": "5035",
-   "crime": null,
-   "prop": null,
-   "schools": null,
-   "mall": null,
-   "growthArea": false,
-   "flags": []
-  },
-  {
    "name": "Unley",
    "postcode": "5061",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 305,
+    "population": 3997,
+    "person": 28,
+    "property": 277,
+    "area": null
+   },
+   "prop": {
+    "median": 1800000,
+    "growth": 8.4,
+    "yield": 2.31,
+    "rent": 800
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -574,8 +837,19 @@
   {
    "name": "Kensington Park",
    "postcode": "5068",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 67,
+    "population": 2627,
+    "person": 14,
+    "property": 53,
+    "area": null
+   },
+   "prop": {
+    "median": 1849550,
+    "growth": 5.09,
+    "yield": 2.42,
+    "rent": 850
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -584,8 +858,19 @@
   {
    "name": "Norwood",
    "postcode": "5067",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 458,
+    "population": 6354,
+    "person": 70,
+    "property": 388,
+    "area": null
+   },
+   "prop": {
+    "median": 1675000,
+    "growth": 12.61,
+    "yield": 2.58,
+    "rent": 740
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -594,8 +879,19 @@
   {
    "name": "North Adelaide",
    "postcode": "5006",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 631,
+    "population": 6823,
+    "person": 124,
+    "property": 507,
+    "area": null
+   },
+   "prop": {
+    "median": 1679000,
+    "growth": 3.32,
+    "yield": 2.67,
+    "rent": 750
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -604,8 +900,19 @@
   {
    "name": "Prospect",
    "postcode": "5082",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 1102,
+    "population": 14584,
+    "person": 129,
+    "property": 973,
+    "area": null
+   },
+   "prop": {
+    "median": 1400000,
+    "growth": 10.67,
+    "yield": 2.59,
+    "rent": 680
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -614,8 +921,19 @@
   {
    "name": "Walkerville",
    "postcode": "5081",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 204,
+    "population": 2867,
+    "person": 36,
+    "property": 168,
+    "area": null
+   },
+   "prop": {
+    "median": 1972500,
+    "growth": -8.89,
+    "yield": 2.11,
+    "rent": 950
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -624,8 +942,19 @@
   {
    "name": "Parafield Gardens",
    "postcode": "5107",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 860,
+    "population": 18466,
+    "person": 243,
+    "property": 617,
+    "area": null
+   },
+   "prop": {
+    "median": 840000,
+    "growth": 18.14,
+    "yield": 3.93,
+    "rent": 620
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -634,8 +963,19 @@
   {
    "name": "Green Fields",
    "postcode": "5107",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 35,
+    "population": 170,
+    "person": 9,
+    "property": 26,
+    "area": null
+   },
+   "prop": {
+    "median": null,
+    "growth": null,
+    "yield": 3.45,
+    "rent": null
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -644,8 +984,19 @@
   {
    "name": "Mawson Lakes",
    "postcode": "5095",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 828,
+    "population": 13794,
+    "person": 131,
+    "property": 697,
+    "area": null
+   },
+   "prop": {
+    "median": 885000,
+    "growth": 5.11,
+    "yield": 3.81,
+    "rent": 660
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -654,8 +1005,19 @@
   {
    "name": "Pooraka",
    "postcode": "5095",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 721,
+    "population": 7583,
+    "person": 154,
+    "property": 567,
+    "area": null
+   },
+   "prop": {
+    "median": 860000,
+    "growth": 15.36,
+    "yield": 3.83,
+    "rent": 600
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -664,8 +1026,19 @@
   {
    "name": "Para Hills",
    "postcode": "5096",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 514,
+    "population": 6793,
+    "person": 124,
+    "property": 390,
+    "area": null
+   },
+   "prop": {
+    "median": 811000,
+    "growth": 13.43,
+    "yield": 3.84,
+    "rent": 595
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -674,8 +1047,19 @@
   {
    "name": "Salisbury",
    "postcode": "5108",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 1476,
+    "population": 8841,
+    "person": 367,
+    "property": 1109,
+    "area": null
+   },
+   "prop": {
+    "median": 787000,
+    "growth": 20.15,
+    "yield": 4.06,
+    "rent": 550
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -684,8 +1068,19 @@
   {
    "name": "Salisbury North",
    "postcode": "5108",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 887,
+    "population": 10684,
+    "person": 291,
+    "property": 596,
+    "area": null
+   },
+   "prop": {
+    "median": 660000,
+    "growth": 10.0,
+    "yield": 4.32,
+    "rent": 550
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -694,8 +1089,19 @@
   {
    "name": "Paralowie",
    "postcode": "5108",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 1045,
+    "population": 17504,
+    "person": 262,
+    "property": 783,
+    "area": null
+   },
+   "prop": {
+    "median": 755000,
+    "growth": 12.69,
+    "yield": 4.15,
+    "rent": 600
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -704,8 +1110,19 @@
   {
    "name": "Salisbury East",
    "postcode": "5109",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 362,
+    "population": 9274,
+    "person": 99,
+    "property": 263,
+    "area": null
+   },
+   "prop": {
+    "median": 795000,
+    "growth": 17.78,
+    "yield": 4.01,
+    "rent": 590
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -714,8 +1131,19 @@
   {
    "name": "Burton",
    "postcode": "5110",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 329,
+    "population": 6519,
+    "person": 72,
+    "property": 257,
+    "area": null
+   },
+   "prop": {
+    "median": 716500,
+    "growth": 7.26,
+    "yield": 4.15,
+    "rent": 600
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -724,8 +1152,19 @@
   {
    "name": "Elizabeth",
    "postcode": "5112",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 1199,
+    "population": 1033,
+    "person": 288,
+    "property": 911,
+    "area": null
+   },
+   "prop": {
+    "median": 671000,
+    "growth": 18.76,
+    "yield": 4.33,
+    "rent": 490
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -734,8 +1173,19 @@
   {
    "name": "Munno Para",
    "postcode": "5115",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 886,
+    "population": 4719,
+    "person": 184,
+    "property": 702,
+    "area": null
+   },
+   "prop": {
+    "median": 665000,
+    "growth": 10.83,
+    "yield": 4.29,
+    "rent": 570
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -744,8 +1194,19 @@
   {
    "name": "Angle Vale",
    "postcode": "5117",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 441,
+    "population": 4051,
+    "person": 72,
+    "property": 369,
+    "area": null
+   },
+   "prop": {
+    "median": 855000,
+    "growth": 8.23,
+    "yield": 3.57,
+    "rent": 650
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -754,8 +1215,19 @@
   {
    "name": "Two Wells",
    "postcode": "5501",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 160,
+    "population": 3233,
+    "person": 50,
+    "property": 110,
+    "area": null
+   },
+   "prop": {
+    "median": 900000,
+    "growth": 5.26,
+    "yield": 4.15,
+    "rent": 695
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -764,8 +1236,19 @@
   {
    "name": "Golden Grove",
    "postcode": "5125",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 361,
+    "population": 10299,
+    "person": 111,
+    "property": 250,
+    "area": null
+   },
+   "prop": {
+    "median": 947500,
+    "growth": 9.28,
+    "yield": 3.53,
+    "rent": 655
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -774,8 +1257,19 @@
   {
    "name": "Modbury",
    "postcode": "5092",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 1116,
+    "population": 5593,
+    "person": 187,
+    "property": 929,
+    "area": null
+   },
+   "prop": {
+    "median": 857250,
+    "growth": 10.97,
+    "yield": 3.79,
+    "rent": 650
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -784,8 +1278,19 @@
   {
    "name": "Tea Tree Gully",
    "postcode": "5091",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 72,
+    "population": 3499,
+    "person": 17,
+    "property": 55,
+    "area": null
+   },
+   "prop": {
+    "median": 940500,
+    "growth": 13.99,
+    "yield": 3.64,
+    "rent": 620
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -794,8 +1299,19 @@
   {
    "name": "Mount Barker",
    "postcode": "5251",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 706,
+    "population": 18331,
+    "person": 180,
+    "property": 526,
+    "area": null
+   },
+   "prop": {
+    "median": 840000,
+    "growth": 15.07,
+    "yield": 3.86,
+    "rent": 615
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -804,8 +1320,19 @@
   {
    "name": "Morphett Vale",
    "postcode": "5162",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 1399,
+    "population": 24002,
+    "person": 425,
+    "property": 974,
+    "area": null
+   },
+   "prop": {
+    "median": 782500,
+    "growth": 13.41,
+    "yield": 4.11,
+    "rent": 600
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -814,8 +1341,19 @@
   {
    "name": "Seaford",
    "postcode": "5169",
-   "crime": null,
-   "prop": null,
+   "crime": {
+    "offences": 480,
+    "population": 4493,
+    "person": 79,
+    "property": 401,
+    "area": null
+   },
+   "prop": {
+    "median": 897500,
+    "growth": 19.27,
+    "yield": 3.78,
+    "rent": 650
+   },
    "schools": null,
    "mall": null,
    "growthArea": false,
@@ -824,7 +1362,13 @@
   {
    "name": "Aldinga Beach",
    "postcode": "5173",
-   "crime": null,
+   "crime": {
+    "offences": 297,
+    "population": 10667,
+    "person": 111,
+    "property": 186,
+    "area": null
+   },
    "prop": null,
    "schools": null,
    "mall": null,

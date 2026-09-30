@@ -180,3 +180,24 @@ dev/index.single-file-vic-backup.html   the pre-refactor single-file Melbourne a
 
 - A monthly scheduled refresh of suburb prices and Cotality figures (offered earlier, Sam hasn't said yes).
 - The Domain Developer API backend was considered and deferred. It would need a server to keep the key secret.
+
+## 7. Progress in Claude Code (30 Sep 2026)
+
+Local copy: `C:\Users\caris\Projects\tullamarine-flight-map` (branch `multi-state`). Local preview: launch config `flight-path-australia` (port 5650).
+
+Done:
+- Paths fixed: `build_regions.py` writes to repo `regions/` and now reads/writes UTF-8 (Windows default encoding had corrupted en dashes). `dev/tests/run_all.sh` extracts the app script and runs `node --check` + the harness for all 8 regions (all pass).
+- `merge_fills.py` written and run. It is idempotent: re-run after appending lines to any `fill_<id>.jsonl`.
+- Property gaps fetched by script (`fetch_prop.py`, exact figures, 8 s pacing). Still no house data: Pialligo (ACT); Brinkin, The Gardens, Palmerston City, Mitchell (NT); 3 in SA.
+- Market sentences (Cotality HVI, August 2026 results) added for Sydney, Brisbane, Perth and Adelaide (`set_market.py`). These were empty, not only SA.
+- SA crime switched to the official SA Police 2025-26 suburb CSV (data.sa.gov.au) with person/property split; SA rate 65.25 per 1,000 (`official_crime.py`).
+- NT: rate 135.17 per 1,000; Darwin/Palmerston region populations from ABS 2021 council areas.
+- ACT crime switched to official ACT Policing district figures (June 2026 spreadsheet, 12 months to June 2026), Caris's decision. The removal-company suburb figures were dropped: Gungahlin's 11 suburbs summed to 3,183 vs the official district total of 3,202. ACT rate 57.89. `act_districts.py`.
+- Site name changed to "Flight Path Australia" (page title, header, picker). Repo name and URL kept.
+- BUG FIXED (affects live Melbourne too): OpenStreetMap now tags Australian suburbs admin_level 9, not 10, so the suburb query returned nothing and an empty result was cached forever. Query now accepts 9 or 10, never caches an empty list, cache key bumped to `v3:subs`, old `v2:subs` removed.
+
+Still open:
+- Schools: SchoolRank blocks this machine (Vercel bot check / HTTP 429). SA (64 suburbs) and ACT (55) have no school scores; the request was handed to the claude.ai chat (`request_for_other_chat_schools.md`). Returned lines go into `fill_sa.jsonl` / `fill_act.jsonl`, then `merge_fills.py`, then `build_regions.py`.
+- If schools stay missing: the suburb card says "No rated schools listed" for a suburb with no data; the wording should say the scores are missing instead.
+- Spot-check suspicious house medians: Kingston ACT $615k, Phillip ACT $432k (mostly-unit suburbs), plus the existing list in section 4.6.
+- README, merge to main, house-check skill (section 4, steps 7 and 8).

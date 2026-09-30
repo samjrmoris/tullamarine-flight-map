@@ -18,7 +18,7 @@ global.fetch=async(url,opt)=>{if(!opt)return {ok:true,json:async()=>([{lon:'144.
    {type:'way',tags:{aeroway:'runway',ref:'16/34'},geometry:[{lon:144.829,lat:-37.652},{lon:144.838,lat:-37.687}]},{type:'way',tags:{aeroway:'aerodrome',icao:'YMEN'},geometry:[{lon:144.89,lat:-37.72},{lon:144.91,lat:-37.72},{lon:144.91,lat:-37.735},{lon:144.89,lat:-37.72}]},{type:'way',tags:{aeroway:'runway',ref:'08/26'},geometry:[{lon:144.892,lat:-37.729},{lon:144.913,lat:-37.726}]},{type:'way',tags:{aeroway:'runway',ref:'09/27'},geometry:[{lon:144.823,lat:-37.660},{lon:144.848,lat:-37.664}]}];}
  else if(global.__FAKESUBS)els=global.__FAKESUBS; else els=[{type:'relation',tags:{name:'Keilor'},members:[{type:'way',role:'outer',geometry:sq(144.835,-37.718,0.012)}]},{type:'relation',tags:{name:'Caroline Springs'},members:[{type:'way',role:'outer',geometry:sq(144.736,-37.741,0.015)}]}];
  return {ok:true,json:async()=>({elements:els})};};
-const REGION_FILE=process.env.REGION_FILE||'/home/claude/tullamarine-flight-map/regions/vic.js';
+const REGION_FILE=process.env.REGION_FILE||require('path').join(__dirname,'..','..','regions','vic.js');
 eval(fs.readFileSync(REGION_FILE,'utf8'));
 if(!window.REGION)throw new Error('region file did not set window.REGION');
 {const R=window.REGION;const names=Object.keys(R.prop.data).concat(Object.keys(R.crime.data));const uniq=[...new Set(names)].slice(0,6);

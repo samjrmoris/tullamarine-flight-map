@@ -1,6 +1,6 @@
 region qld Brisbane Flight Path Map
 layers tracks,drops,corridors,hdrop,hdot,htxt,ring-pulse,trails,shadows,planes3d,refpin,reftxt
-subs features 
+subs features Hendra:undefined Clayfield:undefined Ascot:undefined Hamilton:undefined Nundah:undefined Wavell Heights:undefined Under Approach:undefined
 apt ring pts 13
 FLOWB {"19":190,"01":10} paths 16 future paths 0
 subs Hendra:52 | Clayfield:56 | Ascot:56 | Hamilton:55 | Nundah:61 | Wavell Heights:64 | Under Approach:78

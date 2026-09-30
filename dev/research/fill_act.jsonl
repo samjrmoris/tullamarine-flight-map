@@ -49,3 +49,225 @@
 {"n":"Farrer","crime":[95,3787,4,19]}
 {"n":"Pialligo","prop":null}
 {"n":"Campbell","prop":[1720000,0.88,2.66,980]}
+{"n": "Reid", "prop": [1750000, -42.44, 2.5, 885]}
+{"n": "Turner", "prop": [1950000, 7.22, 2.25, 775]}
+{"n": "Ainslie", "prop": [1400000, -3.61, 2.82, 750]}
+{"n": "Hackett", "prop": [1252500, -10.85, 2.86, 760]}
+{"n": "Watson", "prop": [1175000, 10.85, 3.34, 700]}
+{"n": "Downer", "prop": [1220000, 5.95, 3.14, 720]}
+{"n": "Dickson", "prop": [1115000, 5.31, 3.4, 750]}
+{"n": "Lyneham", "prop": [1275000, 33.51, 3.18, 692]}
+{"n": "Kingston", "prop": [615000, -10.87, 3.95, 690]}
+{"n": "Griffith", "prop": [2131000, 8.45, 2.2, 780]}
+{"n": "Narrabundah", "prop": [1365000, 10.75, 3.0, 780]}
+{"n": "Red Hill", "prop": [2468000, 16.14, 2.36, 1160]}
+{"n": "Gordon", "prop": [887500, -0.84, 4.12, 675]}
+{"n": "Conder", "prop": [900000, -1.64, 4.28, 720]}
+{"n": "Banks", "prop": [922500, 23.0, 4.3, 670]}
+{"n": "Calwell", "prop": [925000, 10.12, 4.16, 670]}
+{"n": "Theodore", "prop": [900000, 4.05, 4.17, 680]}
+{"n": "Isabella Plains", "prop": [857000, 2.02, 4.41, 650]}
+{"n": "Chisholm", "prop": [910000, 5.81, 4.28, 725]}
+{"n": "Gowrie", "prop": [1000000, 1.39, 4.15, 782]}
+{"n": "Fadden", "prop": [1194500, 8.59, 3.75, 790]}
+{"n": "Macarthur", "prop": [1042000, 5.25, null, null]}
+{"n": "Wanniassa", "prop": [907500, 5.22, 4.15, 680]}
+{"n": "Kambah", "prop": [905000, 4.56, 3.98, 680]}
+{"n": "Gungahlin", "prop": [1051750, 15.01, 4.06, 750]}
+{"n": "Franklin", "prop": [1095500, 8.47, 3.77, 800]}
+{"n": "Harrison", "prop": [1050000, 5.47, 3.9, 790]}
+{"n": "Crace", "prop": [1105000, -3.49, 3.86, 760]}
+{"n": "Forde", "prop": [1132500, 6.34, 3.69, 850]}
+{"n": "Bonner", "prop": [1000000, 7.7, 4.13, 700]}
+{"n": "Casey", "prop": [900000, -6.25, 4.12, 700]}
+{"n": "Ngunnawal", "prop": [835250, 11.37, 4.25, 655]}
+{"n": "Amaroo", "prop": [1025000, 7.33, 3.91, 750]}
+{"n": "Throsby", "prop": [1150000, 0.0, 3.82, 825]}
+{"n": "Taylor", "prop": [1052000, 3.8, 4.02, 825]}
+{"n": "Belconnen", "prop": [628500, 6.98, 5.5, 580]}
+{"n": "Bruce", "prop": [1230000, 47.47, 3.77, 790]}
+{"n": "Macquarie", "prop": [1100000, 15.79, 3.57, 670]}
+{"n": "Page", "prop": [842500, 0.6, 3.94, 660]}
+{"n": "Kaleen", "prop": [1020000, 2.51, 3.68, 700]}
+{"n": "Giralang", "prop": [965000, 9.04, 3.78, 715]}
+{"n": "Evatt", "prop": [875000, 0.17, 4.03, 665]}
+{"n": "Florey", "prop": [975000, 22.18, 4.02, 660]}
+{"n": "Holt", "prop": [810000, -2.41, 4.37, 660]}
+{"n": "Dunlop", "prop": [910000, 7.37, 4.22, 720]}
+{"n": "Coombs", "prop": [1005000, 2.55, 4.18, 910]}
+{"n": "Wright", "prop": [1200000, -4.23, 4.09, 980]}
+{"n": "Denman Prospect", "prop": [1200000, 20.3, 3.9, 1000]}
+{"n": "Phillip", "prop": [432000, -15.44, 5.32, 615]}
+{"n": "Mawson", "prop": [1185000, 5.33, 3.48, 710]}
+{"n": "Curtin", "prop": [1400000, 3.32, 2.92, 800]}
+{"n": "Farrer", "prop": [1292500, 0.58, 3.51, 748]}
+{"n": "O'Connor", "prop": [1590000, 8.72, 2.54, 750]}
+{"n": "Campbell", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Reid", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Braddon", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Turner", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Ainslie", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Hackett", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Watson", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Downer", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Dickson", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Lyneham", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "O'Connor", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Kingston", "crime": [2171, 31592, 271, 1196, "Inner South police district"]}
+{"n": "Griffith", "crime": [2171, 31592, 271, 1196, "Inner South police district"]}
+{"n": "Narrabundah", "crime": [2171, 31592, 271, 1196, "Inner South police district"]}
+{"n": "Red Hill", "crime": [2171, 31592, 271, 1196, "Inner South police district"]}
+{"n": "Gordon", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Conder", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Banks", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Calwell", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Theodore", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Isabella Plains", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Chisholm", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Gowrie", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Fadden", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Macarthur", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Wanniassa", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Kambah", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Gungahlin", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Franklin", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Harrison", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Crace", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Forde", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Bonner", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Casey", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Ngunnawal", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Amaroo", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Throsby", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Taylor", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Belconnen", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Bruce", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Macquarie", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Page", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Kaleen", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Giralang", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Evatt", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Florey", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Holt", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Dunlop", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Coombs", "crime": [549, 11435, 82, 243, "Molonglo District police district"]}
+{"n": "Wright", "crime": [549, 11435, 82, 243, "Molonglo District police district"]}
+{"n": "Denman Prospect", "crime": [549, 11435, 82, 243, "Molonglo District police district"]}
+{"n": "Phillip", "crime": [2304, 39279, 387, 1184, "Woden police district"]}
+{"n": "Mawson", "crime": [2304, 39279, 387, 1184, "Woden police district"]}
+{"n": "Curtin", "crime": [2304, 39279, 387, 1184, "Woden police district"]}
+{"n": "Farrer", "crime": [2304, 39279, 387, 1184, "Woden police district"]}
+{"n": "Pialligo", "crime": null}
+{"n": "_meta", "name": "ACT Policing offence statistics by police district (June 2026 monthly download)", "url": "https://police.act.gov.au/__data/assets/excel_doc/0006/336174/June26-Website-Stats-Monthy-Download.xlsx", "period": "12 months, July 2025 to June 2026", "level": "district", "stateRatePer1000": 57.89, "stateRateSource": "26,311 offences ACT-wide (traffic infringements and road collisions excluded) / 454,499 residents (ABS 2021 Census) = 57.89 per 1,000", "notes": "ACT Policing publishes offences by police district, not by suburb. Every suburb carries its whole district figures; district populations are the matching ABS 2021 Census SA3 areas (Inner North = North Canberra, Inner South = South Canberra, Woden = Woden Valley). Pialligo sits in ACT Policing's \"Other Areas\" group, so it has no figure. Suburb figures compiled by a third party (northremovals.com.au) were dropped because they did not reconcile with the official district totals."}
+{"n": "Campbell", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Reid", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Braddon", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Turner", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Ainslie", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Hackett", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Watson", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Downer", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Dickson", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Lyneham", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "O'Connor", "crime": [6738, 61188, 995, 3600, "Inner North police district"]}
+{"n": "Kingston", "crime": [2171, 31592, 271, 1196, "Inner South police district"]}
+{"n": "Griffith", "crime": [2171, 31592, 271, 1196, "Inner South police district"]}
+{"n": "Narrabundah", "crime": [2171, 31592, 271, 1196, "Inner South police district"]}
+{"n": "Red Hill", "crime": [2171, 31592, 271, 1196, "Inner South police district"]}
+{"n": "Gordon", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Conder", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Banks", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Calwell", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Theodore", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Isabella Plains", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Chisholm", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Gowrie", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Fadden", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Macarthur", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Wanniassa", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Kambah", "crime": [4380, 89461, 766, 2019, "Tuggeranong police district"]}
+{"n": "Gungahlin", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Franklin", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Harrison", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Crace", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Forde", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Bonner", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Casey", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Ngunnawal", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Amaroo", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Throsby", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Taylor", "crime": [3202, 87682, 639, 1578, "Gungahlin police district"]}
+{"n": "Belconnen", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Bruce", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Macquarie", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Page", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Kaleen", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Giralang", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Evatt", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Florey", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Holt", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Dunlop", "crime": [5765, 106061, 1023, 3127, "Belconnen police district"]}
+{"n": "Coombs", "crime": [549, 11435, 82, 243, "Molonglo police district"]}
+{"n": "Wright", "crime": [549, 11435, 82, 243, "Molonglo police district"]}
+{"n": "Denman Prospect", "crime": [549, 11435, 82, 243, "Molonglo police district"]}
+{"n": "Phillip", "crime": [2304, 39279, 387, 1184, "Woden police district"]}
+{"n": "Mawson", "crime": [2304, 39279, 387, 1184, "Woden police district"]}
+{"n": "Curtin", "crime": [2304, 39279, 387, 1184, "Woden police district"]}
+{"n": "Farrer", "crime": [2304, 39279, 387, 1184, "Woden police district"]}
+{"n": "Pialligo", "crime": null}
+{"n": "_meta", "name": "ACT Policing offence statistics by police district (June 2026 monthly download)", "url": "https://police.act.gov.au/__data/assets/excel_doc/0006/336174/June26-Website-Stats-Monthy-Download.xlsx", "period": "12 months, July 2025 to June 2026", "level": "district", "stateRatePer1000": 57.89, "stateRateSource": "26,311 offences ACT-wide (traffic infringements and road collisions excluded) / 454,499 residents (ABS 2021 Census) = 57.89 per 1,000", "notes": "ACT Policing publishes offences by police district, not by suburb. Every suburb carries its whole district figures; district populations are the matching ABS 2021 Census SA3 areas (Inner North = North Canberra, Inner South = South Canberra, Woden = Woden Valley). Pialligo sits in ACT Policing's \"Other Areas\" group, so it has no figure. Suburb figures compiled by a third party (northremovals.com.au) were dropped because they did not reconcile with the official district totals."}
+{"n": "Pialligo", "schools": null}
+{"n": "Campbell", "schools": null}
+{"n": "Reid", "schools": null}
+{"n": "Turner", "schools": null}
+{"n": "Ainslie", "schools": null}
+{"n": "Hackett", "schools": null}
+{"n": "Watson", "schools": null}
+{"n": "Downer", "schools": null}
+{"n": "Dickson", "schools": null}
+{"n": "Lyneham", "schools": null}
+{"n": "O'Connor", "schools": null}
+{"n": "Kingston", "schools": null}
+{"n": "Griffith", "schools": null}
+{"n": "Narrabundah", "schools": null}
+{"n": "Red Hill", "schools": null}
+{"n": "Gordon", "schools": null}
+{"n": "Conder", "schools": null}
+{"n": "Banks", "schools": null}
+{"n": "Calwell", "schools": null}
+{"n": "Theodore", "schools": null}
+{"n": "Isabella Plains", "schools": null}
+{"n": "Chisholm", "schools": null}
+{"n": "Gowrie", "schools": null}
+{"n": "Fadden", "schools": null}
+{"n": "Macarthur", "schools": null}
+{"n": "Wanniassa", "schools": null}
+{"n": "Kambah", "schools": null}
+{"n": "Gungahlin", "schools": null}
+{"n": "Franklin", "schools": null}
+{"n": "Harrison", "schools": null}
+{"n": "Crace", "schools": null}
+{"n": "Forde", "schools": null}
+{"n": "Bonner", "schools": null}
+{"n": "Casey", "schools": null}
+{"n": "Ngunnawal", "schools": null}
+{"n": "Amaroo", "schools": null}
+{"n": "Throsby", "schools": null}
+{"n": "Taylor", "schools": null}
+{"n": "Belconnen", "schools": null}
+{"n": "Bruce", "schools": null}
+{"n": "Macquarie", "schools": null}
+{"n": "Page", "schools": null}
+{"n": "Kaleen", "schools": null}
+{"n": "Giralang", "schools": null}
+{"n": "Evatt", "schools": null}
+{"n": "Florey", "schools": null}
+{"n": "Holt", "schools": null}
+{"n": "Dunlop", "schools": null}
+{"n": "Coombs", "schools": null}
+{"n": "Wright", "schools": null}
+{"n": "Denman Prospect", "schools": null}
+{"n": "Phillip", "schools": null}
+{"n": "Mawson", "schools": null}
+{"n": "Curtin", "schools": null}
+{"n": "Farrer", "schools": null}
