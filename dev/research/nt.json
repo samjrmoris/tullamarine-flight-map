@@ -821,12 +821,7 @@
     "property": 5531,
     "area": "Darwin police reporting region"
    },
-   "prop": {
-    "median": null,
-    "growth": null,
-    "yield": 4.61,
-    "rent": null
-   },
+   "prop": null,
    "schools": [],
    "mall": null,
    "growthArea": false,

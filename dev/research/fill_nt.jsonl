@@ -134,3 +134,4 @@
 {"n": "Bellamack", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
 {"n": "Mitchell", "crime": [3839, 37247, 1375, 2464, "Palmerston police reporting region"]}
 {"n": "_meta", "stateRatePer1000": 135.17, "stateRateSource": "NT total 31,441 offences (12,595 against the person + 18,846 property), 12 months to January 2026 (PFES Table 3) / 232,605 residents (ABS 2021 Census) = 135.17 per 1,000. Region populations: City of Darwin 80,530 and City of Palmerston 37,247 (ABS 2021 Census, council areas used as the closest match to the police regions)."}
+{"n":"Winnellie","prop":null}
