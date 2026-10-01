@@ -98,6 +98,21 @@ def fix_runway(rw, toL, warn):
 def js(v):
     return json.dumps(v, ensure_ascii=False)
 
+def school_coords():
+    """Official ACARA [lon, lat] per (region, school, suburb) from audit/schools_check.json (check_schools.py).
+    Only unambiguous matches: no 'not found', other-suburb or shared-name issue."""
+    p = os.path.join(S, 'audit', 'schools_check.json')
+    if not os.path.exists(p):
+        return {}
+    out = {}
+    for rid, res in json.load(open(p, encoding='utf-8'))['schools'].items():
+        for x in res:
+            a = x['acara']
+            if a and a['lat'] and not any(k in i for i in x['issues'] for k in ('NOT FOUND', 'suburb:', 'share')):
+                out[(rid, x['name'], x['suburb'])] = [round(a['lng'], 5), round(a['lat'], 5)]
+    return out
+SCHOOL_LL = school_coords()
+
 def build(rid):
     c = CONF[rid]; warn = []
     inf = load(c['infra'][0])[c['infra'][1]]
@@ -180,7 +195,11 @@ def build(rid):
             PR[k] = [p['median'], p['growth'], p.get('yield'), p.get('rent')]
         for sc in (s.get('schools') or []):
             if len(sc) >= 4 and isinstance(sc[3], (int, float)):
-                SC.append([sc[0], s['name'], sc[1] if sc[1] in 'psc' else 's', sc[2] if sc[2] in 'gci' else 'g', sc[3]])
+                row = [sc[0], s['name'], sc[1] if sc[1] in 'psc' else 's', sc[2] if sc[2] in 'gci' else 'g', sc[3]]
+                ll = SCHOOL_LL.get((rid, sc[0], s['name']))
+                if ll:
+                    row.append(ll)
+                SC.append(row)
         if s.get('mall'):
             MALLS[k] = s['mall']
         if s.get('growthArea'):
@@ -201,7 +220,9 @@ def build(rid):
     for d in inf['dataCentres']:
         addr = re.sub(r'\s+(NSW|QLD|WA|SA|TAS|ACT|NT|VIC)(\s+\d{4})?$', '', d[2].strip())
         row = [d[0], d[1], addr, 'plan' if d[3] == 'plan' else 'live']
-        if len(d) > 4 and d[4]:
+        if len(d) > 5 and d[5]:
+            row += [d[4] or '', d[5]]   # verified [lon, lat]: the map skips geocoding
+        elif len(d) > 4 and d[4]:
             row.append(d[4])
         dcs.append(row)
     city = inf['city']

@@ -1010,8 +1010,8 @@ async function loadDCs(){
   if(!osm){try{const j=await overpass('[out:json][timeout:60];(nwr["telecom"="data_center"]'+BB(R.dcBbox||R.bbox)+';nwr["building"="data_center"]'+BB(R.dcBbox||R.bbox)+';);out center tags;');
     osm=j.elements.map(e=>({lat:e.lat||(e.center&&e.center.lat),lng:e.lon||(e.center&&e.center.lon),name:(e.tags&&(e.tags.name||e.tags.operator))||'Data centre',op:(e.tags&&e.tags.operator)||''})).filter(d=>d.lat&&d.lng);cacheSet(CK('v1:dcosm'),osm);}catch(e){osm=[];}}
   DCPTS=[];
-  for(const [name,op,addr,st,note] of DCS){
-    let g=cached[addr];
+  for(const [name,op,addr,st,note,ll] of DCS){
+    let g=ll?{lng:ll[0],lat:ll[1]}:cached[addr];   // verified coordinates skip the slow address lookup
     if(g===undefined){try{g=await geocode(addr);await sleep(1100);}catch(e){g=null;}cached[addr]=g;cacheSet(CK('v1:dcgeo'),cached);}
     if(!g){const sub=addr.split(',').pop().trim();let gs=cached['@'+sub];if(gs===undefined){try{gs=await geocode(sub);await sleep(1100);}catch(e){gs=null;}cached['@'+sub]=gs;cacheSet(CK('v1:dcgeo'),cached);}g=gs;}
     if(g){DCPTS.push({lng:g.lng,lat:g.lat,name,op,st,addr,note:note||'',src:st==='plan'?(R.dcPlanSource||R.dcSource||''):(R.dcSource||'')});renderDCs();}
@@ -1040,8 +1040,12 @@ async function loadSchools(){
   const byName={};osm.forEach(o=>{(byName[nk(o.name)]=byName[nk(o.name)]||[]).push(o);});
   const used=new Set();SCHPTS=[];
   const unmatched=[];
-  SCH.forEach(([name,sub,lv,sec,score])=>{
+  SCH.forEach(([name,sub,lv,sec,score,ll])=>{
     const cands=byName[nk(name)]||[];
+    if(ll){   // official ACARA location: place it there and hide the OpenStreetMap copy
+      cands.forEach(o=>{if(dist(toL(o.lng,o.lat),toL(ll[0],ll[1]))<1.5)used.add(o);});
+      SCHPTS.push({lng:ll[0],lat:ll[1],name,sub,lv,sec,score});return;
+    }
     let best=null,bd=Infinity;const subC=SUBS.find(x=>x.name.toLowerCase()===sub.toLowerCase());
     cands.forEach(o=>{const d=subC?dist(toL(o.lng,o.lat),subC.label):0;if(d<bd){bd=d;best=o;}});
     if(best&&bd<8){used.add(best);SCHPTS.push({lng:best.lng,lat:best.lat,name,sub,lv,sec,score});}

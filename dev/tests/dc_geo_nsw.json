@@ -1,0 +1,623 @@
+[
+ {
+  "name": "Digital Realty SYD10",
+  "addr": "1-12 Templar Road, Erskine Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8162224,
+  "lng": 150.7958524,
+  "found": "Digital Erskine Park 1, 1-12, Templar Road, Erskine Park, Sydney, New South Wales, 2759, Australia"
+ },
+ {
+  "name": "Digital Realty SYD11",
+  "addr": "13-23 Templar Road, Erskine Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8171398,
+  "lng": 150.7954713,
+  "found": "Digital Erskine Park 2, 13-23, Templar Road, Erskine Park, Sydney, New South Wales, 2759, Australia"
+ },
+ {
+  "name": "Digital Realty SYD14",
+  "addr": "16 Lockwood Road, Erskine Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8175506,
+  "lng": 150.8095435,
+  "found": "Lockwood Road, Erskine Park, Sydney, New South Wales, 2759, Australia"
+ },
+ {
+  "name": "Digital Realty SYD13",
+  "addr": "23-25 Waterloo Road, North Ryde",
+  "st": "live",
+  "how": "suburb only",
+  "lat": -33.7975472,
+  "lng": 151.127306,
+  "found": "North Ryde, Sydney, New South Wales, Australia"
+ },
+ {
+  "name": "Rackspace Sydney",
+  "addr": "1-11 Templar Road, Erskine Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8209505,
+  "lng": 150.7948072,
+  "found": "Templar Road, Erskine Park, Sydney, New South Wales, 2759, Australia"
+ },
+ {
+  "name": "STACK SYD01 campus",
+  "addr": "78 Lockwood Road, Erskine Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8175506,
+  "lng": 150.8095435,
+  "found": "Lockwood Road, Erskine Park, Sydney, New South Wales, 2759, Australia"
+ },
+ {
+  "name": "NEXTDC S1",
+  "addr": "4 Eden Park Drive, Macquarie Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.7852156,
+  "lng": 151.1314818,
+  "found": "4, Eden Park Drive, Macquarie Park, Sydney, New South Wales, 2113, Australia"
+ },
+ {
+  "name": "NEXTDC S2",
+  "addr": "6-8 Giffnock Avenue, Macquarie Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.7851676,
+  "lng": 151.1252756,
+  "found": "NEXTDC - S2 Sydney, 6-8, Giffnock Avenue, Macquarie Park, Sydney, New South Wales, 2113, Australia"
+ },
+ {
+  "name": "NEXTDC S3",
+  "addr": "2 Broadcast Way, Artarmon",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8190826,
+  "lng": 151.1845739,
+  "found": "NEXTDC - S3 Sydney, 2, Broadcast Way, Gore Hill, Artarmon, Lower North Shore, Sydney, New South Wales, 2064, Australia"
+ },
+ {
+  "name": "NEXTDC S6",
+  "addr": "3 Broadcast Way, Artarmon",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8194853,
+  "lng": 151.1860083,
+  "found": "NEXTDC - S6 Sydney, 3, Broadcast Way, Artarmon, Lower North Shore, Sydney, New South Wales, 2064, Australia"
+ },
+ {
+  "name": "NEXTDC S4",
+  "addr": "3-5 Johnston Crescent, Horsley Park",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8319481,
+  "lng": 150.8220389,
+  "found": "Johnston Crescent, Horsley Park, Sydney, New South Wales, 2175, Australia"
+ },
+ {
+  "name": "NEXTDC S5",
+  "addr": "Macquarie Park",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.7814961,
+  "lng": 151.1256747,
+  "found": "Macquarie Park, Sydney, New South Wales, 2113, Australia"
+ },
+ {
+  "name": "NEXTDC S7 (with OpenAI)",
+  "addr": "Eastern Creek",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8059423,
+  "lng": 150.849956,
+  "found": "Eastern Creek, Sydney, New South Wales, 2766, Australia"
+ },
+ {
+  "name": "DigiCo SYD1 (former Global Switch)",
+  "addr": "400 Harris Street, Ultimo",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8757445,
+  "lng": 151.197778,
+  "found": "DigiCo SYD1, 400, Harris Street, Ultimo, Sydney, New South Wales, 2007, Australia"
+ },
+ {
+  "name": "DigiCo SYD2",
+  "addr": "5 Broadcast Way, Artarmon",
+  "st": "live",
+  "how": "address",
+  "lat": -33.818966,
+  "lng": 151.1850665,
+  "found": "Broadcast Way, Gore Hill, Artarmon, Lower North Shore, Sydney, New South Wales, 2064, Australia"
+ },
+ {
+  "name": "Keppel DC Sydney Gore Hill",
+  "addr": "5 Broadcast Way, Artarmon",
+  "st": "live",
+  "how": "address",
+  "lat": -33.818966,
+  "lng": 151.1850665,
+  "found": "Broadcast Way, Gore Hill, Artarmon, Lower North Shore, Sydney, New South Wales, 2064, Australia"
+ },
+ {
+  "name": "Goodman SYD01",
+  "addr": "2-8 Lanceley Place, Artarmon",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8181217,
+  "lng": 151.1868672,
+  "found": "Lanceley Place, Gore Hill, Artarmon, Lower North Shore, Sydney, New South Wales, 2064, Australia"
+ },
+ {
+  "name": "Equinix SY1/SY2",
+  "addr": "639 Gardeners Road, Mascot",
+  "st": "live",
+  "how": "address",
+  "lat": -33.9215514,
+  "lng": 151.1881363,
+  "found": "Equinix International Business Exchange SY2 Data Center, 639, Gardeners Road, Mascot, Sydney, New South Wales, 2020, Australia"
+ },
+ {
+  "name": "Summit Sydney",
+  "addr": "639 Gardeners Road, Mascot",
+  "st": "live",
+  "how": "address",
+  "lat": -33.9215514,
+  "lng": 151.1881363,
+  "found": "Equinix International Business Exchange SY2 Data Center, 639, Gardeners Road, Mascot, Sydney, New South Wales, 2020, Australia"
+ },
+ {
+  "name": "Equinix SY3",
+  "addr": "47 Bourke Road, Alexandria",
+  "st": "live",
+  "how": "address",
+  "lat": -33.9116975,
+  "lng": 151.1928148,
+  "found": "Equinix International Business Exchange SY3 Data Center, 47, Bourke Road, Alexandria, Sydney, New South Wales, 2015, Australia"
+ },
+ {
+  "name": "Equinix SY4/SY5",
+  "addr": "200 Bourke Road, Alexandria",
+  "st": "live",
+  "how": "address",
+  "lat": -33.919347,
+  "lng": 151.1899815,
+  "found": "Equinix SY5, 200, Bourke Road, Alexandria, Sydney, New South Wales, 2015, Australia"
+ },
+ {
+  "name": "Equinix SY6",
+  "addr": "8-14 Egerton Street, Silverwater",
+  "st": "live",
+  "how": "address",
+  "lat": -33.836684,
+  "lng": 151.053282,
+  "found": "8-14, Egerton Street, Silverwater, Sydney, New South Wales, 2128, Australia"
+ },
+ {
+  "name": "Equinix SY9x",
+  "addr": "8A Grand Avenue, Rosehill",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8194379,
+  "lng": 151.0226176,
+  "found": "Grand Avenue, Rosehill, Sydney, New South Wales, 2142, Australia"
+ },
+ {
+  "name": "Equinix SY10x",
+  "addr": "Rosehill",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8263889,
+  "lng": 151.0305556,
+  "found": "Rosehill, Sydney, New South Wales, Australia"
+ },
+ {
+  "name": "Macquarie IC1",
+  "addr": "477 Pitt Street, Sydney",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8804349,
+  "lng": 151.2062268,
+  "found": "477, Pitt Street, Thai Town, Haymarket, Sydney, New South Wales, 2000, Australia"
+ },
+ {
+  "name": "Macquarie IC2/IC3",
+  "addr": "17-23 Talavera Road, Macquarie Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.7809639,
+  "lng": 151.1268623,
+  "found": "Intellicentre 3 Super West, 17-23, Talavera Road, Macquarie Park, Sydney, New South Wales, 2113, Australia"
+ },
+ {
+  "name": "Goodman Macquarie Park",
+  "addr": "4-10 Talavera Road, Macquarie Park",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.7826211,
+  "lng": 151.1316306,
+  "found": "Talavera Road, Macquarie Park, Sydney, New South Wales, 2113, Australia"
+ },
+ {
+  "name": "EdgeConneX SYD1",
+  "addr": "1-5 Khartoum Road, Macquarie Park",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.781037,
+  "lng": 151.125148,
+  "found": "1-5, Khartoum Road, Macquarie Park, Sydney, New South Wales, 2113, Australia"
+ },
+ {
+  "name": "AWS Khartoum Road",
+  "addr": "11-17 Khartoum Road, Macquarie Park",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.7793486,
+  "lng": 151.1256309,
+  "found": "11-17, Khartoum Road, Macquarie Park, Sydney, New South Wales, 2113, Australia"
+ },
+ {
+  "name": "Julius Avenue Data Centre",
+  "addr": "6-8 Julius Avenue, North Ryde",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.798616,
+  "lng": 151.143196,
+  "found": "6-8, Julius Avenue, North Ryde, Sydney, New South Wales, 2113, Australia"
+ },
+ {
+  "name": "Unisys Rhodes",
+  "addr": "1G Homebush Bay Drive, Rhodes",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8354221,
+  "lng": 151.0872534,
+  "found": "G, 1G, Homebush Bay Drive, Rhodes, Inner West, Sydney, New South Wales, 2138, Australia"
+ },
+ {
+  "name": "Fujitsu Homebush",
+  "addr": "Sydney Olympic Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.842903,
+  "lng": 151.072535,
+  "found": "Sydney Olympic Park, Sydney, New South Wales, 2127, Australia"
+ },
+ {
+  "name": "Fujitsu Western Sydney",
+  "addr": "Greystanes",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8262187,
+  "lng": 150.9414378,
+  "found": "Greystanes, Sydney, New South Wales, 2145, Australia"
+ },
+ {
+  "name": "Vocus Baulkham Hills",
+  "addr": "12 Brookhollow Avenue, Norwest",
+  "st": "live",
+  "how": "address",
+  "lat": -33.7336966,
+  "lng": 150.9698614,
+  "found": "Vocus Sydney SYD02, 12, Brookhollow Avenue, Norwest, Sydney, New South Wales, 2153, Australia"
+ },
+ {
+  "name": "GreenSquareDC SYD1",
+  "addr": "3 Brookhollow Avenue, Norwest",
+  "st": "live",
+  "how": "address",
+  "lat": -33.7324249,
+  "lng": 150.9674232,
+  "found": "3, Brookhollow Avenue, Norwest, Sydney, New South Wales, 2153, Australia"
+ },
+ {
+  "name": "Vocus Haymarket",
+  "addr": "187 Thomas Street, Haymarket",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8812947,
+  "lng": 151.2040233,
+  "found": "187, Thomas Street, Chinatown, Haymarket, Sydney, New South Wales, 2000, Australia"
+ },
+ {
+  "name": "Vocus Glebe",
+  "addr": "30 Ross Street, Glebe",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8832038,
+  "lng": 151.1826709,
+  "found": "30, Ross Street, Forest Lodge, Inner West, Sydney, New South Wales, 2037, Australia"
+ },
+ {
+  "name": "Vocus SYD04",
+  "addr": "74 Mentmore Avenue, Rosebery",
+  "st": "live",
+  "how": "address",
+  "lat": -33.919505,
+  "lng": 151.2025795,
+  "found": "74, Mentmore Avenue, Rosebery, Sydney, New South Wales, 2018, Australia"
+ },
+ {
+  "name": "5G Networks Sydney",
+  "addr": "55 Pyrmont Bridge Road, Pyrmont",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8724106,
+  "lng": 151.1946353,
+  "found": "Verizon Data Centre, 55, Pyrmont Bridge Road, Pyrmont, Sydney, New South Wales, 2009, Australia"
+ },
+ {
+  "name": "Telstra St Leonards",
+  "addr": "4A Herbert Street, St Leonards",
+  "st": "live",
+  "how": "address",
+  "lat": -33.820995,
+  "lng": 151.1932407,
+  "found": "Herbert Street, St Leonards, Lower North Shore, Sydney, New South Wales, 2065, Australia"
+ },
+ {
+  "name": "St Leonards Corporate Centre (5GN, Interactive, Servers Australia)",
+  "addr": "39 Herbert Street, St Leonards",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8165909,
+  "lng": 151.1921743,
+  "found": "St Leonards Corporate Centre, 39, Herbert Street, Artarmon, Lower North Shore, Sydney, New South Wales, 2064, Australia"
+ },
+ {
+  "name": "12 Frederick Street",
+  "addr": "12 Frederick Street, St Leonards",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8187968,
+  "lng": 151.1896095,
+  "found": "12, Frederick Street, Gore Hill, St Leonards, Lower North Shore, Sydney, New South Wales, 2065, Australia"
+ },
+ {
+  "name": "Telstra Sydney (Pitt/Liverpool St exchange)",
+  "addr": "133 Liverpool Street, Sydney",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8781109,
+  "lng": 151.2202115,
+  "found": "Liverpool Street, Darlinghurst, Sydney, New South Wales, 2010, Australia"
+ },
+ {
+  "name": "Telstra Chippendale",
+  "addr": "184-200 Broadway, Chippendale",
+  "st": "live",
+  "how": "address",
+  "lat": -33.884782,
+  "lng": 151.1954743,
+  "found": "Sydney International Exchange, 184-200, Broadway, Chippendale, Sydney, New South Wales, 2008, Australia"
+ },
+ {
+  "name": "Amaze DataHaven",
+  "addr": "340 George Street, Waterloo",
+  "st": "live",
+  "how": "address",
+  "lat": -33.9022428,
+  "lng": 151.2034395,
+  "found": "George Street, Waterloo, Sydney, New South Wales, 2017, Australia"
+ },
+ {
+  "name": "22 O'Riordan Street",
+  "addr": "22 O'Riordan Street, Alexandria",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.9080561,
+  "lng": 151.2012566,
+  "found": "22, O'Riordan Street, Alexandria, Sydney, New South Wales, 2015, Australia"
+ },
+ {
+  "name": "AirTrunk SYD1",
+  "addr": "35 Huntingwood Drive, Huntingwood",
+  "st": "live",
+  "how": "address",
+  "lat": -33.7993607,
+  "lng": 150.881822,
+  "found": "AirTrunk SYD1 Sydney West, 35, Huntingwood Drive, Huntingwood, Sydney, New South Wales, 2148, Australia"
+ },
+ {
+  "name": "AirTrunk SYD3",
+  "addr": "Huntingwood",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.797973,
+  "lng": 150.881592,
+  "found": "Huntingwood, Sydney, New South Wales, Australia"
+ },
+ {
+  "name": "AirTrunk SYD2",
+  "addr": "Lane Cove West",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8119396,
+  "lng": 151.150078,
+  "found": "Lane Cove West, Lower North Shore, Sydney, New South Wales, Australia"
+ },
+ {
+  "name": "Goodman Project Mars",
+  "addr": "12 Mars Road, Lane Cove West",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8109146,
+  "lng": 151.1490018,
+  "found": "Mars Road, Lane Cove West, Lower North Shore, Sydney, New South Wales, 2066, Australia"
+ },
+ {
+  "name": "AirTrunk Kemps Creek",
+  "addr": "Kemps Creek",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8813335,
+  "lng": 150.7837238,
+  "found": "Kemps Creek, Sydney, New South Wales, Australia"
+ },
+ {
+  "name": "Microsoft Kemps Creek (SYD05-07)",
+  "addr": "769 Mamre Road, Kemps Creek",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8724679,
+  "lng": 150.7996922,
+  "found": "Mamre Road, Mount Vernon, Sydney, New South Wales, 2178, Australia"
+ },
+ {
+  "name": "Microsoft Huntingwood",
+  "addr": "6 Honeman Close, Huntingwood",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.7994487,
+  "lng": 150.8947886,
+  "found": "Honeman Close, Huntingwood, Sydney, New South Wales, 2148, Australia"
+ },
+ {
+  "name": "Microsoft Seven Hills",
+  "addr": "57 Station Road, Seven Hills",
+  "st": "live",
+  "how": "address",
+  "lat": -33.7750383,
+  "lng": 150.9446284,
+  "found": "Station Road, Seven Hills, Sydney, New South Wales, 2147, Australia"
+ },
+ {
+  "name": "CDC Eastern Creek (EC1-EC6)",
+  "addr": "17 Roberts Road, Eastern Creek",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8180601,
+  "lng": 150.8392245,
+  "found": "CDC Eastern Creek Campus EC1, 17, Roberts Road, Eastern Creek, Sydney, New South Wales, 2766, Australia"
+ },
+ {
+  "name": "Goodman Project Atlas",
+  "addr": "10 Roberts Road, Eastern Creek",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8148605,
+  "lng": 150.8382414,
+  "found": "Roberts Road, Eastern Creek, Sydney, New South Wales, 2766, Australia"
+ },
+ {
+  "name": "CDC Marsden Park",
+  "addr": "105-113 Hollinsworth Road, Marsden Park",
+  "st": "live",
+  "how": "address",
+  "lat": -33.7179046,
+  "lng": 150.8426356,
+  "found": "Hollinsworth Road, Marsden Park, Sydney, New South Wales, 2765, Australia"
+ },
+ {
+  "name": "CDC Kemps Creek KC1",
+  "addr": "871-901 Mamre Road, Kemps Creek",
+  "st": "plan",
+  "how": "suburb only",
+  "lat": -33.8813335,
+  "lng": 150.7837238,
+  "found": "Kemps Creek, Sydney, New South Wales, Australia"
+ },
+ {
+  "name": "ISPT Mamre Road campus",
+  "addr": "706-752 Mamre Road, Kemps Creek",
+  "st": "plan",
+  "how": "suburb only",
+  "lat": -33.8813335,
+  "lng": 150.7837238,
+  "found": "Kemps Creek, Sydney, New South Wales, Australia"
+ },
+ {
+  "name": "Stockland Aldington Road",
+  "addr": "90 Aldington Road, Kemps Creek",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8443319,
+  "lng": 150.7989115,
+  "found": "Aldington Road, Kemps Creek, Sydney, New South Wales, 2178, Australia"
+ },
+ {
+  "name": "Stockland Davis Road",
+  "addr": "2 Davis Road, Wetherill Park",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8367145,
+  "lng": 150.9094255,
+  "found": "Davis Road, Wetherill Park, Sydney, New South Wales, 2164, Australia"
+ },
+ {
+  "name": "EdgeConneX Wetherill Park",
+  "addr": "Wetherill Park",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8483333,
+  "lng": 150.9011111,
+  "found": "Wetherill Park, Sydney, New South Wales, 2164, Australia"
+ },
+ {
+  "name": "AWS Glendenning",
+  "addr": "2 Glendenning Road, Glendenning",
+  "st": "live",
+  "how": "address",
+  "lat": -33.7527813,
+  "lng": 150.8522141,
+  "found": "Glendenning Road, Glendenning, Sydney, New South Wales, 2761, Australia"
+ },
+ {
+  "name": "AWS Eastern Creek (William Dean St)",
+  "addr": "1 William Dean Street, Eastern Creek",
+  "st": "live",
+  "how": "address",
+  "lat": -33.794742,
+  "lng": 150.8694772,
+  "found": "AWS Asia Pacific (Sydney) Region Data Centre, 1, William Dean Street, Eastern Creek, Sydney, New South Wales, 2766, Australia"
+ },
+ {
+  "name": "AWS Eastern Creek Drive",
+  "addr": "10 Eastern Creek Drive, Eastern Creek",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8095596,
+  "lng": 150.8390354,
+  "found": "AWS Asia Pacific (Sydney) Region Data Centre, 10, Eastern Creek Drive, Eastern Creek, Sydney, New South Wales, 2766, Australia"
+ },
+ {
+  "name": "AWS Smeaton Grange",
+  "addr": "Bluett Drive, Smeaton Grange",
+  "st": "live",
+  "how": "address",
+  "lat": -34.0376897,
+  "lng": 150.7618924,
+  "found": "Bluett Drive, Smeaton Grange, Sydney, New South Wales, 2567, Australia"
+ },
+ {
+  "name": "DCI SYD01",
+  "addr": "90 Peter Brock Drive, Eastern Creek",
+  "st": "live",
+  "how": "address",
+  "lat": -33.8049826,
+  "lng": 150.8864992,
+  "found": "Sydney 01, 90, Peter Brock Drive, Eastern Creek, Sydney, New South Wales, 2766, Australia"
+ },
+ {
+  "name": "Goodman Project Pluto",
+  "addr": "132 McCredie Road, Guildford",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.8515697,
+  "lng": 150.9697138,
+  "found": "McCredie Road, Guildford West, Sydney, New South Wales, 2161, Australia"
+ },
+ {
+  "name": "Telstra/Doma Minchinbury",
+  "addr": "Minchinbury",
+  "st": "plan",
+  "how": "address",
+  "lat": -33.7866731,
+  "lng": 150.8272222,
+  "found": "Minchinbury, Sydney, New South Wales, Australia"
+ }
+]

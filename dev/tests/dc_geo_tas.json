@@ -1,0 +1,20 @@
+[
+ {
+  "name": "TasmaNet DC1",
+  "addr": "Hobart",
+  "st": "live",
+  "how": "address",
+  "lat": -42.8825088,
+  "lng": 147.3281233,
+  "found": "Hobart, Tasmania, Australia"
+ },
+ {
+  "name": "DXN Tasmania One (DXN-TAS01, formerly TasmaNet DC3)",
+  "addr": "Hobart",
+  "st": "live",
+  "how": "address",
+  "lat": -42.8825088,
+  "lng": 147.3281233,
+  "found": "Hobart, Tasmania, Australia"
+ }
+]

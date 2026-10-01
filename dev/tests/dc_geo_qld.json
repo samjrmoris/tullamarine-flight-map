@@ -1,0 +1,155 @@
+[
+ {
+  "name": "NEXTDC B1",
+  "addr": "20 Wharf Street, Brisbane City",
+  "st": "live",
+  "how": "address",
+  "lat": -27.4655251,
+  "lng": 153.0296519,
+  "found": "NEXTDC B1 Data Centre, 20, Wharf Street, Golden Triangle, Brisbane City, Brisbane, Queensland, 4000, Australia"
+ },
+ {
+  "name": "NEXTDC B2",
+  "addr": "454 St Pauls Terrace, Fortitude Valley",
+  "st": "live",
+  "how": "address",
+  "lat": -27.4537947,
+  "lng": 153.0331815,
+  "found": "454, Saint Pauls Terrace, Fortitude Valley, Brisbane, Queensland, 4006, Australia"
+ },
+ {
+  "name": "NEXTDC B2 expansion / HQ",
+  "addr": "St Pauls Terrace, Fortitude Valley",
+  "st": "plan",
+  "how": "address",
+  "lat": -27.4572559,
+  "lng": 153.0304133,
+  "found": "Saint Pauls Terrace, Fortitude Valley, Brisbane, Queensland, 4006, Australia"
+ },
+ {
+  "name": "Equinix BR1",
+  "addr": "54-58 Alfred Street, Fortitude Valley",
+  "st": "live",
+  "how": "address",
+  "lat": -27.4571781,
+  "lng": 153.0317893,
+  "found": "Alfred Street, Fortitude Valley, Brisbane, Queensland, 4006, Australia"
+ },
+ {
+  "name": "Brennan Brisbane",
+  "addr": "73 Amelia Street, Fortitude Valley",
+  "st": "live",
+  "how": "address",
+  "lat": -27.4543156,
+  "lng": 153.0305421,
+  "found": "73, Amelia Street, Fortitude Valley, Brisbane, Queensland, 4006, Australia"
+ },
+ {
+  "name": "5G Networks Brisbane",
+  "addr": "148 Brunswick Street, Fortitude Valley",
+  "st": "live",
+  "how": "address",
+  "lat": -27.4553684,
+  "lng": 153.0314782,
+  "found": "148, Brunswick Street, Fortitude Valley, Brisbane, Queensland, 4006, Australia"
+ },
+ {
+  "name": "Datacom Brisbane",
+  "addr": "501 Ann Street, Fortitude Valley",
+  "st": "live",
+  "how": "address",
+  "lat": -27.4617227,
+  "lng": 153.0321718,
+  "found": "501, Ann Street, Fortitude Valley, Brisbane, Queensland, 4006, Australia"
+ },
+ {
+  "name": "Vocus Brisbane",
+  "addr": "123 Eagle Street, Brisbane City",
+  "st": "live",
+  "how": "address",
+  "lat": -27.4671689,
+  "lng": 153.0304169,
+  "found": "Riverside Centre, 123, Eagle Street, Golden Triangle, Brisbane City, Brisbane, Queensland, 4000, Australia"
+ },
+ {
+  "name": "Servers Australia Brisbane B1",
+  "addr": "14 Finchley Street, Milton",
+  "st": "live",
+  "how": "address",
+  "lat": -27.4657286,
+  "lng": 153.0061108,
+  "found": "Pro AV Solutions QLD, 14, Finchley Street, Milton, Brisbane, Queensland, 4064, Australia"
+ },
+ {
+  "name": "DigiCo BNE1 (ex iseek Brisbane Airport)",
+  "addr": "2 Cycas Lane, Brisbane Airport",
+  "st": "live",
+  "how": "address",
+  "lat": -27.415859,
+  "lng": 153.0914555,
+  "found": "DigiCo BNE1, 2, Cycas Lane, Brisbane International Export Park, Brisbane Airport, Brisbane, Queensland, 4008, Australia"
+ },
+ {
+  "name": "iseek / DigiCo Brisbane Airport stage 2",
+  "addr": "2 Cycas Lane, Brisbane Airport",
+  "st": "plan",
+  "how": "address",
+  "lat": -27.415859,
+  "lng": 153.0914555,
+  "found": "DigiCo BNE1, 2, Cycas Lane, Brisbane International Export Park, Brisbane Airport, Brisbane, Queensland, 4008, Australia"
+ },
+ {
+  "name": "DigiCo Brisbane BNE (ex iseek Woolloongabba)",
+  "addr": "100 Ipswich Road, Woolloongabba",
+  "st": "live",
+  "how": "address",
+  "lat": -27.4991933,
+  "lng": 153.0356111,
+  "found": "Ipswich Road, Woolloongabba, Brisbane, Queensland, 4102, Australia"
+ },
+ {
+  "name": "Interactive Brisbane",
+  "addr": "19 McKechnie Drive, Eight Mile Plains",
+  "st": "live",
+  "how": "address",
+  "lat": -27.5777741,
+  "lng": 153.0957774,
+  "found": "19, McKechnie Drive, Brisbane Technology Park, Eight Mile Plains, Brisbane, Queensland, 4113, Australia"
+ },
+ {
+  "name": "Fujitsu Brisbane",
+  "addr": "Eight Mile Plains",
+  "st": "live",
+  "how": "address",
+  "lat": -27.5804725,
+  "lng": 153.0884044,
+  "found": "Eight Mile Plains, Brisbane, Queensland, 4113, Australia"
+ },
+ {
+  "name": "DSColo Kenmore",
+  "addr": "Kenmore",
+  "st": "live",
+  "how": "address",
+  "lat": -27.515645,
+  "lng": 152.937661,
+  "found": "Kenmore, Brisbane, Queensland, Australia"
+ },
+ {
+  "name": "Polaris Data Centre",
+  "addr": "11 Mary Mackenroth Lane, Springfield Central",
+  "st": "live",
+  "how": "address",
+  "lat": -27.681668,
+  "lng": 152.8987033,
+  "found": "Polaris Data Centre, 11, Mary Mackenroth Lane, Springfield Central, Brisbane, Queensland, 4300, Australia"
+ },
+ {
+  "name": "Swanbank data centre proposal",
+  "addr": "Swanbank, Ipswich",
+  "st": "plan",
+  "how": "address",
+  "lat": -27.6612741,
+  "lng": 152.8241225,
+  "found": "Swanbank, Ipswich, Brisbane, Queensland, Australia"
+ }
+]
