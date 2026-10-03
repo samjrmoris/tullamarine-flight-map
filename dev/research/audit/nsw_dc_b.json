@@ -1,0 +1,567 @@
+{
+ "id": "nsw",
+ "checked": "2026-10-03",
+ "sections": "D",
+ "part": "dcs entries 35-68 plus missing list (checked against all 69 current entries; entries 0-34 audited by another agent, whose file lists no missing items)",
+ "flightPaths": [],
+ "dataCentres": [
+  {
+   "name": "Vocus Haymarket",
+   "operator": "Vocus",
+   "address": "187 Thomas Street, Haymarket NSW 2006",
+   "status": "live",
+   "lnglat": [
+    151.2037,
+    -33.88154
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://www.datacentermap.com/australia/sydney/aapt-haymarket/"
+   ],
+   "verdict": "ok",
+   "changes": "Formerly AAPT/TPG; Vocus acquired TPG enterprise fixed business July 2025."
+  },
+  {
+   "name": "Vocus Glebe",
+   "operator": "Vocus",
+   "address": "30 Ross Street, Glebe NSW 2037",
+   "status": "live",
+   "lnglat": [
+    151.18267,
+    -33.8832
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://www.datacentermap.com/australia/sydney/aapt-glebe/"
+   ],
+   "verdict": "ok",
+   "changes": "Formerly AAPT Glebe; OSM puts the building in Forest Lodge, same site."
+  },
+  {
+   "name": "Vocus SYD04",
+   "operator": "Vocus",
+   "address": "74 Mentmore Avenue, Rosebery NSW 2018",
+   "status": "live",
+   "lnglat": [
+    151.20258,
+    -33.91951
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://baxtel.com/data-center/vocus-sydney"
+   ],
+   "verdict": "ok",
+   "changes": "Former Metronode Sydney 1."
+  },
+  {
+   "name": "5G Networks Sydney",
+   "operator": "5G Networks",
+   "address": "55 Pyrmont Bridge Road, Pyrmont NSW 2009",
+   "status": "live",
+   "lnglat": [
+    151.19464,
+    -33.87241
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://www.datacentermap.com/australia/sydney/sydney-datacentre",
+    "https://www.peeringdb.com/fac/8884"
+   ],
+   "verdict": "ok",
+   "changes": "Former APDC Pyrmont data centre, acquired by 5GN 2019."
+  },
+  {
+   "name": "Telstra St Leonards",
+   "operator": "Telstra InfraCo",
+   "address": "4A Herbert Street, St Leonards NSW 2065",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://www.peeringdb.com/fac/15835",
+    "https://datacenterhawk.com/marketplace/providers/telstra/4a-herbert-street/1057582"
+   ],
+   "verdict": "ok",
+   "changes": "Address and operator confirmed (about 10 MW)."
+  },
+  {
+   "name": "St Leonards Corporate Centre",
+   "operator": "Various",
+   "address": "39 Herbert Street, St Leonards NSW 2065",
+   "status": "live",
+   "lnglat": [
+    151.19217,
+    -33.81659
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "Nominatim: St Leonards Corporate Centre, 39 Herbert St"
+   ],
+   "verdict": "ok",
+   "changes": "Multi-tenant building; tenant operating status not independently sourced."
+  },
+  {
+   "name": "12 Frederick Street",
+   "operator": "Gateway Capital / Lendlease",
+   "address": "12 Frederick Street, St Leonards NSW 2065",
+   "status": "plan",
+   "lnglat": [
+    151.18961,
+    -33.8188
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://w.media/gateway-considers-81mw-data-centre-at-sydneys-st-leonards/",
+    "https://www.datacenterdynamics.com/en/news/gateway-capital-files-to-build-81mw-data-center-in-sydney-australia/"
+   ],
+   "verdict": "fix",
+   "changes": "Only at scoping-report stage (81 MW, 11 halls); Gateway says it is considering data centre use over the medium term. Label proposed/early planning."
+  },
+  {
+   "name": "Telstra Sydney (133 Liverpool St)",
+   "operator": "Telstra InfraCo",
+   "address": "133 Liverpool Street, Sydney NSW 2000",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://inflect.com/building/133-liverpool-street-sydney/telstra/datacenter/sycs1",
+    "https://www.datacentermap.com/australia/sydney/sydney-data-station-1"
+   ],
+   "verdict": "ok",
+   "changes": "Exists (about 6 MW, Telstra Sydney Data Station 1)."
+  },
+  {
+   "name": "Telstra Chippendale",
+   "operator": "Telstra (building owned by Tricon Group)",
+   "address": "184-200 Broadway, Chippendale NSW 2008",
+   "status": "live",
+   "lnglat": [
+    151.19547,
+    -33.88478
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://w.media/tricon-group-picks-up-data-centre-on-broadway-corridor-as-part-of-multiple-site-play/",
+    "https://www.datacentermap.com/australia/sydney/telstra-chippendale/"
+   ],
+   "verdict": "fix",
+   "changes": "Telstra sold the building to Tricon Group in a 5-year sale-leaseback; Telstra still operates it. Operator label 'Telstra InfraCo' is questionable; possible redevelopment risk after the lease."
+  },
+  {
+   "name": "Amaze DataHaven (AmazeDC S1)",
+   "operator": "Amaze",
+   "address": "2/340 George Street, Waterloo NSW 2017",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://www.datacentermap.com/australia/sydney/amazedc-s1/"
+   ],
+   "verdict": "ok",
+   "changes": "Small (100 racks), opened Aug 2008. Address has unit 2/340."
+  },
+  {
+   "name": "22 O'Riordan Street",
+   "operator": "Markham Real Estate Partners",
+   "address": "22 O'Riordan Street, Alexandria NSW 2015",
+   "status": "plan",
+   "lnglat": [
+    151.20126,
+    -33.90806
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://www.datacentermap.com/australia/sydney/22-oriordan-street/"
+   ],
+   "verdict": "fix",
+   "changes": "Only a SEARs application lodged (38 MW mixed-use building replacing a Mercedes-Benz paint/repair centre). No approval seen; label proposed."
+  },
+  {
+   "name": "AirTrunk SYD1",
+   "operator": "AirTrunk",
+   "address": "35 Huntingwood Drive, Huntingwood NSW 2148",
+   "status": "live",
+   "lnglat": [
+    150.88182,
+    -33.79936
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://baxtel.com/data-center/airtrunk-sydney"
+   ],
+   "verdict": "ok",
+   "changes": "Nominatim names it AirTrunk SYD1 Sydney West."
+  },
+  {
+   "name": "AirTrunk SYD3",
+   "operator": "AirTrunk",
+   "address": "Huntingwood (suburb only in file)",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Exact address not found",
+   "sources": [
+    "https://baxtel.com/data-center/airtrunk-syd3-sydney-west"
+   ],
+   "verdict": "fix",
+   "changes": "Address UNVERIFIED; baxtel lists AirTrunk SYD3 Sydney West separately from the Kemps Creek campus. Confirm it is not a duplicate of the SYD1 expansion before keeping."
+  },
+  {
+   "name": "AirTrunk SYD2",
+   "operator": "AirTrunk",
+   "address": "1 Sirius Road, Lane Cove West NSW 2066",
+   "status": "live",
+   "lnglat": [
+    151.14647,
+    -33.80874
+   ],
+   "coord_method": "street only (Nominatim), not building-accurate",
+   "sources": [
+    "https://www.itnews.com.au/news/airtrunk-sinks-1bn-into-110-mw-lane-cove-west-data-centre-534201",
+    "https://datacenterhawk.com/marketplace/providers/airtrunk/1-sirius-road/syd2"
+   ],
+   "verdict": "fix",
+   "changes": "Add exact address 1 Sirius Road (110 MW). Operating status listed as live by directories; not independently confirmed."
+  },
+  {
+   "name": "Goodman Project Mars",
+   "operator": "Goodman",
+   "address": "12 Mars Road, Lane Cove West NSW 2066",
+   "status": "cancelled",
+   "lnglat": null,
+   "coord_method": "n/a",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/goodman-withdraws-application-for-90mw-data-center-campus-in-sydney-australia/"
+   ],
+   "verdict": "remove",
+   "changes": "Goodman withdrew the 90 MW application after policy and regulatory changes."
+  },
+  {
+   "name": "AirTrunk Kemps Creek",
+   "operator": "AirTrunk",
+   "address": "706-752 Mamre Road, Kemps Creek NSW 2178",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Nominatim only Mamre Road centreline (unreliable)",
+   "sources": [
+    "https://baxtel.com/data-center/airtrunk-kemps-creek-campus",
+    "https://w.media/airtrunk-named-as-buyer-of-ispts-1gw-western-sydney-site/"
+   ],
+   "verdict": "fix",
+   "changes": "Same site as 'ISPT Mamre Road campus' (706-752 Mamre Rd, 52 ha; AirTrunk bought it from ISPT). Under construction, completion about 2027, 6 four-storey buildings. DUPLICATE: keep this one."
+  },
+  {
+   "name": "Microsoft Kemps Creek (SYD05-07)",
+   "operator": "Microsoft",
+   "address": "769 Mamre Road, Kemps Creek NSW 2178",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://www.datacentermap.com/australia/sydney/microsoft-syd05/",
+    "https://local.microsoft.com/?p=3153"
+   ],
+   "verdict": "ok",
+   "changes": "Address confirmed; campus 96 MW expanding to 190 MW. SYD05 operating status in Oct 2026 not independently confirmed."
+  },
+  {
+   "name": "Microsoft Huntingwood",
+   "operator": "Microsoft",
+   "address": "6 Honeman Close, Huntingwood NSW 2148",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://www.datacentermap.com/australia/sydney/microsoft-honeman-close-syd1/",
+    "https://datacenterdynamics.com/en/news/96mw-data-center-proposed-in-west-sydney-australia"
+   ],
+   "verdict": "ok",
+   "changes": "Proposed 96 MW. DCD also ran a story of Microsoft confirming one Sydney campus and dropping another; UNVERIFIED which, so this could be cancelled."
+  },
+  {
+   "name": "Microsoft Seven Hills",
+   "operator": "Microsoft",
+   "address": "57 Station Road, Seven Hills NSW 2147",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://www.datacentermap.com/australia/sydney/microsoft-seven-hills-building-1/",
+    "https://propertymarkets.news/?p=7110"
+   ],
+   "verdict": "ok",
+   "changes": "Building 1 completed Dec 2023; two buildings planned."
+  },
+  {
+   "name": "CDC Eastern Creek (EC1-EC6)",
+   "operator": "CDC Data Centres",
+   "address": "17 Roberts Road, Eastern Creek NSW 2766",
+   "status": "live",
+   "lnglat": [
+    150.83922,
+    -33.81806
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "Nominatim: CDC Eastern Creek Campus EC1, 17 Roberts Rd",
+    "https://www.datacenterdynamics.com/en/news/australias-cdc-files-for-data-center-in-kemps-creek-sydney/"
+   ],
+   "verdict": "ok",
+   "changes": "Four buildings live, EC5/EC6 under construction (DCD)."
+  },
+  {
+   "name": "Goodman Project Atlas",
+   "operator": "Goodman",
+   "address": "10 Roberts Road, Eastern Creek NSW 2766",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://www.planningalerts.org.au/applications/3398321"
+   ],
+   "verdict": "fix",
+   "changes": "State significant application SSD-101067971 (2 buildings, 500 MVA, about AUD 5bn) in assessment; no approval evidence found. Label proposed."
+  },
+  {
+   "name": "CDC Marsden Park",
+   "operator": "CDC Data Centres",
+   "address": "105-113 Hollinsworth Road, Marsden Park NSW 2765",
+   "status": "live",
+   "lnglat": [
+    150.83658,
+    -33.7226
+   ],
+   "coord_method": "address-point match for 105 Hollinsworth Rd (Nominatim place)",
+   "sources": [
+    "https://baxtel.com/data-center/cdc-marsden-park-campus",
+    "https://datacenterdynamics.com/en/news/cdc-files-for-500mw-data-center-campus-in-sydney-australia"
+   ],
+   "verdict": "fix",
+   "changes": "NSW approved the 504 MW six-building campus Nov 2025; directories show under construction. 'Live' unverified: record as under construction unless an operating building is confirmed."
+  },
+  {
+   "name": "CDC Kemps Creek KC1",
+   "operator": "CDC Data Centres",
+   "address": "871-901 Mamre Road, Kemps Creek NSW 2178",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Nominatim only Mamre Road centreline",
+   "sources": [
+    "https://baxtel.com/data-center/cdc-kemps-creek-nsw",
+    "https://www.datacenterdynamics.com/en/news/australias-cdc-files-for-data-center-in-kemps-creek-sydney/"
+   ],
+   "verdict": "ok",
+   "changes": "Planned, 144 MW, one four-storey building, target 2028."
+  },
+  {
+   "name": "ISPT Mamre Road campus",
+   "operator": "ISPT / AirTrunk",
+   "address": "706-752 Mamre Road, Kemps Creek NSW 2178",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "n/a",
+   "sources": [
+    "https://w.media/airtrunk-named-as-buyer-of-ispts-1gw-western-sydney-site/"
+   ],
+   "verdict": "remove",
+   "changes": "Duplicate of AirTrunk Kemps Creek (same address). ISPT sold to AirTrunk."
+  },
+  {
+   "name": "Stockland Aldington Road",
+   "operator": "Stockland / Fife Capital",
+   "address": "90 Aldington Road, Kemps Creek NSW 2178",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/stockland-files-to-build-168mw-data-center-in-sydney-australia/"
+   ],
+   "verdict": "fix",
+   "changes": "SEARs stage (168 MW, filed with Fife Capital); label proposed, not under construction."
+  },
+  {
+   "name": "Stockland Davis Road",
+   "operator": "Stockland / EdgeConneX",
+   "address": "2 Davis Road, Wetherill Park NSW 2164",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://baxtel.com/data-center/edgeconnex-wetherill-park-nsw",
+    "https://www.datacentermap.com/australia/sydney/2-davis-road/"
+   ],
+   "verdict": "fix",
+   "changes": "Same project as EdgeConneX Wetherill Park: 50:50 Stockland-EdgeConneX JV at 2 Davis Rd. DUPLICATE. Under-construction claim not confirmed by sources seen."
+  },
+  {
+   "name": "EdgeConneX Wetherill Park",
+   "operator": "EdgeConneX / Stockland",
+   "address": "2 Davis Road, Wetherill Park NSW 2164",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Nominatim returned only a street or road centreline; no building coordinate",
+   "sources": [
+    "https://baxtel.com/data-center/edgeconnex-wetherill-park-nsw"
+   ],
+   "verdict": "remove",
+   "changes": "Duplicate of Stockland Davis Road; merge into one entry named Davis Road Data Centre (Stockland / EdgeConneX)."
+  },
+  {
+   "name": "AWS Glendenning",
+   "operator": "Amazon Web Services",
+   "address": "2 Glendenning Road, Glendenning NSW 2761",
+   "status": "plan",
+   "lnglat": [
+    150.85221,
+    -33.75278
+   ],
+   "coord_method": "street only (Nominatim), not building-accurate",
+   "sources": [
+    "https://w.media/?p=43581",
+    "https://www.datacenterdynamics.com/en/news/plans-filed-for-202mw-data-center-campus-in-sydney-australia/"
+   ],
+   "verdict": "fix",
+   "changes": "File says live, but it is approved only (18 Sep 2026, AUD 2.17bn, 3 buildings, 193.6 MW, replacing three warehouses). Change status to plan."
+  },
+  {
+   "name": "AWS Eastern Creek (William Dean St)",
+   "operator": "Amazon Web Services",
+   "address": "1 William Dean Street, Eastern Creek NSW 2766",
+   "status": "live",
+   "lnglat": [
+    150.86948,
+    -33.79474
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "Nominatim: AWS Asia Pacific (Sydney) Region Data Centre, 1 William Dean St"
+   ],
+   "verdict": "ok",
+   "changes": ""
+  },
+  {
+   "name": "AWS Eastern Creek Drive",
+   "operator": "Amazon Web Services",
+   "address": "10 Eastern Creek Drive, Eastern Creek NSW 2766",
+   "status": "live",
+   "lnglat": [
+    150.83904,
+    -33.80956
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "Nominatim: AWS Asia Pacific (Sydney) Region Data Centre, 10 Eastern Creek Dr"
+   ],
+   "verdict": "ok",
+   "changes": ""
+  },
+  {
+   "name": "AWS Smeaton Grange",
+   "operator": "Amazon Web Services",
+   "address": "42A Bluett Drive, Smeaton Grange NSW 2567",
+   "status": "live",
+   "lnglat": [
+    150.76589,
+    -34.03575
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://www.datacentermap.com/australia/sydney/amazon-aws-syd-42a-bluett/",
+    "https://www.accessnews.com.au/other/editors-picks/item/2361"
+   ],
+   "verdict": "fix",
+   "changes": "Exact address is 42A Bluett Drive (OSM building match). Planning panel approval seen was for a AUD 31m data centre; operating status of the wider Bluett/Turner campus not independently confirmed."
+  },
+  {
+   "name": "DCI SYD01",
+   "operator": "DCI Data Centers",
+   "address": "90 Peter Brock Drive, Eastern Creek NSW 2766",
+   "status": "live",
+   "lnglat": [
+    150.8865,
+    -33.80498
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://datacenterhawk.com/marketplace/providers/dci-data-centers/90-peter-brock-drive/syd01",
+    "https://baxtel.com/data-center/dci-sydney-eastern-creek"
+   ],
+   "verdict": "ok",
+   "changes": "SYD01 (11 MW) live; SYD02/03 planned on same site (site up to 65 MW)."
+  },
+  {
+   "name": "Goodman Project Pluto",
+   "operator": "Goodman",
+   "address": "132 McCredie Road, Guildford West NSW 2161",
+   "status": "plan",
+   "lnglat": [
+    150.95971,
+    -33.85018
+   ],
+   "coord_method": "street only (Nominatim), not building-accurate",
+   "sources": [
+    "https://w.media/nsw-approves-goodmans-aud-1-1bn-project-pluto-data-centre-in-western-sydney/",
+    "https://www.planningportal.nsw.gov.au/major-projects/projects/project-pluto-data-centre"
+   ],
+   "verdict": "fix",
+   "changes": "NSW approved it; approved capacity 68 MW (earlier 126 MW), former Castrol site. Suburb is Guildford West."
+  },
+  {
+   "name": "Telstra/Doma Minchinbury",
+   "operator": "Starwood Capital / Doma / Telstra InfraCo",
+   "address": "Minchinbury (site address not found)",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Exact address not found",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/starwood-doma-and-telstra-plan-62mw-data-center-in-sydney/",
+    "https://www.aap.com.au/aapreleases/cision20251112ae20247"
+   ],
+   "verdict": "fix",
+   "changes": "Development approval secured, 62 MW, construction planned early 2026, ready for service early 2028. Operator should read Starwood/Doma/Telstra InfraCo JV."
+  }
+ ],
+ "dataCentresMissing": [
+  {
+   "name": "Goodman Project Duke (Mascot)",
+   "operator": "Goodman",
+   "address": "2 & 10-22 Kent Road, Mascot NSW 2020",
+   "status": "plan",
+   "lnglat": [
+    151.18281,
+    -33.92452
+   ],
+   "coord_method": "street only (Nominatim), not building-accurate",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/goodman-files-to-build-90mw-data-center-on-eaton-warehouse-site-in-sydney-australia/",
+    "https://w.media/goodman-breaks-ground-on-90mw-sydney-dc-pipeline-reaches-aud-18bn/"
+   ],
+   "note": "90 MW, five storeys, 29,705 sqm, planned 2028; Goodman reports breaking ground. Coordinate is the Kent Road centreline only."
+  },
+  {
+   "name": "Vocus SYD01 (Doody Street)",
+   "operator": "Vocus",
+   "address": "59 Doody Street, Alexandria NSW 2015",
+   "status": "live",
+   "lnglat": [
+    151.19316,
+    -33.915
+   ],
+   "coord_method": "building/house-number match (Nominatim)",
+   "sources": [
+    "https://datacentermap.com/australia/sydney/vocus-doody-street",
+    "https://datacenterhawk.com/marketplace/providers/vocus/59-doody-street/syd01"
+   ],
+   "note": "Retrofit, about 3 MW; OSM building Vocus Data Centre."
+  }
+ ],
+ "plans": [],
+ "railHubs": [],
+ "other": [],
+ "unverified": [
+  "Operating status in Oct 2026 for AirTrunk SYD2, Microsoft Kemps Creek SYD05, AWS Smeaton Grange, CDC Marsden Park first buildings not independently confirmed.",
+  "No building-level coordinate (lnglat null) for Telstra St Leonards, Telstra 133 Liverpool St, Amaze, Mamre Road sites, Microsoft Huntingwood/Seven Hills, Stockland Aldington/Davis Road, Goodman Atlas: Nominatim gave only a street, and the later batch hit HTTP 429. AirTrunk SYD2 (Sirius Rd), Glendenning, McCredie Rd and Kent Rd coordinates are street-level only.",
+  "Microsoft Huntingwood: DCD reports Microsoft dropped one of two Sydney campuses; which one is not confirmed.",
+  "AirTrunk SYD3 address; Minchinbury site address."
+ ]
+}

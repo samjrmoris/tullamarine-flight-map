@@ -1,0 +1,288 @@
+{
+ "id": "sa",
+ "checked": "2026-10-01",
+ "runways": [
+  {
+   "airport": "YPAD",
+   "refs": [
+    "05",
+    "23"
+   ],
+   "ours": [
+    [
+     138.5185,
+     -34.95767
+    ],
+    [
+     138.54333,
+     -34.94067
+    ]
+   ],
+   "source": [
+    [
+     138.51847,
+     -34.95767
+    ],
+    [
+     138.54314,
+     -34.9407
+    ]
+   ],
+   "diff_m": [
+    3,
+    18
+   ],
+   "source_url": "https://www.openstreetmap.org/way/792784667 (Overpass) ; https://ourairports.com/airports/YPAD/runways.html",
+   "verdict": "ok",
+   "note": "OSM 05/23 way starts at 138.51847,-34.95767 (equals our 05 end) after a short 148 m stub way to 138.51722,-34.95852; OurAirports lists pavement end 138.516998,-34.9585 with 492 ft displaced threshold on 05 (165 m from ours) and 23 end 138.542999,-34.940601 (31 m). Our 05 end is therefore the displaced landing threshold, ends[0] is the threshold of 05: fine. Runway length OSM ~2.56+0.38 km +0.15 = ~3.1 km."
+  },
+  {
+   "airport": "YPAD",
+   "refs": [
+    "12",
+    "30"
+   ],
+   "ours": [
+    [
+     138.522,
+     -34.94117
+    ],
+    [
+     138.537,
+     -34.94933
+    ]
+   ],
+   "source": [
+    [
+     138.52198,
+     -34.94124
+    ],
+    [
+     138.53688,
+     -34.94935
+    ]
+   ],
+   "diff_m": [
+    8,
+    11
+   ],
+   "source_url": "https://www.openstreetmap.org/way/792784667 (Overpass) ; https://ourairports.com/airports/YPAD/runways.html",
+   "verdict": "ok",
+   "note": "OSM ways 905221232/38/40/49/905276529 chain; OurAirports 12 138.522003,-34.9412 and 30 138.537003,-34.949402 (3 m / 8 m from ours)."
+  },
+  {
+   "airport": "YPPF",
+   "refs": [
+    "03L",
+    "21R"
+   ],
+   "ours": [
+    [
+     138.63067,
+     -34.80383
+    ],
+    [
+     138.63767,
+     -34.793
+    ]
+   ],
+   "source": [
+    [
+     138.63048,
+     -34.80403
+    ],
+    [
+     138.63758,
+     -34.79311
+    ]
+   ],
+   "diff_m": [
+    28,
+    15
+   ],
+   "source_url": "https://www.openstreetmap.org/way/4355863 (Overpass); https://ourairports.com/airports/YPPF/runways.html",
+   "verdict": "ok",
+   "note": "OSM way 4355863 03L/21R. Map draws no runways for YPPF (runways [] in regions/sa.js, noModel), so this is data-file only."
+  },
+  {
+   "airport": "YPPF",
+   "refs": [
+    "03R",
+    "21L"
+   ],
+   "ours": [
+    [
+     138.63433,
+     -34.80217
+    ],
+    [
+     138.641,
+     -34.792
+    ]
+   ],
+   "source": [
+    [
+     138.63445,
+     -34.80198
+    ],
+    [
+     138.64091,
+     -34.79207
+    ]
+   ],
+   "diff_m": [
+    24,
+    11
+   ],
+   "source_url": "https://www.openstreetmap.org/way/4355860 (Overpass)",
+   "verdict": "ok",
+   "note": "OSM way 4355860 03R/21L. Not drawn on map."
+  },
+  {
+   "airport": "YPED",
+   "refs": [
+    "18",
+    "36"
+   ],
+   "ours": [
+    [
+     138.6175,
+     -34.6945
+    ],
+    [
+     138.6135,
+     -34.71733
+    ]
+   ],
+   "source": [
+    [
+     138.61806,
+     -34.69195
+    ],
+    [
+     138.61326,
+     -34.71838
+    ]
+   ],
+   "diff_m": [
+    288,
+    119
+   ],
+   "source_url": "https://www.openstreetmap.org/way/179292927 (Overpass); https://ourairports.com/airports/YPED/runways.html",
+   "verdict": "fix",
+   "note": "OSM way 179292927 18/36, 2972 m long; OurAirports 18 138.618034,-34.691938 and 36 138.613235,-34.718369. Our 18 end is 289 m short of the pavement end (ours spacing ~2.55 km vs published 2,966 m). Recommend using OSM ends. Not drawn on map (runways [] in regions/sa.js)."
+  }
+ ],
+ "flightPaths": [
+  {
+   "airport": "YPAD",
+   "runwayEnd": "23",
+   "departs": "Published RNAV SIDs: straight out on 222 deg magnetic (about 230 deg true) over Gulf St Vincent to COLPY/BOVPU (min 2500 ft / 5000 ft), then either LEFT turn about 88 deg onto 134 deg to LEMAT then left again onto 078 deg towards the east (crossing the coast around Brighton to Port Noarlunga and the southern suburbs at 5000+ ft), or RIGHT turn about 90 deg onto 312 deg to KEEFO (north-west along the gulf), or straight on 234-256 deg to DERWY/GILES (south-west). Master Plan Fig 13-2 shows the same: a bundle going offshore ~8-10 km then curving left to cross the coast far to the south, plus some tracks going north-west up the gulf. Turn point is offshore, not 6 km after take-off over land.",
+   "arrives": "Arrivals to 23 fly ILS-Z/LOC-Z RWY 23 straight final on 222 deg from MOPRI (10.1 NM, about 19 km) and VIRAT (14.2 NM, about 26 km) from the north-east: over Walkerville/Prospect/Thebarton/inner north-east then the airport. Straight final at least 19-26 km: our 26 km straight-in is right.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    -90,
+    0,
+    90
+   ],
+   "sources": [
+    "Airservices AIP DAP YPAD (03 Sep 2026): RNAV SID charts PADDP02-05, ILS/RNP charts, Noise Abatement Procedures https://www.airservicesaustralia.com/aip/current/dap/",
+    "https://corporate.adelaideairport.com.au/planning-building/airport-master-plan/ (2019 Master Plan ch.13 Aircraft Noise, Figs 13-2, 13-4, Tables 13-4/13-5)"
+   ],
+   "confidence": "medium",
+   "note": "Left/right turns are about 90 deg (left continues to about 145 deg total). The turn happens offshore at an unpublished distance (waypoint coordinates not in the AIP text I could read), so the map's 6 km straight is too short; consider depKm ~10 before the turn. Noise on land from 23 departures is minimal until the southern coast crossing. Night: all curfew-permitted ops use 05 arrivals and 23 departures (Master Plan 13.3)."
+  },
+  {
+   "airport": "YPAD",
+   "runwayEnd": "05",
+   "departs": "Published RNAV SIDs: straight on 042 deg magnetic (about 050 deg true) over Thebarton/CBD/Walkerville to MOPRI (about 10 NM / 19 km NE; at or above 5000 ft), then LEFT about 70 deg onto 312 deg to SARAG (north-west), LEFT about 48 deg onto 354 deg to ORBUN (north), RIGHT about 14 deg onto 056 deg to UPROT (north-east), or (SID with KNOBL) turn right after KNOBL at 1700 ft direct to ROGGS then east on 078/102 deg. Master Plan Fig 13-2 and Fig 13-4 show departures from 05 fanning out beyond the CBD to north-west (over Port Adelaide), north, north-east and east (Adelaide Hills), with a tight right-turn bundle back east/south-east.",
+   "arrives": "Arrivals to 05 come over Gulf St Vincent: RNP Z RWY 05 / ILS-RNP from the south-west and north-west over water, straight final for ~15 NM (PADSI/PADSF fixes 15 and about 5 NM). Straight 26 km is fine; this end is over water.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    -70,
+    -48,
+    0,
+    14
+   ],
+   "sources": [
+    "Airservices AIP DAP YPAD (03 Sep 2026): RNAV SID charts PADDP02-05, ILS/RNP charts, Noise Abatement Procedures https://www.airservicesaustralia.com/aip/current/dap/",
+    "https://corporate.adelaideairport.com.au/planning-building/airport-master-plan/ (2019 Master Plan ch.13 Aircraft Noise, Figs 13-2, 13-4, Tables 13-4/13-5)"
+   ],
+   "confidence": "medium",
+   "note": "Turns occur at MOPRI, about 19 km out, not 6 km: suggest depKm ~19 then fan (-70, -48, 0, +14) or a 6 km straight is too short; the map currently turns jets back over Prospect/Walkerville earlier than real tracks. Daytime 05 departures were 10% (Jan 2018) and 28% (Aug 2018) of main-runway departure use."
+  },
+  {
+   "airport": "YPAD",
+   "runwayEnd": "12",
+   "departs": "No published RNAV SID found for the cross runways (the SID charts I read start on 042/222 deg only). Departures are radar-vectored; the Master Plan shows only small shares on the cross runway (LAHSO ended, ops moved to the main runway).",
+   "arrives": "Visual and RNP/ILS approaches from the north-west over Henley/Fulham/West Beach (RWY 12 track about 115 deg magnetic final).",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "sources": [
+    "Airservices AIP DAP YPAD (03 Sep 2026): RNAV SID charts PADDP02-05, ILS/RNP charts, Noise Abatement Procedures https://www.airservicesaustralia.com/aip/current/dap/",
+    "https://corporate.adelaideairport.com.au/planning-building/airport-master-plan/ (2019 Master Plan ch.13 Aircraft Noise, Figs 13-2, 13-4, Tables 13-4/13-5)"
+   ],
+   "confidence": "low",
+   "note": "Too vague to recommend; cross runway is the least-used (Master Plan: preferred 23, then 05, then 30, then 12 by day)."
+  },
+  {
+   "airport": "YPAD",
+   "runwayEnd": "30",
+   "departs": "No published SID; vectored. Preferred cross runway after the main runway is 30 (second-least: 30 first, then 12), departing south-east over Plympton/Glandore/Mitcham.",
+   "arrives": "Arrivals to 30 come from the south-east over Mitcham/Unley Park/Plympton on a straight final.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "sources": [
+    "Airservices AIP DAP YPAD (03 Sep 2026): RNAV SID charts PADDP02-05, ILS/RNP charts, Noise Abatement Procedures https://www.airservicesaustralia.com/aip/current/dap/",
+    "https://corporate.adelaideairport.com.au/planning-building/airport-master-plan/ (2019 Master Plan ch.13 Aircraft Noise, Figs 13-2, 13-4, Tables 13-4/13-5)"
+   ],
+   "confidence": "low",
+   "note": "Published information too vague for per-end turns."
+  }
+ ],
+ "airportLand": [
+  {
+   "airport": "YPAD",
+   "osm": "way 146489105 (aeroway=aerodrome, icao=YPAD, operator Adelaide Airport Limited)",
+   "verdict": "fix",
+   "note": "Polygon exists but covers only ~504 ha (bbox 138.5144-138.5474 E, -34.9607 to -34.9342 N). The 2019 Master Plan ch.2 says the airport site is approximately 785 hectares, so the OSM polygon is about 64% of the official area (probably omits some leased non-aviation precincts). Shaded land would be visibly smaller than the lease. Source: https://corporate.adelaideairport.com.au/planning-building/airport-master-plan/ ; https://www.openstreetmap.org/way/146489105"
+  },
+  {
+   "airport": "YPPF",
+   "osm": "relation 2368427 (multipolygon, icao=YPPF, 2 outer ways)",
+   "verdict": "ok",
+   "note": "About 398 ha; Parafield Airport states a site of approximately 433 ha (Master Plan 2024), ~92%, plausible match. Source: https://www.parafieldairport.com.au/wp-content/uploads/Preliminary-Draft-Master-Plan-Summary.pdf (via search); https://www.openstreetmap.org/relation/2368427"
+  },
+  {
+   "airport": "YPED",
+   "osm": "MISSING polygon: only node 415142962 carries icao=YPED. Separate relation 2203119 'RAAF Base Edinburgh' (landuse=military, bbox 138.6044-138.6503 E, -34.7276 to -34.6837 N) has no icao tag.",
+   "verdict": "fix",
+   "note": "A runtime query for an aerodrome way/relation with icao=YPED returns only a point, so no airport land is drawn. Fix: add fallback to the military relation 2203119 (name 'RAAF Base Edinburgh') or tag it. The relation looks like the base footprint (runway 18/36 lies inside) but I could not check it against an official boundary plan."
+  }
+ ],
+ "dataCentres": [],
+ "dataCentresMissing": [],
+ "plans": [],
+ "railHubs": [],
+ "other": [],
+ "unverified": [
+  "Exact waypoint coordinates (COLPY, BOVPU, MOPRI, SARAG, KNOBL etc.) were not in the AIP text, so turn distances are estimates from the Master Plan figures and charts.",
+  "Runway mode percentages are 2018 data (Master Plan 2019); no newer Airservices figures found."
+ ]
+}

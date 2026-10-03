@@ -62,3 +62,6 @@ Validate it with `python -m json.tool`.
 2. `dev/research/audit/<id>_audit.md`: a plain-English summary (under 40 lines) of what was wrong, what is right, and what could not be verified.
 
 Final reply: 5 lines max: counts of ok / fix / remove per section, and the biggest problems.
+
+## Save as you go (required)
+Write `dev/research/audit/<id>_audit.json` after EACH numbered section above is finished (sections not reached yet = empty lists), so nothing is lost if you are stopped. If the file already exists from an earlier run, read it first and continue from the first section that is still empty.

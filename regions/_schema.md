@@ -78,6 +78,8 @@ List the main airport first. The order sets the airport-filter chips and the map
 | `ends` | `[[lon,lat],[lon,lat]]` | Threshold positions. `ends[0]` is the threshold of `refs[0]`. | `[[144.829396,-37.652715],[144.836604,-37.685285]]` |
 | `era` | `'both'` or `'future'` | `'future'`: the runway only exists in the future scenario. It is drawn in magenta, and its paths are purple. | `'both'` (third runway: `'future'`) |
 | `plain` | string | Name in sentences: "planes landing on the **main runway**". Only the main airport uses it. Other airports use the airport `name`. | `'main runway'` |
+| `fans` | `[array|null, array|null]`, optional | Departure turns per runway end, in `refs` order: `fans[0]` is for planes taking off on `refs[0]`. `null` (or leaving it out) uses the airport `fans`. Set from the flight-path audit. | `[[-90,0,85],null]` |
+| `arrKm` | number, optional | Straight-in approach length for this runway. Defaults to the airport `arrKm`. | `22` |
 
 **OpenStreetMap refinement.** After the airport query loads, the engine replaces a runway's configured `ends` with the OpenStreetMap geometry when a runway way (within about 4 km of the airport) matches. A way matches if its `ref` is the same pair as `refs` or `futureRefs` (e.g. `16/34`). Failing that, it matches if its midpoint is within 1.5 km of the configured midpoint and its heading is within 12°. Each way is used at most once, with the closest match first. The OpenStreetMap ends are re-ordered to match `ends[0]` and `ends[1]`. The configured `ends` are therefore the fallback when Overpass is down, so keep them reasonably accurate.
 

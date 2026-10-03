@@ -1,0 +1,1158 @@
+{
+ "id": "wa",
+ "checked": "2026-10-01",
+ "runways": [
+  {
+   "airport": "YPPH",
+   "refs": [
+    "03",
+    "21"
+   ],
+   "ours": [
+    [
+     115.959667,
+     -31.958667
+    ],
+    [
+     115.9685,
+     -31.928667
+    ]
+   ],
+   "source": [
+    [
+     115.95969,
+     -31.95872
+    ],
+    [
+     115.96848,
+     -31.92861
+    ]
+   ],
+   "diff_m": [
+    6,
+    7
+   ],
+   "source_url": "https://www.openstreetmap.org/way/4359645",
+   "verdict": "ok",
+   "note": "OSM (5 joined ways 4359645/718668624/718668628/718668633) matches within 7 m; OurAirports (https://ourairports.com/airports/YPPH/runways.html) 03 [115.95999,-31.95870], 21 [115.96800,-31.92860] differs 32/48 m (OurAirports coordinates are rounded). ends[0]=03 threshold, correct. Becomes 03L/21R when the new runway opens."
+  },
+  {
+   "airport": "YPPH",
+   "refs": [
+    "06",
+    "24"
+   ],
+   "ours": [
+    [
+     115.959167,
+     -31.941
+    ],
+    [
+     115.978833,
+     -31.930833
+    ]
+   ],
+   "source": [
+    [
+     115.9592,
+     -31.94096
+    ],
+    [
+     115.97875,
+     -31.93089
+    ]
+   ],
+   "diff_m": [
+    5,
+    10
+   ],
+   "source_url": "https://www.openstreetmap.org/way/718668626",
+   "verdict": "ok",
+   "note": "OSM way 718668626 within 10 m; OurAirports 16/17 m. ends[0]=06, correct."
+  },
+  {
+   "airport": "YPPH",
+   "refs": [
+    "03R",
+    "21L"
+   ],
+   "ours": [
+    [
+     115.9787,
+     -31.9681
+    ],
+    [
+     115.9864,
+     -31.942
+    ]
+   ],
+   "source": null,
+   "diff_m": [
+    null,
+    null
+   ],
+   "source_url": "https://www.perthairport.com.au/-/media/Files/CORPORATE/Planning-and-projects/New-Runway-Project/Documents-final/Volume-A-Sections/NRP-Draft-MDP-Vol-A-06.pdf",
+   "verdict": "ok",
+   "note": "No source publishes threshold coordinates (not in OSM, OurAirports or any page I could read; the Perth Airport PDFs return 403 to this tool, text seen only via search snippets). Rebuilt the geometry from the MDP Vol A s6 wording as quoted in search results: parallel to 03L/21R, 2,000 m separation, 3,000 m long, 'moved further south by 1,030 metres compared to the existing main runway (03L/21R) northern threshold' (2018 redesign that shortened it 3,800 to 3,000 m to stay clear of Munday Swamp). Construction on the stated reading (northern end 1,030 m south of the 21 threshold, runway running south) gives N end [115.98643,-31.94193], S end [115.97878,-31.96811]: ours differ by about 10 m. Our placement is therefore the exact application of the published numbers, and its real accuracy is that of the published figures (approximate 'about 1,030 m' stagger and nominal 2 km spacing, probably +/-100-200 m, not the 500 m feared). One snippet mentions 2,700 m length; most sources (Wikipedia, MDP) say 3,000 m. The only other reading (southern end 1,030 m south of the northern threshold, runway running north) would put the north end ~3 km further north at [115.99407,-31.91574] and conflicts with the 'as far south as practicable' intent and the 'between Terminal 1 and Abernethy Road' description. Status Oct 2026: under construction, completion 2028 (Perth Airport 4 Dec 2025 article 'New runway project takes off'); Wikipedia says 2029."
+  },
+  {
+   "airport": "YPJT",
+   "refs": [
+    "06L",
+    "24R"
+   ],
+   "ours": [
+    [
+     115.874667,
+     -32.1
+    ],
+    [
+     115.884333,
+     -32.094
+    ]
+   ],
+   "source": [
+    [
+     115.87461,
+     -32.10001
+    ],
+    [
+     115.88422,
+     -32.09414
+    ]
+   ],
+   "diff_m": [
+    5,
+    19
+   ],
+   "source_url": "https://www.openstreetmap.org/way/5132127",
+   "verdict": "ok",
+   "note": "OSM within 19 m. OurAirports (24R end -32.0933,115.8860) is 175 m away but is stale/rounded and conflicts with OSM and our value; plain text says 1,392 m but the drawn line is ~1,130 m (the paved/displaced length differs); harmless."
+  },
+  {
+   "airport": "YPJT",
+   "refs": [
+    "12",
+    "30"
+   ],
+   "ours": [
+    [
+     115.8725,
+     -32.1
+    ],
+    [
+     115.887,
+     -32.1055
+    ]
+   ],
+   "source": [
+    [
+     115.87262,
+     -32.10004
+    ],
+    [
+     115.88696,
+     -32.10554
+    ]
+   ],
+   "diff_m": [
+    12,
+    6
+   ],
+   "source_url": "https://www.openstreetmap.org/way/5132126",
+   "verdict": "ok",
+   "note": "Matches OSM and OurAirports (6/9 m)."
+  },
+  {
+   "airport": "YPJT",
+   "refs": [
+    "06R",
+    "24L"
+   ],
+   "ours": [
+    [
+     115.877,
+     -32.100833
+    ],
+    [
+     115.886833,
+     -32.094833
+    ]
+   ],
+   "source": [
+    [
+     115.87718,
+     -32.10076
+    ],
+    [
+     115.88682,
+     -32.0949
+    ]
+   ],
+   "diff_m": [
+    19,
+    8
+   ],
+   "source_url": "https://www.openstreetmap.org/way/5132129",
+   "verdict": "ok",
+   "note": "Matches OSM; OurAirports 7/16 m."
+  },
+  {
+   "airport": "YPEA",
+   "refs": [
+    "18L",
+    "36R"
+   ],
+   "ours": [
+    [
+     116.013667,
+     -31.662333
+    ],
+    [
+     116.016667,
+     -31.684333
+    ]
+   ],
+   "source": [
+    [
+     116.01372,
+     -31.66255
+    ],
+    [
+     116.01666,
+     -31.6846
+    ]
+   ],
+   "diff_m": [
+    25,
+    30
+   ],
+   "source_url": "https://www.openstreetmap.org/way/35039886",
+   "verdict": "ok",
+   "note": "OSM 25/30 m, OurAirports 32/32 m. ends[0]=18L ok. Not drawn: parallel grass strip 18R/36L (OSM way 264903367, OurAirports) - omitted from map, minor."
+  },
+  {
+   "airport": "YPEA",
+   "refs": [
+    "05",
+    "23"
+   ],
+   "ours": [
+    [
+     116.008667,
+     -31.672333
+    ],
+    [
+     116.021167,
+     -31.6615
+    ]
+   ],
+   "source": [
+    [
+     116.00883,
+     -31.6722
+    ],
+    [
+     116.02108,
+     -31.66162
+    ]
+   ],
+   "diff_m": [
+    21,
+    16
+   ],
+   "source_url": "https://www.openstreetmap.org/way/35039887",
+   "verdict": "ok",
+   "note": "OSM 21/16 m, OurAirports 32/15 m."
+  }
+ ],
+ "flightPaths": [
+  {
+   "airport": "YPPH",
+   "runwayEnd": "21",
+   "departs": "Preferred departure runway (about 57-60% of all departures; 61% daytime, 64% night in 2012). DAP initial track 196 magnetic (about 194 true), then at 1,000 ft but not before the runway end ATC turns aircraft: about two thirds (eastern states, NZ) turn LEFT to the east (SID legs track 107 magnetic, roughly 90 degrees of left turn), about 40% (west/north/north-west: Africa, Middle East, Asia, Pilbara) turn RIGHT to the west (SID leg track 280 magnetic, roughly 85 degrees right); some SIDs fly straight on 196 to AVBAD/JANDO (south) before turning. So turns are large (about 85-90 degrees), not 40, and start within a few km, not after 6 km. Exact turn distance is not published (waypoint coordinates not in the text I could read).",
+   "arrives": "Jet arrivals are aligned with the runway at least 10 km out and fly a straight 3-degree final (Airservices). Our 26 km straight-in is longer than the published ~10 km alignment; before that, arrivals join from RNAV arrival waypoints (KABLI/JULIM/SAPKO/LAVEX arrival charts), so the far end of our 26 km line is not where aircraft actually fly. Runway 21 arrivals from the south may be flown as a visual left turn to final for aircraft at or below 45,000 kg; from the west via WOOFY to 6 NM final.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    -90,
+    0,
+    85
+   ],
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/28/perth-airport-nap-2-preferred-flight-paths/",
+    "https://aircraftnoise.airservicesaustralia.com/2023/03/21/perth-airport-flight-paths/",
+    "https://www.crc.id.au/xplane/charts/DAPS-2026-JUL-09/Perth%20(YPPH).pdf (mirror of Airservices DAP, SID pages PPHDP01/03/08, magnetic tracks, variation 2 W)",
+    "https://www.airservicesaustralia.com/wp-content/uploads/Perth-Airport-Noise-Abatement-Procedures-Review-December-2014.pdf",
+    "https://aircraftnoise.airservicesaustralia.com/2025/05/30/perth-airport-nap-1-preferred-runways/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "airport": "YPPH",
+   "runwayEnd": "03",
+   "departs": "Used in northerly flow (about 32% of departures in 2012). DAP initial track 016 magnetic (about 014 true) straight to MIDLA (far north, near RAAF Pearce airspace), then SIDs turn LEFT to track 280 (west) or RIGHT to track 087 (east). Airservices: 'Aircraft with westerly and northerly destinations will turn left'; right turns only when they do not conflict with Runway 06 traffic. Overnight, when Pearce airspace is inactive, aircraft take shorter tracks over military airspace to the north. Turn point distance is not published here (SIDs go straight to MIDLA, probably well beyond 6 km); radar vectors from 1,000 ft are common.",
+   "arrives": "Jet arrivals are aligned with the runway at least 10 km out and fly a straight 3-degree final (Airservices). Our 26 km straight-in is longer than the published ~10 km alignment; before that, arrivals join from RNAV arrival waypoints (KABLI/JULIM/SAPKO/LAVEX arrival charts), so the far end of our 26 km line is not where aircraft actually fly.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    -90,
+    0,
+    70
+   ],
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2023/03/21/perth-airport-flight-paths/",
+    "https://www.crc.id.au/xplane/charts/DAPS-2026-JUL-09/Perth%20(YPPH).pdf (mirror of Airservices DAP, SID pages PPHDP01/03/08, magnetic tracks, variation 2 W)",
+    "https://www.airservicesaustralia.com/wp-content/uploads/Perth-Airport-Noise-Abatement-Procedures-Review-December-2014.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YPPH",
+   "runwayEnd": "06",
+   "departs": "Less-used departure end, used for crosswinds in northerly flow (Priority 1 departure in northerly flow when it does not conflict with 03). DAP initial track 061 magnetic; at 1,000 ft turn LEFT direct MIDLA (about 45 degrees left, then west) or RIGHT toward ALWYN/HOVEA (track 079-094, a gentle right).",
+   "arrives": "Priority 2 (less preferred) arrival runway: straight in from the west, aircraft 'track west of the coast to conduct a straight in approach'; the south-west end is close to housing.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    -45,
+    0,
+    25
+   ],
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/05/30/perth-airport-nap-1-preferred-runways/",
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/28/perth-airport-nap-2-preferred-flight-paths/",
+    "https://www.crc.id.au/xplane/charts/DAPS-2026-JUL-09/Perth%20(YPPH).pdf (mirror of Airservices DAP, SID pages PPHDP01/03/08, magnetic tracks, variation 2 W)"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YPPH",
+   "runwayEnd": "24",
+   "departs": "Least preferred departure runway (Priority 2; about 7% of 2012 departures). DAP initial track 241 magnetic, at 1,500 ft turn LEFT direct AVBAD (south, roughly 45 degrees left) or continue on 241 to TUVBA before turning, so mostly straight or left; the housing at the south-western end is the reason it is avoided.",
+   "arrives": "Priority 1 arrival runway in southerly flow (21/24); from the south via waypoint SPUDO. Straight final.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    -45,
+    0
+   ],
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/05/30/perth-airport-nap-1-preferred-runways/",
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/28/perth-airport-nap-2-preferred-flight-paths/",
+    "https://www.crc.id.au/xplane/charts/DAPS-2026-JUL-09/Perth%20(YPPH).pdf (mirror of Airservices DAP, SID pages PPHDP01/03/08, magnetic tracks, variation 2 W)",
+    "https://www.airservicesaustralia.com/wp-content/uploads/Perth-Airport-Noise-Abatement-Procedures-Review-December-2014.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YPPH",
+   "runwayEnd": "03R",
+   "departs": "FUTURE runway: no flight paths published. Airservices says new flight paths are being designed; preliminary design engagement in early 2027, further engagement late 2027, final flight paths in 2028 (https://engage.airservicesaustralia.com/perth). Nothing to recommend yet; the map's fans are placeholders.",
+   "arrives": "Unpublished.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "sources": [
+    "https://engage.airservicesaustralia.com/perth"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YPPH",
+   "runwayEnd": "21L",
+   "departs": "FUTURE runway: as above, unpublished.",
+   "arrives": "Unpublished.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "sources": [
+    "https://engage.airservicesaustralia.com/perth"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YPPH",
+   "runwayEnd": "(rules)",
+   "departs": "No curfew; 24-hour operation, voluntary Noise Abatement Procedures only (NAP 1 preferred runways, NAP 2 preferred flight paths, NAPs are not mandatory). Priority 1: arrive 21/03/24, depart 21/03/06. Priority 2: arrive 06, depart 24. Jets must stay at or above 5,000 ft AGL over residential areas where possible; turboprops 3,000 ft. Perth is NOT an over-water airport; military airspace north/north-west (RAAF Pearce) is used by civil aircraft when inactive, mostly nights and weekends. Morning departure burst from about 5 am prefers Runway 21. The 2014 review floated reciprocal ops (21 arrivals + 03 departures at night) but no source shows it adopted.",
+   "arrives": "",
+   "fans_now": null,
+   "fans_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/05/30/perth-airport-nap-1-preferred-runways/",
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/28/perth-airport-nap-2-preferred-flight-paths/",
+    "https://www.airservicesaustralia.com/wp-content/uploads/Perth-Airport-Noise-Abatement-Procedures-Review-December-2014.pdf",
+    "https://aircraftnoise.airservicesaustralia.com/2023/03/21/perth-airport-runways/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "airport": "YPJT / YPEA",
+   "runwayEnd": "all",
+   "departs": "Not jet airports; map outlines only (noModel). No check needed.",
+   "arrives": "",
+   "fans_now": null,
+   "fans_recommended": null,
+   "sources": [],
+   "confidence": "high"
+  }
+ ],
+ "airportLand": [
+  {
+   "airport": "YPPH",
+   "osm": "way 179200892 (aeroway=aerodrome, icao=YPPH, name Perth Airport)",
+   "verdict": "fix",
+   "note": "Boundary exists with the right ICAO tag, about 11.2 km2 (4.0 x 4.9 km). It outlines the current airfield and terminals but has a notch: nothing east of about lon 115.978 and south of lat -31.9415 is inside it, so the whole new-runway site (03R/21L runs lon 115.979-115.986, lat -31.942 to -31.968) lies OUTSIDE the drawn airport land, and the south edge of the polygon is lat -31.9634. Not a map data error, but the future runway will appear off-airport. Could not compare with the official airport lease boundary (Perth Airport PDFs return 403); official estate area not verified."
+  },
+  {
+   "airport": "YPJT",
+   "osm": "way 23393279 (aerodrome, icao=YPJT, name Jandakot Airport)",
+   "verdict": "ok",
+   "note": "About 5.2 km2 (3.2 x 3.3 km); contains all three runways. Official lease area not verified."
+  },
+  {
+   "airport": "YPEA",
+   "osm": "way 559055073 (aerodrome, icao=YPEA, name RAAF Base Pearce)",
+   "verdict": "ok",
+   "note": "About 5.9 km2 (2.3 x 3.9 km); contains the runways. Official boundary not verified."
+  }
+ ],
+ "dataCentres": [
+  {
+   "name": "NEXTDC P1 Perth",
+   "operator": "NEXTDC",
+   "address": "4 Millrose Drive, Malaga WA 6090",
+   "status": "live",
+   "lnglat": [
+    115.89591,
+    -31.8644
+   ],
+   "coord_method": "Centre of OSM building way 668458502 named 'NEXTDC P1 Data Centre' (OSM tags it 101 Malaga Drive; NEXTDC's address is 4 Millrose Drive, whose street node is ~200 m away, consistent)",
+   "sources": [
+    "https://www.nextdc.com/contact",
+    "https://www.nextdc.com/data-centres/perth-data-centres/p1-perth",
+    "https://www.openstreetmap.org/way/668458502"
+   ],
+   "verdict": "ok",
+   "changes": "Exists, operating, Tier III, '10MW+' per NEXTDC (RenewMap lists 6 MW). Address and status ours are right. Needs an exact point (we had it geocoded to the street)."
+  },
+  {
+   "name": "NEXTDC P2 Perth",
+   "operator": "NEXTDC",
+   "address": "11 Newcastle Street, Perth WA 6000",
+   "status": "live",
+   "lnglat": [
+    115.86823,
+    -31.95017
+   ],
+   "coord_method": "Centre of OSM building way 812825291 (telecom=data_center, ref P2, 10 levels; OSM address 105 Lord Street; sits 50 m from the east end of Newcastle Street at 115.8691,-31.9499)",
+   "sources": [
+    "https://www.nextdc.com/contact",
+    "https://www.nextdc.com/data-centres/perth-data-centres/p2-perth",
+    "https://www.openstreetmap.org/way/812825291"
+   ],
+   "verdict": "ok",
+   "changes": "Exists, operating, Tier IV, 20MW+ (NEXTDC). Address matches NEXTDC; building is on the corner of Newcastle St and Lord St, East Perth edge of the CBD. Postcode 6000 per NEXTDC (OSM street postcode is 6004)."
+  },
+  {
+   "name": "Equinix PE2",
+   "operator": "Equinix",
+   "address": "37 Lemnos Street, Shenton Park WA 6008",
+   "status": "live",
+   "lnglat": [
+    115.79802,
+    -31.95594
+   ],
+   "coord_method": "Centre of OSM building way 986296358 tagged Equinix PE2 (telecom=data_center), OSM address 33 Lemnos Street",
+   "sources": [
+    "https://www.openstreetmap.org/way/986296358",
+    "https://www.peeringdb.com/fac/11851",
+    "https://datacenterhawk.com/marketplace/providers/equinix/1-37-lemnos-street/pe2"
+   ],
+   "verdict": "fix",
+   "changes": "Exists and operating (ex Metronode Perth 2, 2019 expansion). Equinix lists it at 1/37 Lemnos Street; OSM says the building is number 33. 37 Lemnos St (OSM way 986296377 at 115.79783,-31.95315) is ~300 m north and is where PE3 is listed. Our address field is for the campus: fine, but the point should be the OSM building, not a street geocode."
+  },
+  {
+   "name": "Equinix PE1",
+   "operator": "Equinix",
+   "address": "3 Tully Road, East Perth WA 6004",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Street-level only: Nominatim places Tully Road at 115.87822,-31.94883; no OSM building carries the address, so the exact building is not public from sources I could use",
+   "sources": [
+    "https://baxtel.com/data-center/equinix-perth-pe1",
+    "https://www.datacenters.com/telstra-perth"
+   ],
+   "verdict": "fix",
+   "changes": "Exists (ex Metronode Perth 1, fully operational, small ~660 m2 site). Address is 3 Tully Road, East Perth (ours: 'Perth', geocoded to Perth centre = wrong by km). Note Telstra InfraCo's PER1 is listed at the same address 3 Tully Road, so this may be one shared building; exact footprint UNVERIFIED."
+  },
+  {
+   "name": "Equinix PE3",
+   "operator": "Equinix",
+   "address": "37 Lemnos Street, Shenton Park WA 6008",
+   "status": "live",
+   "lnglat": [
+    115.79783,
+    -31.95315
+   ],
+   "coord_method": "Centre of OSM building way 986296377 (housenumber 37, Lemnos Street); not tagged as a data centre in OSM, so identification is by address only (medium confidence)",
+   "sources": [
+    "https://www.datacentermap.com/australia/perth/equinix-pe3/ (search snippet)",
+    "https://www.openstreetmap.org/way/986296377"
+   ],
+   "verdict": "fix",
+   "changes": "Exists, opened 2021 (phase 1 about 700 cabinets) at the same Shenton Park campus as PE2, NOT 'Perth'. Our entry has no location, so it was geocoded to Perth centre."
+  },
+  {
+   "name": "DCA PIER",
+   "operator": "DCA (Data Centres Australia) / DC Alliance",
+   "address": "1 Martin Place, Canning Vale WA 6155",
+   "status": "live",
+   "lnglat": [
+    115.91612,
+    -32.05945
+   ],
+   "coord_method": "Centre of OSM building way 245183722 'Pier Data Centre' (telecom=data_center, operator DC Alliance, website dcalliance.com.au/pierdc)",
+   "sources": [
+    "https://www.openstreetmap.org/way/245183722",
+    "https://renewmap.com.au/resources/projects/wa/datacentre/"
+   ],
+   "verdict": "fix",
+   "changes": "Exists, operating, 8 MW. Suburb is Canning Vale, not Perth (ours '1 Martin Place, Perth' would sit in the CBD, about 14 km off). Operator shown in OSM as DC Alliance."
+  },
+  {
+   "name": "DC Two Osborne Park",
+   "operator": "DC Two (now Zettagrid)",
+   "address": "301/396 Scarborough Beach Road, Osborne Park WA 6017",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "No OSM building found by address (Overpass); suburb-level only so not usable",
+   "sources": [
+    "https://baxtel.com/data-center/dc-two-osborne-park",
+    "https://dctwo.com.au/about/data-centres/"
+   ],
+   "verdict": "fix",
+   "changes": "Exists; operator is now Zettagrid (Zettagrid acquired DC TWO's infrastructure from Adisyn on 1 May 2024, per dctwo.com.au). Address 301/396 Scarborough Beach Road is a suite number; the datacentermap URL for this listing carries the title 'Zettagrid Bibra Lake', so it appears to be the SAME listing as our next entry. Exact site unverified."
+  },
+  {
+   "name": "Zettagrid Bibra Lake",
+   "operator": "Zettagrid",
+   "address": "27 Aspiration Circuit, Bibra Lake WA 6163 (per a search summary of datacentermap; unconfirmed)",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "None; address unconfirmed",
+   "sources": [
+    "https://www.datacentermap.com/australia/perth/dc-two-osborne-park/ (429 rate-limited, title seen in search results only)",
+    "https://dctwo.com.au/about/data-centres/"
+   ],
+   "verdict": "fix",
+   "changes": "Likely a duplicate of DC Two Osborne Park (same datacentermap page, now Zettagrid). Zettagrid's own site lists its Perth office at Level 11, 108 St Georges Terrace and hosting platforms in Perth and Darwin. Could not confirm a separate Bibra Lake site: recommend merging/removing unless confirmed."
+  },
+  {
+   "name": "Fujitsu Malaga Data Centre",
+   "operator": "Fujitsu",
+   "address": "16 Mulgul Road, Malaga WA 6090",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "No OSM building tagged for the address; not geocoded to avoid suburb-centre error",
+   "sources": [
+    "https://inflect.com/building/16-mulgul-road-malaga/fujitsu-telecommunications/datacenter/malaga",
+    "https://www.datacentermap.com/australia/perth/fujitsu-perth/",
+    "https://www.datacenterdynamics.com/en/news/australias-centuria-reit-acquires-fujitsu-occupied-data-center-in-perth-from-gdcg/"
+   ],
+   "verdict": "fix",
+   "changes": "Exists (about 5 MW, Fujitsu-occupied, owned by Centuria REIT after buying from GDCG). Address is 16 Mulgul Road, Malaga. Current operator status not re-verified for 2026."
+  },
+  {
+   "name": "Telstra Malaga",
+   "operator": "Telstra",
+   "address": "Malaga WA 6090 (cloudscene lists a Telstra Malaga facility; no street address found)",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "None",
+   "sources": [
+    "https://cloudscene.com/data-center/australia/perth/telstra-malaga (listing seen in search only)",
+    "https://www.datacenters.com/telstra-perth"
+   ],
+   "verdict": "fix",
+   "changes": "UNVERIFIED. Directory sites list a 'Telstra Malaga' entry but no address; the verified Telstra facility is Telstra InfraCo PER1 at 3 Tully Road, East Perth (same address as Equinix PE1). OSM has a Telstra data_center node at 115.80141,-32.06536 (Bibra Lake/Beeliar area), also unconfirmed. Treat as unverified; consider removing."
+  },
+  {
+   "name": "Vocus Perth",
+   "operator": "Vocus",
+   "address": "Vocus lists several Perth sites: 45 St Georges Terrace (Perth), 1 William Street (Perth iX, inside The Quadrant building), 43 King Edward Road Osborne Park",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "One entry cannot represent three sites; building for 1 William St is OSM way 147727242 [115.85549,-31.95557] but it is a 21-storey office tower, not a data centre building",
+   "sources": [
+    "https://www.datacentermap.com/australia/perth/amcom-perth1/",
+    "https://www.datacentermap.com/australia/perth/vocus-perth-ix/",
+    "https://www.datacentermap.com/australia/perth/amcom-osborne/ (search snippets)"
+   ],
+   "verdict": "fix",
+   "changes": "Exists as small telco rooms/colocation floors in office buildings, not stand-alone data centres. Suggest either remove or point at 45 St Georges Tce. Exact coordinates unverified."
+  },
+  {
+   "name": "GreenSquareDC Hazelmere (withdrawn)",
+   "operator": "GreenSquareDC",
+   "address": "Lots 14 and 15 Stirling Crescent, Hazelmere WA 6055",
+   "status": "cancelled",
+   "lnglat": null,
+   "coord_method": "Street Nominatim only (Stirling Crescent ~115.9952,-31.8985); lots not in OSM",
+   "sources": [
+    "https://perthisok.com/news/new-hazelmere-data-centre-plans-cdc/",
+    "https://www.datacenterdynamics.com/en/news/swiss-backed-greensquaredc-withdraws-application-for-120mw-data-center-in-perth-australia/"
+   ],
+   "verdict": "remove",
+   "changes": "Application withdrawn May 2026 after 1,890 submissions (1,829 opposed). Not proceeding at that site. Remove (map entry says plan). A different CDC proposal at 178-196 Bushmead Road, Hazelmere is the live one (see missing list)."
+  }
+ ],
+ "dataCentresMissing": [
+  {
+   "name": "CDC Maddington Campus",
+   "operator": "CDC Data Centres",
+   "address": "582 Bickley Road, Maddington WA 6109",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Overpass found no OSM feature for the lot; Nominatim only returns Bickley Road (115.99-116.00,-32.03), which is a street not a site",
+   "sources": [
+    "https://cdc.com/locations/perth/maddington/",
+    "https://cdc.com/locations/perth/",
+    "https://developedproperty.com.au/projects/bickley-road/",
+    "https://www.datacenterdynamics.com/en/news/australias-cdc-plans-200mw-data-center-campus-outside-perth/"
+   ],
+   "note": "Under construction. 200 MW, A$415m first stage, four buildings up to 24 m, DAP expedited approval, first building operational early 2027 (project press). The biggest planned centre in Perth and missing from our file."
+  },
+  {
+   "name": "CDC Hazelmere",
+   "operator": "CDC Data Centres",
+   "address": "178-196 Bushmead Road, Hazelmere WA 6055",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "None (street-level Bushmead Road 115.9936,-31.9014 only)",
+   "sources": [
+    "https://perthisok.com/news/new-hazelmere-data-centre-plans-cdc/",
+    "https://cdc.com/locations/perth/hazelmere/"
+   ],
+   "note": "Proposed (up to 200 MW across WA with Maddington). Application lodged and on hold awaiting further information before public comment; NOT approved. Consider showing as plan only once approved."
+  },
+  {
+   "name": "GreenSquareDC WAi1",
+   "operator": "GreenSquareDC",
+   "address": "37-39 Abernethy Road, Belmont WA 6104",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "None (OSM has no lot polygon; Abernethy Road centroid only)",
+   "sources": [
+    "https://baxtel.com/data-center/greensquaredc-wai1",
+    "https://www.datacentermap.com/australia/perth/greensquaredc-wai1/",
+    "https://www.datacenterdynamics.com/en/news/greensquaredc-granted-planning-permission-for-96mw-data-center-in-perth-australia/"
+   ],
+   "note": "96 MW, approved by the Metro Inner-South JDAP 17 Oct 2022; Multiplex signed as builder (iTnews); Baxtel now labels the project 'withdrawn / cancelled before construction' and ties the May 2026 withdrawal to this name, while Perth is OK ties the May 2026 withdrawal to the Hazelmere lots. CONFLICTING: status unresolved, UNVERIFIED. Worth confirming before showing."
+  },
+  {
+   "name": "Telstra InfraCo PER1",
+   "operator": "Telstra InfraCo",
+   "address": "3 Tully Road, East Perth WA 6004",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Street-level only",
+   "sources": [
+    "https://www.datacenters.com/telstra-perth"
+   ],
+   "note": "Same address as Equinix PE1; may be one building."
+  },
+  {
+   "name": "Vocus Osborne Park / Perth iX / St Georges Tce",
+   "operator": "Vocus",
+   "address": "43 King Edward Road Osborne Park; 1 William Street Perth; 45 St Georges Terrace Perth",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "None",
+   "sources": [
+    "https://www.datacentermap.com/australia/perth/amcom-osborne/"
+   ],
+   "note": "Telco rooms in office buildings; see Vocus entry."
+  }
+ ],
+ "plans": [
+  {
+   "name": "Airport line",
+   "verdict": "fix",
+   "status_now": "Open since 9 October 2022 (Redcliffe, Airport Central, High Wycombe; eastern terminus High Wycombe)",
+   "fix_points": [
+    [
+     115.91091,
+     -31.91878
+    ],
+    [
+     115.92614,
+     -31.92178
+    ],
+    [
+     115.93764,
+     -31.93123
+    ],
+    [
+     115.95601,
+     -31.93473
+    ],
+    [
+     115.96897,
+     -31.94263
+    ],
+    [
+     115.98511,
+     -31.94562
+    ],
+    [
+     115.9922,
+     -31.95463
+    ]
+   ],
+   "cert": "route",
+   "sources": [
+    "https://en.wikipedia.org/wiki/High_Wycombe_railway_station,_Perth",
+    "https://www.metronet.wa.gov.au/",
+    "OpenStreetMap station nodes (Overpass), cross-checked to Wikipedia coordinates for High Wycombe and Midland"
+   ],
+   "note": "Polyline was up to 650 m off the real tunnel/track alignment in the middle (points 3 and 5) and the last point (116.0033,-31.9677) is 1.8 km from High Wycombe station (115.9922,-31.95463). The line is open and surveyed, so cert should be 'route' (it is 'approx'). Corrected points are vertices of the actual OpenStreetMap railway centreline between the surveyed station nodes (Overpass), simplified to about 1.5 km spacing. Our official URL is just the PTA home page; better https://www.metronet.wa.gov.au/projects/forrestfield-airport-link."
+  },
+  {
+   "name": "Ellenbrook line (Morley-Ellenbrook)",
+   "verdict": "fix",
+   "status_now": "Open since 8 December 2024 (stations Morley, Noranda, Ballajura, Whiteman Park, Ellenbrook; 21 km)",
+   "fix_points": [
+    [
+     115.91187,
+     -31.9184
+    ],
+    [
+     115.92384,
+     -31.91373
+    ],
+    [
+     115.92269,
+     -31.90002
+    ],
+    [
+     115.91876,
+     -31.88571
+    ],
+    [
+     115.91739,
+     -31.87141
+    ],
+    [
+     115.9172,
+     -31.85792
+    ],
+    [
+     115.92647,
+     -31.84831
+    ],
+    [
+     115.94321,
+     -31.84958
+    ],
+    [
+     115.96009,
+     -31.85132
+    ],
+    [
+     115.96617,
+     -31.84118
+    ],
+    [
+     115.9622,
+     -31.82758
+    ],
+    [
+     115.96102,
+     -31.80875
+    ],
+    [
+     115.95806,
+     -31.79549
+    ],
+    [
+     115.96339,
+     -31.7816
+    ]
+   ],
+   "cert": "route",
+   "sources": [
+    "https://www.railwaypro.com/wp/ellenbrook-rail-line-opened/",
+    "https://www.buildaustralia.com.au/projects/metronet-ellenbrook-line-set-to-open-on-december-8/",
+    "OpenStreetMap station nodes (Overpass), cross-checked to Wikipedia coordinates for High Wycombe and Midland"
+   ],
+   "note": "Our polyline is off by 1.1 km, 2.7 km, 0.5 km, 0.9 km, 1.9 km and 6.3 km (final point) at six of nine vertices: it runs well east of the real line and ends at lon 115.987 while Ellenbrook station is at 115.96339,-31.7816. Wording error: the stations are Morley, Noranda, BALLAJURA, Whiteman Park and Ellenbrook; ours says 'Malaga' (there is no Malaga station on this line). Corrected points are vertices of the actual OpenStreetMap railway centreline between the surveyed station nodes (Overpass), simplified to about 1.5 km spacing."
+  },
+  {
+   "name": "Thornlie-Cockburn line",
+   "verdict": "fix",
+   "status_now": "Open (services began 9 June 2025; new stations Nicholson Road and Ranford Road, upgraded Thornlie and Cockburn Central)",
+   "fix_points": [
+    [
+     115.95238,
+     -32.04734
+    ],
+    [
+     115.94316,
+     -32.0544
+    ],
+    [
+     115.93468,
+     -32.06159
+    ],
+    [
+     115.91667,
+     -32.07171
+    ],
+    [
+     115.89658,
+     -32.07538
+    ],
+    [
+     115.88351,
+     -32.07971
+    ],
+    [
+     115.86131,
+     -32.08972
+    ],
+    [
+     115.84953,
+     -32.09792
+    ],
+    [
+     115.85291,
+     -32.11259
+    ],
+    [
+     115.85836,
+     -32.12533
+    ]
+   ],
+   "cert": "route",
+   "sources": [
+    "https://www.abc.net.au/news/2025-06-08/thornlie-cockburn-link-opens-as-part-of-metronet-project/105386618",
+    "https://www.infrastructure.gov.au/department/media/news/new-thornlie-cockburn-rail-line-opens-perth",
+    "OpenStreetMap station nodes (Overpass), cross-checked to Wikipedia coordinates for High Wycombe and Midland"
+   ],
+   "note": "Opened 8-9 June 2025 (ours 9 June ok). Polyline vertices are 0.4-1.4 km off the track, and the last point (115.86,-32.121) is about 0.5 km from Cockburn Central station (115.85836,-32.12533). Corrected points are vertices of the actual OpenStreetMap railway centreline between the surveyed station nodes (Overpass), simplified to about 1.5 km spacing."
+  },
+  {
+   "name": "Byford rail extension",
+   "verdict": "ok",
+   "status_now": "Open since 12 October 2025 (8 km, new Byford station; Armadale section elevated)",
+   "fix_points": null,
+   "cert": "route",
+   "sources": [
+    "https://minister.infrastructure.gov.au/c-king/media-release/all-aboard-armadale-line-reopens-services-extending-byford",
+    "https://en.wikipedia.org/wiki/Byford_railway_station"
+   ],
+   "note": "Polyline is within 250 m of the OSM track everywhere, so cert 'route' is deserved (ours says 'approx'). Final point (116.005,-32.222) is 650 m beyond the actual Byford station (116.00738,-32.21646); trim it."
+  },
+  {
+   "name": "Yanchep rail extension",
+   "verdict": "fix",
+   "status_now": "Open since 14 July 2024 (14.5 km from Butler: Alkimos, Eglinton, Yanchep)",
+   "fix_points": [
+    [
+     115.70033,
+     -31.63569
+    ],
+    [
+     115.69415,
+     -31.62147
+    ],
+    [
+     115.6901,
+     -31.60434
+    ],
+    [
+     115.68234,
+     -31.5928
+    ],
+    [
+     115.67194,
+     -31.58171
+    ],
+    [
+     115.67092,
+     -31.56822
+    ],
+    [
+     115.6617,
+     -31.55777
+    ],
+    [
+     115.6484,
+     -31.55141
+    ],
+    [
+     115.64392,
+     -31.5378
+    ],
+    [
+     115.64383,
+     -31.53187
+    ]
+   ],
+   "cert": "route",
+   "sources": [
+    "https://www.pta.wa.gov.au/news/media-statements/yanchep-rail-extension-officially-open",
+    "https://roadsonline.com.au/metronet-yanchep-rail-extension-now-open/",
+    "OpenStreetMap station nodes (Overpass), cross-checked to Wikipedia coordinates for High Wycombe and Midland"
+   ],
+   "note": "Polyline within 0.1-0.7 km of the track, with errors up to 670 m at the northern end (needs the last points reaching Yanchep station 115.64383,-31.53187; ours stops at 115.656,-31.55). Corrected points are vertices of the actual OpenStreetMap railway centreline between the surveyed station nodes (Overpass), simplified to about 1.5 km spacing."
+  },
+  {
+   "name": "Tonkin Highway Extension (Thomas Rd to South Western Hwy)",
+   "verdict": "fix",
+   "status_now": "Under construction since mid-2025; completion late 2028 (Main Roads: $1.045bn, 14 km new dual carriageway Thomas Road to South Western Highway plus 4.5 km Thomas Road upgrade)",
+   "fix_points": [
+    [
+     115.9695,
+     -32.2059
+    ]
+   ],
+   "cert": "concept",
+   "sources": [
+    "https://www.mainroads.wa.gov.au/projects-initiatives/all-projects/metropolitan/tonkin-highway-extension-and-thomas-road-upgrade/",
+    "https://www.felix.net/project-news/major-construction-tonkin-hwy-extension-thomas-rd-upgrade"
+   ],
+   "note": "Our status line says 'completion date not confirmed': Main Roads states late 2028. Start point: the existing Tonkin Highway ends at Thomas Road at about [115.9695,-32.2059] (OSM trunk end); ours begins at 115.98,-32.2045, about 1 km east. The full alignment is not in OSM or any source I could read, so the rest is UNVERIFIED; the polyline's route from there to Mundijong (OSM Mundijong Road construction runs 115.964-115.977 at lat -32.297 to -32.298) looks about 1 km too far east at the south end. 'concept' is the honest label. Cost in our text ('roughly $1 billion') ok."
+  },
+  {
+   "name": "Tonkin Gap",
+   "verdict": "fix",
+   "status_now": "Complete (lanes opened Dec 2023; officially complete Aug 2024)",
+   "fix_points": null,
+   "cert": "route",
+   "sources": [
+    "https://bigrigs.com.au/2024/08/01/congestion-busting-tonkin-gap-project-in-perth-officially-complete/",
+    "https://www.infrastructure.gov.au/department/media/news/completed-upgrade-bridges-perths-tonkin-gap"
+   ],
+   "note": "Our status 'Completed 2023' is a half truth: works finished 2023-24, officially complete 1 Aug 2024. Polyline within 0.5 km of OSM Tonkin Highway: acceptable for an open road (could be 'route')."
+  },
+  {
+   "name": "EastLink WA (Orange Route)",
+   "verdict": "fix",
+   "status_now": "In planning; planning/development phase complete, 'project development pending funding commitment'; Reid Highway interchanges under construction (2025-2028)",
+   "fix_points": null,
+   "cert": "concept",
+   "sources": [
+    "https://www.buildingfortomorrow.wa.gov.au/projects/eastlink-wa/"
+   ],
+   "note": "Official page describes an 80+ km corridor Perth to Northam via Gidgegannup/Mundaring/Swan Valley and does not name an 'Orange Route'. Our 4-point line ends at lon 116.33; its alignment cannot be checked against any published map I could read, UNVERIFIED. Keep as 'concept' and consider dropping the 'Orange Route' label."
+  }
+ ],
+ "railHubs": [
+  {
+   "name": "Airport Central",
+   "verdict": "fix",
+   "lnglat": [
+    115.97484,
+    -31.94404
+   ],
+   "sources": [
+    "https://www.openstreetmap.org (station node via Overpass)",
+    "https://en.wikipedia.org/wiki/High_Wycombe_railway_station,_Perth",
+    "https://en.wikipedia.org/wiki/Midland_railway_station,_Perth"
+   ],
+   "note": "Ours is 771 m from the surveyed station. Airport line station for T1/T2 (opened 2022). Hub note: 'Morley ... in the Tonkin Hwy median' is plausible but check; hub text otherwise fine."
+  },
+  {
+   "name": "Redcliffe",
+   "verdict": "fix",
+   "lnglat": [
+    115.94971,
+    -31.93359
+   ],
+   "sources": [
+    "https://www.openstreetmap.org (station node via Overpass)",
+    "https://en.wikipedia.org/wiki/High_Wycombe_railway_station,_Perth",
+    "https://en.wikipedia.org/wiki/Midland_railway_station,_Perth"
+   ],
+   "note": "Ours is 706 m from the surveyed station. Airport line station next to the old T3/T4 terminals. Hub note: 'Morley ... in the Tonkin Hwy median' is plausible but check; hub text otherwise fine."
+  },
+  {
+   "name": "High Wycombe",
+   "verdict": "fix",
+   "lnglat": [
+    115.9922,
+    -31.95463
+   ],
+   "sources": [
+    "https://www.openstreetmap.org (station node via Overpass)",
+    "https://en.wikipedia.org/wiki/High_Wycombe_railway_station,_Perth",
+    "https://en.wikipedia.org/wiki/Midland_railway_station,_Perth"
+   ],
+   "note": "Ours is 1,792 m from the surveyed station. Airport line terminus (opened 9 Oct 2022, Dundas Road). Hub note: 'Morley ... in the Tonkin Hwy median' is plausible but check; hub text otherwise fine."
+  },
+  {
+   "name": "Morley",
+   "verdict": "fix",
+   "lnglat": [
+    115.92002,
+    -31.89603
+   ],
+   "sources": [
+    "https://www.openstreetmap.org (station node via Overpass)",
+    "https://en.wikipedia.org/wiki/High_Wycombe_railway_station,_Perth",
+    "https://en.wikipedia.org/wiki/Midland_railway_station,_Perth"
+   ],
+   "note": "Ours is 1,126 m from the surveyed station. Ellenbrook line station (2024). Hub note: 'Morley ... in the Tonkin Hwy median' is plausible but check; hub text otherwise fine."
+  },
+  {
+   "name": "Ellenbrook",
+   "verdict": "fix",
+   "lnglat": [
+    115.96339,
+    -31.7816
+   ],
+   "sources": [
+    "https://www.openstreetmap.org (station node via Overpass)",
+    "https://en.wikipedia.org/wiki/High_Wycombe_railway_station,_Perth",
+    "https://en.wikipedia.org/wiki/Midland_railway_station,_Perth"
+   ],
+   "note": "Ours is 2,241 m from the surveyed station. Ellenbrook line terminus (2024). Hub note: 'Morley ... in the Tonkin Hwy median' is plausible but check; hub text otherwise fine. (Station per Wikipedia/OSM; ours 2.2 km east of it.)"
+  },
+  {
+   "name": "Midland (new)",
+   "verdict": "fix",
+   "lnglat": [
+    116.00344,
+    -31.89242
+   ],
+   "sources": [
+    "https://www.openstreetmap.org (station node via Overpass)",
+    "https://en.wikipedia.org/wiki/High_Wycombe_railway_station,_Perth",
+    "https://en.wikipedia.org/wiki/Midland_railway_station,_Perth"
+   ],
+   "note": "Ours is 836 m from the surveyed station. Relocated Midland station opened 22 Feb 2026 (old station closed 22 Jan 2026), between Helena and Cale Streets. Hub note: 'Morley ... in the Tonkin Hwy median' is plausible but check; hub text otherwise fine. Wikipedia gives 116.00344,-31.892415; OSM still has the node at 116.00373,-31.89238 (same place within 30 m)."
+  },
+  {
+   "name": "Byford",
+   "verdict": "fix",
+   "lnglat": [
+    116.00738,
+    -32.21646
+   ],
+   "sources": [
+    "https://www.openstreetmap.org (station node via Overpass)",
+    "https://en.wikipedia.org/wiki/High_Wycombe_railway_station,_Perth",
+    "https://en.wikipedia.org/wiki/Midland_railway_station,_Perth"
+   ],
+   "note": "Ours is 656 m from the surveyed station. Byford extension terminus (opened 12 Oct 2025). Hub note: 'Morley ... in the Tonkin Hwy median' is plausible but check; hub text otherwise fine."
+  },
+  {
+   "name": "Cockburn Central",
+   "verdict": "fix",
+   "lnglat": [
+    115.85836,
+    -32.12533
+   ],
+   "sources": [
+    "https://www.openstreetmap.org (station node via Overpass)",
+    "https://en.wikipedia.org/wiki/High_Wycombe_railway_station,_Perth",
+    "https://en.wikipedia.org/wiki/Midland_railway_station,_Perth"
+   ],
+   "note": "Ours is 506 m from the surveyed station. Interchange for the Thornlie-Cockburn line (2025). Hub note: 'Morley ... in the Tonkin Hwy median' is plausible but check; hub text otherwise fine."
+  }
+ ],
+ "other": [
+  {
+   "field": "tallBuilding",
+   "verdict": "fix",
+   "correct": "Central Park is Perth's tallest building: 226 m to the roof and about 262 m (261.7 m) including its antenna spire. Our 'about 250 m to its spire' is neither figure; suggest 'about 226 m to the roof (262 m with its antenna)'.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Central_Park_(skyscraper)"
+   ]
+  },
+  {
+   "field": "future toggle wording (After the new runway opens (2028))",
+   "verdict": "ok",
+   "correct": "Perth Airport and Airservices both give 2028 for completion (construction started March 2026; Skyway consortium of BMD and CPB appointed Dec 2025). Wikipedia says 2029. New runway 3,000 m x 45 m. New Airservices flight paths are NOT final: preliminary design engagement early 2027, final design 2028, so the map's future paths are placeholders; the future.explain text is fair but could say that.",
+   "sources": [
+    "https://engage.airservicesaustralia.com/perth",
+    "https://en.wikipedia.org/wiki/Perth_Airport"
+   ]
+  },
+  {
+   "field": "schoolZoneUrl",
+   "verdict": "ok",
+   "correct": "https://www.det.wa.edu.au/schoolsonline/home.do returns HTTP 200 (WA Department of Education Schools Online). It is the generic search page, not a catchment lookup.",
+   "sources": [
+    "https://www.det.wa.edu.au/schoolsonline/home.do"
+   ]
+  },
+  {
+   "field": "links",
+   "verdict": "ok",
+   "correct": "HTTP checks: HTTP 200 for metronet.wa.gov.au, pta.wa.gov.au, mainroads.wa.gov.au, au.webtrak.aero/per3, jandakotairport.com.au noise page, engage.airservicesaustralia.com/pnr, cpbcon.com.au project page, skyvector YPPH, the Cotality PDF. HTTP 403 to automated fetches (Cloudflare bot block, probably fine in a browser): perthairport.com.au pages (new-runway project, MDPs, Vol A s6 PDF) and datacenterdynamics.com. Not checked: skyvector YPJT/YPEA, buildingfortomorrow EastLink page (loaded fine via WebFetch), Mainroads Tonkin page (loaded fine).",
+   "sources": []
+  },
+  {
+   "field": "airport notes: curfew",
+   "verdict": "ok",
+   "correct": "No legislated curfew, 24-hour operation, voluntary noise abatement procedures only; preferred runways and the night-time ideas (reciprocal ops via Pearce airspace) were only considered in the 2014 review.",
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/05/30/perth-airport-nap-1-preferred-runways/",
+    "https://www.airservicesaustralia.com/wp-content/uploads/Perth-Airport-Noise-Abatement-Procedures-Review-December-2014.pdf"
+   ]
+  },
+  {
+   "field": "airport notes: wide-body jets (A380, 787, etc.)",
+   "verdict": "ok",
+   "correct": "Not independently verified here; Perth is a major international and FIFO airport (SIDs and arrivals include jet procedures). Airline-specific claims (Emirates/Qatar A380, Qantas 787 to London) not checked.",
+   "sources": []
+  },
+  {
+   "field": "airport notes: Jandakot (~200,000+ movements, busiest GA field)",
+   "verdict": "ok",
+   "correct": "UNVERIFIED figure; not checked against Jandakot Airport statistics.",
+   "sources": []
+  },
+  {
+   "field": "airport notes: RAAF Pearce (PC-21, Hawk 127, Singapore training)",
+   "verdict": "ok",
+   "correct": "Not independently verified here (PC-21 and Hawk training at Pearce is public knowledge but I did not fetch a source). Pearce also has a grass strip 18R/36L not drawn.",
+   "sources": []
+  },
+  {
+   "field": "nearNote Jandakot km / Pearce km",
+   "verdict": "ok",
+   "correct": "Not audited (map-logic distances).",
+   "sources": []
+  }
+ ],
+ "unverified": [
+  "YPPH 03R/21L exact threshold coordinates: not published in any source I could open (Perth Airport PDFs are behind Cloudflare 403). Placement derived from MDP numbers quoted via search snippets.",
+  "datacentermap.com Perth city page (28 facilities) returned HTTP 429 repeatedly, so the missing-list may omit smaller operators (it lists 28 facilities from 10 operators).",
+  "Exact building coordinates not available for PE1, DC Two, Zettagrid, Fujitsu, Telstra Malaga, Vocus, CDC Maddington, CDC Hazelmere, GreenSquareDC sites.",
+  "Perth Airport PDFs (MDP Vol A s6, noise management summary, fact sheets) return 403 to every automated fetch, so new runway text was seen only as search-result snippets.",
+  "Flight-path turn points: DAP lists SID tracks but waypoint coordinates (MIDLA, AVBAD, JANDO, TUVBA) were not in the text I could extract, so turn distances cannot be given; radar vectors from 1,000 ft are the norm.",
+  "Official airport lease boundaries and estate areas were not compared to OSM."
+ ]
+}

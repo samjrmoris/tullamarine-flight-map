@@ -1,0 +1,368 @@
+{
+ "id": "act",
+ "checked": "2026-10-03",
+ "sections": "F,D,P,O",
+ "flightPaths": [
+  {
+   "airport": "YSCB",
+   "runwayEnd": "35",
+   "departs": "Jets usually heading 350 deg (near straight); right turns only above 4,500 ft, left turns only after Mt Majura.",
+   "arrives": "IFR straight-in required; night jets no closer than MOMBI.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/01/canberra-airport-nap-2-preferred-flight-paths/",
+    "https://www.canberraairport.com.au/community/aircraft-noise"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "airport": "YSCB",
+   "runwayEnd": "17",
+   "departs": "Heading 180 deg (straight) until clear of Noise Abatement Area; jets above 7,000 ft over it.",
+   "arrives": "Right base vectored to final no closer than 4 DME; IFR straight-in.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/01/canberra-airport-nap-2-preferred-flight-paths/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "airport": "YSCB",
+   "runwayEnd": "12/30",
+   "departs": "No specific procedures listed.",
+   "arrives": "No specific procedures listed.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/01/canberra-airport-nap-2-preferred-flight-paths/"
+   ],
+   "confidence": "low"
+  }
+ ],
+ "dataCentres": [
+  {
+   "name": "CDC Hume HU1",
+   "operator": "CDC",
+   "address": "54 Sheppard St, Hume ACT 2620",
+   "status": "live",
+   "lnglat": [
+    149.16759,
+    -35.38866
+   ],
+   "coord_method": "Nominatim building match",
+   "sources": [
+    "https://www.datacentermap.com/australia/canberra/cdc-hume-hu1"
+   ],
+   "verdict": "ok",
+   "changes": ""
+  },
+  {
+   "name": "CDC Hume HU4",
+   "operator": "CDC",
+   "address": "7 Tralee St, Hume",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Nominatim no match",
+   "sources": [
+    "https://datacentermap.com/australia/canberra/cdc-hume-hu4"
+   ],
+   "verdict": "ok",
+   "changes": ""
+  },
+  {
+   "name": "CDC Hume HU5",
+   "operator": "CDC",
+   "address": "7 Tralee St, Hume",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "as HU4",
+   "sources": [
+    "https://www.datacentermap.com/australia/canberra/cdc-hume-hu5/"
+   ],
+   "verdict": "ok",
+   "changes": "Same campus as HU4"
+  },
+  {
+   "name": "CDC Hume Campus Two",
+   "operator": "CDC",
+   "address": "7 Tralee St, Hume ACT 2620",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "not obtained",
+   "sources": [
+    "https://datacentermap.com/australia/canberra/cdc-hume-campus-two/ecosystem"
+   ],
+   "verdict": "fix",
+   "changes": "Campus Two = HU4+HU5, so these three entries are duplicates of one site; merge or drop."
+  },
+  {
+   "name": "CDC Fyshwick Campus",
+   "operator": "CDC",
+   "address": "11 Tom Price St, Fyshwick ACT 2609",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "geocoder rate-limited",
+   "sources": [
+    "https://datacentermap.com/australia/canberra/cdc-fyshwick-fy1"
+   ],
+   "verdict": "fix",
+   "changes": "Add address 11 Tom Price St (FY1, FY2)."
+  },
+  {
+   "name": "NEXTDC C1 Canberra",
+   "operator": "NEXTDC",
+   "address": "19 Battye St, Bruce ACT",
+   "status": "live",
+   "lnglat": [
+    149.09622,
+    -35.24538
+   ],
+   "coord_method": "Nominatim building match",
+   "sources": [
+    "https://baxtel.com/data-center/nextdc-canberra-c1"
+   ],
+   "verdict": "ok",
+   "changes": ""
+  },
+  {
+   "name": "Equinix CA1",
+   "operator": "Equinix",
+   "address": "51 Dacre St, Mitchell ACT",
+   "status": "live",
+   "lnglat": [
+    149.13472,
+    -35.20798
+   ],
+   "coord_method": "Nominatim building match",
+   "sources": [
+    "https://www.datacentermap.com/c/intervolve/datacenters/"
+   ],
+   "verdict": "ok",
+   "changes": ""
+  },
+  {
+   "name": "ADC Mitchell",
+   "operator": "Australian Data Centres",
+   "address": "Dacre St, Mitchell (another listing: 38 Vicars St)",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "not obtained",
+   "sources": [
+    "https://www.peeringdb.com/fac/699"
+   ],
+   "verdict": "ok",
+   "changes": "Number unconfirmed; listing says 3 MW (ours ~7 MW)."
+  },
+  {
+   "name": "Macquarie IC4 Bunker",
+   "operator": "Macquarie Data Centres",
+   "address": "Not public; IC5 listed at Fairbairn Ave, Canberra ACT 2609",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "not obtained",
+   "sources": [
+    "https://baxtel.com/data-center/macquarie-ic4-bunker",
+    "https://baxtel.com/data-center/macquarie-ic5-bunker"
+   ],
+   "verdict": "fix",
+   "changes": "'Believed Hume' probably wrong: listings put it near Fyshwick (0.32 mi from CDC Fyshwick 2)."
+  },
+  {
+   "name": "Telstra Deakin",
+   "operator": "Telstra",
+   "address": "109 Kent St, Deakin ACT 2600",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Nominatim gave only 'Deakin Offices' at [149.09745,-35.32601]; not confirmed as exchange",
+   "sources": [
+    "https://www.datacentermap.com/australia/canberra/telstra-deakin/"
+   ],
+   "verdict": "ok",
+   "changes": ""
+  }
+ ],
+ "dataCentresMissing": [
+  {
+   "name": "CDC Hume HU2 / HU3",
+   "operator": "CDC",
+   "address": "54 Sheppard St, Hume",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "n/a",
+   "sources": [
+    "https://www.datacentermap.com/australia/canberra/cdc-hume-hu2/"
+   ],
+   "note": "Same campus as HU1; optional"
+  },
+  {
+   "name": "CDC Beard BE1 / BE2",
+   "operator": "CDC",
+   "address": "Beard ACT (street not confirmed)",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "n/a",
+   "sources": [
+    "https://region.com.au/new-200-million-data-centre-proposed-for-beard-fits-territory-standards-on-power-and-water/996833/"
+   ],
+   "note": "Beard 1 built (10 halls); Beard 2 ($200m) development application Sept 2026."
+  },
+  {
+   "name": "Macquarie IC5 Bunker",
+   "operator": "Macquarie Data Centres",
+   "address": "Fairbairn Ave, Canberra ACT 2609",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "n/a",
+   "sources": [
+    "https://baxtel.com/data-center/macquarie-ic5-bunker"
+   ],
+   "note": "Second bunker of campus"
+  },
+  {
+   "name": "ADC Fyshwick",
+   "operator": "Australian Data Centres",
+   "address": "Fyshwick",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "n/a",
+   "sources": [
+    "https://baxtel.com/data-center/adc-fyshwick"
+   ],
+   "note": "Baxtel only"
+  }
+ ],
+ "plans": [
+  {
+   "name": "Light Rail Stage 2A",
+   "verdict": "ok",
+   "status_now": "Under construction; passengers early 2028",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://www.act.gov.au/__data/assets/pdf_file/0011/3092915/Building-Light-Rail-to-Woden-Project-Update-July-2026.pdf",
+    "https://www.act.gov.au/lightrailtowoden/stage-2a"
+   ],
+   "note": "URL 200. Works finish early 2027 not verified."
+  },
+  {
+   "name": "Light Rail Stage 2B",
+   "verdict": "ok",
+   "status_now": "UNVERIFIED",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://www.act.gov.au/builtforcbr/browse-all-projects/transport/light-rail-to-woden"
+   ],
+   "note": "URL 200"
+  },
+  {
+   "name": "Light Rail Stage 3",
+   "verdict": "ok",
+   "status_now": "UNVERIFIED",
+   "fix_points": null,
+   "cert": "concept",
+   "sources": [
+    "https://www.act.gov.au/lightrailtowoden"
+   ],
+   "note": "URL 200"
+  },
+  {
+   "name": "Monaro Highway upgrade",
+   "verdict": "ok",
+   "status_now": "UNVERIFIED",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://www.act.gov.au/our-canberra/latest-news/2026/march/upgrades-on-major-canberra-roads-continue"
+   ],
+   "note": "URL 200; not read"
+  },
+  {
+   "name": "Athllon Drive duplication",
+   "verdict": "ok",
+   "status_now": "UNVERIFIED",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://www.act.gov.au/our-canberra/latest-news/2026/march/upgrades-on-major-canberra-roads-continue"
+   ],
+   "note": "URL 200; not read"
+  },
+  {
+   "name": "William Hovell Drive duplication",
+   "verdict": "ok",
+   "status_now": "UNVERIFIED",
+   "fix_points": null,
+   "cert": "concept",
+   "sources": [
+    "https://www.act.gov.au/builtforcbr/browse-all-projects/transport/william-hovell-drive-duplication"
+   ],
+   "note": "URL 200; not read"
+  }
+ ],
+ "railHubs": [
+  {
+   "name": "Alinga Street, City South, Commonwealth Park, Woden, Gungahlin Place",
+   "verdict": "ok",
+   "lnglat": [
+    149.1314,
+    -35.2784
+   ],
+   "sources": [],
+   "note": "Coordinates not checked (geocoder blocked)"
+  }
+ ],
+ "other": [
+  {
+   "field": "tallBuilding",
+   "verdict": "ok",
+   "correct": "Telstra Tower about 195 m (not re-verified)",
+   "sources": []
+  },
+  {
+   "field": "future",
+   "verdict": "ok",
+   "correct": "null; none found",
+   "sources": []
+  },
+  {
+   "field": "schools.zoneSite",
+   "verdict": "ok",
+   "correct": "www.act.gov.au 200",
+   "sources": [
+    "https://www.act.gov.au"
+   ]
+  },
+  {
+   "field": "curfew",
+   "verdict": "ok",
+   "correct": "Curfew-free; jets >=7,000 ft over Noise Abatement Area",
+   "sources": [
+    "https://www.canberraairport.com.au/community/aircraft-noise"
+   ]
+  }
+ ],
+ "unverified": [
+  "YSCB turn angles (headings only)",
+  "Coordinates for 7 Tralee St, Fyshwick, Macquarie, ADC",
+  "Road plan statuses",
+  "Rail hub coordinates"
+ ]
+}

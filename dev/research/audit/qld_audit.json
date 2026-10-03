@@ -1,0 +1,986 @@
+{
+ "id": "qld",
+ "checked": "2026-10-01",
+ "runways": [
+  {
+   "airport": "YBBN",
+   "refs": [
+    "01R",
+    "19L"
+   ],
+   "ours": [
+    [
+     153.11817,
+     -27.40283
+    ],
+    [
+     153.13433,
+     -27.37467
+    ]
+   ],
+   "source": [
+    [
+     153.11822,
+     -27.40282
+    ],
+    [
+     153.13431,
+     -27.37468
+    ]
+   ],
+   "diff_m": [
+    5,
+    2
+   ],
+   "source_url": "https://www.openstreetmap.org/way/512259278",
+   "verdict": "ok",
+   "note": "OSM way 512259278 (01R/19L). OurAirports lists the physical ends at [153.11800,-27.40390]/[153.13400,-27.37530] (120 m / 77 m from ours) but flags a 197 ft (60 m) displaced threshold on 01R, which explains the south-end gap; ours matches OSM's threshold split. ends[0] is the south end = 01R threshold, correct."
+  },
+  {
+   "airport": "YBBN",
+   "refs": [
+    "01L",
+    "19R"
+   ],
+   "ours": [
+    [
+     153.10683,
+     -27.383
+    ],
+    [
+     153.122,
+     -27.3565
+    ]
+   ],
+   "source": [
+    [
+     153.10681,
+     -27.38307
+    ],
+    [
+     153.12196,
+     -27.35657
+    ]
+   ],
+   "diff_m": [
+    8,
+    9
+   ],
+   "source_url": "https://www.openstreetmap.org/way/263045280",
+   "verdict": "ok",
+   "note": "OSM way 263045280 runs 19R->01L (reverse direction); compared by end. OurAirports [153.10699,-27.38310]/[153.12199,-27.35660] (20 m / 11 m). ends[0] south end = 01L, correct."
+  },
+  {
+   "airport": "YBAF",
+   "refs": [
+    "10L",
+    "28R"
+   ],
+   "ours": [
+    [
+     152.99817,
+     -27.57067
+    ],
+    [
+     153.01117,
+     -27.57433
+    ]
+   ],
+   "source": [
+    [
+     152.99812,
+     -27.57062
+    ],
+    [
+     153.01115,
+     -27.57432
+    ]
+   ],
+   "diff_m": [
+    7,
+    2
+   ],
+   "source_url": "https://www.openstreetmap.org/way/180752190",
+   "verdict": "ok",
+   "note": "OurAirports lists physical ends [152.99722,-27.57040]/[153.01325,-27.57491] with 165 ft displaced on 28R (98 m / 215 m from ours), so ours matches OSM. Region file draws no runways (noModel) so this is not used on the map. Note YBAF also has parallel grass runways 10R/28L and 04R/22L not in our file (not drawn)."
+  },
+  {
+   "airport": "YBAF",
+   "refs": [
+    "04L",
+    "22R"
+   ],
+   "ours": [
+    [
+     153.00183,
+     -27.571
+    ],
+    [
+     153.0095,
+     -27.56567
+    ]
+   ],
+   "source": [
+    [
+     153.00191,
+     -27.57094
+    ],
+    [
+     153.00947,
+     -27.56558
+    ]
+   ],
+   "diff_m": [
+    10,
+    10
+   ],
+   "source_url": "https://www.openstreetmap.org/way/678816257",
+   "verdict": "ok",
+   "note": "OSM split ways (678816255/57/56) end at the 22R displaced threshold; OurAirports physical end 22R [153.01176,-27.56395] has 952 ft displaced threshold, which is the 294 m gap. Not drawn on the map (noModel)."
+  },
+  {
+   "airport": "YAMB",
+   "refs": [
+    "15",
+    "33"
+   ],
+   "ours": [
+    [
+     152.70533,
+     -27.62167
+    ],
+    [
+     152.7165,
+     -27.64733
+    ]
+   ],
+   "source": [
+    [
+     152.70504,
+     -27.62123
+    ],
+    [
+     152.71644,
+     -27.64732
+    ]
+   ],
+   "diff_m": [
+    57,
+    6
+   ],
+   "source_url": "https://www.openstreetmap.org/way/27328646",
+   "verdict": "ok",
+   "note": "OSM way 27328646 runs 33->15. OurAirports [152.70500,-27.62170]/[152.71600,-27.64730] (33 m and 49 m from ours at the 15 and 33 ends). All under 150 m. Not drawn (noModel)."
+  },
+  {
+   "airport": "YAMB",
+   "refs": [
+    "04",
+    "22"
+   ],
+   "ours": [
+    [
+     152.70783,
+     -27.64467
+    ],
+    [
+     152.72033,
+     -27.63667
+    ]
+   ],
+   "source": [
+    [
+     152.70791,
+     -27.64459
+    ],
+    [
+     152.72033,
+     -27.63663
+    ]
+   ],
+   "diff_m": [
+    12,
+    4
+   ],
+   "source_url": "https://www.openstreetmap.org/way/27328648",
+   "verdict": "ok",
+   "note": "OurAirports [152.70799,-27.64460]/[152.72000,-27.63660]. Within 33 m. Not drawn (noModel)."
+  }
+ ],
+ "flightPaths": [
+  {
+   "airport": "YBBN",
+   "runwayEnd": "19R",
+   "departs": "Jets to the north and west fly straight ahead 'for several miles', then turn right, then a shallow second right (19R WACKO to NW; 19R BIXAD wraps right round to the NE then north), splitting north of Brookfield above ~5000 ft. Non-jets use a radar SID via Maroochydore. Not used 10pm-6am (night noise rule). A 15 degree angled-off-centreline change for the straight section was only floated as a possible option in the 2022 review, not confirmed.",
+   "arrives": "This is the end used for SODPROPS arrivals and 19 operations: arrivals come in over Moreton Bay. ILS arrivals join final about 10-12 NM (about 18-22 km) out; visual joins about 4 NM (7.5 km) out; RNP-AR curved arrivals exist. Since 9 Jul 2026 Package 3 moved northern arrivals to this end further north over water (around 59,000 fewer people overflown).",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    0,
+    40
+   ],
+   "sources": [
+    "https://www.airservicesaustralia.com/wp-content/uploads/BNE-NPR-PIR-Independent-Review_Final-Report-v1.0_final.pdf (paras 80-82, 88)",
+    "https://www.bne.com.au/sites/default/files/docs/BNR_EIS_MDP_D3_Airspace_Architecture.pdf (3.6.2 / 3.6.4)",
+    "https://www.airservicesaustralia.com/airservices-australia-releases-latest-noise-action-plan-for-brisbane-outcomes/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "airport": "YBBN",
+   "runwayEnd": "19L",
+   "departs": "Southbound/eastbound jets (GUMKI, SANEG, SCOTT) turn LEFT soon after takeoff and head south first (turn after 600 ft and 3 DME per the EIS), then east or north-east; non-jets on a radar SID turn tight left to heading 110 along the coast. At night (10pm-6am, when SODPROPS is not available) northbound jets use 19L WACKO/BIXAD: straight ahead for several miles then turn right, parallel to the 19R routes.",
+   "arrives": "19 operations: arrivals over Moreton Bay onto 19L; ILS final about 10-12 NM, straight. 19L is the high-side parallel approach (joins at 3,000 ft).",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    -60,
+    0,
+    40
+   ],
+   "sources": [
+    "https://www.airservicesaustralia.com/wp-content/uploads/BNE-NPR-PIR-Independent-Review_Final-Report-v1.0_final.pdf (paras 83-85)",
+    "https://www.bne.com.au/sites/default/files/docs/BNR_EIS_MDP_D3_Airspace_Architecture.pdf (3.5.4)",
+    "https://aircraftnoise.airservicesaustralia.com/2024/05/28/use-of-preferred-runway-including-sodprops/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YBBN",
+   "runwayEnd": "01L",
+   "departs": "Over Moreton Bay: jets use the 01L WACKO SID, initially about 2 km west of the old 01 path and converging with northbound paths over the Bay. Non-jets (about 30% of traffic) follow a radar heading of 340 degrees (magnetic; runway heading is 010, so about 30 degrees left) over Redcliffe. Night use of this runway over land is restricted; a safety study for night over-airport departures is underway.",
+   "arrives": "01 operations: arrivals come in over the city. ILS final starts about 12 NM (about 22 km) out; visual final about 4 NM (7.5 km); RNP-AR curved arrivals exist; Chevron airspace is radar vectored. Package 3 redesigned the southern arrivals for independent parallel ops (about 35,000 fewer people overflown); regular independent parallel use not expected until late 2027.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    -30,
+    0
+   ],
+   "sources": [
+    "https://www.airservicesaustralia.com/wp-content/uploads/BNE-NPR-PIR-Independent-Review_Final-Report-v1.0_final.pdf (paras 54, 90)",
+    "https://www.bne.com.au/sites/default/files/docs/BNR_EIS_MDP_D3_Airspace_Architecture.pdf (3.6.2, 3.6.3)"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YBBN",
+   "runwayEnd": "01R",
+   "departs": "Over Moreton Bay. Jets to southern and eastern destinations turn RIGHT at the Brisbane VOR (about 1 NM north of the upwind threshold, i.e. very soon after take-off) and head south-east over the bay; Package 3 (from 9 Jul 2026) shifts these south-east departures further east (about 44,500 fewer people overflown). Under SODPROPS this is the only jet departure runway and jets go north over the bay. Radar-SID non-jets also use bay routes.",
+   "arrives": "01 operations: arrivals over the city/south (Archerfield area and then up the coast), straight ILS final from about 12 NM, curved RNP-AR also in use. 01R is the low-side approach.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    0,
+    40
+   ],
+   "sources": [
+    "https://www.bne.com.au/sites/default/files/docs/BNR_EIS_MDP_D3_Airspace_Architecture.pdf (3.5.4: turn at the VOR)",
+    "https://www.airservicesaustralia.com/wp-content/uploads/BNE-NPR-PIR-Independent-Review_Final-Report-v1.0_final.pdf (para 54)",
+    "https://www.airservicesaustralia.com/airservices-australia-releases-latest-noise-action-plan-for-brisbane-outcomes/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YBBN",
+   "runwayEnd": "ALL",
+   "departs": "Rules that change usage: no curfew, but night noise rules. Day (6am-10pm) preferred: 19L/19R both arriving and departing (arrivals over Moreton Bay, departures over the city), then 01L/01R. Night (10pm-6am) preferred order: SODPROPS (arrive 19R, depart 01R, all over the bay), reciprocal ops (arrive 19L/R, depart 01R), legacy runway departures 19L over land, legacy arrivals 01R. New runway over land at night only for emergencies/severe weather. SODPROPS needs downwind max 5 kt, crosswind max 20 kt, dry runway, cloud above 2,500 ft, visibility 8 km or more (2007 EIS criteria; the airport page names visibility, cloud, wind and runway surface). An 18-month tailwind trial lets pilots request over-water runways 10pm-6am.",
+   "arrives": "The map's 26 km straight-in is longer than the published ILS final (about 10-12 NM = 18-22 km); visual finals are about 7.5 km and RNP-AR arrivals are curved. Suggest arrKm about 22 for YBBN. Note the map draws every departure from every runway end, whereas in reality each runway is used in only some modes.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2024/05/28/use-of-preferred-runway-including-sodprops/",
+    "https://www.bne.com.au/corporate/community-and-environment/runway-operations-noise/understanding-runway-operations-noise",
+    "https://www.bne.com.au/sites/default/files/docs/BNR_EIS_MDP_D3_Airspace_Architecture.pdf"
+   ],
+   "confidence": "medium"
+  }
+ ],
+ "airportLand": [
+  {
+   "airport": "YBBN",
+   "osm": "relation 17378993 (aeroway=aerodrome, icao=YBBN, name Brisbane Airport)",
+   "verdict": "ok",
+   "note": "Multipolygon of 17 outer ways, extent about lon 153.0885 to 153.1423, lat -27.4215 to -27.3535 (about 5.4 km x 7.6 km). Official estate is about 2,700 ha (Brisbane Airport master plan chapter 3), and this boundary covers the main airside and terminal land; exact match to the airport lease plan not checked (plan not reachable as text). No problem seen."
+  },
+  {
+   "airport": "YBAF",
+   "osm": "way 423143197 (aeroway=aerodrome, icao=YBAF)",
+   "verdict": "ok",
+   "note": "Area about 1.9 km2 by my calculation against 257 ha (2.57 km2) stated for Archerfield Airport in its master plan, so it likely leaves out some leased edge land. Covers all runways. Fine for drawing."
+  },
+  {
+   "airport": "YAMB",
+   "osm": "way 902155670 (aeroway=aerodrome, icao=YAMB, RAAF Base Amberley)",
+   "verdict": "ok",
+   "note": "Area about 7.4 km2, extent lon 152.6853 to 152.7239, lat -27.6491 to -27.6121; covers both runways. Compared with an official defence-estate boundary: UNVERIFIED (not published in a form I could reach)."
+  }
+ ],
+ "dataCentres": [
+  {
+   "name": "NEXTDC B1",
+   "operator": "NEXTDC",
+   "address": "20 Wharf Street, Brisbane City QLD 4000",
+   "status": "live",
+   "lnglat": [
+    153.02965,
+    -27.46553
+   ],
+   "coord_method": "OSM building way 140838629 (named 'NEXTDC B1 Data Centre'), centroid via Nominatim",
+   "sources": [
+    "https://www.openstreetmap.org/way/140838629",
+    "https://www.datacentermap.com/australia/brisbane/"
+   ],
+   "verdict": "ok",
+   "changes": "None. The 2.25 MW note was not re-verified."
+  },
+  {
+   "name": "NEXTDC B2",
+   "operator": "NEXTDC",
+   "address": "454 St Pauls Terrace, Fortitude Valley QLD 4006",
+   "status": "live",
+   "lnglat": [
+    153.03318,
+    -27.45379
+   ],
+   "coord_method": "OSM building way 812985669 at 454 St Pauls Terrace (Nominatim); an OSM node 'NextDC' telecom=data_center sits at [153.03338,-27.45400], 25 m away",
+   "sources": [
+    "https://www.nextdc.com/data-centres/brisbane-data-centres/b2-brisbane",
+    "https://www.openstreetmap.org/way/812985669"
+   ],
+   "verdict": "ok",
+   "changes": "NEXTDC states B2 is 12 MW, Tier IV, 454 St Pauls Terrace. Our note 'largest colocation site' is fine."
+  },
+  {
+   "name": "NEXTDC B2 expansion / HQ (Stage 2)",
+   "operator": "NEXTDC",
+   "address": "454 St Pauls Terrace plus 51, 57 and 61 Misterton Street and 216 Constance Street, Fortitude Valley QLD",
+   "status": "plan",
+   "lnglat": [
+    153.03255,
+    -27.45342
+   ],
+   "coord_method": "OSM building way 1091812879 at 57 Misterton Street (part of the site), Nominatim; site is adjacent to B2",
+   "sources": [
+    "https://yourneighbourhood.com.au/nextdc-hq-data-centre-expansion-fortitude-valley/",
+    "https://www.datacenterdynamics.com/en/news/brisbane-approves-aud75m-nextdc-data-center/",
+    "https://www.multiplex.global/projects/nextdc-b2-brisbane-stage-2/"
+   ],
+   "verdict": "fix",
+   "changes": "Not just a lodged application: Council application A006268579 (lodged 8 May 2023) was approved (DCD headline) and Multiplex is building it; search results say completion is scheduled for early 2027 (one source; Multiplex page blocked fetching). Status stays plan (under construction). Give the exact lots: 454 St Pauls Terrace + Misterton Street + 216 Constance Street. 9 or 10 storeys with 3 data hall levels; Stage 2 lifts B2 to 12 MW. Point is only the Misterton Street building, no coordinates for the Constance Street end."
+  },
+  {
+   "name": "Equinix BR1",
+   "operator": "Equinix",
+   "address": "54-58 Alfred Street, Fortitude Valley QLD 4006",
+   "status": "live",
+   "lnglat": [
+    153.03395,
+    -27.45531
+   ],
+   "coord_method": "OSM address node 7736233803 (54 Alfred Street), not a building polygon; accuracy about 30-50 m. Building polygon could not be identified",
+   "sources": [
+    "https://www.datacentermap.com/australia/brisbane/brisbane-1/",
+    "https://www.peeringdb.com/fac/5922",
+    "https://www.serversaustralia.com.au/about-us/australian-data-centres/brisbane-equinix-br1"
+   ],
+   "verdict": "ok",
+   "changes": "None to name or address (formerly Metronode Brisbane 1). Coordinate is a house-number node, not the building outline."
+  },
+  {
+   "name": "Brennan Brisbane",
+   "operator": "Brennan IT",
+   "address": "73 Amelia Street, Fortitude Valley QLD 4006",
+   "status": "live",
+   "lnglat": [
+    153.03054,
+    -27.45432
+   ],
+   "coord_method": "OSM building way 1091587384 at 73 Amelia Street (Nominatim)",
+   "sources": [
+    "https://www.datacentermap.com/australia/brisbane/brennan/",
+    "https://www.peeringdb.com/fac/1219"
+   ],
+   "verdict": "ok",
+   "changes": "None. Operator is Brennan IT (Brennan Voice and Data)."
+  },
+  {
+   "name": "5G Networks Brisbane (BDC)",
+   "operator": "5G Networks",
+   "address": "148 Brunswick Street, Fortitude Valley QLD 4006",
+   "status": "live",
+   "lnglat": [
+    153.03148,
+    -27.45537
+   ],
+   "coord_method": "OSM building way 1091587392 at 148 Brunswick Street (Nominatim)",
+   "sources": [
+    "https://5gnetworks.au/data-centres/",
+    "https://wholesale.5gnetworks.au/data-centres/bdc/"
+   ],
+   "verdict": "ok",
+   "changes": "Could add 4.5 MW, 3 data halls, 300 racks to the note (5G Networks site). Official name is Brisbane Data Centre (BDC)."
+  },
+  {
+   "name": "Datacom Brisbane",
+   "operator": "Datacom",
+   "address": "501 Ann Street, Fortitude Valley QLD 4006",
+   "status": "live",
+   "lnglat": [
+    153.03217,
+    -27.46172
+   ],
+   "coord_method": "OSM office building way 236155563 at 501 Ann Street (Nominatim)",
+   "sources": [
+    "https://inflect.com/building/501-ann-street-fortitude-valley/datacom-systems/datacenter/datacom-systems-brisbane",
+    "https://datacom.com/au/en/contact-us"
+   ],
+   "verdict": "ok",
+   "changes": "Existence and address only confirmed by directory pages (Inflect; Datacom Systems office at 501 Ann Street); current operating status in 2026 not confirmed on Datacom's own site."
+  },
+  {
+   "name": "Vocus Brisbane",
+   "operator": "Vocus (listed as TPG Telecom / AAPT on some directories)",
+   "address": "123 Eagle Street, Level 8, Brisbane City QLD 4000 (Riverside Centre)",
+   "status": "live",
+   "lnglat": [
+    153.03041,
+    -27.46716
+   ],
+   "coord_method": "OSM building way 134816031 (Riverside Centre, 123 Eagle Street); equipment room inside an office tower, so this is the tower centroid",
+   "sources": [
+    "https://www.datacentermap.com/australia/brisbane/aapt-brisbane/",
+    "https://inflect.com/123-eagle-street-brisbane-city/aapt/datacenter/aapt-brisbane"
+   ],
+   "verdict": "fix",
+   "changes": "Address and level agree, but the Inflect listing names the operator TPG Telecom (AAPT) while datacentermap says Vocus; could not settle who operates it in 2026. It is a telecom equipment room in an office tower, not a stand-alone data centre. Consider removing or relabelling Vocus / TPG Telecom (AAPT)."
+  },
+  {
+   "name": "Servers Australia Brisbane B1",
+   "operator": "Servers Australia",
+   "address": "14 Finchley Street, Milton QLD 4064",
+   "status": "live",
+   "lnglat": [
+    153.00611,
+    -27.46573
+   ],
+   "coord_method": "OSM building way 502244822 at 14 Finchley Street (tagged 'Pro AV Solutions QLD' in OSM; an address node 7736271309 sits at [153.00603,-27.46572])",
+   "sources": [
+    "https://inflect.com/building/14-finchley-street-milton/servers-australia-pty-ltd/datacenter/b1",
+    "https://www.datacentermap.com/australia/brisbane/brisbane-b1/"
+   ],
+   "verdict": "ok",
+   "changes": "Directory sources say B1 has run since 2011 with over 300 m2 of floor space. Servers Australia also rents space in Equinix BR1, which is separate."
+  },
+  {
+   "name": "DigiCo BNE1 (ex iseek Brisbane Airport)",
+   "operator": "DigiCo Infrastructure REIT",
+   "address": "2 Cycas Lane, Brisbane Airport QLD 4008",
+   "status": "live",
+   "lnglat": [
+    153.09146,
+    -27.41583
+   ],
+   "coord_method": "OSM relation 19402810 ('DigiCo BNE1', building + telecom=data_center), centre of polygon",
+   "sources": [
+    "https://www.openstreetmap.org/relation/19402810",
+    "https://www.datacentermap.com/australia/brisbane/iseek-eagle-farm/"
+   ],
+   "verdict": "ok",
+   "changes": "None."
+  },
+  {
+   "name": "DigiCo BNE2 (our 'iseek / DigiCo Brisbane Airport stage 2')",
+   "operator": "DigiCo Infrastructure REIT",
+   "address": "4 Cycas Lane, Brisbane Airport QLD 4008",
+   "status": "live",
+   "lnglat": [
+    153.09217,
+    -27.4166
+   ],
+   "coord_method": "OSM relation 19402811 ('DigiCo BNE2', telecom=data_center), centre of polygon",
+   "sources": [
+    "https://www.openstreetmap.org/relation/19402811",
+    "https://www.datacentermap.com/australia/brisbane/digico-brisbane-bne2/",
+    "https://renewmap.com.au/resources/projects/qld/datacentre/"
+   ],
+   "verdict": "fix",
+   "changes": "Not a plan: BNE2 is built and operating (Tier IV design, 1.7 MW installed, serves government customers). Change status to live, name to DigiCo BNE2, address to 4 Cycas Lane, and move the point to the BNE2 building."
+  },
+  {
+   "name": "DigiCo Brisbane BNE (ex iseek Woolloongabba)",
+   "operator": "DigiCo Infrastructure REIT",
+   "address": "100 Ipswich Road, Woolloongabba QLD 4102",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "No building polygon or address node found in OSM for 100 Ipswich Road; Nominatim returns only the road centreline [153.03547,-27.49981]. Exact site not available",
+   "sources": [
+    "https://baxtel.com/data-center/iseek-woolloongabba",
+    "https://www.datacenters.com/iseek-woolloongabba-data-centre"
+   ],
+   "verdict": "ok",
+   "changes": "Existence, operator (DigiCo after buying iseek in 2024) and address agree with baxtel (built 2006, operational). Needs a surveyed point."
+  },
+  {
+   "name": "Interactive Brisbane",
+   "operator": "Interactive",
+   "address": "19 McKechnie Drive, Eight Mile Plains QLD 4113",
+   "status": "live",
+   "lnglat": [
+    153.09578,
+    -27.57777
+   ],
+   "coord_method": "OSM address node 6235325977 (19 McKechnie Drive); building outline not checked",
+   "sources": [
+    "https://www.interactive.com.au/services/data-centres/locations/brisbane/",
+    "https://www.datacentermap.com/australia/brisbane/interactive-brisbane/"
+   ],
+   "verdict": "ok",
+   "changes": "None."
+  },
+  {
+   "name": "Fujitsu Brisbane",
+   "operator": "Fujitsu",
+   "address": "7 Brandl Street, Eight Mile Plains QLD 4113 (Brisbane Technology Park)",
+   "status": "live",
+   "lnglat": [
+    153.09755,
+    -27.582
+   ],
+   "coord_method": "OSM office building way 187135626 at 7 Brandl Street (Nominatim); about 0.45 km from Interactive, matching the directory's 0.4 km",
+   "sources": [
+    "https://www.datacentermap.com/australia/brisbane/interactive-brisbane/ (neighbour listing found via search)",
+    "https://www.openstreetmap.org/way/187135626"
+   ],
+   "verdict": "fix",
+   "changes": "Our entry has no street address; a directory search result gives 7 Brandl Street. That came from a search-result snippet only and I could not open Fujitsu's own page, so treat as likely, not confirmed."
+  },
+  {
+   "name": "DSColo Kenmore",
+   "operator": "Digital Sense",
+   "address": "Unit 6, 2060 Moggill Road, Kenmore QLD 4069",
+   "status": "live",
+   "lnglat": [
+    152.93846,
+    -27.50977
+   ],
+   "coord_method": "OSM address node 14203555147 (2060 Moggill Road); unit inside a multi-unit building so accuracy about 30 m",
+   "sources": [
+    "https://www.datacentermap.com/australia/brisbane/hpcc/",
+    "https://www.peeringdb.com/fac/4601"
+   ],
+   "verdict": "fix",
+   "changes": "Our entry says street address not confirmed; sources give Unit 6, 2060 Moggill Road. Point should be this address point, not the suburb centre."
+  },
+  {
+   "name": "Polaris Data Centre",
+   "operator": "Polaris (Oper8 Global)",
+   "address": "11 Mary Mackenroth Lane, Springfield Central QLD 4300",
+   "status": "live",
+   "lnglat": [
+    152.8987,
+    -27.68167
+   ],
+   "coord_method": "OSM building way 357163696, named 'Polaris Data Centre' (Nominatim)",
+   "sources": [
+    "https://www.openstreetmap.org/way/357163696"
+   ],
+   "verdict": "ok",
+   "changes": "Exists in OSM at this address. Operator name and Tier III claim not re-verified against Polaris/Oper8."
+  },
+  {
+   "name": "Swanbank data centre proposal",
+   "operator": "Northern Concept Swanb Pty Ltd (developer named in a DCD report)",
+   "address": "Lot 5, 6 Leaf Street (formerly Patrick Street), Swanbank QLD 4306",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Lot not geocodable: Nominatim and OSM have no Leaf Street yet; Patrick Street runs about 152.800 to 152.818 E, -27.644 to -27.650 N, so the lot is somewhere along it. Exact site not available",
+   "sources": [
+    "https://yourneighbourhood.com.au/large-data-centre-swanbank-ipswich/",
+    "https://www.datacenterdynamics.com/en/news/plans-filed-for-10-story-data-center-outside-brisbane-australia/ (via search snippet; page blocked)"
+   ],
+   "verdict": "fix",
+   "changes": "Now has an address and developer. Ipswich City Council application 2285/2026/MCU, lodged 4 Aug 2026, 10 storeys, about 82,576 m2 gross floor area. Still under assessment (DCD says staff recommended approval; Council also issued an information request on height), so plan is right but not approved."
+  }
+ ],
+ "dataCentresMissing": [
+  {
+   "name": "DigiCo BNE4 (datacentermap lists it as BNE3)",
+   "operator": "DigiCo Infrastructure REIT",
+   "address": "Brisbane Airport QLD, next to BNE2 (Cycas Lane; datacentermap lists 6 Cycas Lane)",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "9,786 m2 of land next to BNE2 (BNE2 is at [153.09217,-27.4166]); exact lot not published",
+   "sources": [
+    "https://www.datacentermap.com/australia/brisbane/digico-brisbane-bne4/"
+   ],
+   "note": "Greenfield, about 19.6 MW, completion estimated calendar 2027 (seen via search snippet; the datacentermap page blocked fetching). Naming (BNE3 versus BNE4) is inconsistent between listings."
+  },
+  {
+   "name": "Supernode (Quinbrook)",
+   "operator": "Quinbrook Infrastructure Partners",
+   "address": "Brendale, Moreton Bay QLD, 30 ha near the South Pine substation (lot not published)",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Exact lot not public",
+   "sources": [
+    "https://yourneighbourhood.com.au/2-5-billion-data-supernode-brendale-moreton-bay/",
+    "https://w.media/quinbrook-infrastructure-partners-wins-approval-for-hyperscale-data-centres-in-australia/",
+    "https://renewmap.com.au/resources/projects/qld/datacentre/"
+   ],
+   "note": "Planning and FIRB approvals reported July 2022; Renewmap lists an 800 MW Supernode DC in development. No construction confirmed. The 2022 articles are mostly about a battery, so only add it if approved-but-unbuilt sites are wanted."
+  }
+ ],
+ "plans": [
+  {
+   "name": "Cross River Rail",
+   "verdict": "fix",
+   "status_now": "Under construction; official page: services expected to commence by 2029 after testing and commissioning",
+   "fix_points": [
+    [
+     153.0291,
+     -27.4998
+    ],
+    [
+     153.0302,
+     -27.4934
+    ],
+    [
+     153.03413,
+     -27.48522
+    ],
+    [
+     153.027478,
+     -27.471861
+    ],
+    [
+     153.0191,
+     -27.4652
+    ],
+    [
+     153.030834,
+     -27.450224
+    ],
+    [
+     153.0376,
+     -27.4454
+    ]
+   ],
+   "cert": "approx",
+   "sources": [
+    "https://crossriverrail.qld.gov.au/about/project-overview/",
+    "https://crossriverrail.qld.gov.au/stations-routes/woolloongabba-station/",
+    "https://en.wikipedia.org/wiki/Exhibition_railway_station,_Brisbane",
+    "https://en.wikipedia.org/wiki/Bowen_Hills_railway_station",
+    "https://www.openstreetmap.org/way/550363435"
+   ],
+   "note": "Dutton Park, Boggo Road, Albert Street, Roma Street points match official/Wikipedia coordinates (under 60 m). Woolloongabba point is 120 m from the OSM 'future Woolloongabba Train Station site' polygon (fine, corrected anyway). Exhibition point is 480 m from Wikipedia's Exhibition station [153.03083,-27.45022]; Bowen Hills end is 250 m from the station. Official page lists 7 rebuilt stations (Salisbury, Rocklea, Moorooka, Yeerongpilly, Yeronga, Fairfield, Dutton Park), not eight, and Exhibition is described as a new above-ground station, not an upgrade; 10.2 km line and 5.9 km tunnels agree. Station-to-station straight line, so 'approx' is honest. Wikipedia still says Woolloongabba opening 2026 (out of date)."
+  },
+  {
+   "name": "Logan and Gold Coast Faster Rail (Kuraby to Beenleigh)",
+   "verdict": "fix",
+   "status_now": "Under construction: major works contract awarded to the ActivUs consortium, site establishment 2026; new Loganlea station due mid-2027 (search summaries of project pages; the TMR page itself blocked fetching)",
+   "fix_points": [
+    [
+     153.0912,
+     -27.6048
+    ],
+    [
+     153.0978,
+     -27.6318
+    ],
+    [
+     153.1038,
+     -27.6381
+    ],
+    [
+     153.1183,
+     -27.6573
+    ],
+    [
+     153.1379,
+     -27.6708
+    ],
+    [
+     153.1585,
+     -27.6884
+    ],
+    [
+     153.1707,
+     -27.6982
+    ],
+    [
+     153.1875,
+     -27.7095
+    ],
+    [
+     153.20444,
+     -27.71743
+    ]
+   ],
+   "cert": "approx",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kuraby_railway_station",
+    "https://en.wikipedia.org/wiki/Beenleigh_railway_station",
+    "https://www.openstreetmap.org/node/80926498",
+    "https://www.railwaygazette.com/passenger/2026/03/06/logan-gold-coast-faster-rail-project-works-underway/",
+    "https://www.yoursay-projects.tmr.qld.gov.au/logan-and-gold-coast-faster-rail"
+   ],
+   "note": "Our polyline is off: points 2, 3, 4, 8 and 9 are 860 m, 860 m, 2.6 km and 1.7 km/0.68 km from the nearest station or track (point 4 [153.115,-27.66] is 2.6 km from Loganlea; point 8 [153.172,-27.716] is 1.7 km from Holmview). Replacement points are the station coordinates from Wikipedia (Kingston from OSM node 80926498), so the line follows the stations. Cost ($5.75 bn) and 20 km agree with search summaries. Search summary lists stations Kuraby, Trinder Park, Woodridge, Kingston, Bethania, Edens Landing, Holmview, Beenleigh for the rail package and Loganlea as a separate new station; our text calls them all nine. Full completion date not found."
+  },
+  {
+   "name": "The Wave - Direct Sunshine Coast Rail Line (Beerwah to Birtinya)",
+   "verdict": "ok",
+   "status_now": "In planning/pre-construction. Design and pre-construction contracts for Stage 1 awarded by 31 May 2026; consultation on station designs opened 25 Aug 2026; expected timeline late 2026 to early 2032",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://infrastructurepipeline.org/project/direct-sunshine-coast-rail-line",
+    "https://www.yoursay-projects.tmr.qld.gov.au/thewaverail",
+    "https://en.wikipedia.org/wiki/Beerwah_railway_station"
+   ],
+   "note": "Beerwah end is 260 m from Beerwah station [152.9577,-26.8573]. Stage 2 is about 7.7 km with a 1.3 km tunnel (ours says 7 km and about 1 km); stations are Aura/Bells Creek, Caloundra, Aroona, Birtinya. I could not check the middle of the alignment (no official coordinates found, the TMR page blocked fetching), so 'approx' is right and the intermediate points are UNVERIFIED. Aroona suburb centre is [153.1169,-26.783]; our line passes near [153.105,-26.78], so it is plausible but unconfirmed. About 70 km north of Brisbane, outside the main map area."
+  },
+  {
+   "name": "Coomera Connector Stage 1 (M9, Coomera to Nerang)",
+   "verdict": "ok",
+   "status_now": "Partly open: Stage 1 North (Shipper Drive to Helensvale Road) opened Dec 2025; Central and South packages under construction (TMR / Infrastructure pipeline). 'By 2032' completion not re-checked",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://www.tmr.qld.gov.au/projects/coomera-connector-stage-1",
+    "https://infrastructurepipeline.org/project/coomera-connector-stage-1-coomera-to-nerang"
+   ],
+   "note": "Status text agrees. Line points are not traced from the official alignment (UNVERIFIED), so approx is honest. Gold Coast, well outside Brisbane."
+  },
+  {
+   "name": "Bruce Highway upgrade - Gateway Motorway to Dohles Rocks Road (Stage 1)",
+   "verdict": "ok",
+   "status_now": "Design and construct contractor (Gateway Connect JV: CPB, BMD, Georgiou) appointed, detailed design underway, construction expected to start late 2026; $948 million (Commonwealth $758.4m, Queensland $189.6m)",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://www.tmr.qld.gov.au/projects/bruce-highway-brisbane-gympie-gateway-motorway-to-dohles-rocks-road-upgrade-stage-1",
+    "https://statements.qld.gov.au/statements/103841"
+   ],
+   "note": "Status and cost agree (via search summary of the TMR page). Line points not traced against the official project plan (UNVERIFIED). Our text says the first stage of widening north of Brisbane starts at Bald Hills, which is roughly the Gateway interchange; the official wording is 'Gateway Motorway/Bruce Highway/Gympie Arterial Road interchange, a new Wyampa Road bridge'."
+  }
+ ],
+ "railHubs": [
+  {
+   "name": "Boggo Road",
+   "verdict": "ok",
+   "lnglat": [
+    153.0302,
+    -27.4934
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Boggo_Road_railway_station",
+    "https://crossriverrail.qld.gov.au/about/project-overview/"
+   ],
+   "note": "Matches Wikipedia coordinates exactly. Opening 2029 per official page."
+  },
+  {
+   "name": "Woolloongabba",
+   "verdict": "ok",
+   "lnglat": [
+    153.03413,
+    -27.48522
+   ],
+   "sources": [
+    "https://www.openstreetmap.org/way/550363435",
+    "https://crossriverrail.qld.gov.au/stations-routes/woolloongabba-station/"
+   ],
+   "note": "Ours [153.035,-27.486] is about 120 m from the centroid of the OSM construction polygon for the future station (former GoPrint site). The official page places the station at Woolloongabba's major intersection; no official coordinates. The 'beside the Gabba' wording is fine (official: improved access to The Gabba). Slightly better point: [153.03413,-27.48522]."
+  },
+  {
+   "name": "Albert Street",
+   "verdict": "ok",
+   "lnglat": [
+    153.027478,
+    -27.471861
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Albert_Street_railway_station",
+    "https://crossriverrail.qld.gov.au/stations-routes/albert-street-station/"
+   ],
+   "note": "Matches Wikipedia, which cites the Cross River Rail page. Note the final name is not settled (Albert Street, Brisbane City, City Botanic Gardens, Frog's Hollow were put to the public in Sept 2024)."
+  },
+  {
+   "name": "Roma Street",
+   "verdict": "ok",
+   "lnglat": [
+    153.0191,
+    -27.4652
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Roma_Street_railway_station"
+   ],
+   "note": "Matches Wikipedia."
+  },
+  {
+   "name": "Exhibition",
+   "verdict": "fix",
+   "lnglat": [
+    153.030834,
+    -27.450224
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Exhibition_railway_station,_Brisbane",
+    "https://crossriverrail.qld.gov.au/about/project-overview/"
+   ],
+   "note": "Ours [153.0268,-27.4526] is about 480 m from Wikipedia's coordinates for Exhibition station [153.030834,-27.450224]. The official page lists Exhibition as a new above-ground Cross River Rail station, not just an upgraded one, so the note 'Upgraded for all-day services' should read 'New above-ground station'."
+  },
+  {
+   "name": "Kuraby",
+   "verdict": "fix",
+   "lnglat": [
+    153.0912,
+    -27.6048
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kuraby_railway_station"
+   ],
+   "note": "Ours [153.0936,-27.6069] is 330 m from the station coordinates; within 500 m but easy to correct. 'Station rebuild under way' agrees with search results."
+  },
+  {
+   "name": "Loganlea",
+   "verdict": "fix",
+   "lnglat": [
+    153.1379,
+    -27.6708
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Loganlea_railway_station",
+    "https://www.yoursay-projects.tmr.qld.gov.au/logan-and-gold-coast-faster-rail"
+   ],
+   "note": "Ours [153.135,-27.673] is 380 m from the existing station coordinates. The relocated station may sit a little away from the current one; the search summary says new Loganlea station opens to services by mid-2027 (not confirmed against TMR). '400 new car parks' not verified."
+  },
+  {
+   "name": "Beenleigh",
+   "verdict": "fix",
+   "lnglat": [
+    153.20444,
+    -27.71743
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Beenleigh_railway_station"
+   ],
+   "note": "Ours [153.199,-27.7137] is 680 m from the station coordinates [153.20444,-27.71743]; over the 500 m threshold, so fix."
+  }
+ ],
+ "other": [
+  {
+   "field": "tallBuilding",
+   "verdict": "fix",
+   "correct": "Brisbane Skytower, 222 Margaret Street, 274.3 m (900 ft), 90 floors, completed 2019, tallest in Brisbane. The research file says 'about 270 m'; the region file only shows the name, so nothing is wrong on the map itself.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Brisbane_Skytower"
+   ]
+  },
+  {
+   "field": "future toggle (regions/qld.js 'future')",
+   "verdict": "fix",
+   "correct": "regions/qld.js has future:null, but qld_infra.json defines a future scenario 'After independent parallel runway operations start (late 2027)'. As written, the map shows no future toggle for Brisbane. Both existing parallel runways are already open, so there is no new runway to draw; the scenario would only be explanatory text. The late-2027 date is supported by Airservices: Package 3 changes began 9 July 2026, regular independent parallel runway operations (IPRO) not expected until late 2027. Decide whether to keep null on purpose.",
+   "sources": [
+    "https://www.airservicesaustralia.com/airservices-australia-releases-latest-noise-action-plan-for-brisbane-outcomes/"
+   ]
+  },
+  {
+   "field": "airport notes: curfew",
+   "verdict": "ok",
+   "correct": "No curfew (PIR/airport text); night rules instead: 10pm-6am preferred order is SODPROPS, then reciprocal ops, then legacy-runway departures, then legacy arrivals; new runway over land only for emergencies or severe weather. Our note says SODPROPS is used 'at night when wind and traffic allow', which is right. SODPROPS also needs visibility, cloud, wind and dry runway (EIS 2007 limits: downwind max 5 kt, crosswind max 20 kt, cloud above 2,500 ft, visibility 8 km). Not checked: the claim '3.8% of movements in early 2025 against a 5.3% target'.",
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2024/05/28/use-of-preferred-runway-including-sodprops/",
+    "https://www.bne.com.au/corporate/community-and-environment/runway-operations-noise/understanding-runway-operations-noise",
+    "https://www.airservicesaustralia.com/wp-content/uploads/BNE-NPR-PIR-Independent-Review_Final-Report-v1.0_final.pdf"
+   ]
+  },
+  {
+   "field": "airport notes: Package 3 (July 2026)",
+   "verdict": "ok",
+   "correct": "Airservices confirms: northern arrivals to the new runway moved further north over water (about 59,000 fewer overflown, incl. southern Bribie Island); southern arrivals redesigned for independent parallel ops (about 35,000 fewer), starting 9 July 2026; legacy-runway south-east departures shifted further east (about 44,500 fewer). Not checked: the Bulimba, Russell Island and CASA-approval details.",
+   "sources": [
+    "https://www.airservicesaustralia.com/airservices-australia-releases-latest-noise-action-plan-for-brisbane-outcomes/"
+   ]
+  },
+  {
+   "field": "airport notes: runway names and closed cross runway",
+   "verdict": "ok",
+   "correct": "Parallel 01L/19R (new, 3,300 m, opened July 2020) and 01R/19L (3,560 m) both match OurAirports; cross runway 14/32 is CLOSED on OurAirports. The 'plain' text 'older eastern/legacy runway' for 01R/19L and 'western' for 01L/19R is correct (01L/19R is the western runway).",
+   "sources": [
+    "https://ourairports.com/airports/YBBN/runways.html"
+   ]
+  },
+  {
+   "field": "airport notes: wide-body jets (YBBN)",
+   "verdict": "ok",
+   "correct": "Wide-bodies operate (the Airservices PIR and EIS refer to heavy long-haul jets using 19L). Aircraft type list (A330, 787, 777, A350, A380) not checked individually.",
+   "sources": [
+    "https://www.bne.com.au/sites/default/files/docs/BNR_EIS_MDP_D3_Airspace_Architecture.pdf"
+   ]
+  },
+  {
+   "field": "airport notes: YBAF and YAMB",
+   "verdict": "fix",
+   "correct": "YBAF Archerfield has four runways (10L/28R sealed, 10R/28L, 04L/22R, 04R/22L grass/sealed per OurAirports), not two; the map draws none (noModel), so only research-file wording is affected. YAMB Amberley: runway pair 15/33 and 04/22 confirmed. Military types (F/A-18F, EA-18G, C-17, KC-30) not individually verified.",
+   "sources": [
+    "https://ourairports.com/airports/YBAF/runways.html",
+    "https://www.openstreetmap.org/way/27328646"
+   ]
+  },
+  {
+   "field": "schoolZoneUrl",
+   "verdict": "ok",
+   "correct": "https://www.qgso.qld.gov.au/maps/edmap/ returns HTTP 200.",
+   "sources": [
+    "https://www.qgso.qld.gov.au/maps/edmap/"
+   ]
+  },
+  {
+   "field": "links",
+   "verdict": "ok",
+   "correct": "Checked 1 Oct 2026 with curl: HTTP 200 for crossriverrail, Cotality PDF, engage.airservicesaustralia nap4b, OurAirports YBBN, three SkyVector pages, ABC (10 Jul 2026), Airservices Package 3, bne.com.au runway ops, edmap. HTTP 403 (bot block, probably fine in a browser) for the four TMR project pages and delivering2032.com.au; datacentermap returned 429 (rate limit). Of those, the TMR Coomera Connector, Bruce Highway and The Wave stage 1-2 URLs came up in web search so they exist; the TMR Logan faster rail programme URL was not seen in search results.",
+   "sources": [
+    "https://www.tmr.qld.gov.au/projects/coomera-connector-stage-1"
+   ]
+  },
+  {
+   "field": "market text (Cotality)",
+   "verdict": "ok",
+   "correct": "Link loads (200) but I did not check the quoted percentages; outside the audit scope.",
+   "sources": [
+    "https://discover.cotality.com/hubfs/Article-Reports/COTALITY%20HVI%20SEP%202026%20FINAL%20(1).pdf"
+   ]
+  }
+ ],
+ "unverified": [
+  "Official airport boundaries (YBBN master plan, YAMB defence estate): only compared with OSM extent and quoted site areas (YBBN about 2,700 ha, YBAF 257 ha); the Archerfield OSM boundary is about 1.9 km2 versus 2.57 km2.",
+  "Exact departure and arrival tracks per runway end: the official numbers (headings, turn points, miles) are only in Airservices charts/maps I could not read as text; fans_recommended values are based on descriptive text in the 2022 PIR, 2007 EIS and Package 3 announcement and are low confidence. The Airservices interactive map (engage.airservicesaustralia.com/nap4b) was not read.",
+  "Current (2026) departure tracks after Package 3 for 19L/19R and 01L: not described in sources I could open; most evidence is from the 2022 PIR describing the 2020 flight paths.",
+  "DigiCo Woolloongabba (100 Ipswich Road) and Swanbank (6 Leaf Street) exact coordinates; no OSM building or address point found.",
+  "Equinix BR1 building polygon (coordinate is the 54 Alfred Street address node); Interactive building polygon not checked.",
+  "Fujitsu Brisbane address (7 Brandl Street) came from one directory search snippet; Fujitsu's own page not read.",
+  "Datacom Brisbane, Vocus/TPG Brisbane: still operating as data centres in 2026 only evidenced by directory listings.",
+  "datacentermap.com Brisbane page (24 facilities, 8 operators) could not be read: HTTP 429 and a Vercel bot check, which I did not try to bypass. A full missing-sites list from it is therefore not guaranteed; also not checked for Gold Coast, Sunshine Coast, Ipswich beyond Swanbank.",
+  "NEXTDC B2 Stage 2 completion date (early 2027) from a single search summary; Multiplex page blocked (HTTP 403).",
+  "Full Overpass scan for telecom=data_center / building=data_centre across the metro found only NEXTDC node, DigiCo BNE1 and BNE2; a name-based scan timed out so other operators' OSM shapes were not enumerated.",
+  "Woolloongabba station and the Wave and Coomera Connector alignments: no official coordinates found; TMR project pages return 403 to scripted fetches.",
+  "Logan and Gold Coast Faster Rail completion date and full status wording: TMR page blocked."
+ ]
+}

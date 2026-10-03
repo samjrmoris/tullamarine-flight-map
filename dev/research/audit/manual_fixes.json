@@ -1,0 +1,203 @@
+{
+ "qld": {
+  "dcMatch": {
+   "iseek / DigiCo Brisbane Airport stage 2": "DigiCo BNE2 (our 'iseek / DigiCo Brisbane Airport stage 2')",
+   "NEXTDC B2 expansion / HQ": "NEXTDC B2 expansion / HQ (Stage 2)",
+   "5G Networks Brisbane": "5G Networks Brisbane (BDC)"
+  },
+  "renameDcs": {
+   "iseek / DigiCo Brisbane Airport stage 2": "DigiCo BNE2",
+   "5G Networks Brisbane": "5G Networks Brisbane Data Centre (BDC)"
+  },
+  "dcNotes": {
+   "NEXTDC B2 expansion / HQ": "Approved; being built by Multiplex, completion about early 2027",
+   "Vocus Brisbane": "A telecom room on level 8 of the Riverside Centre office tower; directories disagree on whether Vocus or TPG Telecom runs it",
+   "Swanbank data centre proposal": "Ipswich City Council application 2285/2026/MCU, lodged 4 Aug 2026, still being assessed",
+   "DigiCo BNE2": "Built and operating (about 1.7 MW installed)"
+  },
+  "addDcs": [
+   [
+    "DigiCo BNE4",
+    "DigiCo Infrastructure REIT",
+    "Cycas Lane, Brisbane Airport QLD 4008",
+    "plan",
+    "Planned next to BNE2, about 19.6 MW, completion estimated 2027 (exact site not published; placed on Cycas Lane)"
+   ]
+  ],
+  "skipMissing": [
+   "DigiCo BNE4 (datacentermap lists it as BNE3)",
+   "Supernode (Quinbrook)"
+  ],
+  "planStatus": {
+   "Cross River Rail": "Under construction; services expected to start by 2029 (after testing)",
+   "Logan and Gold Coast Faster Rail (Kuraby to Beenleigh)": "Under construction (major works contract awarded to the ActivUs consortium; site works started 2026; completion date not published)"
+  },
+  "set": {
+   "tallBuilding": "Brisbane Skytower is about 274 m tall (222 Margaret St, the city's tallest building)"
+  }
+ },
+ "wa": {
+  "removeDcs": [
+   "Zettagrid Bibra Lake",
+   "Telstra Malaga",
+   "Vocus Perth"
+  ],
+  "renameDcs": {
+   "DC Two Osborne Park": "Zettagrid Osborne Park (ex DC Two)"
+  },
+  "operators": {
+   "Zettagrid Osborne Park (ex DC Two)": "Zettagrid"
+  },
+  "dcNotes": {
+   "Equinix PE3": "Opened 2021 on the same Shenton Park campus as PE2",
+   "DCA PIER": "About 8 MW"
+  },
+  "renameMissing": {
+   "CDC Maddington Campus": "CDC Maddington"
+  },
+  "dcNotesMissing": {},
+  "skipMissing": [
+   "Telstra InfraCo PER1",
+   "Vocus Osborne Park / Perth iX / St Georges Tce"
+  ],
+  "planStatus": {
+   "Tonkin Highway Extension (Thomas Rd to South Western Hwy)": "Under construction since mid-2025; completion late 2028 (Main Roads)",
+   "Tonkin Gap": "Completed (lanes opened December 2023, officially complete August 2024)"
+  },
+  "planAbout": {
+   "Ellenbrook line (Morley-Ellenbrook)": "New 21 km line branching at Bayswater and running up the Tonkin Highway median to Morley, Noranda, Ballajura, Whiteman Park and Ellenbrook."
+  },
+  "set": {
+   "tallBuilding": "Central Park is about 226 m to the roof (about 262 m with its antenna)"
+  }
+ },
+ "sa": {
+  "removeDcs": [
+   "DCI Adelaide 02 (ADL02)"
+  ],
+  "renameDcs": {
+   "DCI Adelaide 01 (ADL01)": "DCI Adelaide ADL01 and ADL02"
+  },
+  "dcNotes": {
+   "DCI Adelaide 03 (ADL03)": "In planning; exact site in Technology Park not published",
+   "DigiCo ADL2 (ex-YourDC Hawthorn)": "On Belair Road, Hawthorn; street number not confirmed",
+   "DCI Adelaide ADL01 and ADL02": "Two DCI buildings on the same Kidman Park campus as 5G Networks' Adelaide Data Centre (ADL02 added about 4 MW)"
+  },
+  "skipMissing": [
+   "Telstra Waymouth Street exchange (listed)",
+   "IREN Bundey AI campus (outside map)"
+  ],
+  "planStatus": {
+   "South Eastern Freeway upgrades (Glen Osmond to Mount Barker)": "Mount Barker and Verdun interchange upgrades under way; Crafers to Glen Osmond managed motorway out to tender, construction from 2027"
+  },
+  "planUrl": {
+   "North-South Corridor: River Torrens to Darlington (T2D)": "https://dit.sa.gov.au/nsc/torrens-to-darlington",
+   "South Eastern Freeway upgrades (Glen Osmond to Mount Barker)": "https://dit.sa.gov.au/infrastructure/projects/managed-motorway-crafers-to-glen-osmond"
+  },
+  "set": {
+   "tallBuilding": "The Adelaidean, Adelaide's tallest building, is about 138 m"
+  }
+ },
+ "nsw": {
+  "removeDcs": [
+   "ISPT Mamre Road campus",
+   "EdgeConneX Wetherill Park"
+  ],
+  "noCoords": [
+   "Digital Realty SYD13"
+  ],
+  "status": {
+   "CDC Marsden Park": "plan"
+  },
+  "renameDcs": {
+   "Stockland Davis Road": "Davis Road data centre (Stockland / EdgeConneX)",
+   "Vocus Baulkham Hills": "Vocus Norwest (SYD02)",
+   "Fujitsu Homebush": "Homebush data centre (formerly Fujitsu)",
+   "Fujitsu Western Sydney": "Western Sydney data centre, Greystanes (formerly Fujitsu)"
+  },
+  "operators": {
+   "Homebush data centre (formerly Fujitsu)": "Next Capital (bought Fujitsu's Australian business, reported July 2026)",
+   "Western Sydney data centre, Greystanes (formerly Fujitsu)": "Next Capital (bought Fujitsu's Australian business, reported July 2026)",
+   "Davis Road data centre (Stockland / EdgeConneX)": "Stockland and EdgeConneX joint venture"
+  },
+  "keepAddress": [
+   "Fujitsu Western Sydney",
+   "AirTrunk SYD3",
+   "Telstra/Doma Minchinbury"
+  ],
+  "dcNotes": {
+   "Digital Realty SYD13": "Operating; Digital Realty announced in March 2026 that it will demolish and rebuild it as a larger 70 MW building",
+   "NEXTDC S4": "Under construction since March 2026, completion mid-2027",
+   "NEXTDC S5": "60 MW+, Tier IV",
+   "NEXTDC S7 (with OpenAI)": "Site bought 2024; up to 550 MW planned",
+   "AWS Khartoum Road": "Stockland MPark Stage 1; sources disagree on whether it is operating yet",
+   "Julius Avenue Data Centre": "State Significant Development application still being assessed (170 MW); not approved",
+   "12 Frederick Street": "Early planning only (scoping report, 81 MW)",
+   "22 O'Riordan Street": "Early planning only (SEARs request, 38 MW)",
+   "Stockland Aldington Road": "Early planning only (SEARs request, 168 MW)",
+   "Goodman Project Atlas": "State significant application SSD-101067971 still being assessed",
+   "CDC Marsden Park": "Approved November 2025 (504 MW, six buildings); under construction",
+   "AWS Glendenning": "Approved 18 September 2026 (three buildings, 193.6 MW)",
+   "Goodman Project Pluto": "Approved, 68 MW, on the former Castrol site",
+   "Telstra/Doma Minchinbury": "Approved, 62 MW; ready for service early 2028",
+   "AirTrunk Kemps Creek": "Under construction on the former ISPT Mamre Road site",
+   "Davis Road data centre (Stockland / EdgeConneX)": "Under construction"
+  },
+  "renameMissing": {
+   "Goodman Project Duke (Mascot)": "Goodman Project Duke",
+   "Vocus SYD01 (Doody Street)": "Vocus SYD01"
+  },
+  "dcNotesMissing": {},
+  "planStatus": {
+   "M6 Motorway Stage 1": "Under construction; tunnelling resumed mid-2026 after the 2024 sinkholes; no confirmed opening date",
+   "Fifteenth Avenue upgrade (Liverpool–Bradfield transit corridor)": "Planning and approval; early works from end of 2026, main construction from about June 2027, finish about June 2031",
+   "Sydney Metro City & Southwest – Sydenham to Bankstown conversion": "Trial running since August 2026; official opening date not yet confirmed (second half of 2026)"
+  },
+  "planUrl": {
+   "Outer Sydney Orbital (corridor)": "https://www.transport.nsw.gov.au/corridors/oso"
+  },
+  "planAbout": {
+   "Outer Sydney Orbital (corridor)": "Future motorway and freight rail corridor running north-south west of the airport, from the Hume Motorway near Menangle through Luddenham and Orchard Hills to Marsden Park.",
+   "Fifteenth Avenue upgrade (Liverpool–Bradfield transit corridor)": "$1.4b upgrade of 8.1 km of Fifteenth Avenue and Cowpasture Road with dedicated bus lanes between Liverpool/the M7 and Austral. The extension west to Bradfield City Centre is a future idea only."
+  }
+ },
+ "tas": {},
+ "act": {
+  "removeDcs": [
+   "CDC Hume Campus Two",
+   "CDC Hume HU5",
+   "Macquarie IC4 Bunker (Canberra campus)"
+  ],
+  "dcMatch": {
+   "CDC Fyshwick Campus (FY1 and others)": "CDC Fyshwick Campus",
+   "Macquarie IC4 Bunker (Canberra campus)": "Macquarie IC4 Bunker"
+  },
+  "renameDcs": {
+   "CDC Hume HU4": "CDC Hume Campus Two (HU4 and HU5)"
+  },
+  "addDcs": [
+   [
+    "Macquarie IC4 and IC5 Bunkers (Canberra campus)",
+    "Macquarie Data Centres",
+    "Fairbairn Avenue, Pialligo ACT 2609",
+    "live",
+    "Exact site not public; listings place the campus on Fairbairn Avenue near Fyshwick"
+   ]
+  ],
+  "skipMissing": [
+   "CDC Hume HU2 / HU3",
+   "CDC Beard BE1 / BE2",
+   "Macquarie IC5 Bunker",
+   "ADC Fyshwick"
+  ]
+ },
+ "nt": {
+  "dcNotes": {
+   "NEXTDC D1 Darwin": "Opened August 2024; about 7 MW",
+   "NEXTDC D2 Darwin": "Topped out March 2026; about 6 MW, completion due first half of FY2027"
+  },
+  "set": {
+   "tallBuilding": "Evolution on Gardiner, Darwin's tallest building, is about 99 m"
+  }
+ }
+}

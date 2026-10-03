@@ -95,7 +95,7 @@
     "status": "Planning; public consultation closes 9 Oct 2026, no build date yet",
     "about": "Rapid bus between the city and Claremont every 10 min at peak, partly on the unused northern rail corridor, with 12 stops including New Town, Moonah, Glenorchy and Berriedale. Light rail options have faded in favour of bus rapid transit.",
     "url": "https://www.transport.tas.gov.au/roadworks/road_improvement_plans/northern_suburbs_transit_corridor",
-    "cert": "approx",
+    "cert": "concept",
     "line": [
      [
       147.333,
@@ -260,14 +260,18 @@
    [
     "TasmaNet DC1",
     "TasmaNet",
-    "Hobart TAS 7000",
+    "Level 9, 1 Franklin Wharf, Hobart TAS 7000",
     "live",
-    "Exact street address not confirmed; suburb only"
+    "Exact street address not confirmed; suburb only",
+    [
+     147.33267,
+     -42.88348
+    ]
    ],
    [
     "DXN Tasmania One (DXN-TAS01, formerly TasmaNet DC3)",
     "DXN",
-    "Hobart TAS 7000",
+    "40-50 Innovation Drive, Dowsings Point TAS 7010",
     "live",
     "Bought from TasmaNet in 2020; exact street address not confirmed; suburb only"
    ]
@@ -353,12 +357,12 @@
      ],
      "ends": [
       [
-       149.1945,
-       -35.2907
+       149.194443,
+       -35.290627
       ],
       [
-       149.1945,
-       -35.3148
+       149.194443,
+       -35.320198
       ]
      ],
      "plain": "main north-south runway",
@@ -612,33 +616,23 @@
     "Canberra Data Centres (CDC)",
     "54 Sheppard St, Hume ACT 2620",
     "live",
-    ""
+    "",
+    [
+     149.16759,
+     -35.38866
+    ]
    ],
    [
-    "CDC Hume HU4",
+    "CDC Hume Campus Two (HU4 and HU5)",
     "Canberra Data Centres (CDC)",
     "7 Tralee St, Hume ACT 2620",
     "live",
     ""
-   ],
-   [
-    "CDC Hume HU5",
-    "Canberra Data Centres (CDC)",
-    "7 Tralee St, Hume ACT 2620",
-    "live",
-    "Status per datacentermap listing; not separately verified"
-   ],
-   [
-    "CDC Hume Campus Two",
-    "Canberra Data Centres (CDC)",
-    "Hume ACT 2620",
-    "live",
-    "~51 MW campus; exact street not confirmed"
    ],
    [
     "CDC Fyshwick Campus (FY1 and others)",
     "Canberra Data Centres (CDC)",
-    "Fyshwick ACT 2609",
+    "11 Tom Price St, Fyshwick ACT 2609",
     "live",
     "~45 MW campus; exact street not confirmed"
    ],
@@ -647,14 +641,22 @@
     "NEXTDC",
     "19 Battye St, Bruce ACT 2617",
     "live",
-    "~4.4 MW"
+    "~4.4 MW",
+    [
+     149.09622,
+     -35.24538
+    ]
    ],
    [
     "Equinix CA1",
     "Equinix",
     "51 Dacre St, Mitchell ACT 2911",
     "live",
-    ""
+    "",
+    [
+     149.13472,
+     -35.20798
+    ]
    ],
    [
     "ADC Mitchell",
@@ -664,18 +666,18 @@
     "~7 MW; street number not confirmed"
    ],
    [
-    "Macquarie IC4 Bunker (Canberra campus)",
-    "Macquarie Data Centres",
-    "Hume ACT 2620",
-    "live",
-    "Suburb not confirmed from official page (believed Hume)"
-   ],
-   [
     "Telstra Deakin",
     "Telstra",
     "109 Kent St, Deakin ACT 2600",
     "live",
     ""
+   ],
+   [
+    "Macquarie IC4 and IC5 Bunkers (Canberra campus)",
+    "Macquarie Data Centres",
+    "Fairbairn Avenue, Pialligo ACT 2609",
+    "live",
+    "Exact site not public; listings place the campus on Fairbairn Avenue near Fyshwick"
    ]
   ],
   "market": {
@@ -891,14 +893,18 @@
     "NEXTDC",
     "2 Harvey St, Darwin City NT 0800",
     "live",
-    "Address from datacentermap listing (~1 MW, opened 2024); verify"
+    "Opened August 2024; about 7 MW",
+    [
+     130.84397,
+     -12.45629
+    ]
    ],
    [
     "NEXTDC D2 Darwin",
     "NEXTDC",
     "2-6 Ryko Ct, Darwin City NT 0800",
     "plan",
-    "In development (~6 MW)"
+    "Topped out March 2026; about 6 MW, completion due first half of FY2027"
    ],
    [
     "DXN SDC Darwin (Secure Data Centre)",
@@ -910,7 +916,7 @@
    [
     "Area9 Darwin",
     "Area9",
-    "Darwin NT",
+    "20 Catterthun St, Winnellie NT 0820",
     "live",
     "Exact address not confirmed; suburb only"
    ]
@@ -920,7 +926,7 @@
    "url": "https://discover.cotality.com/hubfs/Article-Reports/COTALITY%20HVI%20SEP%202026%20FINAL%20(1).pdf",
    "month": "2026-08"
   },
-  "tallBuilding": "Darwin's tallest towers are roughly 100 m (approximate)",
+  "tallBuilding": "Evolution on Gardiner, Darwin's tallest building, is about 99 m",
   "defaultHome": {
    "title": "Rosebery (Palmerston)",
    "lng": 130.985,

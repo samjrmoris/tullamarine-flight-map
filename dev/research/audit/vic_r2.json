@@ -1,0 +1,796 @@
+{
+ "id": "vic",
+ "checked": "2026-10-03",
+ "sections": "F,D,P,O",
+ "flightPaths": [
+  {
+   "airport": "YMML",
+   "runwayEnd": "16",
+   "departs": "UNVERIFIED turn angles (Airservices pages give no degrees). Official: departures to the north and east stay on the runway track until a waypoint 4 NM (about 7 km) south, then turn west; other destinations follow SIDs.",
+   "arrives": "Arrivals from the north/north-east turn left onto the long runway (STAR via BELTA or visual track via ROKDL); ILS available. Straight-in final length not published on the pages found. Night (2300-0600): runway 16 is the preferred arrival runway.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2022/05/04/melbourne-airport-runways/",
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/01/melbourne-airport-nap-2-preferred-flight-paths/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMML",
+   "runwayEnd": "34",
+   "departs": "UNVERIFIED turn angles. Runway 34 is the preferred northbound departure runway when used with 27; 33% of departures (2023). Unofficial controller notes (IVAO) give assigned headings 340 for S/SE/W and 260 for NE; not an official source.",
+   "arrives": "Arrivals from the south: right turns via Essendon STAR/radar vectors, or left/straight-in 0600-2300 with vectors no closer than 3.5 NM (about 6.5 km) from touchdown. So a straight final of at least 6.5 km; the 26 km default is not contradicted but not verified.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/01/melbourne-airport-nap-2-preferred-flight-paths/",
+    "https://assets-au-01.kc-usercontent.com/be08d7b0-97a1-02f9-2be6-a0c139c3c337/e74ea9f2-c45d-46ce-b48d-9845a23453b9/MA_3R_Fact_Sheet_runway_use_FINAL.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMML",
+   "runwayEnd": "09",
+   "departs": "Under 1% of departures; no SIDs, used for departures only if absolutely necessary (unofficial IVAO). Not preferred for departures at any hour.",
+   "arrives": "2% of arrivals (2023); preferred in combination with 34 in heavy-traffic peaks.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2022/05/04/melbourne-airport-runways/",
+    "https://assets-au-01.kc-usercontent.com/be08d7b0-97a1-02f9-2be6-a0c139c3c337/e74ea9f2-c45d-46ce-b48d-9845a23453b9/MA_3R_Fact_Sheet_runway_use_FINAL.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMML",
+   "runwayEnd": "27",
+   "departs": "UNVERIFIED turn angles. Preferred departure runway at night (2300-0600) and equal-preferred in off-peak; 43% of departures (2023).",
+   "arrives": "Equal-preferred arrival runway with 16 in light traffic; 25% of arrivals (2023); ILS available.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2022/05/04/melbourne-airport-runways/",
+    "https://assets-au-01.kc-usercontent.com/be08d7b0-97a1-02f9-2be6-a0c139c3c337/e74ea9f2-c45d-46ce-b48d-9845a23453b9/MA_3R_Fact_Sheet_runway_use_FINAL.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMML",
+   "runwayEnd": "16R (future, only in the 2031 scenario)",
+   "departs": "UNVERIFIED. No official future flight-path design published; airspace design with Airservices runs 2024-2029 per the third runway fact sheet.",
+   "arrives": "UNVERIFIED, no design published.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://melbourneairport.com.au/_assets/be08d7b0-97a1-02f9-2be6-a0c139c3c337/b56e8730-eced-4758-b3e8-50c98c2cf35d/MA_3R_Fact_Sheet_Third_runway_program.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMML",
+   "runwayEnd": "34L (future)",
+   "departs": "UNVERIFIED, as 16R.",
+   "arrives": "UNVERIFIED, as 16R.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://melbourneairport.com.au/_assets/be08d7b0-97a1-02f9-2be6-a0c139c3c337/b56e8730-eced-4758-b3e8-50c98c2cf35d/MA_3R_Fact_Sheet_Third_runway_program.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMEN",
+   "runwayEnd": "17",
+   "departs": "UNVERIFIED turn angles. Takeoff preference 0600-2300: 26/35 first, then 17, then 08; night: 35 first. Curfew 2300-0600 (emergency services and certain classes exempt).",
+   "arrives": "UNVERIFIED final length. Landing preference 0600-2300: 26 or 17 equal first; night 17 first.",
+   "fans_now": null,
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/?p=5091"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMEN",
+   "runwayEnd": "35",
+   "departs": "UNVERIFIED turn angles. Preferred takeoff runway (equal first with 26) by day and first at night.",
+   "arrives": "Second preference for landing by day, third at night.",
+   "fans_now": null,
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/?p=5091"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMEN",
+   "runwayEnd": "08",
+   "departs": "UNVERIFIED. Last preference for takeoff and landing, day and night.",
+   "arrives": "Last preference.",
+   "fans_now": null,
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/?p=5091"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMEN",
+   "runwayEnd": "26",
+   "departs": "UNVERIFIED turn angles. Preferred takeoff (equal first with 35) by day; second at night.",
+   "arrives": "Preferred landing runway by day (equal first with 17); second at night.",
+   "fans_now": null,
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/?p=5091"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMAV",
+   "runwayEnd": "18",
+   "departs": "UNVERIFIED turn angles. Older ERSA snippet: 1300-2000 UTC (about 2300-0600 local) preferred take-off runway 18; avoid Lara, Little River and Geelong Grammar School where possible. Current ERSA only says Noise Abatement Procedures apply (refer AIP DAP).",
+   "arrives": "UNVERIFIED final length.",
+   "fans_now": null,
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://www.airservicesaustralia.com/aip/current/ersa/FAC_YMAV_03SEP2026.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMAV",
+   "runwayEnd": "36",
+   "departs": "UNVERIFIED. Same snippet: preferred landing runway 36 in the night window.",
+   "arrives": "UNVERIFIED.",
+   "fans_now": null,
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://www.airservicesaustralia.com/aip/current/ersa/FAC_YMAV_03SEP2026.pdf"
+   ],
+   "confidence": "low"
+  }
+ ],
+ "dataCentres": [
+  {
+   "name": "NEXTDC M2",
+   "operator": "NEXTDC",
+   "address": "75 Sharps Road, Tullamarine",
+   "status": "live",
+   "lnglat": [
+    144.87545,
+    -37.70887
+   ],
+   "coord_method": "Nominatim house-number match",
+   "sources": [
+    "https://www.datacentermap.com/australia/melbourne/nextdc-m2/"
+   ],
+   "verdict": "ok",
+   "changes": "none"
+  },
+  {
+   "name": "Vantage MEL1",
+   "operator": "Vantage Data Centers",
+   "address": "43-45 Tullamarine Park Road, Tullamarine",
+   "status": "plan",
+   "lnglat": [
+    144.8719,
+    -37.70818
+   ],
+   "coord_method": "Nominatim building match (43-45)",
+   "sources": [
+    "https://baxtel.com/data-center/vantage-melbourne-mel1"
+   ],
+   "verdict": "fix",
+   "changes": "Baxtel lists it Under Construction, expected 2026; no operational announcement found. Ours says live. Medium confidence; UNVERIFIED that no phase is operating."
+  },
+  {
+   "name": "Microsoft, Garden Drive",
+   "operator": "Microsoft",
+   "address": "70-90 Garden Drive, Tullamarine",
+   "status": "live",
+   "lnglat": [
+    144.87492,
+    -37.68555
+   ],
+   "coord_method": "Nominatim building match (Microsoft MEL07)",
+   "sources": [
+    "https://baxtel.com/data-center/microsoft-mel07"
+   ],
+   "verdict": "ok",
+   "changes": "address range is 70-90"
+  },
+  {
+   "name": "AirTrunk MEL2",
+   "operator": "AirTrunk",
+   "address": "85-95 Sharps Road, Tullamarine",
+   "status": "live",
+   "lnglat": [
+    144.87524,
+    -37.7078
+   ],
+   "coord_method": "Nominatim street only (Sharps Road)",
+   "sources": [
+    "https://datacenterhawk.com/marketplace/providers/airtrunk/85-95-sharps-road/mel2"
+   ],
+   "verdict": "fix",
+   "changes": "Address is published (85-95 Sharps Road), so the 'exact site not published' note and suburb placement are wrong. Status UNVERIFIED: one source says 'speculatively under construction'. Coordinate is street-level only."
+  },
+  {
+   "name": "AirTrunk MEL1",
+   "operator": "AirTrunk",
+   "address": "176 Swann Drive, Derrimut",
+   "status": "live",
+   "lnglat": [
+    144.77557,
+    -37.80176
+   ],
+   "coord_method": "Nominatim street only (Swann Drive)",
+   "sources": [
+    "https://www.peeringdb.com/fac/5529",
+    "https://inflect.com/building/176-swann-drive-derrimut/airtrunk/datacenter/mel1"
+   ],
+   "verdict": "fix",
+   "changes": "Address is 176 Swann Drive (buildings 1 and 2); replace the 'not published' note and suburb placement."
+  },
+  {
+   "name": "Equinix ME4",
+   "operator": "Equinix",
+   "address": "2 Davis Court, Derrimut",
+   "status": "live",
+   "lnglat": [
+    144.78584,
+    -37.78849
+   ],
+   "coord_method": "Nominatim building match (Equinix ME4)",
+   "sources": [
+    "Nominatim result named Equinix ME4"
+   ],
+   "verdict": "ok",
+   "changes": "none"
+  },
+  {
+   "name": "Digital Realty MEL10",
+   "operator": "Digital Realty",
+   "address": "98 Radnor Drive, Deer Park",
+   "status": "live",
+   "lnglat": [
+    144.77931,
+    -37.78193
+   ],
+   "coord_method": "Nominatim building match",
+   "sources": [
+    "https://www.datacentermap.com/australia/melbourne/98-radnor-dr-mel10/"
+   ],
+   "verdict": "ok",
+   "changes": "none"
+  },
+  {
+   "name": "Digital Realty MEL11",
+   "operator": "Digital Realty",
+   "address": "72 Radnor Drive, Deer Park",
+   "status": "live",
+   "lnglat": [
+    144.77784,
+    -37.78189
+   ],
+   "coord_method": "Nominatim building match",
+   "sources": [
+    "https://www.peeringdb.com/fac/3977"
+   ],
+   "verdict": "ok",
+   "changes": "none"
+  },
+  {
+   "name": "Digital Realty MEL12",
+   "operator": "Digital Realty",
+   "address": "54 Radnor Drive, Deer Park",
+   "status": "plan",
+   "lnglat": [
+    144.77804,
+    -37.78095
+   ],
+   "coord_method": "Nominatim street only (Radnor Drive)",
+   "sources": [
+    "https://datacentermap.com/australia/melbourne/54-radnor-dr-mel12",
+    "https://baxtel.com/data-center/digital-realty-mel12"
+   ],
+   "verdict": "fix",
+   "changes": "Listed as Planned, not operational; ours says live."
+  },
+  {
+   "name": "STACK MEL01",
+   "operator": "STACK Infrastructure",
+   "address": "399 Palmers Road, Truganina",
+   "status": "live",
+   "lnglat": [
+    144.74764,
+    -37.81993
+   ],
+   "coord_method": "Nominatim building match (STACK MEL01A)",
+   "sources": [
+    "https://www.stackinfra.com/locations/asia-pacific/melbourne/mel02/"
+   ],
+   "verdict": "ok",
+   "changes": "Operating status not independently confirmed beyond the building match; low risk."
+  },
+  {
+   "name": "Microsoft, Woods Road",
+   "operator": "Microsoft",
+   "address": "281 Woods Road, Truganina",
+   "status": "live",
+   "lnglat": [
+    144.71897,
+    -37.82787
+   ],
+   "coord_method": "Nominatim street only (Woods Road)",
+   "sources": [
+    "https://local.microsoft.com/blog/woods-road-datacentre-construction-overview/"
+   ],
+   "verdict": "ok",
+   "changes": "Construction complete by Feb 2025; coordinate is street-level only."
+  },
+  {
+   "name": "Amazon Web Services",
+   "operator": "Amazon",
+   "address": "22 Delivery Drive, Truganina",
+   "status": "live",
+   "lnglat": [
+    144.75604,
+    -37.83881
+   ],
+   "coord_method": "Nominatim house-number match",
+   "sources": [
+    "https://datacentermap.com/australia/melbourne/amazon-aws-mel-22-delivery"
+   ],
+   "verdict": "ok",
+   "changes": "Built 2023, operational per Data Center Map."
+  },
+  {
+   "name": "CDC Laverton",
+   "operator": "CDC Data Centres",
+   "address": "Leakes Road, Laverton North",
+   "status": "plan",
+   "lnglat": [
+    144.76473,
+    -37.84073
+   ],
+   "coord_method": "Nominatim street only (Leakes Road)",
+   "sources": [
+    "https://www.datacentermap.com/australia/melbourne/cdc-laverton-lv1/",
+    "https://baxtel.com/data-center/cdc-laverton-campus"
+   ],
+   "verdict": "fix",
+   "changes": "Ground broken Feb 2025; LV1 listed Under Construction, LV2 planned. Ours says live. Move to plan (under construction)."
+  },
+  {
+   "name": "NEXTDC M3",
+   "operator": "NEXTDC",
+   "address": "25 Indwe Street, West Footscray",
+   "status": "live",
+   "lnglat": [
+    144.86548,
+    -37.80351
+   ],
+   "coord_method": "Nominatim house-number match",
+   "sources": [
+    "https://baxtel.com/data-center/nextdc-west-footscray-m3"
+   ],
+   "verdict": "ok",
+   "changes": "none"
+  },
+  {
+   "name": "CDC Brooklyn",
+   "operator": "CDC Data Centres",
+   "address": "594 Geelong Road, Brooklyn",
+   "status": "live",
+   "lnglat": [
+    144.85106,
+    -37.81596
+   ],
+   "coord_method": "Nominatim street only",
+   "sources": [
+    "https://www.invest.vic.gov.au/news-and-events/news/2026/march/cdc-data-centres-officially-opens-its-first-melbourne-campus-expanding-its-ability-to-deliver-secure-and-sustainable-solutions",
+    "https://www.datacentermap.com/australia/melbourne/cdc-brooklyn-bk1/"
+   ],
+   "verdict": "ok",
+   "changes": "Two operational facilities, campus opened early 2026."
+  },
+  {
+   "name": "GreenSquareDC MEL1",
+   "operator": "GreenSquareDC",
+   "address": "44-76 Simcock Avenue, Spotswood",
+   "status": "plan",
+   "lnglat": [
+    144.88953,
+    -37.82797
+   ],
+   "coord_method": "Nominatim building range match 44-76",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/australias-greensquare-expands-into-melbourne-with-240mw-campus/",
+    "https://baxtel.com/data-center/greensquare-melbourne-campus"
+   ],
+   "verdict": "fix",
+   "changes": "Planned 240 MW campus, operational expected 2027; ours says live."
+  },
+  {
+   "name": "Biztactix Sunshine",
+   "operator": "Biztactix",
+   "address": "9A Western Avenue, Sunshine",
+   "status": "live",
+   "lnglat": [
+    144.83322,
+    -37.80064
+   ],
+   "coord_method": "Nominatim building match 9-9A",
+   "sources": [
+    "https://datacentermap.com/australia/melbourne/sunshine-dc"
+   ],
+   "verdict": "ok",
+   "changes": "Small IT-services provider site; only a Data Center Map listing found, so UNVERIFIED as a true data centre. Consider removing as not notable."
+  },
+  {
+   "name": "Mickleham hyperscale campus",
+   "operator": "AirTrunk (reported)",
+   "address": "45 Donnybrook Road, Mickleham",
+   "status": "plan",
+   "lnglat": [
+    144.9393,
+    -37.53991
+   ],
+   "coord_method": "Nominatim house-number match",
+   "sources": [
+    "https://www.theurbandeveloper.com/articles/airtrunk-blackstone-mickleham-north-melbourne-data-centre-plans-donnybrook-road",
+    "https://w.media/victorias-data-centre-pipeline-grows-with-four-new-melbourne-proposals/"
+   ],
+   "verdict": "ok",
+   "changes": "Lodged 1 July 2026, PA2604506, seven buildings, 67 ha; about A$4 billion reported (A$350m land purchase)."
+  },
+  {
+   "name": "Truganina data centre",
+   "operator": "Goodman",
+   "address": "433 Mount Atkinson Road, Truganina",
+   "status": "plan",
+   "lnglat": [
+    144.67552,
+    -37.77167
+   ],
+   "coord_method": "Nominatim house-number match",
+   "sources": [
+    "https://w.media/victorias-data-centre-pipeline-grows-with-four-new-melbourne-proposals/"
+   ],
+   "verdict": "ok",
+   "changes": "Three two-storey buildings, lodged early July."
+  },
+  {
+   "name": "Campbellfield AI campus",
+   "operator": "Zerra DC",
+   "address": "300-340 Barry Road, Campbellfield",
+   "status": "plan",
+   "lnglat": [
+    144.95439,
+    -37.66691
+   ],
+   "coord_method": "Nominatim house-number match 300",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/zerra-dc-files-to-build-six-building-data-center-campus-in-melbourne-australia/"
+   ],
+   "verdict": "ok",
+   "changes": "Address is 300-340 Barry Road; six buildings, 336 MW, EPA objection lodged."
+  },
+  {
+   "name": "Cherry Lane",
+   "operator": "Stockland",
+   "address": "72-76 Cherry Lane, Laverton North",
+   "status": "plan",
+   "lnglat": [
+    144.79625,
+    -37.8373
+   ],
+   "coord_method": "Nominatim street only",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/stockland-files-to-develop-250mw-data-center-campus-in-melbourne-australia/",
+    "https://www.planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/e46a98dc-8d47-f111-bec6-7c1e5262e60a"
+   ],
+   "verdict": "ok",
+   "changes": "250 MW, 35 ha, joint venture with EdgeConneX; say application lodged rather than just in development."
+  },
+  {
+   "name": "Francis Street",
+   "operator": "Stockland",
+   "address": "412 Francis Street, Brooklyn",
+   "status": "plan",
+   "lnglat": [
+    144.85522,
+    -37.81723
+   ],
+   "coord_method": "Nominatim street only",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/stockland-files-to-develop-another-data-center-in-melbourne-australia/"
+   ],
+   "verdict": "fix",
+   "changes": "DCD gives 412 Francis Street (ours 413); 250 MW two-storey on part of the Brooklyn Distribution Centre; planning permit application lodged. Street number UNVERIFIED as one source slug uses 413."
+  },
+  {
+   "name": "Sunshine Road",
+   "operator": "Perri Projects",
+   "address": "1 McArthur Street and 63 Sunshine Road, West Footscray",
+   "status": "plan",
+   "lnglat": [
+    144.8698,
+    -37.8013
+   ],
+   "coord_method": "Nominatim building match (Goldsbrough Mort Wool Store)",
+   "sources": [
+    "https://www.theurbandeveloper.com/articles/data-centre-perri-projects-victoria-west-footscray",
+    "https://planning.vic.gov.au/planning-approvals/ministerial-permits-register/ministerial-permits/fcb0d877-0b98-ef11-8a68-002248938a9c"
+   ],
+   "verdict": "ok",
+   "changes": "Four-storey, A$800m cost, ministerial permit PA2403320 exists; approved vs lodged UNVERIFIED."
+  }
+ ],
+ "dataCentresMissing": [
+  {
+   "name": "PGIM Truganina campus",
+   "operator": "PGIM",
+   "address": "1 Oroya Drive, Truganina",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "Nominatim found no match",
+   "sources": [
+    "https://www.theurbandeveloper.com/articles/us-fund-manager-pgim-buys-truganina-data-centre-site",
+    "https://w.media/pgim-acquires-20-7ha-melbourne-site-for-aud-1-2bn-data-centre-campus/"
+   ],
+   "note": "20.7 ha, first building approved per search results, 80 MW first phase, A$1.2b."
+  },
+  {
+   "name": "NEXTDC M4",
+   "operator": "NEXTDC",
+   "address": "127 Todd Road, Port Melbourne",
+   "status": "plan",
+   "lnglat": [
+    144.91348,
+    -37.83427
+   ],
+   "coord_method": "Nominatim street only (Todd Road)",
+   "sources": [
+    "https://itwire.com/business-it-news/data-centres/victoria-fast-tracks-nextdc%E2%80%99s-port-melbourne-campus-amid-east-coast-data-centre-surge"
+   ],
+   "note": "About A$2b, approved by the Victorian Government; inside dcBbox but far from the airport."
+  },
+  {
+   "name": "Microsoft Cawley Road",
+   "operator": "Microsoft",
+   "address": "Cawley Road, Brooklyn (number not published)",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Nominatim no match",
+   "sources": [
+    "https://local.microsoft.com/blog/cawley-road-datacentre-construction-overview/"
+   ],
+   "note": "Building One operational Feb 2025, Building Two fit-out ongoing."
+  },
+  {
+   "name": "Amazon Mickleham campus",
+   "operator": "Amazon Web Services",
+   "address": "55 Donnybrook Road, Mickleham",
+   "status": "plan",
+   "lnglat": [
+    144.9298,
+    -37.5387
+   ],
+   "coord_method": "Nominatim street only (Donnybrook Road)",
+   "sources": [
+    "https://www.datacentermap.com/australia/melbourne/amazon-aws-55-donnybrook-rd/"
+   ],
+   "note": "Data Center Map listing only; AWS had sought rezoning for two years before AirTrunk bought the adjoining site. Status UNVERIFIED."
+  }
+ ],
+ "plans": [
+  {
+   "name": "Airport Rail, stage 1",
+   "verdict": "ok",
+   "status_now": "Works under way (ground broken), completion 2030, more than $4 billion jointly funded",
+   "fix_points": null,
+   "cert": "route",
+   "sources": [
+    "https://bigbuild.vic.gov.au/library/melbourne-airport-rail/fact-sheets/sunshine-station-superhub-july-2026",
+    "https://beat.com.au/remarkable-transformation-melbournes-56-year-airport-rail-has-finally-broken-ground"
+   ],
+   "note": "Station points within about 60 m of OSM (Sunshine 144.83296,-37.78861; Albion 144.82439,-37.77723; Tottenham 144.86321,-37.79927; West Footscray 144.88406,-37.80174). The bigbuild project URL returned 403 to scripts but is the official page."
+  },
+  {
+   "name": "Airport Rail to the airport (approximate route)",
+   "verdict": "fix",
+   "status_now": "Planned, airport station expected 2033 or later, proposed near Terminal 4",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Melbourne_Airport_railway_station",
+    "https://en.wikipedia.org/wiki/Melbourne_Airport_Rail"
+   ],
+   "note": "Our wording says the station is between Terminals 3 and 4; sources say near Terminal 4. Government primary page blocked (403), so UNVERIFIED against official text. cert approx is honest."
+  },
+  {
+   "name": "Suburban Rail Loop West (route not decided)",
+   "verdict": "ok",
+   "status_now": "Still under investigation, no construction timeframe",
+   "fix_points": null,
+   "cert": "concept",
+   "sources": [
+    "https://bigbuild.vic.gov.au/projects/suburban-rail-loop/srl-west"
+   ],
+   "note": "Honest."
+  },
+  {
+   "name": "Outer Metropolitan Ring Road (approximate)",
+   "verdict": "ok",
+   "status_now": "Corridor reserved (Public Acquisition Overlay), no construction funding",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://transport.vic.gov.au/news-and-resources/projects/outer-metropolitan-ring-e6-transport-corridor",
+    "https://www.infrastructureaustralia.gov.au/ipl/melbourne-outer-metropolitan-ring-e6-transport-corridor"
+   ],
+   "note": "Honest."
+  }
+ ],
+ "railHubs": [
+  {
+   "name": "Sunshine",
+   "verdict": "ok",
+   "lnglat": [
+    144.83296,
+    -37.78861
+   ],
+   "sources": [
+    "Nominatim station object"
+   ],
+   "note": "ours about 25 m off"
+  },
+  {
+   "name": "Albion",
+   "verdict": "ok",
+   "lnglat": [
+    144.82439,
+    -37.77723
+   ],
+   "sources": [
+    "Nominatim station object"
+   ],
+   "note": "about 15 m off"
+  },
+  {
+   "name": "Tottenham",
+   "verdict": "ok",
+   "lnglat": [
+    144.86321,
+    -37.79927
+   ],
+   "sources": [
+    "Nominatim station object"
+   ],
+   "note": "about 60 m off"
+  },
+  {
+   "name": "West Footscray",
+   "verdict": "ok",
+   "lnglat": [
+    144.88406,
+    -37.80174
+   ],
+   "sources": [
+    "Nominatim station object"
+   ],
+   "note": "about 50 m off"
+  }
+ ],
+ "other": [
+  {
+   "field": "tallBuilding",
+   "verdict": "ok",
+   "correct": "Eureka Tower is 297.3 m (91 floors); about 300 m is fine. The string 'a Eureka Tower' reads oddly, check the template.",
+   "sources": [
+    "https://skyscrapercenter.info/building/eureka-tower/544"
+   ]
+  },
+  {
+   "field": "future (After 2031, 3 runways)",
+   "verdict": "ok",
+   "correct": "MDP approved 10 September 2024, construction 2025-2031, opening 2031.",
+   "sources": [
+    "https://www.aviacionline.com/melbourne-airports-third-runway-receives-approval",
+    "https://runwaygirlnetwork.com/2026/07/qantas-and-melbourne-airport-unlock-airport-expansion/"
+   ]
+  },
+  {
+   "field": "third runway placement (runways key new)",
+   "verdict": "fix",
+   "correct": "Official: 3,000 m long plus a 200 m starter extension at the southern end, parallel and 1.3 km WEST of the existing 16/34, opening 2031; existing becomes 16L/34R, new 16R/34L. Official thresholds not found. Our existing fallback is about 490 m too far west, so the new runway is too, by about 450-520 m. Derived estimate (not official): from OSM existing ends, 1.3 km perpendicular offset, centred on the existing runway, true bearing about 171.5 degrees: north end [144.82084,-37.65786], south end [144.82588,-37.68454]. The stagger and the 200 m extension could move the south end about 200 m south. Our length of 2.97 km is fine.",
+   "sources": [
+    "https://www.aviacionline.com/melbourne-airports-third-runway-receives-approval",
+    "https://www.thenewdaily.com.au/news/state/vic/melbourne/2024/09/13/melbourne-airports-third-runway",
+    "https://melbourneairport.com.au/_assets/be08d7b0-97a1-02f9-2be6-a0c139c3c337/b56e8730-eced-4758-b3e8-50c98c2cf35d/MA_3R_Fact_Sheet_Third_runway_program.pdf"
+   ]
+  },
+  {
+   "field": "schools.zoneSite",
+   "verdict": "ok",
+   "correct": "findmyschool.vic.gov.au returns HTTP 200 (with and without www).",
+   "sources": [
+    "https://findmyschool.vic.gov.au"
+   ]
+  },
+  {
+   "field": "YMEN nearNote",
+   "verdict": "fix",
+   "correct": "Text omits the 2300-0600 curfew (emergency services and certain classes exempt). Business jets, turboprops, air ambulance are consistent; police aircraft in the page text is UNVERIFIED.",
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/?p=5091"
+   ]
+  },
+  {
+   "field": "Melbourne Airport curfew",
+   "verdict": "ok",
+   "correct": "No curfew found in sources; 2300-0600 runway preferences apply (arrivals 16, departures 27).",
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2022/05/04/melbourne-airport-runways/"
+   ]
+  },
+  {
+   "field": "YMPC nearNote",
+   "verdict": "ok",
+   "correct": "Generic claim; UNVERIFIED.",
+   "sources": []
+  }
+ ],
+ "unverified": [
+  "Departure turn angles and straight-in final lengths for all YMML, YMEN and YMAV ends (Airservices pages give no degrees); recommendations left null",
+  "Official 16R/34L threshold coordinates",
+  "Vantage MEL1 live vs under construction (only Baxtel)",
+  "AirTrunk MEL2 live status",
+  "Biztactix Sunshine as a real data centre",
+  "Stockland Francis Street number 412 vs 413",
+  "Perri West Footscray permit status",
+  "Airport station position from official text (bigbuild.vic.gov.au 403)",
+  "Avalon noise abatement detail (current ERSA only says NAP apply)",
+  "Street-only coordinates: AirTrunk MEL1/MEL2, Woods Road, CDC sites, Cherry Lane, Francis Street, Digital Realty MEL12"
+ ]
+}

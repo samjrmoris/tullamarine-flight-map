@@ -1,0 +1,510 @@
+{
+ "id": "nsw",
+ "checked": "2026-10-02",
+ "runways": [
+  {
+   "airport": "YSSY",
+   "refs": [
+    "16R",
+    "34L"
+   ],
+   "ours": [
+    [
+     151.17183,
+     -33.93017
+    ],
+    [
+     151.18067,
+     -33.96433
+    ]
+   ],
+   "source": [
+    [
+     151.17177,
+     -33.93012
+    ],
+    [
+     151.18065,
+     -33.96426
+    ]
+   ],
+   "diff_m": [
+    8,
+    8
+   ],
+   "source_url": "https://www.openstreetmap.org/way/219359696",
+   "verdict": "ok",
+   "note": "OSM way 219359696 (3,962 m, full pavement) with displaced-threshold segment way 1064563478; ours sit at the 16R displaced landing threshold (ourairports lists 16R displaced 279 ft). ends[0]=16R end ok."
+  },
+  {
+   "airport": "YSSY",
+   "refs": [
+    "16L",
+    "34R"
+   ],
+   "ours": [
+    [
+     151.18883,
+     -33.95167
+    ],
+    [
+     151.19383,
+     -33.97083
+    ]
+   ],
+   "source": [
+    [
+     151.18883,
+     -33.95166
+    ],
+    [
+     151.19378,
+     -33.97075
+    ]
+   ],
+   "diff_m": [
+    1,
+    10
+   ],
+   "source_url": "https://www.openstreetmap.org/way/186842426",
+   "verdict": "ok",
+   "note": "Ours = 16L displaced threshold (OSM way 186842426 / 510285760 split at -33.95166). OurAirports lists the pavement start 242 m north of that (-33.94960) because 16L has a 758 ft displaced threshold; ours is the correct landing threshold."
+  },
+  {
+   "airport": "YSSY",
+   "refs": [
+    "07",
+    "25"
+   ],
+   "ours": [
+    [
+     151.16367,
+     -33.94367
+    ],
+    [
+     151.18883,
+     -33.93783
+    ]
+   ],
+   "source": [
+    [
+     151.16364,
+     -33.94375
+    ],
+    [
+     151.18885,
+     -33.9378
+    ]
+   ],
+   "diff_m": [
+    9,
+    4
+   ],
+   "source_url": "https://www.openstreetmap.org/way/219847158",
+   "verdict": "ok",
+   "note": "OSM way 219847158 (07/25). ourairports 25 end has 324 ft displaced threshold; ours matches OSM 25 end."
+  },
+  {
+   "airport": "YSWS",
+   "refs": [
+    "05",
+    "23"
+   ],
+   "ours": [
+    [
+     150.701,
+     -33.89917
+    ],
+    [
+     150.73567,
+     -33.8825
+    ]
+   ],
+   "source": [
+    [
+     150.69573,
+     -33.89185
+    ],
+    [
+     150.73025,
+     -33.87504
+    ]
+   ],
+   "diff_m": [
+    948,
+    969
+   ],
+   "source_url": "https://www.openstreetmap.org/way/968004296",
+   "verdict": "fix",
+   "note": "Ours is about 950 m too far south-east: it was centred on the ERSA aerodrome reference point (335327S 1504306E), which is NOT the runway centre. Correct runway centre is about [150.7130,-33.8834] (OSM way 968004296 3,700 m 05/23, and midpoint of the ERSA ILS localiser antennas LOC IWS 335335.8S 1504134.0E and LOC IWN 335225.0S 1504359.5E, which sit ~310 m beyond each end; ourairports airport coordinate -33.883461,150.712981 agrees). Use ends[0]=[150.69573,-33.89185] (05 threshold), ends[1]=[150.73025,-33.87504] (23 threshold). Runway 3,700 m x 45 m, bearing 047 mag (about 060 true). ERSA: https://www.airservicesaustralia.com/aip/current/ersa/FAC_YSWS_03SEP2026.pdf. OSM way is tagged source=ESRI (imagery trace), so thresholds are good to roughly 20-30 m, and cross-checked against the ILS data."
+  },
+  {
+   "airport": "YSWS",
+   "refs": [
+    "05R",
+    "23L"
+   ],
+   "ours": [
+    [
+     150.71128,
+     -33.91399
+    ],
+    [
+     150.74595,
+     -33.89732
+    ]
+   ],
+   "source": [
+    [
+     150.70613,
+     -33.90667
+    ],
+    [
+     150.74065,
+     -33.88986
+    ]
+   ],
+   "diff_m": [
+    939,
+    959
+   ],
+   "source_url": "https://www.westernsydneyairport.gov.au/sites/default/files/Western_Sydney_Airport_Plan.pdf",
+   "verdict": "fix",
+   "note": "Future second runway: only the offset is wrong because it inherits the 950 m error of the first runway. Official: second parallel runway (05R/23L) on the southern side of the airport site, about 1,900 m from the first, needed when demand nears 37 million passengers a year (about 2050s, not before 2040). Exact longitudinal stagger and thresholds are NOT published in anything I could read, so keep cert as concept; Suggested placement if kept as a concept: first runway (corrected) shifted 1.9 km towards the south-east (bearing 60+90 true): 05R threshold [150.70613, -33.90667], 23L threshold [150.74065, -33.88986]. Placement accuracy: offset about +/-100 m, along-runway stagger unknown (could be several hundred m), so keep cert concept."
+  },
+  {
+   "airport": "YSBK",
+   "refs": [
+    "11C",
+    "29C"
+   ],
+   "ours": [
+    [
+     150.9845,
+     -33.92017
+    ],
+    [
+     150.99583,
+     -33.9265
+    ]
+   ],
+   "source": [
+    [
+     150.98315,
+     -33.91933
+    ],
+    [
+     150.99586,
+     -33.92645
+    ]
+   ],
+   "diff_m": [
+    156,
+    6
+   ],
+   "source_url": "https://www.openstreetmap.org/way/222420819",
+   "verdict": "ok",
+   "note": "Map has no Bankstown runways (noModel, runways: []), so nothing is drawn. Research-file values: 11C end 156 m from OSM (OSM way 222420819 1,416 m) but only ~50 m from ourairports (-33.9196,150.98399); fine for a boundary-only airport."
+  },
+  {
+   "airport": "YSBK",
+   "refs": [
+    "11L",
+    "29R"
+   ],
+   "ours": [
+    [
+     150.98667,
+     -33.92017
+    ],
+    [
+     150.9965,
+     -33.92567
+    ]
+   ],
+   "source": [
+    [
+     150.98665,
+     -33.92013
+    ],
+    [
+     150.99646,
+     -33.92563
+    ]
+   ],
+   "diff_m": [
+    5,
+    5
+   ],
+   "source_url": "https://www.openstreetmap.org/way/222415637",
+   "verdict": "ok",
+   "note": "Not drawn in the map (noModel). 11R/29L (1,038 m, OSM way 222420820) exists too but is not in the file; irrelevant because nothing is drawn."
+  },
+  {
+   "airport": "YSRI",
+   "refs": [
+    "10",
+    "28"
+   ],
+   "ours": [
+    [
+     150.77117,
+     -33.60167
+    ],
+    [
+     150.79317,
+     -33.60733
+    ]
+   ],
+   "source": [
+    [
+     150.77074,
+     -33.60149
+    ],
+    [
+     150.79382,
+     -33.60743
+    ]
+   ],
+   "diff_m": [
+    44,
+    61
+   ],
+   "source_url": "https://www.openstreetmap.org/way/7979908",
+   "verdict": "ok",
+   "note": "Not drawn in the map (noModel). 2,134 m asphalt 10/28 matches."
+  },
+  {
+   "airport": "YSCN",
+   "refs": [
+    "06",
+    "24"
+   ],
+   "ours": [
+    [
+     150.68067,
+     -34.04067
+    ],
+    [
+     150.692,
+     -34.03617
+    ]
+   ],
+   "source": [
+    [
+     150.68061,
+     -34.04061
+    ],
+    [
+     150.69196,
+     -34.03616
+    ]
+   ],
+   "diff_m": [
+    8,
+    4
+   ],
+   "source_url": "https://www.openstreetmap.org/way/904380570",
+   "verdict": "ok",
+   "note": "Not drawn in the map (noModel). Camden also has grass runways 10/28 (OSM way 904380571) and gliding strips, not in file."
+  }
+ ],
+ "flightPaths": [
+  {
+   "airport": "YSSY",
+   "runwayEnd": "34L",
+   "departs": "Jets take off northwards and turn at 800 ft or 1,500 ft depending on track; LTOP mode 9 sends 34L departures 'over the north and north-west' (turn left/west of north), non-jets turn very early to the south-west. Roughly straight north then left towards the north-west; no right turns published for 34L.",
+   "arrives": "Not used for arrivals in north flow? Arrivals land 34L from the SOUTH over Botany Bay (over-water, straight final). Heavy long-haul jets prefer 34L/16R (longest runway).",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    -40,
+    0
+   ],
+   "sources": [
+    "https://www.airservicesaustralia.com/wp-content/uploads/LTOP_Mode9.pdf",
+    "https://aircraftnoise.airservicesaustralia.com/2020/05/18/sydney-airport-flight-paths-over-the-inner-suburbs/",
+    "https://aircraftnoise.airservicesaustralia.com/2020/04/30/runways-at-sydney-airport/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "airport": "YSSY",
+   "runwayEnd": "34R",
+   "departs": "Most departures turn east or north-east after take-off (right turn, away from the inner west); non-jets go straight ahead over Newtown/Glebe/Pyrmont at 2,500-4,000 ft.",
+   "arrives": "Arrivals from the south over Botany Bay (straight final).",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    0,
+    40
+   ],
+   "sources": [
+    "https://www.airservicesaustralia.com/wp-content/uploads/LTOP_Mode9.pdf",
+    "https://aircraftnoise.airservicesaustralia.com/2020/05/18/sydney-airport-flight-paths-over-the-inner-suburbs/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "airport": "YSSY",
+   "runwayEnd": "16R",
+   "departs": "Straight out over Botany Bay then a U-turn over water at about 6,000 ft; from 30 Nov 2023 all follow one consistent path and turn over water at one location before crossing the Royal National Park coast at 10,000 ft or more. Curfew (11pm-6am): all departures use 16R. Option of left turn through Botany Bay Heads discussed in LTOP but not confirmed.",
+   "arrives": "Arrivals on 16R come from the north on a straight final over Lilyfield/Leichhardt/Stanmore (inner west).",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    0
+   ],
+   "sources": [
+    "https://engage.airservicesaustralia.com/sydney-airport-changes-to-departures-from-runways-16l-and-16r",
+    "https://aircraftnoise.airservicesaustralia.com/2020/05/18/sydney-airport-flight-paths-over-the-inner-suburbs/",
+    "https://aircraftnoise.airservicesaustralia.com/2020/04/30/runways-at-sydney-airport/"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "airport": "YSSY",
+   "runwayEnd": "16L",
+   "departs": "Jet departures track through the bay between Kurnell and La Perouse; from 30 Nov 2023 closer to the centre of Botany Bay (roughly straight south, slight right/left drift only). Non-jets turn left immediately after take-off.",
+   "arrives": "Arrivals from the north on a straight final over Rozelle/Annandale/Camperdown/Newtown.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": [
+    0
+   ],
+   "sources": [
+    "https://engage.airservicesaustralia.com/sydney-airport-changes-to-departures-from-runways-16l-and-16r",
+    "https://aircraftnoise.airservicesaustralia.com/2020/05/18/sydney-airport-flight-paths-over-the-inner-suburbs/",
+    "https://www.airservicesaustralia.com/wp-content/uploads/LTOP_Mode14A.pdf"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "airport": "YSSY",
+   "runwayEnd": "07",
+   "departs": "Not published in the sources I could read in detail. Mode 14A has arrivals from the west on 07; LTOP says departure tracks east off 07 needed further development (kept off the reciprocal of the 25 arrival track), i.e. over Botany Bay/the coast.",
+   "arrives": "Arrivals on 07 come straight in from the west over the inner west/Canterbury-Bankstown corridor (14A: arrivals from the west on 07).",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "sources": [
+    "https://www.airservicesaustralia.com/wp-content/uploads/LTOP_Mode14A.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YSSY",
+   "runwayEnd": "25",
+   "departs": "Jets hold runway track to 1,500 ft then take the heading ATC assigns (modes: departures to the north-west, west and south-west from 25). Both left and right turns used.",
+   "arrives": "Arrivals from the east over Botany Bay/Brighton-le-Sands (LTOP mode 5, straight final).",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "sources": [
+    "https://www.airservicesaustralia.com/wp-content/uploads/LTOP_Mode14A.pdf",
+    "https://www.airservicesaustralia.com/wp-content/uploads/LTOP_Forward.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YSSY",
+   "runwayEnd": "all",
+   "departs": "Curfew 11pm-6am (departures 16R, arrivals 34L). Noise-sharing runway modes (LTOP) are used when wind and traffic allow; over-water modes preferred. New Sydney airspace from 9 July 2026 to fit WSI; I found no published change to YSSY runway-end turn directions in the pages I could read.",
+   "arrives": "",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2020/04/30/runways-at-sydney-airport/",
+    "https://www.atc-network.com/atc-news/new-flight-paths-for-sydney-to-take-effect-from-9-july"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YSWS",
+   "runwayEnd": "05",
+   "departs": "Day (runway 05 into the north-east): left turns after take-off are delayed (restricted Orchard Hills defence area) and designed to track as far west of St Clair as possible; westbound departures stay north of the Great Western Highway; eastbound departures climb west/south-west then turn east. Map draws straight 22 km departures (depKm 22): wrong shape (real tracks turn after the first ~km), no numeric turn angles published.",
+   "arrives": "Arrivals from the south-west; turns onto final are designed to avoid low overflight of Silverdale, so final is straight only for the last ~10-15 km.",
+   "fans_now": null,
+   "fans_recommended": null,
+   "sources": [
+    "https://www.wsiflightpaths.gov.au/pdf-documents/WSI-flight-path-brochure-june.pdf",
+    "https://www.wsiflightpaths.gov.au/pdf-documents/WSI-runway-05-day-arrivals-and-departures.pdf"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YSWS",
+   "runwayEnd": "23",
+   "departs": "Day (runway 23 into the south-west): RIGHT turns for jets delayed to avoid Silverdale; departures to the north cross the Great Western Highway at a low-density area; southbound turns gain height over non-residential land. Night RRO: take off on 23 to the south-west, turn as early as possible.",
+   "arrives": "Arrivals from the north-east (Day) straight in over the north-west; night arrivals use 05 from the south-west, turning onto final south-west of The Oaks / south of Silverdale (~20 km out).",
+   "fans_now": null,
+   "fans_recommended": null,
+   "sources": [
+    "https://www.wsiflightpaths.gov.au/pdf-documents/WSI-flight-path-brochure-june.pdf",
+    "https://www.wsiflightpaths.gov.au/pdf-documents/WSI-night-reciprocal-runway-operations-arrivals-and-departures.pdf",
+    "https://www.infrastructure.gov.au/infrastructure-transport-vehicles/aviation/airports/western-sydney-international-airport/western-sydney-international-airport-flight-paths"
+   ],
+   "confidence": "low"
+  }
+ ],
+ "airportLand": [
+  {
+   "airport": "YSSY",
+   "osm": "way 211818374",
+   "verdict": "ok",
+   "note": "aerodrome way tagged icao=YSSY, about 7.7 km2 (official airport is roughly 9 km2 incl. Botany Bay runway reclamation; plausible, covers all three runways)."
+  },
+  {
+   "airport": "YSWS",
+   "osm": "way 985743235",
+   "verdict": "ok",
+   "note": "aerodrome way icao=YSWS, about 6.8 km2, bbox 150.685-150.739 / -33.906 to -33.870. The whole airport site is ~17.8 km2 (1,780 ha incl. buffer land), so this is the airside/developed core, not the lease boundary; plausible for the map. Note the OSM runway way is correct but the map's runway coordinates are not (see runways)."
+  },
+  {
+   "airport": "YSBK",
+   "osm": "relation 4081229",
+   "verdict": "ok",
+   "note": "multipolygon assembled from ~31 outer segments, bbox 150.980-151.007 / -33.934 to -33.914 (2.5 x 2.2 km); official airport is about 313 ha. Looks plausible; I could not compute an exact area from the fragmented members. Overpass returns outer ways in pieces so the engine must stitch them."
+  },
+  {
+   "airport": "YSCN",
+   "osm": "way 48985864 region: way 48985858",
+   "verdict": "ok",
+   "note": "aerodrome way 48985858 icao=YSCN, about 1.85 km2; plausible."
+  },
+  {
+   "airport": "YSRI",
+   "osm": "relation 19653451",
+   "verdict": "ok",
+   "note": "aerodrome multipolygon (military=airfield), about 2.7 km2, 3 closed outer rings; plausible for RAAF Richmond airfield area."
+  }
+ ],
+ "dataCentres": [],
+ "dataCentresMissing": [],
+ "plans": [],
+ "railHubs": [],
+ "other": [],
+ "unverified": []
+}

@@ -15,29 +15,32 @@ const PLANS=[
 ];
 // ---------- data centres: [name, operator, street address, 'live'|'plan', optional note] ----------
 const DCS=[
-  ['NEXTDC M2','NEXTDC','75 Sharps Road, Tullamarine','live'],
-  ['Vantage MEL1','Vantage Data Centers','45 Tullamarine Park Road, Tullamarine','live'],
-  ['Microsoft, Garden Drive','Microsoft','70 Garden Drive, Tullamarine','live'],
-  ['AirTrunk MEL2','AirTrunk','Tullamarine','live','Exact site not published; placed at the suburb'],
-  ['AirTrunk MEL1','AirTrunk','Derrimut','live','Exact site not published; placed at the suburb'],
-  ['Equinix ME4','Equinix','2 Davis Court, Derrimut','live'],
-  ['Digital Realty MEL10','Digital Realty','98 Radnor Drive, Deer Park','live'],
-  ['Digital Realty MEL11','Digital Realty','72 Radnor Drive, Deer Park','live'],
-  ['Digital Realty MEL12','Digital Realty','54 Radnor Drive, Deer Park','live'],
-  ['STACK MEL01','STACK Infrastructure','399 Palmers Road, Truganina','live'],
+  ['NEXTDC M2','NEXTDC','75 Sharps Road, Tullamarine','live','',[144.87545,-37.70887]],
+  ['Vantage MEL1','Vantage Data Centers','43-45 Tullamarine Park Road, Tullamarine','plan','Under construction, expected 2026',[144.8719,-37.70818]],
+  ['Microsoft, Garden Drive','Microsoft','70-90 Garden Drive, Tullamarine','live','',[144.87492,-37.68555]],
+  ['AirTrunk MEL2','AirTrunk','85-95 Sharps Road, Tullamarine','live'],
+  ['AirTrunk MEL1','AirTrunk','176 Swann Drive, Derrimut','live'],
+  ['Equinix ME4','Equinix','2 Davis Court, Derrimut','live','',[144.78584,-37.78849]],
+  ['Digital Realty MEL10','Digital Realty','98 Radnor Drive, Deer Park','live','',[144.77931,-37.78193]],
+  ['Digital Realty MEL11','Digital Realty','72 Radnor Drive, Deer Park','live','',[144.77784,-37.78189]],
+  ['Digital Realty MEL12','Digital Realty','54 Radnor Drive, Deer Park','plan','Planned'],
+  ['STACK MEL01','STACK Infrastructure','399 Palmers Road, Truganina','live','',[144.74764,-37.81993]],
   ['Microsoft, Woods Road','Microsoft','281 Woods Road, Truganina','live'],
-  ['Amazon Web Services','Amazon','22 Delivery Drive, Truganina','live'],
-  ['CDC Laverton','CDC Data Centres','Leakes Road, Laverton North','live'],
-  ['NEXTDC M3','NEXTDC','25 Indwe Street, West Footscray','live'],
+  ['Amazon Web Services','Amazon','22 Delivery Drive, Truganina','live','',[144.75604,-37.83881]],
+  ['CDC Laverton','CDC Data Centres','Leakes Road, Laverton North','plan','Under construction since February 2025 (LV1); LV2 planned'],
+  ['NEXTDC M3','NEXTDC','25 Indwe Street, West Footscray','live','',[144.86548,-37.80351]],
   ['CDC Brooklyn','CDC Data Centres','594 Geelong Road, Brooklyn','live'],
-  ['GreenSquareDC MEL1','GreenSquareDC','44 Simcock Avenue, Spotswood','live'],
+  ['GreenSquareDC MEL1','GreenSquareDC','44-76 Simcock Avenue, Spotswood','plan','Planned 240 MW campus, expected 2027',[144.88953,-37.82797]],
   ['Biztactix Sunshine','Biztactix','9A Western Avenue, Sunshine','live'],
-  ['Mickleham hyperscale campus','AirTrunk (reported)','45 Donnybrook Road, Mickleham','plan','Planning application lodged July 2026. About A$4 billion reported.'],
-  ['Truganina data centre','Goodman','433 Mount Atkinson Road, Truganina','plan','Planning application lodged July 2026.'],
-  ['Campbellfield AI campus','Zerra DC','300 Barry Road, Campbellfield','plan','Application filed April 2026, on the former Ford site.'],
-  ['Cherry Lane','Stockland','72 Cherry Lane, Laverton North','plan','Listed as in development on Data Center Map.'],
-  ['Francis Street','Stockland','413 Francis Street, Brooklyn','plan','Listed as in development on Data Center Map.'],
-  ['Sunshine Road','Perri Projects','63 Sunshine Road, West Footscray','plan','Listed as in development on Data Center Map.']
+  ['Mickleham hyperscale campus','AirTrunk (reported)','45 Donnybrook Road, Mickleham','plan','Planning application lodged July 2026. About A$4 billion reported.',[144.9393,-37.53991]],
+  ['Truganina data centre','Goodman','433 Mount Atkinson Road, Truganina','plan','Planning application lodged July 2026.',[144.67552,-37.77167]],
+  ['Campbellfield AI campus','Zerra DC','300-340 Barry Road, Campbellfield','plan','Application filed April 2026, on the former Ford site. Six buildings, 336 MW.',[144.95439,-37.66691]],
+  ['Cherry Lane','Stockland','72-76 Cherry Lane, Laverton North','plan','Planning application lodged. 250 MW, with EdgeConneX.'],
+  ['Francis Street','Stockland','412 Francis Street, Brooklyn','plan','Planning permit application lodged. 250 MW.'],
+  ['Sunshine Road','Perri Projects','63 Sunshine Road, West Footscray','plan','Ministerial permit application PA2403320, about A$800 million.',[144.8698,-37.8013]],
+  ['PGIM Truganina campus','PGIM','1 Oroya Drive, Truganina','plan','First building approved. 80 MW first phase.'],
+  ['NEXTDC M4','NEXTDC','127 Todd Road, Port Melbourne','plan','Approved by the Victorian Government. About A$2 billion.',[144.91348,-37.83427]],
+  ['Microsoft, Cawley Road','Microsoft','Cawley Road, Brooklyn','live','Building One operating since February 2025. Street number not published, so placed on Cawley Road.']
 ];
 // ---------- fallback suburb centres if OpenStreetMap boundaries fail: [name, lat, lon] ----------
 const FALLBACK_SUBS=[['Sunbury',-37.577,144.726],['Diggers Rest',-37.627,144.719],['Bulla',-37.635,144.803],['Greenvale',-37.638,144.886],['Attwood',-37.668,144.888],['Westmeadows',-37.676,144.884],['Gladstone Park',-37.689,144.886],['Tullamarine',-37.701,144.880],['Airport West',-37.724,144.880],['Keilor Park',-37.721,144.853],['Keilor',-37.718,144.835],['Keilor East',-37.736,144.861],['Keilor North',-37.690,144.795],['Keilor Lodge',-37.697,144.812],['Keilor Downs',-37.723,144.808],['Kealba',-37.737,144.828],['Taylors Lakes',-37.698,144.786],['Sydenham',-37.700,144.766],['Hillside',-37.690,144.740],['Taylors Hill',-37.715,144.753],['Delahey',-37.720,144.775],['Kings Park',-37.733,144.772],['Caroline Springs',-37.741,144.736],['St Albans',-37.745,144.800],['Albanvale',-37.746,144.769],['Cairnlea',-37.757,144.790],['Deer Park',-37.767,144.772],['Sunshine',-37.788,144.832],['Sunshine North',-37.770,144.830],['Avondale Heights',-37.761,144.862],['Tarneit',-37.833,144.695],['Truganina',-37.816,144.738],['Point Cook',-37.915,144.750],['Werribee',-37.900,144.660]];
@@ -68,21 +71,21 @@ window.REGION={
       // Airport boundary used until OpenStreetMap loads: [x km east, n km north] of origin
       fallbackRing:[[-2.9,3.4],[0.0,3.6],[1.4,3.0],[2.1,1.8],[2.1,-0.4],[1.9,-2.2],[1.2,-2.9],[-0.6,-2.7],[-2.2,-2.3],[-3.3,-1.0],[-3.4,1.4],[-3.2,2.8]],
       runways:[
-        {key:'main',refs:['16','34'],futureRefs:['16L','34R'],ends:[[144.829396,-37.652715],[144.836604,-37.685285]],era:'both',plain:'main runway'},
-        {key:'cross',refs:['09','27'],ends:[[144.828872,-37.659791],[144.854423,-37.663381]],era:'both',plain:'east-west runway'},
+        {key:'main',refs:['16','34'],futureRefs:['16L','34R'],ends:[[144.835007,-37.653198],[144.841003,-37.685799]],era:'both',plain:'main runway'},
+        {key:'cross',refs:['09','27'],ends:[[144.822006,-37.660801],[144.848007,-37.6623]],era:'both',plain:'east-west runway'},
         // Third runway: placed from Melbourne Airport's published figures (1.311 km west of the main runway, 3 km long)
-        {key:'new',refs:['16R','34L'],ends:[[144.814898,-37.655473],[144.820811,-37.682192]],era:'future',plain:'new third runway'}
+        {key:'new',refs:['16R','34L'],ends:[[144.82084,-37.65786],[144.82588,-37.68454]],era:'future',plain:'new third runway'}
       ]},
     {icao:'YMEN',name:'Essendon Fields Airport',label:'Essendon Fields Airport',short:'Essendon Fields',chip:'Essendon Fields',lng:144.902,lat:-37.728,main:false,toggle:true,ac:'turbo',arrKm:14,depKm:12,era:'both',
       // Approximate ends; replaced by OpenStreetMap runway geometry when it loads
       runways:[
-        {key:'ymen-17',refs:['17','35'],ends:[[144.9036,-37.7179],[144.9030,-37.7352]],era:'both',plain:'runway 17/35'},
-        {key:'ymen-08',refs:['08','26'],ends:[[144.8905,-37.7302],[144.9075,-37.7307]],era:'both',plain:'runway 08/26'}
+        {key:'ymen-17',refs:['17','35'],ends:[[144.900758,-37.720416],[144.901406,-37.733943]],era:'both',plain:'runway 17/35'},
+        {key:'ymen-08',refs:['08','26'],ends:[[144.892877,-37.731391],[144.91466,-37.730792]],era:'both',plain:'runway 08/26'}
       ],
-      nearNote:{km:5,text:"About {d} km from Essendon Fields Airport. Its traffic is mostly business jets, turboprops and air ambulance, with far fewer flights than Tullamarine."}},
+      nearNote:{km:5,text:"About {d} km from Essendon Fields Airport. Its traffic is mostly business jets, turboprops and air ambulance, with far fewer flights than Tullamarine. It has a curfew from 11pm to 6am (emergency flights excepted)."}},
     {icao:'YMAV',name:'Avalon Airport',label:'Avalon Airport',short:'Avalon',chip:'Avalon',lng:144.469,lat:-38.039,main:false,toggle:true,ac:null,arrKm:26,depKm:22,era:'both',
       runways:[
-        {key:'ymav-18',refs:['18','36'],ends:[[144.4719,-38.0259],[144.4661,-38.0529]],era:'both',plain:'runway 18/36'}
+        {key:'ymav-18',refs:['18','36'],ends:[[144.469419,-38.027237],[144.464827,-38.054413]],era:'both',plain:'runway 18/36'}
       ]},
     {icao:'YMPC',name:'RAAF Base Williams, Point Cook',label:'RAAF Base Williams, Point Cook',short:'Point Cook',lng:144.753,lat:-37.932,main:false,toggle:false,noModel:true,era:'both',runways:[],
       nearNote:{km:4,text:"About {d} km from RAAF Base Williams at Point Cook. Expect some light aircraft and helicopters there, which aren't in this estimate."}}

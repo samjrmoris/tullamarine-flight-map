@@ -165,7 +165,7 @@
    {
     "kind": "rail",
     "name": "Cross River Rail",
-    "status": "Under construction; services expected to start in 2029 (after testing)",
+    "status": "Under construction; services expected to start by 2029 (after testing)",
     "about": "New 10.2 km line with 5.9 km twin tunnels under the Brisbane River and CBD, from Dutton Park to Bowen Hills, with new underground stations at Boggo Road, Woolloongabba, Albert Street and Roma Street. It also rebuilds eight southside stations (Salisbury to Dutton Park) and adds Gold Coast line stations at Pimpama, Hope Island and Merrimac.",
     "url": "https://crossriverrail.qld.gov.au/about/project-overview/",
     "cert": "approx",
@@ -179,24 +179,24 @@
       -27.4934
      ],
      [
-      153.035,
-      -27.486
+      153.03413,
+      -27.48522
      ],
      [
-      153.027478,
-      -27.471861
+      153.02748,
+      -27.47186
      ],
      [
       153.0191,
       -27.4652
      ],
      [
-      153.0268,
-      -27.4526
+      153.03083,
+      -27.45022
      ],
      [
-      153.0386,
-      -27.4432
+      153.0376,
+      -27.4454
      ]
     ],
     "note": "Dutton Park, Boggo Road, Albert Street and Roma Street points from station coordinates (Wikipedia); Woolloongabba, Exhibition and Bowen Hills points approximate."
@@ -204,46 +204,46 @@
    {
     "kind": "rail",
     "name": "Logan and Gold Coast Faster Rail (Kuraby to Beenleigh)",
-    "status": "Under construction (main rail works started 2026; Kuraby station works underway, Loganlea relocation due 2027; full completion date not published)",
+    "status": "Under construction (major works contract awarded to the ActivUs consortium; site works started 2026; completion date not published)",
     "about": "$5.75 billion project doubling the tracks from two to four along 20 km between Kuraby and Beenleigh, upgrading or relocating nine stations (Kuraby, Trinder Park, Woodridge, Kingston, Loganlea, Bethania, Edens Landing, Holmview, Beenleigh) and removing five level crossings. Means faster, more frequent Beenleigh and Gold Coast line trains, but more construction along the Logan rail corridor. Line points are approximate (station positions from general knowledge, not traced from official maps).",
     "url": "https://www.tmr.qld.gov.au/projects/programs/logan-and-gold-coast-faster-rail",
     "cert": "approx",
     "line": [
      [
-      153.0936,
-      -27.6069
+      153.0912,
+      -27.6048
      ],
      [
-      153.102,
-      -27.625
+      153.0978,
+      -27.6318
      ],
      [
-      153.1087,
-      -27.6317
+      153.1038,
+      -27.6381
      ],
      [
-      153.115,
-      -27.66
+      153.1183,
+      -27.6573
      ],
      [
-      153.135,
-      -27.673
+      153.1379,
+      -27.6708
      ],
      [
-      153.156,
-      -27.688
+      153.1585,
+      -27.6884
      ],
      [
-      153.169,
-      -27.704
+      153.1707,
+      -27.6982
      ],
      [
-      153.172,
-      -27.716
+      153.1875,
+      -27.7095
      ],
      [
-      153.199,
-      -27.7137
+      153.20444,
+      -27.71743
      ]
     ]
    },
@@ -376,26 +376,26 @@
     "Expanded interchange with new underground Cross River Rail platforms (2029)"
    ],
    [
-    153.0268,
-    -27.4526,
+    153.03083,
+    -27.45022,
     "Exhibition",
     "Upgraded for all-day Cross River Rail services (position approximate)"
    ],
    [
-    153.0936,
-    -27.6069,
+    153.0912,
+    -27.6048,
     "Kuraby",
     "Northern end of the Logan track duplication; station rebuild under way (position approximate)"
    ],
    [
-    153.135,
-    -27.673,
+    153.1379,
+    -27.6708,
     "Loganlea",
     "Station being relocated with 400 new car parks, due 2027 (position approximate)"
    ],
    [
-    153.199,
-    -27.7137,
+    153.20444,
+    -27.71743,
     "Beenleigh",
     "Southern end of Logan and Gold Coast Faster Rail; station upgrade (position approximate)"
    ]
@@ -406,77 +406,121 @@
     "NEXTDC",
     "20 Wharf Street, Brisbane City QLD",
     "live",
-    "2.25 MW"
+    "2.25 MW",
+    [
+     153.02965,
+     -27.46553
+    ]
    ],
    [
     "NEXTDC B2",
     "NEXTDC",
     "454 St Pauls Terrace, Fortitude Valley QLD",
     "live",
-    "Brisbane's largest colocation site"
+    "Brisbane's largest colocation site",
+    [
+     153.03318,
+     -27.45379
+    ]
    ],
    [
     "NEXTDC B2 expansion / HQ",
     "NEXTDC",
-    "St Pauls Terrace, Fortitude Valley QLD",
+    "454 St Pauls Terrace plus 51, 57 and 61 Misterton Street and 216 Constance Street, Fortitude Valley QLD",
     "plan",
-    "Development application for HQ and data centre expansion next to B2; exact lot not confirmed"
+    "Approved; being built by Multiplex, completion about early 2027",
+    [
+     153.03255,
+     -27.45342
+    ]
    ],
    [
     "Equinix BR1",
     "Equinix",
     "54-58 Alfred Street, Fortitude Valley QLD",
     "live",
-    "Formerly Metronode Brisbane 1"
+    "Formerly Metronode Brisbane 1",
+    [
+     153.03395,
+     -27.45531
+    ]
    ],
    [
     "Brennan Brisbane",
     "Brennan",
     "73 Amelia Street, Fortitude Valley QLD",
     "live",
-    ""
+    "",
+    [
+     153.03054,
+     -27.45432
+    ]
    ],
    [
-    "5G Networks Brisbane",
+    "5G Networks Brisbane Data Centre (BDC)",
     "5G Networks",
     "148 Brunswick Street, Fortitude Valley QLD",
     "live",
-    ""
+    "",
+    [
+     153.03148,
+     -27.45537
+    ]
    ],
    [
     "Datacom Brisbane",
     "Datacom",
     "501 Ann Street, Fortitude Valley QLD",
     "live",
-    ""
+    "",
+    [
+     153.03217,
+     -27.46172
+    ]
    ],
    [
     "Vocus Brisbane",
     "Vocus",
-    "123 Eagle Street, Brisbane City QLD",
+    "123 Eagle Street, Level 8, Brisbane City QLD 4000 (Riverside Centre)",
     "live",
-    "Level 8"
+    "A telecom room on level 8 of the Riverside Centre office tower; directories disagree on whether Vocus or TPG Telecom runs it",
+    [
+     153.03041,
+     -27.46716
+    ]
    ],
    [
     "Servers Australia Brisbane B1",
     "Servers Australia",
     "14 Finchley Street, Milton QLD",
     "live",
-    ""
+    "",
+    [
+     153.00611,
+     -27.46573
+    ]
    ],
    [
     "DigiCo BNE1 (ex iseek Brisbane Airport)",
     "DigiCo",
     "2 Cycas Lane, Brisbane Airport QLD",
     "live",
-    "1.8 MW"
+    "1.8 MW",
+    [
+     153.09146,
+     -27.41583
+    ]
    ],
    [
-    "iseek / DigiCo Brisbane Airport stage 2",
+    "DigiCo BNE2",
     "DigiCo",
-    "2 Cycas Lane, Brisbane Airport QLD",
-    "plan",
-    "Expansion of the airport campus; status not confirmed"
+    "4 Cycas Lane, Brisbane Airport QLD 4008",
+    "live",
+    "Built and operating (about 1.7 MW installed)",
+    [
+     153.09217,
+     -27.4166
+    ]
    ],
    [
     "DigiCo Brisbane BNE (ex iseek Woolloongabba)",
@@ -490,35 +534,58 @@
     "Interactive",
     "19 McKechnie Drive, Eight Mile Plains QLD",
     "live",
-    ""
+    "",
+    [
+     153.09578,
+     -27.57777
+    ]
    ],
    [
     "Fujitsu Brisbane",
     "Fujitsu",
-    "Eight Mile Plains QLD",
+    "7 Brandl Street, Eight Mile Plains QLD 4113 (Brisbane Technology Park)",
     "live",
-    "2 MW; street address not public - suburb only"
+    "2 MW; street address not public - suburb only",
+    [
+     153.09755,
+     -27.582
+    ]
    ],
    [
     "DSColo Kenmore",
     "Digital Sense",
-    "Kenmore QLD",
+    "Unit 6, 2060 Moggill Road, Kenmore QLD 4069",
     "live",
-    "Street address not confirmed - suburb only"
+    "Street address not confirmed - suburb only",
+    [
+     152.93846,
+     -27.50977
+    ]
    ],
    [
     "Polaris Data Centre",
     "Polaris (Oper8@Polaris)",
     "11 Mary Mackenroth Lane, Springfield Central QLD",
     "live",
-    "Tier III, government and enterprise tenants"
+    "Tier III, government and enterprise tenants",
+    [
+     152.8987,
+     -27.68167
+    ]
    ],
    [
     "Swanbank data centre proposal",
     "(developer not confirmed)",
-    "Swanbank, Ipswich QLD",
+    "6 Leaf Street, Swanbank QLD 4306",
     "plan",
-    "Proposed 10-storey data centre in the Swanbank industrial precinct; suburb only"
+    "Ipswich City Council application 2285/2026/MCU, lodged 4 Aug 2026, still being assessed"
+   ],
+   [
+    "DigiCo BNE4",
+    "DigiCo Infrastructure REIT",
+    "Cycas Lane, Brisbane Airport QLD 4008",
+    "plan",
+    "Planned next to BNE2, about 19.6 MW, completion estimated 2027 (exact site not published; placed on Cycas Lane)"
    ]
   ],
   "market": {
@@ -526,7 +593,7 @@
    "url": "https://discover.cotality.com/hubfs/Article-Reports/COTALITY%20HVI%20SEP%202026%20FINAL%20(1).pdf",
    "month": "2026-08"
   },
-  "tallBuilding": "Brisbane Skytower (222 Margaret St, the city's tallest building) is about 270 m tall",
+  "tallBuilding": "Brisbane Skytower is about 274 m tall (222 Margaret St, the city's tallest building)",
   "defaultHome": {
    "title": "Kenmore",
    "lng": 152.938,

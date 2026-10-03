@@ -90,12 +90,12 @@
       ],
       "ends": [
        [
-        150.701,
-        -33.89917
+        150.695734,
+        -33.891846
        ],
        [
-        150.73567,
-        -33.8825
+        150.73025,
+        -33.875042
        ]
       ],
       "plain": "single 3.7 km runway (future 05L/23R)",
@@ -357,7 +357,7 @@
    {
     "kind": "rail",
     "name": "Sydney Metro City & Southwest – Sydenham to Bankstown conversion",
-    "status": "Testing complete; first passenger services targeted for October 2026 (awaiting safety accreditation)",
+    "status": "Trial running since August 2026; official opening date not yet confirmed (second half of 2026)",
     "about": "The old T3 Bankstown line (closed since September 2024) is being turned into driverless metro, giving direct trains from Bankstown, Punchbowl, Lakemba, Campsie and Canterbury through the CBD to Chatswood and the north-west.",
     "url": "https://www.sydneymetro.info/citysouthwest/sydenham-bankstown",
     "cert": "route",
@@ -495,7 +495,7 @@
    {
     "kind": "road",
     "name": "M6 Motorway Stage 1",
-    "status": "Under construction but stalled; no official opening date (third sinkhole Aug 2026)",
+    "status": "Under construction; tunnelling resumed mid-2026 after the 2024 sinkholes; no confirmed opening date",
     "about": "4 km twin tunnels from the M8 at Arncliffe to President Avenue, Kogarah, taking trucks off the Princes Highway. Future stages further south are on hold.",
     "url": "https://www.transport.nsw.gov.au/projects/current-projects/m6-stage-1",
     "cert": "approx",
@@ -559,8 +559,8 @@
    {
     "kind": "road",
     "name": "Fifteenth Avenue upgrade (Liverpool–Bradfield transit corridor)",
-    "status": "Planning; construction from end of 2026, finish by 2031",
-    "about": "$1.4b upgrade of Fifteenth Avenue and Cowpasture Road with dedicated bus lanes between Liverpool/the M7 and Austral, with a future extension west to Bradfield City Centre.",
+    "status": "Planning and approval; early works from end of 2026, main construction from about June 2027, finish about June 2031",
+    "about": "$1.4b upgrade of 8.1 km of Fifteenth Avenue and Cowpasture Road with dedicated bus lanes between Liverpool/the M7 and Austral. The extension west to Bradfield City Centre is a future idea only.",
     "url": "https://www.transport.nsw.gov.au/projects/current-projects/fifteenth-avenue-upgrade",
     "cert": "approx",
     "line": [
@@ -616,9 +616,9 @@
     "kind": "road",
     "name": "Outer Sydney Orbital (corridor)",
     "status": "Corridor only (stage 1 corridor identified); no construction date",
-    "about": "Future motorway and freight rail corridor running north-south west of the airport, from the Hume Motorway near Menangle through Luddenham and Orchard Hills towards Box Hill/Vineyard.",
-    "url": "https://www.transport.nsw.gov.au/corridors/outer-sydney-orbital",
-    "cert": "approx",
+    "about": "Future motorway and freight rail corridor running north-south west of the airport, from the Hume Motorway near Menangle through Luddenham and Orchard Hills to Marsden Park.",
+    "url": "https://www.transport.nsw.gov.au/corridors/oso",
+    "cert": "concept",
     "line": [
      [
       150.74,
@@ -715,14 +715,22 @@
     "Digital Realty",
     "1-12 Templar Road, Erskine Park NSW",
     "live",
-    ""
+    "",
+    [
+     150.79585,
+     -33.81622
+    ]
    ],
    [
     "Digital Realty SYD11",
     "Digital Realty",
     "13-23 Templar Road, Erskine Park NSW",
     "live",
-    ""
+    "",
+    [
+     150.79547,
+     -33.81713
+    ]
    ],
    [
     "Digital Realty SYD14",
@@ -734,9 +742,9 @@
    [
     "Digital Realty SYD13",
     "Digital Realty",
-    "23-25 Waterloo Road, North Ryde NSW",
+    "23-25 Waterloo Road, North Ryde",
     "live",
-    ""
+    "Operating; Digital Realty announced in March 2026 that it will demolish and rebuild it as a larger 70 MW building"
    ],
    [
     "Rackspace Sydney",
@@ -757,56 +765,80 @@
     "NEXTDC",
     "4 Eden Park Drive, Macquarie Park NSW",
     "live",
-    ""
+    "",
+    [
+     151.13148,
+     -33.78521
+    ]
    ],
    [
     "NEXTDC S2",
     "NEXTDC",
     "6-8 Giffnock Avenue, Macquarie Park NSW",
     "live",
-    ""
+    "",
+    [
+     151.12527,
+     -33.78516
+    ]
    ],
    [
     "NEXTDC S3",
     "NEXTDC",
     "2 Broadcast Way, Artarmon NSW",
     "live",
-    ""
+    "",
+    [
+     151.18457,
+     -33.81908
+    ]
    ],
    [
     "NEXTDC S6",
     "NEXTDC",
     "3 Broadcast Way, Artarmon NSW",
     "live",
-    ""
+    "",
+    [
+     151.186,
+     -33.81948
+    ]
    ],
    [
     "NEXTDC S4",
     "NEXTDC",
-    "3-5 Johnston Crescent, Horsley Park NSW",
+    "16 Johnston Crescent, Horsley Park",
     "plan",
-    "Large campus under construction"
+    "Under construction since March 2026, completion mid-2027"
    ],
    [
     "NEXTDC S5",
     "NEXTDC",
-    "Macquarie Park NSW",
+    "269 Lane Cove Road, Macquarie Park",
     "plan",
-    "Exact street address not public; suburb only"
+    "60 MW+, Tier IV",
+    [
+     151.12807,
+     -33.78645
+    ]
    ],
    [
     "NEXTDC S7 (with OpenAI)",
     "NEXTDC",
-    "Eastern Creek NSW",
+    "Lot 13 Honeycomb Drive, Eastern Creek",
     "plan",
-    "Hyperscale AI campus; exact site not public, suburb only"
+    "Site bought 2024; up to 550 MW planned"
    ],
    [
     "DigiCo SYD1 (former Global Switch)",
     "DigiCo",
     "400 Harris Street, Ultimo NSW",
     "live",
-    "East building at 273 Pyrmont St"
+    "East building at 273 Pyrmont St",
+    [
+     151.19777,
+     -33.87574
+    ]
    ],
    [
     "DigiCo SYD2",
@@ -834,40 +866,60 @@
     "Equinix",
     "639 Gardeners Road, Mascot NSW",
     "live",
-    ""
+    "",
+    [
+     151.18813,
+     -33.92155
+    ]
    ],
    [
     "Summit Sydney",
     "Summit",
     "639 Gardeners Road, Mascot NSW",
     "live",
-    ""
+    "",
+    [
+     151.18813,
+     -33.92155
+    ]
    ],
    [
     "Equinix SY3",
     "Equinix",
     "47 Bourke Road, Alexandria NSW",
     "live",
-    ""
+    "",
+    [
+     151.19281,
+     -33.91169
+    ]
    ],
    [
     "Equinix SY4/SY5",
     "Equinix",
     "200 Bourke Road, Alexandria NSW",
     "live",
-    ""
+    "",
+    [
+     151.18998,
+     -33.91934
+    ]
    ],
    [
     "Equinix SY6",
     "Equinix",
     "8-14 Egerton Street, Silverwater NSW",
     "live",
-    ""
+    "",
+    [
+     151.05328,
+     -33.83668
+    ]
    ],
    [
     "Equinix SY9x",
     "Equinix",
-    "8A Grand Avenue, Rosehill NSW",
+    "8 Grand Avenue, Rosehill",
     "live",
     ""
    ],
@@ -883,14 +935,22 @@
     "Macquarie Data Centres",
     "477 Pitt Street, Sydney NSW",
     "live",
-    ""
+    "",
+    [
+     151.20622,
+     -33.88043
+    ]
    ],
    [
     "Macquarie IC2/IC3",
     "Macquarie Data Centres",
     "17-23 Talavera Road, Macquarie Park NSW",
     "live",
-    "IC3 Super West expansion"
+    "IC3 Super West expansion",
+    [
+     151.12686,
+     -33.78096
+    ]
    ],
    [
     "Goodman Macquarie Park",
@@ -904,84 +964,128 @@
     "EdgeConneX",
     "1-5 Khartoum Road, Macquarie Park NSW",
     "plan",
-    ""
+    "",
+    [
+     151.12514,
+     -33.78103
+    ]
    ],
    [
     "AWS Khartoum Road",
     "Amazon Web Services",
-    "11-17 Khartoum Road, Macquarie Park NSW",
+    "11-17 Khartoum Road, Macquarie Park",
     "plan",
-    ""
+    "Stockland MPark Stage 1; sources disagree on whether it is operating yet",
+    [
+     151.12563,
+     -33.77934
+    ]
    ],
    [
     "Julius Avenue Data Centre",
     "ISPT",
-    "6-8 Julius Avenue, North Ryde NSW",
+    "6-8 Julius Avenue, North Ryde",
     "plan",
-    ""
+    "State Significant Development application still being assessed (170 MW); not approved",
+    [
+     151.14319,
+     -33.79861
+    ]
    ],
    [
     "Unisys Rhodes",
     "Unisys",
     "1G Homebush Bay Drive, Rhodes NSW",
     "live",
-    ""
+    "",
+    [
+     151.08725,
+     -33.83542
+    ]
    ],
    [
-    "Fujitsu Homebush",
-    "Fujitsu",
-    "Sydney Olympic Park NSW",
+    "Homebush data centre (formerly Fujitsu)",
+    "Next Capital (bought Fujitsu's Australian business, reported July 2026)",
+    "4 Figtree Drive, Sydney Olympic Park",
     "live",
-    "Suburb only"
+    "Suburb only",
+    [
+     151.07164,
+     -33.84981
+    ]
    ],
    [
-    "Fujitsu Western Sydney",
-    "Fujitsu",
+    "Western Sydney data centre, Greystanes (formerly Fujitsu)",
+    "Next Capital (bought Fujitsu's Australian business, reported July 2026)",
     "Greystanes NSW",
     "live",
     "Suburb only"
    ],
    [
-    "Vocus Baulkham Hills",
+    "Vocus Norwest (SYD02)",
     "Vocus",
-    "12 Brookhollow Avenue, Norwest NSW",
+    "12 Brookhollow Avenue, Norwest",
     "live",
-    ""
+    "",
+    [
+     150.96986,
+     -33.73369
+    ]
    ],
    [
     "GreenSquareDC SYD1",
     "GreenSquareDC",
     "3 Brookhollow Avenue, Norwest NSW",
     "live",
-    "Second building planned"
+    "Second building planned",
+    [
+     150.96742,
+     -33.73242
+    ]
    ],
    [
     "Vocus Haymarket",
     "Vocus",
     "187 Thomas Street, Haymarket NSW",
     "live",
-    ""
+    "",
+    [
+     151.2037,
+     -33.88154
+    ]
    ],
    [
     "Vocus Glebe",
     "Vocus",
     "30 Ross Street, Glebe NSW",
     "live",
-    ""
+    "",
+    [
+     151.18267,
+     -33.8832
+    ]
    ],
    [
     "Vocus SYD04",
     "Vocus",
     "74 Mentmore Avenue, Rosebery NSW",
     "live",
-    ""
+    "",
+    [
+     151.20258,
+     -33.91951
+    ]
    ],
    [
     "5G Networks Sydney",
     "5G Networks",
     "55 Pyrmont Bridge Road, Pyrmont NSW",
     "live",
-    ""
+    "",
+    [
+     151.19464,
+     -33.87241
+    ]
    ],
    [
     "Telstra St Leonards",
@@ -995,14 +1099,22 @@
     "Various",
     "39 Herbert Street, St Leonards NSW",
     "live",
-    ""
+    "",
+    [
+     151.19217,
+     -33.81659
+    ]
    ],
    [
     "12 Frederick Street",
     "Gateway Capital",
-    "12 Frederick Street, St Leonards NSW",
+    "12 Frederick Street, St Leonards NSW 2065",
     "plan",
-    ""
+    "Early planning only (scoping report, 81 MW)",
+    [
+     151.18961,
+     -33.8188
+    ]
    ],
    [
     "Telstra Sydney (Pitt/Liverpool St exchange)",
@@ -1014,9 +1126,13 @@
    [
     "Telstra Chippendale",
     "Telstra InfraCo",
-    "184-200 Broadway, Chippendale NSW",
+    "184-200 Broadway, Chippendale NSW 2008",
     "live",
-    ""
+    "",
+    [
+     151.19547,
+     -33.88478
+    ]
    ],
    [
     "Amaze DataHaven",
@@ -1028,16 +1144,24 @@
    [
     "22 O'Riordan Street",
     "Markham Real Estate Partners",
-    "22 O'Riordan Street, Alexandria NSW",
+    "22 O'Riordan Street, Alexandria NSW 2015",
     "plan",
-    ""
+    "Early planning only (SEARs request, 38 MW)",
+    [
+     151.20126,
+     -33.90806
+    ]
    ],
    [
     "AirTrunk SYD1",
     "AirTrunk",
     "35 Huntingwood Drive, Huntingwood NSW",
     "live",
-    "Address from Datacom@AirTrunk listing"
+    "Address from Datacom@AirTrunk listing",
+    [
+     150.88182,
+     -33.79936
+    ]
    ],
    [
     "AirTrunk SYD3",
@@ -1049,23 +1173,16 @@
    [
     "AirTrunk SYD2",
     "AirTrunk",
-    "Lane Cove West NSW",
+    "1 Sirius Road, Lane Cove West NSW 2066",
     "live",
     "Suburb only"
    ],
    [
-    "Goodman Project Mars",
-    "Goodman",
-    "12 Mars Road, Lane Cove West NSW",
-    "plan",
-    ""
-   ],
-   [
     "AirTrunk Kemps Creek",
     "AirTrunk",
-    "Kemps Creek NSW",
+    "706-752 Mamre Road, Kemps Creek NSW 2178",
     "plan",
-    "Under construction; suburb only"
+    "Under construction on the former ISPT Mamre Road site"
    ],
    [
     "Microsoft Kemps Creek (SYD05-07)",
@@ -1093,21 +1210,29 @@
     "CDC Data Centres",
     "17 Roberts Road, Eastern Creek NSW",
     "live",
-    ""
+    "",
+    [
+     150.83922,
+     -33.81806
+    ]
    ],
    [
     "Goodman Project Atlas",
     "Goodman",
-    "10 Roberts Road, Eastern Creek NSW",
+    "10 Roberts Road, Eastern Creek NSW 2766",
     "plan",
-    ""
+    "State significant application SSD-101067971 still being assessed"
    ],
    [
     "CDC Marsden Park",
     "CDC Data Centres",
-    "105-113 Hollinsworth Road, Marsden Park NSW",
-    "live",
-    "Very large (500 MW) campus still expanding"
+    "105-113 Hollinsworth Road, Marsden Park NSW 2765",
+    "plan",
+    "Approved November 2025 (504 MW, six buildings); under construction",
+    [
+     150.83658,
+     -33.7226
+    ]
    ],
    [
     "CDC Kemps Creek KC1",
@@ -1117,81 +1242,101 @@
     ""
    ],
    [
-    "ISPT Mamre Road campus",
-    "ISPT",
-    "706-752 Mamre Road, Kemps Creek NSW",
-    "plan",
-    "Six buildings proposed"
-   ],
-   [
     "Stockland Aldington Road",
     "Stockland",
-    "90 Aldington Road, Kemps Creek NSW",
+    "90 Aldington Road, Kemps Creek NSW 2178",
     "plan",
-    ""
+    "Early planning only (SEARs request, 168 MW)"
    ],
    [
-    "Stockland Davis Road",
-    "Stockland",
-    "2 Davis Road, Wetherill Park NSW",
+    "Davis Road data centre (Stockland / EdgeConneX)",
+    "Stockland and EdgeConneX joint venture",
+    "2 Davis Road, Wetherill Park NSW 2164",
     "plan",
     "Under construction"
    ],
    [
-    "EdgeConneX Wetherill Park",
-    "EdgeConneX",
-    "Wetherill Park NSW",
-    "plan",
-    "Under construction; suburb only"
-   ],
-   [
     "AWS Glendenning",
     "Amazon Web Services",
-    "2 Glendenning Road, Glendenning NSW",
-    "live",
-    ""
+    "2 Glendenning Road, Glendenning NSW 2761",
+    "plan",
+    "Approved 18 September 2026 (three buildings, 193.6 MW)"
    ],
    [
     "AWS Eastern Creek (William Dean St)",
     "Amazon Web Services",
     "1 William Dean Street, Eastern Creek NSW",
     "live",
-    ""
+    "",
+    [
+     150.86948,
+     -33.79474
+    ]
    ],
    [
     "AWS Eastern Creek Drive",
     "Amazon Web Services",
     "10 Eastern Creek Drive, Eastern Creek NSW",
     "live",
-    ""
+    "",
+    [
+     150.83904,
+     -33.80956
+    ]
    ],
    [
     "AWS Smeaton Grange",
     "Amazon Web Services",
-    "Bluett Drive, Smeaton Grange NSW",
+    "42A Bluett Drive, Smeaton Grange NSW 2567",
     "live",
-    "Street-level only (Bluett Dr/Turner Rd)"
+    "Street-level only (Bluett Dr/Turner Rd)",
+    [
+     150.76589,
+     -34.03575
+    ]
    ],
    [
     "DCI SYD01",
     "DCI Data Centers",
     "90 Peter Brock Drive, Eastern Creek NSW",
     "live",
-    "SYD02/SYD03 planned nearby"
+    "SYD02/SYD03 planned nearby",
+    [
+     150.8865,
+     -33.80498
+    ]
    ],
    [
     "Goodman Project Pluto",
     "Goodman",
-    "132 McCredie Road, Guildford NSW",
+    "132 McCredie Road, Guildford West NSW 2161",
     "plan",
-    ""
+    "Approved, 68 MW, on the former Castrol site"
    ],
    [
     "Telstra/Doma Minchinbury",
     "Doma / Telstra InfraCo",
     "Minchinbury NSW",
     "plan",
-    "Under construction; suburb only"
+    "Approved, 62 MW; ready for service early 2028"
+   ],
+   [
+    "Goodman Project Duke",
+    "Goodman",
+    "2 & 10-22 Kent Road, Mascot NSW 2020",
+    "plan",
+    ""
+   ],
+   [
+    "Vocus SYD01",
+    "Vocus",
+    "59 Doody Street, Alexandria NSW 2015",
+    "live",
+    "",
+    [
+     151.19316,
+     -33.915
+    ]
    ]
   ],
   "market": {

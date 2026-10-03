@@ -13,7 +13,7 @@ CONF = {
  'nsw': dict(sub=['nsw_a.json', 'nsw_b.json'], infra=('nsw_infra.json', 'nsw'), bbox=[-34.12, 150.62, -33.62, 151.28],
    stateAdj='NSW', suffix=', New South Wales', slug='nsw',
    title='Sydney Flight Path Map', lede="See how much plane noise any street in Sydney gets, today and once Western Sydney International Airport starts passenger flights. You can also see train lines, motorways and data centres, existing and planned.",
-   airports={'YSSY': dict(chip='Sydney (Mascot)'),
+   airports={'YSSY': dict(chip='Sydney (Mascot)', fans={'34L': [-40, 0], '34R': [0, 40], '16R': [0], '16L': [0]}),
              'YSWS': dict(model='jets', chip='Western Sydney (Badgerys Creek)', short='Western Sydney Airport', label='Western Sydney International', era='future', dropRefs=['05R'], depKm=22),
              'YSBK': dict(model='none', near=(4, "About {d} km from Bankstown Airport, a busy training and light-aircraft airport. Small planes and helicopters circle here most days, and they aren't in this estimate.")),
              'YSCN': dict(model='none', near=(4, "About {d} km from Camden Airport, used by light aircraft and gliders. They aren't in this estimate.")),
@@ -26,7 +26,7 @@ CONF = {
  'qld': dict(sub=['qld.json'], infra=('qld_infra.json', 'qld'), bbox=[-27.72, 152.85, -27.05, 153.3],
    stateAdj='Queensland', suffix=', Queensland', slug='qld',
    title='Brisbane Flight Path Map', lede="See how much plane noise any street in Brisbane gets from both of Brisbane Airport's parallel runways. You can also see train lines, motorways and data centres, existing and planned.",
-   airports={'YBBN': dict(chip='Brisbane Airport'),
+   airports={'YBBN': dict(chip='Brisbane Airport', arrKm=22, fans={'19R': [0, 40], '19L': [-60, 0, 40], '01L': [-30, 0], '01R': [0, 40]}),
              'YBAF': dict(model='none', near=(4, "About {d} km from Archerfield Airport, a busy training and light-aircraft airport. Small planes and helicopters circle here most days, and they aren't in this estimate.")),
              'YAMB': dict(model='none', near=(12, "About {d} km from RAAF Base Amberley. Super Hornet and Growler fighter jets fly from here and are much louder than airliners when they pass. They aren't in this estimate."))},
    future=None, railPlanSub='Cross River Rail, faster rail to the Gold and Sunshine Coasts', roadPlanSub='Coomera Connector, Bruce Highway upgrade',
@@ -35,7 +35,7 @@ CONF = {
  'wa': dict(sub=['wa.json'], infra=('wa_infra.json', 'wa'), bbox=[-32.36, 115.72, -31.6, 116.12],
    stateAdj='WA', suffix=', Western Australia', slug='wa',
    title='Perth Flight Path Map', lede="See how much plane noise any street in Perth gets, today and once Perth Airport's new parallel runway opens. You can also see train lines, highways and data centres, existing and planned.",
-   airports={'YPPH': dict(chip='Perth Airport', futureRefs={'03': ['03L', '21R']}),
+   airports={'YPPH': dict(chip='Perth Airport', fans={'21': [-90, 0, 85], '03': [-90, 0, 70], '06': [-45, 0, 25], '24': [-45, 0]}, futureRefs={'03': ['03L', '21R']}),
              'YPJT': dict(model='none', near=(5, "About {d} km from Jandakot Airport, one of Australia's busiest pilot-training airports. Small planes circle overhead most of the day, and they aren't in this estimate.")),
              'YPEA': dict(model='none', near=(10, "About {d} km from RAAF Base Pearce, where Air Force pilots train in PC-21 and Hawk jets. They aren't in this estimate."))},
    future=dict(label="After the new runway opens (2028)", short='After 2028', mode='After 2028, new parallel runway', legend='New runway paths (2028)'),
@@ -44,7 +44,7 @@ CONF = {
  'sa': dict(sub=['sa.json'], infra=('sa_infra.json', 'sa'), bbox=[-35.3, 138.45, -34.58, 138.9],
    stateAdj='SA', suffix=', South Australia', slug='sa',
    title='Adelaide Flight Path Map', lede="See how much plane noise any street in Adelaide gets from Adelaide Airport. You can also see train lines, motorways and data centres, existing and planned.",
-   airports={'YPAD': dict(chip='Adelaide Airport'),
+   airports={'YPAD': dict(chip='Adelaide Airport', fans={'23': [-90, 0, 90], '05': [-70, -48, 0, 14]}),
              'YPPF': dict(model='none', near=(4, "About {d} km from Parafield Airport, a busy pilot-training airport. Small planes circle overhead most of the day, and they aren't in this estimate.")),
              'YPED': dict(model='none', near=(6, "About {d} km from RAAF Base Edinburgh, home of the Air Force's P-8 maritime patrol jets. They aren't in this estimate."))},
    future=None, railPlanSub='Aldinga rail extension (corridor only)', roadPlanSub='North–South Corridor tunnels (T2D), South Eastern Freeway',
@@ -131,6 +131,10 @@ def build(rid):
                  'era': 'future' if era_all == 'future' else (r.get('era') or 'both'), 'plain': r.get('plain') or f"runway {r['refs'][0]}/{r['refs'][1]}"}
             if futureRefs and r['refs'][0] in futureRefs:
                 o['futureRefs'] = futureRefs[r['refs'][0]]
+            # CONF 'fans': {runway number: departure turns} from the flight-path audit; one list per runway end
+            f = ap_conf.get('fans') or {}
+            if any(x in f for x in r['refs']):
+                o['fans'] = [f.get(x) for x in r['refs']]
             out.append(o)
         return out
     mc = c['airports'][ma['icao']]
@@ -141,7 +145,7 @@ def build(rid):
         r['plain'] = r['plain'].replace('main (only) runway, north-west to south-east', 'runway')
         model_pts += r['ends']
     main = {'icao': ma['icao'], 'name': ma['name'].split(' / ')[0], 'label': ma['short'], 'short': ma['short'], 'chip': mc.get('chip', ma['short']),
-            'lng': lon0, 'lat': lat0, 'main': True, 'toggle': True, 'ac': None, 'arrKm': 26, 'depKm': None, 'fans': [-40, 0, 40], 'era': 'both',
+            'lng': lon0, 'lat': lat0, 'main': True, 'toggle': True, 'ac': None, 'arrKm': mc.get('arrKm', 26), 'depKm': None, 'fans': [-40, 0, 40], 'era': 'both',
             'fallbackRing': [[round(2.2 * math.cos(a / 12 * 2 * math.pi), 2), round(2.2 * math.sin(a / 12 * 2 * math.pi), 2)] for a in range(12)],
             'runways': mrw}
     if mc.get('near'):
@@ -157,7 +161,7 @@ def build(rid):
                 model_pts += r['ends']
             a = {'icao': o['icao'], 'name': o['name'].split(' (')[0], 'label': oc.get('label', o['name'].split(' (')[0]), 'short': oc.get('short', o['name']),
                  'chip': oc.get('chip', o['name']), 'lng': o['lng'], 'lat': o['lat'], 'main': False, 'toggle': True, 'ac': None,
-                 'arrKm': 26, 'depKm': oc.get('depKm', 22), 'era': oc.get('era', 'both'), 'runways': rws}
+                 'arrKm': oc.get('arrKm', 26), 'depKm': oc.get('depKm', 22), 'era': oc.get('era', 'both'), 'runways': rws}
         else:
             a = {'icao': o['icao'], 'name': o['name'], 'label': o['name'], 'short': o['name'], 'lng': o['lng'], 'lat': o['lat'],
                  'main': False, 'toggle': False, 'noModel': True, 'era': 'both', 'runways': []}
@@ -236,7 +240,7 @@ def build(rid):
     view = {'center': v['center'], 'zoom': round(v['zoom'] + 0.7, 1), 'pitch': 58, 'bearing': -20}
     top = {'center': v['center'], 'zoom': v['zoom']}
     dh = inf['defaultHome']
-    tb = inf['tallBuilding'].split(' (')[0].replace(' tall', '')
+    tb = re.sub(r' tall', '', inf['tallBuilding'].split(' (')[0])
     bb = c['bbox']
     geobox = f"{bb[1]-0.3},{bb[2]+0.3},{bb[3]+0.3},{bb[0]-0.3}"
     # ---------- notes ----------

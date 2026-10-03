@@ -1,0 +1,149 @@
+{
+ "id": "nt",
+ "checked": "2026-10-03",
+ "sections": "F,D,P,O",
+ "flightPaths": [
+  {
+   "airport": "YPDN",
+   "runwayEnd": "11/29/18/36",
+   "departs": "Not found: Airservices pages cover 2015/16 route changes without turn angles.",
+   "arrives": "Not found.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://engage.airservicesaustralia.com/2015-changes/news_feed/darwin-traffic-management",
+    "https://engage.airservicesaustralia.com/2016-changes/news_feed/darwin-arrivals-and-departures"
+   ],
+   "confidence": "low"
+  }
+ ],
+ "dataCentres": [
+  {
+   "name": "NEXTDC D1 Darwin",
+   "operator": "NEXTDC",
+   "address": "2 Harvey St, Darwin City NT 0800",
+   "status": "live",
+   "lnglat": [
+    130.84397,
+    -12.45629
+   ],
+   "coord_method": "Nominatim building match 'NEXTDC Darwin D1, 2 Harvey Street'",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/nextdc-launches-darwin-data-center-in-northern-australia",
+    "https://www.datacentermap.com/australia/darwin/nextdc-d1/"
+   ],
+   "verdict": "fix",
+   "changes": "Address VERIFIED. Opened Aug 2024. Search results say 7 MW (ours ~1 MW); drop 'verify'."
+  },
+  {
+   "name": "NEXTDC D2 Darwin",
+   "operator": "NEXTDC",
+   "address": "2-6 Ryko Ct, Darwin City (not re-verified)",
+   "status": "plan",
+   "lnglat": null,
+   "coord_method": "geocoder rate-limited",
+   "sources": [
+    "https://www.datacenterdynamics.com/en/news/australias-nextdc-tops-out-6mw-data-center-in-darwin/"
+   ],
+   "verdict": "ok",
+   "changes": "Topped out Mar 2026, ~6 MW, completion first half FY2027. Plan is fair."
+  },
+  {
+   "name": "DXN SDC Darwin",
+   "operator": "DXN",
+   "address": "27 Harvey St, Darwin NT 0800",
+   "status": "live",
+   "lnglat": [
+    130.84354,
+    -12.45728
+   ],
+   "coord_method": "Street only (no house number match)",
+   "sources": [
+    "https://datacentermap.com/australia/darwin/dxn-secure-data-centre"
+   ],
+   "verdict": "ok",
+   "changes": ""
+  },
+  {
+   "name": "Area9 Darwin",
+   "operator": "Area9",
+   "address": "20 Catterthun St, Winnellie NT 0820",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "not obtained",
+   "sources": [
+    "https://datacentermap.com/australia/darwin/area9-data-center"
+   ],
+   "verdict": "fix",
+   "changes": "Add address; suburb is Winnellie."
+  }
+ ],
+ "dataCentresMissing": [],
+ "plans": [
+  {
+   "name": "Roystonea Avenue duplication",
+   "verdict": "ok",
+   "status_now": "UNVERIFIED",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://dli.nt.gov.au/projects/roystonea-avenue-duplication"
+   ],
+   "note": "403 to script"
+  },
+  {
+   "name": "Tiger Brennan Drive",
+   "verdict": "ok",
+   "status_now": "UNVERIFIED; URL is a contractor page, not official",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://ancr.com.au/portfolio-item/tiger-brennan-drive-and-berrimah-road-overpass/"
+   ],
+   "note": "Prefer an official NT URL"
+  }
+ ],
+ "railHubs": [],
+ "other": [
+  {
+   "field": "tallBuilding",
+   "verdict": "fix",
+   "correct": "Typo in text: Darwin'sest towers. Tallest is Evolution on Gardiner 99 m, 33 storeys (2008); roughly 100 m fine.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Evolution_on_Gardiner"
+   ]
+  },
+  {
+   "field": "nearNote",
+   "verdict": "ok",
+   "correct": "Shared runway with RAAF Base Darwin confirmed; F-35 claim not verified",
+   "sources": [
+    "https://airforce.gov.au/about-us/bases/raaf-base-darwin"
+   ]
+  },
+  {
+   "field": "schools.zoneSite",
+   "verdict": "fix",
+   "correct": "nt.gov.au 403 to script (maybe bot block); consider a specific education.nt.gov.au URL",
+   "sources": [
+    "https://nt.gov.au"
+   ]
+  },
+  {
+   "field": "future",
+   "verdict": "ok",
+   "correct": "null",
+   "sources": []
+  }
+ ],
+ "unverified": [
+  "Darwin turn angles and arrival lengths",
+  "Plan statuses",
+  "D2 and Area9 coordinates"
+ ]
+}

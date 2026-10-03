@@ -1,0 +1,204 @@
+{
+ "id": "tas",
+ "checked": "2026-10-03",
+ "sections": "F,D,P,O",
+ "flightPaths": [
+  {
+   "airport": "YMHB",
+   "runwayEnd": "12",
+   "departs": "Depart south then turn north, jets crossing coast near Connellys Marsh (large turn); published SIDs. Exact degrees not stated.",
+   "arrives": "No special procedures; STAR. Straight-in distance not stated.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/07/hobart-airport-nap-1-preferred-flight-paths/",
+    "https://aircraftnoise.airservicesaustralia.com/tag/hobart/page/2/"
+   ],
+   "confidence": "low"
+  },
+  {
+   "airport": "YMHB",
+   "runwayEnd": "30",
+   "departs": "Depart north then turn near Bagdad (jets), Richmond (non-jets); SIDs. Degrees not stated.",
+   "arrives": "RNAV approach required before 08:00 and after 14:00; none 08:00-14:00.",
+   "fans_now": [
+    -40,
+    0,
+    40
+   ],
+   "fans_recommended": null,
+   "arrKm_recommended": null,
+   "sources": [
+    "https://aircraftnoise.airservicesaustralia.com/2025/08/07/hobart-airport-nap-1-preferred-flight-paths/"
+   ],
+   "confidence": "low"
+  }
+ ],
+ "dataCentres": [
+  {
+   "name": "TasmaNet DC1",
+   "operator": "TasmaNet",
+   "address": "Level 9, 1 Franklin Wharf, Hobart TAS 7000",
+   "status": "live",
+   "lnglat": [
+    147.33267,
+    -42.88348
+   ],
+   "coord_method": "Nominatim building match (Marine Board Building, 1 Franklin Wharf)",
+   "sources": [
+    "https://www.datacentermap.com/australia/hobart/tasma-dc1"
+   ],
+   "verdict": "fix",
+   "changes": "Add address 1 Franklin Wharf. Live per listing only."
+  },
+  {
+   "name": "DXN Tasmania One (DXN-TAS01, formerly TasmaNet DC3)",
+   "operator": "DXN",
+   "address": "40-50 Innovation Drive, Dowsings Point TAS 7010",
+   "status": "live",
+   "lnglat": null,
+   "coord_method": "Nominatim no result then rate-limited",
+   "sources": [
+    "https://itbrief.com.au/story/tasmanet-sells-hobart-data-centre-to-dxn",
+    "https://datacentermap.com/australia/hobart/tasma-dc2-3"
+   ],
+   "verdict": "fix",
+   "changes": "Add address 40-50 Innovation Drive, Dowsings Point; DXN bought DC3 Feb 2020, TasmaNet still manages."
+  }
+ ],
+ "dataCentresMissing": [],
+ "plans": [
+  {
+   "name": "Northern Suburbs Rapid Bus",
+   "verdict": "fix",
+   "status_now": "Strategic Business Case released 19 Feb 2026; Detailed Business Case next with community feedback. Close date 9 Oct 2026 NOT verified.",
+   "fix_points": null,
+   "cert": "concept",
+   "sources": [
+    "https://www.premier.tas.gov.au/latest-news/2026/february/greater-hobart-transport-solution-a-step-closer",
+    "https://engage.building.tas.gov.au/northern-suburbs-rapid-bus"
+   ],
+   "note": "cert probably concept (business-case stage). File URL 403 to scripts."
+  },
+  {
+   "name": "New Bridgewater Bridge",
+   "verdict": "ok",
+   "status_now": "Opened June 2025 UNVERIFIED by me",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://www.bridgewaterbridge.tas.gov.au/"
+   ],
+   "note": "Site 403 to script."
+  },
+  {
+   "name": "Southern Outlet transit lane",
+   "verdict": "ok",
+   "status_now": "UNVERIFIED",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://www.transport.tas.gov.au/roadworks/current_projects/south_road_projects/southern_outlet_transit_lane"
+   ],
+   "note": "403 to script."
+  },
+  {
+   "name": "Tasman Highway causeways duplication",
+   "verdict": "ok",
+   "status_now": "UNVERIFIED",
+   "fix_points": null,
+   "cert": "approx",
+   "sources": [
+    "https://www.transport.tas.gov.au/roadworks/current_projects/south_road_projects/south_east_traffic_solution/tasman_highway_between_airport_and_sorell"
+   ],
+   "note": "403 to script."
+  }
+ ],
+ "railHubs": [
+  {
+   "name": "Macquarie Point",
+   "verdict": "ok",
+   "lnglat": [
+    147.335,
+    -42.879
+   ],
+   "sources": [],
+   "note": "Coordinates not checked (geocoder blocked)"
+  },
+  {
+   "name": "Moonah",
+   "verdict": "ok",
+   "lnglat": [
+    147.299,
+    -42.847
+   ],
+   "sources": [],
+   "note": "Coordinates not checked (geocoder blocked)"
+  },
+  {
+   "name": "Glenorchy",
+   "verdict": "ok",
+   "lnglat": [
+    147.276,
+    -42.832
+   ],
+   "sources": [],
+   "note": "Coordinates not checked (geocoder blocked)"
+  },
+  {
+   "name": "Claremont",
+   "verdict": "ok",
+   "lnglat": [
+    147.253,
+    -42.788
+   ],
+   "sources": [],
+   "note": "Coordinates not checked (geocoder blocked)"
+  }
+ ],
+ "other": [
+  {
+   "field": "tallBuilding",
+   "verdict": "ok",
+   "correct": "Wrest Point Hotel Casino 73 m, 19 storeys, tallest in Tasmania",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wrest_Point_Hotel_Casino"
+   ]
+  },
+  {
+   "field": "future",
+   "verdict": "ok",
+   "correct": "null; runway 12/30 already extended to 2,751 m in 2018, no new runway found",
+   "sources": [
+    "https://australianaviation.com.au/2018/02/hobart-runway-extension-complete/"
+   ]
+  },
+  {
+   "field": "schools.zoneSite",
+   "verdict": "ok",
+   "correct": "www.decyp.tas.gov.au returns 200",
+   "sources": [
+    "https://www.decyp.tas.gov.au"
+   ]
+  },
+  {
+   "field": "YCBG nearNote",
+   "verdict": "ok",
+   "correct": "Not checked",
+   "sources": []
+  }
+ ],
+ "unverified": [
+  "Jet turn degrees YMHB 12/30",
+  "Hobart curfew (none found, absence not confirmed)",
+  "DXN DC3 coordinates",
+  "Rail hub coordinates",
+  "Official Tas plan URLs 403",
+  "Bridgewater Bridge opening date"
+ ]
+}

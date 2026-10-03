@@ -1,0 +1,2316 @@
+{
+ "vic": {
+  "runways": [
+   {
+    "airport": "YMML",
+    "refs": [
+     "16",
+     "34"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      144.829396,
+      -37.652715
+     ],
+     [
+      144.836604,
+      -37.685285
+     ]
+    ],
+    "osm": [
+     [
+      144.834914,
+      -37.6531944
+     ],
+     [
+      144.8409804,
+      -37.6857424
+     ]
+    ],
+    "osm_ref": "16/34",
+    "diff_osm_m": [
+     489,
+     388
+    ],
+    "ourairports": [
+     [
+      144.8350067138672,
+      -37.6531982421875
+     ],
+     [
+      144.84100341796875,
+      -37.68579864501953
+     ]
+    ],
+    "diff_oa_m": [
+     497,
+     391
+    ],
+    "verdict": "fix"
+   },
+   {
+    "airport": "YMML",
+    "refs": [
+     "09",
+     "27"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      144.828872,
+      -37.659791
+     ],
+     [
+      144.854423,
+      -37.663381
+     ]
+    ],
+    "osm": [
+     [
+      144.8222442,
+      -37.660767
+     ],
+     [
+      144.8480659,
+      -37.6622563
+     ]
+    ],
+    "osm_ref": "09/27",
+    "diff_osm_m": [
+     593,
+     573
+    ],
+    "ourairports": [
+     [
+      144.82200622558594,
+      -37.66080093383789
+     ],
+     [
+      144.84800720214844,
+      -37.66230010986328
+     ]
+    ],
+    "diff_oa_m": [
+     615,
+     577
+    ],
+    "verdict": "fix"
+   },
+   {
+    "airport": "YMML",
+    "refs": [
+     "16R",
+     "34L"
+    ],
+    "era": "future",
+    "ours": [
+     [
+      144.814898,
+      -37.655473
+     ],
+     [
+      144.820811,
+      -37.682192
+     ]
+    ],
+    "verdict": "future/no OSM"
+   },
+   {
+    "airport": "YMEN",
+    "refs": [
+     "17",
+     "35"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      144.9036,
+      -37.7179
+     ],
+     [
+      144.903,
+      -37.7352
+     ]
+    ],
+    "osm": [
+     [
+      144.9007301,
+      -37.7205109
+     ],
+     [
+      144.901364,
+      -37.733954
+     ]
+    ],
+    "osm_ref": "17/35",
+    "diff_osm_m": [
+     385,
+     200
+    ],
+    "ourairports": [
+     [
+      144.900758,
+      -37.720416
+     ],
+     [
+      144.901406,
+      -37.733943
+     ]
+    ],
+    "diff_oa_m": [
+     375,
+     198
+    ],
+    "verdict": "fix"
+   },
+   {
+    "airport": "YMEN",
+    "refs": [
+     "08",
+     "26"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      144.8905,
+      -37.7302
+     ],
+     [
+      144.9075,
+      -37.7307
+     ]
+    ],
+    "osm": [
+     [
+      144.892926,
+      -37.7313859
+     ],
+     [
+      144.9146378,
+      -37.7307992
+     ]
+    ],
+    "osm_ref": "08/26",
+    "diff_osm_m": [
+     251,
+     628
+    ],
+    "ourairports": [
+     [
+      144.892877,
+      -37.731391
+     ],
+     [
+      144.91466,
+      -37.730792
+     ]
+    ],
+    "diff_oa_m": [
+     247,
+     630
+    ],
+    "verdict": "fix"
+   },
+   {
+    "airport": "YMAV",
+    "refs": [
+     "18",
+     "36"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      144.4719,
+      -38.0259
+     ],
+     [
+      144.4661,
+      -38.0529
+     ]
+    ],
+    "osm": [
+     [
+      144.4694138,
+      -38.027253
+     ],
+     [
+      144.4648438,
+      -38.0544232
+     ]
+    ],
+    "osm_ref": "18/36",
+    "diff_osm_m": [
+     265,
+     202
+    ],
+    "ourairports": [
+     [
+      144.469419,
+      -38.027237
+     ],
+     [
+      144.464827,
+      -38.054413
+     ]
+    ],
+    "diff_oa_m": [
+     263,
+     202
+    ],
+    "verdict": "fix"
+   }
+  ],
+  "airportLand": [
+   {
+    "airport": "YMML",
+    "osm": [
+     "way 305804278"
+    ]
+   },
+   {
+    "airport": "YMEN",
+    "osm": [
+     "way 127751676"
+    ]
+   },
+   {
+    "airport": "YMAV",
+    "osm": [
+     "way 48570499"
+    ]
+   },
+   {
+    "airport": "YMPC",
+    "osm": [
+     "way 51252328"
+    ]
+   }
+  ],
+  "dcs": [
+   {
+    "name": "NEXTDC M2",
+    "operator": "NEXTDC",
+    "address": "75 Sharps Road, Tullamarine",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Vantage MEL1",
+    "operator": "Vantage Data Centers",
+    "address": "45 Tullamarine Park Road, Tullamarine",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Microsoft, Garden Drive",
+    "operator": "Microsoft",
+    "address": "70 Garden Drive, Tullamarine",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AirTrunk MEL2",
+    "operator": "AirTrunk",
+    "address": "Tullamarine",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AirTrunk MEL1",
+    "operator": "AirTrunk",
+    "address": "Derrimut",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix ME4",
+    "operator": "Equinix",
+    "address": "2 Davis Court, Derrimut",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Digital Realty MEL10",
+    "operator": "Digital Realty",
+    "address": "98 Radnor Drive, Deer Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Digital Realty MEL11",
+    "operator": "Digital Realty",
+    "address": "72 Radnor Drive, Deer Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Digital Realty MEL12",
+    "operator": "Digital Realty",
+    "address": "54 Radnor Drive, Deer Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "STACK MEL01",
+    "operator": "STACK Infrastructure",
+    "address": "399 Palmers Road, Truganina",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Microsoft, Woods Road",
+    "operator": "Microsoft",
+    "address": "281 Woods Road, Truganina",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Amazon Web Services",
+    "operator": "Amazon",
+    "address": "22 Delivery Drive, Truganina",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "CDC Laverton",
+    "operator": "CDC Data Centres",
+    "address": "Leakes Road, Laverton North",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC M3",
+    "operator": "NEXTDC",
+    "address": "25 Indwe Street, West Footscray",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "CDC Brooklyn",
+    "operator": "CDC Data Centres",
+    "address": "594 Geelong Road, Brooklyn",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "GreenSquareDC MEL1",
+    "operator": "GreenSquareDC",
+    "address": "44 Simcock Avenue, Spotswood",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Biztactix Sunshine",
+    "operator": "Biztactix",
+    "address": "9A Western Avenue, Sunshine",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Mickleham hyperscale campus",
+    "operator": "AirTrunk (reported)",
+    "address": "45 Donnybrook Road, Mickleham",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Truganina data centre",
+    "operator": "Goodman",
+    "address": "433 Mount Atkinson Road, Truganina",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Campbellfield AI campus",
+    "operator": "Zerra DC",
+    "address": "300 Barry Road, Campbellfield",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Cherry Lane",
+    "operator": "Stockland",
+    "address": "72 Cherry Lane, Laverton North",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Francis Street",
+    "operator": "Stockland",
+    "address": "413 Francis Street, Brooklyn",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Sunshine Road",
+    "operator": "Perri Projects",
+    "address": "63 Sunshine Road, West Footscray",
+    "status": "plan",
+    "verified_lnglat": null
+   }
+  ],
+  "osmDcsNotOurs": []
+ },
+ "nsw": {
+  "runways": [
+   {
+    "airport": "YSSY",
+    "refs": [
+     "16R",
+     "34L"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      151.17183,
+      -33.93017
+     ],
+     [
+      151.18067,
+      -33.96433
+     ]
+    ],
+    "osm": [
+     [
+      151.1717659,
+      -33.9301231
+     ],
+     [
+      151.1806465,
+      -33.9642591
+     ]
+    ],
+    "osm_ref": "16R/34L",
+    "diff_osm_m": [
+     8,
+     8
+    ],
+    "ourairports": [
+     [
+      151.1719970703125,
+      -33.92940139770508
+     ],
+     [
+      151.18099975585938,
+      -33.964298248291016
+     ]
+    ],
+    "diff_oa_m": [
+     87,
+     31
+    ],
+    "verdict": "ok"
+   },
+   {
+    "airport": "YSSY",
+    "refs": [
+     "16L",
+     "34R"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      151.18883,
+      -33.95167
+     ],
+     [
+      151.19383,
+      -33.97083
+     ]
+    ],
+    "osm": [
+     [
+      151.1888343,
+      -33.9516596
+     ],
+     [
+      151.1937817,
+      -33.9707536
+     ]
+    ],
+    "osm_ref": "16L/34R",
+    "diff_osm_m": [
+     1,
+     10
+    ],
+    "ourairports": [
+     [
+      151.18800354003906,
+      -33.94960021972656
+     ],
+     [
+      151.19400024414062,
+      -33.971099853515625
+     ]
+    ],
+    "diff_oa_m": [
+     242,
+     34
+    ],
+    "verdict": "ok"
+   },
+   {
+    "airport": "YSSY",
+    "refs": [
+     "07",
+     "25"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      151.16367,
+      -33.94367
+     ],
+     [
+      151.18883,
+      -33.93783
+     ]
+    ],
+    "osm": [
+     [
+      151.163637,
+      -33.9437501
+     ],
+     [
+      151.1888513,
+      -33.9377961
+     ]
+    ],
+    "osm_ref": "07/25",
+    "diff_osm_m": [
+     9,
+     4
+    ],
+    "ourairports": [
+     [
+      151.16400146484375,
+      -33.94369888305664
+     ],
+     [
+      151.19000244140625,
+      -33.9375
+     ]
+    ],
+    "diff_oa_m": [
+     31,
+     114
+    ],
+    "verdict": "ok"
+   },
+   {
+    "airport": "YSWS",
+    "refs": [
+     "05",
+     "23"
+    ],
+    "era": "future",
+    "ours": [
+     [
+      150.701,
+      -33.89917
+     ],
+     [
+      150.73567,
+      -33.8825
+     ]
+    ],
+    "osm": [
+     [
+      150.6957342,
+      -33.8918457
+     ],
+     [
+      150.7302495,
+      -33.8750421
+     ]
+    ],
+    "osm_ref": "05/23",
+    "diff_osm_m": [
+     948,
+     969
+    ],
+    "verdict": "fix"
+   }
+  ],
+  "airportLand": [
+   {
+    "airport": "YSSY",
+    "osm": [
+     "way 211818374"
+    ]
+   },
+   {
+    "airport": "YSWS",
+    "osm": [
+     "way 985743235"
+    ]
+   },
+   {
+    "airport": "YSBK",
+    "osm": [
+     "relation 4081229"
+    ]
+   },
+   {
+    "airport": "YSCN",
+    "osm": [
+     "way 48985858"
+    ]
+   },
+   {
+    "airport": "YSRI",
+    "osm": [
+     "relation 19653451"
+    ]
+   }
+  ],
+  "dcs": [
+   {
+    "name": "Digital Realty SYD10",
+    "operator": "Digital Realty",
+    "address": "1-12 Templar Road, Erskine Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Digital Realty SYD11",
+    "operator": "Digital Realty",
+    "address": "13-23 Templar Road, Erskine Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Digital Realty SYD14",
+    "operator": "Digital Realty",
+    "address": "16 Lockwood Road, Erskine Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Digital Realty SYD13",
+    "operator": "Digital Realty",
+    "address": "23-25 Waterloo Road, North Ryde",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Rackspace Sydney",
+    "operator": "Rackspace",
+    "address": "1-11 Templar Road, Erskine Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "STACK SYD01 campus",
+    "operator": "STACK Infrastructure",
+    "address": "78 Lockwood Road, Erskine Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC S1",
+    "operator": "NEXTDC",
+    "address": "4 Eden Park Drive, Macquarie Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC S2",
+    "operator": "NEXTDC",
+    "address": "6-8 Giffnock Avenue, Macquarie Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC S3",
+    "operator": "NEXTDC",
+    "address": "2 Broadcast Way, Artarmon",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC S6",
+    "operator": "NEXTDC",
+    "address": "3 Broadcast Way, Artarmon",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC S4",
+    "operator": "NEXTDC",
+    "address": "3-5 Johnston Crescent, Horsley Park",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC S5",
+    "operator": "NEXTDC",
+    "address": "Macquarie Park",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC S7 (with OpenAI)",
+    "operator": "NEXTDC",
+    "address": "Eastern Creek",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DigiCo SYD1 (former Global Switch)",
+    "operator": "DigiCo",
+    "address": "400 Harris Street, Ultimo",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DigiCo SYD2",
+    "operator": "DigiCo",
+    "address": "5 Broadcast Way, Artarmon",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Keppel DC Sydney Gore Hill",
+    "operator": "Keppel DC REIT",
+    "address": "5 Broadcast Way, Artarmon",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Goodman SYD01",
+    "operator": "Goodman",
+    "address": "2-8 Lanceley Place, Artarmon",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix SY1/SY2",
+    "operator": "Equinix",
+    "address": "639 Gardeners Road, Mascot",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Summit Sydney",
+    "operator": "Summit",
+    "address": "639 Gardeners Road, Mascot",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix SY3",
+    "operator": "Equinix",
+    "address": "47 Bourke Road, Alexandria",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix SY4/SY5",
+    "operator": "Equinix",
+    "address": "200 Bourke Road, Alexandria",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix SY6",
+    "operator": "Equinix",
+    "address": "8-14 Egerton Street, Silverwater",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix SY9x",
+    "operator": "Equinix",
+    "address": "8A Grand Avenue, Rosehill",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix SY10x",
+    "operator": "Equinix",
+    "address": "Rosehill",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Macquarie IC1",
+    "operator": "Macquarie Data Centres",
+    "address": "477 Pitt Street, Sydney",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Macquarie IC2/IC3",
+    "operator": "Macquarie Data Centres",
+    "address": "17-23 Talavera Road, Macquarie Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Goodman Macquarie Park",
+    "operator": "Goodman",
+    "address": "4-10 Talavera Road, Macquarie Park",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "EdgeConneX SYD1",
+    "operator": "EdgeConneX",
+    "address": "1-5 Khartoum Road, Macquarie Park",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AWS Khartoum Road",
+    "operator": "Amazon Web Services",
+    "address": "11-17 Khartoum Road, Macquarie Park",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Julius Avenue Data Centre",
+    "operator": "ISPT",
+    "address": "6-8 Julius Avenue, North Ryde",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Unisys Rhodes",
+    "operator": "Unisys",
+    "address": "1G Homebush Bay Drive, Rhodes",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Fujitsu Homebush",
+    "operator": "Fujitsu",
+    "address": "Sydney Olympic Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Fujitsu Western Sydney",
+    "operator": "Fujitsu",
+    "address": "Greystanes",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Vocus Baulkham Hills",
+    "operator": "Vocus",
+    "address": "12 Brookhollow Avenue, Norwest",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "GreenSquareDC SYD1",
+    "operator": "GreenSquareDC",
+    "address": "3 Brookhollow Avenue, Norwest",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Vocus Haymarket",
+    "operator": "Vocus",
+    "address": "187 Thomas Street, Haymarket",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Vocus Glebe",
+    "operator": "Vocus",
+    "address": "30 Ross Street, Glebe",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Vocus SYD04",
+    "operator": "Vocus",
+    "address": "74 Mentmore Avenue, Rosebery",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "5G Networks Sydney",
+    "operator": "5G Networks",
+    "address": "55 Pyrmont Bridge Road, Pyrmont",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Telstra St Leonards",
+    "operator": "Telstra InfraCo",
+    "address": "4A Herbert Street, St Leonards",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "St Leonards Corporate Centre (5GN, Interactive, Servers Australia)",
+    "operator": "Various",
+    "address": "39 Herbert Street, St Leonards",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "12 Frederick Street",
+    "operator": "Gateway Capital",
+    "address": "12 Frederick Street, St Leonards",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Telstra Sydney (Pitt/Liverpool St exchange)",
+    "operator": "Telstra InfraCo",
+    "address": "133 Liverpool Street, Sydney",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Telstra Chippendale",
+    "operator": "Telstra InfraCo",
+    "address": "184-200 Broadway, Chippendale",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Amaze DataHaven",
+    "operator": "Amaze",
+    "address": "340 George Street, Waterloo",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "22 O'Riordan Street",
+    "operator": "Markham Real Estate Partners",
+    "address": "22 O'Riordan Street, Alexandria",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AirTrunk SYD1",
+    "operator": "AirTrunk",
+    "address": "35 Huntingwood Drive, Huntingwood",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AirTrunk SYD3",
+    "operator": "AirTrunk",
+    "address": "Huntingwood",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AirTrunk SYD2",
+    "operator": "AirTrunk",
+    "address": "Lane Cove West",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Goodman Project Mars",
+    "operator": "Goodman",
+    "address": "12 Mars Road, Lane Cove West",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AirTrunk Kemps Creek",
+    "operator": "AirTrunk",
+    "address": "Kemps Creek",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Microsoft Kemps Creek (SYD05-07)",
+    "operator": "Microsoft",
+    "address": "769 Mamre Road, Kemps Creek",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Microsoft Huntingwood",
+    "operator": "Microsoft",
+    "address": "6 Honeman Close, Huntingwood",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Microsoft Seven Hills",
+    "operator": "Microsoft",
+    "address": "57 Station Road, Seven Hills",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "CDC Eastern Creek (EC1-EC6)",
+    "operator": "CDC Data Centres",
+    "address": "17 Roberts Road, Eastern Creek",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Goodman Project Atlas",
+    "operator": "Goodman",
+    "address": "10 Roberts Road, Eastern Creek",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "CDC Marsden Park",
+    "operator": "CDC Data Centres",
+    "address": "105-113 Hollinsworth Road, Marsden Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "CDC Kemps Creek KC1",
+    "operator": "CDC Data Centres",
+    "address": "871-901 Mamre Road, Kemps Creek",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "ISPT Mamre Road campus",
+    "operator": "ISPT",
+    "address": "706-752 Mamre Road, Kemps Creek",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Stockland Aldington Road",
+    "operator": "Stockland",
+    "address": "90 Aldington Road, Kemps Creek",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Stockland Davis Road",
+    "operator": "Stockland",
+    "address": "2 Davis Road, Wetherill Park",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "EdgeConneX Wetherill Park",
+    "operator": "EdgeConneX",
+    "address": "Wetherill Park",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AWS Glendenning",
+    "operator": "Amazon Web Services",
+    "address": "2 Glendenning Road, Glendenning",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AWS Eastern Creek (William Dean St)",
+    "operator": "Amazon Web Services",
+    "address": "1 William Dean Street, Eastern Creek",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AWS Eastern Creek Drive",
+    "operator": "Amazon Web Services",
+    "address": "10 Eastern Creek Drive, Eastern Creek",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "AWS Smeaton Grange",
+    "operator": "Amazon Web Services",
+    "address": "Bluett Drive, Smeaton Grange",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DCI SYD01",
+    "operator": "DCI Data Centers",
+    "address": "90 Peter Brock Drive, Eastern Creek",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Goodman Project Pluto",
+    "operator": "Goodman",
+    "address": "132 McCredie Road, Guildford",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Telstra/Doma Minchinbury",
+    "operator": "Doma / Telstra InfraCo",
+    "address": "Minchinbury",
+    "status": "plan",
+    "verified_lnglat": null
+   }
+  ],
+  "osmDcsNotOurs": [
+   {
+    "osm": "node 4686763486",
+    "name": "Vocus Data Centre",
+    "operator": "",
+    "addr": "59 Doody Street Alexandria",
+    "lnglat": [
+     151.19316,
+     -33.915
+    ]
+   },
+   {
+    "osm": "node 4686764434",
+    "name": "Interactive Data Centre",
+    "operator": "Interactive",
+    "addr": "39 Herbert Street Artarmon",
+    "lnglat": [
+     151.19249,
+     -33.81602
+    ]
+   },
+   {
+    "osm": "node 9354608740",
+    "name": "Simtronic",
+    "operator": "",
+    "addr": "",
+    "lnglat": [
+     150.69449,
+     -33.7528
+    ]
+   }
+  ]
+ },
+ "qld": {
+  "runways": [
+   {
+    "airport": "YBBN",
+    "refs": [
+     "01R",
+     "19L"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      153.11817,
+      -27.40283
+     ],
+     [
+      153.13433,
+      -27.37467
+     ]
+    ],
+    "osm": [
+     [
+      153.1179443,
+      -27.4032881
+     ],
+     [
+      153.1343079,
+      -27.3746764
+     ]
+    ],
+    "osm_ref": "01R/19L",
+    "diff_osm_m": [
+     56,
+     2
+    ],
+    "ourairports": [
+     [
+      153.1179962158203,
+      -27.403900146484375
+     ],
+     [
+      153.13400268554688,
+      -27.37529945373535
+     ]
+    ],
+    "diff_oa_m": [
+     120,
+     77
+    ],
+    "verdict": "ok"
+   },
+   {
+    "airport": "YBBN",
+    "refs": [
+     "01L",
+     "19R"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      153.10683,
+      -27.383
+     ],
+     [
+      153.122,
+      -27.3565
+     ]
+    ],
+    "osm": [
+     [
+      153.1068057,
+      -27.3830704
+     ],
+     [
+      153.1219628,
+      -27.3565674
+     ]
+    ],
+    "osm_ref": "01L/19R",
+    "diff_osm_m": [
+     8,
+     8
+    ],
+    "ourairports": [
+     [
+      153.10699462890625,
+      -27.383100509643555
+     ],
+     [
+      153.1219940185547,
+      -27.356599807739258
+     ]
+    ],
+    "diff_oa_m": [
+     20,
+     11
+    ],
+    "verdict": "ok"
+   }
+  ],
+  "airportLand": [
+   {
+    "airport": "YBBN",
+    "osm": [
+     "relation 17378993"
+    ]
+   },
+   {
+    "airport": "YBAF",
+    "osm": [
+     "way 423143197"
+    ]
+   },
+   {
+    "airport": "YAMB",
+    "osm": [
+     "way 902155670"
+    ]
+   }
+  ],
+  "dcs": [
+   {
+    "name": "NEXTDC B1",
+    "operator": "NEXTDC",
+    "address": "20 Wharf Street, Brisbane City",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC B2",
+    "operator": "NEXTDC",
+    "address": "454 St Pauls Terrace, Fortitude Valley",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC B2 expansion / HQ",
+    "operator": "NEXTDC",
+    "address": "St Pauls Terrace, Fortitude Valley",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix BR1",
+    "operator": "Equinix",
+    "address": "54-58 Alfred Street, Fortitude Valley",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Brennan Brisbane",
+    "operator": "Brennan",
+    "address": "73 Amelia Street, Fortitude Valley",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "5G Networks Brisbane",
+    "operator": "5G Networks",
+    "address": "148 Brunswick Street, Fortitude Valley",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Datacom Brisbane",
+    "operator": "Datacom",
+    "address": "501 Ann Street, Fortitude Valley",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Vocus Brisbane",
+    "operator": "Vocus",
+    "address": "123 Eagle Street, Brisbane City",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Servers Australia Brisbane B1",
+    "operator": "Servers Australia",
+    "address": "14 Finchley Street, Milton",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DigiCo BNE1 (ex iseek Brisbane Airport)",
+    "operator": "DigiCo",
+    "address": "2 Cycas Lane, Brisbane Airport",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "iseek / DigiCo Brisbane Airport stage 2",
+    "operator": "DigiCo",
+    "address": "2 Cycas Lane, Brisbane Airport",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DigiCo Brisbane BNE (ex iseek Woolloongabba)",
+    "operator": "DigiCo",
+    "address": "100 Ipswich Road, Woolloongabba",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Interactive Brisbane",
+    "operator": "Interactive",
+    "address": "19 McKechnie Drive, Eight Mile Plains",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Fujitsu Brisbane",
+    "operator": "Fujitsu",
+    "address": "Eight Mile Plains",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DSColo Kenmore",
+    "operator": "Digital Sense",
+    "address": "Kenmore",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Polaris Data Centre",
+    "operator": "Polaris (Oper8@Polaris)",
+    "address": "11 Mary Mackenroth Lane, Springfield Central",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Swanbank data centre proposal",
+    "operator": "(developer not confirmed)",
+    "address": "Swanbank, Ipswich",
+    "status": "plan",
+    "verified_lnglat": null
+   }
+  ],
+  "osmDcsNotOurs": [
+   {
+    "osm": "node 11057872687",
+    "name": "NextDC",
+    "operator": "NextDC",
+    "addr": "",
+    "lnglat": [
+     153.03338,
+     -27.454
+    ]
+   }
+  ]
+ },
+ "wa": {
+  "runways": [
+   {
+    "airport": "YPPH",
+    "refs": [
+     "03",
+     "21"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      115.959667,
+      -31.958667
+     ],
+     [
+      115.9685,
+      -31.928667
+     ]
+    ],
+    "osm": [
+     [
+      115.959692,
+      -31.958719
+     ],
+     [
+      115.9684837,
+      -31.9286119
+     ]
+    ],
+    "osm_ref": "03/21",
+    "diff_osm_m": [
+     6,
+     6
+    ],
+    "ourairports": [
+     [
+      115.95999908447266,
+      -31.95870018005371
+     ],
+     [
+      115.96800231933594,
+      -31.928600311279297
+     ]
+    ],
+    "diff_oa_m": [
+     32,
+     48
+    ],
+    "verdict": "ok"
+   },
+   {
+    "airport": "YPPH",
+    "refs": [
+     "06",
+     "24"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      115.959167,
+      -31.941
+     ],
+     [
+      115.978833,
+      -31.930833
+     ]
+    ],
+    "osm": [
+     [
+      115.9592025,
+      -31.9409636
+     ],
+     [
+      115.9787473,
+      -31.9308876
+     ]
+    ],
+    "osm_ref": "06/24",
+    "diff_osm_m": [
+     5,
+     10
+    ],
+    "ourairports": [
+     [
+      115.95899963378906,
+      -31.94099998474121
+     ],
+     [
+      115.97899627685547,
+      -31.93090057373047
+     ]
+    ],
+    "diff_oa_m": [
+     16,
+     17
+    ],
+    "verdict": "ok"
+   },
+   {
+    "airport": "YPPH",
+    "refs": [
+     "03R",
+     "21L"
+    ],
+    "era": "future",
+    "ours": [
+     [
+      115.9787,
+      -31.9681
+     ],
+     [
+      115.9864,
+      -31.942
+     ]
+    ],
+    "verdict": "future/no OSM"
+   }
+  ],
+  "airportLand": [
+   {
+    "airport": "YPPH",
+    "osm": [
+     "way 179200892"
+    ]
+   },
+   {
+    "airport": "YPJT",
+    "osm": [
+     "way 23393279"
+    ]
+   },
+   {
+    "airport": "YPEA",
+    "osm": [
+     "way 559055073"
+    ]
+   }
+  ],
+  "dcs": [
+   {
+    "name": "NEXTDC P1 Perth",
+    "operator": "NEXTDC",
+    "address": "4 Millrose Drive, Malaga",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC P2 Perth",
+    "operator": "NEXTDC",
+    "address": "11 Newcastle Street, Perth",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix PE2",
+    "operator": "Equinix",
+    "address": "37 Lemnos Street, Shenton Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix PE1",
+    "operator": "Equinix",
+    "address": "Perth",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix PE3",
+    "operator": "Equinix",
+    "address": "Perth",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DCA PIER",
+    "operator": "DCA (Data Centres Australia)",
+    "address": "1 Martin Place, Perth",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DC Two Osborne Park",
+    "operator": "DC Two",
+    "address": "Osborne Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Zettagrid Bibra Lake",
+    "operator": "Zettagrid",
+    "address": "Bibra Lake",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Fujitsu Malaga Data Centre",
+    "operator": "Fujitsu",
+    "address": "Malaga",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Telstra Malaga",
+    "operator": "Telstra",
+    "address": "Malaga",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Vocus Perth",
+    "operator": "Vocus",
+    "address": "Perth",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "GreenSquareDC Hazelmere (withdrawn)",
+    "operator": "GreenSquareDC",
+    "address": "Hazelmere",
+    "status": "plan",
+    "verified_lnglat": null
+   }
+  ],
+  "osmDcsNotOurs": [
+   {
+    "osm": "node 688791288",
+    "name": "Telstra",
+    "operator": "Telstra",
+    "addr": "",
+    "lnglat": [
+     115.80141,
+     -32.06536
+    ]
+   }
+  ]
+ },
+ "sa": {
+  "runways": [
+   {
+    "airport": "YPAD",
+    "refs": [
+     "05",
+     "23"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      138.5185,
+      -34.95767
+     ],
+     [
+      138.54333,
+      -34.94067
+     ]
+    ],
+    "osm": [
+     [
+      138.5172171,
+      -34.9585244
+     ],
+     [
+      138.5399669,
+      -34.9429172
+     ]
+    ],
+    "osm_ref": "05/23",
+    "diff_osm_m": [
+     151,
+     395
+    ],
+    "ourairports": [
+     [
+      138.516998,
+      -34.9585
+     ],
+     [
+      138.542999,
+      -34.940601
+     ]
+    ],
+    "diff_oa_m": [
+     165,
+     31
+    ],
+    "verdict": "fix"
+   },
+   {
+    "airport": "YPAD",
+    "refs": [
+     "12",
+     "30"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      138.522,
+      -34.94117
+     ],
+     [
+      138.537,
+      -34.94933
+     ]
+    ],
+    "osm": [
+     [
+      138.5246648,
+      -34.9426765
+     ],
+     [
+      138.5342501,
+      -34.9479051
+     ]
+    ],
+    "osm_ref": "12/30",
+    "diff_osm_m": [
+     295,
+     297
+    ],
+    "ourairports": [
+     [
+      138.522003,
+      -34.9412
+     ],
+     [
+      138.537003,
+      -34.949402
+     ]
+    ],
+    "diff_oa_m": [
+     3,
+     8
+    ],
+    "verdict": "fix"
+   }
+  ],
+  "airportLand": [
+   {
+    "airport": "YPAD",
+    "osm": [
+     "way 146489105"
+    ]
+   },
+   {
+    "airport": "YPPF",
+    "osm": [
+     "relation 2368427"
+    ]
+   },
+   {
+    "airport": "YPED",
+    "osm": [
+     "node 415142962"
+    ]
+   }
+  ],
+  "dcs": [
+   {
+    "name": "NEXTDC A1 Adelaide",
+    "operator": "NEXTDC",
+    "address": "125 Frome Street, Adelaide",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC A2 Adelaide",
+    "operator": "NEXTDC",
+    "address": "Adelaide",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix AE1 (ex-Metronode)",
+    "operator": "Equinix",
+    "address": "274 Hindley Street, Adelaide",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "EscapeNet Adelaide",
+    "operator": "EscapeNet",
+    "address": "90 King William Street, Adelaide",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Colocity DC1",
+    "operator": "Colocity",
+    "address": "247 Pulteney Street, Adelaide",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Colocity DC3",
+    "operator": "Colocity",
+    "address": "172 Morphett Street, Adelaide",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DigiCo ADL1 (ex-YourDC Edinburgh)",
+    "operator": "DigiCo",
+    "address": "23 Woomera Avenue, Edinburgh",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DigiCo ADL2 (ex-YourDC Hawthorn)",
+    "operator": "DigiCo",
+    "address": "60 Belair Road, Hawthorn",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Adelaide Data Centre",
+    "operator": "5G Networks",
+    "address": "340 Findon Road, Kidman Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DCI Adelaide 01 (ADL01)",
+    "operator": "DCI Data Centers",
+    "address": "Kidman Park",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DCI Adelaide 02 (ADL02)",
+    "operator": "DCI Data Centers",
+    "address": "Adelaide",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DCI Adelaide 03 (ADL03)",
+    "operator": "DCI Data Centers",
+    "address": "Adelaide",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Vocus Adelaide",
+    "operator": "Vocus",
+    "address": "Adelaide",
+    "status": "live",
+    "verified_lnglat": null
+   }
+  ],
+  "osmDcsNotOurs": []
+ },
+ "tas": {
+  "runways": [
+   {
+    "airport": "YMHB",
+    "refs": [
+     "12",
+     "30"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      147.502,
+      -42.829
+     ],
+     [
+      147.5247,
+      -42.8455
+     ]
+    ],
+    "osm": [
+     [
+      147.5010336,
+      -42.8282201
+     ],
+     [
+      147.5245837,
+      -42.8455802
+     ]
+    ],
+    "osm_ref": "12/30",
+    "diff_osm_m": [
+     117,
+     13
+    ],
+    "ourairports": [
+     [
+      147.501024,
+      -42.828223
+     ],
+     [
+      147.5246,
+      -42.845586
+     ]
+    ],
+    "diff_oa_m": [
+     117,
+     13
+    ],
+    "verdict": "ok"
+   }
+  ],
+  "airportLand": [
+   {
+    "airport": "YMHB",
+    "osm": [
+     "way 470102257"
+    ]
+   },
+   {
+    "airport": "YCBG",
+    "osm": [
+     "way 251559752"
+    ]
+   }
+  ],
+  "dcs": [
+   {
+    "name": "TasmaNet DC1",
+    "operator": "TasmaNet",
+    "address": "Hobart",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DXN Tasmania One (DXN-TAS01, formerly TasmaNet DC3)",
+    "operator": "DXN",
+    "address": "Hobart",
+    "status": "live",
+    "verified_lnglat": null
+   }
+  ],
+  "osmDcsNotOurs": [
+   {
+    "osm": "node 12517655907",
+    "name": "TasmaNet Hobart DC3",
+    "operator": "TasmaNet",
+    "addr": "40-50 Innovation Drive Dowsing Point",
+    "lnglat": [
+     147.30418,
+     -42.82213
+    ]
+   },
+   {
+    "osm": "node 12517655908",
+    "name": "42 -24 Cambridge",
+    "operator": "42 - 24 Pty Ltd",
+    "addr": "67 Kennedy Drive Cambridge",
+    "lnglat": [
+     147.46524,
+     -42.82987
+    ]
+   }
+  ]
+ },
+ "act": {
+  "runways": [
+   {
+    "airport": "YSCB",
+    "refs": [
+     "17",
+     "35"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      149.1945,
+      -35.2907
+     ],
+     [
+      149.1945,
+      -35.3148
+     ]
+    ],
+    "osm": [
+     [
+      149.1944631,
+      -35.2906273
+     ],
+     [
+      149.1944445,
+      -35.3202067
+     ]
+    ],
+    "osm_ref": "17/35",
+    "diff_osm_m": [
+     9,
+     601
+    ],
+    "ourairports": [
+     [
+      149.19444274902344,
+      -35.290626525878906
+     ],
+     [
+      149.19444274902344,
+      -35.32019805908203
+     ]
+    ],
+    "diff_oa_m": [
+     10,
+     600
+    ],
+    "verdict": "fix"
+   },
+   {
+    "airport": "YSCB",
+    "refs": [
+     "12",
+     "30"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      149.1852,
+      -35.3007
+     ],
+     [
+      149.1988,
+      -35.31
+     ]
+    ],
+    "osm": [
+     [
+      149.1851762,
+      -35.3006931
+     ],
+     [
+      149.1987739,
+      -35.3100138
+     ]
+    ],
+    "osm_ref": "12/30",
+    "diff_osm_m": [
+     2,
+     3
+    ],
+    "ourairports": [
+     [
+      149.184998,
+      -35.300701
+     ],
+     [
+      149.199005,
+      -35.310398
+     ]
+    ],
+    "diff_oa_m": [
+     18,
+     48
+    ],
+    "verdict": "ok"
+   }
+  ],
+  "airportLand": [
+   {
+    "airport": "YSCB",
+    "osm": [
+     "way 456858759"
+    ]
+   }
+  ],
+  "dcs": [
+   {
+    "name": "CDC Hume HU1",
+    "operator": "Canberra Data Centres (CDC)",
+    "address": "54 Sheppard St, Hume",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "CDC Hume HU4",
+    "operator": "Canberra Data Centres (CDC)",
+    "address": "7 Tralee St, Hume",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "CDC Hume HU5",
+    "operator": "Canberra Data Centres (CDC)",
+    "address": "7 Tralee St, Hume",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "CDC Hume Campus Two",
+    "operator": "Canberra Data Centres (CDC)",
+    "address": "Hume",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "CDC Fyshwick Campus (FY1 and others)",
+    "operator": "Canberra Data Centres (CDC)",
+    "address": "Fyshwick",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC C1 Canberra",
+    "operator": "NEXTDC",
+    "address": "19 Battye St, Bruce",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Equinix CA1",
+    "operator": "Equinix",
+    "address": "51 Dacre St, Mitchell",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "ADC Mitchell",
+    "operator": "Australian Data Centres",
+    "address": "Dacre St, Mitchell",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Macquarie IC4 Bunker (Canberra campus)",
+    "operator": "Macquarie Data Centres",
+    "address": "Hume",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Telstra Deakin",
+    "operator": "Telstra",
+    "address": "109 Kent St, Deakin",
+    "status": "live",
+    "verified_lnglat": null
+   }
+  ],
+  "osmDcsNotOurs": []
+ },
+ "nt": {
+  "runways": [
+   {
+    "airport": "YPDN",
+    "refs": [
+     "11",
+     "29"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      130.8653,
+      -12.4093
+     ],
+     [
+      130.8945,
+      -12.4192
+     ]
+    ],
+    "osm": [
+     [
+      130.8652613,
+      -12.4094057
+     ],
+     [
+      130.8944324,
+      -12.4192332
+     ]
+    ],
+    "osm_ref": "11/29",
+    "diff_osm_m": [
+     12,
+     8
+    ],
+    "ourairports": [
+     [
+      130.86500549316406,
+      -12.40939998626709
+     ],
+     [
+      130.8939971923828,
+      -12.41919994354248
+     ]
+    ],
+    "diff_oa_m": [
+     34,
+     55
+    ],
+    "verdict": "ok"
+   },
+   {
+    "airport": "YPDN",
+    "refs": [
+     "18",
+     "36"
+    ],
+    "era": "both",
+    "ours": [
+     [
+      130.8707,
+      -12.4088
+     ],
+     [
+      130.8707,
+      -12.4227
+     ]
+    ],
+    "osm": [
+     [
+      130.8706524,
+      -12.4088539
+     ],
+     [
+      130.8706913,
+      -12.4226083
+     ]
+    ],
+    "osm_ref": "18/36",
+    "diff_osm_m": [
+     8,
+     10
+    ],
+    "ourairports": [
+     [
+      130.87100219726562,
+      -12.40880012512207
+     ],
+     [
+      130.87100219726562,
+      -12.422599792480469
+     ]
+    ],
+    "diff_oa_m": [
+     33,
+     35
+    ],
+    "verdict": "ok"
+   }
+  ],
+  "airportLand": [
+   {
+    "airport": "YPDN",
+    "osm": [
+     "node 4646678800",
+     "way 216110357",
+     "way 833764002"
+    ]
+   }
+  ],
+  "dcs": [
+   {
+    "name": "NEXTDC D1 Darwin",
+    "operator": "NEXTDC",
+    "address": "2 Harvey St, Darwin City",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "NEXTDC D2 Darwin",
+    "operator": "NEXTDC",
+    "address": "2-6 Ryko Ct, Darwin City",
+    "status": "plan",
+    "verified_lnglat": null
+   },
+   {
+    "name": "DXN SDC Darwin (Secure Data Centre)",
+    "operator": "DXN",
+    "address": "27 Harvey St, Darwin City",
+    "status": "live",
+    "verified_lnglat": null
+   },
+   {
+    "name": "Area9 Darwin",
+    "operator": "Area9",
+    "address": "Darwin",
+    "status": "live",
+    "verified_lnglat": null
+   }
+  ],
+  "osmDcsNotOurs": []
+ }
+}

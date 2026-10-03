@@ -201,4 +201,22 @@ Still open:
 - Spot-check suspicious house medians: Kingston ACT $615k, Phillip ACT $432k (mostly-unit suburbs), plus the existing list in section 4.6.
 - README, merge to main, house-check skill (section 4, steps 7 and 8).
 
+### Fact-check round 2 (3 Oct 2026, not yet committed or released)
+
+How it was run (cheap on tokens): `dev/research/geo_check.py` checks every runway end and airport boundary against OpenStreetMap and OurAirports by script (cached in `dev/research/src/geo/`, writes `audit/geo_check.json`). Web research used Sonnet agents, at most 3 at a time, with `dev/research/AUDIT_BRIEF2.md` (call budget, batched geocoding, no sleep calls). Results are in `dev/research/audit/*_r2.json`, `nsw_dc_a/b.json` and the earlier `qld_audit.json`, `wa_audit.json`, `nsw_audit.json`, `sa_audit.json`. They were applied with `dev/research/apply_audit.py <id> <audit files>` plus the judgement calls in `audit/manual_fixes.json`. Melbourne (`regions/vic.js`) was edited by hand.
+
+Changed:
+- **Engine (`index.html`):** OpenStreetMap runway pieces with the same number that touch are now joined (Perth 03/21 and Adelaide were split into 2-4 pieces). Runways can carry `fans` (one list per runway end) and `arrKm` (see `_schema.md`).
+- **Runway fallback ends fixed:** Melbourne 16/34 and 09/27 (about 500 m off), Essendon, Avalon, Western Sydney 05/23 (about 950 m), Canberra 17/35 (south end 600 m). Melbourne's third runway is now 1.3 km west of the real runway, per the 2024 Major Development Plan. Its ends are derived from those dimensions; official thresholds are not published.
+- **Departure turns from the audits** (`fans` in `build_regions.py` CONF): Sydney 16R/16L/34L/34R, Brisbane all four ends (plus `arrKm` 22), Perth 03/21/06/24, Adelaide 05/23. Melbourne, Hobart, Canberra and Darwin: official sources give no angles, so they keep [-40,0,40].
+- **Data centres in all 8 cities:** removals (cancelled, duplicate, not a data centre), status corrections, corrected addresses, exact coordinates where the geocoder matched the building or house number, and missing sites added. See `manual_fixes.json` for each decision.
+- **Rail and other:** Brisbane, Perth and Adelaide lines and stations moved onto the real tracks; Sydney/Perth/Adelaide statuses and URLs updated; tallest-building text fixed (a builder bug turned "tallest" into "est"); Essendon curfew note.
+
+Known gaps / not verifiable from here:
+- Melbourne airport rail station wording (government site blocked).
+- Exact sites: CDC Beard (Canberra), Macquarie IC4/IC5 (placed on Fairbairn Avenue), DigiCo BNE4 (placed on Cycas Lane), AirTrunk SYD3, Greystanes.
+- Adelaide runway 23 straight-in is about 19 km but stays 26 km (no per-runway `arrKm` in CONF yet).
+- Brisbane `future:null` while its research file describes a late-2027 parallel-runway scenario (left as is).
+- `apply_audit.py` is not safe to re-run for a state that has `addDcs` (it would add them twice).
+
 **Released 30 Sep 2026:** `multi-state` merged into `main` (560d6b8) and pushed; live site checked (Sydney loads, suburbs, airports, market note, no console errors). Next: house-check skill (step 8); optional full property refresh (5 of 34 spot-checked suburbs had newer figures at the source).

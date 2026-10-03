@@ -207,39 +207,35 @@
     "status": "Opened October 2022",
     "about": "Rail link from Bayswater to Redcliffe, Airport Central (T1/T2) and High Wycombe, mostly in twin tunnels under the airport.",
     "url": "https://www.pta.wa.gov.au/",
-    "cert": "approx",
+    "cert": "route",
     "line": [
      [
-      115.9163,
-      -31.9186
+      115.91091,
+      -31.91878
      ],
      [
-      115.93,
-      -31.927
+      115.92614,
+      -31.92178
      ],
      [
-      115.9447,
-      -31.9383
+      115.93764,
+      -31.93123
      ],
      [
-      115.96,
-      -31.938
+      115.95601,
+      -31.93473
      ],
      [
-      115.9725,
-      -31.9374
+      115.96897,
+      -31.94263
      ],
      [
-      115.985,
-      -31.948
+      115.98511,
+      -31.94562
      ],
      [
-      115.995,
-      -31.958
-     ],
-     [
-      116.0033,
-      -31.9677
+      115.9922,
+      -31.95463
      ]
     ],
     "note": "Coordinates from memory of station/road positions (web page fetches were rate-limited); approximate to a few hundred metres."
@@ -248,45 +244,65 @@
     "kind": "rail",
     "name": "Ellenbrook line (Morley-Ellenbrook)",
     "status": "Opened December 2024",
-    "about": "New 21 km line branching at Bayswater and running up the Tonkin Highway median to Morley, Noranda, Malaga, Whiteman Park and Ellenbrook.",
+    "about": "New 21 km line branching at Bayswater and running up the Tonkin Highway median to Morley, Noranda, Ballajura, Whiteman Park and Ellenbrook.",
     "url": "https://www.pta.wa.gov.au/",
-    "cert": "approx",
+    "cert": "route",
     "line": [
      [
-      115.9163,
-      -31.9186
+      115.91187,
+      -31.9184
      ],
      [
-      115.924,
-      -31.905
+      115.92384,
+      -31.91373
      ],
      [
-      115.9314,
-      -31.893
+      115.92269,
+      -31.90002
      ],
      [
-      115.9434,
-      -31.8745
+      115.91876,
+      -31.88571
      ],
      [
-      115.9555,
-      -31.8555
+      115.91739,
+      -31.87141
      ],
      [
-      115.964,
-      -31.84
+      115.9172,
+      -31.85792
      ],
      [
-      115.972,
-      -31.8265
+      115.92647,
+      -31.84831
      ],
      [
-      115.98,
-      -31.803
+      115.94321,
+      -31.84958
      ],
      [
-      115.987,
-      -31.7795
+      115.96009,
+      -31.85132
+     ],
+     [
+      115.96617,
+      -31.84118
+     ],
+     [
+      115.9622,
+      -31.82758
+     ],
+     [
+      115.96102,
+      -31.80875
+     ],
+     [
+      115.95806,
+      -31.79549
+     ],
+     [
+      115.96339,
+      -31.7816
      ]
     ],
     "note": "Coordinates from memory of station/road positions (web page fetches were rate-limited); approximate to a few hundred metres."
@@ -297,35 +313,47 @@
     "status": "Opened 9 June 2025",
     "about": "First east-west cross-suburban line, extending from Thornlie via Nicholson Road and Ranford Road stations to Cockburn Central on the Mandurah line.",
     "url": "https://www.metronet.wa.gov.au/",
-    "cert": "approx",
+    "cert": "route",
     "line": [
      [
-      115.9555,
-      -32.053
+      115.95238,
+      -32.04734
      ],
      [
-      115.94,
-      -32.056
+      115.94316,
+      -32.0544
      ],
      [
-      115.92,
-      -32.06
+      115.93468,
+      -32.06159
      ],
      [
-      115.9,
-      -32.07
+      115.91667,
+      -32.07171
      ],
      [
-      115.885,
-      -32.083
+      115.89658,
+      -32.07538
      ],
      [
-      115.87,
-      -32.1
+      115.88351,
+      -32.07971
      ],
      [
-      115.86,
-      -32.121
+      115.86131,
+      -32.08972
+     ],
+     [
+      115.84953,
+      -32.09792
+     ],
+     [
+      115.85291,
+      -32.11259
+     ],
+     [
+      115.85836,
+      -32.12533
      ]
     ],
     "note": "Coordinates from memory of station/road positions (web page fetches were rate-limited); approximate to a few hundred metres."
@@ -336,7 +364,7 @@
     "status": "Opened October 2025",
     "about": "Armadale line extended 8 km south to a new Byford station, with the Armadale section rebuilt as elevated rail.",
     "url": "https://www.metronet.wa.gov.au/",
-    "cert": "approx",
+    "cert": "route",
     "line": [
      [
       116.0132,
@@ -367,35 +395,47 @@
     "status": "Opened July 2024",
     "about": "Joondalup line extended 14.5 km north from Butler to new stations at Alkimos, Eglinton and Yanchep.",
     "url": "https://www.metronet.wa.gov.au/",
-    "cert": "approx",
+    "cert": "route",
     "line": [
      [
-      115.7055,
-      -31.6425
+      115.70033,
+      -31.63569
      ],
      [
-      115.7,
-      -31.625
+      115.69415,
+      -31.62147
      ],
      [
-      115.694,
-      -31.607
+      115.6901,
+      -31.60434
      ],
      [
-      115.684,
-      -31.595
+      115.68234,
+      -31.5928
      ],
      [
-      115.6745,
-      -31.583
+      115.67194,
+      -31.58171
      ],
      [
-      115.665,
-      -31.567
+      115.67092,
+      -31.56822
      ],
      [
-      115.656,
-      -31.55
+      115.6617,
+      -31.55777
+     ],
+     [
+      115.6484,
+      -31.55141
+     ],
+     [
+      115.64392,
+      -31.5378
+     ],
+     [
+      115.64383,
+      -31.53187
      ]
     ],
     "note": "Coordinates from memory of station/road positions (web page fetches were rate-limited); approximate to a few hundred metres."
@@ -403,7 +443,7 @@
    {
     "kind": "road",
     "name": "Tonkin Highway Extension (Thomas Rd to South Western Hwy)",
-    "status": "Under construction (major works under way in 2025-26); completion date not confirmed",
+    "status": "Under construction since mid-2025; completion late 2028 (Main Roads)",
     "about": "Roughly $1 billion extension of Tonkin Highway south from Thomas Road to South Western Highway near Mundijong, with Thomas Road upgrades, serving Byford, Oakford and Mundijong growth areas.",
     "url": "https://www.mainroads.wa.gov.au/projects-initiatives/all-projects/metropolitan/tonkin-highway-extension-and-thomas-road-upgrade/",
     "cert": "concept",
@@ -434,10 +474,10 @@
    {
     "kind": "road",
     "name": "Tonkin Gap",
-    "status": "Completed 2023",
+    "status": "Completed (lanes opened December 2023, officially complete August 2024)",
     "about": "Widening of about 7 km of Tonkin Highway from Collier Road to Great Eastern Highway, built together with the Airport and Ellenbrook line rail works.",
     "url": "https://www.mainroads.wa.gov.au/",
-    "cert": "approx",
+    "cert": "route",
     "line": [
      [
       115.923,
@@ -496,50 +536,50 @@
   ],
   "railHubs": [
    [
-    115.9725,
-    -31.9374,
+    115.97484,
+    -31.94404,
     "Airport Central",
     "Airport line station for T1/T2 (opened 2022)"
    ],
    [
-    115.9447,
-    -31.9383,
+    115.94971,
+    -31.93359,
     "Redcliffe",
     "Airport line station next to the old T3/T4 terminals"
    ],
    [
-    116.0033,
-    -31.9677,
+    115.9922,
+    -31.95463,
     "High Wycombe",
     "Airport line terminus with big park-and-ride"
    ],
    [
-    115.9314,
-    -31.893,
+    115.92002,
+    -31.89603,
     "Morley",
     "Ellenbrook line station in the Tonkin Hwy median (2024)"
    ],
    [
-    115.987,
-    -31.7795,
+    115.96339,
+    -31.7816,
     "Ellenbrook",
     "Ellenbrook line terminus (2024)"
    ],
    [
-    116.011,
-    -31.8885,
+    116.00344,
+    -31.89242,
     "Midland (new)",
     "Relocated Midland station opened Feb 2026 - final METRONET project"
    ],
    [
-    116.005,
-    -32.222,
+    116.00738,
+    -32.21646,
     "Byford",
     "Byford extension terminus (2025)"
    ],
    [
-    115.86,
-    -32.121,
+    115.85836,
+    -32.12533,
     "Cockburn Central",
     "Interchange for the Thornlie-Cockburn line (2025)"
    ]
@@ -550,84 +590,97 @@
     "NEXTDC",
     "4 Millrose Drive, Malaga WA 6090",
     "live",
-    "~10 MW"
+    "~10 MW",
+    [
+     115.89591,
+     -31.8644
+    ]
    ],
    [
     "NEXTDC P2 Perth",
     "NEXTDC",
     "11 Newcastle Street, Perth WA 6000",
     "live",
-    "~20 MW"
+    "~20 MW",
+    [
+     115.86823,
+     -31.95017
+    ]
    ],
    [
     "Equinix PE2",
     "Equinix",
     "37 Lemnos Street, Shenton Park WA 6008",
     "live",
-    "formerly Metronode Perth 2"
+    "formerly Metronode Perth 2",
+    [
+     115.79802,
+     -31.95594
+    ]
    ],
    [
     "Equinix PE1",
     "Equinix",
-    "Perth WA",
+    "3 Tully Road, East Perth WA 6004",
     "live",
     "formerly Metronode Perth 1; exact site not confirmed - geocode to Perth"
    ],
    [
     "Equinix PE3",
     "Equinix",
-    "Perth WA",
+    "37 Lemnos Street, Shenton Park WA 6008",
     "live",
-    "exact site not confirmed - geocode to Perth"
+    "Opened 2021 on the same Shenton Park campus as PE2",
+    [
+     115.79783,
+     -31.95315
+    ]
    ],
    [
     "DCA PIER",
     "DCA (Data Centres Australia)",
-    "1 Martin Place, Perth WA",
+    "1 Martin Place, Canning Vale WA 6155",
     "live",
-    "~8 MW; suburb not confirmed"
+    "About 8 MW",
+    [
+     115.91612,
+     -32.05945
+    ]
    ],
    [
-    "DC Two Osborne Park",
-    "DC Two",
-    "Osborne Park WA 6017",
-    "live",
-    "street address not confirmed - suburb only"
-   ],
-   [
-    "Zettagrid Bibra Lake",
+    "Zettagrid Osborne Park (ex DC Two)",
     "Zettagrid",
-    "Bibra Lake WA 6163",
+    "301/396 Scarborough Beach Road, Osborne Park WA 6017",
     "live",
     "street address not confirmed - suburb only"
    ],
    [
     "Fujitsu Malaga Data Centre",
     "Fujitsu",
-    "Malaga WA 6090",
+    "16 Mulgul Road, Malaga WA 6090",
     "live",
     "street address not confirmed - suburb only"
    ],
    [
-    "Telstra Malaga",
-    "Telstra",
-    "Malaga WA 6090",
-    "live",
-    "street address not confirmed - suburb only"
-   ],
-   [
-    "Vocus Perth",
-    "Vocus",
-    "Perth WA 6000",
-    "live",
-    "exact site not confirmed - suburb only"
-   ],
-   [
-    "GreenSquareDC Hazelmere (withdrawn)",
-    "GreenSquareDC",
-    "Hazelmere WA 6055",
+    "CDC Maddington",
+    "CDC Data Centres",
+    "582 Bickley Road, Maddington WA 6109",
     "plan",
-    "Proposed 120 MW, ~$600m; application withdrawn in 2026 after ~1,800 objections over noise. Not proceeding."
+    ""
+   ],
+   [
+    "CDC Hazelmere",
+    "CDC Data Centres",
+    "178-196 Bushmead Road, Hazelmere WA 6055",
+    "plan",
+    ""
+   ],
+   [
+    "GreenSquareDC WAi1",
+    "GreenSquareDC",
+    "37-39 Abernethy Road, Belmont WA 6104",
+    "plan",
+    ""
    ]
   ],
   "market": {
@@ -635,7 +688,7 @@
    "url": "https://discover.cotality.com/hubfs/Article-Reports/COTALITY%20HVI%20SEP%202026%20FINAL%20(1).pdf",
    "month": "August 2026"
   },
-  "tallBuilding": "Central Park tower is about 250 m to its spire (about 226 m to the roof)",
+  "tallBuilding": "Central Park is about 226 m to the roof (about 262 m with its antenna)",
   "defaultHome": {
    "title": "Carine",
    "lng": 115.783,

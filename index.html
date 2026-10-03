@@ -569,9 +569,10 @@ function buildPaths(){
         P.segB=pts.slice(1).map((p,k)=>brgOf(pts[k],p));
         PATHS.push(P);
       };
-      mk('arr',0,arrivalPts(th,brg,a.arrKm||26));
+      const c=r.cfg||{};
+      mk('arr',0,arrivalPts(th,brg,c.arrKm||a.arrKm||26));
       if(a.depKm)mk('dep',0,departurePts(th,brg,r.len,0,a.depKm));
-      else (a.fans||[-40,0,40]).forEach(t=>mk('dep',t,departurePts(th,brg,r.len,t)));
+      else ((c.fans&&c.fans[i])||a.fans||[-40,0,40]).forEach(t=>mk('dep',t,departurePts(th,brg,r.len,t)));
     });
   };
   RW.filter(r=>r.apt.main).forEach(mkAll);RW.filter(r=>!r.apt.main).forEach(mkAll);
@@ -939,11 +940,22 @@ function applyAirportData(els){
     const icao=(aero.tags.icao||'').toUpperCase();
     if(AIRPORTS.some(a=>a.icao===icao))RINGS[icao]=rings[0];
   });
-  const osm=els.filter(e=>e.type==='way'&&e.tags&&e.tags.aeroway==='runway'&&e.geometry&&e.geometry.length>1).map(w=>{
-    const g=w.geometry.map(p=>toL(p.lon,p.lat));const a=g[0],b=g[g.length-1];
-    const refs=String(w.tags.ref||'').toUpperCase().replace(/\s/g,'').split('/').filter(Boolean).sort().join('/');
-    return {a,b,c:{x:(a.x+b.x)/2,n:(a.n+b.n)/2},len:dist(a,b),brg:brgOf(a,b),refs};
+  const segs=els.filter(e=>e.type==='way'&&e.tags&&e.tags.aeroway==='runway'&&e.geometry&&e.geometry.length>1).map(w=>{
+    const g=w.geometry.map(p=>toL(p.lon,p.lat));
+    return {a:g[0],b:g[g.length-1],refs:String(w.tags.ref||'').toUpperCase().replace(/\s/g,'').split('/').filter(Boolean).sort().join('/')};
   });
+  // OpenStreetMap often splits one runway into several ways: join pieces with the same numbers that touch end to end.
+  for(let joined=true;joined;){
+    joined=false;
+    for(let i=0;i<segs.length&&!joined;i++)for(let j=i+1;j<segs.length&&!joined;j++){
+      const s=segs[i],t=segs[j];if(!s.refs||s.refs!==t.refs)continue;
+      const touch=[s.a,s.b].some(p=>[t.a,t.b].some(q=>dist(p,q)<0.05));if(!touch)continue;
+      const pts=[s.a,s.b,t.a,t.b];let best=[s.a,s.b];
+      pts.forEach(p=>pts.forEach(q=>{if(dist(p,q)>dist(best[0],best[1]))best=[p,q];}));
+      segs[i]={a:best[0],b:best[1],refs:s.refs};segs.splice(j,1);joined=true;
+    }
+  }
+  const osm=segs.map(({a,b,refs})=>({a,b,c:{x:(a.x+b.x)/2,n:(a.n+b.n)/2},len:dist(a,b),brg:brgOf(a,b),refs}));
   const base=configRunways(),pairs=[];
   base.forEach((r,ri)=>{
     const ap=toL(r.apt.lng,r.apt.lat),rc={x:(r.A.x+r.B.x)/2,n:(r.A.n+r.B.n)/2},rs=refSet(r.cfg);
